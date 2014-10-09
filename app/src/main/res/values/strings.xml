@@ -98,4 +98,7 @@
     <string name="wipe_data">Wipe data</string>
     <string name="wipe_data_dialog_confirmation_title">Factory reset</string>
     <string name="wipe_data_dialog_confirmation_message">You selected \'wipe data\' option, this will do a factory reset on your device, do you want to continue?</string>
+
+    <!-- Changelog -->
+    <string name="changelog_title">Changelog</string>
 </resources>

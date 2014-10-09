@@ -33,6 +33,11 @@
             android:name=".activities.AddonsActivity"
             android:label="@string/addons_title"
             android:launchMode="singleTop" />
+        <activity
+            android:name=".activities.LocalChangelogActivity"
+            android:label="@string/changelog_title"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.UpdaterActivity" />
 
         <service android:name=".service.UpdateCheckService" />
         <service android:name=".service.DownloadService" />

@@ -951,12 +951,19 @@ public class UpdaterActivity extends PreferenceActivity implements
                 case R.id.menu_refresh:
                     checkForUpdates();
                     break;
+                case R.id.menu_local_changelog:
+                    showLocalChangelog();
+                    break;
                 case R.id.menu_delete_all:
                     confirmDeleteAll();
                     break;
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showLocalChangelog(){
+        startActivity(new Intent(this, LocalChangelogActivity.class));
     }
 
     @Override
