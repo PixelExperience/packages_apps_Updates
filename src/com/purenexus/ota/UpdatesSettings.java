@@ -91,6 +91,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     private static final String ADDONS_CATEGORY = "addons_category";
 
+    private static final String PREF_DOWNLOAD_FOLDER = "pref_download_folder";
+
     private SharedPreferences mPrefs;
     private ListPreference mUpdateCheck;
 
@@ -103,6 +105,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private PreferenceScreen mDeveloperInfo;
     private PreferenceScreen mWebsiteInfo;
     private PreferenceScreen mDonateInfo;
+
+    private PreferenceScreen mDownloadFolder;
 
     private static String DONATE_URL = "";
     private static String WEBSITE_URL = "";
@@ -169,6 +173,9 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         mDonateInfo = (PreferenceScreen) findPreference(DONATE_INFO);
 
         mAdddonsList = (PreferenceCategory) findPreference(ADDONS_CATEGORY);
+
+        mDownloadFolder = (PreferenceScreen) findPreference(PREF_DOWNLOAD_FOLDER);
+        mDownloadFolder.setSummary(Utils.makeUpdateFolder().getPath());
 
         mWebsiteInfo.setOnPreferenceClickListener(this);
         mDonateInfo.setOnPreferenceClickListener(this);
