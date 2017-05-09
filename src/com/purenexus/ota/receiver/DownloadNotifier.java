@@ -29,19 +29,11 @@ public class DownloadNotifier {
     public static void notifyDownloadComplete(Context context,
             Intent updateIntent, File updateFile) {
 
-        NotificationCompat.BigTextStyle style = new NotificationCompat.BigTextStyle()
-                .setBigContentTitle(context.getString(R.string.not_download_success))
-                .bigText(context.getString(R.string.not_download_install_notice, updateFile.getName()));
-
         NotificationCompat.Builder builder = createBaseContentBuilder(context, updateIntent)
                 .setSmallIcon(R.drawable.ic_system_update)
                 .setContentTitle(context.getString(R.string.not_download_success))
                 .setContentText(updateFile.getName())
-                .setTicker(context.getString(R.string.not_download_success))
-                .setStyle(style)
-                .addAction(R.drawable.ic_tab_install,
-                        context.getString(R.string.not_action_install_update),
-                        createInstallPendingIntent(context, updateFile));
+                .setTicker(context.getString(R.string.not_download_success));
 
         ((NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE))
                 .notify(R.string.not_download_success, builder.build());
@@ -69,15 +61,5 @@ public class DownloadNotifier {
                 .setContentIntent(contentIntent)
                 .setLocalOnly(true)
                 .setAutoCancel(true);
-    }
-
-
-    private static PendingIntent createInstallPendingIntent(Context context, File updateFile) {
-        Intent installIntent = new Intent(context, DownloadReceiver.class);
-        installIntent.setAction(DownloadReceiver.ACTION_INSTALL_UPDATE);
-        installIntent.putExtra(DownloadReceiver.EXTRA_FILENAME, updateFile.getName());
-
-        return PendingIntent.getBroadcast(context, 0,
-                installIntent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
     }
 }
