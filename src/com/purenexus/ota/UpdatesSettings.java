@@ -534,7 +534,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         // Read existing Updates
         LinkedList<String> existingFiles = new LinkedList<String>();
 
-        mUpdateFolder = Utils.makeUpdateFolder(mContext);
+        mUpdateFolder = Utils.makeUpdateFolder();
         File[] files = mUpdateFolder.listFiles(new UpdateFilter(".zip"));
 
         if (mUpdateFolder.exists() && mUpdateFolder.isDirectory() && files != null) {

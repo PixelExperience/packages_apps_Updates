@@ -23,6 +23,7 @@ import android.os.Build;
 import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.os.Environment;
 
 import com.purenexus.ota.R;
 import com.purenexus.ota.misc.Constants;
@@ -44,8 +45,15 @@ public class Utils {
         // this class is not supposed to be instantiated
     }
 
-    public static File makeUpdateFolder(Context context) {
-        return context.getDir(Constants.UPDATES_FOLDER, Context.MODE_PRIVATE);
+    public static File makeUpdateFolder() {
+        File updatesFolder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER);
+        if (!updatesFolder.exists()){
+            try{
+                updatesFolder.mkdir();
+            }catch(Exception ex){
+            }
+        }
+        return updatesFolder;
     }
 
     public static void cancelNotification(Context context) {
@@ -141,7 +149,7 @@ public class Utils {
 
     public static void triggerUpdate(Context context, String updateFileName) throws IOException {
         // Create the path for the update package
-        String updatePackagePath = makeUpdateFolder(context).getPath() + "/" + updateFileName;
+        String updatePackagePath = makeUpdateFolder().getPath() + "/" + updateFileName;
 
         // Reboot into recovery and trigger the update
         android.os.RecoverySystem.installPackage(context, new File(updatePackagePath));

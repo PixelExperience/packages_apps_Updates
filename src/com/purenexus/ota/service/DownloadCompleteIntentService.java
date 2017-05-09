@@ -63,7 +63,7 @@ public class DownloadCompleteIntentService extends IntentService {
 
         int status = fetchDownloadStatus(id);
         if (status == DownloadManager.STATUS_SUCCESSFUL) {
-            String destPath = Utils.makeUpdateFolder(getApplicationContext()).getPath() + "/"
+            String destPath = Utils.makeUpdateFolder().getPath() + "/"
                     + destName;
             File destFileTmp = new File(destPath + Constants.DOWNLOAD_TMP_EXT);
 
