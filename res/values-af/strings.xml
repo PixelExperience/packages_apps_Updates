@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">Opgradering vouer nie gevind nie</string>
   <string name="delete_updates_success_message">Alle afgelaaide opgraderings geskrap</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">Laas gekontroleer</string>
   <!-- Build item -->
@@ -73,6 +74,6 @@
   <string name="type_downloaded">• Afgelaai</string>
   <string name="type_downloading">Laai tans af</string>
   <string name="type_completing">• Maak tans klaar</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="install_button">Installeer</string>
 </resources>

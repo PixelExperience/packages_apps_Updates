@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">Adresář aktualizací nenalezen</string>
   <string name="delete_updates_success_message">Všechny stažené soubory aktualizací smazány</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">Poslední kontrola</string>
   <!-- Build item -->
@@ -73,7 +74,7 @@
   <string name="type_downloaded">• Stáhnuté</string>
   <string name="type_downloading">• Stahování</string>
   <string name="type_completing">• Dokončování</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="download_button">Stáhnout</string>
   <string name="install_button">Instalovat</string>
 </resources>

@@ -10,7 +10,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- General strings -->
-  <string name="app_name">Абнаўленне CyanogenMod</string>
+  <string name="app_name">Абнаўленне PureNexus</string>
   <string name="display_name">Абнаўленні</string>
   <string name="unknown">Невядома</string>
   <!-- Menu and dialog box strings -->
@@ -24,8 +24,8 @@
   <string name="dialog_close">Зачыніць</string>
   <!-- Settings strings -->
   <string name="available_updates_title">Даступныя абнаўленні</string>
-  <string name="no_available_updates_intro">Усталявана апошняя версія CyanogenMod. Націсніце кнопку \"Праверыць\", каб выканаць пошук даступных абнаўленняў.</string>
-  <string name="no_available_updates_intro_tv">Усталявана апошняя версія CyanogenMod. Націсніце кнопку \"Звесткі пра сістэму\", каб выканаць пошук даступных абнаўленняў.</string>
+  <string name="no_available_updates_intro">Усталявана апошняя версія PureNexus. Націсніце кнопку \"Праверыць\", каб выканаць пошук даступных абнаўленняў.</string>
+  <string name="no_available_updates_intro_tv">Усталявана апошняя версія PureNexus. Націсніце кнопку \"Звесткі пра сістэму\", каб выканаць пошук даступных абнаўленняў.</string>
   <string name="new_update_summary">Новае</string>
   <string name="downloaded_update_summary">Спампавана</string>
   <string name="installed_update_summary">Усталявана</string>

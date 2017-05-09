@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">Localização das atualizações não encontrada</string>
   <string name="delete_updates_success_message">Todos os ficheiros foram eliminados</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">Última verificação</string>
   <!-- Build item -->
@@ -73,6 +74,6 @@
   <string name="type_downloaded">• Transferida</string>
   <string name="type_downloading">• A transferir</string>
   <string name="type_completing">• A completar</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="install_button">Instalar</string>
 </resources>

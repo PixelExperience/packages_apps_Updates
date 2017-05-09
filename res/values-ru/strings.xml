@@ -23,7 +23,7 @@
   <string name="dialog_close">Закрыть</string>
   <!-- Settings strings -->
   <string name="available_updates_title">Доступные обновления</string>
-  <string name="no_available_updates_intro">Установлена последняя версия LineageOS. Для поиска доступных обновлений нажмите кнопку «Проверить».</string>
+  <string name="no_available_updates_intro">Установлена последняя версия PureNexus. Для поиска доступных обновлений нажмите кнопку «Проверить».</string>
   <string name="update_check_title">Проверка обновлений</string>
   <string name="check_manual">Вручную</string>
   <string name="check_daily">Ежедневно</string>
@@ -35,7 +35,7 @@
   <string name="no_updates_found">Нет доступных обновлений</string>
   <string name="update_check_failed">Не удалось выполнить поиск обновлений. Проверьте подключение к Интернету и повторите попытку.</string>
   <string name="not_new_updates_found_ticker">Доступно обновление системы</string>
-  <string name="not_new_updates_found_title">Обновления CyanogenMod</string>
+  <string name="not_new_updates_found_title">Обновления PureNexus</string>
   <string name="not_action_download">Загрузить</string>
   <string name="data_connection_required">Необходимо подключение к Интернету</string>
   <!-- Downloads -->
@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">Каталог с обновлениями не найден</string>
   <string name="delete_updates_success_message">Все загруженные обновления удалены</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">Последняя проверка</string>
   <!-- Build item -->
@@ -73,7 +74,7 @@
   <string name="type_downloaded">• готово к установке</string>
   <string name="type_downloading">• выполняется скачивание</string>
   <string name="type_completing">• завершение установки</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="download_button">Скачать</string>
   <string name="install_button">Установить</string>
 </resources>

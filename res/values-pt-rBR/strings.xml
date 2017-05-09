@@ -11,8 +11,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- General strings -->
-  <string name="app_name">Atualizador</string>
-  <string name="display_name">Atualizações</string>
+  <string name="app_name">Atualizações PureNexus</string>
+  <string name="display_name">Atualizações PureNexus</string>
   <string name="unknown">Desconhecido</string>
   <!-- Menu and dialog box strings -->
   <string name="menu_refresh">Atualizar</string>
@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">Pasta de atualização não encontrada</string>
   <string name="delete_updates_success_message">Todas as atualizações baixadas foram excluídas</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">Última verificação em</string>
   <!-- Build item -->
@@ -73,6 +74,6 @@
   <string name="type_downloaded">• Baixado</string>
   <string name="type_downloading">• Baixando</string>
   <string name="type_completing">• Concluindo</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="install_button">Instalar</string>
 </resources>

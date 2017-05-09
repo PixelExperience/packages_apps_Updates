@@ -65,7 +65,8 @@
   <string name="delete_updates_noFolder_message">アップデートフォルダが見つかりませんでした</string>
   <string name="delete_updates_success_message">ダウンロードしたすべてのアップデートファイルを削除しました</string>
   <!-- Header -->
-  <string name="header_os">LineageOS\n%1$s</string>
+  <string name="header_os">PureNexus
+\n%1$s</string>
   <string name="header_summary">%1$s\n%2$s • Android %3$s\n%4$s</string>
   <string name="sysinfo_last_check">前回の確認</string>
   <!-- Build item -->
@@ -73,7 +74,7 @@
   <string name="type_downloaded">• ダウンロード済み</string>
   <string name="type_downloading">• ダウンロード中</string>
   <string name="type_completing">• 完了処理中</string>
-  <string name="summary">%1$s\nLineageOS %2$s • Android %3$s</string>
+  <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
   <string name="download_button">ダウンロード</string>
   <string name="install_button">インストール</string>
 </resources>
