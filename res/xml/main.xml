@@ -64,5 +64,12 @@
          android:icon="@drawable/ic_download_icon"
          android:selectable="false" />
 
+     <SwitchPreference
+         android:key="pref_check_md5"
+         android:title="@string/check_md5_title"
+         android:summary="@string/check_md5_summary"
+         android:icon="@drawable/ic_check_md5"
+         android:defaultValue="true" />
+
     </PreferenceCategory>
 </PreferenceScreen>

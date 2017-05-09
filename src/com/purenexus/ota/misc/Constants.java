@@ -21,6 +21,7 @@ public class Constants {
     public static final String ENABLE_PREF = "pref_enable_updates";
     public static final String UPDATE_CHECK_PREF = "pref_update_check_interval";
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
+    public static final String CHECK_MD5_PREF = "pref_check_md5";
 
     // Update Check items
     public static final String BOOT_CHECK_COMPLETED = "boot_check_completed";

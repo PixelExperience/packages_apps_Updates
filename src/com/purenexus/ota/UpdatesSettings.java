@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -41,6 +42,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.LayoutInflater;
+import android.os.AsyncTask;
 
 import com.purenexus.ota.misc.Constants;
 import com.purenexus.ota.misc.State;
@@ -49,6 +51,7 @@ import com.purenexus.ota.receiver.DownloadReceiver;
 import com.purenexus.ota.service.UpdateCheckService;
 import com.purenexus.ota.utils.UpdateFilter;
 import com.purenexus.ota.utils.Utils;
+import com.purenexus.ota.utils.MD5;
 
 import java.io.File;
 import java.io.IOException;
@@ -93,6 +96,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     private static final String PREF_DOWNLOAD_FOLDER = "pref_download_folder";
 
+    private static final String PREF_CHECK_MD5 = "pref_check_md5";
+
     private SharedPreferences mPrefs;
     private ListPreference mUpdateCheck;
 
@@ -107,6 +112,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private PreferenceScreen mDonateInfo;
 
     private PreferenceScreen mDownloadFolder;
+
+    private SwitchPreference mCheckMD5;
 
     private static String DONATE_URL = "";
     private static String WEBSITE_URL = "";
@@ -177,6 +184,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         mDownloadFolder = (PreferenceScreen) findPreference(PREF_DOWNLOAD_FOLDER);
         mDownloadFolder.setSummary(Utils.makeUpdateFolder().getPath());
 
+        mCheckMD5 = (SwitchPreference) findPreference(PREF_CHECK_MD5);
+
         mWebsiteInfo.setOnPreferenceClickListener(this);
         mDonateInfo.setOnPreferenceClickListener(this);
 
@@ -190,6 +199,10 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             mUpdateCheck.setValue(String.valueOf(check));
             mUpdateCheck.setSummary(mapCheckValue(check));
             mUpdateCheck.setOnPreferenceChangeListener(this);
+        }
+        if (mCheckMD5 != null) {
+            mCheckMD5.setChecked(mPrefs.getBoolean(Constants.CHECK_MD5_PREF, true));
+            mCheckMD5.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -206,6 +219,11 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             mPrefs.edit().putInt(Constants.UPDATE_CHECK_PREF, value).apply();
             mUpdateCheck.setSummary(mapCheckValue(value));
             Utils.scheduleUpdateService(mContext, value * 1000);
+            return true;
+        }
+        if (preference == mCheckMD5) {
+            Boolean value = (Boolean)newValue;
+            mPrefs.edit().putBoolean(Constants.CHECK_MD5_PREF, value).apply();
             return true;
         }
 
@@ -725,6 +743,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             return;
         }
 
+        Utils.writeMD5File(ui.getFileName(),ui.getMD5());
+
         mDownloadingPreference.setStyle(UpdatePreference.STYLE_DOWNLOADING);
 
         mFileName = ui.getFileName();
@@ -796,10 +816,69 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         }
 
         mStartUpdateVisible = true;
+        boolean isMD5CheckAllowed = mPrefs.getBoolean(Constants.CHECK_MD5_PREF, true);
 
+        if (isMD5CheckAllowed){
+            mProgressDialog = new ProgressDialog(mContext);
+            mProgressDialog.setMessage(mContext.getString(R.string.checking_md5));
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.show();
+
+            new AsyncTask<Void, Void, Boolean>() {
+                protected Boolean doInBackground(Void... params) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                    }
+                    File updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + updateInfo.getFileName());
+                    return MD5.checkMD5(Utils.readMD5File(updateInfo.getFileName()),updateFile);
+                }
+
+                protected void onPostExecute(Boolean result) {
+                    if (mProgressDialog != null){
+                        mProgressDialog.hide();
+                        mProgressDialog = null;
+                    }
+                    if (result){
+                        showInstallDialog(updateInfo);
+                    }else{
+
+                        new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.md5_failed_dialog_title)
+                        .setMessage(mContext.getString(R.string.md5_failed_dialog_message))
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                showInstallDialog(updateInfo);
+                            }
+                        })
+                        .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Do nothing and allow the dialog to be dismissed
+                            }
+                        })
+                        .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                            @Override
+                            public void onDismiss(DialogInterface dialog) {
+                                mStartUpdateVisible = false;
+                            }
+                        })
+                        .show();
+                    }
+                }
+            }.execute();
+
+        }else{
+            showInstallDialog(updateInfo);
+        }
+
+    }
+
+    private void showInstallDialog(UpdateInfo updateInfo){
         // Get the message body right
         String dialogBody = getString(R.string.apply_update_dialog_text, updateInfo.getFileName());
-
         // Display the dialog
         new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.apply_update_dialog_title)

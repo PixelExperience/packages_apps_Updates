@@ -29,8 +29,16 @@ import com.purenexus.ota.R;
 import com.purenexus.ota.misc.Constants;
 import com.purenexus.ota.service.UpdateCheckService;
 
+import java.io.BufferedWriter;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -54,6 +62,56 @@ public class Utils {
             }
         }
         return updatesFolder;
+    }
+
+    public static void writeMD5File(String fileName,String md5) {
+        String path = makeUpdateFolder().getPath() + "/" + fileName + ".md5";
+        File md5File = new File(path);
+
+        if (md5File.exists()){
+            try{
+                md5File.delete();
+            }catch(Exception ex){
+            }
+        }
+
+        writeStringAsFile(path, md5);
+    }
+
+    public static String readMD5File(String fileName) {
+        String path = makeUpdateFolder().getPath() + "/" + fileName + ".md5";
+        File md5File = new File(path);
+        if (!md5File.exists()){
+            return "";
+        }
+
+        return readFileAsString(path);
+    }
+
+    public static void writeStringAsFile(String filePath, String fileContents) {
+        try {
+            FileWriter out = new FileWriter(new File(filePath));
+            out.write(fileContents);
+            out.close();
+        } catch (Exception e) {
+            Log.e(TAG, "Error in writeStringAsFile");
+        }
+    }
+
+    public static String readFileAsString(String filePath) {
+        StringBuilder stringBuilder = new StringBuilder();
+        String line;
+        BufferedReader in = null;
+
+        try {
+            in = new BufferedReader(new FileReader(new File(filePath)));
+            while ((line = in.readLine()) != null) stringBuilder.append(line);
+
+        } catch (Exception e) {
+            Log.e(TAG, "Error in readFileAsString");
+        } 
+
+        return stringBuilder.toString();
     }
 
     public static void cancelNotification(Context context) {
