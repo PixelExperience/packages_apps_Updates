@@ -104,7 +104,7 @@
     <string name="updates_category_title">Latest version (tap to view changelog)</string>
 
     <!-- Info section -->
-    <string name="info_category_title">Informations</string>
+    <string name="info_category_title">Information</string>
     <string name="developer_info_title">Maintainer(s)</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">Buy me a coffe</string>
