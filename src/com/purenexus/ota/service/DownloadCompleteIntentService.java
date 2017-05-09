@@ -94,21 +94,6 @@ public class DownloadCompleteIntentService extends IntentService {
                 return;
             }
 
-            // Check the signature of the downloaded file
-            try {
-                android.os.RecoverySystem.verifyPackage(destFileTmp, null, null);
-            } catch (Exception e) {
-                Log.e(TAG, "Verification failed", e);
-                if (destFileTmp.exists()) {
-                    destFileTmp.delete();
-                    displayErrorResult(updateIntent, R.string.verification_failed);
-                } else {
-                    // The download was probably stopped. Exit silently
-                    Log.e(TAG, "Error while verifying the file", e);
-                }
-                return;
-            }
-
             File destFile = new File(destPath);
             if (destFile.exists()) {
                 destFile.delete();
