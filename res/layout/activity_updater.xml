@@ -45,7 +45,7 @@
                     android:id="@+id/header_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="56sp"
+                    android:textSize="33sp"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:layout_alignParentBottom="true"
