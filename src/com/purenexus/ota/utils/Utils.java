@@ -64,11 +64,11 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.product.device");
+        return SystemProperties.get(Constants.CURRENT_DEVICE_NAME);
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.pure.version");
+        return SystemProperties.get(Constants.CURRENT_VERSION);
     }
 
     public static long getInstalledBuildDate() {

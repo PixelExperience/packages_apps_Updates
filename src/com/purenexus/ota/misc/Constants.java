@@ -29,4 +29,8 @@ public class Constants {
     public static final int UPDATE_FREQ_WEEKLY = 604800;
     public static final int UPDATE_FREQ_BI_WEEKLY = 1209600;
     public static final int UPDATE_FREQ_MONTHLY = 2419200;
+
+    // Build vars
+    public static final String CURRENT_DEVICE_NAME = "ro.product.device";
+    public static final String CURRENT_VERSION = "ro.pure.version";
 }
