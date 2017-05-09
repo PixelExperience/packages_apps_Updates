@@ -13,6 +13,7 @@
     <string name="app_name">PureNexus Updates</string>
     <string name="display_name">PureNexus Updates</string>
     <string name="unknown">Unknown</string>
+    <string name="rom_name" translatable="false">PureNexus</string>
 
     <!-- Menu and dialog box strings -->
     <string name="menu_refresh">Refresh</string>
@@ -86,4 +87,28 @@
     <string name="summary">%1$s\nPureNexus %2$s • Android %3$s</string>
     <string name="download_button">Download</string>
     <string name="install_button">Install</string>
+
+    <!-- Changelog -->
+    <string name="tap_to_view_changelog">Tap to view changelog</string>
+    <string name="changelog">Changelog</string>
+    <string name="changelog_loading">Loading changelog...</string>
+    <string name="changelog_error">Error loading changelog</string>
+
+    <!-- Settings section -->
+    <string name="settings_category_title">Settings</string>
+
+    <!-- Addons section -->
+    <string name="addons_category_title">Addons</string>
+
+    <!-- Addons section -->
+    <string name="updates_category_title">Latest version (tap to view changelog)</string>
+
+    <!-- Info section -->
+    <string name="info_category_title">Informations</string>
+    <string name="developer_info_title">Maintainer(s)</string>
+    <string name="donate_info_title">Donate</string>
+    <string name="donate_info_summary">Buy me a coffe</string>
+    <string name="website_info_title">Forum</string>
+    <string name="website_info_summary">View XDA thread</string>
+    <string name="error_open_url">Failed to open URL in browser</string>
 </resources>

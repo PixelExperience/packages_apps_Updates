@@ -28,16 +28,15 @@ public class DownloadNotifier {
 
     public static void notifyDownloadComplete(Context context,
             Intent updateIntent, File updateFile) {
-        String updateUiName = UpdateInfo.extractUiName(updateFile.getName());
 
         NotificationCompat.BigTextStyle style = new NotificationCompat.BigTextStyle()
                 .setBigContentTitle(context.getString(R.string.not_download_success))
-                .bigText(context.getString(R.string.not_download_install_notice, updateUiName));
+                .bigText(context.getString(R.string.not_download_install_notice, updateFile.getName()));
 
         NotificationCompat.Builder builder = createBaseContentBuilder(context, updateIntent)
                 .setSmallIcon(R.drawable.ic_system_update)
                 .setContentTitle(context.getString(R.string.not_download_success))
-                .setContentText(updateUiName)
+                .setContentText(updateFile.getName())
                 .setTicker(context.getString(R.string.not_download_success))
                 .setStyle(style)
                 .addAction(R.drawable.ic_tab_install,

@@ -47,6 +47,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UpdateCheckService extends IntentService
         implements Response.ErrorListener, Response.Listener<JSONObject> {
@@ -169,7 +173,7 @@ public class UpdateCheckService extends IntentService
 
             for (UpdateInfo ui : realUpdates) {
                 if (added < EXPANDED_NOTIF_UPDATE_COUNT) {
-                    inbox.addLine(ui.getName());
+                    inbox.addLine(ui.getFileName());
                     added++;
                 }
             }
@@ -199,41 +203,12 @@ public class UpdateCheckService extends IntentService
         sendBroadcast(finishedIntent);
     }
 
-    private String getRomType() {
-        String type;
-        switch (Utils.getUpdateType()) {
-            case Constants.UPDATE_TYPE_SNAPSHOT:
-                type = Constants.CM_RELEASETYPE_SNAPSHOT;
-                break;
-            case Constants.UPDATE_TYPE_NIGHTLY:
-                type = Constants.CM_RELEASETYPE_NIGHTLY;
-                break;
-            case Constants.UPDATE_TYPE_EXPERIMENTAL:
-                type = Constants.CM_RELEASETYPE_EXPERIMENTAL;
-                break;
-            case Constants.UPDATE_TYPE_UNOFFICIAL:
-            default:
-                type = Constants.CM_RELEASETYPE_UNOFFICIAL;
-                break;
-        }
-        return type.toLowerCase();
-    }
-
     private URI getServerURI() {
-        String updateUri = SystemProperties.get("cm.updater.uri");
-        if (TextUtils.isEmpty(updateUri)) {
-            updateUri = getString(R.string.conf_update_server_url_def);
-        }
-
-        String incrementalVersion = SystemProperties.get("ro.build.version.incremental");
-        updateUri += "/v1/" + Utils.getDeviceType() + "/" + getRomType() + "/" + incrementalVersion;
-
+        String updateUri = SystemProperties.get("ro.ota.manifest");
         return URI.create(updateUri);
     }
 
     private void getAvailableUpdates() {
-        // Get the type of update we should check for
-        int updateType = Utils.getUpdateType();
 
         // Get the actual ROM Update Server URL
         URI updateServerUri = getServerURI();
@@ -249,46 +224,36 @@ public class UpdateCheckService extends IntentService
         ((UpdateApplication) getApplicationContext()).getQueue().add(request);
     }
 
-    private LinkedList<UpdateInfo> parseJSON(String jsonString, int updateType) {
+    private LinkedList<UpdateInfo> parseJSON(String jsonString) {
         LinkedList<UpdateInfo> updates = new LinkedList<UpdateInfo>();
         try {
             JSONObject obj = new JSONObject(jsonString);
-            JSONArray updateList = obj.getJSONArray("response");
-            int length = updateList.length();
 
-            Log.d(TAG, "Got update JSON data with " + length + " entries");
+            String addons;
 
-            for (int i = 0; i < length; i++) {
-                if (updateList.isNull(i)) {
-                    continue;
-                }
-                JSONObject item = updateList.getJSONObject(i);
-                UpdateInfo info = parseUpdateJSONObject(item, updateType);
-                if (info != null) {
-                    updates.add(info);
-                }
+            try{
+                addons = obj.getJSONArray("addons").toString();
+            }catch(Exception e2){
+                addons = "[]";
             }
+
+            UpdateInfo ui = new UpdateInfo.Builder()
+                .setFileName(obj.getString("filename"))
+                .setFilesize(obj.getLong("filesize"))
+                .setBuildDate(obj.getLong("datetime"))
+                .setMD5(obj.getString("md5"))
+                .setDeveloper(obj.getString("developer"))
+                .setDownloadUrl(obj.getString("url"))
+                .setChangelogUrl(obj.getString("changelog_url"))
+                .setDonateUrl(obj.getString("donate_url"))
+                .setWebsiteUrl(obj.getString("website_url"))
+                .setAddons(addons)
+                .build();
+            updates.add(ui);
         } catch (JSONException e) {
             Log.e(TAG, "Error in JSON result", e);
         }
         return updates;
-    }
-
-    private UpdateInfo parseUpdateJSONObject(JSONObject obj, int updateType) throws JSONException {
-        UpdateInfo ui = new UpdateInfo.Builder()
-                .setFileName(obj.getString("filename"))
-                .setDownloadUrl(obj.getString("url"))
-                .setApiLevel(Build.VERSION.SDK_INT) // TODO: remove this entirely
-                .setBuildDate(obj.getLong("datetime"))
-                .setType(obj.getString("romtype"))
-                .build();
-
-        if (!ui.isNewerThanInstalled()) {
-            Log.d(TAG, "Build " + ui.getFileName() + " is older than the installed build");
-            return null;
-        }
-
-        return ui;
     }
 
     @Override
@@ -301,10 +266,9 @@ public class UpdateCheckService extends IntentService
 
     @Override
     public void onResponse(JSONObject jsonObject) {
-        int updateType = Utils.getUpdateType();
 
         LinkedList<UpdateInfo> lastUpdates = State.loadState(this);
-        LinkedList<UpdateInfo> updates = parseJSON(jsonObject.toString(), updateType);
+        LinkedList<UpdateInfo> updates = parseJSON(jsonObject.toString());
 
         int newUpdates = 0, realUpdates = 0;
         for (UpdateInfo ui : updates) {

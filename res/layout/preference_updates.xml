@@ -32,18 +32,20 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_update_build" />
+            android:src="@drawable/ic_update_build"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:paddingStart="32dp"
             android:textColor="?android:attr/textColorPrimary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end" />
 
         <TextView
             android:id="@+id/summary"
@@ -51,8 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/title"
             android:layout_below="@id/title"
-            android:maxLines="2"
-            android:paddingBottom="20sp"
+            android:maxLines="3"
+            android:paddingBottom="10sp"
             android:paddingStart="32dp"
             android:textAppearance="@android:style/TextAppearance.Material.Body1"
             android:textColor="?android:attr/textColorSecondary" />
@@ -62,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@android:id/summary"
+            android:layout_below="@id/summary"
             android:background="@color/theme_accent"
             android:text="@string/download_button"
             android:textColor="@color/white"

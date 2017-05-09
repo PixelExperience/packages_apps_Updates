@@ -44,8 +44,8 @@ public class UpdatesActivity extends AppCompatActivity {
 
         mSettingsFragment = new UpdatesSettings();
 
-        final String version = Utils.getInstalledVersionName();
-        headerCm.setText(String.format(getString(R.string.header_os), version));
+        final String version = Utils.getInstalledVersion();
+        headerCm.setText(getString(R.string.rom_name));
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, mSettingsFragment).commit();
@@ -115,7 +115,7 @@ public class UpdatesActivity extends AppCompatActivity {
     private void updateHeader() {
         mHeaderInfo.setText(String.format(getString(R.string.header_summary),
                 Utils.getDateLocalized(this, Utils.getInstalledBuildDate()),
-                Utils.getInstalledBuildType(), Build.VERSION.RELEASE, getLastCheck()));
+                Utils.getInstalledVersion(), Build.VERSION.RELEASE, getLastCheck()));
     }
 
     private String getLastCheck() {

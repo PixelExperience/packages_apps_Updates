@@ -56,27 +56,15 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.cm.device");
+        return SystemProperties.get("ro.product.device");
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.cm.version");
-    }
-
-    public static String getInstalledVersionName() {
-        return getInstalledVersion().split("-")[0];
-    }
-
-    public static int getInstalledApiLevel() {
-        return SystemProperties.getInt("ro.build.version.sdk", 0);
+        return SystemProperties.get("ro.pure.version");
     }
 
     public static long getInstalledBuildDate() {
         return SystemProperties.getLong("ro.build.date.utc", 0);
-    }
-
-    public static String getInstalledBuildType() {
-        return SystemProperties.get("ro.cm.releasetype", Constants.CM_RELEASETYPE_UNOFFICIAL);
     }
 
     public static String getDateLocalized(Context context, long unixTimestamp) {
@@ -110,14 +98,7 @@ public class Utils {
     }
 
     public static String getAndroidVersion(String versionName) {
-        switch (versionName) {
-            case "13.0":
-                return "6.0";
-            case "14.1":
-                return "7.1";
-            default:
-                return "???";
-        }
+        return versionName.split("-")[1];
     }
 
     public static String getUserAgentString(Context context) {
@@ -164,46 +145,6 @@ public class Utils {
 
         // Reboot into recovery and trigger the update
         android.os.RecoverySystem.installPackage(context, new File(updatePackagePath));
-    }
-
-    public static int getUpdateType() {
-        String releaseType;
-        try {
-            releaseType = SystemProperties.get(Constants.PROPERTY_CM_RELEASETYPE);
-        } catch (IllegalArgumentException e) {
-            releaseType = Constants.CM_RELEASETYPE_UNOFFICIAL;
-        }
-
-        int updateType;
-        switch (releaseType) {
-            case Constants.CM_RELEASETYPE_SNAPSHOT:
-                updateType = Constants.UPDATE_TYPE_SNAPSHOT;
-                break;
-            case Constants.CM_RELEASETYPE_NIGHTLY:
-                updateType = Constants.UPDATE_TYPE_NIGHTLY;
-                break;
-            case Constants.CM_RELEASETYPE_EXPERIMENTAL:
-                updateType = Constants.UPDATE_TYPE_EXPERIMENTAL;
-                break;
-            case Constants.CM_RELEASETYPE_UNOFFICIAL:
-            default:
-                updateType = Constants.UPDATE_TYPE_UNOFFICIAL;
-                break;
-        }
-        return updateType;
-    }
-
-    public static String buildTypeToString(int type) {
-        switch (type) {
-            case Constants.UPDATE_TYPE_SNAPSHOT:
-                return Constants.CM_RELEASETYPE_SNAPSHOT;
-            case Constants.UPDATE_TYPE_NIGHTLY:
-                return Constants.CM_RELEASETYPE_NIGHTLY;
-            case Constants.UPDATE_TYPE_EXPERIMENTAL:
-                return Constants.CM_RELEASETYPE_EXPERIMENTAL;
-            default:
-                return Constants.CM_RELEASETYPE_UNOFFICIAL;
-        }
     }
 
     public static Locale getCurrentLocale(Context context) {

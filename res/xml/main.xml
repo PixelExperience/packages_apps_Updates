@@ -13,7 +13,41 @@
     android:title="@string/display_name"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory android:key="updates_category"/>
+    <PreferenceCategory
+        android:key="updates_category"
+        android:title="@string/updates_category_title"/>
+
+    <PreferenceCategory
+        android:key="addons_category"
+        android:title="@string/addons_category_title">
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="info_category"
+        android:title="@string/info_category_title">
+
+        <PreferenceScreen
+            android:key="developer_info"
+            android:title="@string/developer_info_title"
+            android:icon="@drawable/ic_maintainers_icon" />
+
+        <PreferenceScreen
+            android:key="website_info"
+            android:title="@string/website_info_title"
+            android:summary="@string/website_info_summary"
+            android:icon="@drawable/ic_web_icon" />
+
+        <PreferenceScreen
+            android:key="donate_info"
+            android:title="@string/donate_info_title"
+            android:summary="@string/donate_info_summary"
+            android:icon="@drawable/ic_donate_icon" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="settings_category"
+        android:title="@string/settings_category_title">
 
      <ListPreference
          android:key="pref_update_check_interval"
@@ -21,5 +55,7 @@
          android:dialogTitle="@string/update_check_title"
          android:title="@string/update_check_title"
          android:entries="@array/update_check_entries"
-         android:entryValues="@array/update_check_values"/>
+         android:entryValues="@array/update_check_values"
+         android:icon="@drawable/ic_update_interval"/>
+    </PreferenceCategory>
 </PreferenceScreen>

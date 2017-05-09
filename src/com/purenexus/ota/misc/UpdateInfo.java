@@ -20,25 +20,27 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class UpdateInfo implements Parcelable, Serializable {
-    private static final long serialVersionUID = 5499890003569313403L;
-    public static final String CHANGELOG_EXTENSION = ".changelog.html";
-
-    public enum Type {
-        UNKNOWN,
-        STABLE,
-        RC,
-        SNAPSHOT,
-        NIGHTLY
-    };
-    private String mUiName;
     private String mFileName;
-    private Type mType;
-    private int mApiLevel;
+    private long mFileSize;
     private long mBuildDate;
     private String mDownloadUrl;
     private String mChangelogUrl;
+    private String mDonateUrl;
+    private String mWebsiteUrl;
+    private String mDeveloper;
+    private String mMD5;
+    private String mAddons;
 
     private Boolean mIsNewerThanInstalled;
 
@@ -48,24 +50,6 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     private UpdateInfo(Parcel in) {
         readFromParcel(in);
-    }
-
-    public File getChangeLogFile(Context context) {
-        return new File(context.getCacheDir(), mFileName + CHANGELOG_EXTENSION);
-    }
-
-    /**
-     * Get API level
-     */
-    public int getApiLevel() {
-        return mApiLevel;
-    }
-
-    /**
-     * Get name for UI display
-     */
-    public String getName() {
-        return mUiName;
     }
 
     /**
@@ -83,10 +67,10 @@ public class UpdateInfo implements Parcelable, Serializable {
     }
 
     /**
-     * Get build type
+     * Get file size
      */
-    public Type getType() {
-        return mType;
+    public long getFileSize() {
+        return mFileSize;
     }
 
     /**
@@ -104,32 +88,79 @@ public class UpdateInfo implements Parcelable, Serializable {
     }
 
     /**
-     * Get changelog location
+     * Get changelog url
      */
     public String getChangelogUrl() {
         return mChangelogUrl;
+    }
+
+    /**
+     * Get donate url
+     */
+    public String getDonateUrl() {
+        return mDonateUrl;
+    }
+
+    /**
+     * Get website url
+     */
+    public String getWebsiteUrl() {
+        return mWebsiteUrl;
+    }
+
+    /**
+     * Get developer
+     */
+    public String getDeveloper() {
+        return mDeveloper;
+    }
+
+    /**
+     * Get MD5
+     */
+    public String getMD5() {
+        return mMD5;
+    }
+
+     /**
+     * Get addons list
+     */
+    public List<Map<String,String>> getAddons() {
+        List<Map<String,String>> addons = new ArrayList<Map<String,String>>();
+        try{
+            JSONArray addonsListJson = new JSONArray(mAddons);
+            int length = addonsListJson.length();
+            for (int i = 0; i < length; i++) {
+                if (addonsListJson.isNull(i)) {
+                    continue;
+                }
+                JSONObject addon = addonsListJson.getJSONObject(i);
+                Map<String,String> map = new HashMap<String,String>();
+                map.put("title", addon.getString("title"));
+                map.put("summary", addon.getString("summary"));
+                map.put("url", addon.getString("url"));
+                addons.add(i,map);
+            }
+        }catch(Exception ex){
+            addons = new ArrayList<Map<String,String>>();
+        }
+        return addons;
+    }
+
+     /**
+     * Get addons list in json
+     */
+    public String getAddonsInJson() {
+        return mAddons;
     }
 
     public boolean isNewerThanInstalled() {
         if (mIsNewerThanInstalled != null) {
             return mIsNewerThanInstalled;
         }
-
-        int installedApiLevel = Utils.getInstalledApiLevel();
-        if (installedApiLevel != mApiLevel && mApiLevel > 0) {
-            mIsNewerThanInstalled = mApiLevel > installedApiLevel;
-        } else {
-            // API levels match, so compare build dates.
-            mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
-        }
+        mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
 
         return mIsNewerThanInstalled;
-    }
-
-    public static String extractUiName(String fileName) {
-        String deviceType = Utils.getDeviceType();
-        String uiName = fileName.replaceAll("\\.zip$", "");
-        return uiName.replaceAll("-" + deviceType + "-?", "");
     }
 
     @Override
@@ -149,7 +180,6 @@ public class UpdateInfo implements Parcelable, Serializable {
 
         UpdateInfo ui = (UpdateInfo) o;
         return TextUtils.equals(mFileName, ui.mFileName)
-                && mType.equals(ui.mType)
                 && mBuildDate == ui.mBuildDate
                 && TextUtils.equals(mDownloadUrl, ui.mDownloadUrl);
     }
@@ -171,66 +201,50 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     @Override
     public void writeToParcel(Parcel out, int flags) {
-        out.writeString(mUiName);
         out.writeString(mFileName);
-        out.writeString(mType.toString());
-        out.writeInt(mApiLevel);
+        out.writeLong(mFileSize);
+        out.writeString(mChangelogUrl);
         out.writeLong(mBuildDate);
         out.writeString(mDownloadUrl);
+        out.writeString(mDonateUrl);
+        out.writeString(mWebsiteUrl);
+        out.writeString(mDeveloper);
+        out.writeString(mMD5);
+        out.writeString(mAddons);
     }
 
     private void readFromParcel(Parcel in) {
-        mUiName = in.readString();
         mFileName = in.readString();
-        mType = Enum.valueOf(Type.class, in.readString());
-        mApiLevel = in.readInt();
+        mFileSize = in.readLong();
+        mChangelogUrl = in.readString();
         mBuildDate = in.readLong();
         mDownloadUrl = in.readString();
+        mDonateUrl = in.readString();
+        mWebsiteUrl = in.readString();
+        mDeveloper = in.readString();
+        mMD5 = in.readString();
+        mAddons = in.readString();
     }
 
     public static class Builder {
-        private String mUiName;
         private String mFileName;
-        private Type mType = Type.UNKNOWN;
-        private int mApiLevel;
+        private long mFileSize;
         private long mBuildDate;
         private String mDownloadUrl;
         private String mChangelogUrl;
-
-        public Builder setName(String uiName) {
-            mUiName = uiName;
-            return this;
-        }
+        private String mDonateUrl;
+        private String mWebsiteUrl;
+        private String mDeveloper;
+        private String mMD5;
+        private String mAddons;
 
         public Builder setFileName(String fileName) {
-            initializeName(fileName);
+            mFileName = fileName;
             return this;
         }
 
-        public Builder setType(String typeString) {
-            Type type;
-            if (TextUtils.equals(typeString, "stable")) {
-                type = UpdateInfo.Type.STABLE;
-            } else if (TextUtils.equals(typeString, "RC")) {
-                type = UpdateInfo.Type.RC;
-            } else if (TextUtils.equals(typeString, "snapshot")) {
-                type = UpdateInfo.Type.SNAPSHOT;
-            } else if (TextUtils.equals(typeString, "nightly")) {
-                type = UpdateInfo.Type.NIGHTLY;
-            } else {
-                type = UpdateInfo.Type.UNKNOWN;
-            }
-            mType = type;
-            return this;
-        }
-
-        public Builder setType(Type type) {
-            mType = type;
-            return this;
-        }
-
-        public Builder setApiLevel(int apiLevel) {
-            mApiLevel = apiLevel;
+        public Builder setFilesize(long fileSize) {
+            mFileSize = fileSize;
             return this;
         }
 
@@ -249,26 +263,44 @@ public class UpdateInfo implements Parcelable, Serializable {
             return this;
         }
 
+        public Builder setDonateUrl(String donateUrl) {
+            mDonateUrl = donateUrl;
+            return this;
+        }
+
+        public Builder setWebsiteUrl(String websiteUrl) {
+            mWebsiteUrl = websiteUrl;
+            return this;
+        }
+
+        public Builder setDeveloper(String developer) {
+            mDeveloper = developer;
+            return this;
+        }
+
+        public Builder setMD5(String md5) {
+            mMD5 = md5;
+            return this;
+        }
+
+        public Builder setAddons(String addons) {
+            mAddons = addons;
+            return this;
+        }
+
         public UpdateInfo build() {
             UpdateInfo info = new UpdateInfo();
-            info.mUiName = mUiName;
             info.mFileName = mFileName;
-            info.mType = mType;
-            info.mApiLevel = mApiLevel;
+            info.mFileSize = mFileSize;
             info.mBuildDate = mBuildDate;
             info.mDownloadUrl = mDownloadUrl;
             info.mChangelogUrl = mChangelogUrl;
+            info.mDonateUrl = mDonateUrl;
+            info.mWebsiteUrl = mWebsiteUrl;
+            info.mDeveloper = mDeveloper;
+            info.mMD5 = mMD5;
+            info.mAddons = mAddons;
             return info;
-        }
-
-
-        private void initializeName(String fileName) {
-            mFileName = fileName;
-            if (!TextUtils.isEmpty(fileName)) {
-                mUiName = extractUiName(fileName);
-            } else {
-                mUiName = null;
-            }
         }
     }
 }

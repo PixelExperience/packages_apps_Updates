@@ -12,7 +12,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v7-cardview \
     android-support-v7-preference \
-    android-support-v7-recyclerview
+    android-support-v7-recyclerview \
     volley
 
 LOCAL_RESOURCE_DIR := \

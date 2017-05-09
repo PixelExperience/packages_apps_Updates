@@ -29,6 +29,7 @@ import android.os.Parcelable;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
@@ -39,6 +40,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.view.LayoutInflater;
 
 import com.purenexus.ota.misc.Constants;
 import com.purenexus.ota.misc.State;
@@ -53,12 +55,27 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.LinkedList;
 
+import com.mukesh.MarkdownView;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.Volley;
+import com.android.volley.toolbox.StringRequest;
+
 public class UpdatesSettings extends PreferenceFragmentCompat implements
-        Preference.OnPreferenceChangeListener, UpdatePreference.OnReadyListener,
+        Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener, UpdatePreference.OnReadyListener,
         UpdatePreference.OnActionListener {
     private static String TAG = "UpdatesSettings";
+
+    private static String REQUEST_TAG = "LoadChangelog";
 
     // intent extras
     public static final String EXTRA_UPDATE_LIST_UPDATED = "update_list_updated";
@@ -67,11 +84,30 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     private static final String UPDATES_CATEGORY = "updates_category";
 
+    private static final String INFO_CATEGORY = "info_category";
+    private static final String DEVELOPER_INFO = "developer_info";
+    private static final String WEBSITE_INFO = "website_info";
+    private static final String DONATE_INFO = "donate_info";
+
+    private static final String ADDONS_CATEGORY = "addons_category";
+
     private SharedPreferences mPrefs;
     private ListPreference mUpdateCheck;
 
+    private PreferenceScreen preferenceScreen;
+
     private PreferenceCategory mUpdatesList;
     private UpdatePreference mDownloadingPreference;
+
+    private PreferenceCategory mInfoCategory;
+    private PreferenceScreen mDeveloperInfo;
+    private PreferenceScreen mWebsiteInfo;
+    private PreferenceScreen mDonateInfo;
+
+    private static String DONATE_URL = "";
+    private static String WEBSITE_URL = "";
+
+    private PreferenceCategory mAdddonsList;
 
     private File mUpdateFolder;
 
@@ -120,8 +156,25 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         // Load the layouts
         setPreferencesFromResource(R.xml.main, null);
+
+        preferenceScreen = getPreferenceScreen();
+
         mUpdatesList = (PreferenceCategory) findPreference(UPDATES_CATEGORY);
         mUpdateCheck = (ListPreference) findPreference(Constants.UPDATE_CHECK_PREF);
+
+
+        mInfoCategory = (PreferenceCategory) findPreference(INFO_CATEGORY);
+        mDeveloperInfo = (PreferenceScreen) findPreference(DEVELOPER_INFO);
+        mWebsiteInfo = (PreferenceScreen) findPreference(WEBSITE_INFO);
+        mDonateInfo = (PreferenceScreen) findPreference(DONATE_INFO);
+
+        mAdddonsList = (PreferenceCategory) findPreference(ADDONS_CATEGORY);
+
+        mWebsiteInfo.setOnPreferenceClickListener(this);
+        mDonateInfo.setOnPreferenceClickListener(this);
+
+        preferenceScreen.removePreference(mInfoCategory);
+        preferenceScreen.removePreference(mAdddonsList);
 
         // Load the stored preference data
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -130,14 +183,6 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             mUpdateCheck.setValue(String.valueOf(check));
             mUpdateCheck.setSummary(mapCheckValue(check));
             mUpdateCheck.setOnPreferenceChangeListener(this);
-        }
-
-        // Force a refresh if UPDATE_TYPE_PREF does not match release type
-        int updateType = Utils.getUpdateType();
-        int updateTypePref = mPrefs.getInt(Constants.UPDATE_TYPE_PREF,
-                Constants.UPDATE_TYPE_SNAPSHOT);
-        if (updateTypePref != updateType) {
-            updateUpdatesType(updateType);
         }
     }
 
@@ -157,6 +202,48 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             return true;
         }
 
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        if (preference == mWebsiteInfo) {
+            try{
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(WEBSITE_URL));
+                startActivity(intent);
+            }catch (Exception ex){
+                showSnack(getString(R.string.error_open_url));
+            }
+            return true;
+        }else if (preference == mDonateInfo) {
+            try{
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(DONATE_URL));
+                startActivity(intent);
+            }catch (Exception ex){
+                showSnack(getString(R.string.error_open_url));
+            }
+            return true;
+        }else{
+            String key;
+            try{
+                key = preference.getKey();
+                if (key == null){
+                    key = "";
+                }
+            }catch(Exception ex){
+                key = "";
+            }
+
+            if (key.startsWith("addon_")){
+                String url = key.substring(6);
+                try{
+                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+                    startActivity(intent);
+                }catch (Exception ex){
+                    showSnack(getString(R.string.error_open_url));
+                }
+            }
+        }
         return false;
     }
 
@@ -365,11 +452,6 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 .show();
     }
 
-    private void updateUpdatesType(int type) {
-        mPrefs.edit().putInt(Constants.UPDATE_TYPE_PREF, type).apply();
-        checkForUpdates();
-    }
-
     void checkForDownloadCompleted(Intent intent) {
         if (intent == null) {
             return;
@@ -428,7 +510,6 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         }
 
         mProgressDialog = new ProgressDialog(mContext);
-        mProgressDialog.setTitle(R.string.checking_for_updates);
         mProgressDialog.setMessage(getString(R.string.checking_for_updates));
         mProgressDialog.setIndeterminate(true);
         mProgressDialog.setCancelable(true);
@@ -469,58 +550,30 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         // Build list of updates
         LinkedList<UpdateInfo> availableUpdates = State.loadState(mContext);
-        final LinkedList<UpdateInfo> updates = new LinkedList<UpdateInfo>();
+        LinkedList<UpdateInfo> updates = new LinkedList<UpdateInfo>();
 
-        for (String fileName : existingFiles) {
-            updates.add(new UpdateInfo.Builder().setFileName(fileName).build());
-        }
-        for (UpdateInfo update : availableUpdates) {
-            // Only add updates to the list that are not already downloaded
+        if (availableUpdates.size() > 0){
+            UpdateInfo update = availableUpdates.get(0);
             if (existingFiles.contains(update.getFileName())) {
-                continue;
+                UpdateInfo ui = new UpdateInfo.Builder()
+                .setFileName(update.getFileName())
+                .setFilesize(update.getFileSize())
+                .setBuildDate(update.getDate())
+                .setMD5(update.getMD5())
+                .setDeveloper(update.getDeveloper())
+                .setChangelogUrl(update.getChangelogUrl())
+                .setDonateUrl(update.getDonateUrl())
+                .setWebsiteUrl(update.getWebsiteUrl())
+                .setAddons(update.getAddonsInJson())
+                .build();
+                updates.add(ui);
+            }else{
+                updates.add(update);
             }
-            updates.add(update);
         }
-
-        Collections.sort(updates, new Comparator<UpdateInfo>() {
-            @Override
-            public int compare(UpdateInfo lhs, UpdateInfo rhs) {
-                // sort in descending 'UI name' order (newest first)
-                return -lhs.getName().compareTo(rhs.getName());
-            }
-        });
 
         // Update the preference list
         refreshPreferences(updates);
-
-        // Prune obsolete change log files
-        new Thread() {
-            @Override
-            public void run() {
-                File cacheDir = mContext.getCacheDir();
-                if (cacheDir == null) {
-                    return;
-                }
-
-                File[] files = cacheDir.listFiles(new UpdateFilter(UpdateInfo.CHANGELOG_EXTENSION));
-                if (files == null) {
-                    return;
-                }
-
-                for (File file : files) {
-                    boolean updateExists = false;
-                    for (UpdateInfo info : updates) {
-                        if (file.getName().startsWith(info.getFileName())) {
-                            updateExists = true;
-                            break;
-                        }
-                    }
-                    if (!updateExists) {
-                        file.delete();
-                    }
-                }
-            }
-        }.start();
     }
 
     private boolean isDownloadCompleting(String fileName) {
@@ -534,12 +587,62 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         // Clear the list
         mUpdatesList.removeAll();
+        preferenceScreen.removePreference(mInfoCategory);
+        preferenceScreen.removePreference(mAdddonsList);
 
         // Convert the installed version name to the associated filename
-        String installedZip = "lineage-" + Utils.getInstalledVersion() + ".zip";
+        String installedZip = "purenexus_" + Utils.getDeviceType() + "-" + Utils.getInstalledVersion() + ".zip";
 
-        // Add the updates
-        for (UpdateInfo ui : updates) {
+
+
+        if (updates.size() > 0){
+            UpdateInfo ui = updates.get(0);
+
+            preferenceScreen.addPreference(mAdddonsList);
+            mAdddonsList.removeAll();
+
+            List<Map<String,String>> addons = ui.getAddons();
+
+            for (Map<String, String> addon : addons) {
+                Preference preference = new Preference(preferenceScreen.getContext());
+                preference.setTitle(addon.get("title"));
+                preference.setSummary(addon.get("summary"));
+                preference.setKey("addon_" + addon.get("url"));
+                preference.setIcon(mContext.getDrawable(R.drawable.ic_addon_download));
+                preference.setOnPreferenceClickListener(this);
+                mAdddonsList.addPreference(preference);
+            }
+
+            if (mAdddonsList.getPreferenceCount() == 0){
+                preferenceScreen.removePreference(mAdddonsList);
+            }
+
+            preferenceScreen.addPreference(mInfoCategory);
+            mInfoCategory.removeAll();
+
+            if (ui.getDeveloper() != null && !ui.getDeveloper().isEmpty()){
+                mDeveloperInfo.setSummary(ui.getDeveloper());
+                mInfoCategory.addPreference(mDeveloperInfo);
+            }
+
+            if (ui.getWebsiteUrl() != null && !ui.getWebsiteUrl().isEmpty()){
+                WEBSITE_URL = ui.getWebsiteUrl();
+                mInfoCategory.addPreference(mWebsiteInfo);
+            }else{
+                WEBSITE_URL = "";
+            }
+
+            if (ui.getDonateUrl() != null && !ui.getDonateUrl().isEmpty()){
+                DONATE_URL = ui.getDonateUrl();
+                mInfoCategory.addPreference(mDonateInfo);
+            }else{
+                DONATE_URL = "";
+            }
+
+            if (mInfoCategory.getPreferenceCount() == 0){
+                preferenceScreen.removePreference(mInfoCategory);
+            }
+
             // Determine the preference style and create the preference
             boolean isDownloading = ui.getFileName().equals(mFileName);
             int style;
@@ -551,7 +654,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 style = UpdatePreference.STYLE_COMPLETING;
                 mDownloading = true;
                 mFileName = ui.getFileName();
-            } else if (ui.getFileName().replace("-signed", "").equals(installedZip)) {
+            } else if (ui.getFileName().equals(installedZip)) {
                 // This is the currently installed version
                 style = UpdatePreference.STYLE_INSTALLED;
             } else if (ui.getDownloadUrl() != null) {
@@ -688,7 +791,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         mStartUpdateVisible = true;
 
         // Get the message body right
-        String dialogBody = getString(R.string.apply_update_dialog_text, updateInfo.getName());
+        String dialogBody = getString(R.string.apply_update_dialog_text, updateInfo.getFileName());
 
         // Display the dialog
         new AlertDialog.Builder(getActivity())
@@ -718,6 +821,63 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                     }
                 })
                 .show();
+    }
+
+    @Override
+    public void showChangelog(String mUpdateChangelogUrl) {
+        if (!Utils.isOnline(mContext)) {
+            showSnack(mContext.getString(R.string.data_connection_required));
+            return;
+        }
+        mProgressDialog = new ProgressDialog(mContext);
+        mProgressDialog.setMessage(mContext.getString(R.string.changelog_loading));
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(true);
+        mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+        public void onCancel(DialogInterface dialog) {
+        ((UpdateApplication) getActivity().getApplicationContext()).getQueue().cancelAll(REQUEST_TAG);
+        mProgressDialog = null;
+        }
+        });
+        mProgressDialog.show();
+
+        StringRequest changelogRequest = new StringRequest(Request.Method.GET,
+                mUpdateChangelogUrl, new Response.Listener<String>() {
+ 
+                    @Override
+                    public void onResponse(String response) {
+                        if (mProgressDialog != null){
+                            mProgressDialog.hide();
+                            mProgressDialog = null;
+                        }
+                        LayoutInflater inflater = LayoutInflater.from(mContext);
+                        View view = inflater.inflate(R.layout.ota_changelog_layout, null);
+                        MarkdownView markdownView = (MarkdownView) view.findViewById(R.id.markdown_view);
+                        markdownView.setMarkDownText(response);
+                        markdownView.setOpenUrlInBrowser(true);
+
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(mContext);
+                        dialog.setTitle(R.string.changelog);
+                        dialog.setView(view);
+                        dialog.setPositiveButton(R.string.dialog_ok, null);
+                        dialog.show();
+                    }
+                }, new Response.ErrorListener() {
+ 
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        showSnack(getString(R.string.changelog_error));
+                        VolleyLog.d(REQUEST_TAG, "Error: " + error.getMessage());
+                        if (mProgressDialog != null){
+                            mProgressDialog.hide();
+                            mProgressDialog = null;
+                        }
+                    }
+        });
+        changelogRequest.setTag(REQUEST_TAG);
+        changelogRequest.setShouldCache(false);
+
+        ((UpdateApplication) getActivity().getApplicationContext()).getQueue().add(changelogRequest);
     }
 
     private void showSnack(String mMessage) {
