@@ -33,7 +33,7 @@ import org.json.JSONObject;
 public class UpdateInfo implements Parcelable, Serializable {
     private String mFileName;
     private long mFileSize;
-    private long mBuildDate;
+    private String mBuildDate;
     private String mDownloadUrl;
     private String mChangelogUrl;
     private String mDonateUrl;
@@ -76,8 +76,15 @@ public class UpdateInfo implements Parcelable, Serializable {
     /**
      * Get build date
      */
-    public long getDate() {
+    public String getDate() {
         return mBuildDate;
+    }
+
+    /**
+     * Get build date in timestamp format
+     */
+    public long getDateTimestamp() {
+        return Utils.getTimestampFromDateString(mBuildDate,Constants.FILENAME_DATE_FORMAT);
     }
 
     /**
@@ -158,7 +165,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         if (mIsNewerThanInstalled != null) {
             return mIsNewerThanInstalled;
         }
-        mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
+        mIsNewerThanInstalled = getDateTimestamp() > Utils.getInstalledBuildDate();
 
         return mIsNewerThanInstalled;
     }
@@ -204,7 +211,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         out.writeString(mFileName);
         out.writeLong(mFileSize);
         out.writeString(mChangelogUrl);
-        out.writeLong(mBuildDate);
+        out.writeString(mBuildDate);
         out.writeString(mDownloadUrl);
         out.writeString(mDonateUrl);
         out.writeString(mWebsiteUrl);
@@ -217,7 +224,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         mFileName = in.readString();
         mFileSize = in.readLong();
         mChangelogUrl = in.readString();
-        mBuildDate = in.readLong();
+        mBuildDate = in.readString();
         mDownloadUrl = in.readString();
         mDonateUrl = in.readString();
         mWebsiteUrl = in.readString();
@@ -229,7 +236,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     public static class Builder {
         private String mFileName;
         private long mFileSize;
-        private long mBuildDate;
+        private String mBuildDate;
         private String mDownloadUrl;
         private String mChangelogUrl;
         private String mDonateUrl;
@@ -248,7 +255,7 @@ public class UpdateInfo implements Parcelable, Serializable {
             return this;
         }
 
-        public Builder setBuildDate(long buildDate) {
+        public Builder setBuildDate(String buildDate) {
             mBuildDate = buildDate;
             return this;
         }

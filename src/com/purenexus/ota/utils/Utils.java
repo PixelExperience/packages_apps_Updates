@@ -44,6 +44,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.text.SimpleDateFormat;
 
 public class Utils {
 
@@ -140,25 +143,13 @@ public class Utils {
         return f.format(date);
     }
 
-    public static String getDateLocalizedFromFileName(Context context, String fileName) {
-        return getDateLocalized(context, getTimestampFromFileName(fileName));
-    }
-
-    public static long getTimestampFromFileName(String fileName) {
-        String[] subStrings = fileName.split("-");
-        if (subStrings.length < 3 || subStrings[2].length() < 8) {
-            Log.e(TAG, "The given filename is not valid: " + fileName);
-            return 0;
-        }
+    public static long getTimestampFromDateString(String date,String format) {
         try {
-            int year = Integer.parseInt(subStrings[2].substring(0, 4));
-            int month = Integer.parseInt(subStrings[2].substring(4, 6)) - 1;
-            int day = Integer.parseInt(subStrings[2].substring(6, 8));
-            Calendar cal = Calendar.getInstance();
-            cal.set(year, month, day);
-            return cal.getTimeInMillis() / 1000;
-        } catch (NumberFormatException e) {
-            Log.e(TAG, "The given filename is not valid: " + fileName);
+            SimpleDateFormat formatter = new SimpleDateFormat(format);
+            Date d = formatter.parse(date);
+            long timestamp = d.getTime() / 1000;
+            return timestamp;
+        } catch (Exception e) {
             return 0;
         }
     }

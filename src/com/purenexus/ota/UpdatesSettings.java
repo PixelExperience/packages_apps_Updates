@@ -150,7 +150,9 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                     mProgressDialog = null;
 
                     int count = intent.getIntExtra(UpdateCheckService.EXTRA_NEW_UPDATE_COUNT, -1);
-                    if (count == 0) {
+                    if (count > 0) {
+                        showSnack(mContext.getResources().getQuantityString(R.plurals.not_new_updates_found_body,count, count));
+                    } else if (count == 0) {
                         showSnack(mContext.getString(R.string.no_updates_found));
                     } else if (count < 0) {
                         showSnack(mContext.getString(R.string.update_check_failed));

@@ -34,4 +34,7 @@ public class Constants {
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "ro.product.device";
     public static final String CURRENT_VERSION = "ro.pure.version";
+
+    // Expressions
+    public static final String FILENAME_DATE_FORMAT = "yyyyMMdd";
 }

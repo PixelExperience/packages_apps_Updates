@@ -154,19 +154,6 @@ public class UpdateCheckService extends IntentService
                 }
             }
 
-            Collections.sort(realUpdates, new Comparator<UpdateInfo>() {
-                @Override
-                public int compare(UpdateInfo lhs, UpdateInfo rhs) {
-                    /* sort by date descending */
-                    long lhsDate = lhs.getDate();
-                    long rhsDate = rhs.getDate();
-                    if (lhsDate == rhsDate) {
-                        return 0;
-                    }
-                    return lhsDate < rhsDate ? 1 : -1;
-                }
-            });
-
             NotificationCompat.InboxStyle inbox = new NotificationCompat.InboxStyle(builder)
                     .setBigContentTitle(text);
             int added = 0, count = realUpdates.size();
@@ -240,7 +227,7 @@ public class UpdateCheckService extends IntentService
             UpdateInfo ui = new UpdateInfo.Builder()
                 .setFileName(obj.getString("filename"))
                 .setFilesize(obj.getLong("filesize"))
-                .setBuildDate(obj.getLong("datetime"))
+                .setBuildDate(obj.getString("build_date"))
                 .setMD5(obj.getString("md5"))
                 .setDeveloper(obj.getString("developer"))
                 .setDownloadUrl(obj.getString("url"))
@@ -272,11 +259,9 @@ public class UpdateCheckService extends IntentService
 
         int newUpdates = 0, realUpdates = 0;
         for (UpdateInfo ui : updates) {
-            if (!lastUpdates.contains(ui)) {
-                newUpdates++;
-            }
             if (ui.isNewerThanInstalled()) {
                 realUpdates++;
+                newUpdates++;
             }
         }
 
