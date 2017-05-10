@@ -171,17 +171,6 @@ public class UpdateCheckService extends IntentService
             builder.setStyle(inbox);
             builder.setNumber(availableUpdates.size());
 
-            if (count == 1) {
-                i = new Intent(this, DownloadReceiver.class);
-                i.setAction(DownloadReceiver.ACTION_START_DOWNLOAD);
-                i.putExtra(DownloadReceiver.EXTRA_UPDATE_INFO, (Parcelable) realUpdates.getFirst());
-                PendingIntent downloadIntent = PendingIntent.getBroadcast(this, 0, i,
-                        PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
-
-                builder.addAction(R.drawable.ic_tab_download,
-                        res.getString(R.string.not_action_download), downloadIntent);
-            }
-
             // Trigger the notification
             NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             nm.notify(R.string.not_new_updates_found_title, builder.build());
