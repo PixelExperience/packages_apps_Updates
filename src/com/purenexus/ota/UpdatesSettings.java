@@ -87,16 +87,18 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     private static final String UPDATES_CATEGORY = "updates_category";
 
-    private static final String INFO_CATEGORY = "info_category";
+    private static final String EXTRAS_CATEGORY = "extras_category";
     private static final String DEVELOPER_INFO = "developer_info";
     private static final String WEBSITE_INFO = "website_info";
     private static final String DONATE_INFO = "donate_info";
 
-    private static final String ADDONS_CATEGORY = "addons_category";
+    private static final String ADDONS_PREFERENCE = "addons";
 
     private static final String PREF_DOWNLOAD_FOLDER = "pref_download_folder";
 
     private static final String PREF_CHECK_MD5 = "pref_check_md5";
+
+    private List<Map<String,String>> addons;
 
     private SharedPreferences mPrefs;
     private ListPreference mUpdateCheck;
@@ -106,7 +108,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private PreferenceCategory mUpdatesList;
     private UpdatePreference mDownloadingPreference;
 
-    private PreferenceCategory mInfoCategory;
+    private PreferenceCategory mExtrasCategory;
     private PreferenceScreen mDeveloperInfo;
     private PreferenceScreen mWebsiteInfo;
     private PreferenceScreen mDonateInfo;
@@ -118,7 +120,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private static String DONATE_URL = "";
     private static String WEBSITE_URL = "";
 
-    private PreferenceCategory mAdddonsList;
+    private PreferenceScreen mAddons;
 
     private File mUpdateFolder;
 
@@ -174,12 +176,12 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         mUpdateCheck = (ListPreference) findPreference(Constants.UPDATE_CHECK_PREF);
 
 
-        mInfoCategory = (PreferenceCategory) findPreference(INFO_CATEGORY);
+        mExtrasCategory = (PreferenceCategory) findPreference(EXTRAS_CATEGORY);
         mDeveloperInfo = (PreferenceScreen) findPreference(DEVELOPER_INFO);
         mWebsiteInfo = (PreferenceScreen) findPreference(WEBSITE_INFO);
         mDonateInfo = (PreferenceScreen) findPreference(DONATE_INFO);
 
-        mAdddonsList = (PreferenceCategory) findPreference(ADDONS_CATEGORY);
+        mAddons = (PreferenceScreen) findPreference(ADDONS_PREFERENCE);
 
         mDownloadFolder = (PreferenceScreen) findPreference(PREF_DOWNLOAD_FOLDER);
         mDownloadFolder.setSummary(Utils.makeUpdateFolder().getPath());
@@ -188,9 +190,9 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         mWebsiteInfo.setOnPreferenceClickListener(this);
         mDonateInfo.setOnPreferenceClickListener(this);
+        mAddons.setOnPreferenceClickListener(this);
 
-        preferenceScreen.removePreference(mInfoCategory);
-        preferenceScreen.removePreference(mAdddonsList);
+        preferenceScreen.removePreference(mExtrasCategory);
 
         // Load the stored preference data
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -248,26 +250,15 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 showSnack(getString(R.string.error_open_url));
             }
             return true;
-        }else{
-            String key;
+        }else if (preference == mAddons) {
             try{
-                key = preference.getKey();
-                if (key == null){
-                    key = "";
-                }
-            }catch(Exception ex){
-                key = "";
-            }
+                Intent intent = new Intent(getActivity(), AddonsActivity.class);
+                intent.putExtra("addons", (ArrayList<Map<String,String>>) addons);
+                getActivity().startActivity(intent);
+            }catch (Exception ex){
 
-            if (key.startsWith("addon_")){
-                String url = key.substring(6);
-                try{
-                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
-                    startActivity(intent);
-                }catch (Exception ex){
-                    showSnack(getString(R.string.error_open_url));
-                }
             }
+            return true;
         }
         return false;
     }
@@ -612,8 +603,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         // Clear the list
         mUpdatesList.removeAll();
-        preferenceScreen.removePreference(mInfoCategory);
-        preferenceScreen.removePreference(mAdddonsList);
+        preferenceScreen.removePreference(mExtrasCategory);
 
         // Convert the installed version name to the associated filename
         String installedZip = "purenexus_" + Utils.getDeviceType() + "-" + Utils.getInstalledVersion() + ".zip";
@@ -622,50 +612,36 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         if (updates.size() > 0){
             UpdateInfo ui = updates.get(0);
+            
+            preferenceScreen.addPreference(mExtrasCategory);
+            mExtrasCategory.removeAll();
 
-            preferenceScreen.addPreference(mAdddonsList);
-            mAdddonsList.removeAll();
-
-            List<Map<String,String>> addons = ui.getAddons();
-
-            for (Map<String, String> addon : addons) {
-                Preference preference = new Preference(preferenceScreen.getContext());
-                preference.setTitle(addon.get("title"));
-                preference.setSummary(addon.get("summary"));
-                preference.setKey("addon_" + addon.get("url"));
-                preference.setIcon(mContext.getDrawable(R.drawable.ic_addon_download));
-                preference.setOnPreferenceClickListener(this);
-                mAdddonsList.addPreference(preference);
+            addons = ui.getAddons();
+            if (addons.size() > 0){
+                mExtrasCategory.addPreference(mAddons);
             }
-
-            if (mAdddonsList.getPreferenceCount() == 0){
-                preferenceScreen.removePreference(mAdddonsList);
-            }
-
-            preferenceScreen.addPreference(mInfoCategory);
-            mInfoCategory.removeAll();
 
             if (ui.getDeveloper() != null && !ui.getDeveloper().isEmpty()){
                 mDeveloperInfo.setSummary(ui.getDeveloper());
-                mInfoCategory.addPreference(mDeveloperInfo);
+                mExtrasCategory.addPreference(mDeveloperInfo);
             }
 
             if (ui.getWebsiteUrl() != null && !ui.getWebsiteUrl().isEmpty()){
                 WEBSITE_URL = ui.getWebsiteUrl();
-                mInfoCategory.addPreference(mWebsiteInfo);
+                mExtrasCategory.addPreference(mWebsiteInfo);
             }else{
                 WEBSITE_URL = "";
             }
 
             if (ui.getDonateUrl() != null && !ui.getDonateUrl().isEmpty()){
                 DONATE_URL = ui.getDonateUrl();
-                mInfoCategory.addPreference(mDonateInfo);
+                mExtrasCategory.addPreference(mDonateInfo);
             }else{
                 DONATE_URL = "";
             }
 
-            if (mInfoCategory.getPreferenceCount() == 0){
-                preferenceScreen.removePreference(mInfoCategory);
+            if (mExtrasCategory.getPreferenceCount() == 0){
+                preferenceScreen.removePreference(mExtrasCategory);
             }
 
             // Determine the preference style and create the preference

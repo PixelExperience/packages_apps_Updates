@@ -100,20 +100,22 @@
     <string name="check_md5_title">Check hash</string>
     <string name="check_md5_summary">Check MD5 hash before installing update</string>
 
-    <!-- Addons section -->
-    <string name="addons_category_title">Addons</string>
-
     <!-- Main section -->
     <string name="updates_category_title">Latest version (tap to view changelog)</string>
 
     <!-- Info section -->
-    <string name="info_category_title">Information</string>
+    <string name="extras_category_title">Extras</string>
     <string name="developer_info_title">Maintainer(s)</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">Buy me a coffe</string>
     <string name="website_info_title">Forum</string>
     <string name="website_info_summary">View XDA thread</string>
     <string name="error_open_url">Failed to open URL in browser</string>
+    <string name="addons_title">Addons</string>
+    <string name="addons_summary">Useful files</string>
+
+    <!-- Addons -->
+    <string name="addons_error">Failed to load addons list</string>
 
     <!-- MD5 -->
     <string name="checking_md5">Checking hash...</string>

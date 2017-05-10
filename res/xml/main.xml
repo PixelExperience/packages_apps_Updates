@@ -18,13 +18,14 @@
         android:title="@string/updates_category_title"/>
 
     <PreferenceCategory
-        android:key="addons_category"
-        android:title="@string/addons_category_title">
-    </PreferenceCategory>
+        android:key="extras_category"
+        android:title="@string/extras_category_title">
 
-    <PreferenceCategory
-        android:key="info_category"
-        android:title="@string/info_category_title">
+        <PreferenceScreen
+            android:key="addons"
+            android:title="@string/addons_title"
+            android:summary="@string/addons_summary"
+            android:icon="@drawable/ic_addons" />
 
         <PreferenceScreen
             android:key="developer_info"
