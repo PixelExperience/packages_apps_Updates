@@ -771,17 +771,21 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     }
 
     private static boolean deleteDir(File dir) {
-        if (dir.isDirectory()) {
-            String[] children = dir.list();
-            for (String aChildren : children) {
-                boolean success = deleteDir(new File(dir, aChildren));
-                if (!success) {
-                    return false;
+        try{
+            if (dir.isDirectory()) {
+                String[] children = dir.list();
+                for (String aChildren : children) {
+                    boolean success = deleteDir(new File(dir, aChildren));
+                    if (!success) {
+                        return false;
+                    }
                 }
             }
-        }
         // The directory is now empty so delete it
-        return dir.delete();
+            return dir.delete();
+        }catch(Exception ex){
+            return false; // failed to delete file
+        }
     }
 
     @Override
