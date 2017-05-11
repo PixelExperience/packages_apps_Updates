@@ -72,6 +72,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.Volley;
 import com.android.volley.toolbox.StringRequest;
+import android.support.v4.app.ActivityCompat;
+import android.os.Build;
+import android.content.pm.PackageManager;
+import android.Manifest;
 
 public class UpdatesSettings extends PreferenceFragmentCompat implements
         Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener, UpdatePreference.OnReadyListener,
@@ -79,6 +83,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private static String TAG = "UpdatesSettings";
 
     private static String REQUEST_TAG = "LoadChangelog";
+
+    private static int DOWNLOAD_REQUEST_CODE = 9487;
 
     // intent extras
     public static final String EXTRA_UPDATE_LIST_UPDATED = "update_list_updated";
@@ -133,6 +139,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private boolean mDownloading = false;
     private long mDownloadId;
     private String mFileName;
+
+    private UpdatePreference pendingDownload;
 
     private Handler mUpdateHandler = new Handler();
 
@@ -303,6 +311,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         checkForDownloadCompleted(getActivity().getIntent());
         getActivity().setIntent(null);
+        isStoragePermissionGranted();
     }
 
     @Override
@@ -327,6 +336,14 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         if (mDownloading) {
             showSnack(mContext.getString(R.string.download_already_running));
             return;
+        }
+
+        if (!isStoragePermissionGranted()) {
+            pendingDownload = pref;
+            showSnack(mContext.getString(R.string.storage_permission_error));
+            return;
+        }else{
+            pendingDownload = null;
         }
 
         // We have a match, get ready to trigger the download
@@ -950,5 +967,28 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     private void showSnack(String mMessage) {
         ((UpdatesActivity) getActivity()).showSnack(mMessage);
+    }
+
+    public boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }else{
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, DOWNLOAD_REQUEST_CODE);
+                return false;
+            }
+        }else {
+            Log.v(TAG,"Permission is granted");
+            return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == DOWNLOAD_REQUEST_CODE && grantResults[0]== PackageManager.PERMISSION_GRANTED){
+            mDownloadingPreference = pendingDownload;
+            startDownload();
+        }
     }
 }

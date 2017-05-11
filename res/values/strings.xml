@@ -121,4 +121,7 @@
     <string name="checking_md5">Checking hash...</string>
     <string name="md5_failed_dialog_title">Hash verification</string>
     <string name="md5_failed_dialog_message">Hash verification failed, do you want to continue?</string>
+
+    <!-- Storage permission -->
+    <string name="storage_permission_error">Please grant storage permission to continue</string>
 </resources>
