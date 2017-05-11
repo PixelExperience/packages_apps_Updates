@@ -127,7 +127,7 @@ public class UpdatesActivity extends AppCompatActivity {
                 date, time);
     }
 
-    void showSnack(String message) {
-        Snackbar.make(findViewById(R.id.coordinator), message, Snackbar.LENGTH_LONG).show();
+    void showSnack(String message, int length) {
+        Snackbar.make(findViewById(R.id.coordinator), message, length).show();
     }
 }

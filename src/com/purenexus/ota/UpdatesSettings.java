@@ -76,6 +76,7 @@ import android.support.v4.app.ActivityCompat;
 import android.os.Build;
 import android.content.pm.PackageManager;
 import android.Manifest;
+import android.support.design.widget.Snackbar;
 
 public class UpdatesSettings extends PreferenceFragmentCompat implements
         Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener, UpdatePreference.OnReadyListener,
@@ -159,11 +160,11 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
                     int count = intent.getIntExtra(UpdateCheckService.EXTRA_NEW_UPDATE_COUNT, -1);
                     if (count > 0) {
-                        showSnack(mContext.getResources().getQuantityString(R.plurals.not_new_updates_found_body,count, count));
+                        showSnack(mContext.getResources().getQuantityString(R.plurals.not_new_updates_found_body,count, count),Snackbar.LENGTH_SHORT);
                     } else if (count == 0) {
-                        showSnack(mContext.getString(R.string.no_updates_found));
+                        showSnack(mContext.getString(R.string.no_updates_found),Snackbar.LENGTH_SHORT);
                     } else if (count < 0) {
-                        showSnack(mContext.getString(R.string.update_check_failed));
+                        showSnack(mContext.getString(R.string.update_check_failed),Snackbar.LENGTH_LONG);
                     }
                 }
                 updateLayout();
@@ -249,7 +250,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(WEBSITE_URL));
                 startActivity(intent);
             }catch (Exception ex){
-                showSnack(getString(R.string.error_open_url));
+                showSnack(getString(R.string.error_open_url),Snackbar.LENGTH_SHORT);
             }
             return true;
         }else if (preference == mDonateInfo) {
@@ -257,7 +258,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(DONATE_URL));
                 startActivity(intent);
             }catch (Exception ex){
-                showSnack(getString(R.string.error_open_url));
+                showSnack(getString(R.string.error_open_url),Snackbar.LENGTH_SHORT);
             }
             return true;
         }else if (preference == mAddons) {
@@ -285,7 +286,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             Cursor c =
                     mDownloadManager.query(new DownloadManager.Query().setFilterById(mDownloadId));
             if (c == null || !c.moveToFirst()) {
-                showSnack(mContext.getString(R.string.download_not_found));
+                showSnack(mContext.getString(R.string.download_not_found),Snackbar.LENGTH_SHORT);
             } else {
                 int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 Uri uri = Uri.parse(c.getString(c.getColumnIndex(DownloadManager.COLUMN_URI)));
@@ -329,18 +330,18 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     public void onStartDownload(UpdatePreference pref) {
         // If there is no internet connection, display a message and return.
         if (!Utils.isOnline(mContext)) {
-            showSnack(mContext.getString(R.string.data_connection_required));
+            showSnack(mContext.getString(R.string.data_connection_required),Snackbar.LENGTH_LONG);
             return;
         }
 
         if (mDownloading) {
-            showSnack(mContext.getString(R.string.download_already_running));
+            showSnack(mContext.getString(R.string.download_already_running),Snackbar.LENGTH_SHORT);
             return;
         }
 
         if (!isStoragePermissionGranted()) {
             pendingDownload = pref;
-            showSnack(mContext.getString(R.string.storage_permission_error));
+            showSnack(mContext.getString(R.string.storage_permission_error),Snackbar.LENGTH_SHORT);
             return;
         }else{
             pendingDownload = null;
@@ -442,10 +443,10 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                             // Set the preference back to new style
                             pref.setStyle(UpdatePreference.STYLE_NEW);
                             resetDownloadState();
-                            showSnack(mContext.getString(R.string.download_cancelled));
+                            showSnack(mContext.getString(R.string.download_cancelled),Snackbar.LENGTH_SHORT);
                         } else {
                             Log.e(TAG, "Could not delete temp zip");
-                            showSnack(mContext.getString(R.string.unable_to_stop_download));
+                            showSnack(mContext.getString(R.string.unable_to_stop_download),Snackbar.LENGTH_SHORT);
                         }
                     }
                 })
@@ -480,7 +481,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                                 .remove(Constants.DOWNLOAD_ID)
                                 .apply();
 
-                        showSnack(mContext.getString(R.string.download_cancelled));
+                        showSnack(mContext.getString(R.string.download_cancelled),Snackbar.LENGTH_SHORT);
                     }
                 })
                 .setNegativeButton(R.string.dialog_cancel, null)
@@ -540,7 +541,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         // If there is no internet connection, display a message and return.
         if (!Utils.isOnline(mContext)) {
-            showSnack(mContext.getString(R.string.data_connection_required));
+            showSnack(mContext.getString(R.string.data_connection_required),Snackbar.LENGTH_LONG);
             return;
         }
 
@@ -722,11 +723,11 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 return;
             }
 
-            showSnack(getString(R.string.delete_single_update_success_message, fileName));
+            showSnack(getString(R.string.delete_single_update_success_message, fileName),Snackbar.LENGTH_SHORT);
         } else {
             showSnack(getString(mUpdateFolder.exists() ?
                     R.string.delete_updates_failure_message :
-                    R.string.delete_updates_noFolder_message));
+                    R.string.delete_updates_noFolder_message),Snackbar.LENGTH_SHORT);
         }
         // Update the list
         updateLayout();
@@ -777,12 +778,12 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             deleteDir(mUpdateFolder);
             mUpdateFolder.mkdir();
             success = true;
-            showSnack(mContext.getString(R.string.delete_updates_success_message));
+            showSnack(mContext.getString(R.string.delete_updates_success_message),Snackbar.LENGTH_SHORT);
         } else {
             success = false;
             showSnack(mContext.getString(mUpdateFolder.exists() ?
                     R.string.delete_updates_failure_message :
-                    R.string.delete_updates_noFolder_message));
+                    R.string.delete_updates_noFolder_message),Snackbar.LENGTH_SHORT);
         }
         return success;
     }
@@ -889,7 +890,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                             Utils.triggerUpdate(mContext, updateInfo.getFileName());
                         } catch (IOException e) {
                             Log.e(TAG, "Unable to reboot into recovery mode", e);
-                            showSnack(mContext.getString(R.string.apply_unable_to_reboot_toast));
+                            showSnack(mContext.getString(R.string.apply_unable_to_reboot_toast),Snackbar.LENGTH_LONG);
                         }
                     }
                 })
@@ -911,7 +912,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     @Override
     public void showChangelog(String mUpdateChangelogUrl) {
         if (!Utils.isOnline(mContext)) {
-            showSnack(mContext.getString(R.string.data_connection_required));
+            showSnack(mContext.getString(R.string.data_connection_required),Snackbar.LENGTH_LONG);
             return;
         }
         mProgressDialog = new ProgressDialog(mContext);
@@ -951,7 +952,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
  
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        showSnack(getString(R.string.changelog_error));
+                        showSnack(getString(R.string.changelog_error),Snackbar.LENGTH_SHORT);
                         VolleyLog.d(REQUEST_TAG, "Error: " + error.getMessage());
                         if (mProgressDialog != null){
                             mProgressDialog.hide();
@@ -965,8 +966,8 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         ((UpdateApplication) getActivity().getApplicationContext()).getQueue().add(changelogRequest);
     }
 
-    private void showSnack(String mMessage) {
-        ((UpdatesActivity) getActivity()).showSnack(mMessage);
+    private void showSnack(String mMessage, int length) {
+        ((UpdatesActivity) getActivity()).showSnack(mMessage, length);
     }
 
     public boolean isStoragePermissionGranted() {
