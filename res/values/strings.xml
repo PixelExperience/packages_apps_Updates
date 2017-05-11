@@ -89,7 +89,6 @@
     <string name="install_button">Install</string>
 
     <!-- Changelog -->
-    <string name="tap_to_view_changelog">Tap to view changelog</string>
     <string name="changelog">Changelog</string>
     <string name="changelog_loading">Loading changelog...</string>
     <string name="changelog_error">Error loading changelog</string>
