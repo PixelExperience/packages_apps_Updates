@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2017 Henrique Silva (jhenrique09)
  *
  * * Licensed under the GNU GPLv2 license
  *

@@ -1,6 +1,7 @@
 /*
-* Copyright (C) 2012 The CyanogenMod Project
-* Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2017 Henrique Silva (jhenrique09)
+ * Copyright (C) 2017 The LineageOS Project
  *
  * * Licensed under the GNU GPLv2 license
  *

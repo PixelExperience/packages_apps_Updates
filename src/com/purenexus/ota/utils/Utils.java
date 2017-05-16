@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2017 Henrique Silva (jhenrique09)
  *
  * * Licensed under the GNU GPLv2 license
  *
