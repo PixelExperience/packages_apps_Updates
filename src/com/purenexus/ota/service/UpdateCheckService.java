@@ -221,7 +221,7 @@ public class UpdateCheckService extends IntentService
                 .setMD5(obj.getString("md5"))
                 .setDeveloper(obj.isNull("developer") ? "" : obj.getString("developer"))
                 .setDownloadUrl(obj.getString("url"))
-                .setChangelogUrl(obj.getString("changelog_url"))
+                .setChangelogUrl(obj.isNull("changelog_url") ? "" : obj.getString("changelog_url"))
                 .setDonateUrl(obj.isNull("donate_url") ? "" : obj.getString("donate_url"))
                 .setWebsiteUrl(obj.isNull("website_url") ? "" : obj.getString("website_url"))
                 .setAddons(addons)

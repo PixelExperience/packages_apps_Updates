@@ -919,6 +919,11 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
     @Override
     public void showChangelog(String mUpdateChangelogUrl) {
+        if (mUpdateChangelogUrl == null || mUpdateChangelogUrl.isEmpty() || !mUpdateChangelogUrl.startsWith("http")){
+            showSnack(mContext.getString(R.string.changelog_not_available),Snackbar.LENGTH_LONG);
+            return;
+        }
+
         if (mChangelogVisible){
             return;
         }

@@ -155,4 +155,7 @@
     <string name="copy_failed">Failed to copy %1$s.\n\nMake sure that the device has sufficient storage and that the application has write permissions.</string>
     <string name="install_dialog_message">Are you sure you want to proceed? This works on TWRP and some custom CWM (not official) recoveries.\n\nRoot access is required.</string>
     <string name="install_write_ors_failed_dialog_message">Failed to write recovery script, do you want to reboot and do the process manually ?</string>
+
+    <!-- Changelog not available -->
+    <string name="changelog_not_available">Changelog not available</string>
 </resources>
