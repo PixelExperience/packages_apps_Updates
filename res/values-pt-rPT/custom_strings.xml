@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 Henrique Silva
+
+     Licensed under the GNU GPLv2 license
+
+     The text of the license can be found in the LICENSE file
+     or at https://www.gnu.org/licenses/gpl-2.0.txt
+   -->
+   <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Changelog -->
+    <string name="changelog">Lista de mudanças</string>
+    <string name="changelog_loading">Carregando a lista de mudanças...</string>
+    <string name="changelog_error">Erro ao carregar a lista de mudanças</string>
+    <string name="changelog_not_available">Lista de mudanças não disponível</string>
+    <!-- Settings section -->
+    <string name="settings_category_title">Configurações</string>
+    <string name="download_folder_title">Local para salvar</string>
+    <string name="check_md5_title">Verificar hash</string>
+    <string name="check_md5_summary">Verificar o hash MD5 antes de instalar a atualização</string>
+    <!-- Main section -->
+    <string name="updates_category_title">Última versão (toque para ver o changelog)</string>
+    <!-- Info section -->
+    <string name="extras_category_title">Extras</string>
+    <string name="developer_info_title">Mantenedor(es)</string>
+    <string name="donate_info_title">Doar</string>
+    <string name="donate_info_summary">Faça uma doação</string>
+    <string name="website_info_title">Fórum</string>
+    <string name="website_info_summary">Ver o tópico no XDA</string>
+    <string name="error_open_url">Falha ao abrir a URL no navegador</string>
+    <string name="addons_title">Extensões</string>
+    <string name="addons_summary">Arquivos úteis</string>
+    <!-- Addons -->
+    <string name="addons_error">Falha ao carregar a lista de extensões</string>
+    <!-- MD5 -->
+    <string name="checking_md5">Verificando hash...</string>
+    <string name="md5_failed_dialog_title">Verificação MD5</string>
+    <string name="md5_failed_dialog_message">A verificação de hash falhou, você deseja continuar ?</string>
+    <!-- Storage permission -->
+    <string name="storage_permission_error">Conceda permissão de armazenamento para continuar</string>
+    <!-- Restart recovery -->
+    <string name="restart_recovery">Reiniciar para o modo de recuperação</string>
+    <string name="restart_recovery_dialog_message">Tem certeza que deseja reiniciar ?</string>
+    <string name="restart_recovery_error_message">Falha ao reiniciar, verifique se você tem acesso root</string>
+    <!-- OTA not configured -->
+    <string name="ota_not_configured_error_message">OTA não configurado, entre em contato com o mantenedor do seu dispositivo.</string>
+    <!-- Install -->
+    <string name="install_title">Instalar</string>
+    <string name="checking_root">Verificando acesso root...</string>
+    <string name="available_reboot_manual_title">Acesso root não encontrado</string>
+    <string name="available_reboot_manual_message">Reinicie manualmente a recuperação e faça o flash da sua ROM.\n\nVocê pode encontrar o zip na pasta PureNexusOTA.</string>
+    <string name="fab_add_file_title">Adicionar arquivo</string>
+    <string name="fab_remove_all_files_title">Remover todos os arquivos</string>
+    <string name="fab_wipe_title">Opções de limpeza</string>
+    <string name="fab_install_title">Reiniciar e instalar</string>
+    <string name="wipe_cache">Limpar cache</string>
+    <string name="wipe_dalvik">Limpar dalvik cache</string>
+    <string name="wipe_data">Limpar data</string>
+    <string name="delete_file_dialog_title">Deletar arquivo</string>
+    <string name="delete_file_dialog_message">Tem a certeza de que deseja eliminar este arquivo da lista?</string>
+    <string name="file_not_allowed">Somente arquivos zip são permitidos</string>
+    <string name="file_get_path_error">Não foi possível encontrar o caminho do arquivo</string>
+    <string name="no_files">Nenhum arquivo adicionado. Você pode adicionar um arquivo clicando no botão \'+\'</string>
+    <string name="please_wait">Aguarde ...</string>
+    <string name="copy_progress">Copiando %1$s ...</string>
+    <string name="copy_failed">Falha ao copiar o arquivo %1$s.\n\nCertifique-se de que o dispositivo tem armazenamento suficiente e que o aplicativo tem permissões de gravação.</string>
+    <string name="install_dialog_message">Tem certeza de que deseja continuar? Isso funciona com TWRP e algumas recuperações CWM (não oficiais) personalizadas.\n\nRoot é necessário.</string>
+    <string name="install_write_ors_failed_dialog_message">Falha ao gravar script de recuperação, você deseja reinicializar e instalar manualmente ?</string>
+  </resources>
