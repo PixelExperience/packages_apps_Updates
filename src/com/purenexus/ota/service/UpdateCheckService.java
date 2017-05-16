@@ -218,11 +218,11 @@ public class UpdateCheckService extends IntentService
                 .setFilesize(obj.getLong("filesize"))
                 .setBuildDate(obj.getString("build_date"))
                 .setMD5(obj.getString("md5"))
-                .setDeveloper(obj.getString("developer"))
+                .setDeveloper(obj.isNull("developer") ? "" : obj.getString("developer"))
                 .setDownloadUrl(obj.getString("url"))
                 .setChangelogUrl(obj.getString("changelog_url"))
-                .setDonateUrl(obj.getString("donate_url"))
-                .setWebsiteUrl(obj.getString("website_url"))
+                .setDonateUrl(obj.isNull("donate_url") ? "" : obj.getString("donate_url"))
+                .setWebsiteUrl(obj.isNull("website_url") ? "" : obj.getString("website_url"))
                 .setAddons(addons)
                 .build();
             updates.add(ui);

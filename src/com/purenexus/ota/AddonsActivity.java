@@ -97,6 +97,7 @@ public class AddonsActivity extends PreferenceActivity implements Preference.OnP
             String url = key.substring(6);
             try{
                 Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }catch (Exception ex){
                 Toast.makeText(AddonsActivity.this, getString(R.string.error_open_url), Toast.LENGTH_SHORT).show();

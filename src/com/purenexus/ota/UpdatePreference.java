@@ -25,6 +25,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.text.format.Formatter;
+import android.os.Handler;
+import java.lang.Runnable;
 
 import com.purenexus.ota.misc.UpdateInfo;
 import com.purenexus.ota.UpdateApplication;
@@ -76,12 +78,16 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
     private long mUpdateFileSize;
     private String mUpdateChangelogUrl;
 
+    private boolean buttonClicked = false;
+
     private OnClickListener mButtonClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (mOnActionListener == null) {
+            if (mOnActionListener == null || buttonClicked) {
                 return;
             }
+
+            buttonClicked = true;
 
             switch (mStyle) {
                 case STYLE_COMPLETING:
@@ -97,6 +103,13 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
                     mOnActionListener.onStartDownload(UpdatePreference.this);
                     break;
             }
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    buttonClicked = false;
+                }
+            }, 500);
         }
     };
 
@@ -161,7 +174,7 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
 
     @Override
     public void onClick(View v) {
-        if (mOnActionListener != null) {
+        if (mOnActionListener != null && !buttonClicked) {
             mOnActionListener.showChangelog(mUpdateChangelogUrl);
         }
     }
@@ -170,7 +183,7 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
         new AlertDialog.Builder(getContext())
                 .setTitle(R.string.confirm_delete_dialog_title)
                 .setMessage(R.string.confirm_delete_dialog_message)
-                .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // We are OK to delete, trigger it

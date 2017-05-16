@@ -13,6 +13,14 @@
         android:title="@string/menu_refresh"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/menu_install"
+        android:title="@string/install_title"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_restart_recovery"
+        android:title="@string/restart_recovery"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_delete_all"
         android:title="@string/menu_delete_all"
         app:showAsAction="never" />

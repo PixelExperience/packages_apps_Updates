@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_CERTIFICATE := platform
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
@@ -14,7 +16,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-preference \
     android-support-v14-preference \
     android-support-v7-recyclerview \
-    volley
+    volley \
+    RootTools \
+    commons-io-2.5
 
 LOCAL_RESOURCE_DIR := \
     $(TOP)/frameworks/support/design/res \
@@ -41,3 +45,11 @@ LOCAL_PROGUARD_FLAGS := -include $(LOCAL_PATH)/proguard.flags
 LOCAL_PRIVILEGED_MODULE := true
 
 include $(BUILD_PACKAGE)
+
+include $(CLEAR_VARS)
+
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
+    libs/RootTools.jar \
+    libs/commons-io-2.5.jar
+
+include $(BUILD_MULTI_PREBUILT)

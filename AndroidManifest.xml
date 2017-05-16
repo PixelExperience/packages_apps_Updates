@@ -33,7 +33,7 @@
             android:label="@string/display_name"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme.NoActionBar"
-            android:excludeFromRecents="true" >
+            android:excludeFromRecents="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.SHORTCUT" />
@@ -48,7 +48,16 @@
             android:hardwareAccelerated="true"
             android:label="@string/addons_title"
             android:theme="@style/AppTheme"
-            android:excludeFromRecents="true">
+            android:excludeFromRecents="false">
+        </activity>
+
+        <activity
+            android:name=".InstallActivity"
+            android:launchMode="singleTop"
+            android:hardwareAccelerated="true"
+            android:label="@string/install_title"
+            android:theme="@style/AppTheme"
+            android:excludeFromRecents="false">
         </activity>
 
         <service android:name=".service.UpdateCheckService" />

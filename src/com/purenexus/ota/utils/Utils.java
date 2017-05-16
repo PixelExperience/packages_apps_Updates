@@ -24,6 +24,11 @@ import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.os.Environment;
+import android.net.Uri;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.database.Cursor;
+import android.content.ContentUris;
 
 import com.purenexus.ota.R;
 import com.purenexus.ota.misc.Constants;
@@ -47,6 +52,19 @@ import java.util.TimeZone;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.text.SimpleDateFormat;
+import java.io.DataOutputStream;
+import java.util.ArrayList;
+import android.os.Bundle;
+import android.os.Looper;
+import android.os.PowerManager;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
+import com.stericson.RootTools.BuildConfig;
+import com.stericson.RootTools.RootTools;
+
+import org.apache.commons.io.FileUtils;
 
 public class Utils {
 
@@ -65,6 +83,39 @@ public class Utils {
             }
         }
         return updatesFolder;
+    }
+
+    public static File makeTempFolder() {
+        File tempFolder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER + "/temp");
+        if (!tempFolder.exists()){
+            try{
+                tempFolder.mkdir();
+            }catch(Exception ex){
+            }
+        }
+        return tempFolder;
+    }
+
+    public static boolean deleteDir(File dir) {
+        try{
+            if (dir.isDirectory()) {
+                String[] children = dir.list();
+                for (String aChildren : children) {
+                    boolean success = deleteDir(new File(dir, aChildren));
+                    if (!success) {
+                        return false;
+                    }
+                }
+            }
+        // The directory is now empty so delete it
+            return dir.delete();
+        }catch(Exception ex){
+            return false; // failed to delete file
+        }
+    }
+
+    public static void deleteTempFolder() {
+        deleteDir(new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER + "/" + "temp"));
     }
 
     public static void writeMD5File(String fileName,String md5) {
@@ -122,6 +173,10 @@ public class Utils {
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         nm.cancel(R.string.not_new_updates_found_title);
         nm.cancel(R.string.not_download_success);
+    }
+
+    public static boolean isOTAConfigured(){
+        return SystemProperties.get("ro.ota.manifest") != null && !SystemProperties.get("ro.ota.manifest").isEmpty();
     }
 
     public static String getDeviceType() {
@@ -196,12 +251,74 @@ public class Utils {
         }
     }
 
-    public static void triggerUpdate(Context context, String updateFileName) throws IOException {
-        // Create the path for the update package
-        String updatePackagePath = makeUpdateFolder().getPath() + "/" + updateFileName;
+    public static String getRealPathFromURI(Context context, Uri uri) {
+        try {
+            String filePath = "";
+            String selection = null;
+            String[] selectionArgs = null;
+            if (Build.VERSION.SDK_INT >= 19 && DocumentsContract.isDocumentUri(context,uri)) {
+                if (isExternalStorageDocument(uri)) {
+                    final String docId = DocumentsContract.getDocumentId(uri);
+                    final String[] split = docId.split(":");
+                    final String type = split[0];
+                    if ("primary".equalsIgnoreCase(type)) {
+                        return Environment.getExternalStorageDirectory() + "/" + split[1];
+                    } else {
+                        filePath = "/storage/" + type + "/" + split[1];
+                        return filePath;
+                    }
+                } else if (isDownloadsDocument(uri)) {
+                    final String id = DocumentsContract.getDocumentId(uri);
+                    uri = ContentUris.withAppendedId(
+                        Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
+                } else if (isMediaDocument(uri)) {
+                    final String docId = DocumentsContract.getDocumentId(uri);
+                    final String[] split = docId.split(":");
+                    final String type = split[0];
+                    if ("image".equals(type)) {
+                        uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+                    } else if ("video".equals(type)) {
+                        uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+                    } else if ("audio".equals(type)) {
+                        uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+                    }
+                    selection = "_id=?";
+                    selectionArgs = new String[] {
+                        split[1]
+                    };
+                }
+            }
+            if ("content".equalsIgnoreCase(uri.getScheme())) {
+                String[] projection = {
+                    MediaStore.Images.Media.DATA
+                };
+                Cursor cursor = null;
+                try {
+                    cursor = context.getContentResolver()
+                    .query(uri, projection, selection, selectionArgs, null);
+                    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                    if (cursor.moveToFirst()) {
+                        return cursor.getString(column_index);
+                    }
+                } catch (Exception e) {}
+            } else if ("file".equalsIgnoreCase(uri.getScheme())) {
+                return uri.getPath();
+            }
+        } catch (Exception ex) {}
 
-        // Reboot into recovery and trigger the update
-        android.os.RecoverySystem.installPackage(context, new File(updatePackagePath));
+        return null;
+    }
+
+    public static boolean isExternalStorageDocument(Uri uri) {
+        return "com.android.externalstorage.documents".equals(uri.getAuthority());
+    }
+
+    public static boolean isDownloadsDocument(Uri uri) {
+        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
+    }
+
+    public static boolean isMediaDocument(Uri uri) {
+        return "com.android.providers.media.documents".equals(uri.getAuthority());
     }
 
     public static Locale getCurrentLocale(Context context) {
@@ -211,6 +328,111 @@ public class Utils {
         } else {
             return context.getResources().getConfiguration().locale;
         }
+    }
+
+    public static boolean copyFile(File sourceFile, File destFile) {
+        try {
+            FileUtils.copyFile(sourceFile, destFile);
+        }catch (Exception e){
+            return false;
+        }
+        return true;
+    }
+
+    public static void recovery(Context context) {
+        rebootPhone(context, "recovery");
+    }
+
+    public static String shell(String cmd, boolean root) {
+        String out = "";
+        ArrayList<String> r = system(root ? getSuBin() : "sh",cmd).getStringArrayList("out");
+        for(String l: r) {
+            out += l+"\n";
+        }
+        return out;
+    }
+
+    public static boolean getRoot() {
+        return RootTools.isAccessGiven();
+    }
+    
+    public static boolean isRootAvailable() {
+        return RootTools.isRootAvailable();
+    }
+    
+    private static void rebootPhone(Context context, String type) { 
+        try {
+            PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+            powerManager.reboot("recovery");
+        } catch (Exception e) {
+            Log.e("Tools", "reboot '"+type+"' error: "+e.getMessage());
+            shell("reboot "+type, true);
+        }
+    }
+    
+    private static String getSuBin() {
+        if (new File("/system/xbin","su").exists()) {
+            return "/system/xbin/su";
+        }
+        if (RootTools.isRootAvailable()) {
+            return "su";
+        }
+        return "sh";
+    }
+    
+    private static Bundle system(String shell, String command) {
+        
+        ArrayList<String> res = new ArrayList<String>();
+        ArrayList<String> err = new ArrayList<String>();
+        boolean success = false;
+        try {
+            Process process = Runtime.getRuntime().exec(shell);
+            DataOutputStream STDIN = new DataOutputStream(process.getOutputStream());
+            BufferedReader STDOUT = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            BufferedReader STDERR = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            if (BuildConfig.DEBUG) Log.i(shell, command);
+            STDIN.writeBytes(command + "\n");
+            STDIN.flush();
+            STDIN.writeBytes("exit\n");
+            STDIN.flush();
+            
+            process.waitFor();
+            if (process.exitValue() == 255) {
+                if (BuildConfig.DEBUG) Log.e(shell,"SU was probably denied! Exit value is 255");
+                err.add("SU was probably denied! Exit value is 255");
+            }
+            
+            while (STDOUT.ready()) {
+                String read = STDOUT.readLine();
+                if (BuildConfig.DEBUG) Log.d(shell, read);
+                res.add(read);
+            }
+            while (STDERR.ready()) {
+                String read = STDERR.readLine();
+                if (BuildConfig.DEBUG) Log.e(shell, read);
+                err.add(read);
+            }
+            
+            process.destroy();
+            success = true;
+            if (err.size() > 0) {
+                success = false;
+            }
+        } catch (IOException e) {
+            if (BuildConfig.DEBUG) Log.e(shell,"IOException: "+e.getMessage());
+            err.add("IOException: "+e.getMessage());
+        } catch (InterruptedException e) {
+            if (BuildConfig.DEBUG) Log.e(shell,"InterruptedException: "+e.getMessage());
+            err.add("InterruptedException: "+e.getMessage());
+        }
+        if (BuildConfig.DEBUG) Log.d(shell,"END");
+        Bundle r = new Bundle();
+        r.putBoolean("success", success);
+        r.putString("cmd", command);
+        r.putString("binary", shell);
+        r.putStringArrayList("out", res);
+        r.putStringArrayList("error", err);
+        return r;
     }
 
 }

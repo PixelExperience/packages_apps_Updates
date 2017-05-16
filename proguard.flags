@@ -2,6 +2,7 @@
   *;
 }
 -keep class android.support.design.widget.** { *; }
+-keep class com.woxthebox.draglistview.** { *; }
 -keep interface android.support.design.widget.** { *; }
 -keep public class android.support.v7.preference.Preference { *; }
 -keep public class * extends android.support.v7.preference.Preference { *; }

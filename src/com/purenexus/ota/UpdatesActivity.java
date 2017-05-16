@@ -22,6 +22,8 @@ import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.os.Handler;
+import java.lang.Runnable;
 
 import com.purenexus.ota.misc.Constants;
 import com.purenexus.ota.utils.Utils;
@@ -32,11 +34,14 @@ public class UpdatesActivity extends AppCompatActivity {
 
     private TextView mHeaderInfo;
     private UpdatesSettings mSettingsFragment;
+    private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_updater);
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView headerCm = (TextView) findViewById(R.id.header_version);
@@ -73,6 +78,20 @@ public class UpdatesActivity extends AppCompatActivity {
                 }
             }
         });
+        // clean temp dir
+        Utils.deleteTempFolder();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (prefs.getLong(Constants.LAST_UPDATE_CHECK_PREF, 0) == 0){ //never checked
+                    if (mSettingsFragment != null) {
+                        mSettingsFragment.checkForUpdates();
+                        updateHeader();
+                    }
+                }
+            }
+        }, 500);
     }
 
     @Override
@@ -107,6 +126,19 @@ public class UpdatesActivity extends AppCompatActivity {
                     mSettingsFragment.confirmDeleteAll();
                 }
                 break;
+                case R.id.menu_install:
+                try{
+                    Intent intent = new Intent(UpdatesActivity.this, InstallActivity.class);
+                    startActivity(intent);
+                }catch (Exception ex){
+
+                }
+                break;
+            case R.id.menu_restart_recovery:
+                if (mSettingsFragment != null) {
+                    mSettingsFragment.confirmRestartRecovery();
+                }
+                break;
         }
 
         return super.onOptionsItemSelected(item);
@@ -119,7 +151,6 @@ public class UpdatesActivity extends AppCompatActivity {
     }
 
     private String getLastCheck() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Date lastCheck = new Date(prefs.getLong(Constants.LAST_UPDATE_CHECK_PREF, 0));
         String date = DateFormat.getLongDateFormat(this).format(lastCheck);
         String time = DateFormat.getTimeFormat(this).format(lastCheck);

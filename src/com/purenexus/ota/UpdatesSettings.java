@@ -43,6 +43,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.LayoutInflater;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.purenexus.ota.misc.Constants;
 import com.purenexus.ota.misc.State;
@@ -62,6 +63,7 @@ import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.LinkedList;
+import java.util.Date;
 
 import com.mukesh.MarkdownView;
 import com.android.volley.DefaultRetryPolicy;
@@ -134,6 +136,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     private Context mContext;
 
     private boolean mStartUpdateVisible = false;
+    private boolean mChangelogVisible = false;
     private ProgressDialog mProgressDialog;
 
     private DownloadManager mDownloadManager;
@@ -248,6 +251,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         if (preference == mWebsiteInfo) {
             try{
                 Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(WEBSITE_URL));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }catch (Exception ex){
                 showSnack(getString(R.string.error_open_url),Snackbar.LENGTH_SHORT);
@@ -256,6 +260,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         }else if (preference == mDonateInfo) {
             try{
                 Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(DONATE_URL));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }catch (Exception ex){
                 showSnack(getString(R.string.error_open_url),Snackbar.LENGTH_SHORT);
@@ -312,7 +317,20 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
 
         checkForDownloadCompleted(getActivity().getIntent());
         getActivity().setIntent(null);
-        isStoragePermissionGranted();
+
+        if (!Utils.isOTAConfigured()){
+            new AlertDialog.Builder(mContext)
+            .setTitle(R.string.app_name)
+            .setMessage(mContext.getString(R.string.ota_not_configured_error_message))
+            .setPositiveButton(android.R.string.ok, null)
+            .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    getActivity().finish();
+                }
+            })
+            .show();
+        }
     }
 
     @Override
@@ -339,7 +357,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             return;
         }
 
-        if (!isStoragePermissionGranted()) {
+        if (!isStoragePermissionGranted(DOWNLOAD_REQUEST_CODE)) {
             pendingDownload = pref;
             showSnack(mContext.getString(R.string.storage_permission_error),Snackbar.LENGTH_SHORT);
             return;
@@ -436,7 +454,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         new AlertDialog.Builder(mContext)
                 .setTitle(R.string.confirm_download_cancelation_dialog_title)
                 .setMessage(R.string.confirm_download_cancelation_dialog_message)
-                .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (!tmpZip.isFile() || tmpZip.delete()) {
@@ -465,7 +483,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         new AlertDialog.Builder(mContext)
                 .setTitle(R.string.confirm_download_cancelation_dialog_title)
                 .setMessage(R.string.confirm_download_cancelation_dialog_message)
-                .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Set the preference back to new style
@@ -538,6 +556,9 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         if (mProgressDialog != null) {
             return;
         }
+
+        Date d = new Date();
+        mPrefs.edit().putLong(Constants.LAST_UPDATE_CHECK_PREF, d.getTime()).apply();
 
         // If there is no internet connection, display a message and return.
         if (!Utils.isOnline(mContext)) {
@@ -625,13 +646,12 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         mUpdatesList.removeAll();
         preferenceScreen.removePreference(mExtrasCategory);
 
-        // Convert the installed version name to the associated filename
-        String installedZip = "purenexus_" + Utils.getDeviceType() + "-" + Utils.getInstalledVersion() + ".zip";
-
-
+        boolean isUpdateAvailable = false;
 
         if (updates.size() > 0){
             UpdateInfo ui = updates.get(0);
+
+            isUpdateAvailable = ui.isNewerThanInstalled();
             
             preferenceScreen.addPreference(mExtrasCategory);
             mExtrasCategory.removeAll();
@@ -664,43 +684,46 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 preferenceScreen.removePreference(mExtrasCategory);
             }
 
-            // Determine the preference style and create the preference
-            boolean isDownloading = ui.getFileName().equals(mFileName);
-            int style;
+            if (isUpdateAvailable){
 
-            if (isDownloading) {
-                // In progress download
-                style = UpdatePreference.STYLE_DOWNLOADING;
-            } else if (isDownloadCompleting(ui.getFileName())) {
-                style = UpdatePreference.STYLE_COMPLETING;
-                mDownloading = true;
-                mFileName = ui.getFileName();
-            } else if (ui.getFileName().equals(installedZip)) {
-                // This is the currently installed version
-                style = UpdatePreference.STYLE_INSTALLED;
-            } else if (ui.getDownloadUrl() != null) {
-                style = UpdatePreference.STYLE_NEW;
-            } else {
-                style = UpdatePreference.STYLE_DOWNLOADED;
+                // Determine the preference style and create the preference
+                boolean isDownloading = ui.getFileName().equals(mFileName);
+                int style;
+
+                if (isDownloading) {
+                    // In progress download
+                    style = UpdatePreference.STYLE_DOWNLOADING;
+                } else if (isDownloadCompleting(ui.getFileName())) {
+                    style = UpdatePreference.STYLE_COMPLETING;
+                    mDownloading = true;
+                    mFileName = ui.getFileName();
+                } else if (ui.getFileName().contains(Utils.getInstalledVersion())) {
+                    // This is the currently installed version
+                    style = UpdatePreference.STYLE_INSTALLED;
+                } else if (ui.getDownloadUrl() != null) {
+                    style = UpdatePreference.STYLE_NEW;
+                } else {
+                    style = UpdatePreference.STYLE_DOWNLOADED;
+                }
+
+                UpdatePreference up = new UpdatePreference(mContext, ui, style);
+                up.setOnActionListener(this);
+                up.setKey(ui.getFileName());
+
+                // If we have an in progress download, link the preference
+                if (isDownloading) {
+                    mDownloadingPreference = up;
+                    up.setOnReadyListener(this);
+                    mDownloading = true;
+                }
+
+                // Add to the list
+                mUpdatesList.addPreference(up);
             }
-
-            UpdatePreference up = new UpdatePreference(mContext, ui, style);
-            up.setOnActionListener(this);
-            up.setKey(ui.getFileName());
-
-            // If we have an in progress download, link the preference
-            if (isDownloading) {
-                mDownloadingPreference = up;
-                up.setOnReadyListener(this);
-                mDownloading = true;
-            }
-
-            // Add to the list
-            mUpdatesList.addPreference(up);
         }
 
         // If no updates are in the list, show the default message
-        if (mUpdatesList.getPreferenceCount() == 0) {
+        if (!isUpdateAvailable) {
             Preference pref = new Preference(mContext);
             pref.setLayoutResource(R.layout.preference_empty_list);
             pref.setTitle(R.string.no_available_updates_intro);
@@ -771,11 +794,35 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                 .show();
     }
 
+    public void confirmRestartRecovery() {
+
+        new AlertDialog.Builder(getActivity())
+        .setTitle(R.string.restart_recovery)
+        .setMessage(R.string.restart_recovery_dialog_message)
+        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                try{
+                    Utils.recovery(mContext);
+                }catch(Exception ex){
+                }
+                new AlertDialog.Builder(mContext)
+                .setTitle(R.string.restart_recovery)
+                .setMessage(R.string.restart_recovery_error_message)
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
+            }
+        })
+        .setNegativeButton(R.string.dialog_cancel, null)
+        .show();
+         
+    }
+
     private boolean deleteOldUpdates() {
         boolean success;
         //mUpdateFolder: Foldername with fullpath of SDCARD
         if (mUpdateFolder.exists() && mUpdateFolder.isDirectory()) {
-            deleteDir(mUpdateFolder);
+            Utils.deleteDir(mUpdateFolder);
             mUpdateFolder.mkdir();
             success = true;
             showSnack(mContext.getString(R.string.delete_updates_success_message),Snackbar.LENGTH_SHORT);
@@ -786,24 +833,6 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
                     R.string.delete_updates_noFolder_message),Snackbar.LENGTH_SHORT);
         }
         return success;
-    }
-
-    private static boolean deleteDir(File dir) {
-        try{
-            if (dir.isDirectory()) {
-                String[] children = dir.list();
-                for (String aChildren : children) {
-                    boolean success = deleteDir(new File(dir, aChildren));
-                    if (!success) {
-                        return false;
-                    }
-                }
-            }
-        // The directory is now empty so delete it
-            return dir.delete();
-        }catch(Exception ex){
-            return false; // failed to delete file
-        }
     }
 
     @Override
@@ -877,44 +906,27 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
     }
 
     private void showInstallDialog(UpdateInfo updateInfo){
-        // Get the message body right
-        String dialogBody = getString(R.string.apply_update_dialog_text, updateInfo.getFileName());
-        // Display the dialog
-        new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.apply_update_dialog_title)
-                .setMessage(dialogBody)
-                .setPositiveButton(R.string.dialog_update, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            Utils.triggerUpdate(mContext, updateInfo.getFileName());
-                        } catch (IOException e) {
-                            Log.e(TAG, "Unable to reboot into recovery mode", e);
-                            showSnack(mContext.getString(R.string.apply_unable_to_reboot_toast),Snackbar.LENGTH_LONG);
-                        }
-                    }
-                })
-                .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do nothing and allow the dialog to be dismissed
-                    }
-                })
-                .setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        mStartUpdateVisible = false;
-                    }
-                })
-                .show();
+        mStartUpdateVisible = false;
+        try{
+            Intent intent = new Intent(getActivity(), InstallActivity.class);
+            intent.putExtra("rom", Utils.makeUpdateFolder().getPath() + "/" + updateInfo.getFileName());
+            getActivity().startActivity(intent);
+        }catch (Exception ex){
+
+        }
     }
 
     @Override
     public void showChangelog(String mUpdateChangelogUrl) {
-        if (!Utils.isOnline(mContext)) {
-            showSnack(mContext.getString(R.string.data_connection_required),Snackbar.LENGTH_LONG);
+        if (mChangelogVisible){
             return;
         }
+        if (!Utils.isOnline(mContext)) {
+            showSnack(mContext.getString(R.string.data_connection_required),Snackbar.LENGTH_LONG);
+            mChangelogVisible = false;
+            return;
+        }
+        mChangelogVisible = true;
         mProgressDialog = new ProgressDialog(mContext);
         mProgressDialog.setMessage(mContext.getString(R.string.changelog_loading));
         mProgressDialog.setIndeterminate(true);
@@ -923,6 +935,7 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         public void onCancel(DialogInterface dialog) {
         ((UpdateApplication) getActivity().getApplicationContext()).getQueue().cancelAll(REQUEST_TAG);
         mProgressDialog = null;
+        mChangelogVisible = false;
         }
         });
         mProgressDialog.show();
@@ -932,26 +945,37 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
  
                     @Override
                     public void onResponse(String response) {
-                        if (mProgressDialog != null){
-                            mProgressDialog.hide();
-                            mProgressDialog = null;
-                        }
-                        LayoutInflater inflater = LayoutInflater.from(mContext);
-                        View view = inflater.inflate(R.layout.ota_changelog_layout, null);
-                        MarkdownView markdownView = (MarkdownView) view.findViewById(R.id.markdown_view);
-                        markdownView.setMarkDownText(response);
-                        markdownView.setOpenUrlInBrowser(true);
+                        try{
+                            if (mProgressDialog != null){
+                                mProgressDialog.hide();
+                                mProgressDialog = null;
+                            }
+                            LayoutInflater inflater = LayoutInflater.from(mContext);
+                            View view = inflater.inflate(R.layout.ota_changelog_layout, null);
+                            MarkdownView markdownView = (MarkdownView) view.findViewById(R.id.markdown_view);
+                            markdownView.setMarkDownText(response);
+                            markdownView.setOpenUrlInBrowser(true);
 
-                        AlertDialog.Builder dialog = new AlertDialog.Builder(mContext);
-                        dialog.setTitle(R.string.changelog);
-                        dialog.setView(view);
-                        dialog.setPositiveButton(R.string.dialog_ok, null);
-                        dialog.show();
+                            new AlertDialog.Builder(mContext)
+                            .setTitle(R.string.changelog)
+                            .setView(view)
+                            .setPositiveButton(android.R.string.ok, null)
+                            .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                @Override
+                                public void onDismiss(DialogInterface dialog) {
+                                    mChangelogVisible = false;
+                                }
+                            })
+                            .show();
+                        }catch(Exception ex){
+                            mChangelogVisible = false;
+                        }
                     }
                 }, new Response.ErrorListener() {
  
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        mChangelogVisible = false;
                         showSnack(getString(R.string.changelog_error),Snackbar.LENGTH_SHORT);
                         VolleyLog.d(REQUEST_TAG, "Error: " + error.getMessage());
                         if (mProgressDialog != null){
@@ -970,16 +994,15 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
         ((UpdatesActivity) getActivity()).showSnack(mMessage, length);
     }
 
-    public boolean isStoragePermissionGranted() {
+    public boolean isStoragePermissionGranted(int requestCode) {
         if (Build.VERSION.SDK_INT >= 23) {
             if (getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 return true;
             }else{
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, DOWNLOAD_REQUEST_CODE);
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestCode);
                 return false;
             }
         }else {
-            Log.v(TAG,"Permission is granted");
             return true;
         }
     }

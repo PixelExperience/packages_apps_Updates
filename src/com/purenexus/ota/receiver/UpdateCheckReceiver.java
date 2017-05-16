@@ -47,6 +47,8 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
         } else if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
             // We just booted. Store the boot check state
             prefs.edit().putBoolean(Constants.BOOT_CHECK_COMPLETED, false).apply();
+            // clean temp dir
+            Utils.deleteTempFolder();
         }
 
         // Handle the actual update check based on the defined frequency

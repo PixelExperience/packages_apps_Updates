@@ -22,6 +22,9 @@ public class Constants {
     public static final String UPDATE_CHECK_PREF = "pref_update_check_interval";
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
     public static final String CHECK_MD5_PREF = "pref_check_md5";
+    public static final String WIPE_CACHE_PREF = "pref_wipe_cache";
+    public static final String WIPE_DALVIK_PREF = "pref_wipe_dalvik";
+    public static final String WIPE_DATA_PREF = "pref_wipe_data";
 
     // Update Check items
     public static final String BOOT_CHECK_COMPLETED = "boot_check_completed";
@@ -37,4 +40,9 @@ public class Constants {
 
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd";
+
+    // Default wipe options
+    public static final boolean WIPE_CACHE_BY_DEFAULT = false;
+    public static final boolean WIPE_DALVIK_BY_DEFAULT = false;
+    public static final boolean WIPE_DATA_BY_DEFAULT = false;
 }
