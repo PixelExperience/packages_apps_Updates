@@ -24,6 +24,7 @@ import android.os.Build;
 import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.webkit.URLUtil;
 import android.os.Environment;
 import android.net.Uri;
 import android.provider.DocumentsContract;
@@ -434,6 +435,10 @@ public class Utils {
         r.putStringArrayList("out", res);
         r.putStringArrayList("error", err);
         return r;
+    }
+
+    public static boolean isValidURL(String url){
+        return URLUtil.isValidUrl(url);
     }
 
 }

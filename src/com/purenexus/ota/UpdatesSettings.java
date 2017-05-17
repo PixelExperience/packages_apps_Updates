@@ -353,6 +353,13 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             return;
         }
 
+        UpdateInfo ui = pref.getUpdateInfo();
+
+        if (!Utils.isValidURL(ui.getDownloadUrl())) {
+            showSnack(mContext.getString(R.string.not_download_failure),Snackbar.LENGTH_SHORT);
+            return;
+        }
+
         if (mDownloading) {
             showSnack(mContext.getString(R.string.download_already_running),Snackbar.LENGTH_SHORT);
             return;
