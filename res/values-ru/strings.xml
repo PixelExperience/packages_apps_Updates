@@ -12,7 +12,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- General strings -->
-  <string name="app_name">Обновления системы</string>
+  <string name="app_name">Обновления PureNexus</string>
   <string name="display_name">Обновления</string>
   <string name="unknown">Неизвестно</string>
   <!-- Menu and dialog box strings -->
