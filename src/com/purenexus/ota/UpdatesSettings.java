@@ -845,6 +845,11 @@ public class UpdatesSettings extends PreferenceFragmentCompat implements
             return;
         }
 
+        if (!isStoragePermissionGranted(98456)) {
+            showSnack(mContext.getString(R.string.storage_permission_error),Snackbar.LENGTH_SHORT);
+            return;
+        }
+
         mStartUpdateVisible = true;
         boolean isMD5CheckAllowed = mPrefs.getBoolean(Constants.CHECK_MD5_PREF, true);
 
