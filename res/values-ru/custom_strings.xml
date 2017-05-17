@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 Henrique Silva
+
+     Licensed under the GNU GPLv2 license
+
+     The text of the license can be found in the LICENSE file
+     or at https://www.gnu.org/licenses/gpl-2.0.txt
+ -->
+ <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Changelog -->
+    <string name="changelog">Список изменений</string>
+    <string name="changelog_loading">Загрузка списка изменений...</string>
+    <string name="changelog_error">Ошибка загрузки списка изменений</string>
+    <string name="changelog_not_available">Список изменений недоступен</string>
+    <!-- Settings section -->
+    <string name="settings_category_title">Настройки</string>
+    <string name="download_folder_title">Папка для загрузки</string>
+    <string name="check_md5_title">Проверить контрольную сумму MD5</string>
+    <string name="check_md5_summary">Проверяйте контрольную сумму перед установкой обновления!</string>
+    <!-- Main section -->
+    <string name="updates_category_title">Последняя версия (нажмите для загрузки списка изменений)</string>
+    <!-- Info section -->
+    <string name="extras_category_title">Дополнительно</string>
+    <string name="developer_info_title">Сопровождающий(е)</string>
+    <string name="donate_info_title">Пожертвовать</string>
+    <string name="donate_info_summary">Накиньте на кофеек</string>
+    <string name="website_info_title">Форум</string>
+    <string name="website_info_summary">Открыть тему на XDA</string>
+    <string name="error_open_url">Ошибка при открытии URL</string>
+    <string name="addons_title">Дополнения</string>
+    <string name="addons_summary">Полезные файлы</string>
+    <!-- Addons -->
+    <string name="addons_error">Ошибка загрузки списка изменений</string>
+    <!-- MD5 -->
+    <string name="checking_md5">Проверка MD5...</string>
+    <string name="md5_failed_dialog_title">Проверка контрольной суммы</string>
+    <string name="md5_failed_dialog_message">Ошибка проверки контрольной суммы, хотите продолжить?</string>
+    <!-- Storage permission -->
+    <string name="storage_permission_error">Пожалуйста, предоставьте доступ к хранилищу для продолжения</string>
+    <!-- Restart recovery -->
+    <string name="restart_recovery">Перезагрузка в режим восстановления</string>
+    <string name="restart_recovery_dialog_message">Вы действительно хотите перезагрузить устройство?</string>
+    <string name="restart_recovery_error_message">Невозможно перезагрузить, проверьте наличие прав суперпользователя</string>
+    <!-- OTA not configured -->
+    <string name="ota_not_configured_error_message">OTA не настроено. Пожалуйста, обратитесь к сопровождающему прошивки</string>
+    <!-- Install -->
+    <string name="install_title">Установка</string>
+    <string name="checking_root">Проверка прав суперпользователя...</string>
+    <string name="available_reboot_manual_title">Права суперпользователя не найдены</string>
+    <string name="available_reboot_manual_message">Пожалуйста, перезагрузить в режим восстановления и установите прошивку вручную.\n\nНайти ее вы сможете в папке PureNexusOTA.</string>
+    <string name="fab_add_file_title">Добавить файл</string>
+    <string name="fab_remove_all_files_title">Удалить все файлы</string>
+    <string name="fab_wipe_title">Настройки очистки</string>
+    <string name="fab_install_title">Перезагрузить в режим восстановления и установить</string>
+    <string name="wipe_cache">Очистить Cache</string>
+    <string name="wipe_dalvik">Очистить Dalvik cache</string>
+    <string name="wipe_data">Очистить Data</string>
+    <string name="delete_file_dialog_title">Удалить файл</string>
+    <string name="delete_file_dialog_message">Вы действительно хотите удалить этот файл из списка?</string>
+    <string name="file_not_allowed">Разрешены  только архивы ZIP</string>
+    <string name="file_get_path_error">Невозможно найти нахождение файла</string>
+    <string name="no_files">Не добавлено ни одного файла. Вы можете сделать это нажатием на кнопку \'+\'</string>
+    <string name="please_wait">Пожалуйста, подождите...</string>
+    <string name="copy_progress">Копирование %1$s ...</string>
+    <string name="copy_failed">Не удалось копировать %1$s.\n\nУбедитесь, что на устройстве достаточно места для хранения и приложения имеет права на запись.</string>
+    <string name="install_dialog_message">Вы действительно хотите продолжить? Поддерживаются только такие Recocery, как TWRP и несколько неофициальных версий CWM.\n\nНеобходимы права суперпользователя.</string>
+    <string name="install_write_ors_failed_dialog_message">Ошибка создание сценария для прошивки. Хотите перезагрузиться и установить вручную?</string>
+</resources>
