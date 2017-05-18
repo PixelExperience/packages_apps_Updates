@@ -48,7 +48,7 @@
     <string name="install_title">Install</string>
     <string name="checking_root">Checking root access...</string>
     <string name="available_reboot_manual_title">Root access not found</string>
-    <string name="available_reboot_manual_message">Please reboot manually to recovery and flash your ROM.\n\nYou can find it in PureNexusOTA folder.</string>
+    <string name="available_reboot_manual_message">Please reboot to recovery and install manually.\n\nYou can find the ROM zip file in PureNexusOTA folder.</string>
     <string name="fab_add_file_title">Add file</string>
     <string name="fab_remove_all_files_title">Remove all files</string>
     <string name="fab_wipe_title">Wipe options</string>
