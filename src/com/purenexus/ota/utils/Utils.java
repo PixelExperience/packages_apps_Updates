@@ -190,7 +190,7 @@ public class Utils {
     }
 
     public static long getInstalledBuildDate() {
-        return SystemProperties.getLong("ro.build.date.utc", 0);
+        return getTimestampFromDateString(SystemProperties.get("ro.ota.build.date", ""),Constants.FILENAME_DATE_FORMAT);
     }
 
     public static String getDateLocalized(Context context, long unixTimestamp) {
