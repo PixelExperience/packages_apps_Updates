@@ -4,6 +4,14 @@
 ## How to use?
 - Add this to our vendor:
 ```
+# Essential OTA Config
+PRODUCT_PACKAGES += \
+    PureOTA
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.build.date=$(shell date +%Y%m%d)
+
+# Device specific
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/device_name.json
 ```
