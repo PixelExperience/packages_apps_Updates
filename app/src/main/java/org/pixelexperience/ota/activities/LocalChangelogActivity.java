@@ -16,13 +16,14 @@
 package org.pixelexperience.ota.activities;
 
 import android.app.Activity;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
+import android.util.TypedValue;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -44,7 +45,6 @@ public class LocalChangelogActivity extends Activity {
         String text = "";
 
         StringBuilder data = new StringBuilder();
-        Pattern p = Pattern.compile("([a-f0-9]{7})\\s\\s(.*)\\s\\s\\[(.*)\\]"); //(?dms)
         Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_\\-]+/)+)");
         Pattern p3 = Pattern.compile("(\\d\\d\\-\\d\\d\\-\\d{4})");
         try {
@@ -66,16 +66,14 @@ public class LocalChangelogActivity extends Activity {
         }
 
         SpannableStringBuilder sb = new SpannableStringBuilder(data);
-        Matcher m = p.matcher(data);
+        Resources.Theme theme = getTheme();
+        TypedValue typedValue = new TypedValue();
+        theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
+        final int color = getColor(typedValue.resourceId);
+        Matcher m = p2.matcher(data);
         while (m.find()){
-            sb.setSpan(new ForegroundColorSpan(Color.rgb(96,125,139)),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(1),m.end(1),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            sb.setSpan(new ForegroundColorSpan(Color.rgb(69,90,100)),m.start(3), m.end(3), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-        m = p2.matcher(data);
-        while (m.find()){
-            sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            sb.setSpan(new ForegroundColorSpan(Color.rgb(33,39,43)),m.start(1),m.end(1),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            sb.setSpan(new ForegroundColorSpan(color),m.start(0),m.end(0),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         }
         m = p3.matcher(data);
         while (m.find()){
