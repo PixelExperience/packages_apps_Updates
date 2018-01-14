@@ -17,7 +17,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v14-preference \
     android-support-v7-recyclerview \
     volley \
-    commons-io-2.5
+    commons-io-2.6
 
 LOCAL_RESOURCE_DIR := \
     $(TOP)/frameworks/support/design/res \
@@ -48,6 +48,6 @@ include $(BUILD_PACKAGE)
 include $(CLEAR_VARS)
 
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
-    libs/commons-io-2.5.jar
+    libs/commons-io-2.6.jar
 
 include $(BUILD_MULTI_PREBUILT)
