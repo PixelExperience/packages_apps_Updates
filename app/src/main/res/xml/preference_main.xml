@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 The CyanogenMod Project
+     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2018 Pixel Experience (jhenrique09)
+
+     Licensed under the GNU GPLv2 license
+
+     The text of the license can be found in the LICENSE file
+     or at https://www.gnu.org/licenses/gpl-2.0.txt
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="updates_category"
+        android:title="@string/updates_category_title" />
+
+    <PreferenceCategory
+        android:key="extras_category"
+        android:title="@string/extras_category_title">
+
+        <Preference
+            android:icon="@drawable/ic_addons"
+            android:key="addons"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/addons_summary"
+            android:title="@string/addons_title" />
+
+        <Preference
+            android:icon="@drawable/ic_web_icon"
+            android:key="website_info"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/website_info_summary"
+            android:title="@string/website_info_title" />
+
+        <Preference
+            android:icon="@drawable/ic_news_icon"
+            android:key="news_info"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/news_info_summary"
+            android:title="@string/news_info_title" />
+
+        <Preference
+            android:icon="@drawable/ic_donate_icon"
+            android:key="donate_info"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/donate_info_summary"
+            android:title="@string/donate_info_title" />
+
+        <Preference
+            android:icon="@drawable/ic_forum_icon"
+            android:key="forum_info"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/forum_info_summary"
+            android:title="@string/forum_info_title" />
+
+        <Preference
+            android:icon="@drawable/ic_maintainers_icon"
+            android:key="developer_info"
+            android:layout="@layout/preference_material_settings"
+            android:selectable="false"
+            android:title="@string/developer_info_title" />
+
+        <Preference
+            android:icon="@drawable/ic_web_icon"
+            android:key="forum_info"
+            android:layout="@layout/preference_material_settings"
+            android:summary="@string/website_info_summary"
+            android:title="@string/website_info_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="settings_category"
+        android:title="@string/settings_category_title">
+
+        <ListPreference
+            android:dialogTitle="@string/update_check_title"
+            android:entries="@array/update_check_entries"
+            android:entryValues="@array/update_check_values"
+            android:icon="@drawable/ic_update_interval"
+            android:key="pref_update_check_interval"
+            android:layout="@layout/preference_material_settings"
+            android:persistent="false"
+            android:summary="%s"
+            android:title="@string/update_check_title" />
+
+        <SwitchPreference
+            android:icon="@drawable/ic_mobile_data_warning_icon"
+            android:key="pref_mobile_data_warning"
+            android:layout="@layout/preference_material_settings"
+            android:persistent="false"
+            android:summary="@string/mobile_data_warning_summary"
+            android:title="@string/mobile_data_warning_title" />
+
+        <Preference
+            android:enabled="false"
+            android:icon="@drawable/ic_download_icon"
+            android:key="pref_download_folder"
+            android:layout="@layout/preference_material_settings"
+            android:selectable="false"
+            android:title="@string/download_folder_title" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

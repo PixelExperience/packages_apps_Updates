@@ -1,0 +1,93 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App name -->
+    <string name="app_name">System updates</string>
+
+    <!-- Update checking -->
+    <string name="last_updated_at">(last updated at <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="type_installed">Installed</string>
+    <string name="type_downloaded">Downloaded</string>
+    <string name="type_downloading">Downloading…</string>
+    <string name="type_completing">Completing…</string>
+    <string name="download_button">Download</string>
+    <string name="install_button">Install</string>
+    <string name="updates_category_title">Available updates</string>
+    <string name="checking_for_updates">Checking for updates</string>
+    <string name="update_found_notification">New update available</string>
+    <string name="update_found_notification_desc">Tap to download</string>
+    <string name="no_updates_available">No updates available</string>
+    <string name="no_updates_available_pref_title">No updates available. To manually check for new updates, use the Refresh button.</string>
+    <string name="update_check_failed">The update check failed. Please check your internet connection and try again later.</string>
+    <string name="data_connection_required">A data connection is required.</string>
+    <string name="changelog_button">View changes</string>
+
+    <!-- Settings section -->
+    <string name="settings_category_title">Settings</string>
+    <string name="download_folder_title">Download folder</string>
+    <string name="update_check_title">Check for updates periodically</string>
+    <string name="check_manual">Disabled</string>
+    <string name="check_daily">Daily</string>
+    <string name="check_weekly">Weekly</string>
+    <string name="unknown">Unknown</string>
+    <string name="mobile_data_warning_title">Mobile data warning</string>
+    <string name="mobile_data_warning_summary">Show a warning when user tries to download an update via mobile data</string>
+
+    <!-- Info section -->
+    <string name="extras_category_title">Extras</string>
+    <string name="error_open_url">Failed to open URL in browser</string>
+    <string name="developer_info_title">Maintainer(s)</string>
+    <string name="donate_info_title">Donate</string>
+    <string name="donate_info_summary">Support the development</string>
+    <string name="website_info_title">Website</string>
+    <string name="website_info_summary">Visit our website</string>
+    <string name="news_info_title">News</string>
+    <string name="news_info_summary">Stay informed about updates and other news</string>
+    <string name="forum_info_title">Forum</string>
+    <string name="forum_info_summary">View forum posts</string>
+    <string name="addons_title">Add-ons</string>
+    <string name="addons_summary">Useful files</string>
+    <string name="addons_error">Failed to load add-ons list</string>
+
+    <!-- MD5 -->
+    <string name="checking_md5">Verifying file integrity…</string>
+    <string name="md5_failed_dialog_title">File integrity</string>
+    <string name="md5_failed_dialog_message">Verification failed, would you like to proceed?</string>
+
+    <!-- Downloads -->
+    <string name="confirm_download_cancel_dialog_title">Cancel download</string>
+    <string name="confirm_download_cancel_dialog_message">Cancel the current download ?</string>
+    <string name="download_cancelled">Download cancelled</string>
+    <string name="download_already_running">A download is already running</string>
+    <string name="unable_to_stop_download">Unable to stop download</string>
+    <string name="unable_to_download_file">Unable to download the update file</string>
+    <string name="download_not_found">Download not found</string>
+    <string name="notif_download_success_title">Update downloaded successfully</string>
+    <string name="notif_download_success_summary">Tap to install</string>
+    <string name="notif_download_failure_title">Update download was unsuccessful</string>
+    <string name="error_download_in_progress">Sorry, there is a download in progress</string>
+    <string name="storage_permission_error">Please grant storage permission to continue</string>
+
+    <!-- Deleting -->
+    <string name="confirm_delete_dialog_title">Delete file</string>
+    <string name="confirm_delete_dialog_message">Delete the selected update file?</string>
+    <string name="confirm_delete_all_dialog_message">Delete all downloaded update files?</string>
+    <string name="delete_update_success_message">Update <xliff:g id="filename">%s</xliff:g> deleted</string>
+    <string name="delete_updates_failure_message">There was an error deleting the update file</string>
+    <string name="delete_updates_noFolder_message">Update folder not found</string>
+    <string name="delete_updates_success_message">All downloaded updates deleted</string>
+
+    <!-- Menu and dialog strings -->
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_delete_all">Delete updates</string>
+
+    <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
+
+    <!-- Install -->
+    <string name="reboot_title">Install update</string>
+    <string name="reboot_message">Your device will restart itself in recovery mode to install the update, continue?</string>
+    <string name="reboot_failed_title">Error</string>
+    <string name="reboot_failed_message">Failed to restart, please restart manually to recovery and install the following file:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+</resources>

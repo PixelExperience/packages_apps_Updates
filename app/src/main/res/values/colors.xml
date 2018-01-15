@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">@android:color/white</color>
+    <color name="theme_accent">?android:attr/colorAccent</color>
+    <color name="refresh_icon_color">?android:attr/textColorPrimary</color>
+    <color name="notification_icon_color">@color/white</color>
+</resources>
