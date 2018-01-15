@@ -22,6 +22,7 @@ public class Constants {
     public static final String UPDATE_CHECK_PREF = "pref_update_check_interval";
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
     public static final String MOBILE_DATA_WARNING_PREF = "pref_mobile_data_warning";
+    public static final String DELETE_AFTER_INSTALL_PREF = "pref_delete_after_install";
     public static final String WIPE_CACHE_PREF = "pref_wipe_cache";
     public static final String WIPE_DALVIK_PREF = "pref_wipe_dalvik";
     public static final String WIPE_DATA_PREF = "pref_wipe_data";
@@ -38,8 +39,9 @@ public class Constants {
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
     public static final String PATTERN_FILENAME_DATE_FORMAT = "(\\d{4}\\d{2}\\d{2}-\\d{2}\\d{2})";
     // Default wipe options
-    public static final boolean WIPE_CACHE_BY_DEFAULT = false;
-    public static final boolean WIPE_DALVIK_BY_DEFAULT = false;
+    public static final boolean DELETE_AFTER_INSTALL_DEFAULT = false;
+    public static final boolean WIPE_CACHE_BY_DEFAULT = true;
+    public static final boolean WIPE_DALVIK_BY_DEFAULT = true;
     public static final boolean WIPE_DATA_BY_DEFAULT = false;
     // intent extras
     public static final String EXTRA_UPDATE_LIST_UPDATED = "update_list_updated";

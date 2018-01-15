@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp">
+
+    <CheckBox
+        android:id="@+id/wipe_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wipe_cache"/>
+    <CheckBox
+        android:id="@+id/wipe_dalvik_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wipe_dalvik_cache" />
+    <CheckBox
+        android:id="@+id/wipe_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wipe_data" />
+</LinearLayout>

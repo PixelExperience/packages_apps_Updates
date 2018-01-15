@@ -90,4 +90,12 @@
     <string name="reboot_message">Your device will restart itself in recovery mode to install the update, continue?</string>
     <string name="reboot_failed_title">Error</string>
     <string name="reboot_failed_message">Failed to restart, please restart manually to recovery and install the following file:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+    <string name="delete_after_install_title">Delete zip file after install</string>
+    <string name="advanced_options">Advanced</string>
+    <string name="save_advanced_options">Save</string>
+    <string name="wipe_cache">Wipe cache</string>
+    <string name="wipe_dalvik_cache">Wipe Dalvik/ART cache</string>
+    <string name="wipe_data">Wipe data</string>
+    <string name="wipe_data_dialog_confirmation_title">Factory reset</string>
+    <string name="wipe_data_dialog_confirmation_message">You selected \'wipe data\' option, this will do a factory reset on your device, do you want to continue?</string>
 </resources>

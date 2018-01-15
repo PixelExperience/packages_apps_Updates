@@ -9,8 +9,12 @@
  */
 package org.pixelexperience.ota.helpers;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
+import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.utils.Utils;
 
 import java.util.ArrayList;
@@ -24,11 +28,34 @@ class RecoveryHelper {
         return "openrecoveryscript";
     }
 
-    static String[] getCommands(String filename)
+    static String[] getCommands(String filename, Context context)
             throws Exception {
 
         List<String> commands = new ArrayList<>();
         commands.add("install " + filename);
+
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        Boolean deleteAfterInstall = mPrefs.getBoolean(Constants.DELETE_AFTER_INSTALL_PREF, Constants.DELETE_AFTER_INSTALL_DEFAULT);
+        Boolean wipeCache = mPrefs.getBoolean(Constants.WIPE_CACHE_PREF, Constants.WIPE_CACHE_BY_DEFAULT);
+        Boolean wipeDalvikCache = mPrefs.getBoolean(Constants.WIPE_DALVIK_PREF, Constants.WIPE_DALVIK_BY_DEFAULT);
+        Boolean wipeData = mPrefs.getBoolean(Constants.WIPE_DATA_PREF, Constants.WIPE_DATA_BY_DEFAULT);
+
+        if (wipeCache){
+            commands.add("wipe cache");
+        }
+
+        if (wipeDalvikCache){
+            commands.add("wipe dalvik");
+        }
+
+        if (wipeData){
+            commands.add("wipe data");
+        }
+
+        if (deleteAfterInstall){
+            commands.add("cmd rm -rf " + filename);
+        }
 
         return commands.toArray(new String[commands.size()]);
 
