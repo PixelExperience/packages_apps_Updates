@@ -38,7 +38,7 @@ public class RebootHelper {
         builder.setCancelable(false);
         builder.setView(checkboxDeleteAfterInstallView);
         builder.setTitle(R.string.reboot_title);
-        builder.setMessage(context.getResources().getString(R.string.reboot_message));
+        builder.setMessage(String.format(context.getResources().getString(R.string.reboot_message),filename));
         builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialog, int which){}

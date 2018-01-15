@@ -87,7 +87,7 @@
 
     <!-- Install -->
     <string name="reboot_title">Install update</string>
-    <string name="reboot_message">Your device will restart itself in recovery mode to install the update, continue?</string>
+    <string name="reboot_message">Your device will restart itself in recovery mode to install the update.\n\nThe following file will be installed:\n<xliff:g id="filepath">%s</xliff:g>\n\nWould you like to proceed?</string>
     <string name="reboot_failed_title">Error</string>
     <string name="reboot_failed_message">Failed to restart, please restart manually to recovery and install the following file:\n\n<xliff:g id="filepath">%s</xliff:g></string>
     <string name="delete_after_install_title">Delete zip file after install</string>
