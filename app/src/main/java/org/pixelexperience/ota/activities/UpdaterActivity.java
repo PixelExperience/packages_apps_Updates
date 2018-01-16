@@ -854,8 +854,6 @@ public class UpdaterActivity extends PreferenceActivity implements
             return;
         }
 
-        Utils.writeMD5File(ui.getFileName(), ui.getMD5());
-
         mDownloadingPreference.setStyle(UpdatePreference.STYLE_DOWNLOADING);
 
         mFileName = ui.getFileName();
@@ -1015,7 +1013,7 @@ public class UpdaterActivity extends PreferenceActivity implements
             } catch (InterruptedException ignored) {
             }
             File updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + mUpdateInfo.getFileName());
-            return MD5.checkMD5(Utils.readMD5File(mUpdateInfo.getFileName()), updateFile);
+            return MD5.checkMD5(mUpdateInfo.getMD5(), updateFile);
         }
 
         @Override

@@ -25,19 +25,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.webkit.URLUtil;
 
 import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.service.UpdateCheckService;
 
-import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
@@ -86,56 +82,6 @@ public class Utils {
 
     public static void deleteTempFolder() {
         deleteDir(new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER + "/" + "temp"));
-    }
-
-    public static void writeMD5File(String fileName, String md5) {
-        String path = makeUpdateFolder().getPath() + "/" + fileName + ".md5_ota";
-        File md5File = new File(path);
-
-        if (md5File.exists()) {
-            try {
-                md5File.delete();
-            } catch (Exception ignored) {
-            }
-        }
-
-        writeStringAsFile(path, md5);
-    }
-
-    public static String readMD5File(String fileName) {
-        String path = makeUpdateFolder().getPath() + "/" + fileName + ".md5_ota";
-        File md5File = new File(path);
-        if (!md5File.exists()) {
-            return "";
-        }
-
-        return readFileAsString(path);
-    }
-
-    private static void writeStringAsFile(String filePath, String fileContents) {
-        try {
-            FileWriter out = new FileWriter(new File(filePath));
-            out.write(fileContents);
-            out.close();
-        } catch (Exception e) {
-            Log.e(TAG, "Error in writeStringAsFile");
-        }
-    }
-
-    private static String readFileAsString(String filePath) {
-        StringBuilder stringBuilder = new StringBuilder();
-        String line;
-        BufferedReader in;
-
-        try {
-            in = new BufferedReader(new FileReader(new File(filePath)));
-            while ((line = in.readLine()) != null) stringBuilder.append(line);
-
-        } catch (Exception e) {
-            Log.e(TAG, "Error in readFileAsString");
-        }
-
-        return stringBuilder.toString();
     }
 
     public static void cancelNotification(Context context) {
