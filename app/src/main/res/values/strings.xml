@@ -64,7 +64,8 @@
     <string name="notif_download_success_title">Update downloaded successfully</string>
     <string name="notif_download_success_summary">Tap to install</string>
     <string name="notif_download_failure_title">Update download was unsuccessful</string>
-    <string name="error_download_in_progress">Sorry, there is a download in progress</string>
+    <string name="error_download_in_progress">There is a download in progress</string>
+    <string name="error_file_ready_to_install">There is an update ready to be installed</string>
     <string name="storage_permission_error">Please grant storage permission to continue</string>
 
     <!-- Deleting -->

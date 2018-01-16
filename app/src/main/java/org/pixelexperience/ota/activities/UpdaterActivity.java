@@ -91,7 +91,6 @@ public class UpdaterActivity extends PreferenceActivity implements
     private SwitchPreference mMobileDataWarning;
     private PreferenceScreen preferenceScreen;
     private PreferenceCategory mUpdatesList;
-    private UpdatePreference mDownloadingPreference;
     private PreferenceCategory mExtrasCategory;
     private Preference mDeveloperInfo;
     private Preference mForumInfo;
@@ -100,6 +99,7 @@ public class UpdaterActivity extends PreferenceActivity implements
     private Preference mDonateInfo;
     private Preference mAddons;
     private Preference mLastCheckPreference;
+    private UpdatePreference mCurrentUpdate;
 
     private File mUpdateFolder;
     private boolean mStartUpdateVisible = false;
@@ -110,21 +110,19 @@ public class UpdaterActivity extends PreferenceActivity implements
     private long mDownloadId;
     private String mFileName;
 
-    private UpdatePreference pendingDownload;
-
     private Handler mUpdateHandler = new Handler();
     private Runnable mUpdateProgress = new Runnable() {
         public void run() {
-            if (!mDownloading || mDownloadingPreference == null || mDownloadId < 0) {
+            if (!mDownloading || mCurrentUpdate == null || mDownloadId < 0) {
                 return;
             }
 
-            ProgressBar progressBar = mDownloadingPreference.getProgressBar();
+            ProgressBar progressBar = mCurrentUpdate.getProgressBar();
             if (progressBar == null) {
                 return;
             }
 
-            Button stopDownloadButton = mDownloadingPreference.getStopDownloadButton();
+            Button stopDownloadButton = mCurrentUpdate.getStopDownloadButton();
             if (stopDownloadButton == null) {
                 return;
             }
@@ -164,15 +162,15 @@ public class UpdaterActivity extends PreferenceActivity implements
                         progressBar.setMax(totalBytes);
                         progressBar.setProgress(downloadedBytes);
                         int percent = (int) ((downloadedBytes * 100L) / totalBytes);
-                        mDownloadingPreference.updateDownloadPercent(percent);
+                        mCurrentUpdate.updateDownloadPercent(percent);
                     }
                     break;
                 case DownloadManager.STATUS_FAILED:
-                    mDownloadingPreference.setStyle(UpdatePreference.STYLE_NEW);
+                    mCurrentUpdate.setStyle(UpdatePreference.STYLE_NEW);
                     resetDownloadState();
                     break;
                 case DownloadManager.STATUS_SUCCESSFUL:
-                    mDownloadingPreference.setStyle(UpdatePreference.STYLE_COMPLETING);
+                    mCurrentUpdate.setStyle(UpdatePreference.STYLE_COMPLETING);
                     break;
             }
 
@@ -278,11 +276,13 @@ public class UpdaterActivity extends PreferenceActivity implements
 
     private void refreshPreferences(LinkedList<UpdateInfo> updates, Boolean forceShowDownloading) {
         if (mUpdatesList == null) {
+            mCurrentUpdate = null;
             return;
         }
 
         // Clear the list
         mUpdatesList.removeAll();
+        mCurrentUpdate = null;
 
         mLastCheckPreference = new Preference(this);
         mLastCheckPreference.setLayoutResource(R.layout.preference_last_checked);
@@ -374,19 +374,18 @@ public class UpdaterActivity extends PreferenceActivity implements
                     style = UpdatePreference.STYLE_DOWNLOADED;
                 }
 
-                UpdatePreference up = new UpdatePreference(this, ui, style);
-                up.setOnActionListener(this);
-                up.setKey(ui.getFileName());
+                mCurrentUpdate = new UpdatePreference(this, ui, style);
+                mCurrentUpdate.setOnActionListener(this);
+                mCurrentUpdate.setKey(ui.getFileName());
 
                 // If we have an in progress download, link the preference
                 if (isDownloading) {
-                    mDownloadingPreference = up;
-                    up.setOnReadyListener(this);
+                    mCurrentUpdate.setOnReadyListener(this);
                     mDownloading = true;
                 }
 
                 // Add to the list
-                mUpdatesList.addPreference(up);
+                mUpdatesList.addPreference(mCurrentUpdate);
             }
         }
 
@@ -528,7 +527,6 @@ public class UpdaterActivity extends PreferenceActivity implements
         mDownloadId = -1;
         mFileName = null;
         mDownloading = false;
-        mDownloadingPreference = null;
     }
 
     @Override
@@ -670,6 +668,7 @@ public class UpdaterActivity extends PreferenceActivity implements
 
     @Override
     public void onStartDownload(final UpdatePreference pref) {
+        mCurrentUpdate = pref;
         // If there is no internet connection, display a message and return.
         if (!Utils.isOnline(this)) {
             showToast(getString(R.string.data_connection_required), Toast.LENGTH_LONG);
@@ -707,29 +706,23 @@ public class UpdaterActivity extends PreferenceActivity implements
                                                 .apply();
                                         mMobileDataWarning.setChecked(false);
                                     }
-                                    tryToStartDownload(pref);
+                                    tryToStartDownload();
                                 }
                             })
                     .setNegativeButton(android.R.string.cancel, null)
                     .show();
 
         } else {
-            tryToStartDownload(pref);
+            tryToStartDownload();
         }
 
     }
 
-    private void tryToStartDownload(UpdatePreference pref) {
+    private void tryToStartDownload() {
         if (!isStoragePermissionGranted(Constants.DOWNLOAD_REQUEST_CODE)) {
-            pendingDownload = pref;
             showToast(getString(R.string.storage_permission_error), Toast.LENGTH_SHORT);
             return;
-        } else {
-            pendingDownload = null;
         }
-
-        // We have a match, get ready to trigger the download
-        mDownloadingPreference = pref;
 
         startDownload();
     }
@@ -813,13 +806,9 @@ public class UpdaterActivity extends PreferenceActivity implements
             return;
         }
 
-        String fileName = new File(fullPathName).getName();
-
-        // Find the matching preference so we can retrieve the UpdateInfo
-        UpdatePreference pref = (UpdatePreference) mUpdatesList.findPreference(fileName);
-        if (pref != null) {
-            pref.setStyle(UpdatePreference.STYLE_DOWNLOADED);
-            onStartUpdate(pref);
+        if (mCurrentUpdate != null) {
+            mCurrentUpdate.setStyle(UpdatePreference.STYLE_DOWNLOADED);
+            onStartUpdate(mCurrentUpdate);
         }
 
         resetDownloadState();
@@ -849,12 +838,15 @@ public class UpdaterActivity extends PreferenceActivity implements
     }
 
     private void startDownload() {
-        UpdateInfo ui = mDownloadingPreference.getUpdateInfo();
+        if (mCurrentUpdate == null) {
+            return;
+        }
+        UpdateInfo ui = mCurrentUpdate.getUpdateInfo();
         if (ui == null) {
             return;
         }
 
-        mDownloadingPreference.setStyle(UpdatePreference.STYLE_DOWNLOADING);
+        mCurrentUpdate.setStyle(UpdatePreference.STYLE_DOWNLOADING);
 
         mFileName = ui.getFileName();
         mDownloading = true;
@@ -950,7 +942,6 @@ public class UpdaterActivity extends PreferenceActivity implements
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == Constants.DOWNLOAD_REQUEST_CODE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            mDownloadingPreference = pendingDownload;
             startDownload();
         }
     }
@@ -961,11 +952,22 @@ public class UpdaterActivity extends PreferenceActivity implements
         return true;
     }
 
+    private boolean isCheckingForUpdatesAllowed(){
+        if (mCurrentUpdate == null){
+            return true;
+        }else if (mCurrentUpdate.getStyle() == UpdatePreference.STYLE_DOWNLOADING) {
+            showToast(getString(R.string.error_download_in_progress), Toast.LENGTH_SHORT);
+            return false;
+        } else if (mCurrentUpdate.getStyle() == UpdatePreference.STYLE_DOWNLOADED || mCurrentUpdate.getStyle() == UpdatePreference.STYLE_COMPLETING) {
+            showToast(getString(R.string.error_file_ready_to_install), Toast.LENGTH_SHORT);
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (mDownloading) {
-            showToast(getString(R.string.error_download_in_progress), Toast.LENGTH_SHORT);
-        } else {
+        if (isCheckingForUpdatesAllowed()) {
             switch (item.getItemId()) {
                 case R.id.menu_refresh:
                     checkForUpdates();
