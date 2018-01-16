@@ -80,6 +80,7 @@ public class UpdaterActivity extends PreferenceActivity implements
     private static final String DONATE_INFO = "donate_info";
     private static final String ADDONS_PREFERENCE = "addons";
     private static final String PREF_DOWNLOAD_FOLDER = "pref_download_folder";
+    private static String DEVELOPER_URL = "";
     private static String DONATE_URL = "";
     private static String FORUM_URL = "";
     private static String WEBSITE_URL = "";
@@ -247,6 +248,7 @@ public class UpdaterActivity extends PreferenceActivity implements
                         .setBuildDate(update.getDate())
                         .setMD5(update.getMD5())
                         .setDeveloper(update.getDeveloper())
+                        .setDeveloperUrl(update.getDeveloperUrl())
                         .setChangelog(update.getChangelog())
                         .setDonateUrl(update.getDonateUrl())
                         .setForumUrl(update.getForumUrl())
@@ -310,6 +312,12 @@ public class UpdaterActivity extends PreferenceActivity implements
             if (ui.getDeveloper() != null && !ui.getDeveloper().isEmpty()) {
                 mDeveloperInfo.setSummary(ui.getDeveloper());
                 mExtrasCategory.addPreference(mDeveloperInfo);
+                if (ui.getDeveloperUrl() != null && !ui.getDeveloperUrl().isEmpty()) {
+                    DEVELOPER_URL = ui.getDeveloperUrl();
+                } else {
+                    DEVELOPER_URL = "";
+                }
+                mDeveloperInfo.setSelectable(!DEVELOPER_URL.isEmpty());
             }
 
             if (ui.getForumUrl() != null && !ui.getForumUrl().isEmpty()) {
@@ -436,6 +444,7 @@ public class UpdaterActivity extends PreferenceActivity implements
         Preference mDownloadFolder = (Preference) findPreference(PREF_DOWNLOAD_FOLDER);
         mDownloadFolder.setSummary(Utils.makeUpdateFolder().getPath());
 
+        mDeveloperInfo.setOnPreferenceClickListener(this);
         mForumInfo.setOnPreferenceClickListener(this);
         mWebsiteInfo.setOnPreferenceClickListener(this);
         mNewsInfo.setOnPreferenceClickListener(this);
@@ -540,7 +549,19 @@ public class UpdaterActivity extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-        if (preference == mForumInfo) {
+        if (preference == mDeveloperInfo) {
+            if (DEVELOPER_URL.equals("")){
+                return true;
+            }
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(DEVELOPER_URL));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            } catch (Exception ex) {
+                showToast(getString(R.string.error_open_url), Toast.LENGTH_SHORT);
+            }
+            return true;
+        }else if (preference == mForumInfo) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FORUM_URL));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

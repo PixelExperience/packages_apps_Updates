@@ -56,7 +56,6 @@
             android:icon="@drawable/ic_maintainers_icon"
             android:key="developer_info"
             android:layout="@layout/preference_material_settings"
-            android:selectable="false"
             android:title="@string/developer_info_title" />
 
         <Preference

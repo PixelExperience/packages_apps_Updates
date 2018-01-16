@@ -44,6 +44,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     private String mWebsiteUrl;
     private String mNewsUrl;
     private String mDeveloper;
+    private String mDeveloperUrl;
     private String mMD5;
     private String mAddons;
     private Boolean mIsNewerThanInstalled;
@@ -138,6 +139,13 @@ public class UpdateInfo implements Parcelable, Serializable {
     }
 
     /**
+     * Get developer url
+     */
+    public String getDeveloperUrl() {
+        return mDeveloperUrl;
+    }
+
+    /**
      * Get MD5
      */
     public String getMD5() {
@@ -223,6 +231,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         out.writeString(mWebsiteUrl);
         out.writeString(mNewsUrl);
         out.writeString(mDeveloper);
+        out.writeString(mDeveloperUrl);
         out.writeString(mMD5);
         out.writeString(mAddons);
     }
@@ -238,6 +247,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         mWebsiteUrl = in.readString();
         mNewsUrl = in.readString();
         mDeveloper = in.readString();
+        mDeveloperUrl = in.readString();
         mMD5 = in.readString();
         mAddons = in.readString();
     }
@@ -253,6 +263,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         private String mWebsiteUrl;
         private String mNewsUrl;
         private String mDeveloper;
+        private String mDeveloperUrl;
         private String mMD5;
         private String mAddons;
 
@@ -306,6 +317,11 @@ public class UpdateInfo implements Parcelable, Serializable {
             return this;
         }
 
+        public Builder setDeveloperUrl(String developerUrl) {
+            mDeveloperUrl = developerUrl;
+            return this;
+        }
+
         public Builder setMD5(String md5) {
             mMD5 = md5;
             return this;
@@ -328,6 +344,7 @@ public class UpdateInfo implements Parcelable, Serializable {
             info.mWebsiteUrl = mWebsiteUrl;
             info.mNewsUrl = mNewsUrl;
             info.mDeveloper = mDeveloper;
+            info.mDeveloperUrl = mDeveloperUrl;
             info.mMD5 = mMD5;
             info.mAddons = mAddons;
             return info;
