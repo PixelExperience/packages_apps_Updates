@@ -16,7 +16,7 @@
     <string name="update_found_notification">New update available</string>
     <string name="update_found_notification_desc">Tap to download</string>
     <string name="no_updates_available">No updates available</string>
-    <string name="no_updates_available_pref_title">No updates available. To manually check for new updates, use the Refresh button.</string>
+    <string name="no_updates_available_pref_title">No updates available. Use the refresh button to check for new updates.</string>
     <string name="update_check_failed">The update check failed. Please check your internet connection and try again later.</string>
     <string name="data_connection_required">A data connection is required.</string>
     <string name="changelog_button">View changes</string>
@@ -35,7 +35,7 @@
     <!-- Info section -->
     <string name="extras_category_title">Extras</string>
     <string name="error_open_url">Failed to open URL in browser</string>
-    <string name="developer_info_title">Maintainer(s)</string>
+    <string name="developer_info_title">Maintainer</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">Support the development</string>
     <string name="website_info_title">Website</string>
