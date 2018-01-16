@@ -13,9 +13,16 @@ package org.pixelexperience.ota.preferences;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.preference.Preference;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.text.format.Formatter;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -29,6 +36,8 @@ import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.misc.UpdateInfo;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UpdatePreference extends Preference implements OnLongClickListener {
     public static final int STYLE_NEW = 1;
@@ -123,7 +132,23 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
         });
         TextView mChangelogText = view.findViewById(R.id.changelog_text);
         if (isChangelogAvailable()) {
-            mChangelogText.setText(mUpdateChangelog);
+            Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_.-]+/)+)");
+            Pattern p3 = Pattern.compile("(\\d\\d\\-\\d\\d\\-\\d{4})");
+            SpannableStringBuilder sb = new SpannableStringBuilder(mUpdateChangelog);
+            Resources.Theme theme = mContext.getTheme();
+            TypedValue typedValue = new TypedValue();
+            theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
+            final int color = mContext.getColor(typedValue.resourceId);
+            Matcher m = p2.matcher(mUpdateChangelog);
+            while (m.find()){
+                sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                sb.setSpan(new ForegroundColorSpan(color),m.start(0),m.end(0),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            }
+            m = p3.matcher(mUpdateChangelog);
+            while (m.find()){
+                sb.setSpan(new StyleSpan(Typeface.BOLD+ Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            }
+            mChangelogText.setText(sb);
         }
 
         mUpdatesPref = view.findViewById(R.id.updates_pref);
