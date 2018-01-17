@@ -4,6 +4,7 @@
     <string name="app_name">System updates</string>
 
     <!-- Update checking -->
+    <string name="ota_not_supported">This build doesn\'t supports OTA updates.</string>
     <string name="last_updated_at">(last updated at <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_installed">Installed</string>
     <string name="type_downloaded">Downloaded</string>

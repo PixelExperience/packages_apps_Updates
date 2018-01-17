@@ -651,6 +651,7 @@ public class UpdaterActivity extends PreferenceActivity implements
         setIntent(null);
 
         if (!Utils.isOTAConfigured()) {
+            showToast(getResources().getString(R.string.ota_not_supported), Toast.LENGTH_LONG);
             finish();
         }
     }
