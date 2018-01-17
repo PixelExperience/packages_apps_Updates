@@ -493,7 +493,7 @@ public class UpdaterActivity extends PreferenceActivity implements
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage(getString(R.string.checking_for_updates));
         mProgressDialog.setIndeterminate(true);
-        mProgressDialog.setCancelable(true);
+        mProgressDialog.setCanceledOnTouchOutside(false);
         mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
