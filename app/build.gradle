@@ -21,7 +21,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.volley:volley:1.1.0'
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
-    compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+    //compile 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
     implementation 'me.omico.aosp-part:setup-wizard-lib:0.1.0'
     compile 'com.android.support:design:27.0.2'
 }
