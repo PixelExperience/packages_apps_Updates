@@ -19,7 +19,6 @@ import android.os.Handler;
 import android.preference.Preference;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
-import android.text.format.Formatter;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.TypedValue;
@@ -34,6 +33,7 @@ import net.cachapa.expandablelayout.ExpandableLayout;
 
 import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.misc.UpdateInfo;
+import org.pixelexperience.ota.utils.Utils;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -238,7 +238,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
         }
 
         mSummaryText.setText(String.format(Locale.getDefault(), "%1$s • %2$s %3$d%%",
-                Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_downloading), percent));
+                Utils.readableFileSize(mUpdateFileSize), mContext.getString(R.string.type_downloading), percent));
     }
 
     public ProgressBar getProgressBar() {
@@ -282,7 +282,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 mChangelogButton.setVisibility(isChangelogAvailable() ? View.VISIBLE : View.GONE);
                 expandableChangelogLayout.collapse();
                 mSummaryText.setText(String.format("%1$s • %2$s",
-                        Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_downloaded)));
+                        Utils.readableFileSize(mUpdateFileSize), mContext.getString(R.string.type_downloaded)));
                 mButton.setText(mContext.getString(R.string.install_button));
                 break;
 
@@ -293,7 +293,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 mStopDownloadButton.setVisibility(View.VISIBLE);
                 mProgressBar.setVisibility(View.VISIBLE);
                 mSummaryText.setText(String.format("%1$s • %2$s",
-                        Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_downloading)));
+                        Utils.readableFileSize(mUpdateFileSize), mContext.getString(R.string.type_downloading)));
                 break;
 
             case STYLE_COMPLETING:
@@ -304,7 +304,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 mChangelogButton.setVisibility(View.GONE);
                 expandableChangelogLayout.collapse();
                 mSummaryText.setText(String.format("%1$s • %2$s",
-                        Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_completing)));
+                        Utils.readableFileSize(mUpdateFileSize), mContext.getString(R.string.type_completing)));
                 break;
 
             case STYLE_NEW:
@@ -314,7 +314,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 mButton.setVisibility(View.VISIBLE);
                 mChangelogButton.setVisibility(isChangelogAvailable() ? View.VISIBLE : View.GONE);
                 expandableChangelogLayout.collapse();
-                mSummaryText.setText(Formatter.formatFileSize(mContext, mUpdateFileSize));
+                mSummaryText.setText(Utils.readableFileSize(mUpdateFileSize));
                 mButton.setText(mContext.getString(R.string.download_button));
                 break;
         }
