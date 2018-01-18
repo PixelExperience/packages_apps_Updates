@@ -196,13 +196,12 @@ public class UpdaterActivity extends PreferenceActivity implements
                     mProgressDialog.dismiss();
                     mProgressDialog = null;
 
-                    int count = intent.getIntExtra(UpdateCheckService.EXTRA_NEW_UPDATE_COUNT, -1);
-                    if (count > 0) {
-                        showToast(getResources().getString(R.string.update_found_notification), Toast.LENGTH_SHORT);
-                    } else if (count == 0) {
-                        showToast(getString(R.string.no_updates_available), Toast.LENGTH_SHORT);
-                    } else if (count < 0) {
+                    boolean isAvailable = intent.getBooleanExtra(UpdateCheckService.EXTRA_UPDATE_AVAILABLE, false);
+                    int result = intent.getIntExtra(UpdateCheckService.EXTRA_CHECK_RESULT, 0);
+                    if (result == 0) {
                         showToast(getString(R.string.update_check_failed), Toast.LENGTH_LONG);
+                    } else {
+                        showToast(getString(isAvailable ? R.string.update_found_notification : R.string.no_updates_available), Toast.LENGTH_SHORT);
                     }
                 }
                 updateLayout(false);
@@ -234,12 +233,12 @@ public class UpdaterActivity extends PreferenceActivity implements
         Utils.cancelNotification(this);
 
         // Build list of updates
-        LinkedList<UpdateInfo> availableUpdates = State.loadState(this);
-        LinkedList<UpdateInfo> updates = new LinkedList<>();
+        UpdateInfo savedUpdate = State.loadState(this);
+        UpdateInfo update = null;
 
-        if (availableUpdates.size() > 0) {
-            UpdateInfo update = availableUpdates.get(0);
-            if (existingFiles.contains(update.getFileName())) {
+        if (savedUpdate != null) {
+            update = savedUpdate;
+            if (existingFiles.contains(savedUpdate.getFileName())) {
                 UpdateInfo ui = new UpdateInfo.Builder()
                         .setFileName(update.getFileName())
                         .setFilesize(update.getFileSize())
@@ -254,14 +253,12 @@ public class UpdaterActivity extends PreferenceActivity implements
                         .setNewsUrl(update.getNewsUrl())
                         .setAddons(update.getAddonsInJson())
                         .build();
-                updates.add(ui);
-            } else {
-                updates.add(update);
+                update = ui;
             }
         }
 
         // Update the preference list
-        refreshPreferences(updates, forceShowDownloading);
+        refreshPreferences(update, forceShowDownloading);
     }
 
     private boolean isDownloadCompleting(String fileName) {
@@ -274,7 +271,7 @@ public class UpdaterActivity extends PreferenceActivity implements
         }
     }
 
-    private void refreshPreferences(LinkedList<UpdateInfo> updates, Boolean forceShowDownloading) {
+    private void refreshPreferences(UpdateInfo ui, Boolean forceShowDownloading) {
         if (mUpdatesList == null) {
             mCurrentUpdate = null;
             return;
@@ -296,8 +293,7 @@ public class UpdaterActivity extends PreferenceActivity implements
 
         boolean isUpdateAvailable = false;
 
-        if (updates.size() > 0) {
-            UpdateInfo ui = updates.get(0);
+        if (ui != null) {
 
             isUpdateAvailable = ui.isNewerThanInstalled();
 
@@ -365,9 +361,6 @@ public class UpdaterActivity extends PreferenceActivity implements
                     style = UpdatePreference.STYLE_COMPLETING;
                     mDownloading = true;
                     mFileName = ui.getFileName();
-                } else if (ui.getFileName().contains(Utils.getInstalledVersion())) {
-                    // This is the currently installed version
-                    style = UpdatePreference.STYLE_INSTALLED;
                 } else if (ui.getDownloadUrl() != null) {
                     style = UpdatePreference.STYLE_NEW;
                 } else {

@@ -20,20 +20,19 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.LinkedList;
 
 public class State {
     private static final String TAG = "State";
     private static final String FILENAME = "updater.state";
 
-    public static void saveState(Context context, LinkedList<UpdateInfo> availableUpdates) {
+    public static void saveState(Context context, UpdateInfo availableUpdate) {
         ObjectOutputStream oos = null;
         FileOutputStream fos = null;
         try {
             File f = new File(context.getCacheDir(), FILENAME);
             fos = new FileOutputStream(f);
             oos = new ObjectOutputStream(fos);
-            oos.writeObject(availableUpdates);
+            oos.writeObject(availableUpdate);
             oos.flush();
         } catch (IOException e) {
             Log.e(TAG, "Exception on saving instance state", e);
@@ -52,8 +51,8 @@ public class State {
     }
 
     @SuppressWarnings("unchecked")
-    public static LinkedList<UpdateInfo> loadState(Context context) {
-        LinkedList<UpdateInfo> availableUpdates = new LinkedList<>();
+    public static UpdateInfo loadState(Context context) {
+        UpdateInfo availableUpdate = null;
         ObjectInputStream ois = null;
         FileInputStream fis = null;
         try {
@@ -62,8 +61,8 @@ public class State {
             ois = new ObjectInputStream(fis);
 
             Object o = ois.readObject();
-            if (o != null && o instanceof LinkedList<?>) {
-                availableUpdates = (LinkedList<UpdateInfo>) o;
+            if (o != null && o instanceof UpdateInfo) {
+                availableUpdate = (UpdateInfo) o;
             }
         } catch (ClassNotFoundException e) {
             Log.e(TAG, "Unable to load stored class", e);
@@ -85,6 +84,6 @@ public class State {
                 // ignored, can't do anything anyway
             }
         }
-        return availableUpdates;
+        return availableUpdate;
     }
 }

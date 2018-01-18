@@ -40,7 +40,6 @@ import org.pixelexperience.ota.utils.Utils;
 
 import java.net.URI;
 import java.util.Date;
-import java.util.LinkedList;
 
 public class UpdateCheckService extends IntentService
         implements Response.ErrorListener, Response.Listener<JSONObject> {
@@ -50,15 +49,10 @@ public class UpdateCheckService extends IntentService
     public static final String ACTION_CANCEL_CHECK = "org.pixelexperience.ota.action.CANCEL_CHECK";
     // broadcast actions
     public static final String ACTION_CHECK_FINISHED = "org.pixelexperience.ota.action.UPDATE_CHECK_FINISHED";
-    // extra for ACTION_CHECK_FINISHED: total amount of found updates
-    public static final String EXTRA_UPDATE_COUNT = "update_count";
-    // extra for ACTION_CHECK_FINISHED: amount of updates that are newer than what is installed
-    public static final String EXTRA_REAL_UPDATE_COUNT = "real_update_count";
-    // extra for ACTION_CHECK_FINISHED: amount of updates that were found for the first time
-    public static final String EXTRA_NEW_UPDATE_COUNT = "new_update_count";
+    // extra for ACTION_CHECK_FINISHED: is update available?
+    public static final String EXTRA_UPDATE_AVAILABLE = "update_available";
+    public static final String EXTRA_CHECK_RESULT = "check_result";
     private static final String TAG = "UpdateCheckService";
-    // max. number of updates listed in the expanded notification
-    private static final int EXPANDED_NOTIF_UPDATE_COUNT = 4;
 
     // DefaultRetryPolicy values for Volley
     private static final int UPDATE_REQUEST_TIMEOUT = 5000; // 5 seconds
@@ -88,10 +82,9 @@ public class UpdateCheckService extends IntentService
         getAvailableUpdates();
     }
 
-    private void recordAvailableUpdates(LinkedList<UpdateInfo> availableUpdates,
-                                        Intent finishedIntent) {
+    private void recordAvailableUpdate(UpdateInfo availableUpdate, Intent finishedIntent) {
 
-        if (availableUpdates == null) {
+        if (availableUpdate == null) {
             sendBroadcast(finishedIntent);
             return;
         }
@@ -103,15 +96,9 @@ public class UpdateCheckService extends IntentService
                 .putBoolean(Constants.BOOT_CHECK_COMPLETED, true)
                 .apply();
 
-        int realUpdateCount = finishedIntent.getIntExtra(EXTRA_REAL_UPDATE_COUNT, 0);
         UpdaterApplication app = (UpdaterApplication) getApplicationContext();
 
-        // Write to log
-        Log.i(TAG, "The update check successfully completed at " + d + " and found "
-                + availableUpdates.size() + " updates ("
-                + realUpdateCount + " newer than installed)");
-
-        if (realUpdateCount != 0 && !app.isMainActivityActive()) {
+        if (!app.isMainActivityActive()) {
             // There are updates available
             // The notification should launch the main app
             Intent i = new Intent(this, UpdaterActivity.class);
@@ -142,25 +129,12 @@ public class UpdateCheckService extends IntentService
                     .setLocalOnly(true)
                     .setAutoCancel(true);
 
-            LinkedList<UpdateInfo> realUpdates = new LinkedList<>();
-            for (UpdateInfo ui : availableUpdates) {
-                if (ui.isNewerThanInstalled()) {
-                    realUpdates.add(ui);
-                }
-            }
 
             Notification.InboxStyle inbox = new Notification.InboxStyle()
                     .setBigContentTitle(text);
-            int added = 0;
-
-            for (UpdateInfo ui : realUpdates) {
-                if (added < EXPANDED_NOTIF_UPDATE_COUNT) {
-                    inbox.addLine(ui.getFileName());
-                    added++;
-                }
-            }
+            inbox.addLine(availableUpdate.getFileName());
             builder.setStyle(inbox);
-            builder.setNumber(availableUpdates.size());
+            builder.setNumber(1);
 
             // Trigger the notification
             nm.notify(R.string.update_found_notification, builder.build());
@@ -189,8 +163,7 @@ public class UpdateCheckService extends IntentService
         ((UpdaterApplication) getApplicationContext()).getQueue().add(request);
     }
 
-    private LinkedList<UpdateInfo> parseJSON(String jsonString) {
-        LinkedList<UpdateInfo> updates = new LinkedList<>();
+    private UpdateInfo parseJSON(String jsonString) {
         try {
             JSONObject obj = new JSONObject(jsonString);
 
@@ -217,11 +190,11 @@ public class UpdateCheckService extends IntentService
                     .setNewsUrl(obj.isNull("news_url") ? "" : obj.getString("news_url"))
                     .setAddons(addons)
                     .build();
-            updates.add(ui);
+            return ui;
         } catch (JSONException e) {
             Log.e(TAG, "Error in JSON result", e);
         }
-        return updates;
+        return null;
     }
 
     @Override
@@ -229,27 +202,19 @@ public class UpdateCheckService extends IntentService
         VolleyLog.e("Error: ", volleyError.getMessage());
         VolleyLog.e("Error type: " + volleyError.toString());
         Intent intent = new Intent(ACTION_CHECK_FINISHED);
+        intent.putExtra(EXTRA_CHECK_RESULT, 0);
         sendBroadcast(intent);
     }
 
     @Override
     public void onResponse(JSONObject jsonObject) {
-        LinkedList<UpdateInfo> updates = parseJSON(jsonObject.toString());
-
-        int newUpdates = 0, realUpdates = 0;
-        for (UpdateInfo ui : updates) {
-            if (ui.isNewerThanInstalled()) {
-                realUpdates++;
-                newUpdates++;
-            }
-        }
-
+        UpdateInfo update = parseJSON(jsonObject.toString());
         Intent intent = new Intent(ACTION_CHECK_FINISHED);
-        intent.putExtra(EXTRA_UPDATE_COUNT, updates.size());
-        intent.putExtra(EXTRA_REAL_UPDATE_COUNT, realUpdates);
-        intent.putExtra(EXTRA_NEW_UPDATE_COUNT, newUpdates);
-
-        recordAvailableUpdates(updates, intent);
-        State.saveState(this, updates);
+        intent.putExtra(EXTRA_CHECK_RESULT, 1);
+        if (update.isNewerThanInstalled()) {
+            intent.putExtra(EXTRA_UPDATE_AVAILABLE, true);
+        }
+        recordAvailableUpdate(update, intent);
+        State.saveState(this, update);
     }
 }

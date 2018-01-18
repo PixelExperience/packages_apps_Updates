@@ -43,8 +43,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
     public static final int STYLE_NEW = 1;
     public static final int STYLE_DOWNLOADING = 2;
     public static final int STYLE_DOWNLOADED = 3;
-    public static final int STYLE_INSTALLED = 4;
-    public static final int STYLE_COMPLETING = 5;
+    public static final int STYLE_COMPLETING = 4;
 
     private OnActionListener mOnActionListener;
     private OnReadyListener mOnReadyListener;
@@ -171,7 +170,6 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 confirmDelete();
                 break;
 
-            case STYLE_INSTALLED:
             case STYLE_COMPLETING:
             case STYLE_DOWNLOADING:
             case STYLE_NEW:
@@ -296,16 +294,6 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 mProgressBar.setVisibility(View.VISIBLE);
                 mSummaryText.setText(String.format("%1$s • %2$s",
                         Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_downloading)));
-                break;
-
-            case STYLE_INSTALLED:
-                mStopDownloadButton.setVisibility(View.GONE);
-                mProgressBar.setVisibility(View.GONE);
-                mButton.setVisibility(View.GONE);
-                mChangelogButton.setVisibility(View.GONE);
-                expandableChangelogLayout.collapse();
-                mSummaryText.setText(String.format("%1$s • %2$s",
-                        Formatter.formatFileSize(mContext, mUpdateFileSize), mContext.getString(R.string.type_installed))); //
                 break;
 
             case STYLE_COMPLETING:
