@@ -129,7 +129,7 @@ public class UpdateCheckService extends IntentService
             NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOAD_CHANNEL_ID, name, NotificationManager.IMPORTANCE_HIGH);
             mChannel.enableLights(true);
             mChannel.setLightColor(Color.GREEN);
-            mChannel.setShowBadge(true);
+            mChannel.setShowBadge(false);
             mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             nm.createNotificationChannel(mChannel);
             Notification.Builder builder = new Notification.Builder(this, Constants.DOWNLOAD_CHANNEL_ID)

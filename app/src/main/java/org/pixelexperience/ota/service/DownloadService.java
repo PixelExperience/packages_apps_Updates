@@ -80,10 +80,8 @@ public class DownloadService extends IntentService
             request.addRequestHeader("User-Agent", userAgent);
         }
         request.setTitle(getString(R.string.app_name));
-        request.setAllowedOverRoaming(false);
         request.setVisibleInDownloadsUi(false);
-
-        request.setAllowedOverMetered(true);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 
         final DownloadManager dm = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
         return dm.enqueue(request);

@@ -201,7 +201,7 @@ public class Utils {
             NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOADING_CHANNEL_ID, context.getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_HIGH);
             mChannel.enableLights(false);
-            mChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);
+            mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             mNotificationManager.createNotificationChannel(mChannel);
             return new Notification.Builder(context, Constants.DOWNLOADING_CHANNEL_ID)
                     .setWhen(System.currentTimeMillis())
