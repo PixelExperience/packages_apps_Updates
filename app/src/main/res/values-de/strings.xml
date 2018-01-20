@@ -5,7 +5,6 @@
   <string name="app_name">Systemaktualisierungen</string>
   <!-- Update checking -->
   <string name="last_updated_at">(zuletzt aktualisiert am <xliff:g id="time">%s </xliff:g>)</string>
-  <string name="type_installed">Installiert</string>
   <string name="type_downloaded">Heruntergeladen</string>
   <string name="type_downloading">Herunterladen…</string>
   <string name="type_completing">Wird abgeschlossen…</string>
@@ -62,7 +61,7 @@
   <string name="notif_download_failure_title">Update-Download fehlgeschlagen</string>
   <string name="error_download_in_progress">Es läuft derzeit ein Download</string>
   <string name="error_file_ready_to_install">Ein Update steht zur Installation bereit</string>
-  <string name="storage_permission_error">Bitte gewähren Sie die Speicherungs-Berechtigungen, um fortzufahren</string>
+  <string name="storage_permission_error">Bitte gewähren Sie die Speicher-Berechtigung, um fortzufahren</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Datei löschen</string>
   <string name="confirm_delete_dialog_message">Soll die ausgewählte Update-Datei gelöscht werden?</string>
@@ -70,7 +69,7 @@
   <string name="delete_update_success_message">Update <xliff:g id="filename">%s</xliff:g> gelöscht</string>
   <string name="delete_updates_failure_message">Beim Löschen der Updatedatei ist ein Fehler aufgetreten</string>
   <string name="delete_updates_noFolder_message">Update-Verzeichnis nicht gefunden</string>
-  <string name="delete_updates_success_message">Alle heruntergeladenen Update-Dateien wurden gelöscht</string>
+  <string name="delete_updates_success_message">Alle heruntergeladenen Updates wurden gelöscht</string>
   <!-- Menu and dialog strings -->
   <string name="menu_refresh">Aktualisieren</string>
   <string name="menu_delete_all">Updates löschen</string>
@@ -80,17 +79,17 @@
   <string name="checkbox_mobile_data_warning">Nicht mehr anzeigen</string>
   <!-- Install -->
   <string name="reboot_title">Aktualisierung installieren</string>
-  <string name="reboot_message">Ihr Gerät wird in den Recovery Modus neugestartet um das Update zu installieren.\n\nDie folgende Datei wird installiert:\n<xliff:g id="filepath">%s</xliff:g>\n\nMöchtest du fortfahren?</string>
+  <string name="reboot_message">Ihr Gerät wird in den Recovery Modus neugestartet um das Update zu installieren.\n\nDie folgende Datei wird installiert:\n<xliff:g id="filepath">%s</xliff:g>\n\nMöchten Sie fortfahren?</string>
   <string name="reboot_failed_title">Fehler</string>
-  <string name="reboot_failed_message">Neustart fehlgeschlagen, bitte starten sie manuel in den Recovery Modus und installieren sie folgende Datei:\n\n<xliff:g id="filepath">%s</xliff:g></string>
-  <string name="delete_after_install_title">APK nach Installation löschen</string>
+  <string name="reboot_failed_message">Neustart fehlgeschlagen, bitte starten sie manuell in den Recovery Modus und installieren sie folgende Datei:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="delete_after_install_title">ZIP Datei nach Installation löschen</string>
   <string name="advanced_options">Erweitert</string>
   <string name="save_advanced_options">Speichern</string>
   <string name="wipe_cache">Cache löschen</string>
-  <string name="wipe_dalvik_cache">Dalvik Cache löschen</string>
-  <string name="wipe_data">Daten löschen</string>
+  <string name="wipe_dalvik_cache">Dalvik/ART Cache löschen</string>
+  <string name="wipe_data">\"Data\" löschen</string>
   <string name="wipe_data_dialog_confirmation_title">Auf Werkseinstellungen zurücksetzen</string>
-  <string name="wipe_data_dialog_confirmation_message">Sie haben die \'Daten löschen\' Option ausgewählt. Dies wird das Gerät auf Werkseinstellungen zurücksetzen. Möchten sie fortfahren?</string>
+  <string name="wipe_data_dialog_confirmation_message">Sie haben die \'Data löschen\' Option ausgewählt. Dies wird das Gerät auf Werkseinstellungen zurücksetzen. Möchten sie fortfahren?</string>
   <!-- Changelog -->
   <string name="changelog_title">Änderungsprotokoll</string>
 </resources>

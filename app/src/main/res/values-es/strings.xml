@@ -4,7 +4,8 @@
   <!-- App name -->
   <string name="app_name">Actualizaciones del sistema</string>
   <!-- Update checking -->
-  <string name="type_installed">Instalada</string>
+  <string name="ota_not_supported">Esta versión no es compatible con las actualizaciones de OTA.</string>
+  <string name="last_updated_at">(actualizado por última vez en <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Descargada</string>
   <string name="type_downloading">Descargando…</string>
   <string name="type_completing">Completando…</string>
@@ -27,6 +28,7 @@
   <string name="check_daily">Diariamente</string>
   <string name="check_weekly">Semanalmente</string>
   <string name="unknown">Desconocido</string>
+  <string name="mobile_data_warning_title">Advertencia de datos móviles</string>
   <string name="mobile_data_warning_summary">Mostrar una advertencia cuando el usuario intenta descargar una actualización utilizando los datos móviles</string>
   <!-- Info section -->
   <string name="extras_category_title">Extras</string>
@@ -39,15 +41,34 @@
   <string name="news_info_title">Noticias</string>
   <string name="news_info_summary">Manténgase informado sobre las actualizaciones y otras noticias</string>
   <string name="forum_info_title">Foro</string>
+  <string name="forum_info_summary">Ver publicaciones en el foro</string>
+  <string name="addons_title">Complementos</string>
+  <string name="addons_summary">Archivos útiles</string>
+  <string name="addons_error">Error al cargar la lista de complementos</string>
   <!-- MD5 -->
+  <string name="checking_md5">Verificando la integridad del archivo…</string>
+  <string name="md5_failed_dialog_title">Integridad del archivo</string>
+  <string name="md5_failed_dialog_message">Verificación fallida, ¿te gustaría continuar?</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">Cancelar descarga</string>
   <string name="confirm_download_cancel_dialog_message">¿Cancelar la descarga actual?</string>
   <string name="download_cancelled">Descarga cancelada</string>
   <string name="download_already_running">Hay una descarga en curso</string>
   <string name="unable_to_stop_download">No se pudo detener la descarga</string>
+  <string name="unable_to_download_file">Imposible descargar el archivo de actualización</string>
   <string name="download_not_found">Descarga no encontrada</string>
+  <string name="notif_download_success_title">Actualización descargada con éxito</string>
+  <string name="notif_download_success_summary">Toca para instalar</string>
+  <string name="notif_download_failure_title">La descarga de la actualización no tuvo éxito</string>
+  <string name="error_download_in_progress">Hay una descarga en progreso</string>
+  <string name="error_file_ready_to_install">Hay una actualización lista para ser instalada</string>
+  <string name="storage_permission_error">Por favor conceda permiso de almacenamiento para continuar</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Borrar archivo</string>
+  <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
+  <string name="confirm_delete_all_dialog_message">¿Eliminar todos los archivos de actualización descargados?</string>
+  <string name="delete_update_success_message">Actualizar <xliff:g id="filename">%s</xliff:g> eliminado</string>
+  <string name="delete_updates_failure_message">Hubo un error al eliminar el archivo de actualización</string>
   <string name="delete_updates_noFolder_message">No se encontró la carpeta de actualizaciones</string>
   <string name="delete_updates_success_message">Todas las actualizaciones descargadas fueron borradas</string>
   <!-- Menu and dialog strings -->
@@ -59,7 +80,9 @@
   <string name="checkbox_mobile_data_warning">No volver a mostrar</string>
   <!-- Install -->
   <string name="reboot_title">Instalar actualización</string>
+  <string name="reboot_message">Su dispositivo se reiniciará en el modo de recuperación para instalar la actualización.\n\nEl siguiente archivo será instalado:\n<xliff:g id="filepath">%s</xliff:g>\n\n¿Te gustaría continuar?</string>
   <string name="reboot_failed_title">Error</string>
+  <string name="reboot_failed_message">No se pudo reiniciar, reinicie manualmente para recuperar e instalar el siguiente archivo:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Eliminar fichero zip después de la instalación</string>
   <string name="advanced_options">Opciones Avanzadas</string>
   <string name="save_advanced_options">Guardar</string>
