@@ -11,7 +11,7 @@
   <string name="type_completing">即将完成…</string>
   <string name="download_button">下载</string>
   <string name="install_button">安装</string>
-  <string name="updates_category_title">有可用更新</string>
+  <string name="updates_category_title">可用更新</string>
   <string name="checking_for_updates">正在检查更新</string>
   <string name="update_found_notification">有可用更新</string>
   <string name="update_found_notification_desc">点击下载</string>
@@ -24,7 +24,7 @@
   <string name="settings_category_title">设置</string>
   <string name="download_folder_title">更新文件下载路径</string>
   <string name="update_check_title">自动检查更新</string>
-  <string name="check_manual">未启用</string>
+  <string name="check_manual">禁用</string>
   <string name="check_daily">每天一次</string>
   <string name="check_weekly">每周一次</string>
   <string name="unknown">未知</string>
@@ -38,7 +38,7 @@
   <string name="donate_info_summary">支持开发</string>
   <string name="website_info_title">官方网站</string>
   <string name="website_info_summary">访问我们的网站</string>
-  <string name="news_info_title">新的</string>
+  <string name="news_info_title">新闻</string>
   <string name="news_info_summary">随时了解更新信息</string>
   <string name="forum_info_title">论坛</string>
   <string name="forum_info_summary">查看论坛帖子</string>

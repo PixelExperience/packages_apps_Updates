@@ -32,10 +32,9 @@
   <string name="mobile_data_warning_summary">Kullanıcı mobil veri yoluyla bir güncelleme indirmeye çalıştığında bir uyarı göster</string>
   <!-- Info section -->
   <string name="extras_category_title">Ekstralar</string>
-  <string name="error_open_url">URL\'yi tarayıcıda açılamadı
-</string>
+  <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
   <string name="developer_info_title">Cihaz Sorumlusu</string>
-  <string name="donate_info_title">Bağış</string>
+  <string name="donate_info_title">Bağış Yapın</string>
   <string name="donate_info_summary">Geliştirmeyi destekle</string>
   <string name="website_info_title">İnternet sitesi</string>
   <string name="website_info_summary">İnternet sitemizi ziyaret edin</string>
@@ -46,15 +45,13 @@
   <string name="addons_title">Eklentiler</string>
   <string name="addons_summary">Yararlı dosyalar
 </string>
-  <string name="addons_error">Eklenti listesi yüklenemedi
-</string>
+  <string name="addons_error">Eklenti listesi yüklenemedi</string>
   <!-- MD5 -->
   <string name="checking_md5">Dosya bütünlüğünü doğrulanıyor…</string>
   <string name="md5_failed_dialog_title">Dosya bütünlüğü</string>
   <string name="md5_failed_dialog_message">Doğrulama başarısız oldu, devam etmek ister misiniz?</string>
   <!-- Downloads -->
-  <string name="confirm_download_cancel_dialog_title">İndirmeyi iptal et
-</string>
+  <string name="confirm_download_cancel_dialog_title">İndirmeyi iptal et</string>
   <string name="confirm_download_cancel_dialog_message">Geçerli indirme iptal edilsin mi?</string>
   <string name="download_cancelled">İndirme işlemi iptal edildi</string>
   <string name="download_already_running">Bir indirme işlemi devam ediyor</string>
@@ -65,7 +62,7 @@
   <string name="notif_download_success_title">Güncelleme başarıyla indirildi.
 </string>
   <string name="notif_download_success_summary">Yüklemek için tıklayın</string>
-  <string name="notif_download_failure_title">Güncelleme başarısız oldu</string>
+  <string name="notif_download_failure_title">Güncellemeyi indirme başarısız oldu</string>
   <string name="error_download_in_progress">Bir indirme işlemi devam ediyor</string>
   <string name="error_file_ready_to_install">Yüklemeye hazır bir güncelleme var</string>
   <string name="storage_permission_error">Devam etmek için lütfen depolama izin verin</string>
@@ -86,7 +83,7 @@
   <string name="checkbox_mobile_data_warning">Tekrar gösterme</string>
   <!-- Install -->
   <string name="reboot_title">Güncellemeyi yükle</string>
-  <string name="reboot_message">Güncellemeyi yüklemek için aygıtınız kurtarma modunda kendini yeniden başlatacaktır.\n\nAşağıdaki dosya yüklenecektir::\n<xliff:g id="filepath">%s</xliff:g>\n\nDevam etmek ister misiniz?</string>
+  <string name="reboot_message">Güncellemeyi yüklemek için cihazınız kurtarma modunda kendini yeniden başlatacaktır.\n\nAşağıdaki dosya yüklenecek:\n<xliff:g id="filepath">%s</xliff:g>\n\nDevam etmek ister misiniz?</string>
   <string name="reboot_failed_title">Hata</string>
   <string name="reboot_failed_message">Yeniden başlatılamadı, lütfen kurtarma için elle yeniden başlatın ve aşağıdaki dosyayı yükleyin:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Yükledikten sonra zip dosyasını sil</string>

@@ -16,6 +16,7 @@
   <string name="update_found_notification_desc">Toque para transferir</string>
   <string name="no_updates_available">Não há actualizações disponíveis</string>
   <string name="no_updates_available_pref_title">Não há atualizações disponíveis. Use o botão atualizar para verificar se há novas atualizações.</string>
+  <string name="data_connection_required">É necessária uma ligação de dados.</string>
   <string name="changelog_button">Ver alterações</string>
   <!-- Settings section -->
   <string name="settings_category_title">Definições</string>
@@ -37,9 +38,12 @@
   <string name="website_info_summary">Visite o nosso site</string>
   <string name="news_info_title">Notícias</string>
   <string name="forum_info_title">Fórum</string>
+  <string name="addons_title">Extras</string>
   <string name="addons_summary">Arquivos úteis</string>
   <!-- MD5 -->
   <!-- Downloads -->
+  <string name="confirm_download_cancel_dialog_title">Cancelar transferência</string>
+  <string name="confirm_download_cancel_dialog_message">Deseja cancelar a transferência atual ?</string>
   <string name="download_cancelled">Transferência cancelada</string>
   <string name="download_already_running">Já existe uma transferência em curso</string>
   <string name="unable_to_stop_download">Não é possível parar a transferência</string>
@@ -48,6 +52,8 @@
   <string name="notif_download_success_title">Actualização descarregada com sucesso</string>
   <string name="notif_download_success_summary">Toque para instalar</string>
   <string name="notif_download_failure_title">Não foi possível transferir o ficheiro de atualização</string>
+  <string name="error_download_in_progress">Existe uma transferência em progresso</string>
+  <string name="error_file_ready_to_install">Existe uma atualização pronta a ser instalada</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
   <string name="confirm_delete_dialog_message">Deseja eliminar o ficheiro de atualizações selecionado?</string>
@@ -66,6 +72,7 @@
   <string name="reboot_title">Instalar a atualização</string>
   <string name="reboot_message">O seu dispositivo irá reiniciar-se no modo de recuperação para instalar a atualização.\n\nO seguinte arquivo será instalado: \n <xliff:g id="filepath">%s </xliff:g> \n\nGostaria de prosseguir?</string>
   <string name="reboot_failed_title">Erro</string>
+  <string name="save_advanced_options">Guardar</string>
   <string name="wipe_cache">Limpar a cache</string>
   <string name="wipe_dalvik_cache">Limpar Cache Dalvik/ART</string>
   <string name="wipe_data">Apagar dados</string>

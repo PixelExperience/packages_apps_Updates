@@ -4,8 +4,8 @@
   <!-- App name -->
   <string name="app_name">Actualizaciones del sistema</string>
   <!-- Update checking -->
-  <string name="ota_not_supported">Esta versión no es compatible con las actualizaciones de OTA.</string>
-  <string name="last_updated_at">(actualizado por última vez en <xliff:g id="time">%s</xliff:g>)</string>
+  <string name="ota_not_supported">Esta versión no soporta actualizaciones OTA.</string>
+  <string name="last_updated_at">(última actualización <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Descargada</string>
   <string name="type_downloading">Descargando…</string>
   <string name="type_completing">Completando…</string>
@@ -14,34 +14,34 @@
   <string name="updates_category_title">Actualizaciones disponibles</string>
   <string name="checking_for_updates">Comprobando actualizaciones</string>
   <string name="update_found_notification">Nueva actualización disponible</string>
-  <string name="update_found_notification_desc">Toque para descargar</string>
+  <string name="update_found_notification_desc">Pulse para descargar</string>
   <string name="no_updates_available">No hay actualizaciones disponibles</string>
-  <string name="no_updates_available_pref_title">No hay actualizaciones disponibles. Utilice el botón actualizar para comprobar si hay nuevas actualizaciones.</string>
-  <string name="update_check_failed">Error en la comprobación de actualizaciones. Por favor, verifica la conexión a Internet e inténtalo nuevamente.</string>
+  <string name="no_updates_available_pref_title">No hay actualizaciones disponibles. Use el botón actualizar para comprobar nuevas actualizaciones.</string>
+  <string name="update_check_failed">La comprobación de actualización falló. Por favor, comprueba tu conexión a Internet e inténtalo nuevamente.</string>
   <string name="data_connection_required">Se requiere una conexión de datos.</string>
-  <string name="changelog_button">Ver los cambios</string>
+  <string name="changelog_button">Ver cambios</string>
   <!-- Settings section -->
   <string name="settings_category_title">Ajustes</string>
   <string name="download_folder_title">Carpeta de descargas</string>
-  <string name="update_check_title">Buscar actualizaciones automáticamente</string>
+  <string name="update_check_title">Comprobar actualizaciones periódicamente</string>
   <string name="check_manual">Deshabilitado</string>
   <string name="check_daily">Diariamente</string>
   <string name="check_weekly">Semanalmente</string>
   <string name="unknown">Desconocido</string>
   <string name="mobile_data_warning_title">Advertencia de datos móviles</string>
-  <string name="mobile_data_warning_summary">Mostrar una advertencia cuando el usuario intenta descargar una actualización utilizando los datos móviles</string>
+  <string name="mobile_data_warning_summary">Mostrar una advertencia cuando el usuario intenta descargar una actualización por datos móviles</string>
   <!-- Info section -->
   <string name="extras_category_title">Extras</string>
-  <string name="error_open_url">Error al abrir la URL en el navegador</string>
+  <string name="error_open_url">Falló al abrir la URL en el navegador</string>
   <string name="developer_info_title">Mantenedor</string>
   <string name="donate_info_title">Donar</string>
   <string name="donate_info_summary">Apoyar el desarrollo</string>
   <string name="website_info_title">Sitio web</string>
   <string name="website_info_summary">Visite nuestro sitio web</string>
   <string name="news_info_title">Noticias</string>
-  <string name="news_info_summary">Manténgase informado sobre las actualizaciones y otras noticias</string>
+  <string name="news_info_summary">Permanecer informado sobre actualizaciones y otras noticias</string>
   <string name="forum_info_title">Foro</string>
-  <string name="forum_info_summary">Ver publicaciones en el foro</string>
+  <string name="forum_info_summary">Ver publicaciones del foro</string>
   <string name="addons_title">Complementos</string>
   <string name="addons_summary">Archivos útiles</string>
   <string name="addons_error">Error al cargar la lista de complementos</string>

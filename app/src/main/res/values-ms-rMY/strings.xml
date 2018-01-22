@@ -11,5 +11,7 @@
   <!-- Menu and dialog strings -->
   <!-- Mobile data warning -->
   <!-- Install -->
+  <string name="advanced_options">Selanjutnya</string>
+  <string name="save_advanced_options">Simpan</string>
   <!-- Changelog -->
 </resources>
