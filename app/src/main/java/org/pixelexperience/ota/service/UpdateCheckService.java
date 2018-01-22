@@ -55,8 +55,8 @@ public class UpdateCheckService extends IntentService
     private static final String TAG = "UpdateCheckService";
 
     // DefaultRetryPolicy values for Volley
-    private static final int UPDATE_REQUEST_TIMEOUT = 5000; // 5 seconds
-    private static final int UPDATE_REQUEST_MAX_RETRIES = 3;
+    private static final int UPDATE_REQUEST_TIMEOUT = 15000; // 15 seconds
+    private static final int UPDATE_REQUEST_MAX_RETRIES = 0;
 
     public UpdateCheckService() {
         super("UpdateCheckService");
