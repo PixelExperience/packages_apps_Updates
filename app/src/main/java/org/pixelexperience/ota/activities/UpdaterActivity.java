@@ -961,18 +961,16 @@ public class UpdaterActivity extends PreferenceActivity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (isCheckingForUpdatesAllowed()) {
-            switch (item.getItemId()) {
-                case R.id.menu_refresh:
-                    checkForUpdates();
-                    break;
-                case R.id.menu_local_changelog:
-                    showLocalChangelog();
-                    break;
-                case R.id.menu_delete_all:
-                    confirmDeleteAll();
-                    break;
-            }
+        switch (item.getItemId()) {
+            case R.id.menu_refresh:
+                if (isCheckingForUpdatesAllowed()){ checkForUpdates(); }
+                break;
+            case R.id.menu_local_changelog:
+                showLocalChangelog();
+                break;
+            case R.id.menu_delete_all:
+                if (isCheckingForUpdatesAllowed()){ confirmDeleteAll(); }
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
