@@ -4,6 +4,7 @@
   <!-- App name -->
   <string name="app_name">Actualizações do sistema</string>
   <!-- Update checking -->
+  <string name="ota_not_supported">Esta compilação não suporta atualizações OTA.</string>
   <string name="last_updated_at">(última atualização em <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Transferida</string>
   <string name="type_downloading">A transferir…</string>
@@ -16,6 +17,7 @@
   <string name="update_found_notification_desc">Toque para transferir</string>
   <string name="no_updates_available">Não há actualizações disponíveis</string>
   <string name="no_updates_available_pref_title">Não há atualizações disponíveis. Use o botão atualizar para verificar se há novas atualizações.</string>
+  <string name="update_check_failed">A procura por atualizações falhou. Por favor verifique o estado da sua ligação à internet e tente de novo.</string>
   <string name="data_connection_required">É necessária uma ligação de dados.</string>
   <string name="changelog_button">Ver alterações</string>
   <!-- Settings section -->
@@ -37,7 +39,9 @@
   <string name="website_info_title">Website</string>
   <string name="website_info_summary">Visite o nosso site</string>
   <string name="news_info_title">Notícias</string>
+  <string name="news_info_summary">Mantenha-se informado sobre atualizações e outras novidades</string>
   <string name="forum_info_title">Fórum</string>
+  <string name="forum_info_summary">Ver publicações no Fórum</string>
   <string name="addons_title">Extras</string>
   <string name="addons_summary">Arquivos úteis</string>
   <!-- MD5 -->

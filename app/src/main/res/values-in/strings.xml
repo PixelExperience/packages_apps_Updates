@@ -21,7 +21,7 @@
   <string name="data_connection_required">Dibutuhkan koneksi internet.</string>
   <string name="changelog_button">Lihat perubahan</string>
   <!-- Settings section -->
-  <string name="settings_category_title">Pengaturan</string>
+  <string name="settings_category_title">Setelan</string>
   <string name="download_folder_title">Folder unduhan</string>
   <string name="update_check_title">Periksa untuk pembaharuan secara otomatis</string>
   <string name="check_manual">Non-aktifkan</string>
@@ -42,9 +42,9 @@
   <string name="news_info_summary">Tetap ikuti tentang pembaharuan dan berita lainnya</string>
   <string name="forum_info_title">Forum</string>
   <string name="forum_info_summary">Lihat kiriman forum</string>
-  <string name="addons_title">Add-ons</string>
+  <string name="addons_title">Tambahan</string>
   <string name="addons_summary">Berkas berguna</string>
-  <string name="addons_error">Gagal memuat daftar add-ons</string>
+  <string name="addons_error">Gagal memuat daftar tambahan</string>
   <!-- MD5 -->
   <string name="checking_md5">Memverifikasi integritas berkas…</string>
   <string name="md5_failed_dialog_title">Integritas berkas</string>
@@ -57,9 +57,40 @@
   <string name="unable_to_stop_download">Tidak bisa menghentikan unduhan</string>
   <string name="unable_to_download_file">Tidak dapat mengunduh pembaharuan berkas</string>
   <string name="download_not_found">Unduhan tidak tersedia</string>
+  <string name="notif_download_success_title">Berhasil mengunduh pembaharuan</string>
+  <string name="notif_download_success_summary">Ketuk untuk memasang</string>
+  <string name="notif_download_failure_title">Tidak berhasil mengunduh pembaharuan</string>
+  <string name="error_download_in_progress">Sedang ada unduhan yang berlangsung</string>
+  <string name="error_file_ready_to_install">Sebuah pembaharuan siap untuk dipasang</string>
+  <string name="storage_permission_error">Silahkan beri izin penyimpanan untuk melanjutkan</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Hapus berkas</string>
+  <string name="confirm_delete_dialog_message">Hapus berkas pembaharuan terpilih?</string>
+  <string name="confirm_delete_all_dialog_message">Hapus semua berkas pembaharuan yang terpilih?</string>
+  <string name="delete_update_success_message">Pembaharuan <xliff:g id="filename">%s</xliff:g> terhapus</string>
+  <string name="delete_updates_failure_message">Ada kesalahan pada penghapusan berkas pembaharuan</string>
+  <string name="delete_updates_noFolder_message">Folder pembaharuan tidak ditemukan</string>
+  <string name="delete_updates_success_message">Semua pembaharuan yang diunduh terhapus</string>
   <!-- Menu and dialog strings -->
+  <string name="menu_refresh">Segarkan</string>
+  <string name="menu_delete_all">Hapus pembaharuan</string>
   <!-- Mobile data warning -->
+  <string name="update_on_mobile_data_title">Peringatan</string>
+  <string name="update_on_mobile_data_message">Anda akan megunduh paket pembaharuan menggunakan data seluler yang mungkin akan menyebabkan penggunaan data yang tinggi. Apakah anda ingin melanjutkan?</string>
+  <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>
   <!-- Install -->
+  <string name="reboot_title">Pasang pembaharuan</string>
+  <string name="reboot_message">Perangkat anda akan dimulai ulang dalam mode pemulihan untuk memasang pembaharuan.\n\nBerkas berikut yang akan dipasang:\n<xliff:g id="filepath">%s</xliff:g>\n\nApakah anda ingin melanjutkan?</string>
+  <string name="reboot_failed_title">Kesalahan</string>
+  <string name="reboot_failed_message">Gagal untuk memulai ulang,silahkan untuk memulai ulang secara manual ke mode pemulihan dan memasang berkas berikut:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="delete_after_install_title">Hapus berkas zip setelah pemasangan</string>
+  <string name="advanced_options">Lanjutan</string>
+  <string name="save_advanced_options">Simpan</string>
+  <string name="wipe_cache">Hapus cache</string>
+  <string name="wipe_dalvik_cache">Hapus Dalvik/ART cache</string>
+  <string name="wipe_data">Hapus data</string>
+  <string name="wipe_data_dialog_confirmation_title">Kembali ke pengaturan pabrik</string>
+  <string name="wipe_data_dialog_confirmation_message">Anda memilih opsi \'hapus data\', ini akan mengembalikan perangkat anda ke pengaturan pabrik, apakah anda ingin melanjutkan?</string>
   <!-- Changelog -->
+  <string name="changelog_title">Daftar perubahan</string>
 </resources>

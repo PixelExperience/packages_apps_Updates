@@ -6,7 +6,7 @@
   <!-- Update checking -->
   <string name="ota_not_supported">该版本暂不支持 OTA 更新</string>
   <string name="last_updated_at">(最后一次更新 <xliff:g id="time">%s</xliff:g>)</string>
-  <string name="type_downloaded">已下载</string>
+  <string name="type_downloaded">下载完成</string>
   <string name="type_downloading">正在下载……</string>
   <string name="type_completing">即将完成…</string>
   <string name="download_button">下载</string>
@@ -89,7 +89,7 @@
   <string name="wipe_cache">清除缓存</string>
   <string name="wipe_dalvik_cache">清除 Dalvik缓存 (Dalvik/ART分区)</string>
   <string name="wipe_data">清除数据 (data分区)</string>
-  <string name="wipe_data_dialog_confirmation_title">警告</string>
+  <string name="wipe_data_dialog_confirmation_title">恢复出厂设置</string>
   <string name="wipe_data_dialog_confirmation_message">您选择了 \"清除数据\" 选项, 这将删除您设备上的所有文件(相当于恢复出厂设置), 您确定继续吗？</string>
   <!-- Changelog -->
   <string name="changelog_title">更新日志​​​​​</string>
