@@ -4,7 +4,7 @@
   <!-- App name -->
   <string name="app_name">Pembaharuan sistem</string>
   <!-- Update checking -->
-  <string name="ota_not_supported">Bentukan ini tidak tersedia pembaharuan OTA.</string>
+  <string name="ota_not_supported">Bentukan ini tidak mendukung pembaharuan OTA.</string>
   <string name="last_updated_at">(Terakhir diperbaharui pada <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Terunduh</string>
   <string name="type_downloading">Mengunduh…</string>

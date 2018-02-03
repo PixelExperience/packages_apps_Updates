@@ -36,13 +36,13 @@
   <string name="developer_info_title">Сопровождающий</string>
   <string name="donate_info_title">Пожертвовать</string>
   <string name="donate_info_summary">Поддержать разработку</string>
-  <string name="website_info_title">Сайт</string>
-  <string name="website_info_summary">Посетите наш веб-сайт</string>
+  <string name="website_info_title">Веб-сайт</string>
+  <string name="website_info_summary">Посетить наш веб-сайт</string>
   <string name="news_info_title">Новости</string>
   <string name="news_info_summary">Будьте в курсе обновлений и других новостей</string>
   <string name="forum_info_title">Форум</string>
   <string name="forum_info_summary">Последние сообщения на форуме</string>
-  <string name="addons_title">Дополнения</string>
+  <string name="addons_title">Расширения</string>
   <string name="addons_summary">Полезные файлы</string>
   <string name="addons_error">Не удалось загрузить список расширений</string>
   <!-- MD5 -->
@@ -51,7 +51,7 @@
   <string name="md5_failed_dialog_message">Сбой проверки, вы хотите продолжить?</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">Отменить загрузку</string>
-  <string name="confirm_download_cancel_dialog_message">Отменить текущую загрузку ?</string>
+  <string name="confirm_download_cancel_dialog_message">Отменить текущую загрузку?</string>
   <string name="download_cancelled">Загрузка отменена</string>
   <string name="download_already_running">Загрузка уже выполняется</string>
   <string name="unable_to_stop_download">Не удалось отменить скачивание</string>
@@ -61,8 +61,8 @@
   <string name="notif_download_success_summary">Нажмите для установки</string>
   <string name="notif_download_failure_title">Ошибка загрузки обновления</string>
   <string name="error_download_in_progress">Идёт загрузка</string>
-  <string name="error_file_ready_to_install">Обновления готовы к установке</string>
-  <string name="storage_permission_error">Пожалуйста предоставьте разрешение на хранилище для продолжения</string>
+  <string name="error_file_ready_to_install">Обновление готово к установке</string>
+  <string name="storage_permission_error">Пожалуйста, предоставьте разрешение на доступ к хранилищу, чтобы продолжить</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Удалить файл</string>
   <string name="confirm_delete_dialog_message">Удалить выбранный файл обновления?</string>
@@ -80,17 +80,17 @@
   <string name="checkbox_mobile_data_warning">Не показывать снова</string>
   <!-- Install -->
   <string name="reboot_title">Установить обновление</string>
-  <string name="reboot_message">Ваше устройство будет перезагружено в режим восстановления, чтобы установить следующее обновление.\n\nThe файл будет установлен: \n <xliff:g id="filepath">%s </xliff:g> \n\nХотите продолжить?</string>
+  <string name="reboot_message">Ваше устройство будет перезагружено в режим восстановления для установки обновления.\n\nБудет установлен следующий файл: \n <xliff:g id="filepath">%s </xliff:g> \n\nВы хотите продолжить?</string>
   <string name="reboot_failed_title">Ошибка</string>
-  <string name="reboot_failed_message">Не удалось перезагрузить, пожалуйста перезагрузитесь в режим восстановления вручную и установите следующий файл:\n\n <xliff:g id="filepath">%s </xliff:g></string>
-  <string name="delete_after_install_title">Удаление ZIP файлов после установки</string>
+  <string name="reboot_failed_message">Не удалось перезагрузить устройство. Пожалуйста, перезагрузитесь в режим восстановления вручную и установите следующий файл:\n\n <xliff:g id="filepath">%s </xliff:g></string>
+  <string name="delete_after_install_title">Удаление zip-файлов после установки</string>
   <string name="advanced_options">Дополнительно</string>
   <string name="save_advanced_options">Сохранить</string>
   <string name="wipe_cache">Очистить кэш</string>
   <string name="wipe_dalvik_cache">Очистить Dalvik/ART-кэш</string>
   <string name="wipe_data">Стереть данные</string>
-  <string name="wipe_data_dialog_confirmation_title">Сброс к первоначальной установке</string>
-  <string name="wipe_data_dialog_confirmation_message">Вы выбрали опцию «Сброс к первоначальной установке», это удалит все ваши данные на вашем устройстве, вы хотите продолжить?</string>
+  <string name="wipe_data_dialog_confirmation_title">Возврат к заводским настройкам</string>
+  <string name="wipe_data_dialog_confirmation_message">Вы выбрали опцию «Возврат к заводским настройкам», это удалит все ваши данные на вашем устройстве, вы хотите продолжить?</string>
   <!-- Changelog -->
   <string name="changelog_title">Список изменений</string>
 </resources>
