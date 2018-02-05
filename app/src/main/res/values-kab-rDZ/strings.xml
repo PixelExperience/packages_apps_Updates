@@ -23,18 +23,64 @@
   <!-- Settings section -->
   <string name="settings_category_title">Iɣewwaṛen</string>
   <string name="download_folder_title">Sider akaram</string>
+  <string name="update_check_title">Anadi n ileqman s uwalan</string>
   <string name="check_manual">Ssens</string>
   <string name="check_daily">Yal-ass</string>
   <string name="check_weekly">Yal-dduṛt</string>
   <string name="unknown">Ur ittwasen ara</string>
   <string name="mobile_data_warning_title">Alɣu n isefka izirazen</string>
+  <string name="mobile_data_warning_summary">Sken alɣu mara yilli umseqdec yettaɛraḍ asideg n usider s isefka izirazen</string>
   <!-- Info section -->
   <string name="extras_category_title">Ugar</string>
+  <string name="error_open_url">Tuccḍa n tulya n URL deg iminig</string>
+  <string name="developer_info_title">Adiwinni</string>
+  <string name="donate_info_title">Tikci</string>
+  <string name="donate_info_summary">Fked tallalt i unegmu</string>
+  <string name="website_info_title">Asmel Web</string>
+  <string name="website_info_summary">Rzut ar usmel web nneɣ</string>
+  <string name="news_info_title">Amaynut</string>
+  <string name="forum_info_title">Anmager</string>
+  <string name="forum_info_summary">Ẓar iznan deg anmagar</string>
+  <string name="addons_title">Ssiɣzef </string>
+  <string name="addons_summary">Ifuyla yessefken</string>
+  <string name="addons_error">Tuccḍa deg sider n tidbarin n ifuyla yessefken</string>
   <!-- MD5 -->
+  <string name="checking_md5">A senqed n timmad n ufaylu...</string>
+  <string name="md5_failed_dialog_title">Timmad n ufaylu</string>
+  <string name="md5_failed_dialog_message">Tuccḍa n usenqed,tebɣiḍ attkemmleḍ ?</string>
   <!-- Downloads -->
+  <string name="confirm_download_cancel_dialog_title">Sefsex asider</string>
+  <string name="confirm_download_cancel_dialog_message">Sefsex asider amiran?</string>
+  <string name="download_cancelled">Asider yefsex</string>
+  <string name="download_already_running">Yella yakan usider i teddun</string>
+  <string name="unable_to_stop_download">D awezɣi aḥbas n usider</string>
+  <string name="unable_to_download_file">D awezɣi asider n ufaylu n lqem</string>
+  <string name="download_not_found">Ulac asider</string>
+  <string name="notif_download_success_title">Lqem ittwasidred akken iwata</string>
+  <string name="notif_download_success_summary">Senned akken ad tesbeddeḍ</string>
+  <string name="notif_download_failure_title">Icceḍ usider n lqem</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Kkes afaylu</string>
+  <string name="confirm_delete_dialog_message">Kkes afaylu n lqem ittwafernen?</string>
+  <string name="confirm_delete_all_dialog_message">Kkes meṛṛa ifuyla n lqem ittwasidren?</string>
+  <string name="delete_update_success_message">Lqem <xliff:g id="filename">%s</xliff:g> yettwakkes</string>
+  <string name="delete_updates_failure_message">Tella-d tuccḍa deg tukksa n ufaylu n lqem</string>
+  <string name="delete_updates_noFolder_message">Ulac akaram n lqem</string>
+  <string name="delete_updates_success_message">Ttwakksen meṛṛa ifuyla n lqem ittwasidren</string>
   <!-- Menu and dialog strings -->
+  <string name="menu_refresh">Sismeḍ</string>
+  <string name="menu_delete_all">Kkes lqem</string>
   <!-- Mobile data warning -->
+  <string name="update_on_mobile_data_title">Alɣu</string>
+  <string name="checkbox_mobile_data_warning">Ur d-skan ara tikelt nniḍen</string>
   <!-- Install -->
+  <string name="reboot_title">Asebded n lqem</string>
+  <string name="reboot_failed_title">Tuccḍa</string>
+  <string name="advanced_options">Talqayt</string>
+  <string name="save_advanced_options">Aḥraz </string>
+  <string name="wipe_cache">Sfeḍ tuffirt</string>
+  <string name="wipe_dalvik_cache">Sfeḍ tuffirt Dalvik</string>
+  <string name="wipe_data">Sfeḍ isefka</string>
   <!-- Changelog -->
+  <string name="changelog_title">Aɣmis n ubeddel</string>
 </resources>
