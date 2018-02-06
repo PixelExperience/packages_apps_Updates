@@ -82,5 +82,15 @@
   <string name="reboot_title">Update installeren</string>
   <string name="reboot_message">Uw apparaat zal opnieuw opstarten in herstelmodus om de update te installeren.\n\nHet volgende bestand zal worden geinstalleerd:\n<xliff:g id="filepath">%s</xliff:g>\n\nWilt u doorgaan?</string>
   <string name="reboot_failed_title">Fout</string>
+  <string name="reboot_failed_message">Herstarten mislukt, herstart manueel in recovery en installeer het volgende bestand: \n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="delete_after_install_title">Zip-bestand verwijderen na installatie</string>
+  <string name="advanced_options">Geavanceerd</string>
+  <string name="save_advanced_options">Opslaan</string>
+  <string name="wipe_cache">Cache Wissen</string>
+  <string name="wipe_dalvik_cache">Dalvik/ART cache wissen</string>
+  <string name="wipe_data">Gegevens wissen</string>
+  <string name="wipe_data_dialog_confirmation_title">Reset naar fabrieksinstellingen</string>
+  <string name="wipe_data_dialog_confirmation_message">Je selecteerde de \'wipe data\' optie, dit zal je toestel terugzetten naar de fabrieksinstellingen, wil je verdergaan?</string>
   <!-- Changelog -->
+  <string name="changelog_title">Logboekwijzigingen</string>
 </resources>
