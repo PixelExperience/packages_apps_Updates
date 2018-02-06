@@ -479,10 +479,6 @@ public class UpdaterActivity extends PreferenceActivity implements
             return;
         }
 
-        Date d = new Date();
-        mPrefs.edit().putLong(Constants.LAST_UPDATE_CHECK_PREF, d.getTime()).apply();
-        updateLastCheckPreference();
-
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setMessage(getString(R.string.checking_for_updates));
         mProgressDialog.setIndeterminate(true);

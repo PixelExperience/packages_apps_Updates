@@ -161,6 +161,9 @@ public class UpdateCheckService extends IntentService
         request.setTag(TAG);
 
         ((UpdaterApplication) getApplicationContext()).getQueue().add(request);
+
+        Date d = new Date();
+        PreferenceManager.getDefaultSharedPreferences(UpdateCheckService.this).edit().putLong(Constants.LAST_UPDATE_CHECK_PREF, d.getTime()).apply();
     }
 
     private UpdateInfo parseJSON(String jsonString) {
