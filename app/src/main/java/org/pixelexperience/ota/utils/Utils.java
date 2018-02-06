@@ -200,7 +200,7 @@ public class Utils {
     public static Notification createDownloadNotificationChannel(Context context) {
         try {
             NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-            NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOADING_CHANNEL_ID, context.getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOADING_CHANNEL_ID, context.getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_LOW);
             mChannel.enableLights(false);
             mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             mNotificationManager.createNotificationChannel(mChannel);

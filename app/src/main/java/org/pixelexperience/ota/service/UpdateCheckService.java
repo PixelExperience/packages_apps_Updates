@@ -113,7 +113,7 @@ public class UpdateCheckService extends IntentService
 
             // Get the notification ready
             CharSequence name = getString(R.string.app_name);
-            NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOAD_CHANNEL_ID, name, NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOAD_CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
             mChannel.enableLights(true);
             mChannel.setLightColor(Color.GREEN);
             mChannel.setShowBadge(false);

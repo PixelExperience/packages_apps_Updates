@@ -58,7 +58,7 @@ public class DownloadNotifier {
                 updateIntent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
         CharSequence name = context.getString(R.string.app_name);
-        NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOAD_CHANNEL_ID, name, NotificationManager.IMPORTANCE_HIGH);
+        NotificationChannel mChannel = new NotificationChannel(Constants.DOWNLOAD_CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
         mChannel.enableLights(true);
         mChannel.setLightColor(lightColor);
         mChannel.setShowBadge(true);
