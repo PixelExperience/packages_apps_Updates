@@ -24,6 +24,8 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.TypedValue;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -80,6 +82,9 @@ public class LocalChangelogActivity extends Activity {
             sb.setSpan(new StyleSpan(Typeface.BOLD+ Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         }
         final TextView textView = new TextView(this);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        llp.setMargins(20, 0, 0, 0); // llp.setMargins(left, top, right, bottom);
+        textView.setLayoutParams(llp);
         textView.setText(sb);
 
         final ScrollView scrollView = new ScrollView(this);
