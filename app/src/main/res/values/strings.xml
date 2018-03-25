@@ -99,6 +99,7 @@
     <string name="wipe_data">Wipe data</string>
     <string name="wipe_data_dialog_confirmation_title">Factory reset</string>
     <string name="wipe_data_dialog_confirmation_message">You selected \'wipe data\' option, this will do a factory reset on your device, do you want to continue?</string>
+    <string name="update_manual_ab">To continue, flash the build manually using TWRP. This device doesn\'t support auto build flashing due to A/B partitions.</string>
 
     <!-- Changelog -->
     <string name="changelog_title">Changelog</string>

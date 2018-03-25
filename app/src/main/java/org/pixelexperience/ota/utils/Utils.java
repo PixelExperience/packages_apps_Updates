@@ -419,4 +419,8 @@ public class Utils {
         return new DecimalFormat("#,##0.#").format(size/Math.pow(1024, digitGroups)) + " " + units[digitGroups];
     }
 
+    public static Boolean isABDevice(){
+        return getSystemProperty("ro.build.ab_update", "false").equals("true");
+    }
+
 }
