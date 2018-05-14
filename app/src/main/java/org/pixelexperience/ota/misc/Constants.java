@@ -33,8 +33,8 @@ public class Constants {
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "ro.product.device";
     public static final String CURRENT_VERSION = "org.pixelexperience.version";
-    public static final String CURRENT_BUILD_TYPE = "org.pixelexperience.build_type";
-    public static final String OTA_URL = "https://download.pixelexperience.org/ota/%s";
+    public static final String OTA_URL = "https://download.pixelexperience.org/ota/%s/%s";
+    public static final String OTA_VERSION_CODE = "org.pixelexperience.ota.version_code";
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
     public static final String PATTERN_FILENAME_DATE_FORMAT = "(\\d{4}\\d{2}\\d{2}-\\d{2}\\d{2})";

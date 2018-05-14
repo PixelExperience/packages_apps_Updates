@@ -144,7 +144,7 @@ public class UpdateCheckService extends IntentService
     }
 
     private URI getServerURI() {
-        return URI.create(String.format(Constants.OTA_URL, Utils.getDeviceName()));
+        return URI.create(String.format(Constants.OTA_URL, Utils.getDeviceName(), Utils.getOTAVersionCode()));
     }
 
     private void getAvailableUpdates() {

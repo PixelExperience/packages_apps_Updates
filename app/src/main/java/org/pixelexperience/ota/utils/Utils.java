@@ -106,12 +106,15 @@ public class Utils {
     }
 
     public static boolean isOTAConfigured() {
-        String prop = getSystemProperty(Constants.CURRENT_VERSION, "");
-        return prop.endsWith("-OFFICIAL");
+        return !getDeviceName().equals("") && !getOTAVersionCode().equals("") ;
     }
 
     public static String getDeviceName() {
         return getSystemProperty(Constants.CURRENT_DEVICE_NAME, "");
+    }
+
+    public static String getOTAVersionCode() {
+        return getSystemProperty(Constants.OTA_VERSION_CODE, "");
     }
 
     public static String getInstalledVersion() {
