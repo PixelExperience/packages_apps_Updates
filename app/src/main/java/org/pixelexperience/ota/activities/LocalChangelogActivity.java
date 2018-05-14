@@ -16,9 +16,12 @@
 package org.pixelexperience.ota.activities;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
@@ -29,9 +32,12 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import org.pixelexperience.ota.R;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.ref.WeakReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,53 +49,98 @@ public class LocalChangelogActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        InputStreamReader inputReader = null;
-        String text = "";
 
-        StringBuilder data = new StringBuilder();
-        Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_.-]+/)+)");
-        Pattern p3 = Pattern.compile("(\\d\\d\\-\\d\\d\\-\\d{4})");
-        try {
-            char tmp[] = new char[2048];
-            int numRead;
+        new ChangelogTask(this).execute();
+    }
 
-            inputReader = new FileReader(CHANGELOG_PATH);
-            while ((numRead = inputReader.read(tmp)) >= 0) {
-                data.append(tmp, 0, numRead);
-            }
-        } catch (IOException ignored) {
-        } finally {
+    private static class ChangelogTask extends AsyncTask<Void, Void, Void> {
+
+        private WeakReference<LocalChangelogActivity> activityReference;
+
+        ChangelogTask(LocalChangelogActivity context) {
+            activityReference = new WeakReference<>(context);
+        }
+
+        ProgressDialog dialog;
+        protected void onPreExecute() {
+            LocalChangelogActivity activity = activityReference.get();
+            dialog = new ProgressDialog(activity);
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setMessage(activity.getString(R.string.changelog_loading));
+            dialog.show();
+            // Pre Code
+        }
+
+        @Override
+        protected Void doInBackground(Void... unused) {
+            final LocalChangelogActivity activity = activityReference.get();
+            InputStreamReader inputReader = null;
+
+            StringBuilder data = new StringBuilder();
+            Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_.-]+/)+)");
+            Pattern p3 = Pattern.compile("(\\d\\d-\\d\\d-\\d{4})");
             try {
-                if (inputReader != null) {
-                    inputReader.close();
+                char tmp[] = new char[2048];
+                int numRead;
+
+                inputReader = new FileReader(CHANGELOG_PATH);
+                while ((numRead = inputReader.read(tmp)) >= 0) {
+                    data.append(tmp, 0, numRead);
                 }
             } catch (IOException ignored) {
+            } finally {
+                try {
+                    if (inputReader != null) {
+                        inputReader.close();
+                    }
+                } catch (IOException ignored) {
+                }
             }
+
+            SpannableStringBuilder sb = new SpannableStringBuilder(data);
+            Resources.Theme theme = activity.getTheme();
+            TypedValue typedValue = new TypedValue();
+            theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
+            final int color = activity.getColor(typedValue.resourceId);
+            Matcher m = p2.matcher(data);
+            while (m.find()){
+                sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                sb.setSpan(new ForegroundColorSpan(color),m.start(0),m.end(0),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            }
+            m = p3.matcher(data);
+            while (m.find()){
+                sb.setSpan(new StyleSpan(Typeface.BOLD+ Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            }
+            final TextView textView = new TextView(activity);
+            LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            llp.setMargins(20, 0, 0, 0); // llp.setMargins(left, top, right, bottom);
+            textView.setLayoutParams(llp);
+            textView.setText(sb);
+
+            final ScrollView scrollView = new ScrollView(activity);
+            scrollView.addView(textView);
+
+            activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    activity.setContentView(scrollView);
+                }
+            });
+            return null;
         }
 
-        SpannableStringBuilder sb = new SpannableStringBuilder(data);
-        Resources.Theme theme = getTheme();
-        TypedValue typedValue = new TypedValue();
-        theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
-        final int color = getColor(typedValue.resourceId);
-        Matcher m = p2.matcher(data);
-        while (m.find()){
-            sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            sb.setSpan(new ForegroundColorSpan(color),m.start(0),m.end(0),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        @Override
+        protected void onPostExecute(Void unused) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (dialog != null) {
+                        dialog.dismiss();
+                    }
+                }
+            }, 3000);
         }
-        m = p3.matcher(data);
-        while (m.find()){
-            sb.setSpan(new StyleSpan(Typeface.BOLD+ Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-        final TextView textView = new TextView(this);
-        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        llp.setMargins(20, 0, 0, 0); // llp.setMargins(left, top, right, bottom);
-        textView.setLayoutParams(llp);
-        textView.setText(sb);
-
-        final ScrollView scrollView = new ScrollView(this);
-        scrollView.addView(textView);
-
-        setContentView(scrollView);
     }
+
 }

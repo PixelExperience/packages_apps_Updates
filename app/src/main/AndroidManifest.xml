@@ -37,7 +37,8 @@
             android:name=".activities.LocalChangelogActivity"
             android:label="@string/changelog_title"
             android:launchMode="singleTop"
-            android:parentActivityName=".activities.UpdaterActivity" />
+            android:parentActivityName=".activities.UpdaterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
 
         <service android:name=".service.UpdateCheckService" />
         <service android:name=".service.DownloadService" />

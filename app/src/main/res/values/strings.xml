@@ -102,4 +102,5 @@
 
     <!-- Changelog -->
     <string name="changelog_title">Changelog</string>
+    <string name="changelog_loading">Loading…</string>
 </resources>
