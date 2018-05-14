@@ -28,18 +28,11 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // Load the required settings from preferences
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        int updateFrequency = prefs.getInt(Constants.UPDATE_CHECK_PREF, Constants.UPDATE_FREQ_DAILY);
-
-        // Check if we are set to manual updates and don't do anything
-        if (updateFrequency == Constants.UPDATE_FREQ_NONE) {
-            return;
-        }
+        int updateFrequency = Constants.UPDATE_DEFAULT_FREQ;
 
         // Not set to manual updates, parse the received action
         final String action = intent.getAction();
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
-            // We just booted. Store the boot check state
-            prefs.edit().putBoolean(Constants.BOOT_CHECK_COMPLETED, false).apply();
             // clean temp dir
             Utils.deleteTempFolder();
         }

@@ -93,7 +93,6 @@ public class UpdateCheckService extends IntentService
         Date d = new Date();
         PreferenceManager.getDefaultSharedPreferences(UpdateCheckService.this).edit()
                 .putLong(Constants.LAST_UPDATE_CHECK_PREF, d.getTime())
-                .putBoolean(Constants.BOOT_CHECK_COMPLETED, true)
                 .apply();
 
         UpdaterApplication app = (UpdaterApplication) getApplicationContext();

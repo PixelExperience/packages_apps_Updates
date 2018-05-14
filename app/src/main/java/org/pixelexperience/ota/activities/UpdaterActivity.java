@@ -87,7 +87,6 @@ public class UpdaterActivity extends PreferenceActivity implements
     private static String NEWS_URL = "";
     private List<Map<String, String>> addons;
     private SharedPreferences mPrefs;
-    private ListPreference mUpdateCheck;
     private SwitchPreference mMobileDataWarning;
     private PreferenceScreen preferenceScreen;
     private PreferenceCategory mUpdatesList;
@@ -421,7 +420,6 @@ public class UpdaterActivity extends PreferenceActivity implements
         preferenceScreen = getPreferenceScreen();
 
         mUpdatesList = (PreferenceCategory) findPreference(UPDATES_CATEGORY);
-        mUpdateCheck = (ListPreference) findPreference(Constants.UPDATE_CHECK_PREF);
         mMobileDataWarning = (SwitchPreference) findPreference(Constants.MOBILE_DATA_WARNING_PREF);
 
         mExtrasCategory = (PreferenceCategory) findPreference(EXTRAS_CATEGORY);
@@ -447,10 +445,6 @@ public class UpdaterActivity extends PreferenceActivity implements
 
         // Load the stored preference data
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        int check = mPrefs.getInt(Constants.UPDATE_CHECK_PREF, Constants.UPDATE_FREQ_DAILY);
-        mUpdateCheck.setValue(String.valueOf(check));
-        mUpdateCheck.setSummary(mapCheckValue(check));
-        mUpdateCheck.setOnPreferenceChangeListener(this);
 
         mMobileDataWarning.setChecked(mPrefs.getBoolean(Constants.MOBILE_DATA_WARNING_PREF, true));
         mMobileDataWarning.setOnPreferenceChangeListener(this);
@@ -520,13 +514,7 @@ public class UpdaterActivity extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object o) {
-        if (preference == mUpdateCheck) {
-            int value = Integer.valueOf((String) o);
-            mPrefs.edit().putInt(Constants.UPDATE_CHECK_PREF, value).apply();
-            mUpdateCheck.setSummary(mapCheckValue(value));
-            Utils.scheduleUpdateService(this, value * 1000);
-            return true;
-        } else if (preference == mMobileDataWarning) {
+        if (preference == mMobileDataWarning) {
             boolean checked = Boolean.valueOf(o.toString());
             mPrefs.edit().putBoolean(Constants.MOBILE_DATA_WARNING_PREF, checked).apply();
             return true;

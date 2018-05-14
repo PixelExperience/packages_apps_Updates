@@ -24,10 +24,6 @@
     <!-- Settings section -->
     <string name="settings_category_title">Settings</string>
     <string name="download_folder_title">Download folder</string>
-    <string name="update_check_title">Check for updates periodically</string>
-    <string name="check_manual">Disabled</string>
-    <string name="check_daily">Daily</string>
-    <string name="check_weekly">Weekly</string>
     <string name="unknown">Unknown</string>
     <string name="mobile_data_warning_title">Mobile data warning</string>
     <string name="mobile_data_warning_summary">Show a warning when user tries to download an update via mobile data</string>

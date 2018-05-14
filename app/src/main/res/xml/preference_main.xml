@@ -71,17 +71,6 @@
         android:key="settings_category"
         android:title="@string/settings_category_title">
 
-        <ListPreference
-            android:dialogTitle="@string/update_check_title"
-            android:entries="@array/update_check_entries"
-            android:entryValues="@array/update_check_values"
-            android:icon="@drawable/ic_update_interval"
-            android:key="pref_update_check_interval"
-            android:layout="@layout/preference_material_settings"
-            android:persistent="false"
-            android:summary="%s"
-            android:title="@string/update_check_title" />
-
         <SwitchPreference
             android:icon="@drawable/ic_mobile_data_warning_icon"
             android:key="pref_mobile_data_warning"

@@ -19,17 +19,14 @@ public class Constants {
     public static final String DOWNLOAD_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOAD_CHANNEL";
     public static final String DOWNLOADING_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOADING_CHANNEL";
     // Preferences
-    public static final String UPDATE_CHECK_PREF = "pref_update_check_interval";
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
     public static final String MOBILE_DATA_WARNING_PREF = "pref_mobile_data_warning";
     public static final String DELETE_AFTER_INSTALL_PREF = "pref_delete_after_install";
     public static final String WIPE_CACHE_PREF = "pref_wipe_cache";
     public static final String WIPE_DALVIK_PREF = "pref_wipe_dalvik";
     public static final String WIPE_DATA_PREF = "pref_wipe_data";
-    // Update Check items
-    public static final String BOOT_CHECK_COMPLETED = "boot_check_completed";
-    public static final int UPDATE_FREQ_NONE = -2;
-    public static final int UPDATE_FREQ_DAILY = 86400;
+    // Automatic update checking
+    public static final int UPDATE_DEFAULT_FREQ = 86400; // Daily
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "ro.product.device";
     public static final String CURRENT_VERSION = "org.pixelexperience.version";

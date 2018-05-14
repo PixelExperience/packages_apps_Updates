@@ -194,10 +194,6 @@ public class Utils {
         // Clear any old alarms and schedule the new alarm
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         am.cancel(pi);
-
-        if (updateFrequency != Constants.UPDATE_FREQ_NONE) {
-            am.setRepeating(AlarmManager.RTC_WAKEUP, lastCheck + updateFrequency, updateFrequency, pi);
-        }
     }
 
     public static Notification createDownloadNotificationChannel(Context context) {
