@@ -30,7 +30,7 @@ public class Constants {
     // Automatic update checking
     public static final long UPDATE_DEFAULT_FREQ = AlarmManager.INTERVAL_HALF_DAY;
     // Build vars
-    public static final String CURRENT_DEVICE_NAME = "ro.product.device";
+    public static final String CURRENT_DEVICE_NAME = "org.pixelexperience.device";
     public static final String CURRENT_VERSION = "org.pixelexperience.version";
     public static final String OTA_URL = "https://download.pixelexperience.org/ota/%s/%s";
     public static final String OTA_VERSION_CODE = "org.pixelexperience.ota.version_code";
