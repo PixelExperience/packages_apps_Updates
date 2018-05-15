@@ -11,25 +11,19 @@
  */
 package org.pixelexperience.ota.utils;
 
-import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.webkit.URLUtil;
 
 import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.service.UpdateCheckService;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -179,21 +173,6 @@ public class Utils {
             }
         }
         return false;
-    }
-
-    public static void scheduleUpdateService(Context context, int updateFrequency) {
-        // Load the required settings from preferences
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        long lastCheck = prefs.getLong(Constants.LAST_UPDATE_CHECK_PREF, 0);
-
-        // Get the intent ready
-        Intent i = new Intent(context, UpdateCheckService.class);
-        i.setAction(UpdateCheckService.ACTION_CHECK);
-        PendingIntent pi = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        // Clear any old alarms and schedule the new alarm
-        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        am.cancel(pi);
     }
 
     public static Notification createDownloadNotificationChannel(Context context) {

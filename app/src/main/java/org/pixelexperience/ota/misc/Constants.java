@@ -10,6 +10,8 @@
  */
 package org.pixelexperience.ota.misc;
 
+import android.app.AlarmManager;
+
 public class Constants {
     // Download related
     public static final String UPDATES_FOLDER = "PixelExperience-Updates";
@@ -26,7 +28,7 @@ public class Constants {
     public static final String WIPE_DALVIK_PREF = "pref_wipe_dalvik";
     public static final String WIPE_DATA_PREF = "pref_wipe_data";
     // Automatic update checking
-    public static final int UPDATE_DEFAULT_FREQ = 86400; // Daily
+    public static final long UPDATE_DEFAULT_FREQ = AlarmManager.INTERVAL_HALF_DAY;
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "ro.product.device";
     public static final String CURRENT_VERSION = "org.pixelexperience.version";
