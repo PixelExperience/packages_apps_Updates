@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Iɣewwaṛen</string>
   <string name="download_folder_title">Sider akaram</string>
-  <string name="update_check_title">Anadi n ileqman s uwalan</string>
-  <string name="check_manual">Ssens</string>
-  <string name="check_daily">Yal-ass</string>
-  <string name="check_weekly">Yal-dduṛt</string>
   <string name="unknown">Ur ittwasen ara</string>
   <string name="mobile_data_warning_title">Alɣu n isefka izirazen</string>
   <string name="mobile_data_warning_summary">Sken alɣu mara yilli umseqdec yettaɛraḍ asideg n usider s isefka izirazen</string>
@@ -39,6 +35,7 @@
   <string name="website_info_title">Asmel Web</string>
   <string name="website_info_summary">Rzut ar usmel web nneɣ</string>
   <string name="news_info_title">Amaynut</string>
+  <string name="news_info_summary">Qim deg isallen n ileqman d imaynuten nniḍen</string>
   <string name="forum_info_title">Anmager</string>
   <string name="forum_info_summary">Ẓar iznan deg anmagar</string>
   <string name="addons_title">Ssiɣzef </string>
@@ -59,6 +56,9 @@
   <string name="notif_download_success_title">Lqem ittwasidred akken iwata</string>
   <string name="notif_download_success_summary">Senned akken ad tesbeddeḍ</string>
   <string name="notif_download_failure_title">Icceḍ usider n lqem</string>
+  <string name="error_download_in_progress">Yella akka tura lqem i teddu</string>
+  <string name="error_file_ready_to_install">Yella lqem i wesbedded </string>
+  <string name="storage_permission_error">Ttxilk fked turagt n uḥraz ay ddun</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Kkes afaylu</string>
   <string name="confirm_delete_dialog_message">Kkes afaylu n lqem ittwafernen?</string>
@@ -72,15 +72,21 @@
   <string name="menu_delete_all">Kkes lqem</string>
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">Alɣu</string>
+  <string name="update_on_mobile_data_message">Aql ak-id ad sidreḍ yiwen n lqem s useqdec n isefka izirazen ad waṭas n isefka ara yettwasqedcen.tebɣiḍ attkemmleḍ?</string>
   <string name="checkbox_mobile_data_warning">Ur d-skan ara tikelt nniḍen</string>
   <!-- Install -->
   <string name="reboot_title">Asebded n lqem</string>
+  <string name="reboot_message">Yibenk inek ad yeker s wudem awurman s waskar uḥelli akken ad isbded ileqman.\n\n afaylu yagi ad yettwasebded:\n<xliff:g id="filepath">%s</xliff:g>\n\nTebɣiḍ attkemmleḍ?</string>
   <string name="reboot_failed_title">Tuccḍa</string>
+  <string name="reboot_failed_message">D awezɣi asenker,ttxilek senker s ufus mara yettwaḥelli u sbded-it s:\n\n<xliff:g id="filepath"><xliff:g id="filepath"></string>
+  <string name="delete_after_install_title">Kes afaylu zip mara yettwasbded</string>
   <string name="advanced_options">Talqayt</string>
   <string name="save_advanced_options">Aḥraz </string>
   <string name="wipe_cache">Sfeḍ tuffirt</string>
   <string name="wipe_dalvik_cache">Sfeḍ tuffirt Dalvik</string>
   <string name="wipe_data">Sfeḍ isefka</string>
+  <string name="wipe_data_dialog_confirmation_title">Awennez</string>
+  <string name="wipe_data_dialog_confirmation_message">Aq lak-id tferneḍ aɣewwaṛ \'sfeḍ isefka\' , ayagi ad yekkes meṛṛa isefka n yibenk,tebɣiḍ attkemmleḍ?</string>
   <!-- Changelog -->
   <string name="changelog_title">Aɣmis n ubeddel</string>
 </resources>

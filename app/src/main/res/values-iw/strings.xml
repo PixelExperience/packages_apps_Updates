@@ -5,6 +5,7 @@
   <string name="app_name">עדכוני מערכת</string>
   <!-- Update checking -->
   <string name="ota_not_supported">גרסה זה לא תומכת בעדכוני מערכת דרך האוויר.</string>
+  <string name="last_updated_at">עודכן לאחרונה ב <xliff:g id="Time">%s</xliff:g></string>
   <string name="type_downloaded">ירד</string>
   <string name="type_downloading">מוריד…</string>
   <string name="type_completing">מסיים…</string>
@@ -22,9 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">הגדרות</string>
   <string name="download_folder_title">תקיית הורדות</string>
-  <string name="check_manual">מושבת</string>
-  <string name="check_daily">יומיומי</string>
-  <string name="check_weekly">שבועי</string>
   <string name="unknown">לא ידוע</string>
   <string name="mobile_data_warning_title">אזהרת אינטרנט סלולרי</string>
   <string name="mobile_data_warning_summary">הצג אזהרה כאשר המשתמש מנסה להוריד עדכון באמצעות נתונים ניידים</string>
@@ -55,9 +53,41 @@
   <string name="unable_to_stop_download">אין אפשרות לעצור את ההורדה</string>
   <string name="unable_to_download_file">הורדת קובץ העדכון נכשלה</string>
   <string name="download_not_found">ההורדה לא נמצאה</string>
+  <string name="notif_download_success_title">העדכון הורד בהצלחה</string>
+  <string name="notif_download_success_summary">לחץ להתקנה</string>
+  <string name="notif_download_failure_title">הורדת העדכון נכשלה</string>
+  <string name="error_download_in_progress">יש הורדה מתבצעת</string>
+  <string name="error_file_ready_to_install">יש עדכון המוכן להתקנה</string>
+  <string name="storage_permission_error">בבקשה הענק הרשאת אחסון כדי להמשיך
+</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">מחק קובץ</string>
+  <string name="confirm_delete_dialog_message">אתה עומד למחוק את הקובץ העדכון שנבחר, לחץ על \"כן\" להמשך.</string>
+  <string name="confirm_delete_all_dialog_message">אתה עומד למחוק את כל קובצי העדכון שהורדו, להמשיך?</string>
+  <string name="delete_update_success_message">עדכון <xliff:g id="filename">%s</xliff:g> נמחק</string>
+  <string name="delete_updates_failure_message">אירעה שגיאה בעת הניסיון למחוק את הקובץ המעודכן</string>
+  <string name="delete_updates_noFolder_message">תיקיית עדכונים לא נמצאה</string>
+  <string name="delete_updates_success_message">כל העדכונים שהורדו נמחקו</string>
   <!-- Menu and dialog strings -->
+  <string name="menu_refresh">רענן</string>
+  <string name="menu_delete_all">מחק עדכונים</string>
   <!-- Mobile data warning -->
+  <string name="update_on_mobile_data_title">אזהרה!</string>
+  <string name="update_on_mobile_data_message">אתה עומד להוריד חבילת עדכונים באמצעות האינטרנט הסלולרי שסביר להניח יגרום לבזבוז חלק גדול מחבילת הגלישה שלך. להמשיך?</string>
+  <string name="checkbox_mobile_data_warning">אל תציג שוב</string>
   <!-- Install -->
+  <string name="reboot_title">התקנת עדכון</string>
+  <string name="reboot_message">המכשיר שלך יתחיל מחדש עצמו במצב ריקברי להתקנה הבאות update.\n\nThe קובץ יותקן: \n<xliff:g id="filepath">%s</xliff:g>\n\nWould אתה רוצה להמשיך ?</string>
+  <string name="reboot_failed_title">שגיאה</string>
+  <string name="reboot_failed_message">נכשלה מחדש, אנא הפעל מחדש באופן ידני את שחזור ולהתקין את הבאים file:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="delete_after_install_title">הסרת קבצי Zip לאחר התקנה</string>
+  <string name="advanced_options">מתקדם</string>
+  <string name="save_advanced_options">שמור</string>
+  <string name="wipe_cache">ניקוי המטמון</string>
+  <string name="wipe_dalvik_cache">ניקוי מטמון ה- Dalvik</string>
+  <string name="wipe_data">מחיקת נתונים</string>
+  <string name="wipe_data_dialog_confirmation_title">איפוס נתוני יצרן</string>
+  <string name="wipe_data_dialog_confirmation_message">בחרת באפשרות \'מחק נתונים\', זה יעשה איפוס למכשיר, האם אתה רוצה להמשיך?</string>
   <!-- Changelog -->
+  <string name="changelog_title">רשימת שינויים</string>
 </resources>

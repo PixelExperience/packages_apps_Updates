@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Definições</string>
   <string name="download_folder_title">Pasta de Transferências</string>
-  <string name="update_check_title">Verificar actualizações automaticamente</string>
-  <string name="check_manual">Desactivado</string>
-  <string name="check_daily">Diariamente</string>
-  <string name="check_weekly">Semanalmente</string>
   <string name="unknown">Desconhecido</string>
   <string name="mobile_data_warning_title">Aviso de dados móveis</string>
   <string name="mobile_data_warning_summary">Mostar um aviso quando o utilizador tenta descarregar uma atualização através dos dados móveis</string>
@@ -44,7 +40,11 @@
   <string name="forum_info_summary">Ver publicações no Fórum</string>
   <string name="addons_title">Extras</string>
   <string name="addons_summary">Arquivos úteis</string>
+  <string name="addons_error">Falha ao carregar a lista de complementos</string>
   <!-- MD5 -->
+  <string name="checking_md5">A verificar a integridade do arquivo…</string>
+  <string name="md5_failed_dialog_title">Integridade do arquivo</string>
+  <string name="md5_failed_dialog_message">Verificação falhada, gostaria de prosseguir?</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">Cancelar transferência</string>
   <string name="confirm_download_cancel_dialog_message">Deseja cancelar a transferência atual ?</string>
@@ -58,6 +58,7 @@
   <string name="notif_download_failure_title">Não foi possível transferir o ficheiro de atualização</string>
   <string name="error_download_in_progress">Existe uma transferência em progresso</string>
   <string name="error_file_ready_to_install">Existe uma atualização pronta a ser instalada</string>
+  <string name="storage_permission_error">Por favor, conceda a permissão de armazenamento para continuar</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
   <string name="confirm_delete_dialog_message">Deseja eliminar o ficheiro de atualizações selecionado?</string>
@@ -71,16 +72,21 @@
   <string name="menu_delete_all">Eliminar as actualizações</string>
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">Alerta</string>
+  <string name="update_on_mobile_data_message">Você está prestes a fazer o download de um pacote de atualização usando dados móveis, o que provavelmente causará alto uso de dados. Gostaria de continuar?</string>
   <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
   <!-- Install -->
   <string name="reboot_title">Instalar a atualização</string>
   <string name="reboot_message">O seu dispositivo irá reiniciar-se no modo de recuperação para instalar a atualização.\n\nO seguinte arquivo será instalado: \n <xliff:g id="filepath">%s </xliff:g> \n\nGostaria de prosseguir?</string>
   <string name="reboot_failed_title">Erro</string>
+  <string name="reboot_failed_message">Falha ao reiniciar, por favor, reinicie manualmente para a recuperação e instale o seguinte arquivo:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="delete_after_install_title">Exclua o arquivo zip depois de instalar</string>
+  <string name="advanced_options">Avançado</string>
   <string name="save_advanced_options">Guardar</string>
   <string name="wipe_cache">Limpar a cache</string>
   <string name="wipe_dalvik_cache">Limpar Cache Dalvik/ART</string>
   <string name="wipe_data">Apagar dados</string>
   <string name="wipe_data_dialog_confirmation_title">Reposição de fábrica</string>
+  <string name="wipe_data_dialog_confirmation_message">Você selecionou a opção \"limpar dados\". Isso fará uma reposição de fábrica no seu dispositivo. Deseja continuar?</string>
   <!-- Changelog -->
   <string name="changelog_title">Lista de alterações</string>
 </resources>

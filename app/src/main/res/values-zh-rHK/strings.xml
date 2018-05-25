@@ -5,10 +5,10 @@
   <string name="app_name">系統更新</string>
   <!-- Update checking -->
   <string name="ota_not_supported">此版本不支援 OTA 更新。</string>
-  <string name="last_updated_at">(最後更新於 <xliff:g id="time">%s </xliff:g>)</string>
+  <string name="last_updated_at">(上次更新時間為 <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">已下載</string>
   <string name="type_downloading">下載中…</string>
-  <string name="type_completing">完成中</string>
+  <string name="type_completing">完成中...</string>
   <string name="download_button">下載</string>
   <string name="install_button">安裝</string>
   <string name="updates_category_title">可用的更新</string>
@@ -16,17 +16,13 @@
   <string name="update_found_notification">有可用的更新</string>
   <string name="update_found_notification_desc">輕觸即可下載</string>
   <string name="no_updates_available">沒有可用的更新</string>
-  <string name="no_updates_available_pref_title">沒有可用的更新。使用 \"刷新\" 按鈕檢查新的更新。</string>
+  <string name="no_updates_available_pref_title">沒有可用的更新。使用 \"重新整理\" 按鈕檢查更新。</string>
   <string name="update_check_failed">更新檢查失敗。請檢查您的網路連線並稍後重試。</string>
   <string name="data_connection_required">需要網路連線。</string>
-  <string name="changelog_button">檢視變更</string>
+  <string name="changelog_button">檢視版本改動</string>
   <!-- Settings section -->
   <string name="settings_category_title">設定</string>
   <string name="download_folder_title">下載資料夾</string>
-  <string name="update_check_title">定期檢查更新</string>
-  <string name="check_manual">已停用</string>
-  <string name="check_daily">每日</string>
-  <string name="check_weekly">每週</string>
   <string name="unknown">未知</string>
   <string name="mobile_data_warning_title">行動數據警告</string>
   <string name="mobile_data_warning_summary">當使用者嘗試通過行動數據下載更新時顯示警告</string>
@@ -41,7 +37,7 @@
   <string name="news_info_title">新聞</string>
   <string name="news_info_summary">隨時瞭解最新資訊</string>
   <string name="forum_info_title">論壇</string>
-  <string name="forum_info_summary">檢視討論區文章</string>
+  <string name="forum_info_summary">查看論壇文章</string>
   <string name="addons_title">附加元件</string>
   <string name="addons_summary">有用的檔案</string>
   <string name="addons_error">載入附加元件列表失敗</string>
@@ -51,17 +47,17 @@
   <string name="md5_failed_dialog_message">驗證失敗, 您要繼續嗎？</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">取消下載</string>
-  <string name="confirm_download_cancel_dialog_message">取消目前下載?</string>
+  <string name="confirm_download_cancel_dialog_message">取消目前的下載？</string>
   <string name="download_cancelled">下載已取消</string>
   <string name="download_already_running">已有一個正在執行的下載</string>
   <string name="unable_to_stop_download">無法停止下載</string>
   <string name="unable_to_download_file">無法下載更新檔案</string>
   <string name="download_not_found">找不到下載項目</string>
   <string name="notif_download_success_title">成功下載更新</string>
-  <string name="notif_download_success_summary">點擊來安裝</string>
+  <string name="notif_download_success_summary">點擊以安裝</string>
   <string name="notif_download_failure_title">下載更新失敗</string>
-  <string name="error_download_in_progress">目前仍有下載進行中</string>
-  <string name="error_file_ready_to_install">有一個更新已可供安裝</string>
+  <string name="error_download_in_progress">目前已有下載進行中</string>
+  <string name="error_file_ready_to_install">有一個更新可供安裝</string>
   <string name="storage_permission_error">請授予儲存權限以繼續</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">刪除檔案</string>
@@ -76,7 +72,7 @@
   <string name="menu_delete_all">刪除更新</string>
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">警告</string>
-  <string name="update_on_mobile_data_message">下載的更新檔案有可能會使用較高的行動數據，您要繼續嗎？</string>
+  <string name="update_on_mobile_data_message">下載的更新檔案有可能會使用較多的行動數據，您要繼續嗎？</string>
   <string name="checkbox_mobile_data_warning">不再顯示</string>
   <!-- Install -->
   <string name="reboot_title">安裝更新</string>
@@ -84,7 +80,7 @@
   <string name="reboot_failed_title">錯誤</string>
   <string name="reboot_failed_message">重新啟動失敗, 請手動重啟至 Recovery 模式並安裝以下檔案:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">安裝完成後刪除ZIP檔</string>
-  <string name="advanced_options">進階</string>
+  <string name="advanced_options">進階選項</string>
   <string name="save_advanced_options">儲存</string>
   <string name="wipe_cache">清除快取</string>
   <string name="wipe_dalvik_cache">清除 Dalvik/ART 快取</string>
