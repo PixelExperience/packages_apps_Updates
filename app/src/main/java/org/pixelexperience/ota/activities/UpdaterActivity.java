@@ -491,18 +491,6 @@ public class UpdaterActivity extends PreferenceActivity implements
         mProgressDialog.show();
     }
 
-    private String mapCheckValue(Integer value) {
-        Resources resources = getResources();
-        String[] checkNames = resources.getStringArray(R.array.update_check_entries);
-        String[] checkValues = resources.getStringArray(R.array.update_check_values);
-        for (int i = 0; i < checkValues.length; i++) {
-            if (Integer.decode(checkValues[i]).equals(value)) {
-                return checkNames[i];
-            }
-        }
-        return getString(R.string.unknown);
-    }
-
     private void resetDownloadState() {
         mDownloadId = -1;
         mFileName = null;
