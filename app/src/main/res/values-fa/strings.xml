@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">تنظیمات</string>
   <string name="download_folder_title">پوشه بارگیری</string>
-  <string name="update_check_title">بررسی برای به‌روزرسانی‌ها به صورت دوره‌ای</string>
-  <string name="check_manual">غیرفعال</string>
-  <string name="check_daily">روزانه</string>
-  <string name="check_weekly">هفتگی</string>
   <string name="unknown">ناشناخته</string>
   <string name="mobile_data_warning_title">هشدار مصرف داده سیم‌کارت</string>
   <string name="mobile_data_warning_summary">هنگامی که کاربر سعی در بارگیری بسته به‌روزرسانی از طریق داده سیم‌کارت را دارد، هشدار بده</string>

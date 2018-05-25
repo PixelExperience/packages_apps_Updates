@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">समायोजन</string>
   <string name="download_folder_title">डाउनलोड फ़ोल्डर</string>
-  <string name="update_check_title">अद्यतनीकरण के लिए समय-समय पर जांचें5</string>
-  <string name="check_manual">अशक्त कर देना</string>
-  <string name="check_daily">प्रतिदिन</string>
-  <string name="check_weekly">साप्ताहिक</string>
   <string name="unknown">अज्ञात</string>
   <string name="mobile_data_warning_title">मोबाइल डेटा चेतावनी</string>
   <string name="mobile_data_warning_summary">उपयोगकर्ता द्वारा मोबाइल डेटा के माध्यम से अपडेट डाउनलोड करने का प्रयास करते समय एक चेतावनी दिखाएं</string>

@@ -13,7 +13,7 @@
   <string name="install_button">Zainstaluj</string>
   <string name="updates_category_title">Dostępne aktualizacje</string>
   <string name="checking_for_updates">Sprawdzanie aktualizacji</string>
-  <string name="update_found_notification">Nowe uaktualnienia są dostepne</string>
+  <string name="update_found_notification">Dostępna jest nowa aktualizacja</string>
   <string name="update_found_notification_desc">Kliknij aby pobrać</string>
   <string name="no_updates_available">Brak dostępnych aktualizacji</string>
   <string name="no_updates_available_pref_title">Brak dostępnych aktualizacji. Odśwież aby sprawdzić czy są dostępne nowe uaktualnienia.</string>
@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Ustawienia</string>
   <string name="download_folder_title">Folder pobieranych plików</string>
-  <string name="update_check_title">Automatycznie sprawdzaj aktualizacje</string>
-  <string name="check_manual">Wyłączone</string>
-  <string name="check_daily">Raz dziennie</string>
-  <string name="check_weekly">Co tydzień</string>
   <string name="unknown">Nieznany</string>
   <string name="mobile_data_warning_title">Ostrzeżenie o danych komórkowych</string>
   <string name="mobile_data_warning_summary">Pokaż powiadomienie gdy użytkownik będzie próbował pobrać uaktualnienie przez dane komórkowe</string>

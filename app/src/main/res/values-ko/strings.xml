@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">설정</string>
   <string name="download_folder_title">다운로드 폴더</string>
-  <string name="update_check_title">주기적으로 업데이트 확인</string>
-  <string name="check_manual">사용 안 함</string>
-  <string name="check_daily">매일</string>
-  <string name="check_weekly">매주</string>
   <string name="unknown">알 수 없음</string>
   <string name="mobile_data_warning_title">모바일 데이터 경고</string>
   <string name="mobile_data_warning_summary">업데이트를 모바일 데이터로 받기를 시도할 경우, 경고를 보여주기</string>
