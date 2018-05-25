@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Cài đặt</string>
   <string name="download_folder_title">Thư mục tải xuống</string>
-  <string name="update_check_title">Tự động kiểm tra phiên bản mới</string>
-  <string name="check_manual">Tắt</string>
-  <string name="check_daily">Hàng ngày</string>
-  <string name="check_weekly">Hàng tuần</string>
   <string name="unknown">Không rõ</string>
   <string name="mobile_data_warning_title">Cảnh báo dữ liệu di động</string>
   <string name="mobile_data_warning_summary">Hiển thị cảnh báo khi người dùng cố tải xuống bản cập nhật thông qua dữ liệu di động</string>

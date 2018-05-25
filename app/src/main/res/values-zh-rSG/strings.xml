@@ -23,19 +23,15 @@
   <!-- Settings section -->
   <string name="settings_category_title">設定</string>
   <string name="download_folder_title">下載資料夾</string>
-  <string name="update_check_title">定期檢查更新</string>
-  <string name="check_manual">已停用</string>
-  <string name="check_daily">每日</string>
-  <string name="check_weekly">每週</string>
   <string name="unknown">未知</string>
   <string name="mobile_data_warning_title">行動數據警告</string>
   <string name="mobile_data_warning_summary">當使用者嘗試通過行動數據下載更新時顯示警告</string>
   <!-- Info section -->
-  <string name="extras_category_title">附加功能</string>
+  <string name="extras_category_title">附加選項</string>
   <string name="error_open_url">在瀏覽器中打開 URL 失敗</string>
-  <string name="developer_info_title">維護者</string>
-  <string name="donate_info_title">捐贈</string>
-  <string name="donate_info_summary">支持開發作業</string>
+  <string name="developer_info_title">維護人員</string>
+  <string name="donate_info_title">贊助</string>
+  <string name="donate_info_summary">支援開發者</string>
   <string name="website_info_title">網站</string>
   <string name="website_info_summary">瀏覽我們的網站</string>
   <string name="news_info_title">新聞</string>
@@ -66,13 +62,13 @@
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">刪除檔案</string>
   <string name="confirm_delete_dialog_message">刪除已選取的更新檔案？</string>
-  <string name="confirm_delete_all_dialog_message">刪除所有已下載的更新檔案？</string>
+  <string name="confirm_delete_all_dialog_message">是否刪除所有已下載的更新檔案？</string>
   <string name="delete_update_success_message">更新「<xliff:g id="filename">%s</xliff:g>」已刪除</string>
   <string name="delete_updates_failure_message">刪除更新檔案時出現錯誤</string>
   <string name="delete_updates_noFolder_message">找不到更新資料夾</string>
   <string name="delete_updates_success_message">已刪除所有下載的更新</string>
   <!-- Menu and dialog strings -->
-  <string name="menu_refresh">重新整理</string>
+  <string name="menu_refresh">刷新</string>
   <string name="menu_delete_all">刪除更新</string>
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">警告</string>

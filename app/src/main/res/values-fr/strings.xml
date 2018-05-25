@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Paramètres</string>
   <string name="download_folder_title">Dossier de téléchargement</string>
-  <string name="update_check_title">Rechercher des mises à jour périodiquement</string>
-  <string name="check_manual">Désactivé</string>
-  <string name="check_daily">Quotidiennement</string>
-  <string name="check_weekly">Hebdomadairement</string>
   <string name="unknown">Inconnu</string>
   <string name="mobile_data_warning_title">Avertissement d\'usage des données mobiles</string>
   <string name="mobile_data_warning_summary">Afficher un avertissement lorsque l’utilisateur tente de télécharger une mise à jour avec les données mobiles</string>
@@ -57,9 +53,40 @@
   <string name="unable_to_stop_download">Impossible d’arrêter le téléchargement</string>
   <string name="unable_to_download_file">Impossible de télécharger le fichier de mise à jour</string>
   <string name="download_not_found">Téléchargement introuvable</string>
+  <string name="notif_download_success_title">Téléchargement de la mise à jour réussi</string>
+  <string name="notif_download_success_summary">Appuyez pour installer</string>
+  <string name="notif_download_failure_title">Le téléchargement de la mise à jour a échoué</string>
+  <string name="error_download_in_progress">Il y a un téléchargement en cours</string>
+  <string name="error_file_ready_to_install">Il y a une mise à jour prête à être installées</string>
+  <string name="storage_permission_error">Veuillez accorder l’autorisation de stockage de continuer</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Supprimer fichier</string>
+  <string name="confirm_delete_dialog_message">Supprimer le fichier de mise à jour sélectionné\u00A0?</string>
+  <string name="confirm_delete_all_dialog_message">Supprimer tous les fichiers de mise à jour\u00A0?</string>
+  <string name="delete_update_success_message">Mise à jour <xliff:g id="filename">%s</xliff:g> supprimée</string>
+  <string name="delete_updates_failure_message">Une erreur est survenue lors de la suppression des fichiers de mise à jour</string>
+  <string name="delete_updates_noFolder_message">Dossier de mise à jour introuvable</string>
+  <string name="delete_updates_success_message">Tous les fichiers de mises à jour téléchargés ont été supprimés</string>
   <!-- Menu and dialog strings -->
+  <string name="menu_refresh">Actualiser</string>
+  <string name="menu_delete_all">Supprimer la mise à jour</string>
   <!-- Mobile data warning -->
+  <string name="update_on_mobile_data_title">Attention</string>
+  <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
+  <string name="checkbox_mobile_data_warning">Ne plus afficher ce message</string>
   <!-- Install -->
+  <string name="reboot_title">Installer la mise à jour</string>
+  <string name="reboot_message">Votre téléphone va redémarrer automatiquement en mode récupération pour installer les mises à jour.\n\nLe fichier suivant sera installé:\n<xliff:g id="filepath">%s</xliff:g>\n\nVoulez-vous continuer ?</string>
+  <string name="reboot_failed_title">Erreur</string>
+  <string name="reboot_failed_message">Impossible de redémarrer, s’il vous plaît redémarrer manuellement à la récupération et installer le suivant<xliff:g id="filepath">file:\n\n%s</xliff:g></string>
+  <string name="delete_after_install_title">Supprimer le fichier zip après installation</string>
+  <string name="advanced_options">Paramètres avancés</string>
+  <string name="save_advanced_options">Sauvegarder</string>
+  <string name="wipe_cache">Effacer le cache</string>
+  <string name="wipe_dalvik_cache">Effacer le cache Dalvik</string>
+  <string name="wipe_data">Effacer les données</string>
+  <string name="wipe_data_dialog_confirmation_title">Réinisialisation</string>
+  <string name="wipe_data_dialog_confirmation_message">Vous avez sélectionné l\'option \'effacer les données\' , ceci va supprimer toute les données du téléphone, voulez-vous continuer ?</string>
   <!-- Changelog -->
+  <string name="changelog_title">Journal des modifications</string>
 </resources>

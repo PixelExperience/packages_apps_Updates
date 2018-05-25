@@ -4,11 +4,11 @@
   <!-- App name -->
   <string name="app_name">系统更新</string>
   <!-- Update checking -->
-  <string name="ota_not_supported">该版本暂不支持 OTA 更新</string>
+  <string name="ota_not_supported">该版本暂不支持 OTA 更新。</string>
   <string name="last_updated_at">(最后一次更新 <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">下载完成</string>
   <string name="type_downloading">正在下载……</string>
-  <string name="type_completing">即将完成…</string>
+  <string name="type_completing">即将完成……</string>
   <string name="download_button">下载</string>
   <string name="install_button">安装</string>
   <string name="updates_category_title">可用更新</string>
@@ -16,17 +16,13 @@
   <string name="update_found_notification">有可用更新</string>
   <string name="update_found_notification_desc">点击下载</string>
   <string name="no_updates_available">没有可用的更新</string>
-  <string name="no_updates_available_pref_title">没有可用更新，点击刷新重新检查</string>
+  <string name="no_updates_available_pref_title">没有可用更新，点击刷新重新检查。</string>
   <string name="update_check_failed">检查更新失败，请检查网络后重试。</string>
-  <string name="data_connection_required">请检查您的网络</string>
+  <string name="data_connection_required">请检查您的网络。</string>
   <string name="changelog_button">查看更改</string>
   <!-- Settings section -->
   <string name="settings_category_title">设置</string>
   <string name="download_folder_title">更新文件下载路径</string>
-  <string name="update_check_title">自动检查更新</string>
-  <string name="check_manual">禁用</string>
-  <string name="check_daily">每天一次</string>
-  <string name="check_weekly">每周一次</string>
   <string name="unknown">未知</string>
   <string name="mobile_data_warning_title">移动数据警告</string>
   <string name="mobile_data_warning_summary">通过移动数据下载更新时显示警告</string>
@@ -43,12 +39,12 @@
   <string name="forum_info_title">论坛</string>
   <string name="forum_info_summary">查看论坛帖子</string>
   <string name="addons_title">插件</string>
-  <string name="addons_summary">Pixel 2017壁纸    Magisk框架     AR贴纸</string>
+  <string name="addons_summary">Pixel 2017 壁纸　Magisk 框架　AR 贴纸</string>
   <string name="addons_error">加载插件列表失败</string>
   <!-- MD5 -->
-  <string name="checking_md5">正在校验文件...</string>
+  <string name="checking_md5">正在校验文件……</string>
   <string name="md5_failed_dialog_title">文件校验失败</string>
-  <string name="md5_failed_dialog_message">文件验证失败, 您还要继续吗？</string>
+  <string name="md5_failed_dialog_message">文件验证失败，您还要继续吗？</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">取消下载</string>
   <string name="confirm_download_cancel_dialog_message">是否取消当前下载？</string>
@@ -80,17 +76,17 @@
   <string name="checkbox_mobile_data_warning">不再询问</string>
   <!-- Install -->
   <string name="reboot_title">安装更新</string>
-  <string name="reboot_message">您的设备将重启到恢复模式(Recovery)下安装更新文件将: <xliff:g id="filepath">%s </xliff:g> \n 是否继续？</string>
+  <string name="reboot_message">您的设备将重启到恢复模式（Recovery）下安装更新文件将: <xliff:g id="filepath">%s </xliff:g> \n 是否继续？</string>
   <string name="reboot_failed_title">错误</string>
-  <string name="reboot_failed_message">无法重启到恢复模式(Recovery), 请手动重启到恢复模式并安装该文件:\n <xliff:g id="filepath">%s </xliff:g></string>
+  <string name="reboot_failed_message">无法重启到恢复模式（Recovery），请手动重启到恢复模式并安装该文件:\n <xliff:g id="filepath">%s </xliff:g></string>
   <string name="delete_after_install_title">安装后删除文件</string>
   <string name="advanced_options">高级选项</string>
   <string name="save_advanced_options">保存</string>
   <string name="wipe_cache">清除缓存</string>
-  <string name="wipe_dalvik_cache">清除 Dalvik缓存 (Dalvik/ART分区)</string>
-  <string name="wipe_data">清除数据 (data分区)</string>
+  <string name="wipe_dalvik_cache">清除 Dalvik 缓存（Dalvik/ART 分区）</string>
+  <string name="wipe_data">清除数据（data 分区）</string>
   <string name="wipe_data_dialog_confirmation_title">恢复出厂设置</string>
-  <string name="wipe_data_dialog_confirmation_message">您选择了 \"清除数据\" 选项, 这将删除您设备上的所有文件(相当于恢复出厂设置), 您确定继续吗？</string>
+  <string name="wipe_data_dialog_confirmation_message">您选择了“清除数据”选项，这将删除您设备上的所有文件（相当于恢复出厂设置），您确定继续吗？</string>
   <!-- Changelog -->
   <string name="changelog_title">更新日志​​​​​</string>
 </resources>

@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Instellingen</string>
   <string name="download_folder_title">Downloadmap</string>
-  <string name="update_check_title">Controleer automatisch op updates</string>
-  <string name="check_manual">Uitgeschakeld</string>
-  <string name="check_daily">Dagelijks</string>
-  <string name="check_weekly">Wekelijks</string>
   <string name="unknown">Onbekend</string>
   <string name="mobile_data_warning_title">Waarschuwing mobiele gegevens</string>
   <string name="mobile_data_warning_summary">Toon een waarschuwing wanneer gebruiker update download via mobiele data</string>
