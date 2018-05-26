@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Nastavenia</string>
   <string name="download_folder_title">Priečinok pre sťahovanie</string>
-  <string name="update_check_title">Pravidelná kontrola aktualizícií</string>
-  <string name="check_manual">Vypnuté</string>
-  <string name="check_daily">Denne</string>
-  <string name="check_weekly">Týždenne</string>
   <string name="unknown">Neznáme</string>
   <string name="mobile_data_warning_title">Upozornenie mobilných dát</string>
   <string name="mobile_data_warning_summary">Upozorniť keď sa užívateľ pokúsi stiahnuť aktualizácie cez mobilné dáta</string>

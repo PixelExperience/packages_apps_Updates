@@ -23,10 +23,6 @@
   <!-- Settings section -->
   <string name="settings_category_title">Налаштування</string>
   <string name="download_folder_title">Тека завантажень</string>
-  <string name="update_check_title">Періодична перевірка поновлень</string>
-  <string name="check_manual">Вимкнено</string>
-  <string name="check_daily">Щоденно</string>
-  <string name="check_weekly">Щотижня</string>
   <string name="unknown">Невідомо</string>
   <string name="mobile_data_warning_title">Попередження про мобільні дані</string>
   <string name="mobile_data_warning_summary">Показувати попередження, при спробі завантажити оновлення через мобільні дані</string>

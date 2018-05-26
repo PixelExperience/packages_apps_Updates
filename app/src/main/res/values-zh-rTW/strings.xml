@@ -16,17 +16,13 @@
   <string name="update_found_notification">有可用的更新</string>
   <string name="update_found_notification_desc">輕觸即可下載</string>
   <string name="no_updates_available">沒有可用的更新</string>
-  <string name="no_updates_available_pref_title">沒有可用的更新。使用 \"刷新\" 按鈕檢查新的更新。</string>
+  <string name="no_updates_available_pref_title">沒有可用的更新。使用 \"重新整理\" 按鈕檢查新的更新。</string>
   <string name="update_check_failed">更新檢查失敗。請檢查您的網路連線並稍後重試。</string>
   <string name="data_connection_required">需要網路連線。</string>
   <string name="changelog_button">檢視變更</string>
   <!-- Settings section -->
   <string name="settings_category_title">設定</string>
   <string name="download_folder_title">下載資料夾</string>
-  <string name="update_check_title">定期檢查更新</string>
-  <string name="check_manual">已停用</string>
-  <string name="check_daily">每日</string>
-  <string name="check_weekly">每週</string>
   <string name="unknown">未知</string>
   <string name="mobile_data_warning_title">行動數據警告</string>
   <string name="mobile_data_warning_summary">當使用者嘗試通過行動數據下載更新時顯示警告</string>
