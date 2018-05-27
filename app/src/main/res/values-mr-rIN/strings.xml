@@ -3,8 +3,26 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App name -->
   <!-- Update checking -->
+  <string name="type_downloaded">डाऊनलोड झाले</string>
+  <string name="type_downloading">डाऊनलोड चालु आहे…</string>
+  <string name="download_button">डाऊनलोड</string>
+  <string name="install_button">इन्स्टॉल</string>
+  <string name="update_found_notification_desc">डाउनलोड सुरू करण्यासाठी टॅप करा</string>
+  <string name="no_updates_available">नवीन अपडेट उपलब्ध आहेत</string>
+  <string name="data_connection_required">डेटा कनेक्शन आवश्यक आहे.</string>
+  <string name="changelog_button">बदल पहा</string>
   <!-- Settings section -->
+  <string name="settings_category_title">सेटिंग्ज</string>
+  <string name="download_folder_title">डाउनलोड फोल्डर</string>
+  <string name="unknown">अज्ञात</string>
   <!-- Info section -->
+  <string name="extras_category_title">अतिरिक्त</string>
+  <string name="developer_info_title">सांभाळणारा</string>
+  <string name="donate_info_title">दान करा</string>
+  <string name="donate_info_summary">समर्थन करा</string>
+  <string name="website_info_title">वेबसाइट</string>
+  <string name="website_info_summary">वेबसाइटला भेट द्या</string>
+  <string name="news_info_title">बातम्या</string>
   <!-- MD5 -->
   <!-- Downloads -->
   <!-- Deleting -->
