@@ -87,6 +87,8 @@
   <string name="wipe_data">Διαγραφή δεδομένων</string>
   <string name="wipe_data_dialog_confirmation_title">Επαναφορά εργοστασιακών ρυθμίσεων</string>
   <string name="wipe_data_dialog_confirmation_message">Έχετε επιλέξει «εκκαθάριση δεδομένων», αυτό θα κάνει επαναφορά εργοστασιακών ρυθμίσεων στη συσκευή σας, θέλετε να συνεχίσετε;</string>
+  <string name="update_manual_ab">Για να προχωρήσετε, κάντε εγκατάσταση την έκδοση χειροκίνητα μέσω TWRP. Αυτή η συσκευή δεν υποστηρίζει την αυτόματη εγκατάσταση έκδοσης λόγω των Α/Β χώρων.</string>
   <!-- Changelog -->
   <string name="changelog_title">Αρχείο καταγραφής αλλαγών</string>
+  <string name="changelog_loading">Φόρτωση…</string>
 </resources>

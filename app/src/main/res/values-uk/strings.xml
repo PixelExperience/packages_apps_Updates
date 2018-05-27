@@ -87,6 +87,9 @@
   <string name="wipe_data">Стерти дані</string>
   <string name="wipe_data_dialog_confirmation_title">Відновлення заводських налаштувань</string>
   <string name="wipe_data_dialog_confirmation_message">Ви обрали \"Стерти дані\", це видалить усі ваші дані на цьому пристрої. Бажаєте продовжити?</string>
+  <string name="update_manual_ab">Щоб продовжити, прошийте збірку вручну за допомогою TWRP. Цей пристрій не підтримує автоматичне прошивання збірки через розділи A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Перелік змін</string>
+  <string name="changelog_loading">Завантаження…
+</string>
 </resources>

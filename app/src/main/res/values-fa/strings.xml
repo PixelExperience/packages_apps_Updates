@@ -87,6 +87,8 @@
   <string name="wipe_data">پاک کردن داده‌ها</string>
   <string name="wipe_data_dialog_confirmation_title">بازگشت به تنظیمات کارخانه</string>
   <string name="wipe_data_dialog_confirmation_message">شما گزینه \'پاک کردن داده‌ها\' را انتخاب کردید، این کار دستگاه شما را به تنظیمات کارخانه بازگردانی می‌کند، آیا می‌خواهید ادامه دهید؟</string>
+  <string name="update_manual_ab">جهت ادامه، نسخه را بصورت دستی از طریق کاستوم ریکاوری TWRP نصب نمایید. این دستگاه قادر به نصب اتوماتیک نسخه از طریق فرمت پارتیشن‌های A/B نیست.</string>
   <!-- Changelog -->
   <string name="changelog_title">تغییرات</string>
+  <string name="changelog_loading">در حال بارگذاری…</string>
 </resources>
