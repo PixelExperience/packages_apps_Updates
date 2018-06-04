@@ -87,6 +87,8 @@
   <string name="wipe_data">Effacer les données</string>
   <string name="wipe_data_dialog_confirmation_title">Réinisialisation</string>
   <string name="wipe_data_dialog_confirmation_message">Vous avez sélectionné l\'option \'effacer les données\' , ceci va supprimer toute les données du téléphone, voulez-vous continuer ?</string>
+  <string name="update_manual_ab">Pour continuer, flasher la ROM manuellement avec TWRP. Cet appareil ne supporte pas l\'auto flash de la ROM à cause des partitions A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Journal des modifications</string>
+  <string name="changelog_loading">Chargement…</string>
 </resources>

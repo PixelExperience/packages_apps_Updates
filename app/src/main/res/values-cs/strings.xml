@@ -87,6 +87,8 @@
   <string name="wipe_data">Vymazat data</string>
   <string name="wipe_data_dialog_confirmation_title">Tovární reset</string>
   <string name="wipe_data_dialog_confirmation_message">Vybrali jste možnost \'vymazat data\', toto provede tovární reset zařízení. Chcete pokračovat?</string>
+  <string name="update_manual_ab">Chcete-li pokračovat, nainstalujte sestavení manuálně pomocí TWRP. Toto zařízení nepodporuje automatickou instalaci sestavení kvůli oddílům A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Seznam změn</string>
+  <string name="changelog_loading">Načítání…</string>
 </resources>

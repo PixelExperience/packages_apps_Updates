@@ -87,6 +87,8 @@
   <string name="wipe_data">Vymazať dáta</string>
   <string name="wipe_data_dialog_confirmation_title">Obnovenie továrenských nastavení</string>
   <string name="wipe_data_dialog_confirmation_message">Vybrali ste možnosť \'Vymazať dáta\', toto obnoví továrenské nastavenia, chcete pokračovať?</string>
+  <string name="update_manual_ab">Ak chcete pokračovať, nainštalujte zostavenie manuálne pomocou TWRP. Toto zariadenie nepodporuje automatickú inštaláciu zostavenia kvôli oddielom A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Zoznam zmien</string>
+  <string name="changelog_loading">Načítavanie...</string>
 </resources>

@@ -87,6 +87,8 @@
   <string name="wipe_data">清除資料</string>
   <string name="wipe_data_dialog_confirmation_title">恢復原廠設定</string>
   <string name="wipe_data_dialog_confirmation_message">你選擇了\"清除資料\"選項, 這將會重設你裝置上的資料, 你確定要繼續嗎?</string>
+  <string name="update_manual_ab">若要繼續，請使用 TWRP 刷入新的建構。這個裝置由於擁有 A/B 分區所以並不支援自動刷入建構的功能。</string>
   <!-- Changelog -->
   <string name="changelog_title">更新日誌</string>
+  <string name="changelog_loading">載入中...</string>
 </resources>

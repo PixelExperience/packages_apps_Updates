@@ -87,6 +87,7 @@
   <string name="wipe_data">डेटा मिटा दें</string>
   <string name="wipe_data_dialog_confirmation_title">नए यंत्र जैसी सेटिंग</string>
   <string name="wipe_data_dialog_confirmation_message">आपने \'डेटा मिटाएं\' विकल्प चुना है, यह आपके डिवाइस पर फ़ैक्टरी रीसेट करेगा, क्या आप जारी रखना चाहते हैं?</string>
+  <string name="update_manual_ab">जारी रखने के लिए, TWRP का उपयोग करके मैन्युअल रूप से बिल्ड फ्लैश करें। यह डिवाइस ए / बी विभाजन के कारण ऑटो बिल्ड फ्लैशिंग का समर्थन नहीं करता है।</string>
   <!-- Changelog -->
   <string name="changelog_title">बदलाव का</string>
 </resources>

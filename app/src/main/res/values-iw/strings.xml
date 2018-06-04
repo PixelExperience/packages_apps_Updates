@@ -88,6 +88,8 @@
   <string name="wipe_data">מחיקת נתונים</string>
   <string name="wipe_data_dialog_confirmation_title">איפוס נתוני יצרן</string>
   <string name="wipe_data_dialog_confirmation_message">בחרת באפשרות \'מחק נתונים\', זה יעשה איפוס למכשיר, האם אתה רוצה להמשיך?</string>
+  <string name="update_manual_ab">כדי להמשיך, צרוב את הגרסה ידנית בעזרת TWRP. מכשיר זה אינו תומך בצריבת גרסה ידנית בגלל מחיצות A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">רשימת שינויים</string>
+  <string name="changelog_loading">טוען...</string>
 </resources>

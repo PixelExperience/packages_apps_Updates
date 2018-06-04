@@ -87,6 +87,8 @@
   <string name="wipe_data">Ştergere date</string>
   <string name="wipe_data_dialog_confirmation_title">Resetare configurări din fabrică</string>
   <string name="wipe_data_dialog_confirmation_message">Ați selectat opțiunea \"Ştergere date\", aceasta va face o resetare din fabrică pe dispozitivul dvs., doriți să continuați?</string>
+  <string name="update_manual_ab">Pentru a continua, foloseste TWRP pentru a instala. Acest dispozitiv nu suporta instalare automata din cauza partitiilor de tip A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Istoric modificări</string>
+  <string name="changelog_loading">Se încarcă…</string>
 </resources>
