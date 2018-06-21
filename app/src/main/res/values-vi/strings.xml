@@ -87,6 +87,8 @@
   <string name="wipe_data">Xoá sạch dữ liệu</string>
   <string name="wipe_data_dialog_confirmation_title">Đặt lại dữ liệu gốc</string>
   <string name="wipe_data_dialog_confirmation_message">Bạn đã chọn tùy chọn \'xóa dữ liệu\', việc này sẽ thực hiện khôi phục cài đặt gốc trên thiết bị của bạn, bạn có muốn tiếp tục không?</string>
+  <string name="update_manual_ab">Để tiếp tục, hãy cài đặt bản dựng theo cách thủ công bằng cách sử dụng TWRP. Thiết bị này không hỗ trợ tự động cài đặt bản dựng do phân vùng A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Nhật kí cập nhật</string>
+  <string name="changelog_loading">Đang tải…</string>
 </resources>
