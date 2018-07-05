@@ -87,6 +87,8 @@
   <string name="wipe_data">Poista tiedot</string>
   <string name="wipe_data_dialog_confirmation_title">Tehdasasetusten palautus</string>
   <string name="wipe_data_dialog_confirmation_message">Valitsit \'poista tiedot\' valinnan; tämä palauttaa laitteeseesi tehdasasetukset. Haluatko jatkaa?</string>
+  <string name="update_manual_ab">Jatkaaksesi, päivitä flash manuaalisesti käyttäen TWRP. Tämä laite ei tue auto build flash ominaisuutta A/B partitioiden takia.</string>
   <!-- Changelog -->
   <string name="changelog_title">Muutosloki</string>
+  <string name="changelog_loading">Lataa…</string>
 </resources>

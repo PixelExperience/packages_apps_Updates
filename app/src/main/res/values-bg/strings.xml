@@ -89,4 +89,5 @@
   <string name="wipe_data_dialog_confirmation_message">Избра ли сте опцията \"изтриване на данни\", това ще възтанови фабричните настройки на вашето устройство, искате ли да продължите?</string>
   <!-- Changelog -->
   <string name="changelog_title">Списък на промените</string>
+  <string name="changelog_loading">Зареждане…</string>
 </resources>
