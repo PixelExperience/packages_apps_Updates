@@ -49,6 +49,10 @@ public class UpdaterService extends Service {
     public static final String EXTRA_DOWNLOAD_CONTROL = "extra_download_control";
     public static final String ACTION_INSTALL_UPDATE = "action_install_update";
     public static final String ACTION_INSTALL_STOP = "action_install_stop";
+
+    public static final String ACTION_INSTALL_SUSPEND = "action_install_suspend";
+    public static final String ACTION_INSTALL_RESUME = "action_install_resume";
+
     public static final int DOWNLOAD_RESUME = 0;
     public static final int DOWNLOAD_PAUSE = 1;
     private static final String TAG = "UpdaterService";
@@ -200,6 +204,20 @@ public class UpdaterService extends Service {
                 installer.reconnect();
                 installer.cancel();
             }
+        } else if (ACTION_INSTALL_SUSPEND.equals(intent.getAction())) {
+            if (ABUpdateInstaller.isInstallingUpdate(this)) {
+                ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this,
+                        mUpdaterController);
+                installer.reconnect();
+                installer.suspend();
+            }
+        } else if (ACTION_INSTALL_RESUME.equals(intent.getAction())) {
+            if (ABUpdateInstaller.isInstallingUpdateSuspended(this)) {
+                ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this,
+                        mUpdaterController);
+                installer.reconnect();
+                installer.resume();
+            }
         }
         return ABUpdateInstaller.isInstallingUpdate(this) ? START_STICKY : START_NOT_STICKY;
     }
@@ -346,6 +364,11 @@ public class UpdaterService extends Service {
                         getString(R.string.dialog_prepare_zip_message) :
                         getString(R.string.installing_update);
                 mNotificationStyle.bigText(text);
+                if (ABUpdateInstaller.isInstallingUpdate(this)) {
+                    mNotificationBuilder.addAction(android.R.drawable.ic_media_pause,
+                            getString(R.string.suspend_button),
+                            getSuspendInstallationPendingIntent());
+                }
                 mNotificationBuilder.setTicker(text);
                 mNotificationBuilder.setOngoing(true);
                 mNotificationBuilder.setAutoCancel(false);
@@ -355,6 +378,7 @@ public class UpdaterService extends Service {
             }
             case INSTALLED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
+                mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
                 mNotificationBuilder.setProgress(0, 0, false);
@@ -388,6 +412,25 @@ public class UpdaterService extends Service {
             }
             case INSTALLATION_CANCELLED: {
                 stopForeground(true);
+                tryStopSelf();
+                break;
+            }
+            case INSTALLATION_SUSPENDED: {
+                stopForeground(STOP_FOREGROUND_DETACH);
+                // In case we pause before the first progress update
+                mNotificationBuilder.setProgress(100, update.getProgress(), false);
+                mNotificationBuilder.mActions.clear();
+                String text = getString(R.string.installation_suspended_notification);
+                mNotificationStyle.bigText(text);
+                mNotificationBuilder.setStyle(mNotificationStyle);
+                mNotificationBuilder.setSmallIcon(R.drawable.ic_pause);
+                mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
+                        getString(R.string.resume_button),
+                        getResumeInstallationPendingIntent());
+                mNotificationBuilder.setTicker(text);
+                mNotificationBuilder.setOngoing(true);
+                mNotificationBuilder.setAutoCancel(false);
+                mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
                 tryStopSelf();
                 break;
             }
@@ -458,4 +501,17 @@ public class UpdaterService extends Service {
         }
     }
 
+    private PendingIntent getSuspendInstallationPendingIntent() {
+        final Intent intent = new Intent(this, UpdaterService.class);
+        intent.setAction(ACTION_INSTALL_SUSPEND);
+        return PendingIntent.getService(this, 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private PendingIntent getResumeInstallationPendingIntent() {
+        final Intent intent = new Intent(this, UpdaterService.class);
+        intent.setAction(ACTION_INSTALL_RESUME);
+        return PendingIntent.getService(this, 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+    }
 }
