@@ -76,9 +76,9 @@
   <string name="checkbox_mobile_data_warning">再び表示しない</string>
   <!-- Install -->
   <string name="reboot_title">アップデートをインストール</string>
-  <string name="reboot_message">お使いのデバイスはアップデートをインストールするためにリカバリーモードで再起動します。\n\n次のファイルがインストールされます:\n<xliff:g id="filepath">%s</xliff:g>\n\n続行しますか？</string>
+  <string name="reboot_message">お使いのデバイスはアップデートをインストールするためにリカバリーモードで再起動します。\n\n次のファイルがインストールされます：\n<xliff:g id="filepath">%s</xliff:g>\n\n続行しますか？</string>
   <string name="reboot_failed_title">エラー</string>
-  <string name="reboot_failed_message">再起動に失敗しました。手動でリカバリーモードで再起動して次のファイルをインストールしてください。:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+  <string name="reboot_failed_message">再起動に失敗しました。手動でリカバリーモードで再起動して次のファイルをインストールしてください。：\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">インストール後にZIPファイルを削除する</string>
   <string name="advanced_options">詳細設定</string>
   <string name="save_advanced_options">保存</string>

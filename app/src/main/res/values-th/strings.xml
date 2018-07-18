@@ -87,6 +87,8 @@
   <string name="wipe_data">ลบข้อมูล</string>
   <string name="wipe_data_dialog_confirmation_title">คืนค่าโรงงาน</string>
   <string name="wipe_data_dialog_confirmation_message">คุณเลือก \'ล้างข้อมูล\' ตัวเลือกนี้จะรีเซ็ตเป็นค่าเริ่มต้นจากโรงงานในอุปกรณ์ของคุณ คุณต้องการทำต่อหรือไม่?</string>
+  <string name="update_manual_ab">ดำเนินการต่อ, เฟรชบิวด์ด้วยตัวเองโดยใช้ TWRP. อุปกรณ์ไม่สนับสนุน การเฟรชบิวแบบออโต้เนื่องจากพาร์ติชั่น A/B</string>
   <!-- Changelog -->
   <string name="changelog_title">บันทึกการเปลี่ยนแปลง</string>
+  <string name="changelog_loading">กำลังโหลด…</string>
 </resources>
