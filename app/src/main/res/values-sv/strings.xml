@@ -53,7 +53,17 @@
   <string name="unable_to_stop_download">Det går inte att stoppa nedladdning</string>
   <string name="unable_to_download_file">Kan inte ladda ned uppdateringen</string>
   <string name="download_not_found">Filen kan inte hittas</string>
+  <string name="notif_download_success_title">Nedladdning av uppdatering klar</string>
+  <string name="notif_download_success_summary">Tryck för att installera</string>
+  <string name="notif_download_failure_title">Nedladdning av uppdatering misslyckades</string>
+  <string name="error_download_in_progress">Det finns en pågående nedladdning</string>
+  <string name="error_file_ready_to_install">Det finns en uppdatering klar att installeras</string>
+  <string name="storage_permission_error">Var vänlig och bevilja åtkomst till lagring för att fortsätta</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Radera fil</string>
+  <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
+  <string name="confirm_delete_all_dialog_message">Radera alla uppdateringsfiler?</string>
+  <string name="delete_update_success_message">Uppdateringen <xliff:g id="filename">%s</xliff:g> raderades</string>
   <!-- Menu and dialog strings -->
   <!-- Mobile data warning -->
   <!-- Install -->

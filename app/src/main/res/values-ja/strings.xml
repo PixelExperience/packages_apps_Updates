@@ -80,7 +80,7 @@
   <string name="reboot_failed_title">エラー</string>
   <string name="reboot_failed_message">再起動に失敗しました。手動でリカバリーモードで再起動して次のファイルをインストールしてください。：\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">インストール後にZIPファイルを削除する</string>
-  <string name="advanced_options">詳細設定</string>
+  <string name="advanced_options">高度な設定</string>
   <string name="save_advanced_options">保存</string>
   <string name="wipe_cache">キャッシュを消去</string>
   <string name="wipe_dalvik_cache">Dalvik/ARTキャッシュの消去</string>
