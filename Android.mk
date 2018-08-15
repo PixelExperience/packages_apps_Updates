@@ -21,7 +21,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(TOP)/frameworks/support/v7/appcompat/res \
-    $(TOP)/frameworks/support/v7/cardview/res \
+    $(TOP)/frameworks/support/cardview/res \
     $(TOP)/frameworks/support/design/res \
     $(LOCAL_PATH)/app/src/main/res
 
@@ -31,6 +31,10 @@ LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.suppor
 include frameworks/opt/setupwizard/library/common-gingerbread.mk
 
 LOCAL_PACKAGE_NAME := Updates
+
+LOCAL_PRIVATE_PLATFORM_APIS := true
+
+LOCAL_USE_AAPT2 := true
 
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_ENABLED := disabled
