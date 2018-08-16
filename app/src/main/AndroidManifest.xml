@@ -13,13 +13,15 @@
     <uses-permission android:name="android.permission.REBOOT"/>
     <uses-permission android:name="android.permission.RECOVERY"/>
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:name=".UpdaterApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity
             android:name=".activities.UpdaterActivity"
             android:label="@string/app_name"
