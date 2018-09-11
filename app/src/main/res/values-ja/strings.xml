@@ -7,12 +7,12 @@
   <string name="ota_not_supported">このビルドではOTAアップデートはサポートされていません</string>
   <string name="last_updated_at">（<xliff:g id="time">%s</xliff:g>に最新の更新）</string>
   <string name="type_downloaded">ダウンロード済</string>
-  <string name="type_downloading">ダウンロード中</string>
-  <string name="type_completing">完了処理中</string>
+  <string name="type_downloading">ダウンロード中…</string>
+  <string name="type_completing">完了処理中…</string>
   <string name="download_button">ダウンロード</string>
   <string name="install_button">インストール</string>
   <string name="updates_category_title">利用可能なアップデート</string>
-  <string name="checking_for_updates">アップデートを確認中</string>
+  <string name="checking_for_updates">アップデートを確認中...</string>
   <string name="update_found_notification">新しいアップデートが利用可能です</string>
   <string name="update_found_notification_desc">タップしてダウンロード</string>
   <string name="no_updates_available">利用可能なアップデートはありません</string>
@@ -42,7 +42,7 @@
   <string name="addons_summary">便利なファイル</string>
   <string name="addons_error">アドオンリストのロードに失敗しました</string>
   <!-- MD5 -->
-  <string name="checking_md5">ファイルの整合性を確認中</string>
+  <string name="checking_md5">ファイルの整合性を確認中…</string>
   <string name="md5_failed_dialog_title">ファイルの整合性</string>
   <string name="md5_failed_dialog_message">確認に失敗しました。続行しますか？</string>
   <!-- Downloads -->
@@ -62,7 +62,7 @@
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">ファイルの削除</string>
   <string name="confirm_delete_dialog_message">選択したアップデートファイルを削除しますか？</string>
-  <string name="confirm_delete_all_dialog_message">ダウンロードしたすべてのアップデートファイルを削除しますか？</string>
+  <string name="confirm_delete_all_dialog_message">ダウンロードした全てのアップデートファイルを削除しますか？</string>
   <string name="delete_update_success_message">アップデートファイル<xliff:g id="filename">%s</xliff:g>は削除されました</string>
   <string name="delete_updates_failure_message">アップデートファイルの削除中にエラーが発生しました</string>
   <string name="delete_updates_noFolder_message">アップデートフォルダが見つかりませんでした</string>
@@ -76,7 +76,7 @@
   <string name="checkbox_mobile_data_warning">再び表示しない</string>
   <!-- Install -->
   <string name="reboot_title">アップデートをインストール</string>
-  <string name="reboot_message">お使いのデバイスはアップデートをインストールするためにリカバリーモードで再起動します。\n\n次のファイルがインストールされます：\n<xliff:g id="filepath">%s</xliff:g>\n\n続行しますか？</string>
+  <string name="reboot_message">お使いの端末はアップデートをインストールするためにリカバリーモードで再起動します。\n\n次のファイルがインストールされます：\n<xliff:g id="filepath">%s</xliff:g>\n\n続行しますか？</string>
   <string name="reboot_failed_title">エラー</string>
   <string name="reboot_failed_message">再起動に失敗しました。手動でリカバリーモードで再起動して次のファイルをインストールしてください。：\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">インストール後にZIPファイルを削除する</string>
@@ -86,9 +86,9 @@
   <string name="wipe_dalvik_cache">Dalvik/ARTキャッシュの消去</string>
   <string name="wipe_data">データを消去</string>
   <string name="wipe_data_dialog_confirmation_title">出荷時の状態に戻す</string>
-  <string name="wipe_data_dialog_confirmation_message">「データを消去」オプションを選択しました。このオプションはあなたのデバイスを初期化します。続行しますか？</string>
-  <string name="update_manual_ab">続けるにはTWRPを使用して手動で更新します。このデバイスはA/Bパーティションを使用した自動更新をサポートしていません。</string>
+  <string name="wipe_data_dialog_confirmation_message">「データを消去」オプションを選択しました。このオプションはあなたの端末を初期化します。続行しますか？</string>
+  <string name="update_manual_ab">続けるにはTWRPを使用して手動で更新します。この端末はA/Bパーティションを使用した自動更新をサポートしていません。</string>
   <!-- Changelog -->
   <string name="changelog_title">更新履歴</string>
-  <string name="changelog_loading">読み込み中</string>
+  <string name="changelog_loading">読み込み中…</string>
 </resources>

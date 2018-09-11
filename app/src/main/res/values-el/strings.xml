@@ -16,7 +16,7 @@
   <string name="update_found_notification">Υπάρχει διαθέσιμη νέα ενημερωμένη έκδοση!</string>
   <string name="update_found_notification_desc">Αγγίξτε για λήψη</string>
   <string name="no_updates_available">Δεν υπάρχουν διαθέσιμες ενημερώσεις</string>
-  <string name="no_updates_available_pref_title">Δεν υπάρχουν διαθέσιμες ενημερώσεις. Χρησιμοποιήστε το κουμπί ανανέωσης για να ελέγξετε για νέες ενημερώσεις.</string>
+  <string name="no_updates_available_pref_title">Δεν υπάρχουν διαθέσιμες ενημερώσεις. Χρησιμοποιήστε το πλήκτρο ανανέωσης για να ελέγξετε για νέες ενημερώσεις.</string>
   <string name="update_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
   <string name="data_connection_required">Απαιτείται σύνδεση δεδομένων.</string>
   <string name="changelog_button">Προβολή αλλαγών</string>

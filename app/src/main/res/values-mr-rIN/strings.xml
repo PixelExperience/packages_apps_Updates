@@ -7,8 +7,12 @@
   <string name="type_downloading">डाऊनलोड चालु आहे…</string>
   <string name="download_button">डाऊनलोड</string>
   <string name="install_button">इन्स्टॉल</string>
+  <string name="updates_category_title">उपलब्ध अपडेट</string>
+  <string name="checking_for_updates">अपडेटसाठी तपासत आहे</string>
+  <string name="update_found_notification">नवीन अपडेट उपलब्ध आहेत</string>
   <string name="update_found_notification_desc">डाउनलोड सुरू करण्यासाठी टॅप करा</string>
   <string name="no_updates_available">नवीन अपडेट उपलब्ध आहेत</string>
+  <string name="update_check_failed">अपडेट तपास अपयशी झाला. कृपया तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
   <string name="data_connection_required">डेटा कनेक्शन आवश्यक आहे.</string>
   <string name="changelog_button">बदल पहा</string>
   <!-- Settings section -->
@@ -30,4 +34,6 @@
   <!-- Mobile data warning -->
   <!-- Install -->
   <!-- Changelog -->
+  <string name="changelog_title">परिवर्तन लॉग</string>
+  <string name="changelog_loading">लोड करत आहे…</string>
 </resources>

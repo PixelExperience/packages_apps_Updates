@@ -87,6 +87,7 @@
   <string name="wipe_data">Esborrar data</string>
   <string name="wipe_data_dialog_confirmation_title">Restabliment de fàbrica</string>
   <string name="wipe_data_dialog_confirmation_message">Heu seleccionat l\'opció \'Eliminar dades\', això farà un restabliment de fàbrica al vostre dispositiu, voleu continuar?</string>
+  <string name="update_manual_ab">Per a continuar, instal·la la construcció manualment utilitzant TWRP. Aquest dispositiu no suporta la instal·lació automàtica per culpa de les particions A/B.</string>
   <!-- Changelog -->
   <string name="changelog_title">Registre de canvis</string>
   <string name="changelog_loading">Carregant…</string>

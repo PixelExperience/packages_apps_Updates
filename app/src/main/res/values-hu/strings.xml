@@ -87,6 +87,8 @@
   <string name="wipe_data">A Data partíció törlése</string>
   <string name="wipe_data_dialog_confirmation_title">Gyári beállítások visszaállítása</string>
   <string name="wipe_data_dialog_confirmation_message">A \'Data partíció törlése\' opciót választotta, ami az eszközt vissza fogja állítani a gyári beállításokra, és minden adat elveszik. Biztosan folytatni szeretné?</string>
+  <string name="update_manual_ab">A folytatáshoz flasheld fel a buildet manuálisan TWRP-vel. Ez az eszköz nem támogatja az automatikus frissítést A / B partíciók miatt.</string>
   <!-- Changelog -->
   <string name="changelog_title">Változások listája</string>
+  <string name="changelog_loading">Betöltés…</string>
 </resources>
