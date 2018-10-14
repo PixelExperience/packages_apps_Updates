@@ -47,12 +47,12 @@
   <string name="md5_failed_dialog_message">Gagal memverifikasi, apakah kamu ingin melanjutkan?</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">Batalkan unduhan</string>
-  <string name="confirm_download_cancel_dialog_message">Batalkan unduhan sekarang?</string>
+  <string name="confirm_download_cancel_dialog_message">Batalkan unduhan saat ini?</string>
   <string name="download_cancelled">Unduhan dibatalkan</string>
   <string name="download_already_running">Sebuah unduhan sedang berjalan</string>
-  <string name="unable_to_stop_download">Tidak bisa menghentikan unduhan</string>
+  <string name="unable_to_stop_download">Tidak dapat menghentikan unduhan</string>
   <string name="unable_to_download_file">Tidak dapat mengunduh pembaharuan berkas</string>
-  <string name="download_not_found">Unduhan tidak tersedia</string>
+  <string name="download_not_found">Unduhan tidak ditemukan</string>
   <string name="notif_download_success_title">Berhasil mengunduh pembaharuan</string>
   <string name="notif_download_success_summary">Ketuk untuk memasang</string>
   <string name="notif_download_failure_title">Tidak berhasil mengunduh pembaharuan</string>

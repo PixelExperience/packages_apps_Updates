@@ -4,22 +4,91 @@
   <!-- App name -->
   <string name="app_name">Абнаўленні сiстэмы</string>
   <!-- Update checking -->
+  <string name="ota_not_supported">Гэтая зборка не падтрымлівае OTA абнаўленні.</string>
   <string name="last_updated_at">(апошняе абнаўленне <xliff:g id="time">%s </xliff:g>)</string>
+  <string name="type_downloaded">Спампавана</string>
+  <string name="type_downloading">Спампоўваецца…</string>
+  <string name="type_completing">Выконваецца…</string>
+  <string name="download_button">Спампаваць</string>
   <string name="install_button">Усталяваць</string>
   <string name="updates_category_title">Даступныя абнаўленні</string>
   <string name="checking_for_updates">Праверка абнаўленняў</string>
+  <string name="update_found_notification">Даступна новае абнаўленне</string>
   <string name="update_found_notification_desc">Націсніце для спампоўки</string>
+  <string name="no_updates_available">Няма даступных абнаўленняў</string>
+  <string name="no_updates_available_pref_title">Няма даступных абнаўленняў. Націсніце «Абнавіць», каб праверыць наяўнасць абнаўленняў.</string>
+  <string name="update_check_failed">Не атрымалася праверыць наяўнасць абнаўленняў. Калі ласка, праверце стан злучэння з Інтэрнэтам і паспрабуйце наноў.</string>
+  <string name="data_connection_required">Неабходна злучэнне з Інтэрнэтам.</string>
+  <string name="changelog_button">Прагледзець змены</string>
   <!-- Settings section -->
+  <string name="settings_category_title">Налады</string>
+  <string name="download_folder_title">Тэчка спамповак</string>
   <string name="unknown">Невядома</string>
+  <string name="mobile_data_warning_title">Папярэджанне аб мабільных дадзеных</string>
+  <string name="mobile_data_warning_summary">Паказваць папярэджанне, калі карыстальнік спрабуе спампаваць абнаўленне праз мабільныя дадзеныя</string>
   <!-- Info section -->
+  <string name="extras_category_title">Дапаўненні</string>
+  <string name="error_open_url">Не атрымалася адкрыць спасылку</string>
+  <string name="developer_info_title">Суправаджальнік</string>
+  <string name="donate_info_title">Ахвяраваць</string>
+  <string name="donate_info_summary">Падтрымаць распрацоўку</string>
+  <string name="website_info_title">Вэб-сайт</string>
+  <string name="website_info_summary">Наведайце наш сайт</string>
   <string name="news_info_title">Навіны</string>
   <string name="news_info_summary">Сачыце за абнаўленнямі і іншымі навінамі</string>
   <string name="forum_info_title">Форум</string>
+  <string name="forum_info_summary">Паглядзець паведамленні на форуме</string>
+  <string name="addons_title">Дапаўненні</string>
+  <string name="addons_summary">Карысныя файлы</string>
+  <string name="addons_error">Памылка пры ладаванні спісу дадаткаў</string>
   <!-- MD5 -->
+  <string name="checking_md5">Праверка цэласнасці файла…</string>
+  <string name="md5_failed_dialog_title">Цэласнасць файла</string>
+  <string name="md5_failed_dialog_message">Праверка не ўдалася. Жадаеце працягнуць?</string>
   <!-- Downloads -->
+  <string name="confirm_download_cancel_dialog_title">Скасаваць спампоўку</string>
+  <string name="confirm_download_cancel_dialog_message">Скасаваць гэтую спампоўку?</string>
+  <string name="download_cancelled">Спампоўка скасавана</string>
+  <string name="download_already_running">Спампоўка ўжо адбываецца</string>
+  <string name="unable_to_stop_download">Немагчыма спыніць спампоўку</string>
+  <string name="unable_to_download_file">Не атрымалася спампаваць файл абнаўлення</string>
+  <string name="download_not_found">Спампоўка не знойдзена</string>
+  <string name="notif_download_success_title">Абнаўленне паспяхова спампавана</string>
+  <string name="notif_download_success_summary">Націсніце для ўсталёўкі</string>
+  <string name="notif_download_failure_title">Не атрымалася спампаваць абнаўленне</string>
+  <string name="error_download_in_progress">Ідзе спампоўка</string>
+  <string name="error_file_ready_to_install">Абнаўленне гатова да ўсталёўкі</string>
+  <string name="storage_permission_error">Калі ласка, дайце дазвол на захоўванне каб працягнуць</string>
   <!-- Deleting -->
+  <string name="confirm_delete_dialog_title">Выдаліць файл</string>
+  <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
+  <string name="confirm_delete_all_dialog_message">Ці выдаліць усе спампаваныя файлы абнаўленняў?</string>
+  <string name="delete_update_success_message">Файл абнаўлення <xliff:g id="filename">%s</xliff:g> выдалены</string>
+  <string name="delete_updates_failure_message">Пры выдаленні файла абнаўлення атрымалася памылка</string>
+  <string name="delete_updates_noFolder_message">Тэчка з абнаўленнямі не знойдзеная</string>
+  <string name="delete_updates_success_message">Усе спампаваныя абнаўленні выдалены</string>
   <!-- Menu and dialog strings -->
+  <string name="menu_refresh">Аднавіць</string>
+  <string name="menu_delete_all">Выдаліць абнаўленні</string>
   <!-- Mobile data warning -->
+  <string name="update_on_mobile_data_title">Папярэджанне</string>
+  <string name="update_on_mobile_data_message">Вы збіраецеся спампаваць пакет абнаўлення, выкарыстоўваючы мабільную перадачу дадзеных, за якую, верагодна, спаганяецца дадатковая плата. Вы хочаце працягнуць?</string>
+  <string name="checkbox_mobile_data_warning">Больш не паказваць</string>
   <!-- Install -->
+  <string name="reboot_title">Усталяваць абнаўленне</string>
+  <string name="reboot_message">Ваша прылада будзе перазагружана ў рэжым аднаўлення, каб усталяваць наступнае абнаўленне.\n\nНаступны файл будзе ўсталяваны:: \n <xliff:g id="filepath">%s </xliff:g> \n\nЖадаеце працягнуць?</string>
+  <string name="reboot_failed_title">Памылка</string>
+  <string name="reboot_failed_message">Не атрымалася перазагрузіць, калі ласка перазагрузіцеся ў рэжым аднаўлення ўручную і ўсталюйце наступны файл:\n\n <xliff:g id="filepath">%s </xliff:g></string>
+  <string name="delete_after_install_title">Выдаліць ZIP-файл пасля ўсталёўкі</string>
+  <string name="advanced_options">Дадаткова</string>
+  <string name="save_advanced_options">Захаваць</string>
+  <string name="wipe_cache">Ачысціць кэш</string>
+  <string name="wipe_dalvik_cache">Ачысціць Dalvik/ART-кэш</string>
+  <string name="wipe_data">Ачысціць Data</string>
+  <string name="wipe_data_dialog_confirmation_title">Скід да завадскіх налад</string>
+  <string name="wipe_data_dialog_confirmation_message">Вы выбралі «Ачысціць Data», гэта выдаліць усе вашыя дадзеныя на гэтым устройстве. Жадаеце працягнуць?</string>
+  <string name="update_manual_ab">Каб працягнуць, абнавіце прашыўку ўручную з дапамогай TWRP. Гэта прылада не падтрымлівае аўтаматычнае абнаўленне з-за раздзелаў A/B.</string>
   <!-- Changelog -->
+  <string name="changelog_title">Спіс зменаў</string>
+  <string name="changelog_loading">Загрузка…</string>
 </resources>

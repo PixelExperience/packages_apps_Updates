@@ -76,7 +76,7 @@
   <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
   <!-- Install -->
   <string name="reboot_title">Namesti posodobitev</string>
-  <string name="reboot_message">Vaša naprava se bo ponovno zagnala v obnovitveni način, da se namesti posodobitev.\n\nNameščena bo naslednja datoteka:\n<xliff:g id="filepath">%s</xliff:g>\n\nAli želite nadaljevati?</string>
+  <string name="reboot_message">Vaša naprava se bo vnovično zagnala v obnovitveni način, da se namesti posodobitev.\n\nNameščena bo naslednja datoteka:\n<xliff:g id="filepath">%s</xliff:g>\n\nAli želite nadaljevati?</string>
   <string name="reboot_failed_title">Napaka</string>
   <string name="reboot_failed_message">Vnovičen zagon je spodletel, ročno zaženite v obnovitev in namestite naslednjo datoteko:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Odstrani datoteko zip po namestitvi</string>
