@@ -4,7 +4,7 @@
   <!-- App name -->
   <string name="app_name">Rendszerfrissítések</string>
   <!-- Update checking -->
-  <string name="ota_not_supported">A build nem támogatja az OTA frissítéseket.</string>
+  <string name="ota_not_supported">Ez a kiadás nem támogatja az OTA frissítéseket.</string>
   <string name="last_updated_at">(legutóbb frissítve <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Letöltött</string>
   <string name="type_downloading">Letöltés…</string>
@@ -25,7 +25,7 @@
   <string name="download_folder_title">Letöltések helye</string>
   <string name="unknown">Ismeretlen</string>
   <string name="mobile_data_warning_title">Mobiladat figyelmeztetés</string>
-  <string name="mobile_data_warning_summary">Figyelmeztetés, ha a felhasználó mobil adatkapcsolaton keresztül próbál frissítést letölteni</string>
+  <string name="mobile_data_warning_summary">Figyelmeztetés, ha a felhasználó mobil-adatkapcsolaton keresztül próbál frissítést letölteni</string>
   <!-- Info section -->
   <string name="extras_category_title">Extrák</string>
   <string name="error_open_url">Nem sikerült megnyitni a linket a böngészőben</string>
@@ -37,7 +37,7 @@
   <string name="news_info_title">Hírek</string>
   <string name="news_info_summary">Tájékozódjon a frissítésekről és egyéb hírekről</string>
   <string name="forum_info_title">Fórum</string>
-  <string name="forum_info_summary">Fórum hozzászólások</string>
+  <string name="forum_info_summary">Fórumhozzászólások</string>
   <string name="addons_title">Kiegészítők</string>
   <string name="addons_summary">Hasznos fájlok</string>
   <string name="addons_error">Nem sikerült a kiegészítők betöltése</string>
@@ -76,7 +76,7 @@
   <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
   <!-- Install -->
   <string name="reboot_title">Frissítés telepítése</string>
-  <string name="reboot_message">Az eszköz újraindul recovery módba.\n\nA következő fájl lesz telepítve:\n<xliff:g id="filepath">%s</xliff:g>\n\n Szeretné folytatni?</string>
+  <string name="reboot_message">A készülék recovery módba indul újra.\n\nA következő fájl lesz telepítve:\n<xliff:g id="filepath">%s</xliff:g>\n\n Szeretné folytatni?</string>
   <string name="reboot_failed_title">Hiba</string>
   <string name="reboot_failed_message">Újraindítás sikertelen, indítsa újra a telefont recovery módba és telepítse a következő fájlt:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Zip fájl törlése telepítés után</string>
@@ -86,7 +86,9 @@
   <string name="wipe_dalvik_cache">Dalvik/ART Cache törlése</string>
   <string name="wipe_data">A Data partíció törlése</string>
   <string name="wipe_data_dialog_confirmation_title">Gyári beállítások visszaállítása</string>
-  <string name="wipe_data_dialog_confirmation_message">A \'Data partíció törlése\' opciót választotta, ami az eszközt vissza fogja állítani a gyári beállításokra, és minden adat elveszik. Biztosan folytatni szeretné?</string>
+  <string name="wipe_data_dialog_confirmation_message">Ön a \'Data partíció törlése\' opciót választotta, ami vissza fogja állítani a gyári beállításokra a készüléket, és minden adata elveszik. Biztosan folytatni szeretné?</string>
+  <string name="update_manual_ab">A folytatáshoz telepítsd TWRP-vel a friss kiadást manuálisan. Ez a készülék nem támogatja az automatikus frissítést az A / B partíciók miatt.</string>
   <!-- Changelog -->
   <string name="changelog_title">Változások listája</string>
+  <string name="changelog_loading">Betöltés…</string>
 </resources>
