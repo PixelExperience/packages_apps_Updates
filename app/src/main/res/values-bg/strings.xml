@@ -87,6 +87,7 @@
   <string name="wipe_data">Изтриване на данни</string>
   <string name="wipe_data_dialog_confirmation_title">Възстановяване на фабричните настройки</string>
   <string name="wipe_data_dialog_confirmation_message">Избра ли сте опцията \"изтриване на данни\", това ще възтанови фабричните настройки на вашето устройство, искате ли да продължите?</string>
+  <string name="update_manual_ab">За да продължите, подгответе ръчно ROM-а, като използвате TWRP. Това устройство не поддържа автоматично флашване заради A/B дялове.</string>
   <!-- Changelog -->
   <string name="changelog_title">Списък на промените</string>
   <string name="changelog_loading">Зареждане…</string>
