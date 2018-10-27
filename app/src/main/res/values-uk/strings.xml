@@ -22,7 +22,7 @@
   <string name="changelog_button">Переглянути зміни</string>
   <!-- Settings section -->
   <string name="settings_category_title">Налаштування</string>
-  <string name="download_folder_title">Тека завантажень</string>
+  <string name="download_folder_title">Папка завантажень</string>
   <string name="unknown">Невідомо</string>
   <string name="mobile_data_warning_title">Попередження про мобільні дані</string>
   <string name="mobile_data_warning_summary">Показувати попередження, при спробі завантажити оновлення через мобільні дані</string>
@@ -65,7 +65,7 @@
   <string name="confirm_delete_all_dialog_message">Видалити всі завантажені файли оновлень?</string>
   <string name="delete_update_success_message">Оновлення <xliff:g id="filename">%s</xliff:g> видалено</string>
   <string name="delete_updates_failure_message">Виникла помилка при видаленні файлу оновлення</string>
-  <string name="delete_updates_noFolder_message">Тека з оновленнями не знайдена</string>
+  <string name="delete_updates_noFolder_message">Папка з оновленнями не знайдена</string>
   <string name="delete_updates_success_message">Усі завантажені оновлення видалено</string>
   <!-- Menu and dialog strings -->
   <string name="menu_refresh">Оновити</string>

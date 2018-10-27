@@ -23,7 +23,7 @@
   <!-- Settings section -->
   <string name="settings_category_title">Nastavení</string>
   <string name="download_folder_title">Složka pro stahování</string>
-  <string name="unknown">Neznámé</string>
+  <string name="unknown">Neznámá</string>
   <string name="mobile_data_warning_title">Upozornění mobilních dat</string>
   <string name="mobile_data_warning_summary">Zobrazit upozornění při pokusu uživatele o stažení aktualizace pomocí mobilních dat</string>
   <!-- Info section -->
@@ -38,7 +38,7 @@
   <string name="news_info_summary">Zůstaňte informováni o aktualizacích a dalších novinkách</string>
   <string name="forum_info_title">Fórum</string>
   <string name="forum_info_summary">Zobrazit příspěvky ve fóru</string>
-  <string name="addons_title">Rozšíření</string>
+  <string name="addons_title">Doplňky</string>
   <string name="addons_summary">Užitečné soubory</string>
   <string name="addons_error">Nepovedlo se načíst seznam doplňků</string>
   <!-- MD5 -->
@@ -73,7 +73,7 @@
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">Varování</string>
   <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
-  <string name="checkbox_mobile_data_warning">Příště nezobrazovat</string>
+  <string name="checkbox_mobile_data_warning">Znovu nezobrazovat</string>
   <!-- Install -->
   <string name="reboot_title">Instalovat aktualizaci</string>
   <string name="reboot_message">Vaše zařízení se restartuje do režimu obnovy a nainstaluje aktualizaci.\n\nBude nainstalován následující soubor:\n<xliff:g id="filepath">%s</xliff:g>\n\nChcete pokračovat?</string>

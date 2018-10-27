@@ -7,51 +7,51 @@
   <string name="ota_not_supported">Questa versione non supporta gli aggiornamenti OTA.</string>
   <string name="last_updated_at">(ultimo aggiornamento il <xliff:g id="time">%s</xliff:g>)</string>
   <string name="type_downloaded">Scaricato</string>
-  <string name="type_downloading">Download in corso…</string>
-  <string name="type_completing">Completamento…</string>
+  <string name="type_downloading">Scaricamento in corso…</string>
+  <string name="type_completing">Completando…</string>
   <string name="download_button">Scarica</string>
   <string name="install_button">Installa</string>
   <string name="updates_category_title">Aggiornamenti disponibili</string>
-  <string name="checking_for_updates">Controllo aggiornamenti</string>
+  <string name="checking_for_updates">Controllo degli aggiornamenti</string>
   <string name="update_found_notification">Nuovo aggiornamento disponibile</string>
   <string name="update_found_notification_desc">Tocca per scaricare</string>
   <string name="no_updates_available">Nessun aggiornamento disponibile</string>
-  <string name="no_updates_available_pref_title">Nessun aggiornamento disponibile. Utilizzare il pulsante aggiorna per cercare nuovi aggiornamenti.</string>
-  <string name="update_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
+  <string name="no_updates_available_pref_title">Nessun aggiornamento disponibile. Utilizza il pulsante aggiorna per cercare nuovi aggiornamenti.</string>
+  <string name="update_check_failed">La verifica degli aggiornamenti è fallita. Controlla la tua connessione ad internet e riprova più tardi.</string>
   <string name="data_connection_required">È richiesta una connessione dati.</string>
-  <string name="changelog_button">Visualizza modifiche</string>
+  <string name="changelog_button">Visualizza le modifiche</string>
   <!-- Settings section -->
   <string name="settings_category_title">Impostazioni</string>
   <string name="download_folder_title">Cartella download</string>
   <string name="unknown">Sconosciuto</string>
-  <string name="mobile_data_warning_title">Avviso utilizzo dati mobili</string>
-  <string name="mobile_data_warning_summary">Visualizza un avviso quando l\'utente tenta di scaricare un aggiornamento tramite dati mobile</string>
+  <string name="mobile_data_warning_title">Avviso dati mobili</string>
+  <string name="mobile_data_warning_summary">Visualizza un avviso quando l\'utente tenta di scaricare un aggiornamento tramite i dati mobili</string>
   <!-- Info section -->
   <string name="extras_category_title">Extra</string>
   <string name="error_open_url">Impossibile aprire l\'URL nel browser</string>
-  <string name="developer_info_title">Maintainer</string>
+  <string name="developer_info_title">Manutentore</string>
   <string name="donate_info_title">Donazione</string>
-  <string name="donate_info_summary">Sostieni lo sviluppo</string>
+  <string name="donate_info_summary">Supporta lo sviluppo</string>
   <string name="website_info_title">Sito Web</string>
-  <string name="website_info_summary">Visita il nostro sito web!</string>
+  <string name="website_info_summary">Visita il nostro sito web</string>
   <string name="news_info_title">Novità</string>
-  <string name="news_info_summary">Rimani informato sugli aggiornamenti e le altre novità</string>
+  <string name="news_info_summary">Rimani informato sugli aggiornamenti e altre novità</string>
   <string name="forum_info_title">Forum</string>
-  <string name="forum_info_summary">Post recenti</string>
+  <string name="forum_info_summary">Visualizza i post del forum</string>
   <string name="addons_title">Componenti aggiuntivi</string>
   <string name="addons_summary">File utili</string>
-  <string name="addons_error">Impossibile caricare l\'elenco delle estensioni</string>
+  <string name="addons_error">Impossibile caricare l\'elenco dei componenti aggiuntivi</string>
   <!-- MD5 -->
-  <string name="checking_md5">Verifica integrità del file...</string>
+  <string name="checking_md5">Verificando l\'integrità del file…</string>
   <string name="md5_failed_dialog_title">Integrità del file</string>
-  <string name="md5_failed_dialog_message">Verifica non riuscita, vuoi procedere comunque?</string>
+  <string name="md5_failed_dialog_message">Verifica fallita, vuoi procedere comunque?</string>
   <!-- Downloads -->
   <string name="confirm_download_cancel_dialog_title">Annulla il download</string>
   <string name="confirm_download_cancel_dialog_message">Annullare il download attuale?</string>
   <string name="download_cancelled">Download annullato</string>
   <string name="download_already_running">Un download è già in corso</string>
   <string name="unable_to_stop_download">Impossibile arrestare il download</string>
-  <string name="unable_to_download_file">Impossibile effettuare il download dell\'aggiornamento</string>
+  <string name="unable_to_download_file">Impossibile scaricare il file dell\'aggiornamento</string>
   <string name="download_not_found">Download non trovato</string>
   <string name="notif_download_success_title">Aggiornamento scaricato con successo</string>
   <string name="notif_download_success_summary">Tocca per installare</string>
@@ -61,34 +61,34 @@
   <string name="storage_permission_error">Concedi il permesso all\'archivio per continuare</string>
   <!-- Deleting -->
   <string name="confirm_delete_dialog_title">Elimina file</string>
-  <string name="confirm_delete_dialog_message">Eliminare il file di aggiornamento selezionato?</string>
-  <string name="confirm_delete_all_dialog_message">Eliminare tutti gli aggiornamenti scaricati?</string>
+  <string name="confirm_delete_dialog_message">Cancellare il file di aggiornamento selezionato?</string>
+  <string name="confirm_delete_all_dialog_message">Cancellare tutti gli aggiornamenti scaricati?</string>
   <string name="delete_update_success_message">Aggiornamento <xliff:g id="filename">%s</xliff:g> eliminato</string>
-  <string name="delete_updates_failure_message">Errore durante l\'eliminazione dell\'aggiornamento</string>
+  <string name="delete_updates_failure_message">Si è verificato un errore durante l\'eliminazione del file dell\'aggiornamento</string>
   <string name="delete_updates_noFolder_message">Cartella degli aggiornamenti non trovata</string>
   <string name="delete_updates_success_message">Tutti gli aggiornamenti scaricati sono stati eliminati</string>
   <!-- Menu and dialog strings -->
-  <string name="menu_refresh">Aggiorna</string>
+  <string name="menu_refresh">Ricarica</string>
   <string name="menu_delete_all">Elimina aggiornamenti</string>
   <!-- Mobile data warning -->
   <string name="update_on_mobile_data_title">Attenzione</string>
   <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili, ciò potrebbe comportare un utilizzo elevato di dati. Vuoi procedere?</string>
   <string name="checkbox_mobile_data_warning">Non mostrare di nuovo</string>
   <!-- Install -->
-  <string name="reboot_title">Installare l\'aggiornamento</string>
-  <string name="reboot_message">Il dispositivo si riavvia in modalità di ripristino per installare il seguente update. \n\nVerrà installato il seguente pacchetto: \n<xliff:g id="filepath">%s </xliff:g> \n\nVuoi continuare?</string>
+  <string name="reboot_title">Installa l\'aggiornamento</string>
+  <string name="reboot_message">Il dispositivo si riavvierà in modalità di recupero per installare il seguente aggiornamento.\n\nIl seguente file verrà installato: \n<xliff:g id="filepath">%s </xliff:g> \n\nVuoi continuare?</string>
   <string name="reboot_failed_title">Errore</string>
-  <string name="reboot_failed_message">Errore in fase di riavvio, riavviare manualmente in modalità di recupero e installare il seguente file:\n\n <xliff:g id="filepath">%s </xliff:g></string>
-  <string name="delete_after_install_title">Rimozione ZIP dopo l\'installazione</string>
+  <string name="reboot_failed_message">Impossibile riavviare, si prega riavviare manualmente in modalità di recupero e installare il seguente file:\n\n <xliff:g id="filepath">%s </xliff:g></string>
+  <string name="delete_after_install_title">Elimina il file zip dopo l\'installazione</string>
   <string name="advanced_options">Avanzato</string>
   <string name="save_advanced_options">Salva</string>
   <string name="wipe_cache">Cancella la cache</string>
   <string name="wipe_dalvik_cache">Cancella Dalvik/ART Cache</string>
   <string name="wipe_data">Cancella dati</string>
-  <string name="wipe_data_dialog_confirmation_title">Ripristino valori iniziali</string>
+  <string name="wipe_data_dialog_confirmation_title">Ripristino dati di fabbrica</string>
   <string name="wipe_data_dialog_confirmation_message">Hai selezionato l\'opzione \'cancella dati\', questo riporterà il dispositivo ai valori di fabbrica, si desidera continuare?</string>
   <string name="update_manual_ab">Per continuare, installa la build manualmente utilizzando la TWRP. Questo dispositivo non supporta l\'installazione automatica della build per le partizioni A/B.</string>
   <!-- Changelog -->
-  <string name="changelog_title">Ultime Modifiche</string>
+  <string name="changelog_title">Ultime modifiche</string>
   <string name="changelog_loading">Caricamento…</string>
 </resources>
