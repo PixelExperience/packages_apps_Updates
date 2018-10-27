@@ -16,9 +16,9 @@
   <string name="update_found_notification">Nouvelle mise à jour disponible</string>
   <string name="update_found_notification_desc">Appuyer pour lancer le téléchargement</string>
   <string name="no_updates_available">Aucune mise à jour disponible</string>
-  <string name="no_updates_available_pref_title">Pas de mises à jour disponible. Utilisez le bouton actualiser pour chercher de nouvelles mises à jour.</string>
+  <string name="no_updates_available_pref_title">Pas de mise à jour disponible. Utilisez le bouton actualiser pour chercher de nouvelles mises à jour.</string>
   <string name="update_check_failed">La vérification a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
-  <string name="data_connection_required">Une connexion internet est nécessaire.</string>
+  <string name="data_connection_required">Une connexion de données est nécessaire.</string>
   <string name="changelog_button">Afficher les modifications</string>
   <!-- Settings section -->
   <string name="settings_category_title">Paramètres</string>
@@ -27,7 +27,7 @@
   <string name="mobile_data_warning_title">Avertissement d\'usage des données mobiles</string>
   <string name="mobile_data_warning_summary">Afficher un avertissement lorsque l’utilisateur tente de télécharger une mise à jour avec les données mobiles</string>
   <!-- Info section -->
-  <string name="extras_category_title">Extras</string>
+  <string name="extras_category_title">Paramètres supplémentaires</string>
   <string name="error_open_url">Échec de l\'ouverture de l’URL dans le navigateur</string>
   <string name="developer_info_title">Mainteneur</string>
   <string name="donate_info_title">Dons</string>

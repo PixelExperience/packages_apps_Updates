@@ -27,7 +27,6 @@
   <string name="mobile_data_warning_title">Advertencia de datos móviles</string>
   <string name="mobile_data_warning_summary">Mostrar una advertencia cuando el usuario intenta descargar una actualización por datos móviles</string>
   <!-- Info section -->
-  <string name="extras_category_title">Extras</string>
   <string name="error_open_url">Falló al abrir la URL en el navegador</string>
   <string name="developer_info_title">Mantenedor</string>
   <string name="donate_info_title">Donar</string>
@@ -77,7 +76,6 @@
   <!-- Install -->
   <string name="reboot_title">Instalar actualización</string>
   <string name="reboot_message">Su dispositivo se reiniciará en el modo de recuperación para instalar la actualización.\n\nEl siguiente archivo será instalado:\n<xliff:g id="filepath">%s</xliff:g>\n\n¿Te gustaría continuar?</string>
-  <string name="reboot_failed_title">Error</string>
   <string name="reboot_failed_message">No se pudo reiniciar, reinicie manualmente para recuperar e instalar el siguiente archivo:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Eliminar fichero zip después de la instalación</string>
   <string name="advanced_options">Opciones Avanzadas</string>

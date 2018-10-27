@@ -9,7 +9,6 @@
   <string name="type_downloaded">Heruntergeladen</string>
   <string name="type_downloading">Herunterladen…</string>
   <string name="type_completing">Wird abgeschlossen…</string>
-  <string name="download_button">Download</string>
   <string name="install_button">Installieren</string>
   <string name="updates_category_title">Verfügbare Updates</string>
   <string name="checking_for_updates">Updates werden gesucht</string>
@@ -27,7 +26,6 @@
   <string name="mobile_data_warning_title">Mobildaten-Warnung</string>
   <string name="mobile_data_warning_summary">Zeige eine Warnung wenn ein Benutzer versucht, etwas über eine mobile Datenverbindung herunterzuladen</string>
   <!-- Info section -->
-  <string name="extras_category_title">Extras</string>
   <string name="error_open_url">Öffnen der URL im Browser fehlgeschlagen</string>
   <string name="developer_info_title">Betreuer</string>
   <string name="donate_info_title">Spenden</string>
@@ -36,9 +34,7 @@
   <string name="website_info_summary">Besuchen Sie unsere Webseite</string>
   <string name="news_info_title">Neuigkeiten</string>
   <string name="news_info_summary">Bleiben Sie informiert über Updates und andere Neuigkeiten</string>
-  <string name="forum_info_title">Forum</string>
   <string name="forum_info_summary">Zeige Forenbeiträge</string>
-  <string name="addons_title">Add-ons</string>
   <string name="addons_summary">Nützliche Dateien</string>
   <string name="addons_error">Fehler beim Laden der Add-on Liste</string>
   <!-- MD5 -->

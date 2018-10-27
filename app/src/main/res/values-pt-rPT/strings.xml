@@ -27,12 +27,10 @@
   <string name="mobile_data_warning_title">Aviso de dados móveis</string>
   <string name="mobile_data_warning_summary">Mostar um aviso quando o utilizador tenta descarregar uma atualização através dos dados móveis</string>
   <!-- Info section -->
-  <string name="extras_category_title">Extras</string>
   <string name="error_open_url">Falha ao abrir o URL no navegador</string>
   <string name="developer_info_title">Mantido por</string>
   <string name="donate_info_title">Doar</string>
   <string name="donate_info_summary">Apoiar o desenvolvimento</string>
-  <string name="website_info_title">Website</string>
   <string name="website_info_summary">Visite o nosso site</string>
   <string name="news_info_title">Notícias</string>
   <string name="news_info_summary">Mantenha-se informado sobre atualizações e outras novidades</string>

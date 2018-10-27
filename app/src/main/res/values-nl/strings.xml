@@ -9,7 +9,6 @@
   <string name="type_downloaded">Gedownload</string>
   <string name="type_downloading">Downloaden…</string>
   <string name="type_completing">Voltooien…</string>
-  <string name="download_button">Download</string>
   <string name="install_button">Installeren</string>
   <string name="updates_category_title">Beschikbare updates</string>
   <string name="checking_for_updates">Zoeken naar updates</string>
@@ -32,13 +31,10 @@
   <string name="developer_info_title">Onderhouder</string>
   <string name="donate_info_title">Doneer</string>
   <string name="donate_info_summary">Steun de ontwikkeling</string>
-  <string name="website_info_title">Website</string>
   <string name="website_info_summary">Bezoek onze website</string>
   <string name="news_info_title">Nieuws</string>
   <string name="news_info_summary">Blijf op de hoogte over updates en ander nieuws</string>
-  <string name="forum_info_title">Forum</string>
   <string name="forum_info_summary">Bekijk forumberichten</string>
-  <string name="addons_title">Add-ons</string>
   <string name="addons_summary">Nuttige bestanden</string>
   <string name="addons_error">Fout bij het laden van de add-ons lijst</string>
   <!-- MD5 -->

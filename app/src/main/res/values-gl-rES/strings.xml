@@ -27,7 +27,6 @@
   <string name="mobile_data_warning_title">Alerta de uso de datos</string>
   <string name="mobile_data_warning_summary">Mostrar unha advertencia cando o usuario intente descargar unha actualización por datos móviles</string>
   <!-- Info section -->
-  <string name="extras_category_title">Extras</string>
   <string name="error_open_url">Falló ao abrir a URL no navegador</string>
   <string name="developer_info_title">Mantedor</string>
   <string name="donate_info_title">Doazón</string>

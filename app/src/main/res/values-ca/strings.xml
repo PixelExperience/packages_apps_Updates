@@ -77,7 +77,6 @@
   <!-- Install -->
   <string name="reboot_title">Instal·la l\'actualització</string>
   <string name="reboot_message">El dispositiu es reiniciarà automàticament en mode recuperació per a instal·lar l\'actualització.\n\nEls següents fitxers seran instal·lats:\n<xliff:g id="filepath">%s</xliff:g>\n\nVoleu continuar?</string>
-  <string name="reboot_failed_title">Error</string>
   <string name="reboot_failed_message">No s\'ha pogut reiniciar, per favor, reinicieu manualment al mode recuperació i instal·leu els següents fitxers:\n\n<xliff:g id="filepath">%s</xliff:g></string>
   <string name="delete_after_install_title">Suprimir l\'arxiu zip després d\'instal·lar</string>
   <string name="advanced_options">Avançat</string>

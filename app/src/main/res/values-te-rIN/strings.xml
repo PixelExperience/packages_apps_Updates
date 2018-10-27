@@ -40,7 +40,6 @@
   <string name="forum_info_summary">ఫోరమ్ పోస్ట్లను వీక్షించండి</string>
   <string name="addons_title">చేర్చు</string>
   <string name="addons_summary">ఉపయోగకరమైన ఫైళ్లు</string>
-  <string name="addons_error">Failed to load add-ons list</string>
   <!-- MD5 -->
   <string name="checking_md5">ధృవీకరణ ఫైల్ సమగ్రత ...</string>
   <!-- Downloads -->
