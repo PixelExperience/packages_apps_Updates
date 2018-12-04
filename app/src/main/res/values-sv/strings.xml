@@ -64,8 +64,31 @@
     <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
     <string name="confirm_delete_all_dialog_message">Radera alla uppdateringsfiler?</string>
     <string name="delete_update_success_message">Uppdateringen <xliff:g id="filename">%s</xliff:g> raderades</string>
+    <string name="delete_updates_failure_message">Det skedde ett fel vid borttagning av uppdateringsfilen</string>
+    <string name="delete_updates_noFolder_message">Uppdateringsmappen kan inte hittas</string>
+    <string name="delete_updates_success_message">Alla nedladdade uppdateringar borttagna</string>
     <!-- Menu and dialog strings -->
+    <string name="menu_refresh">Ladda om</string>
+    <string name="menu_delete_all">Ta bort uppdateringar</string>
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">Varning</string>
+    <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
+    <string name="checkbox_mobile_data_warning">Visa inte igen</string>
     <!-- Install -->
+    <string name="reboot_title">Installera uppdateringen</string>
+    <string name="reboot_message">Din enhet startar om sig själv i återställningsläge för att installera uppdateringen.\n\nDen följande filen kommer att installeras:\n<xliff:g id="filepath">%s</xliff:g>\n\nVill du Fortsätt?</string>
+    <string name="reboot_failed_title">Fel</string>
+    <string name="reboot_failed_message">Det gick inte att starta om, starta om manuellt till återställningsmenyn och installera följande fil:\n\n<xliff:g id="filepath">%s</xliff:g></string>
+    <string name="delete_after_install_title">Ta bort zip-fil efter installationen</string>
+    <string name="advanced_options">Avancerad</string>
+    <string name="save_advanced_options">Spara</string>
+    <string name="wipe_cache">Rensa cache</string>
+    <string name="wipe_dalvik_cache">Rensa Dalvik/ART cache</string>
+    <string name="wipe_data">Rensa data</string>
+    <string name="wipe_data_dialog_confirmation_title">Fabriksåterställning</string>
+    <string name="wipe_data_dialog_confirmation_message">Du har valt alternativet \"rensa data\", det här gör en fabriksåterställning på din enhet, vill du fortsätta?</string>
+    <string name="update_manual_ab">För att fortsätta, installera bygget manuellt med TWRP. Den här enheten stöder inte auto-installation på grund av A/B partitioner.</string>
     <!-- Changelog -->
+    <string name="changelog_title">Ändringslogg</string>
+    <string name="changelog_loading">Laddar…</string>
 </resources>
