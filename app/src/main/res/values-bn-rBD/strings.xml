@@ -4,14 +4,14 @@
     <!-- App name -->
     <string name="app_name">সিস্টেম আধুনিকীকরণ</string>
     <!-- Update checking -->
-    <string name="ota_not_supported">এই বিল্ড OTA আপডেটগুলি সমর্থন করে না।</string>
-    <string name="last_updated_at">(সর্বশেষ আপডেট হয়েছে, <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="ota_not_supported">এই নির্মাণ OTA আধুনিকীকরণগুলি সমর্থন করে না।</string>
+    <string name="last_updated_at">(সর্বশেষ সংস্কার হয়েছে, <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">ডাউনলোড হয়েছে</string>
-    <string name="type_downloading">ডাউনলোড হচ্ছে...</string>
+    <string name="type_downloading">ডাউনলোড করা হচ্ছে…</string>
     <string name="type_completing">সম্পূর্ণ করা হচ্ছে...</string>
     <string name="download_button">ডাউনলোড</string>
-    <string name="install_button">ইনস্টল</string>
-    <string name="updates_category_title">আপডেট এসেছে</string>
+    <string name="install_button">সংস্থাপন</string>
+    <string name="updates_category_title">উপলব্ধ আধুনিকীকরণ</string>
     <string name="checking_for_updates">আপডেট আছে কিনা দেখা হচ্ছে</string>
     <string name="update_found_notification">Nové aktualizace k dispozici</string>
     <string name="update_found_notification_desc">ডাউনলোড শুরু করতে টোকা দিন</string>

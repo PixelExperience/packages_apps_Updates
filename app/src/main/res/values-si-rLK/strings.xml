@@ -4,7 +4,12 @@
     <!-- App name -->
     <!-- Update checking -->
     <!-- Settings section -->
+    <string name="download_folder_title">භාගතකිරීම් ෆෝල්ඩරය</string>
+    <string name="unknown">නොදනී</string>
+    <string name="mobile_data_warning_title">Mobile data අවවාද</string>
+    <string name="mobile_data_warning_summary">යාවත්කාලීන කිරීම සඳහා mobile data යොදාගන්නා විට අවවාද කරන්න</string>
     <!-- Info section -->
+    <string name="extras_category_title">අමතර</string>
     <!-- MD5 -->
     <!-- Downloads -->
     <!-- Deleting -->

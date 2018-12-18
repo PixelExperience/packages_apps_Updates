@@ -38,7 +38,7 @@
     <string name="news_info_summary">Qim deg isallen n ileqman d imaynuten nniḍen</string>
     <string name="forum_info_title">Anmager</string>
     <string name="forum_info_summary">Ẓar iznan deg anmagar</string>
-    <string name="addons_title">Ssiɣzef</string>
+    <string name="addons_title">Ssiɣzef </string>
     <string name="addons_summary">Ifuyla yessefken</string>
     <string name="addons_error">Tuccḍa deg sider n tidbarin n ifuyla yessefken</string>
     <!-- MD5 -->
@@ -57,7 +57,7 @@
     <string name="notif_download_success_summary">Senned akken ad tesbeddeḍ</string>
     <string name="notif_download_failure_title">Icceḍ usider n lqem</string>
     <string name="error_download_in_progress">Yella akka tura lqem i teddu</string>
-    <string name="error_file_ready_to_install">Yella lqem i wesbedded</string>
+    <string name="error_file_ready_to_install">Yella lqem i wesbedded </string>
     <string name="storage_permission_error">Ttxilk fked turagt n uḥraz ay ddun</string>
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Kkes afaylu</string>
@@ -80,7 +80,7 @@
     <string name="reboot_failed_title">Tuccḍa</string>
     <string name="delete_after_install_title">Kes afaylu zip mara yettwasbded</string>
     <string name="advanced_options">Talqayt</string>
-    <string name="save_advanced_options">Aḥraz</string>
+    <string name="save_advanced_options">Aḥraz </string>
     <string name="wipe_cache">Sfeḍ tuffirt</string>
     <string name="wipe_dalvik_cache">Sfeḍ tuffirt Dalvik</string>
     <string name="wipe_data">Sfeḍ isefka</string>
