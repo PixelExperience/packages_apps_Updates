@@ -88,6 +88,7 @@
             app:el_parallax="0">
 
             <android.support.v4.widget.NestedScrollView
+                android:id="@+id/expandableChangelogLayoutScrollView"
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 android:scrollbars="vertical">

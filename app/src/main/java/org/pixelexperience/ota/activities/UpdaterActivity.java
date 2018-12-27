@@ -963,6 +963,7 @@ public class UpdaterActivity extends PreferenceActivity implements
     private static class updateTask extends AsyncTask<Void, Void, Boolean> {
         private final WeakReference<UpdaterActivity> mActivityRef;
         private final UpdateInfo mUpdateInfo;
+        private File updateFile;
 
         updateTask(UpdaterActivity activity, UpdateInfo updateInfo) {
             mUpdateInfo = updateInfo;
@@ -975,7 +976,7 @@ public class UpdaterActivity extends PreferenceActivity implements
                 Thread.sleep(1000);
             } catch (InterruptedException ignored) {
             }
-            File updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + mUpdateInfo.getFileName());
+            updateFile = new File(Utils.makeUpdateFolder().getPath() + "/" + mUpdateInfo.getFileName());
             return MD5.checkMD5(mUpdateInfo.getMD5(), updateFile);
         }
 
@@ -989,28 +990,21 @@ public class UpdaterActivity extends PreferenceActivity implements
                 if (result) {
                     if (Utils.isABDevice()) {
                        mActivityRef.get().showToast(mActivityRef.get().getString(R.string.update_manual_ab), Toast.LENGTH_LONG);
+                       mActivityRef.get().mStartUpdateVisible = false;
                     } else {
                        mActivityRef.get().showInstallDialog(mUpdateInfo);
                     }
                 } else {
-
+                    try{
+                        updateFile.delete();
+                    }catch(Exception e){
+                    }
+                    mActivityRef.get().updateLayout(false);
                     new AlertDialog.Builder(mActivityRef.get())
-                            .setTitle(R.string.md5_failed_dialog_title)
-                            .setMessage(mActivityRef.get().getString(R.string.md5_failed_dialog_message))
+                            .setMessage(mActivityRef.get().getString(R.string.md5_verification_failed))
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    if (Utils.isABDevice()) {
-                                       mActivityRef.get().showToast(mActivityRef.get().getString(R.string.update_manual_ab), Toast.LENGTH_LONG);
-                                    } else {
-                                       mActivityRef.get().showInstallDialog(mUpdateInfo);
-                                    }
-                                }
-                            })
-                            .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Do nothing and allow the dialog to be dismissed
                                 }
                             })
                             .setOnDismissListener(new DialogInterface.OnDismissListener() {

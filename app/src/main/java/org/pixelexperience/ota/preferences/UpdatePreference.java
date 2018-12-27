@@ -23,11 +23,14 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.FrameLayout;
+import android.support.v4.widget.NestedScrollView;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
 
@@ -57,6 +60,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
     private Button mButton;
     private Button mChangelogButton;
     private ExpandableLayout expandableChangelogLayout;
+    private NestedScrollView expandableChangelogLayoutScrollView;
     private long mUpdateFileSize;
     private String mUpdateChangelog;
     private boolean buttonClicked = false;
@@ -116,6 +120,7 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
         mStopDownloadButton.setOnClickListener(mButtonClickListener);
         mButton.setOnClickListener(mButtonClickListener);
         expandableChangelogLayout = view.findViewById(R.id.expandableChangelogLayout);
+        expandableChangelogLayoutScrollView = view.findViewById(R.id.expandableChangelogLayoutScrollView);
         mChangelogButton = view.findViewById(R.id.changelog_button);
         mChangelogButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -148,6 +153,16 @@ public class UpdatePreference extends Preference implements OnLongClickListener 
                 sb.setSpan(new StyleSpan(Typeface.BOLD+ Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             }
             mChangelogText.setText(sb);
+            mChangelogText.post(new Runnable() {
+                @Override
+                public void run() {
+                    int lineCount = mChangelogText.getLineCount();
+                    int lineHeight = mChangelogText.getLineHeight();
+                    if (lineCount <= 18){
+                        expandableChangelogLayoutScrollView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, lineCount * lineHeight));
+                    }
+                }
+            });
         }
 
         mUpdatesPref = view.findViewById(R.id.updates_pref);

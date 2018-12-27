@@ -5,7 +5,7 @@
 
     <!-- Update checking -->
     <string name="ota_not_supported">This build doesn\'t support OTA updates.</string>
-    <string name="last_updated_at">(last updated at <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(last check at <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Downloaded</string>
     <string name="type_downloading">Downloading…</string>
     <string name="type_completing">Completing…</string>
@@ -46,8 +46,7 @@
 
     <!-- MD5 -->
     <string name="checking_md5">Verifying file integrity…</string>
-    <string name="md5_failed_dialog_title">File integrity</string>
-    <string name="md5_failed_dialog_message">Verification failed, would you like to proceed?</string>
+    <string name="md5_verification_failed">File integrity verification failed</string>
 
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Cancel download</string>
