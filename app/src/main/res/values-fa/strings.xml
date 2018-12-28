@@ -5,7 +5,6 @@
     <string name="app_name">به‌روز‌رسانی‌های سیستم</string>
     <!-- Update checking -->
     <string name="ota_not_supported">نسخه فعلی از آپدیت OTA پشتیبانی نمی‌کند.</string>
-    <string name="last_updated_at">(آخرین به‌روزرسانی در <xliff:g id="time">%s </xliff:g>)</string>
     <string name="type_downloaded">بارگیری شد</string>
     <string name="type_downloading">در حال بارگیری…</string>
     <string name="type_completing">در حال تکمیل…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">بارگذاری فهرست افزونه‌ها ناموفق بود</string>
     <!-- MD5 -->
     <string name="checking_md5">در حال بررسی سلامت فایل…</string>
-    <string name="md5_failed_dialog_title">سلامت فایل</string>
-    <string name="md5_failed_dialog_message">بررسی سلامت موفقیت‌آمیز نبود؛ همچنان میخواهید ادامه دهید؟</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">لغو بارگیری</string>
     <string name="confirm_download_cancel_dialog_message">بارگیری فعلی را لغو می‌کنید؟</string>

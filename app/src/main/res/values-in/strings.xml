@@ -5,7 +5,7 @@
     <string name="app_name">Pembaharuan sistem</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Bentukan ini tidak mendukung pemutakhiran OTA.</string>
-    <string name="last_updated_at">(Terakhir dimutakhirkan pada <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(terakhir kali diperbarui pada <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Terunduh</string>
     <string name="type_downloading">Mengunduh…</string>
     <string name="type_completing">Menyelesaikan…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Gagal memuat daftar pengaya</string>
     <!-- MD5 -->
     <string name="checking_md5">Memverifikasi integritas berkas…</string>
-    <string name="md5_failed_dialog_title">Integritas berkas</string>
-    <string name="md5_failed_dialog_message">Gagal memverifikasi, apakah Anda ingin melanjutkan?</string>
+    <string name="md5_verification_failed">Verifikasi integritas file gagal</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Batalkan unduhan</string>
     <string name="confirm_download_cancel_dialog_message">Batalkan unduhan sekarang?</string>

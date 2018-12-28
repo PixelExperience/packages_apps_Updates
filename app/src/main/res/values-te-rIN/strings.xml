@@ -5,7 +5,6 @@
     <string name="app_name">‌‌సిస్టమ్ అప్డేట్స్</string>
     <!-- Update checking -->
     <string name="ota_not_supported">ఈబిల్డ్ OTA నవీకరణలను మద్దతు లేదు.</string>
-    <string name="last_updated_at">(చివరిగా నవీకరించబడింది <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">డౌన్ లోడ్ చేయబడిన</string>
     <string name="type_downloading">డౌన్లోడ్ చేస్తోంది…</string>
     <string name="type_completing">పూర్తిచేసి…</string>

@@ -43,8 +43,7 @@
     <string name="addons_error">Не удалось загрузить список расширений</string>
     <!-- MD5 -->
     <string name="checking_md5">Проверка целостности файла…</string>
-    <string name="md5_failed_dialog_title">Целостность файла</string>
-    <string name="md5_failed_dialog_message">Сбой проверки, вы хотите продолжить?</string>
+    <string name="md5_verification_failed">Ошибка проверки целостности файла</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Отменить загрузку</string>
     <string name="confirm_download_cancel_dialog_message">Отменить текущую загрузку?</string>

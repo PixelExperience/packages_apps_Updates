@@ -5,7 +5,6 @@
     <string name="app_name">Оновлення системи</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ця збірка не підтримує ОТА - оновлення.</string>
-    <string name="last_updated_at">(Останнє оновлення на <xliff:g id="time">%s </xliff:g>)</string>
     <string name="type_downloaded">Завантажено</string>
     <string name="type_downloading">Завантаження…</string>
     <string name="type_completing">Завершення…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Помилка при завантаженні списку додатків</string>
     <!-- MD5 -->
     <string name="checking_md5">Перевірка цілісності додатку…</string>
-    <string name="md5_failed_dialog_title">Цілісність файлу</string>
-    <string name="md5_failed_dialog_message">Перевірка не вдалась, продовжити все одно?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Скасувати завантаження</string>
     <string name="confirm_download_cancel_dialog_message">Скасувати поточне завантаження?</string>

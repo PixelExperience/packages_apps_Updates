@@ -5,7 +5,6 @@
     <string name="app_name">Sistem yeniləmələri</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Bu quruluş OTA yeniləmələri dəstəkləmir.</string>
-    <string name="last_updated_at">(son yeniləmə <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Endirildi</string>
     <string name="type_downloading">Endirilir…</string>
     <string name="type_completing">Tamamlanır…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Əlavələrin siyahısını yükləmək alınmadı</string>
     <!-- MD5 -->
     <string name="checking_md5">Fayl inteqrasiyası yoxlanılır…</string>
-    <string name="md5_failed_dialog_title">Fayl inteqrasiyası</string>
-    <string name="md5_failed_dialog_message">Yoxlmaq uğursuz oldu, davam etmək istəyirsiniz?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Endirməni ləğv et</string>
     <string name="confirm_download_cancel_dialog_message">Hazırki endirmə ləğv edilsin?</string>

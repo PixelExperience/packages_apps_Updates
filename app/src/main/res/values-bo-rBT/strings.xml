@@ -5,7 +5,7 @@
     <string name="app_name">བརྒྱུད་ཁུངས་གསར་བསྒྱུར།</string>
     <!-- Update checking -->
     <string name="ota_not_supported">པར་གཞི་འདིར་གནས་སྐབས་སུOTAཡིས་གསར་བསྒྱུར་རམ་རིམ་སྤར་བྱེད་ཐུབ་ཀྱི་མེད།</string>
-    <string name="last_updated_at">(ཉེ་ཆར་གྱི་གསར་བསྒྱུར་དེ<xliff:g id="time">%s</xliff:g>སྐབས་སུ་བྱས་པ་ཡིན།)</string>
+    <string name="last_updated_at">(ཉེ་ཆར་གྱི་གསར་བསྒྱུར་ཞིབ་བཤེར་ནི<xliff:g id="time">%s</xliff:g>སྐབས་སུ་བྱས་པ་ཡིན།)</string>
     <string name="type_downloaded">ཕབ་ལེན་བྱས་ཚར་བ།</string>
     <string name="type_downloading">ཕབ་ལེན་བྱེད་བཞིན་པ།</string>
     <string name="type_completing">མི་འགྱང་བ་བར་ལེགས་འགྲུབ་ཡོང་ངེས།</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">སྦྲེལ་མཐུད་ཀྱི་ཐོ་གཞུངནང་འཇུག་མ་ཐུབ་པ།</string>
     <!-- MD5 -->
     <string name="checking_md5">སྦྲེལ་མཐུད་ལ་ཞིབ་བཤེར་བྱེད་བཞིན་ཡོད།</string>
-    <string name="md5_failed_dialog_title">ཡིག་ཆར་ཞིབ་བཤེར་བྱེད་མ་ཐུབ།</string>
-    <string name="md5_failed_dialog_message">ཡིག་ཆར་ཞིབ་བཤེར་བྱེད་མ་ཐུབ། མུ་མཐུད་དམ།</string>
+    <string name="md5_verification_failed">ཡིག་ཆའི་ཆ་ཚང་རང་བཞིན་ལ་ཞིབ་བཤེར་བྱེད་མ་ཐུབ།</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">ཕབ་ལེན་མི་བྱེད།</string>
     <string name="confirm_download_cancel_dialog_message">ད་ལྟ་ཕབ་ལེན་བྱེད་བཞིན་པའི་ཡིག་ཆ་མེད་པར་བཟོའམ།</string>
@@ -79,5 +78,16 @@
     <string name="reboot_message">ཁྱེད་ཀྱི་ཁ་པར་བསྐྱར་སྒྲིག་དཔེ་ཚུལ(recovery mode) དུ་བསྐྱར་སློང་བྱས་ཏེ་\n\གསར་བསྒྱུར་གྱི་ཡིག་ཆ་:\n<xliff:g id="filepath">%s</xliff:g>\n\nནང་འཇུག་བྱེད་ངེས། མུ་མཐུད་དུ་ནང་འཇུག་བྱེད་དམ།</string>
     <string name="reboot_failed_title">ནོར་འཁྲུལ་བྱུང་བ།</string>
     <string name="reboot_failed_message">བསྐྱར་སློང་བྱེད་མ་ཐུབ། ཁྱེད་ཀྱིས་རང་གིས་བསྐྱར་སྒྲིག་དཔེ་ཚུལ་དུ་ཞུགས་ནས་ཡིག་ཆ:\n\n<xliff:g id="filepath">%s</xliff:g>ནང་འཇུག་བྱེད་རོགས།</string>
+    <string name="delete_after_install_title">ནང་འཇུག་བྱས་རྗེས་ཡིག་ཆ་བསུབ་པ།</string>
+    <string name="advanced_options">མཐོ་རིམ་གདམ་ཚན།</string>
+    <string name="save_advanced_options">གསོག་ཉར།</string>
+    <string name="wipe_cache">ཤོང་གསོག་གཙང་སེལ།</string>
+    <string name="wipe_dalvik_cache"> Dalvik/ART ཡི་ཤོང་གསོག་གཙང་སེལ།</string>
+    <string name="wipe_data">གཞི་གྲངས་གཙང་སེལ།</string>
+    <string name="wipe_data_dialog_confirmation_title">བཟོ་གྲྭའི་སྒྲིག་འགོད་སླར་གསོ།</string>
+    <string name="wipe_data_dialog_confirmation_message">ཁྱེད་ཀྱིས་གཞི་ལངས་གཙང་སེལ་བདམས་འདུག  འདི་ལྟར་བྱས་ན་སྒྲིག་ཆས་སྟེང་གི་ཡིག་ཆ་ཡོད་ཚད་བསུབ་ངེས། ད་རུང་མུ་མཐུད་དམ།</string>
+    <string name="update_manual_ab">གལ་ཏེ་མུ་མཐུད་དུ་ལག་བསྟར་བ་བྱེད་དགོས་ཚེTWRPནས་ཐོན་རིམ་འདི་ནང་འཇུག་བྱ་རོགས།  སྒྲིག་ཆས་འདིA/Bཁག་བགོར་རྒྱབ་སྐྱོར་མེད་པས་་རང་འགུལ་ནང་འཇུག་བྱེད་མི་ཐུབ།</string>
     <!-- Changelog -->
+    <string name="changelog_title">གསར་བསྒྱུར་ཉིན་ཐོ།</string>
+    <string name="changelog_loading">ནང་འཇུག་བྱེད་བཞིན་ཡོོད།</string>
 </resources>

@@ -5,7 +5,6 @@
     <string name="app_name">Kemaskini sistem</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Binaan ini tidak menyokong kemaskini OTA.</string>
-    <string name="last_updated_at">(kemaskini terakhir pada <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Sudah dimuat turun</string>
     <string name="type_downloading">Sedang dimuat turun…</string>
     <string name="type_completing">Sedang dilengkapkan…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Gagal untuk memuatkan ciri tambahan</string>
     <!-- MD5 -->
     <string name="checking_md5">Mengesahkan integriti fail…</string>
-    <string name="md5_failed_dialog_title">Integriti File</string>
-    <string name="md5_failed_dialog_message">Pengesahan gagal, anda ingin teruskan?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Batalkan muat turun</string>
     <string name="confirm_download_cancel_dialog_message">Batalkan muat turun ini?</string>

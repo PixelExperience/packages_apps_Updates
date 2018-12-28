@@ -5,7 +5,6 @@
     <string name="app_name">Anagraw ileqman</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Lqem agi ur yettawi ara ileqman OTA</string>
-    <string name="last_updated_at">(lqem anegaru<xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Ttwasidren-d</string>
     <string name="type_downloading">Ay teddu usider...</string>
     <string name="type_completing">Afuku...</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Tuccḍa deg sider n tidbarin n ifuyla yessefken</string>
     <!-- MD5 -->
     <string name="checking_md5">A senqed n timmad n ufaylu...</string>
-    <string name="md5_failed_dialog_title">Timmad n ufaylu</string>
-    <string name="md5_failed_dialog_message">Tuccḍa n usenqed,tebɣiḍ attkemmleḍ ?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Sefsex asider</string>
     <string name="confirm_download_cancel_dialog_message">Sefsex asider amiran?</string>

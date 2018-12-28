@@ -5,7 +5,6 @@
     <string name="app_name">Systemuppdateringar</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Detta bygge stöder inte OTA uppdateringar.</string>
-    <string name="last_updated_at">(senast uppdaterad på <xliff:g id="time">%s </xliff:g>)</string>
     <string name="type_downloaded">Nedladdade</string>
     <string name="type_downloading">Hämtar…</string>
     <string name="type_completing">Gör klart…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Misslyckades att ladda modullistan</string>
     <!-- MD5 -->
     <string name="checking_md5">Kontrollerar filens integritet…</string>
-    <string name="md5_failed_dialog_title">Filintegritet</string>
-    <string name="md5_failed_dialog_message">Verifieringen misslyckades, vill du fortsätta?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Avbryt nedladdning</string>
     <string name="confirm_download_cancel_dialog_message">Avbryta nedladdning ?</string>

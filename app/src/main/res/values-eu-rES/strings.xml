@@ -5,7 +5,6 @@
     <string name="app_name">Sistemaren eguneratzeak</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Bertsio onek ez du OTA(On The Air) eguneratzeriak onartzen.</string>
-    <string name="last_updated_at">(Azkeneko eguneratzea <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Deskargatuta</string>
     <string name="type_downloading">Deskargatzen…</string>
     <string name="type_completing">Osatzen…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Akatsa moduluen zerrenda kargatzerakoan</string>
     <!-- MD5 -->
     <string name="checking_md5">Egiaztatu fitxategia osotasuna…</string>
-    <string name="md5_failed_dialog_title">Fitxategi osotasuna</string>
-    <string name="md5_failed_dialog_message">Egiaztapena huts egin du, jarraitu nahi duzu?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Ezeztatu jeisketa</string>
     <string name="confirm_download_cancel_dialog_message">Uneko deskarga utzi?</string>

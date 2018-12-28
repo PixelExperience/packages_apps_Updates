@@ -5,7 +5,6 @@
     <string name="app_name">עדכוני מערכת</string>
     <!-- Update checking -->
     <string name="ota_not_supported">גרסה זה לא תומכת בעדכוני מערכת דרך האוויר.</string>
-    <string name="last_updated_at">עודכן לאחרונה ב <xliff:g id="Time">%s</xliff:g></string>
     <string name="type_downloaded">ירד</string>
     <string name="type_downloading">מוריד…</string>
     <string name="type_completing">מסיים…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">טעינת רשימת המודולים נכשלה</string>
     <!-- MD5 -->
     <string name="checking_md5">מוודא תקינות קבצים…</string>
-    <string name="md5_failed_dialog_title">הקובץ שלם</string>
-    <string name="md5_failed_dialog_message">אימות נכשל, האם ברצונך להמשיך?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">בטל הורדה</string>
     <string name="confirm_download_cancel_dialog_message">לבטל את ההורדה הנוכחית ?</string>

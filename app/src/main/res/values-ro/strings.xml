@@ -5,7 +5,7 @@
     <string name="app_name">Actualizări de sistem</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Această versiune nu acceptă actualizări OTA.</string>
-    <string name="last_updated_at">(ultima actualizare la <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(ultima verificare la <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Descărcat</string>
     <string name="type_downloading">Descărcare…</string>
     <string name="type_completing">Finalizare…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Nu se poate încarcă lista de module</string>
     <!-- MD5 -->
     <string name="checking_md5">Se verifică integritatea pachetului…</string>
-    <string name="md5_failed_dialog_title">Integritate pachet</string>
-    <string name="md5_failed_dialog_message">Verificare eșuată, ați dori să continuați?</string>
+    <string name="md5_verification_failed">Verificarea integrității fișierului a eșuat</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Anulare descărcare</string>
     <string name="confirm_download_cancel_dialog_message">Anulați descărcarea curentă ?</string>

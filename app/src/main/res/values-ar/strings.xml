@@ -5,7 +5,7 @@
     <string name="app_name">تحديثات النظام</string>
     <!-- Update checking -->
     <string name="ota_not_supported">هذا النظام لا يدعم تحديثات الـ OTA.</string>
-    <string name="last_updated_at">(تم آخر تحديث في <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(اخر فحص في <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">تم التحميل</string>
     <string name="type_downloading">جاري التحميل…</string>
     <string name="type_completing">يتم الاكتمال…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">حدث خطأ في تحميل قائمة الإضافات</string>
     <!-- MD5 -->
     <string name="checking_md5">جار التحقق من سلامة الملف…</string>
-    <string name="md5_failed_dialog_title">سلامة الملف</string>
-    <string name="md5_failed_dialog_message">فشل، لم يتم التحقق، هل تود المتابعة؟</string>
+    <string name="md5_verification_failed">فشل التحقق من سلامة الملف</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">إلغاء التحميل</string>
     <string name="confirm_download_cancel_dialog_message">إلغاء التنزيل الحالي؟</string>

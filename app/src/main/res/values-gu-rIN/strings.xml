@@ -5,7 +5,6 @@
     <string name="app_name">સિસ્ટમ અપડેટ્સ</string>
     <!-- Update checking -->
     <string name="ota_not_supported">આ બિલ્ડ OTA અપડેટ્સને સપોર્ટ કરતું નથી.</string>
-    <string name="last_updated_at">(છેલ્લે <xliff:g id="time">%s</xliff:g> પર અપડેટ કરેલું)</string>
     <string name="type_downloaded">ડાઉનલોડ કરેલ</string>
     <string name="type_downloading">ડાઉનલોડ કરી રહ્યું છે…</string>
     <string name="type_completing">પૂર્ણ કરી રહ્યું છે…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">ઍડ-ઑન્સ સૂચિ લોડ કરવામાં નિષ્ફળ</string>
     <!-- MD5 -->
     <string name="checking_md5">ફાઇલ સંકલિતતા ચકાસી રહી છે…</string>
-    <string name="md5_failed_dialog_title">ફાઇલ સંકલિતતા</string>
-    <string name="md5_failed_dialog_message">ચકાસણી નિષ્ફળ થઈ, શું તમે આગળ વધવા માંગો છો?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">ડાઉનલોડ રદ કરો</string>
     <string name="confirm_download_cancel_dialog_message">શું હાલનું ડાઉનલોડ રદ કરવું છે?</string>

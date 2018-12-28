@@ -5,7 +5,7 @@
     <string name="app_name">Sistemos atnaujinimai</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ši versija nepalaiko OTA atnaujinimų.</string>
-    <string name="last_updated_at">(paskutinį kartą atnaujinta <xliff:g id="time">%s </xliff:g>)</string>
+    <string name="last_updated_at">(paskutinis patikrinimas <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Atsisiųsta</string>
     <string name="type_downloading">Atsiunčiama…</string>
     <string name="type_completing">Baigiama…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Nepavyko įkelti priedų sąrašo</string>
     <!-- MD5 -->
     <string name="checking_md5">Tikrinamas failo vientisumas…</string>
-    <string name="md5_failed_dialog_title">Failo vientisumas</string>
-    <string name="md5_failed_dialog_message">Patikra nepavyko, ar norite tęsti?</string>
+    <string name="md5_verification_failed">Klaida tikrinant failo vientisumą</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Atšaukti atsisiuntimą</string>
     <string name="confirm_download_cancel_dialog_message">Atšaukti dabartinį atsisiuntimą?</string>

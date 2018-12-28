@@ -5,7 +5,7 @@
     <string name="app_name">Posodobitve sistema</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ta izgradnja ne podpira OTA posodobitev.</string>
-    <string name="last_updated_at">(nazadnje posodobljeno ob <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(nazadnje preverjeno ob <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Preneseno</string>
     <string name="type_downloading">Prenašanje …</string>
     <string name="type_completing">Zaključevanje …</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Nalaganje seznama dodatkov je spodletelo</string>
     <!-- MD5 -->
     <string name="checking_md5">Preverjanje neoporečnosti datoteke …</string>
-    <string name="md5_failed_dialog_title">Neoporečnost datoteke</string>
-    <string name="md5_failed_dialog_message">Preverjanje je spodletelo, ali želite nadaljevati?</string>
+    <string name="md5_verification_failed">Preverjanje neoporečnosti datoteke je spodletelo</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Prekliči prenos</string>
     <string name="confirm_download_cancel_dialog_message">Prekliči trenutni prenos?</string>

@@ -5,7 +5,6 @@
     <string name="app_name">Cập nhật</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Bản dựng này không hỗ trợ Cập Nhật OTA.</string>
-    <string name="last_updated_at">(cập nhật mới nhất lúc <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Đã tải xuống</string>
     <string name="type_downloading">Đang tải xuống…</string>
     <string name="type_completing">Đang hoàn thành…</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">Không thể tải danh sách tiện ích</string>
     <!-- MD5 -->
     <string name="checking_md5">Xác minh tính nguyên vẹn tập tin…</string>
-    <string name="md5_failed_dialog_title">Tập tin nguyên vẹn</string>
-    <string name="md5_failed_dialog_message">Xác minh thất bại, bạn có muốn tiếp tục không?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Hủy bỏ tải xuống</string>
     <string name="confirm_download_cancel_dialog_message">Huỷ tác vụ tải xuống hiện tại ?</string>

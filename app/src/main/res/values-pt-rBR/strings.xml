@@ -43,8 +43,7 @@
     <string name="addons_error">Falha ao carregar a lista de arquivos</string>
     <!-- MD5 -->
     <string name="checking_md5">Verificando a integridade do arquivo…</string>
-    <string name="md5_failed_dialog_title">Integridade do arquivo</string>
-    <string name="md5_failed_dialog_message">Falha na verificação, deseja prosseguir?</string>
+    <string name="md5_verification_failed">Falha na verificação da integridade do arquivo</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Cancelar download</string>
     <string name="confirm_download_cancel_dialog_message">Deseja cancelar o download atual?</string>

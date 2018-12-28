@@ -5,7 +5,7 @@
     <string name="app_name">Rendszerfrissítések</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ez a kiadás nem támogatja az OTA frissítéseket.</string>
-    <string name="last_updated_at">(legutóbb frissítve <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(legutóbb ellenőrizve: <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Letöltött</string>
     <string name="type_downloading">Letöltés…</string>
     <string name="type_completing">Befejezés…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Nem sikerült a kiegészítők betöltése</string>
     <!-- MD5 -->
     <string name="checking_md5">Fájlok sértetlenségének ellenőrzése…</string>
-    <string name="md5_failed_dialog_title">Fájl integritás</string>
-    <string name="md5_failed_dialog_message">Az ellenőrzés nem sikerült, szeretné folytatni?</string>
+    <string name="md5_verification_failed">Meghiúsult a fájl sértetlenségének ellenőrzése</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Letöltés megszakítása</string>
     <string name="confirm_download_cancel_dialog_message">Megszakítja a jelenlegi letöltést?</string>

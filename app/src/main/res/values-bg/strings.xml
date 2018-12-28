@@ -5,7 +5,7 @@
     <string name="app_name">Системни актуализации</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Тази версия не поддъража актуализации OTA (по въздуха).</string>
-    <string name="last_updated_at">(последна актуализация в <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(последна проверка в <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Изтеглени</string>
     <string name="type_downloading">Изтегляне…</string>
     <string name="type_completing">Завършване…</string>
@@ -43,8 +43,6 @@
     <string name="addons_error">Неуспешно зареждане на списък на добавките</string>
     <!-- MD5 -->
     <string name="checking_md5">Проверка на целостта на файла…</string>
-    <string name="md5_failed_dialog_title">Цялост на файла</string>
-    <string name="md5_failed_dialog_message">Проверка не успя, искате ли да продължите?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Отказ от изтеглянето</string>
     <string name="confirm_download_cancel_dialog_message">Да бъде ли отказано текущото изтегляне ?</string>

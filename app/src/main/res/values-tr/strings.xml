@@ -5,7 +5,7 @@
     <string name="app_name">Sistem güncellemeleri</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Bu yapı OTA güncellemelerini desteklemiyor.</string>
-    <string name="last_updated_at">(son güncelleme <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(son kontrol <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">İndirildi</string>
     <string name="type_downloading">İndiriliyor…</string>
     <string name="type_completing">Tamamlanıyor...</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Eklenti listesi yüklenemedi</string>
     <!-- MD5 -->
     <string name="checking_md5">Dosya bütünlüğünü doğrulanıyor…</string>
-    <string name="md5_failed_dialog_title">Dosya bütünlüğü</string>
-    <string name="md5_failed_dialog_message">Doğrulama başarısız oldu, devam etmek ister misiniz?</string>
+    <string name="md5_verification_failed">Dosya bütünlüğünü doğrulama başarısız oldu</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">İndirmeyi iptal et</string>
     <string name="confirm_download_cancel_dialog_message">Geçerli indirme iptal edilsin mi?</string>

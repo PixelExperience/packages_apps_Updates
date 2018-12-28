@@ -5,7 +5,6 @@
     <string name="app_name">系统更新</string>
     <!-- Update checking -->
     <string name="ota_not_supported">该版本暂不支持 OTA 更新。</string>
-    <string name="last_updated_at">(最后一次更新于 <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">下载完成</string>
     <string name="type_downloading">正在下载……</string>
     <string name="type_completing">即将完成……</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">加载插件列表失败</string>
     <!-- MD5 -->
     <string name="checking_md5">正在校验文件……</string>
-    <string name="md5_failed_dialog_title">文件校验失败</string>
-    <string name="md5_failed_dialog_message">文件验证失败，您还要继续吗？</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">取消下载</string>
     <string name="confirm_download_cancel_dialog_message">是否取消当前下载？</string>

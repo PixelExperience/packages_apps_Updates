@@ -5,7 +5,7 @@
     <string name="app_name">Aktualizace systému</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Toto sestavení nepodporuje aktualizace OTA.</string>
-    <string name="last_updated_at">(naposledy aktualizováno <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(naposledy zkontrolováno v <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Staženo</string>
     <string name="type_downloading">Stahování…</string>
     <string name="type_completing">Dokončování…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Nepovedlo se načíst seznam doplňků</string>
     <!-- MD5 -->
     <string name="checking_md5">Ověřování integrity souborů…</string>
-    <string name="md5_failed_dialog_title">Integrita souboru</string>
-    <string name="md5_failed_dialog_message">Ověření se nezdařilo, chcete pokračovat?</string>
+    <string name="md5_verification_failed">Ověření integrity souborů selhalo</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Zrušit stahování</string>
     <string name="confirm_download_cancel_dialog_message">Opravdu chcete zrušit aktuální stahování ?</string>

@@ -5,7 +5,6 @@
     <string name="app_name">সিস্টেম আধুনিকীকরণ</string>
     <!-- Update checking -->
     <string name="ota_not_supported">এই নির্মাণ OTA আধুনিকীকরণগুলি সমর্থন করে না।</string>
-    <string name="last_updated_at">(সর্বশেষ সংস্কার হয়েছে, <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">ডাউনলোড হয়েছে</string>
     <string name="type_downloading">ডাউনলোড করা হচ্ছে…</string>
     <string name="type_completing">সম্পূর্ণ করা হচ্ছে...</string>
@@ -43,8 +42,6 @@
     <string name="addons_error">অ্যাড-অনের তালিকা লোড করতে ব্যর্থ</string>
     <!-- MD5 -->
     <string name="checking_md5">ফাইল শুদ্ধতা যাচাই করা হচ্ছে...</string>
-    <string name="md5_failed_dialog_title">ফাইল ইন্টিগ্রিটি</string>
-    <string name="md5_failed_dialog_message">ভেরিফিকেশন ব্যর্থ, আপনি কি অগ্রসর হতে চান?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">ডাউনলোড বাতিল</string>
     <string name="confirm_download_cancel_dialog_message">বর্তমান ডাউনলোডটি বাতিল করতে চান ?</string>

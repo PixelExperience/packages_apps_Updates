@@ -4,7 +4,6 @@
     <!-- App name -->
     <string name="app_name">அமைப்பு புதுப்பிகள்</string>
     <!-- Update checking -->
-    <string name="last_updated_at">(<xliff:g id="time">%s </xliff:g> இல் புதுப்பிக்கப்பட்டது)</string>
     <string name="type_downloaded">பதிவிறக்கப்படுகிறது</string>
     <string name="type_downloading">பதிவிறக்கப்படுகிறது…</string>
     <string name="type_completing">நிறைவுசெய்கிறது…</string>
@@ -42,8 +41,6 @@
     <string name="addons_error">துணை நிரல்களை பட்டியலில் ஏற்றுவதில் தோல்வி</string>
     <!-- MD5 -->
     <string name="checking_md5">கோப்பு ஒருங்கிணைப்பை சரிபார்க்கிறது…</string>
-    <string name="md5_failed_dialog_title">கோப்பு நேர்மை</string>
-    <string name="md5_failed_dialog_message">சரிபார்ப்பு தோல்வி, நீங்கள் தொடர விரும்புகிறீர்களா?</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">பதிவிறக்கம் ரத்துசெய்</string>
     <string name="confirm_download_cancel_dialog_message">நடப்பு பதிவிறக்கத்தை ரத்துசெய்யவா?</string>

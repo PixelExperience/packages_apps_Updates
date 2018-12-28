@@ -5,7 +5,7 @@
     <string name="app_name">Mises à jour système</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Cette version ne supporte pas les mises à jours OTA.</string>
-    <string name="last_updated_at">(dernier mise à jour à <xliff:g id="time">%s</xliff:g>)</string>
+    <string name="last_updated_at">(dernière mise à jour : <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Téléchargé</string>
     <string name="type_downloading">Téléchargement en cours…</string>
     <string name="type_completing">En train de finir…</string>
@@ -43,8 +43,7 @@
     <string name="addons_error">Échec du chargement de la liste des add-ons</string>
     <!-- MD5 -->
     <string name="checking_md5">Vérification de l\'intégrité du fichier…</string>
-    <string name="md5_failed_dialog_title">Intégrité du fichier</string>
-    <string name="md5_failed_dialog_message">Échec de la vérification, voulez vous continuer ?</string>
+    <string name="md5_verification_failed">La vérification de l\'intégrité du fichier a échoué</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Annuler le téléchargement</string>
     <string name="confirm_download_cancel_dialog_message">Annuler le téléchargement en cours ?</string>

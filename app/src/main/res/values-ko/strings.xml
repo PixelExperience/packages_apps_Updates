@@ -43,8 +43,7 @@
     <string name="addons_error">부가 기능 목록을 불러오지 못했습니다.</string>
     <!-- MD5 -->
     <string name="checking_md5">파일 무결성 확인 중…</string>
-    <string name="md5_failed_dialog_title">파일 무결성</string>
-    <string name="md5_failed_dialog_message">확인에 실패했습니다. 계속 하시겠습니까?</string>
+    <string name="md5_verification_failed">파일 무결성 검증 실패</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">다운로드 취소</string>
     <string name="confirm_download_cancel_dialog_message">현재 다운로드를 취소하시겠습니까?</string>
