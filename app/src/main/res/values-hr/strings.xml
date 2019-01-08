@@ -5,6 +5,7 @@
     <string name="app_name">Ažuriranja sustava</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ova verzija sustava ne podržava OTA ažuriranja.</string>
+    <string name="last_updated_at">(Zadnje ažurirano <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Preuzeto</string>
     <string name="type_downloading">Preuzima se…</string>
     <string name="type_completing">Dovršavanje…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Učitavanje popisa dodataka nije uspjelo</string>
     <!-- MD5 -->
     <string name="checking_md5">Provjeravam integritet datoteke…</string>
+    <string name="md5_verification_failed">Provjera integriteta datoteka neuspješna</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Otkaži preuzimanje</string>
     <string name="confirm_download_cancel_dialog_message">Prekini trenutno preuzimanje?</string>

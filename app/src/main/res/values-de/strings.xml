@@ -5,6 +5,7 @@
     <string name="app_name">Systemaktualisierungen</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Dieses Build unterstützt keine OTA-Aktualisierungen.</string>
+    <string name="last_updated_at">(zuletzt aktualisiert am <xliff:g id="time">%s </xliff:g>)</string>
     <string name="type_downloaded">Heruntergeladen</string>
     <string name="type_downloading">Herunterladen…</string>
     <string name="type_completing">Wird abgeschlossen…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Fehler beim Laden der Add-on Liste</string>
     <!-- MD5 -->
     <string name="checking_md5">Integritätsprüfung…</string>
+    <string name="md5_verification_failed">Die Überprüfung der Dateiintegrität ist fehlgeschlagen</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Download abbrechen</string>
     <string name="confirm_download_cancel_dialog_message">Soll der aktuelle Download abgebrochen werden ?</string>

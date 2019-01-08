@@ -5,6 +5,7 @@
     <string name="app_name">Aktualizacje systemu</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Ten system nie obsługuje aktualizacji OTA.</string>
+    <string name="last_updated_at">(ostatnio sprawdzono o <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Pobrano</string>
     <string name="type_downloading">Pobieranie…</string>
     <string name="type_completing">Kończenie…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Nie można załadować listy dodatków</string>
     <!-- MD5 -->
     <string name="checking_md5">Weryfikowanie integralności pakietu…</string>
+    <string name="md5_verification_failed">Weryfikacja integralności pliku nie powiodła się</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Anuluj pobieranie</string>
     <string name="confirm_download_cancel_dialog_message">Anulować trwające pobieranie ?</string>

@@ -5,6 +5,7 @@
     <string name="app_name">Actualizações do sistema</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Esta compilação não suporta atualizações OTA.</string>
+    <string name="last_updated_at">(ultima actualização às <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Transferida</string>
     <string name="type_downloading">A transferir…</string>
     <string name="type_completing">A completar…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Falha ao carregar a lista de complementos</string>
     <!-- MD5 -->
     <string name="checking_md5">A verificar a integridade do arquivo…</string>
+    <string name="md5_verification_failed">Integridade do ficheiro falhada</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Cancelar transferência</string>
     <string name="confirm_download_cancel_dialog_message">Deseja cancelar a transferência atual ?</string>

@@ -5,6 +5,7 @@
     <string name="app_name">システムアップデート</string>
     <!-- Update checking -->
     <string name="ota_not_supported">このビルドではOTAアップデートはサポートされていません</string>
+    <string name="last_updated_at">（<xliff:g id="time">%s</xliff:g>に最終確認）</string>
     <string name="type_downloaded">ダウンロード済</string>
     <string name="type_downloading">ダウンロード中</string>
     <string name="type_completing">完了処理中</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">アドオンリストのロードに失敗しました</string>
     <!-- MD5 -->
     <string name="checking_md5">ファイルの整合性を確認中</string>
+    <string name="md5_verification_failed">ファイルの整合性検証に失敗しました</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">ダウンロードをキャンセル</string>
     <string name="confirm_download_cancel_dialog_message">現在のダウンロードをキャンセルしますか？</string>
