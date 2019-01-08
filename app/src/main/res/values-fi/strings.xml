@@ -5,7 +5,7 @@
     <string name="app_name">Järjestelmäpäivitykset</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Tämä koontiversio ei tue OTA-päivityksiä.</string>
-    <string name="last_updated_at">(viimeinen tarkistus<xliff:g id="aika">%s</xliff:g>)</string>
+    <string name="last_updated_at">(viimeisin tarkistus <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Ladattu</string>
     <string name="type_downloading">Ladataan…</string>
     <string name="type_completing">Viimeistellään…</string>
@@ -27,7 +27,7 @@
     <string name="mobile_data_warning_title">Tiedon käyttö varoitus</string>
     <string name="mobile_data_warning_summary">Näytä varoitus kun käyttäjä yrittää ladata päivityksen mobiilidatalla</string>
     <!-- Info section -->
-    <string name="extras_category_title">Ylijäämä tietoa</string>
+    <string name="extras_category_title">Ekstrat</string>
     <string name="error_open_url">URL avaaminen selaimessa epäonnistui</string>
     <string name="developer_info_title">Ylläpitäjä</string>
     <string name="donate_info_title">Lahjoita</string>
