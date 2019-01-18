@@ -4,7 +4,7 @@
     <!-- App name -->
     <string name="app_name">Aktualizacje systemu</string>
     <!-- Update checking -->
-    <string name="ota_not_supported">Ten system nie obsługuje aktualizacji OTA.</string>
+    <string name="ota_not_supported">Ta kompilacja nie obsługuje aktualizacji OTA.</string>
     <string name="last_updated_at">(ostatnio sprawdzono o <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Pobrano</string>
     <string name="type_downloading">Pobieranie…</string>
@@ -16,7 +16,7 @@
     <string name="update_found_notification">Dostępna jest nowa aktualizacja</string>
     <string name="update_found_notification_desc">Kliknij aby pobrać</string>
     <string name="no_updates_available">Brak dostępnych aktualizacji</string>
-    <string name="no_updates_available_pref_title">Brak dostępnych aktualizacji. Odśwież aby sprawdzić czy są dostępne nowe uaktualnienia.</string>
+    <string name="no_updates_available_pref_title">Brak dostępnych aktualizacji. Odśwież, aby sprawdzić, czy są dostępne nowe uaktualnienia.</string>
     <string name="update_check_failed">Szukanie aktualizacji zakończone niepowodzeniem. Sprawdź połączenie z Internetem i spróbuj później.</string>
     <string name="data_connection_required">Wymagane połączenie z Internetem.</string>
     <string name="changelog_button">Zobacz zmiany</string>
@@ -25,10 +25,10 @@
     <string name="download_folder_title">Folder pobieranych plików</string>
     <string name="unknown">Nieznany</string>
     <string name="mobile_data_warning_title">Ostrzeżenie o danych komórkowych</string>
-    <string name="mobile_data_warning_summary">Pokaż powiadomienie gdy użytkownik będzie próbował pobrać uaktualnienie przez dane komórkowe</string>
+    <string name="mobile_data_warning_summary">Pokaż powiadomienie, gdy użytkownik będzie próbował pobrać uaktualnienie przez dane komórkowe</string>
     <!-- Info section -->
     <string name="extras_category_title">Dodatki</string>
-    <string name="error_open_url">Nie można otworzyć adres URL w przeglądarce</string>
+    <string name="error_open_url">Nie można otworzyć adresu URL w przeglądarce</string>
     <string name="developer_info_title">Opiekun</string>
     <string name="donate_info_title">Dotacja</string>
     <string name="donate_info_summary">Wesprzyj rozwój programu</string>
@@ -46,7 +46,7 @@
     <string name="md5_verification_failed">Weryfikacja integralności pliku nie powiodła się</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Anuluj pobieranie</string>
-    <string name="confirm_download_cancel_dialog_message">Anulować trwające pobieranie ?</string>
+    <string name="confirm_download_cancel_dialog_message">Anulować trwające pobieranie?</string>
     <string name="download_cancelled">Anulowano pobieranie</string>
     <string name="download_already_running">Pobierane już trwa</string>
     <string name="unable_to_stop_download">Nie można zatrzymać pobierania</string>
@@ -54,28 +54,28 @@
     <string name="download_not_found">Nie odnaleziono pliku</string>
     <string name="notif_download_success_title">Aktualizacja pobrana pomyślnie</string>
     <string name="notif_download_success_summary">Kliknij, aby zainstalować</string>
-    <string name="notif_download_failure_title">Pobieranie aktualizacji zostało nie ukończone</string>
+    <string name="notif_download_failure_title">Nie ukończono pobierania aktualizacji</string>
     <string name="error_download_in_progress">Trwa pobieranie pliku</string>
-    <string name="error_file_ready_to_install">Jest aktualizacja gotowa do instalacji</string>
-    <string name="storage_permission_error">Proszę, daj uprawnienia pamięci aby kontyunować</string>
+    <string name="error_file_ready_to_install">Aktualizacja jest gotowa do instalacji</string>
+    <string name="storage_permission_error">Nadaj uprawnienia do pamięci, aby kontynuować</string>
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Usuń plik</string>
     <string name="confirm_delete_dialog_message">Usunąć wybrany plik?</string>
-    <string name="confirm_delete_all_dialog_message">Usunąć wszystkie pobrane pliki aktualizacyjne?</string>
+    <string name="confirm_delete_all_dialog_message">Usunąć wszystkie pobrane aktualizacje?</string>
     <string name="delete_update_success_message">Aktualizacja <xliff:g id="filename">%s</xliff:g> została usunięta</string>
-    <string name="delete_updates_failure_message">Błąd podczas pobierania pliku aktualizacyjnego</string>
+    <string name="delete_updates_failure_message">Błąd podczas usuwania pliku aktualizacji</string>
     <string name="delete_updates_noFolder_message">Nie znaleziono folderu z aktualizacjami</string>
     <string name="delete_updates_success_message">Wszystkie pobrane aktualizacje zostały usunięte</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Odśwież</string>
-    <string name="menu_delete_all">Usuń aktualizację</string>
+    <string name="menu_delete_all">Usuń aktualizacje</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Uwaga</string>
-    <string name="update_on_mobile_data_message">Za chwilę pobierzesz pakiet aktualizacji przy użyciu danych mobilnych, który prawdopodobnie spowoduje wysokie zużycie danych. Czy chcesz kontynuować?</string>
+    <string name="update_on_mobile_data_message">Za chwilę pobierzesz pakiet aktualizacji przy użyciu danych mobilnych, co prawdopodobnie spowoduje wysokie zużycie danych. Czy chcesz kontynuować?</string>
     <string name="checkbox_mobile_data_warning">Nie pokazuj ponownie</string>
     <!-- Install -->
-    <string name="reboot_title">Zainstaluj aktualizacje</string>
-    <string name="reboot_message">Twoje urządzenie zostanie ponownie uruchomione w trybie odzyskiwania, aby zainstalować aktualizację.\n\n Zostanie zainstalowany następujący plik:\n<xliff:g id="filepath">%s</xliff:g>\n\nCzy chcesz kontynuować?</string>
+    <string name="reboot_title">Zainstaluj aktualizację</string>
+    <string name="reboot_message">Twoje urządzenie zostanie ponownie uruchomione w trybie Recovery, aby zainstalować aktualizację.\n\n Zostanie zainstalowany następujący plik:\n<xliff:g id="filepath">%s</xliff:g>\n\nCzy chcesz kontynuować?</string>
     <string name="reboot_failed_title">Błąd</string>
     <string name="reboot_failed_message">Nie można zrestartować, proszę uruchomić ponownie do recovery i zainstalować plik:\n\n<xliff:g id="filepath">%s</xliff:g></string>
     <string name="delete_after_install_title">Usuń plik zip po instalacji</string>
@@ -85,7 +85,7 @@
     <string name="wipe_dalvik_cache">Wyczyść pamięć dalvik cache</string>
     <string name="wipe_data">Wyczyść dane</string>
     <string name="wipe_data_dialog_confirmation_title">Przywracanie ustawień fabrycznych</string>
-    <string name="wipe_data_dialog_confirmation_message">Zaznaczyłeś \'usuń dane\', wykona to reset do ustawień fabrycznych Twojego urządzenia, czy kontynuować?</string>
+    <string name="wipe_data_dialog_confirmation_message">Zaznaczyłeś opcję \'Wyczyść dane\', spowoduje to reset do ustawień fabrycznych Twojego urządzenia. Czy chcesz kontynuować?</string>
     <string name="update_manual_ab">Aby kontynuować, wgraj system ręcznie używając TWRP. To urządzenie nie wspiera automatycznego wgrywania z powodu partycji A/B.</string>
     <!-- Changelog -->
     <string name="changelog_title">Lista zmian</string>

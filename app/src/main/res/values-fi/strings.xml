@@ -43,7 +43,7 @@
     <string name="addons_error">Lisäosien listan lataaminen epäonnistui</string>
     <!-- MD5 -->
     <string name="checking_md5">Tarkistetaan tiedoston Md5…</string>
-    <string name="md5_verification_failed">Tiedoston yhtenäisyys tarkistus virheellinen</string>
+    <string name="md5_verification_failed">Tiedoston eheyden tarkistaminen epäonnistui</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Peruuta lataus</string>
     <string name="confirm_download_cancel_dialog_message">Peruuta nykyinen lataus?</string>

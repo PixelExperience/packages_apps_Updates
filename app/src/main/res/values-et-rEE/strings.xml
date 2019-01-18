@@ -5,6 +5,7 @@
     <string name="app_name">Süsteemi uuendused</string>
     <!-- Update checking -->
     <string name="ota_not_supported">See versioon ei toeta OTA uuendusi.</string>
+    <string name="last_updated_at">(viimati uuendatud <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Alla laetud</string>
     <string name="type_downloading">Allalaadimine…</string>
     <string name="type_completing">Lõpuleviimine…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Lisandmoodulite loetelu laadimine ebaõnnestus</string>
     <!-- MD5 -->
     <string name="checking_md5">Faili terviklikkuse kontrollimine…</string>
+    <string name="md5_verification_failed">Faili terviklikkuse kontroll põrus</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Tühista allalaadimine</string>
     <string name="confirm_download_cancel_dialog_message">Kas soovite tühistada praeguse allalaadimise?</string>
