@@ -48,6 +48,7 @@ public class DownloadReceiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         long enqueued = prefs.getLong(Constants.DOWNLOAD_ID, -1);
         String fileName = prefs.getString(Constants.DOWNLOAD_NAME, null);
+        String md5 = prefs.getString(Constants.DOWNLOAD_MD5, null);
         if (enqueued < 0 || id < 0 || id != enqueued || fileName == null) {
             return;
         }
@@ -56,12 +57,14 @@ public class DownloadReceiver extends BroadcastReceiver {
         Intent intent = new Intent(context, DownloadCompleteIntentService.class);
         intent.putExtra(Constants.DOWNLOAD_ID, id);
         intent.putExtra(Constants.DOWNLOAD_NAME, fileName);
+        intent.putExtra(Constants.DOWNLOAD_MD5, md5);
         context.startForegroundService(intent);
 
         // Clear the shared prefs
         prefs.edit()
                 .remove(Constants.DOWNLOAD_ID)
                 .remove(Constants.DOWNLOAD_NAME)
+                .remove(Constants.DOWNLOAD_MD5)
                 .apply();
     }
 }

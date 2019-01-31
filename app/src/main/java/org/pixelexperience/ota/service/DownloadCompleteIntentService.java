@@ -32,6 +32,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 
+import org.pixelexperience.ota.utils.MD5;
+
 public class DownloadCompleteIntentService extends IntentService {
 
     private static final String TAG = "DownloadComplete";
@@ -54,13 +56,14 @@ public class DownloadCompleteIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        if (!intent.hasExtra(Constants.DOWNLOAD_ID) || !intent.hasExtra(Constants.DOWNLOAD_NAME)) {
+        if (!intent.hasExtra(Constants.DOWNLOAD_ID) || !intent.hasExtra(Constants.DOWNLOAD_NAME) || !intent.hasExtra(Constants.DOWNLOAD_MD5)) {
             Log.e(TAG, "Missing intent extra data");
             return;
         }
 
         long id = intent.getLongExtra(Constants.DOWNLOAD_ID, -1);
         final String destName = intent.getStringExtra(Constants.DOWNLOAD_NAME);
+        final String md5 = intent.getStringExtra(Constants.DOWNLOAD_MD5);
 
         Intent updateIntent = new Intent(this, UpdaterActivity.class);
         updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
@@ -71,18 +74,22 @@ public class DownloadCompleteIntentService extends IntentService {
             String destPath = Utils.makeUpdateFolder().getPath() + "/"
                     + destName;
             File destFileTmp = new File(destPath + Constants.DOWNLOAD_TMP_EXT);
-
-            try (
-                    FileOutputStream outStream = new FileOutputStream(destFileTmp);
-
-                    ParcelFileDescriptor file = mDm.openDownloadedFile(id);
-                    FileInputStream inStream = new FileInputStream(file.getFileDescriptor());
-
-                    FileChannel inChannel = inStream.getChannel();
-                    FileChannel outChannel = outStream.getChannel()
-            ) {
+            FileOutputStream outStream = null;
+            ParcelFileDescriptor file = null;
+            FileInputStream inStream = null;
+            FileChannel inChannel = null;
+            FileChannel outChannel = null;
+            try {
+                if (!MD5.checkMD5(md5, destFileTmp)){
+                    throw new Exception("Invalid md5"); 
+                }
+                outStream = new FileOutputStream(destFileTmp);
+                file = mDm.openDownloadedFile(id);
+                inStream = new FileInputStream(file.getFileDescriptor());
+                inChannel = inStream.getChannel();
+                outChannel = outStream.getChannel();
                 inChannel.transferTo(0, file.getStatSize(), outChannel);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 Log.e(TAG, "Copy of download failed", e);
                 displayErrorResult(updateIntent, R.string.unable_to_download_file);
                 if (destFileTmp.exists()) {
@@ -91,6 +98,36 @@ public class DownloadCompleteIntentService extends IntentService {
                 return;
             } finally {
                 mDm.remove(id);
+                if(outStream != null) {
+                    try {
+                        outStream.close();
+                    } catch (Exception e) {
+                    }
+                }
+                if(file != null) {
+                    try {
+                        file.close();
+                    } catch (Exception e) {
+                    }
+                }
+                if(inStream != null) {
+                    try {
+                        inStream.close();
+                    } catch (Exception e) {
+                    }
+                }
+                if(inChannel != null) {
+                    try {
+                        inChannel.close();
+                    } catch (Exception e) {
+                    }
+                }
+                if(outChannel != null) {
+                    try {
+                        outChannel.close();
+                    } catch (Exception e) {
+                    }
+                }
             }
 
             if (!destFileTmp.exists()) {
