@@ -24,6 +24,7 @@ import org.pixelexperience.ota.UpdaterApplication;
 import org.pixelexperience.ota.activities.UpdaterActivity;
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.receiver.DownloadNotifier;
+import org.pixelexperience.ota.utils.MD5;
 import org.pixelexperience.ota.utils.Utils;
 
 import java.io.File;
@@ -54,13 +55,14 @@ public class DownloadCompleteIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        if (!intent.hasExtra(Constants.DOWNLOAD_ID) || !intent.hasExtra(Constants.DOWNLOAD_NAME)) {
+        if (!intent.hasExtra(Constants.DOWNLOAD_ID) || !intent.hasExtra(Constants.DOWNLOAD_NAME) || !intent.hasExtra(Constants.DOWNLOAD_MD5)) {
             Log.e(TAG, "Missing intent extra data");
             return;
         }
 
         long id = intent.getLongExtra(Constants.DOWNLOAD_ID, -1);
         final String destName = intent.getStringExtra(Constants.DOWNLOAD_NAME);
+        final String md5 = intent.getStringExtra(Constants.DOWNLOAD_MD5);
 
         Intent updateIntent = new Intent(this, UpdaterActivity.class);
         updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
@@ -109,6 +111,14 @@ public class DownloadCompleteIntentService extends IntentService {
                 return;
             }
             destFileTmp.renameTo(destFile);
+
+            if (!MD5.checkMD5(md5, destFile)){
+                if (destFile.exists()) {
+                    destFile.delete();
+                }
+                displayErrorResult(updateIntent, R.string.unable_to_download_file);
+                return;
+            }
 
             // We passed. Bring the main app to the foreground and trigger download completed
             updateIntent.putExtra(Constants.EXTRA_FINISHED_DOWNLOAD_ID, id);

@@ -17,6 +17,7 @@ public class Constants {
     public static final String UPDATES_FOLDER = "PixelExperience-Updates";
     public static final String DOWNLOAD_ID = "download_id";
     public static final String DOWNLOAD_NAME = "download_name";
+    public static final String DOWNLOAD_MD5 = "download_md5";
     public static final String DOWNLOAD_TMP_EXT = ".tmp";
     public static final String DOWNLOAD_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOAD_CHANNEL";
     public static final String DOWNLOADING_CHANNEL_ID = "org.pixelexperience.ota.DOWNLOADING_CHANNEL";
