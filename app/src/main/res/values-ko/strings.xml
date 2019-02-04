@@ -33,7 +33,7 @@
     <string name="donate_info_title">기부</string>
     <string name="donate_info_summary">개발 지원하기</string>
     <string name="website_info_title">웹사이트</string>
-    <string name="website_info_summary">우리의 웹사이트 방문</string>
+    <string name="website_info_summary">웹사이트 방문</string>
     <string name="news_info_title">뉴스</string>
     <string name="news_info_summary">업데이트 및 기타 뉴스에 대한 정보 확인</string>
     <string name="forum_info_title">포럼</string>

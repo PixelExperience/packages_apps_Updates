@@ -43,6 +43,7 @@
     <string name="addons_error">Неуспешно зареждане на списък на добавките</string>
     <!-- MD5 -->
     <string name="checking_md5">Проверка на целостта на файла…</string>
+    <string name="md5_verification_failed">Неуспешно потвърждаване целостта на файла</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Отказ от изтеглянето</string>
     <string name="confirm_download_cancel_dialog_message">Да бъде ли отказано текущото изтегляне ?</string>

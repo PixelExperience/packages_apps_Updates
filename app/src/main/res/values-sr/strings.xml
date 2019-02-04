@@ -5,6 +5,7 @@
     <string name="app_name">Надоградња система</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Овај систем не подржава ОТА исправке.</string>
+    <string name="last_updated_at">(Последња провера <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Преузето</string>
     <string name="type_downloading">Преузимање…</string>
     <string name="type_completing">Довршавање…</string>
@@ -42,6 +43,7 @@
     <string name="addons_error">Неуспело учитавање листе екстензија</string>
     <!-- MD5 -->
     <string name="checking_md5">Провера интегритета датотеке…</string>
+    <string name="md5_verification_failed">Неуспешна провера интегритета фајла</string>
     <!-- Downloads -->
     <string name="confirm_download_cancel_dialog_title">Откажи преузимање</string>
     <string name="confirm_download_cancel_dialog_message">Откажи тренутно преузимање ?</string>

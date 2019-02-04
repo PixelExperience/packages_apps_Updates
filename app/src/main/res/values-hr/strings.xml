@@ -7,7 +7,7 @@
     <string name="ota_not_supported">Ova verzija sustava ne podržava OTA ažuriranja.</string>
     <string name="last_updated_at">(Zadnje ažurirano <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Preuzeto</string>
-    <string name="type_downloading">Preuzima se…</string>
+    <string name="type_downloading">Preuzimanje…</string>
     <string name="type_completing">Dovršavanje…</string>
     <string name="download_button">Preuzmi</string>
     <string name="install_button">Instaliraj</string>
@@ -18,7 +18,7 @@
     <string name="no_updates_available">Nema dostupnih ažuriranja</string>
     <string name="no_updates_available_pref_title">Nema dostupnih ažuriranja. Za ponovnu provjeru koristite gumb \'Osvježi\'.</string>
     <string name="update_check_failed">Pretraga ažuriranja neuspješna. Molimo vas provjerite vašu internetsku vezu i pokušajte ponovno kasnije.</string>
-    <string name="data_connection_required">Potrebna je mobilna veza.</string>
+    <string name="data_connection_required">Potrebna je mrežna veza.</string>
     <string name="changelog_button">Prikaz svih promjena</string>
     <!-- Settings section -->
     <string name="settings_category_title">Postavke</string>
