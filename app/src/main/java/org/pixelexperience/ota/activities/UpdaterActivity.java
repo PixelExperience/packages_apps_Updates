@@ -823,39 +823,6 @@ public class UpdaterActivity extends PreferenceActivity implements
         mUpdateHandler.post(mUpdateProgress);
     }
 
-    public void confirmDeleteAll() {
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.confirm_delete_dialog_title)
-                .setMessage(R.string.confirm_delete_all_dialog_message)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // We are OK to delete, trigger it
-                        deleteOldUpdates();
-                        updateLayout(false);
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
-    }
-
-    private boolean deleteOldUpdates() {
-        boolean success;
-        //mUpdateFolder: Foldername with fullpath of SDCARD
-        if (mUpdateFolder.exists() && mUpdateFolder.isDirectory()) {
-            Utils.deleteDir(mUpdateFolder);
-            mUpdateFolder.mkdir();
-            success = true;
-            showToast(getString(R.string.delete_updates_success_message), Toast.LENGTH_SHORT);
-        } else {
-            success = false;
-            showToast(getString(mUpdateFolder.exists() ?
-                    R.string.delete_updates_failure_message :
-                    R.string.delete_updates_noFolder_message), Toast.LENGTH_SHORT);
-        }
-        return success;
-    }
-
     @Override
     public void onStartUpdate(UpdatePreference pref) {
         final UpdateInfo updateInfo = pref.getUpdateInfo();
@@ -936,9 +903,6 @@ public class UpdaterActivity extends PreferenceActivity implements
                 break;
             case R.id.menu_local_changelog:
                 showLocalChangelog();
-                break;
-            case R.id.menu_delete_all:
-                if (isCheckingForUpdatesAllowed()){ confirmDeleteAll(); }
                 break;
         }
         return super.onOptionsItemSelected(item);
