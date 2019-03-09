@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Eliminar archivo</string>
     <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
-    <string name="confirm_delete_all_dialog_message">¿Eliminar todos los archivos de actualización descargados?</string>
     <string name="delete_update_success_message">Actualización <xliff:g id="filename">%s</xliff:g> borrada</string>
     <string name="delete_updates_failure_message">Ocurrió un error al borrar la actualización</string>
     <string name="delete_updates_noFolder_message">No se encontró la carpeta de actualizaciones</string>
     <string name="delete_updates_success_message">Todas las actualizaciones descargadas fueron borradas</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Actualizar</string>
-    <string name="menu_delete_all">Eliminar actualizaciones</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Advertencia</string>
     <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Deseas continuar?</string>

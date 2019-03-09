@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">删除文件</string>
     <string name="confirm_delete_dialog_message">您确定要删除此更新文件？</string>
-    <string name="confirm_delete_all_dialog_message">您确定要删除所有已下载的更新文件？</string>
     <string name="delete_update_success_message">更新文件<xliff:g id="filename">%s </xliff:g> 已删除</string>
     <string name="delete_updates_failure_message">删除更新文件时发生了错误</string>
     <string name="delete_updates_noFolder_message">未找到更新文件夹</string>
     <string name="delete_updates_success_message">已删除所有下载的更新文件</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">刷新</string>
-    <string name="menu_delete_all">删除所有更新</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">移动数据使用警告</string>
     <string name="update_on_mobile_data_message">您将通过移动数据网络下载更新包，这可能会导致较大的数据用量，是否继续？</string>

@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Usuń plik</string>
     <string name="confirm_delete_dialog_message">Usunąć wybrany plik?</string>
-    <string name="confirm_delete_all_dialog_message">Usunąć wszystkie pobrane aktualizacje?</string>
     <string name="delete_update_success_message">Aktualizacja <xliff:g id="filename">%s</xliff:g> została usunięta</string>
     <string name="delete_updates_failure_message">Błąd podczas usuwania pliku aktualizacji</string>
     <string name="delete_updates_noFolder_message">Nie znaleziono folderu z aktualizacjami</string>
     <string name="delete_updates_success_message">Wszystkie pobrane aktualizacje zostały usunięte</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Odśwież</string>
-    <string name="menu_delete_all">Usuń aktualizacje</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Uwaga</string>
     <string name="update_on_mobile_data_message">Za chwilę pobierzesz pakiet aktualizacji przy użyciu danych mobilnych, co prawdopodobnie spowoduje wysokie zużycie danych. Czy chcesz kontynuować?</string>

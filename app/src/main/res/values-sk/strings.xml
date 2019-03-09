@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Vymazať súbor</string>
     <string name="confirm_delete_dialog_message">Vymazať vybraný súbor aktualizácie?</string>
-    <string name="confirm_delete_all_dialog_message">Vymazať všetky stiahnuté súbory aktualizácií?</string>
     <string name="delete_update_success_message">Aktualizácia <xliff:g id="filename">%s</xliff:g> bola vymazaná</string>
     <string name="delete_updates_failure_message">Vyskytla sa chyba pri mazaní súboru aktualizácie</string>
     <string name="delete_updates_noFolder_message">Priečinok s aktualizáciou sa nenašiel</string>
     <string name="delete_updates_success_message">Všetky stahnuté aktualizácie boli vymazané</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Obnoviť</string>
-    <string name="menu_delete_all">Vymazať aktualizácie</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Upozornenie</string>
     <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľký prenos mobilných dát. Prajete si pokračovať?</string>

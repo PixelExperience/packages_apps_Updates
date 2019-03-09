@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">ફાઇલ કાઢી નાખો</string>
     <string name="confirm_delete_dialog_message">પસંદિત અપડેટ ફાઇલ કાઢી નાખવી છે?</string>
-    <string name="confirm_delete_all_dialog_message">બધી ડાઉનલોડ કરેલી અપડેટ ફાઇલો કાઢી નાખવી છે?</string>
     <string name="delete_update_success_message">અપડેટ <xliff:g id="filename">%s</xliff:g> ભૂંસાઇ</string>
     <string name="delete_updates_failure_message">અપડેટ ફાઇલ રદ કરવામાં ભૂલ થઈ</string>
     <string name="delete_updates_noFolder_message">અપડેટ ફોલ્ડર મળ્યું નહીં</string>
     <string name="delete_updates_success_message">બધા ડાઉનલોડ કરેલા અપડેટ્સ કાઢી નાંખ્યા</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">તાજું કરો</string>
-    <string name="menu_delete_all">અપડેટ્સ કાઢી નાખો</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">ચેતવણી</string>
     <string name="update_on_mobile_data_message">તમે મોબાઇલ ડેટાનો ઉપયોગ કરીને અપડેટ પેકેજ ડાઉનલોડ કરવા જઈ રહ્યાં છો જે સંભવિત ઉચ્ચ ડેટા વપરાશને કારણે જઈ શકે છે. શું તમે આગળ વધવા માંગો છો?</string>

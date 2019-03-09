@@ -4,6 +4,17 @@
     <!-- App name -->
     <string name="app_name">സി‌സ്‌റ്റം അപ്‌ഡേറ്റുകൾ</string>
     <!-- Update checking -->
+    <string name="type_downloaded">ഡൗൺലോഡ് ചെയ്തു</string>
+    <string name="type_downloading">ഡൗൺലോഡ് ചെയ്യുന്നു...</string>
+    <string name="type_completing">പൂർത്തിയാവുന്നു…</string>
+    <string name="download_button">ഡൗൺലോഡ്</string>
+    <string name="install_button">ഇൻസ്റ്റോൾ ചെയ്യുക</string>
+    <string name="updates_category_title">ലഭ്യമായ അപ്ഡേറ്റുകൾ</string>
+    <string name="checking_for_updates">അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കുന്നു</string>
+    <string name="update_found_notification">പുതിയ അപ്ഡേറ്റുകൾ ലഭ്യമാണ്</string>
+    <string name="update_found_notification_desc">ഡൗൺലോഡുചെയ്യാൻ ടാപ്പുചെയ്യുക</string>
+    <string name="no_updates_available">അപ്ഡേറ്റുകളൊന്നും ലഭ്യമല്ല</string>
+    <string name="no_updates_available_pref_title">അപ്ഡേറ്റുകൾ ഒന്നും ലഭ്യമല്ല. പുതിയ അപ്ഡേറ്റുകൾക്കായി റിഫ്രഷ് ബട്ടൺ ഉപയോഗിക്കുക.</string>
     <!-- Settings section -->
     <!-- Info section -->
     <!-- MD5 -->

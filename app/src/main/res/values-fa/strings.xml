@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">حذف فایل</string>
     <string name="confirm_delete_dialog_message">فایل به‌روزرسانی انتخاب شده را حذف می‌کنید؟</string>
-    <string name="confirm_delete_all_dialog_message">همه‌ی فایل‌های به‌روزرسانی دانلود شده را حذف می‌کنید؟</string>
     <string name="delete_update_success_message">به‌روزرسانی <xliff:g id="filename">%s</xliff:g> حذف شد</string>
     <string name="delete_updates_failure_message">خطا در حذف فایل به‌روزرسانی</string>
     <string name="delete_updates_noFolder_message">پوشه به‌روزرسانی پیدا نشد</string>
     <string name="delete_updates_success_message">تمام به‌روزرسانی‌های بارگیری شده حذف شدند</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">تازه‌سازی</string>
-    <string name="menu_delete_all">پاک کردن به‌روزرسانی‌ها</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">هشدار</string>
     <string name="update_on_mobile_data_message">شما در حال بارگیری بسته به‌روزرسانی با داده سیم‌کارت هستید که احتمالاً حجم داده زیادی مصرف می‌کند. آیا می‌خواهید ادامه دهید؟</string>

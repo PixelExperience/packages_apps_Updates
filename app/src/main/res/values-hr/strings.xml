@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Izbriši datoteku</string>
     <string name="confirm_delete_dialog_message">Želite li izbrisati odabranu datoteku za ažuriranje?</string>
-    <string name="confirm_delete_all_dialog_message">Želite li izbrisati sve preuzete datoteke za ažuriranja?</string>
     <string name="delete_update_success_message">Ažuriranje <xliff:g id="filename">%s</xliff:g> je izbrisano</string>
     <string name="delete_updates_failure_message">Greška pri brisanju datoteke ažuriranja</string>
     <string name="delete_updates_noFolder_message">Mapa s datotekama ažuriranja nije pronađena</string>
     <string name="delete_updates_success_message">Izbrisana su sva preuzeta ažuriranja</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Osvježi</string>
-    <string name="menu_delete_all">Izbriši ažuriranja</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="update_on_mobile_data_message">Upravo ćete preuzeti paket ažuriranja pomoću mobilnih podataka koji će vjerojatno uzrokovati visoku upotrebu podataka. Želite li nastaviti?</string>

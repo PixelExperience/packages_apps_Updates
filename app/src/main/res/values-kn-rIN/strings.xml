@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">ಫೈಲ್ ಅಳಿಸಿ</string>
     <string name="confirm_delete_dialog_message">ಆಯ್ಕೆಮಾಡಿದ ನವೀಕರಣೆ ಕಡತ ಅಳಿಸುವುದೇ?</string>
-    <string name="confirm_delete_all_dialog_message">ಡೌನ್‍ಲೋಡ್ ಮಾಡಿದ ಎಲ್ಲಾ ನವೀಕರಣೆ ಕಡತಗಳನ್ನು ಅಳಿಸುವುದೇ?</string>
     <string name="delete_update_success_message">ನವೀಕರಣೆ <xliff:g id="filename">%s</xliff:g> ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="delete_updates_failure_message">ನವೀಕರಣೆ ಕಡತ ಅಳಿಸುವಾಗ ದೋಷಗಳು ಕಂಡುಬಂದವು</string>
     <string name="delete_updates_noFolder_message">ನವೀಕರಣೆ ಫೋಲ್ಡರ್ ಪತ್ತೆಯಾಗಲಿಲ್ಲ</string>
     <string name="delete_updates_success_message">ಎಲ್ಲಾ ಡೌನ್‍ಲೋಡ್ ಮಾಡಿದ ನವೀಕರಣೆಗಳನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">ರಿಫ್ರೆಶ್</string>
-    <string name="menu_delete_all">ನವೀಕರಣೆಗಳನ್ನು ಅಳಿಸಿ</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
     <string name="update_on_mobile_data_message">ನೀವೀಗ ನವೀಕರಣೆಯ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>

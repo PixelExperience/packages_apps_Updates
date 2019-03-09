@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Διαγραφή αρχείου</string>
     <string name="confirm_delete_dialog_message">Διαγραφή του επιλεγμένου αρχείου ενημέρωσης;</string>
-    <string name="confirm_delete_all_dialog_message">Διαγραφή όλων των κατεβασμένων αρχείων ενημερώσεων;</string>
     <string name="delete_update_success_message">Η ενημέρωση <xliff:g id="filename">%s</xliff:g> διαγράφηκε</string>
     <string name="delete_updates_failure_message">Υπήρξε ένα σφάλμα κατά τη διαγραφή της ενημέρωσης</string>
     <string name="delete_updates_noFolder_message">Ο φάκελος ενημερώσεων δεν βρέθηκε</string>
     <string name="delete_updates_success_message">Όλες οι κατεβασμένες ενημερώσεις διαγράφηκαν</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Ανανέωση</string>
-    <string name="menu_delete_all">Διαγραφή ενημέρωσης</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="update_on_mobile_data_message">Είστε έτοιμος να κατεβάσετε ένα πακέτο ενημέρωσης χρησιμοποιώντας δεδομένα κινητής τηλεφωνίας, το οποίο είναι πιθανό να προκαλέσει υψηλή χρήση δεδομένων. Θα θέλατε να συνεχίσετε;</string>

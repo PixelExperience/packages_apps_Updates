@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Padam fail</string>
     <string name="confirm_delete_dialog_message">Padam fail kemaskini yang telah dipilih?</string>
-    <string name="confirm_delete_all_dialog_message">Padam semua fail kemaskini yang dimuat turun?</string>
     <string name="delete_update_success_message">Kemaskini <xliff:g id="filename">%s</xliff:g> dipadam</string>
     <string name="delete_updates_failure_message">Berlaku ralat semasa memadam fail kemaskini</string>
     <string name="delete_updates_noFolder_message">Direktori kemaskini tidak dijumpai</string>
     <string name="delete_updates_success_message">Semua kemaskini yang dimuat turun telah dipadam</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Muat Semula</string>
-    <string name="menu_delete_all">Padam kemaskini</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Amaran</string>
     <string name="update_on_mobile_data_message">Anda akan memuat turun pakej kemaskini menggunakan data mudah alih yang akan mengakibatkan penggunaan data yang tinggi. Ingin teruskan?</string>

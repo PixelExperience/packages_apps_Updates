@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Poista tiedosto</string>
     <string name="confirm_delete_dialog_message">Poista valittu päivitystiedosto?</string>
-    <string name="confirm_delete_all_dialog_message">Poista kaikki ladatut päivitystiedostot?</string>
     <string name="delete_update_success_message">Päivitys <xliff:g id="filename">%s</xliff:g> poistettu</string>
     <string name="delete_updates_failure_message">Päivitystiedoston poistamisessa tapahtui virhe</string>
     <string name="delete_updates_noFolder_message">Päivityskansiota ei löytynyt</string>
     <string name="delete_updates_success_message">Kaikki ladatut päivitykset poistettu</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Päivitä</string>
-    <string name="menu_delete_all">Poista päivitykset</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varoitus</string>
     <string name="update_on_mobile_data_message">Olet lataamassa päivityspakettia käyttämällä mobiilidataa, joka voi todennäköisesti aiheuttaa tiedonsiirtokuluja. Haluatko jatkaa?</string>

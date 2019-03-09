@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">מחק קובץ</string>
     <string name="confirm_delete_dialog_message">אתה עומד למחוק את הקובץ העדכון שנבחר, לחץ על \"כן\" להמשך.</string>
-    <string name="confirm_delete_all_dialog_message">אתה עומד למחוק את כל קובצי העדכון שהורדו, להמשיך?</string>
     <string name="delete_update_success_message">עדכון <xliff:g id="filename">%s</xliff:g> נמחק</string>
     <string name="delete_updates_failure_message">אירעה שגיאה בעת הניסיון למחוק את הקובץ המעודכן</string>
     <string name="delete_updates_noFolder_message">תיקיית עדכונים לא נמצאה</string>
     <string name="delete_updates_success_message">כל העדכונים שהורדו נמחקו</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">רענן</string>
-    <string name="menu_delete_all">מחק עדכונים</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">אזהרה!</string>
     <string name="update_on_mobile_data_message">אתה עומד להוריד חבילת עדכונים באמצעות האינטרנט הסלולרי שסביר להניח יגרום לבזבוז חלק גדול מחבילת הגלישה שלך. להמשיך?</string>

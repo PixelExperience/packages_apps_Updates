@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Verwijder bestand</string>
     <string name="confirm_delete_dialog_message">Weet u zeker dat u het gedownloade updatebestand wilt verwijderen?</string>
-    <string name="confirm_delete_all_dialog_message">Weet u zeker dat u alle gedownloade updatebestanden wilt verwijderen?</string>
     <string name="delete_update_success_message">Update <xliff:g id="filename">%s</xliff:g> verwijderd</string>
     <string name="delete_updates_failure_message">Kan updatebestand niet verwijderen</string>
     <string name="delete_updates_noFolder_message">Kan updatemap niet vinden</string>
     <string name="delete_updates_success_message">Alle gedownloade updates zijn verwijderd</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Vernieuwen</string>
-    <string name="menu_delete_all">Updates verwijderen</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Waarschuwing</string>
     <string name="update_on_mobile_data_message">U staat op het punt om een update-pakket te downloaden via mobiele gegevens, wat een hoog gegevensgebruik tot gevolg kan hebben. Wilt u verder gaan?</string>

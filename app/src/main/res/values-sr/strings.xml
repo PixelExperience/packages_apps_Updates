@@ -61,7 +61,6 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Избриши датотеку</string>
     <string name="confirm_delete_dialog_message">Избрисати изабрану датотеку за ажурирање?</string>
-    <string name="confirm_delete_all_dialog_message">Избрисати све преузете датотеке надоградњи?</string>
     <string name="delete_update_success_message">Надоградња 
 <xliff:g id="filename">%s</xliff:g> је избрисана</string>
     <string name="delete_updates_failure_message">Дошло је до грешке приликом брисања датотеке за надоградњу</string>
@@ -69,7 +68,6 @@
     <string name="delete_updates_success_message">Све преузете надоградње су избрисане</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Освежи</string>
-    <string name="menu_delete_all">Избриши надоградње</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Упозорење</string>
     <string name="update_on_mobile_data_message">Преузимање надоградњи преко мобилне мреже троши доста саобраћаја и може довести до непредвиђених трошкова. Да ли желите да наставите?</string>

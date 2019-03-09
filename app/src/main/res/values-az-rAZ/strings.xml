@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Faylı sil</string>
     <string name="confirm_delete_dialog_message">Seçilmiş yeniləmə faylı silinsin?</string>
-    <string name="confirm_delete_all_dialog_message">Endirilmiş bütün yeniləmə faylları silinsin?</string>
     <string name="delete_update_success_message">Yeniləmə <xliff:g id="filename">%s</xliff:g> silindi</string>
     <string name="delete_updates_failure_message">Yeniləmə faylı silinərkən xəta baş verdi</string>
     <string name="delete_updates_noFolder_message">Yeniləmə qovluğu tapılmadı</string>
     <string name="delete_updates_success_message">Endirilmiş bütün yeniləmələr silindi</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Təzələ</string>
-    <string name="menu_delete_all">Yeniləmələri sil</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Xəbərdarlıq</string>
     <string name="update_on_mobile_data_message">Yüksək məlumat istifadəsinə səbəb ola biləcək yeniləmə paketini mobil trafik istifadə edərək endirmək üzrəsiniz. Davam etmək istəyirsiniz?</string>

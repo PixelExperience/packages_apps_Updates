@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Kkes afaylu</string>
     <string name="confirm_delete_dialog_message">Kkes afaylu n lqem ittwafernen?</string>
-    <string name="confirm_delete_all_dialog_message">Kkes meṛṛa ifuyla n lqem ittwasidren?</string>
     <string name="delete_update_success_message">Lqem <xliff:g id="filename">%s</xliff:g> yettwakkes</string>
     <string name="delete_updates_failure_message">Tella-d tuccḍa deg tukksa n ufaylu n lqem</string>
     <string name="delete_updates_noFolder_message">Ulac akaram n lqem</string>
     <string name="delete_updates_success_message">Ttwakksen meṛṛa ifuyla n lqem ittwasidren</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Sismeḍ</string>
-    <string name="menu_delete_all">Kkes lqem</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Alɣu</string>
     <string name="update_on_mobile_data_message">Aql ak-id ad sidreḍ yiwen n lqem s useqdec n isefka izirazen ad waṭas n isefka ara yettwasqedcen.tebɣiḍ attkemmleḍ?</string>

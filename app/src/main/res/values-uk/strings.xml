@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Видалити файл</string>
     <string name="confirm_delete_dialog_message">Видалити обраний файл оновлення?</string>
-    <string name="confirm_delete_all_dialog_message">Видалити всі завантажені файли оновлень?</string>
     <string name="delete_update_success_message">Оновлення <xliff:g id="filename">%s</xliff:g> видалено</string>
     <string name="delete_updates_failure_message">Виникла помилка при видаленні файлу оновлення</string>
     <string name="delete_updates_noFolder_message">Папка з оновленнями не знайдена</string>
     <string name="delete_updates_success_message">Усі завантажені оновлення видалено</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Оновити</string>
-    <string name="menu_delete_all">Видалити оновлення</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Попередження</string>
     <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що, ймовірно, призведе до високого використання даних. Ви хочете продовжити?</string>

@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Xóa tập tin</string>
     <string name="confirm_delete_dialog_message">Xóa các tập tin cập nhật được chọn?</string>
-    <string name="confirm_delete_all_dialog_message">Xóa tất cả các tập tin cập nhật đã tải xuống?</string>
     <string name="delete_update_success_message">Bản cập nhật <xliff:g id="filename"> %s </xliff:g> đã xóa</string>
     <string name="delete_updates_failure_message">Đã có lỗi khi xóa tập tin cập nhật</string>
     <string name="delete_updates_noFolder_message">Không tìm thấy thư mục cập nhật</string>
     <string name="delete_updates_success_message">Đã xóa tất cả các tập tin cập nhật đã tải xuống</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Làm mới</string>
-    <string name="menu_delete_all">Xóa bản cập nhật</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Cảnh báo</string>
     <string name="update_on_mobile_data_message">Bạn sắp tải xuống một gói cập nhật sử dụng dữ liệu di động có khả năng gây ra việc sử dụng dữ liệu cao. Bạn có muốn tiến hành không?</string>

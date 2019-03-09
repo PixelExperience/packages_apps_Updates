@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Hapus berkas</string>
     <string name="confirm_delete_dialog_message">Hapus berkas pemutakhiran terpilih?</string>
-    <string name="confirm_delete_all_dialog_message">Hapus semua berkas pemutakhiran yang terpilih?</string>
     <string name="delete_update_success_message">Pemutakhiran <xliff:g id="filename">%s</xliff:g> terhapus</string>
     <string name="delete_updates_failure_message">Ada kesalahan pada penghapusan berkas pemutakhiran</string>
     <string name="delete_updates_noFolder_message">Folder pemutakhiran tidak ditemukan</string>
     <string name="delete_updates_success_message">Semua unduhan pemutakhiran telah dihapus</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Segarkan</string>
-    <string name="menu_delete_all">Hapus pemutakhiran</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan megunduh paket pemutakhiran menggunakan data seluler yang mungkin akan menyebabkan penggunaan data yang tinggi. Apakah Anda ingin melanjutkan?</string>

@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Izbriši datoteko</string>
     <string name="confirm_delete_dialog_message">Izbriši izbrano posodobitveno datoteko?</string>
-    <string name="confirm_delete_all_dialog_message">Izbriši vse prenesene posodobitvene datoteke?</string>
     <string name="delete_update_success_message">Posodobitev <xliff:g id="filename">%s</xliff:g> izbrisana</string>
     <string name="delete_updates_failure_message">Napaka pri brisanju posodobitvene datoteke</string>
     <string name="delete_updates_noFolder_message">Mapa posodobitev ni bila najdena</string>
     <string name="delete_updates_success_message">Vse prenesene posodobitve izbrisane</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Osveži</string>
-    <string name="menu_delete_all">Izbriši posodobitve</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>

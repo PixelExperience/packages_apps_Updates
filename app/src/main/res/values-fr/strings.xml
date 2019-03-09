@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Supprimer fichier</string>
     <string name="confirm_delete_dialog_message">Supprimer le fichier de mise à jour sélectionné\u00A0?</string>
-    <string name="confirm_delete_all_dialog_message">Supprimer tous les fichiers de mise à jour\u00A0?</string>
     <string name="delete_update_success_message">Mise à jour <xliff:g id="filename">%s</xliff:g> supprimée</string>
     <string name="delete_updates_failure_message">Une erreur est survenue lors de la suppression des fichiers de mise à jour</string>
     <string name="delete_updates_noFolder_message">Dossier de mise à jour introuvable</string>
     <string name="delete_updates_success_message">Tous les fichiers de mises à jour téléchargés ont été supprimés</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Actualiser</string>
-    <string name="menu_delete_all">Supprimer la mise à jour</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attention</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>

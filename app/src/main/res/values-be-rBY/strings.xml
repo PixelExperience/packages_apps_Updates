@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Выдаліць файл</string>
     <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
-    <string name="confirm_delete_all_dialog_message">Ці выдаліць усе спампаваныя файлы абнаўленняў?</string>
     <string name="delete_update_success_message">Файл абнаўлення <xliff:g id="filename">%s</xliff:g> выдалены</string>
     <string name="delete_updates_failure_message">Пры выдаленні файла абнаўлення атрымалася памылка</string>
     <string name="delete_updates_noFolder_message">Тэчка з абнаўленнямі не знойдзеная</string>
     <string name="delete_updates_success_message">Усе спампаваныя абнаўленні выдалены</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Аднавіць</string>
-    <string name="menu_delete_all">Выдаліць абнаўленні</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Папярэджанне</string>
     <string name="update_on_mobile_data_message">Вы збіраецеся спампаваць пакет абнаўлення, выкарыстоўваючы мабільную перадачу дадзеных, за якую, верагодна, спаганяецца дадатковая плата. Вы хочаце працягнуць?</string>

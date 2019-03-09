@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">파일 삭제</string>
     <string name="confirm_delete_dialog_message">선택한 업데이트 파일을 삭제하시겠습니까?</string>
-    <string name="confirm_delete_all_dialog_message">다운로드한 업데이트 파일을 모두 삭제하시겠습니까?</string>
     <string name="delete_update_success_message">업데이트 <xliff:g id="filename">%s</xliff:g>(이)가 삭제되었습니다.</string>
     <string name="delete_updates_failure_message">업데이트 파일을 삭제하는 도중에 오류가 발생하였습니다</string>
     <string name="delete_updates_noFolder_message">업데이트 폴더를 찾을 수 없습니다</string>
     <string name="delete_updates_success_message">다운로드된 업데이트를 모두 삭제하였습니다</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">새로고침</string>
-    <string name="menu_delete_all">업데이트 삭제</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">경고</string>
     <string name="update_on_mobile_data_message">모바일 데이터를 사용하여 업데이트 패키지를 다운로드하는 것은 많은 데이터 사용을 야기할 수 있습니다. 정말 계속하시겠습니까?</string>

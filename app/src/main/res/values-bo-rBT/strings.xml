@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">ཡིག་ཆ་བསུབ་པ།</string>
     <string name="confirm_delete_dialog_message">གསར་བསྒྱུར་གྱི་ཡིག་ཆ་འདི་བསུབ་བམ།</string>
-    <string name="confirm_delete_all_dialog_message">ཁྱེད་ཀྱིས་གསར་བསྒྱུར་གྱི་ཡིག་ཆ་ཚང་མ་བསུབ་བམ།</string>
     <string name="delete_update_success_message">གསར་བསྒྱུར་གྱི་ཡིག་ཆ<xliff:g id="filename">%s</xliff:g> བསུབ་ཟིན།</string>
     <string name="delete_updates_failure_message">གསར་བསྒྱུར་གྱི་ཡིག་ཆ་བསུབ་སྐབས་ནོར་འཁྲུལ་བྱུང་བ།</string>
     <string name="delete_updates_noFolder_message">གསར་བསྒྱུར་གྱི་ཡིག་སྣོད་མ་རྙེད།</string>
     <string name="delete_updates_success_message">ཕབ་ལེན་བྱས་ཟིན་པའི་གསར་བསྒྱུར་གྱི་ཡིག་ཆ་ཚང་མ་བསུབ་ཚར།</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">བའྐྱར་འཇུག་བྱ།</string>
-    <string name="menu_delete_all">གསར་བསྒྱུར་ཡིག་ཆ་ཚང་མ་བསུབ།</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">སྤོ་སྒུལ་དྲ་རྒྱ་བེད་སྤྱོད་ཀྱི་ཉེན་བརྡ།</string>
     <string name="update_on_mobile_data_message">ཁྱེད་ཀྱིས་སྤོ་སྒུལ་དྲ་རྒྱས་གསར་བསྒྱུར་གྱི་ཡིག་ཆ་ཕབ་ལེན་བྱེད་དམ། འདི་ལྟར་བྱས་ན་གཞི་ཚད་མང་པོ་སྤྱོད་ངེས།  སྔར་བ་བཞིན་ཕབ་ལེན་བྱེད་དམ།</string>

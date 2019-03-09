@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Smazat soubor</string>
     <string name="confirm_delete_dialog_message">Smazat zvolený soubor aktualizace?</string>
-    <string name="confirm_delete_all_dialog_message">Smazat všechny soubory aktualizací?</string>
     <string name="delete_update_success_message">Aktualizace <xliff:g id="filename">%s</xliff:g> smazána</string>
     <string name="delete_updates_failure_message">Během mazání souboru aktualizace došlo k chybě</string>
     <string name="delete_updates_noFolder_message">Adresář aktualizací nenalezen</string>
     <string name="delete_updates_success_message">Všechny stažené aktualizace odstraněny</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Obnovit</string>
-    <string name="menu_delete_all">Odstranit aktualizace</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varování</string>
     <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>

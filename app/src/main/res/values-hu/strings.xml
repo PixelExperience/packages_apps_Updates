@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Fájl törlése</string>
     <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a kijelölt frissítő fájlt?</string>
-    <string name="confirm_delete_all_dialog_message">Biztosan törölni szeretné az összes letöltött frissítő fájlt?</string>
     <string name="delete_update_success_message"><xliff:g id="filename">%s</xliff:g> törölve</string>
     <string name="delete_updates_failure_message">Hiba történt a frissítő fájl törlésekor</string>
     <string name="delete_updates_noFolder_message">Frissítéseket tartalmazó mappa nem található</string>
     <string name="delete_updates_success_message">Az összes letöltött frissítés törölve</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Frissítés</string>
-    <string name="menu_delete_all">Frissítések törlése</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Figyelmeztetés</string>
     <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ez magas adathasználatot eredményezhetet. Szeretné folytatni?</string>

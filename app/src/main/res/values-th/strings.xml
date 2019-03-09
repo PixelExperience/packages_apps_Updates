@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">ลบไฟล์</string>
     <string name="confirm_delete_dialog_message">ลบไฟล์อัปเดตที่เลือกไว้หรือไม่?</string>
-    <string name="confirm_delete_all_dialog_message">ต้องการลบไฟล์อัปเดตทั้งหมดหรือไม่?</string>
     <string name="delete_update_success_message">ไฟล์อัปเดต <xliff:g id="filename">%s</xliff:g> ถูกลบแล้ว</string>
     <string name="delete_updates_failure_message">มีข้อผิดพลาดขณะลบไฟล์อัปเดต</string>
     <string name="delete_updates_noFolder_message">ไม่พบโฟลเดอร์อัปเดต</string>
     <string name="delete_updates_success_message">ไฟล์อัปเดตที่ได้ดาวน์โหลดไว้ทั้งหมดถูกลบแล้ว</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">โหลดใหม่</string>
-    <string name="menu_delete_all">ลบไฟล์อัพเดท</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">คำเตือน</string>
     <string name="update_on_mobile_data_message">คุณกำลังจะดาวน์โหลดไฟล์ขนาดใหญ่เพื่อใช้ปรับปรุงระบบ ผ่านทางครือข่ายมือถือซึ่งใช้ข้อมูลปริมาณมาก คุณต้องการทำหรือไม่?</string>

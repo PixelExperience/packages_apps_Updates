@@ -59,14 +59,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
     <string name="confirm_delete_dialog_message">¿Eliminar o ficheiro de actualización seleccionado?</string>
-    <string name="confirm_delete_all_dialog_message">Eliminar todos os ficheiros de actualización descargados?</string>
     <string name="delete_update_success_message">Actualizar <xliff:g id="filename">%s</xliff:g> eliminado</string>
     <string name="delete_updates_failure_message">Produciuse un erro ao eliminar o ficheiro de actualización</string>
     <string name="delete_updates_noFolder_message">Non foi posíbel atopar o cartafol de actualización</string>
     <string name="delete_updates_success_message">Elimináronse todas as actualizacións descargadas</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Actualizar</string>
-    <string name="menu_delete_all">Eliminar actualizacións</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Aviso</string>
     <string name="update_on_mobile_data_message">Estás a punto de descargar un paquete de actualización a través da conexión de datos móbeis o que xerará un maior consumo de datos. Tes a certeza de querer continuar?</string>

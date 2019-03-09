@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Dosyayı sil</string>
     <string name="confirm_delete_dialog_message">Seçilen güncelleme dosyası silinsin mi?</string>
-    <string name="confirm_delete_all_dialog_message">İndirilen tüm güncelleme dosyaları silinsin mi?</string>
     <string name="delete_update_success_message">Güncelleme <xliff:g id="filename">%s</xliff:g> silindi</string>
     <string name="delete_updates_failure_message">Güncelleme dosyaları silinirken bir hata oluştu</string>
     <string name="delete_updates_noFolder_message">Güncelleme klasörü bulunamadı</string>
     <string name="delete_updates_success_message">İndirilen bütün güncellemeler silindi</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Yenile</string>
-    <string name="menu_delete_all">Güncellemeleri sil</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Uyarı</string>
     <string name="update_on_mobile_data_message">Büyük bir olasılıkla yüksek veri kullanımına neden olacak mobil veri kullanarak bir güncelleme paketi indirmek üzeresiniz. Devam etmek ister misiniz?</string>

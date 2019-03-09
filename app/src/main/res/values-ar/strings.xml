@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">مسح الملف</string>
     <string name="confirm_delete_dialog_message">حف ملف التحديث المحدد؟</string>
-    <string name="confirm_delete_all_dialog_message">حذف كل ملفات التحديث المحملة؟</string>
     <string name="delete_update_success_message">التحديث <xliff:g id="filename">%s</xliff:g> تم حذفه</string>
     <string name="delete_updates_failure_message">يوجد خطأ أثناء محاولة حذف ملف التحميل</string>
     <string name="delete_updates_noFolder_message">تعذر العثور على مجلد التحديث</string>
     <string name="delete_updates_success_message">حذف كل التحديثات التي تم تنزيلها</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">تحديث</string>
-    <string name="menu_delete_all">حذف التحديثات</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">تحذير</string>
     <string name="update_on_mobile_data_message">أنت على وشك أن تقوم بتنزيل حزمة تحديث باستخدام البيانات مما سيتسبب في استخدام عالي للبيانات. هل تريد المتابعة؟</string>

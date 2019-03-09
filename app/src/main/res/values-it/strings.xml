@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Elimina file</string>
     <string name="confirm_delete_dialog_message">Cancellare il file di aggiornamento selezionato?</string>
-    <string name="confirm_delete_all_dialog_message">Cancellare tutti gli aggiornamenti scaricati?</string>
     <string name="delete_update_success_message">Aggiornamento <xliff:g id="filename">%s</xliff:g> eliminato</string>
     <string name="delete_updates_failure_message">Si è verificato un errore durante l\'eliminazione del file dell\'aggiornamento</string>
     <string name="delete_updates_noFolder_message">Cartella degli aggiornamenti non trovata</string>
     <string name="delete_updates_success_message">Tutti gli aggiornamenti scaricati sono stati eliminati</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Ricarica</string>
-    <string name="menu_delete_all">Elimina aggiornamenti</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attenzione</string>
     <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili, ciò potrebbe comportare un utilizzo elevato di dati. Vuoi procedere?</string>

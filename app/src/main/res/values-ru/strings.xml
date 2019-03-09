@@ -5,7 +5,7 @@
     <string name="app_name">Обновления системы</string>
     <!-- Update checking -->
     <string name="ota_not_supported">Эта сборка не поддерживает OTA-обновления.</string>
-    <string name="last_updated_at">(последнее обновление в <xliff:g id="time">%s </xliff:g>)</string>
+    <string name="last_updated_at">(последняя проверка в <xliff:g id="time">%s</xliff:g>)</string>
     <string name="type_downloaded">Готово к установке</string>
     <string name="type_downloading">Загрузка…</string>
     <string name="type_completing">Завершение установки…</string>
@@ -61,14 +61,12 @@
     <!-- Deleting -->
     <string name="confirm_delete_dialog_title">Удалить файл</string>
     <string name="confirm_delete_dialog_message">Удалить выбранный файл обновления?</string>
-    <string name="confirm_delete_all_dialog_message">Удалить все загруженные файлы обновлений?</string>
     <string name="delete_update_success_message">Файл обновления «<xliff:g id="filename">%s</xliff:g>» удалён</string>
     <string name="delete_updates_failure_message">Произошла ошибка при удалении файла обновления</string>
     <string name="delete_updates_noFolder_message">Каталог с обновлениями не найден</string>
     <string name="delete_updates_success_message">Все загруженные обновления удалены</string>
     <!-- Menu and dialog strings -->
     <string name="menu_refresh">Обновить</string>
-    <string name="menu_delete_all">Удалить обновления</string>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Предупреждение</string>
     <string name="update_on_mobile_data_message">Скачивание обновления по мобильной сети расходует большой объём трафика и может привести к непредвиденным расходам. Продолжить?</string>
