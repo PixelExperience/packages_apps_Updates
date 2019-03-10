@@ -99,10 +99,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
                         updateRepeatingUpdatesCheck(context);
                     }
                     jsonNew.renameTo(json);
-                    long currentMillis = System.currentTimeMillis();
-                    preferences.edit()
-                            .putLong(Constants.PREF_LAST_UPDATE_CHECK, currentMillis)
-                            .apply();
                     // In case we set a one-shot check because of a previous failure
                     cancelUpdatesCheck(context);
                 } catch (IOException | JSONException e) {
