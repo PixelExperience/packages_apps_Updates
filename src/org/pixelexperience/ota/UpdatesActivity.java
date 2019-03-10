@@ -77,6 +77,8 @@ public class UpdatesActivity extends UpdatesListActivity {
     private View mRefreshIconView;
     private RotateAnimation mRefreshAnimation;
 
+    private ExtrasFragment mExtrasFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +123,10 @@ public class UpdatesActivity extends UpdatesListActivity {
                 Animation.RELATIVE_TO_SELF, 0.5f);
         mRefreshAnimation.setInterpolator(new LinearInterpolator());
         mRefreshAnimation.setDuration(1000);
+        mExtrasFragment = new ExtrasFragment();
+        getFragmentManager().beginTransaction()
+                .replace(R.id.extras_view, mExtrasFragment)
+                .commit();
     }
 
     @Override
