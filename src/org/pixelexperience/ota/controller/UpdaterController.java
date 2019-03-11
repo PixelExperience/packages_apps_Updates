@@ -90,10 +90,17 @@ public class UpdaterController {
     }
 
     void notifyUpdateChange(String downloadId) {
-        Intent intent = new Intent();
-        intent.setAction(ACTION_UPDATE_STATUS);
-        intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
-        mBroadcastManager.sendBroadcast(intent);
+        new Thread(() -> {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Intent intent = new Intent();
+            intent.setAction(ACTION_UPDATE_STATUS);
+            intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
+            mBroadcastManager.sendBroadcast(intent);
+        }).start();
     }
 
     void notifyUpdateDelete(String downloadId) {
@@ -241,10 +248,6 @@ public class UpdaterController {
                 update.setStatus(UpdateStatus.VERIFICATION_FAILED);
             }
             mVerifyingUpdates.remove(downloadId);
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-            }
             notifyUpdateChange(downloadId);
         }).start();
     }
