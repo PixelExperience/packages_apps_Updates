@@ -24,13 +24,13 @@ public class UpdateBase implements UpdateBaseInfo {
     private long mTimestamp;
     private String mVersion;
     private long mFileSize;
-    private String mChangelog;
     private String mDonateUrl;
     private String mForumUrl;
     private String mWebsiteUrl;
     private String mNewsUrl;
     private String mMaintainer;
     private String mMaintainerUrl;
+    private String mHash;
 
     public UpdateBase() {
     }
@@ -150,5 +150,14 @@ public class UpdateBase implements UpdateBaseInfo {
 
     public void setMaintainerUrl(String maintainerUrl) {
         mMaintainerUrl = maintainerUrl;
+    }
+
+    @Override
+    public String getHash() {
+        return mHash;
+    }
+
+    public void setHash(String hash) {
+        mHash = hash;
     }
 }

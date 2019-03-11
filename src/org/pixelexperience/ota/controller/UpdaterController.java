@@ -229,7 +229,7 @@ public class UpdaterController {
         new Thread(() -> {
             Update update = mDownloads.get(downloadId).mUpdate;
             File file = update.getFile();
-            if (file.exists() && verifyPackage(file)) {
+            if (file.exists() && verifyPackage(file, update.getHash())) {
                 file.setReadable(true, false);
                 update.setPersistentStatus(UpdateStatus.Persistent.VERIFIED);
                 mUpdatesDbHelper.changeUpdateStatus(update);
@@ -241,15 +241,22 @@ public class UpdaterController {
                 update.setStatus(UpdateStatus.VERIFICATION_FAILED);
             }
             mVerifyingUpdates.remove(downloadId);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+            }
             notifyUpdateChange(downloadId);
         }).start();
     }
 
-    private boolean verifyPackage(File file) {
+    private boolean verifyPackage(File file, String hash) {
         try {
-            android.os.RecoverySystem.verifyPackage(file, null, null);
-            Log.e(TAG, "Verification successful");
-            return true;
+            if (Utils.calculateMD5(file).equals(hash)) {
+                Log.e(TAG, "Verification successful");
+                return true;
+            } else {
+                throw new Exception("MD5 mismatch");
+            }
         } catch (Exception e) {
             Log.e(TAG, "Verification failed", e);
             if (file.exists()) {
