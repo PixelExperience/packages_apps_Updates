@@ -350,7 +350,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             }
             break;
             case INFO: {
-                button.setText(R.string.action_info);
+                button.setText(R.string.details_button);
                 button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_information, 0, 0, 0);
                 button.setEnabled(enabled);
                 clickListener = enabled ? view -> showInfoDialog() : null;
