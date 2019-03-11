@@ -118,6 +118,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
                     String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
                     mAdapter.removeItem(downloadId);
+                    hideUpdates();
                     downloadUpdatesList(false);
                 }
             }
@@ -196,6 +197,17 @@ public class UpdatesActivity extends UpdatesListActivity {
         return true;
     }
 
+    private void hideUpdates(){
+        findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
+        findViewById(R.id.recycler_view).setVisibility(View.GONE);
+        findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 35), Utils.dpToPx(this, 5), 0);
+    }
+
+    private void showUpdates(){
+        findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
+        findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
+        findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 214), Utils.dpToPx(this, 5), 0);
+    }
     private void loadUpdatesList(File jsonFile, boolean manualRefresh)
             throws IOException, JSONException {
         mExtrasFragment.updatePrefs(Utils.parseJson(jsonFile, false));
@@ -213,17 +225,13 @@ public class UpdatesActivity extends UpdatesListActivity {
 
         List<String> updateIds = new ArrayList<>();
         List<UpdateInfo> sortedUpdates = controller.getUpdates();
-        findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
-        findViewById(R.id.recycler_view).setVisibility(View.GONE);
-        findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 35), Utils.dpToPx(this, 5), 0);
+        hideUpdates();
         if (newUpdate != null && Utils.isCompatible(newUpdate) && !sortedUpdates.isEmpty()) {
             sortedUpdates.sort((u1, u2) -> Long.compare(u2.getTimestamp(), u1.getTimestamp()));
             for (UpdateInfo update : sortedUpdates) {
                 if (Utils.isCompatible(update)) {
                     updateIds.add(update.getDownloadId());
-                    findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
-                    findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
-                    findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 214), Utils.dpToPx(this, 5), 0);
+                    showUpdates();
                     break; // Limit to 1
                 }
             }
