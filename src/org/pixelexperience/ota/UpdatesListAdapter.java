@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
@@ -31,10 +32,8 @@ import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.text.SpannableString;
 import android.text.format.Formatter;
 import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -48,7 +47,6 @@ import android.widget.TextView;
 
 import org.pixelexperience.ota.controller.UpdaterController;
 import org.pixelexperience.ota.controller.UpdaterService;
-import org.pixelexperience.ota.misc.BuildInfoUtils;
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.PermissionsUtils;
 import org.pixelexperience.ota.misc.StringGenerator;
@@ -72,40 +70,6 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     private String mSelectedDownload;
     private UpdaterController mUpdaterController;
     private UpdatesListActivity mActivity;
-
-    private enum Action {
-        DOWNLOAD,
-        PAUSE,
-        RESUME,
-        INSTALL,
-        INFO,
-        DELETE,
-        CANCEL_INSTALLATION,
-        REBOOT,
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        private Button mAction;
-
-        private TextView mBuildDate;
-        private TextView mBuildVersion;
-        private TextView mBuildSize;
-
-        private ProgressBar mProgressBar;
-        private TextView mProgressText;
-
-        public ViewHolder(final View view) {
-            super(view);
-            mAction = (Button) view.findViewById(R.id.update_action);
-
-            mBuildDate = (TextView) view.findViewById(R.id.build_date);
-            mBuildVersion = (TextView) view.findViewById(R.id.build_version);
-            mBuildSize = (TextView) view.findViewById(R.id.build_size);
-
-            mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
-            mProgressText = (TextView) view.findViewById(R.id.progress_text);
-        }
-    }
 
     public UpdatesListAdapter(UpdatesListActivity activity) {
         mActivity = activity;
@@ -133,7 +97,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         final String downloadId = update.getDownloadId();
         if (mUpdaterController.isDownloading(downloadId)) {
             canDelete = true;
-            String downloaded = StringGenerator.bytesToMegabytes(mActivity,
+            String downloaded = Formatter.formatShortFileSize(mActivity,
                     update.getFile().length());
             String total = Formatter.formatShortFileSize(mActivity, update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
@@ -167,7 +131,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         } else {
             canDelete = true;
             setButtonAction(viewHolder.mAction, Action.RESUME, downloadId, !isBusy());
-            String downloaded = StringGenerator.bytesToMegabytes(mActivity,
+            String downloaded = Formatter.formatShortFileSize(mActivity,
                     update.getFile().length());
             String total = Formatter.formatShortFileSize(mActivity, update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
@@ -249,11 +213,20 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
         String buildDate = StringGenerator.getDateLocalizedUTC(mActivity,
                 DateFormat.LONG, update.getTimestamp());
-        String buildVersion = mActivity.getString(R.string.list_build_version,
-                update.getVersion());
+        String buildVersion = update.getName();
         viewHolder.mBuildDate.setText(buildDate);
-        viewHolder.mBuildVersion.setText(buildVersion);
-        viewHolder.mBuildVersion.setCompoundDrawables(null, null, null, null);
+        viewHolder.mBuildName.setText(buildVersion);
+        viewHolder.mBuildName.setCompoundDrawables(null, null, null, null);
+        viewHolder.mBuildName.setSelected(true);
+        viewHolder.mDetails.setOnClickListener(v -> {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Utils.getDownloadWebpageUrl(update.getName())));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mActivity.startActivity(intent);
+            } catch (Exception ex) {
+                mActivity.showSnackbar(R.string.error_open_url, Snackbar.LENGTH_SHORT);
+            }
+        });
 
         if (activeLayout) {
             handleActiveStatus(viewHolder, update);
@@ -319,7 +292,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void setButtonAction(Button button, Action action, final String downloadId,
-            boolean enabled) {
+                                 boolean enabled) {
         final View.OnClickListener clickListener;
         switch (action) {
             case DOWNLOAD:
@@ -423,7 +396,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private View.OnLongClickListener getLongClickListener(final UpdateInfo update,
-            final boolean canDelete, View anchor) {
+                                                          final boolean canDelete, View anchor) {
         return view -> {
             startActionMode(update, canDelete, anchor);
             return true;
@@ -454,13 +427,9 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             return null;
         }
 
-        String buildDate = StringGenerator.getDateLocalizedUTC(mActivity,
-                DateFormat.MEDIUM, update.getTimestamp());
-        String buildInfoText = mActivity.getString(R.string.list_build_version_date,
-                BuildInfoUtils.getBuildVersion(), buildDate);
         return new AlertDialog.Builder(mActivity)
                 .setTitle(R.string.apply_update_dialog_title)
-                .setMessage(mActivity.getString(resId, buildInfoText,
+                .setMessage(mActivity.getString(resId, update.getName(),
                         mActivity.getString(android.R.string.ok)))
                 .setPositiveButton(android.R.string.ok,
                         (dialog, which) -> Utils.triggerUpdate(mActivity, downloadId))
@@ -503,7 +472,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 case R.id.menu_copy_url:
                     Utils.addToClipboard(mActivity,
                             mActivity.getString(R.string.label_download_url),
-                            update.getDownloadUrl(),
+                            Utils.getDownloadWebpageUrl(update.getName()),
                             mActivity.getString(R.string.toast_download_url_copied));
                     return true;
                 case R.id.menu_export_update:
@@ -535,15 +504,11 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void showInfoDialog() {
-        String messageString = String.format(StringGenerator.getCurrentLocale(mActivity),
-                mActivity.getString(R.string.blocked_update_dialog_message),
-                mActivity.getString(R.string.blocked_update_info_url));
-        SpannableString message = new SpannableString(messageString);
-        Linkify.addLinks(message, Linkify.WEB_URLS);
+        String messageString = mActivity.getString(R.string.snack_update_not_installable);
         AlertDialog dialog = new AlertDialog.Builder(mActivity)
                 .setTitle(R.string.blocked_update_dialog_title)
                 .setPositiveButton(android.R.string.ok, null)
-                .setMessage(message)
+                .setMessage(messageString)
                 .show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -562,5 +527,41 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 mActivity.getResources().getInteger(R.integer.battery_ok_percentage_charging) :
                 mActivity.getResources().getInteger(R.integer.battery_ok_percentage_discharging);
         return percent >= required;
+    }
+
+    private enum Action {
+        DOWNLOAD,
+        PAUSE,
+        RESUME,
+        INSTALL,
+        INFO,
+        DELETE,
+        CANCEL_INSTALLATION,
+        REBOOT,
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private Button mAction;
+        private Button mDetails;
+
+        private TextView mBuildDate;
+        private TextView mBuildName;
+        private TextView mBuildSize;
+
+        private ProgressBar mProgressBar;
+        private TextView mProgressText;
+
+        public ViewHolder(final View view) {
+            super(view);
+            mAction = (Button) view.findViewById(R.id.update_action);
+            mDetails = (Button) view.findViewById(R.id.details_action);
+
+            mBuildDate = (TextView) view.findViewById(R.id.build_date);
+            mBuildName = (TextView) view.findViewById(R.id.build_name);
+            mBuildSize = (TextView) view.findViewById(R.id.build_size);
+
+            mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+            mProgressText = (TextView) view.findViewById(R.id.progress_text);
+        }
     }
 }

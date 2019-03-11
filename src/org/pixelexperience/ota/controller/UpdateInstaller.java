@@ -23,7 +23,6 @@ import android.os.SystemProperties;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
-import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.FileUtils;
 import org.pixelexperience.ota.misc.Utils;
@@ -39,12 +38,10 @@ class UpdateInstaller {
 
     private static UpdateInstaller sInstance = null;
     private static String sInstallingUpdate = null;
-
-    private Thread mPrepareUpdateThread;
-    private volatile boolean mCanCancel;
-
     private final Context mContext;
     private final UpdaterController mUpdaterController;
+    private Thread mPrepareUpdateThread;
+    private volatile boolean mCanCancel;
 
     private UpdateInstaller(Context context, UpdaterController controller) {
         mContext = context.getApplicationContext();
@@ -52,7 +49,7 @@ class UpdateInstaller {
     }
 
     static synchronized UpdateInstaller getInstance(Context context,
-            UpdaterController updaterController) {
+                                                    UpdaterController updaterController) {
         if (sInstance == null) {
             sInstance = new UpdateInstaller(context, updaterController);
         }
@@ -82,6 +79,7 @@ class UpdateInstaller {
         preferences.edit()
                 .putLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, buildTimestamp)
                 .putLong(Constants.PREF_INSTALL_NEW_TIMESTAMP, update.getTimestamp())
+                .putString(Constants.PREF_INSTALL_NEW_FILE_NAME, update.getName())
                 .putString(Constants.PREF_INSTALL_PACKAGE_PATH, update.getFile().getAbsolutePath())
                 .putBoolean(Constants.PREF_INSTALL_AGAIN, isReinstalling)
                 .putBoolean(Constants.PREF_INSTALL_NOTIFIED, false)

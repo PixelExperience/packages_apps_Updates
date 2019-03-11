@@ -31,20 +31,8 @@ import java.util.List;
 
 public class UpdatesDbHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "updates.db";
-
-    public static class UpdateEntry implements BaseColumns {
-        public static final String TABLE_NAME = "updates";
-        public static final String COLUMN_NAME_STATUS = "status";
-        public static final String COLUMN_NAME_PATH = "path";
-        public static final String COLUMN_NAME_DOWNLOAD_ID = "download_id";
-        public static final String COLUMN_NAME_TIMESTAMP = "timestamp";
-        public static final String COLUMN_NAME_TYPE = "type";
-        public static final String COLUMN_NAME_VERSION = "version";
-        public static final String COLUMN_NAME_SIZE = "size";
-    }
-
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + UpdateEntry.TABLE_NAME + " (" +
                     UpdateEntry._ID + " INTEGER PRIMARY KEY," +
@@ -52,10 +40,14 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                     UpdateEntry.COLUMN_NAME_PATH + " TEXT," +
                     UpdateEntry.COLUMN_NAME_DOWNLOAD_ID + " TEXT NOT NULL UNIQUE," +
                     UpdateEntry.COLUMN_NAME_TIMESTAMP + " INTEGER," +
-                    UpdateEntry.COLUMN_NAME_TYPE + " TEXT," +
                     UpdateEntry.COLUMN_NAME_VERSION + " TEXT," +
-                    UpdateEntry.COLUMN_NAME_SIZE + " INTEGER)";
-
+                    UpdateEntry.COLUMN_NAME_SIZE + " INTEGER," +
+                    UpdateEntry.COLUMN_NAME_DONATE_URL + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_FORUM_URL + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_WEBSITE_URL + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_NEWS_URL + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_MAINTAINER + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_MAINTAINER_URL + " TEXT)";
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + UpdateEntry.TABLE_NAME;
 
@@ -83,9 +75,14 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         values.put(UpdateEntry.COLUMN_NAME_PATH, update.getFile().getAbsolutePath());
         values.put(UpdateEntry.COLUMN_NAME_DOWNLOAD_ID, update.getDownloadId());
         values.put(UpdateEntry.COLUMN_NAME_TIMESTAMP, update.getTimestamp());
-        values.put(UpdateEntry.COLUMN_NAME_TYPE, update.getType());
         values.put(UpdateEntry.COLUMN_NAME_VERSION, update.getVersion());
         values.put(UpdateEntry.COLUMN_NAME_SIZE, update.getFileSize());
+        values.put(UpdateEntry.COLUMN_NAME_DONATE_URL, update.getDonateUrl());
+        values.put(UpdateEntry.COLUMN_NAME_FORUM_URL, update.getForumUrl());
+        values.put(UpdateEntry.COLUMN_NAME_WEBSITE_URL, update.getWebsiteUrl());
+        values.put(UpdateEntry.COLUMN_NAME_NEWS_URL, update.getNewsUrl());
+        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER, update.getMaintainer());
+        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER_URL, update.getMaintainerUrl());
         return db.insert(UpdateEntry.TABLE_NAME, null, values);
     }
 
@@ -96,9 +93,14 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         values.put(UpdateEntry.COLUMN_NAME_PATH, update.getFile().getAbsolutePath());
         values.put(UpdateEntry.COLUMN_NAME_DOWNLOAD_ID, update.getDownloadId());
         values.put(UpdateEntry.COLUMN_NAME_TIMESTAMP, update.getTimestamp());
-        values.put(UpdateEntry.COLUMN_NAME_TYPE, update.getType());
         values.put(UpdateEntry.COLUMN_NAME_VERSION, update.getVersion());
         values.put(UpdateEntry.COLUMN_NAME_SIZE, update.getFileSize());
+        values.put(UpdateEntry.COLUMN_NAME_DONATE_URL, update.getDonateUrl());
+        values.put(UpdateEntry.COLUMN_NAME_FORUM_URL, update.getForumUrl());
+        values.put(UpdateEntry.COLUMN_NAME_WEBSITE_URL, update.getWebsiteUrl());
+        values.put(UpdateEntry.COLUMN_NAME_NEWS_URL, update.getNewsUrl());
+        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER, update.getMaintainer());
+        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER_URL, update.getMaintainerUrl());
         return db.insertWithOnConflict(UpdateEntry.TABLE_NAME, null, values, conflictAlgorithm);
     }
 
@@ -127,7 +129,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
     }
 
     private boolean changeUpdateStatus(String selection, String[] selectionArgs,
-            int status) {
+                                       int status) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(UpdateEntry.COLUMN_NAME_STATUS, status);
@@ -160,11 +162,15 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 UpdateEntry.COLUMN_NAME_PATH,
                 UpdateEntry.COLUMN_NAME_DOWNLOAD_ID,
                 UpdateEntry.COLUMN_NAME_TIMESTAMP,
-                UpdateEntry.COLUMN_NAME_TYPE,
                 UpdateEntry.COLUMN_NAME_VERSION,
                 UpdateEntry.COLUMN_NAME_STATUS,
                 UpdateEntry.COLUMN_NAME_SIZE,
-        };
+                UpdateEntry.COLUMN_NAME_DONATE_URL,
+                UpdateEntry.COLUMN_NAME_FORUM_URL,
+                UpdateEntry.COLUMN_NAME_WEBSITE_URL,
+                UpdateEntry.COLUMN_NAME_NEWS_URL,
+                UpdateEntry.COLUMN_NAME_MAINTAINER,
+                UpdateEntry.COLUMN_NAME_MAINTAINER_URL};
         String sort = UpdateEntry.COLUMN_NAME_TIMESTAMP + " DESC";
         Cursor cursor = db.query(UpdateEntry.TABLE_NAME, projection, selection, selectionArgs,
                 null, null, sort);
@@ -179,18 +185,44 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 update.setDownloadId(cursor.getString(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_TIMESTAMP);
                 update.setTimestamp(cursor.getLong(index));
-                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_TYPE);
-                update.setType(cursor.getString(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_VERSION);
                 update.setVersion(cursor.getString(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_STATUS);
                 update.setPersistentStatus(cursor.getInt(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_SIZE);
                 update.setFileSize(cursor.getLong(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_DONATE_URL);
+                update.setDonateUrl(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_FORUM_URL);
+                update.setForumUrl(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_WEBSITE_URL);
+                update.setWebsiteUrl(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_NEWS_URL);
+                update.setNewsUrl(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_MAINTAINER);
+                update.setMaintainer(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_MAINTAINER_URL);
+                update.setMaintainerUrl(cursor.getString(index));
                 updates.add(update);
             }
             cursor.close();
         }
         return updates;
+    }
+
+    public static class UpdateEntry implements BaseColumns {
+        public static final String TABLE_NAME = "updates";
+        public static final String COLUMN_NAME_STATUS = "status";
+        public static final String COLUMN_NAME_PATH = "path";
+        public static final String COLUMN_NAME_DOWNLOAD_ID = "download_id";
+        public static final String COLUMN_NAME_TIMESTAMP = "timestamp";
+        public static final String COLUMN_NAME_VERSION = "version";
+        public static final String COLUMN_NAME_SIZE = "size";
+        public static final String COLUMN_NAME_DONATE_URL = "donate_url";
+        public static final String COLUMN_NAME_FORUM_URL = "forum_url";
+        public static final String COLUMN_NAME_WEBSITE_URL = "website_url";
+        public static final String COLUMN_NAME_NEWS_URL = "news_url";
+        public static final String COLUMN_NAME_MAINTAINER = "maintainer";
+        public static final String COLUMN_NAME_MAINTAINER_URL = "maintainer_url";
     }
 }

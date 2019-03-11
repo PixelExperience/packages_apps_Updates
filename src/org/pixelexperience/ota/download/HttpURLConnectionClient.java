@@ -36,37 +36,35 @@ import java.util.regex.Pattern;
 public class HttpURLConnectionClient implements DownloadClient {
 
     private final static String TAG = "HttpURLConnectionClient";
-
-    private HttpURLConnection mClient;
-
     private final File mDestination;
     private final DownloadClient.ProgressListener mProgressListener;
     private final DownloadClient.DownloadCallback mCallback;
     private final boolean mUseDuplicateLinks;
-
+    private HttpURLConnection mClient;
     private DownloadThread mDownloadThread;
 
-    public class Headers implements DownloadClient.Headers {
-        @Override
-        public String get(String name) {
-            return mClient.getHeaderField(name);
-        }
-
-        @Override
-        public Map<String, List<String>> getAll() {
-            return mClient.getHeaderFields();
-        }
-    }
-
     HttpURLConnectionClient(String url, File destination,
-            DownloadClient.ProgressListener progressListener,
-            DownloadClient.DownloadCallback callback,
-            boolean useDuplicateLinks) throws IOException {
+                            DownloadClient.ProgressListener progressListener,
+                            DownloadClient.DownloadCallback callback,
+                            boolean useDuplicateLinks) throws IOException {
         mClient = (HttpURLConnection) new URL(url).openConnection();
+        mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
         mDestination = destination;
         mProgressListener = progressListener;
         mCallback = callback;
         mUseDuplicateLinks = useDuplicateLinks;
+    }
+
+    private static boolean isSuccessCode(int statusCode) {
+        return (statusCode / 100) == 2;
+    }
+
+    private static boolean isRedirectCode(int statusCode) {
+        return (statusCode / 100) == 3;
+    }
+
+    private static boolean isPartialContentCode(int statusCode) {
+        return statusCode == 206;
     }
 
     @Override
@@ -117,29 +115,27 @@ public class HttpURLConnectionClient implements DownloadClient {
         mDownloadThread.start();
     }
 
-    private static boolean isSuccessCode(int statusCode) {
-        return (statusCode / 100) == 2;
-    }
+    public class Headers implements DownloadClient.Headers {
+        @Override
+        public String get(String name) {
+            return mClient.getHeaderField(name);
+        }
 
-    private static boolean isRedirectCode(int statusCode) {
-        return (statusCode / 100) == 3;
-    }
-
-    private static boolean isPartialContentCode(int statusCode) {
-        return statusCode == 206;
+        @Override
+        public Map<String, List<String>> getAll() {
+            return mClient.getHeaderFields();
+        }
     }
 
     private class DownloadThread extends Thread {
 
+        private final boolean mResume;
         private long mTotalBytes = 0;
         private long mTotalBytesRead = 0;
-
         private long mCurSampleBytes = 0;
         private long mLastMillis = 0;
         private long mSpeed = -1;
         private long mEta = -1;
-
-        private final boolean mResume;
 
         private DownloadThread(boolean resume) {
             mResume = resume;
@@ -171,6 +167,7 @@ public class HttpURLConnectionClient implements DownloadClient {
             String range = mClient.getRequestProperty("Range");
             mClient.disconnect();
             mClient = (HttpURLConnection) newUrl.openConnection();
+            mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
             if (range != null) {
                 mClient.setRequestProperty("Range", range);
             }
@@ -182,6 +179,7 @@ public class HttpURLConnectionClient implements DownloadClient {
             class DuplicateLink {
                 private String mUrl;
                 private int mPriority;
+
                 private DuplicateLink(String url, int priority) {
                     mUrl = url;
                     mPriority = priority;
@@ -215,7 +213,7 @@ public class HttpURLConnectionClient implements DownloadClient {
             }
 
             String newUrl = mClient.getHeaderField("Location");
-            for (;;) {
+            for (; ; ) {
                 try {
                     URL url = new URL(newUrl);
                     if (!url.getProtocol().equals(protocol)) {

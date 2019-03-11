@@ -30,6 +30,30 @@ public class FileUtils {
 
     private static final String TAG = "FileUtils";
 
+    public static void copyFile(File sourceFile, File destFile, ProgressCallBack progressCallBack)
+            throws IOException {
+        try (FileChannel sourceChannel = new FileInputStream(sourceFile).getChannel();
+             FileChannel destChannel = new FileOutputStream(destFile).getChannel()) {
+            if (progressCallBack != null) {
+                ReadableByteChannel readableByteChannel = new CallbackByteChannel(sourceChannel,
+                        sourceFile.length(), progressCallBack);
+                destChannel.transferFrom(readableByteChannel, 0, sourceChannel.size());
+            } else {
+                destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+            }
+        } catch (IOException e) {
+            Log.e(TAG, "Could not copy file", e);
+            if (destFile.exists()) {
+                destFile.delete();
+            }
+            throw e;
+        }
+    }
+
+    public static void copyFile(File sourceFile, File destFile) throws IOException {
+        copyFile(sourceFile, destFile, null);
+    }
+
     public interface ProgressCallBack {
         void update(int progress);
     }
@@ -42,7 +66,7 @@ public class FileUtils {
         private int mProgress;
 
         private CallbackByteChannel(ReadableByteChannel readableByteChannel, long expectedSize,
-                ProgressCallBack callback) {
+                                    ProgressCallBack callback) {
             this.mCallback = callback;
             this.mSize = expectedSize;
             this.mReadableByteChannel = readableByteChannel;
@@ -71,29 +95,5 @@ public class FileUtils {
             }
             return read;
         }
-    }
-
-    public static void copyFile(File sourceFile, File destFile, ProgressCallBack progressCallBack)
-            throws IOException {
-        try (FileChannel sourceChannel = new FileInputStream(sourceFile).getChannel();
-             FileChannel destChannel = new FileOutputStream(destFile).getChannel()) {
-            if (progressCallBack != null) {
-                ReadableByteChannel readableByteChannel = new CallbackByteChannel(sourceChannel,
-                        sourceFile.length(), progressCallBack);
-                destChannel.transferFrom(readableByteChannel, 0, sourceChannel.size());
-            } else {
-                destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Could not copy file", e);
-            if (destFile.exists()) {
-                destFile.delete();
-            }
-            throw e;
-        }
-    }
-
-    public static void copyFile(File sourceFile, File destFile) throws IOException {
-        copyFile(sourceFile, destFile, null);
     }
 }

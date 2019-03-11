@@ -23,24 +23,6 @@ import java.util.Map;
 
 public interface DownloadClient {
 
-    interface DownloadCallback {
-        void onResponse(int statusCode, String url, Headers headers);
-
-        void onSuccess(File destination);
-
-        void onFailure(boolean cancelled);
-    }
-
-    interface ProgressListener {
-        void update(long bytesRead, long contentLength, long speed, long eta, boolean done);
-    }
-
-    interface Headers {
-        String get(String name);
-
-        Map<String, List<String>> getAll();
-    }
-
     /**
      * Start the download. This method has no effect if the download already started.
      */
@@ -58,6 +40,24 @@ public interface DownloadClient {
      * Cancel the download. This method has no effect if the download isn't ongoing.
      */
     void cancel();
+
+    interface DownloadCallback {
+        void onResponse(int statusCode, String url, Headers headers);
+
+        void onSuccess(File destination);
+
+        void onFailure(boolean cancelled);
+    }
+
+    interface ProgressListener {
+        void update(long bytesRead, long contentLength, long speed, long eta, boolean done);
+    }
+
+    interface Headers {
+        String get(String name);
+
+        Map<String, List<String>> getAll();
+    }
 
     final class Builder {
         private String mUrl;

@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:elevation="0dp">
@@ -23,9 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingStart="46dp"
+        android:paddingTop="5dp"
         android:paddingEnd="46dp"
-        android:paddingTop="11dp"
-        android:paddingBottom="11dp"
+        android:paddingBottom="45dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
@@ -41,6 +40,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="5dp"
         android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -49,6 +51,8 @@
         android:id="@+id/extras_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="81dp"
+        android:paddingTop="35dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </android.support.design.widget.CoordinatorLayout>

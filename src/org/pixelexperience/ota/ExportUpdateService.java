@@ -35,16 +35,12 @@ import java.text.NumberFormat;
 
 public class ExportUpdateService extends Service {
 
-    private static final String TAG = "ExportUpdateService";
-
-    private static final int NOTIFICATION_ID = 16;
-
     public static final String ACTION_START_EXPORTING = "start_exporting";
     public static final String ACTION_STOP_EXPORTING = "stop_exporting";
-
     public static final String EXTRA_SOURCE_FILE = "source_file";
     public static final String EXTRA_DEST_FILE = "dest_file";
-
+    private static final String TAG = "ExportUpdateService";
+    private static final int NOTIFICATION_ID = 16;
     private static final String EXPORT_NOTIFICATION_CHANNEL =
             "export_notification_channel";
 
@@ -91,48 +87,6 @@ public class ExportUpdateService extends Service {
         }
 
         return START_NOT_STICKY;
-    }
-
-    private class ExportRunnable implements Runnable {
-        private File mSource;
-        private File mDestination;
-        private FileUtils.ProgressCallBack mProgressCallBack;
-        private Runnable mRunnableComplete;
-        private Runnable mRunnableFailed;
-
-        private ExportRunnable(File source, File destination,
-                FileUtils.ProgressCallBack progressCallBack,
-                Runnable runnableComplete, Runnable runnableFailed) {
-            mSource = source;
-            mDestination = destination;
-            mProgressCallBack = progressCallBack;
-            mRunnableComplete = runnableComplete;
-            mRunnableFailed = runnableFailed;
-        }
-
-        @Override
-        public void run() {
-            try {
-                FileUtils.copyFile(mSource, mDestination, mProgressCallBack);
-                mIsExporting = false;
-                if (!mExportThread.isInterrupted()) {
-                    Log.d(TAG, "Completed");
-                    mRunnableComplete.run();
-                } else {
-                    Log.d(TAG, "Aborted");
-                }
-            } catch (IOException e) {
-                mIsExporting = false;
-                Log.e(TAG, "Could not copy file", e);
-                mRunnableFailed.run();
-            } finally {
-                stopSelf();
-            }
-        }
-
-        private void cleanUp() {
-            mDestination.delete();
-        }
     }
 
     private void startExporting(File source, File destination) {
@@ -212,5 +166,47 @@ public class ExportUpdateService extends Service {
         final Intent intent = new Intent(this, ExportUpdateService.class);
         intent.setAction(ACTION_STOP_EXPORTING);
         return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private class ExportRunnable implements Runnable {
+        private File mSource;
+        private File mDestination;
+        private FileUtils.ProgressCallBack mProgressCallBack;
+        private Runnable mRunnableComplete;
+        private Runnable mRunnableFailed;
+
+        private ExportRunnable(File source, File destination,
+                               FileUtils.ProgressCallBack progressCallBack,
+                               Runnable runnableComplete, Runnable runnableFailed) {
+            mSource = source;
+            mDestination = destination;
+            mProgressCallBack = progressCallBack;
+            mRunnableComplete = runnableComplete;
+            mRunnableFailed = runnableFailed;
+        }
+
+        @Override
+        public void run() {
+            try {
+                FileUtils.copyFile(mSource, mDestination, mProgressCallBack);
+                mIsExporting = false;
+                if (!mExportThread.isInterrupted()) {
+                    Log.d(TAG, "Completed");
+                    mRunnableComplete.run();
+                } else {
+                    Log.d(TAG, "Aborted");
+                }
+            } catch (IOException e) {
+                mIsExporting = false;
+                Log.e(TAG, "Could not copy file", e);
+                mRunnableFailed.run();
+            } finally {
+                stopSelf();
+            }
+        }
+
+        private void cleanUp() {
+            mDestination.delete();
+        }
     }
 }

@@ -47,13 +47,9 @@ public class UpdaterController {
     public static final String ACTION_UPDATE_REMOVED = "action_update_removed";
     public static final String ACTION_UPDATE_STATUS = "action_update_status_change";
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
-
-    private final String TAG = "UpdaterController";
-
-    private static UpdaterController sUpdaterController;
-
     private static final int MAX_REPORT_INTERVAL_MS = 1000;
-
+    private static UpdaterController sUpdaterController;
+    private final String TAG = "UpdaterController";
     private final Context mContext;
     private final LocalBroadcastManager mBroadcastManager;
     private final UpdatesDbHelper mUpdatesDbHelper;
@@ -64,17 +60,7 @@ public class UpdaterController {
 
     private int mActiveDownloads = 0;
     private Set<String> mVerifyingUpdates = new HashSet<>();
-
-    public static synchronized UpdaterController getInstance() {
-        return sUpdaterController;
-    }
-
-    protected static synchronized UpdaterController getInstance(Context context) {
-        if (sUpdaterController == null) {
-            sUpdaterController = new UpdaterController(context);
-        }
-        return sUpdaterController;
-    }
+    private Map<String, DownloadEntry> mDownloads = new HashMap<>();
 
     private UpdaterController(Context context) {
         mBroadcastManager = LocalBroadcastManager.getInstance(context);
@@ -92,15 +78,16 @@ public class UpdaterController {
         }
     }
 
-    private class DownloadEntry {
-        final Update mUpdate;
-        DownloadClient mDownloadClient;
-        private DownloadEntry(Update update) {
-            mUpdate = update;
-        }
+    public static synchronized UpdaterController getInstance() {
+        return sUpdaterController;
     }
 
-    private Map<String, DownloadEntry> mDownloads = new HashMap<>();
+    protected static synchronized UpdaterController getInstance(Context context) {
+        if (sUpdaterController == null) {
+            sUpdaterController = new UpdaterController(context);
+        }
+        return sUpdaterController;
+    }
 
     void notifyUpdateChange(String downloadId) {
         Intent intent = new Intent();
@@ -211,7 +198,7 @@ public class UpdaterController {
 
             @Override
             public void update(long bytesRead, long contentLength, long speed, long eta,
-                    boolean done) {
+                               boolean done) {
                 Update update = mDownloads.get(downloadId).mUpdate;
                 if (contentLength <= 0) {
                     if (update.getFileSize() <= 0) {
@@ -293,38 +280,11 @@ public class UpdaterController {
         return true;
     }
 
-    public void setUpdatesNotAvailableOnline(List<String> downloadIds) {
-        for (String downloadId : downloadIds) {
-            DownloadEntry update = mDownloads.get(downloadId);
-            if (update != null) {
-                update.mUpdate.setAvailableOnline(false);
-            }
-        }
-    }
-
-    public void setUpdatesAvailableOnline(List<String> downloadIds, boolean purgeList) {
-        List<String> toRemove = new ArrayList<>();
-        for (DownloadEntry entry : mDownloads.values()) {
-            boolean online = downloadIds.contains(entry.mUpdate.getDownloadId());
-            entry.mUpdate.setAvailableOnline(online);
-            if (!online && purgeList &&
-                    entry.mUpdate.getPersistentStatus() == UpdateStatus.Persistent.UNKNOWN) {
-                toRemove.add(entry.mUpdate.getDownloadId());
-            }
-        }
-        for (String downloadId : toRemove) {
-            Log.d(TAG, downloadId + " no longer available online, removing");
-            mDownloads.remove(downloadId);
-            notifyUpdateDelete(downloadId);
-        }
-    }
-
     public boolean addUpdate(UpdateInfo update) {
         return addUpdate(update, true);
     }
 
     private boolean addUpdate(final UpdateInfo updateInfo, boolean availableOnline) {
-        Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         if (mDownloads.containsKey(updateInfo.getDownloadId())) {
             Log.d(TAG, "Download (" + updateInfo.getDownloadId() + ") already added");
             Update updateAdded = mDownloads.get(updateInfo.getDownloadId()).mUpdate;
@@ -332,6 +292,7 @@ public class UpdaterController {
             updateAdded.setDownloadUrl(updateInfo.getDownloadUrl());
             return false;
         }
+        Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         Update update = new Update(updateInfo);
         if (!fixUpdateStatus(update) && !availableOnline) {
             update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
@@ -340,6 +301,7 @@ public class UpdaterController {
             return false;
         }
         update.setAvailableOnline(availableOnline);
+        mDownloads.clear();
         mDownloads.put(update.getDownloadId(), new DownloadEntry(update));
         return true;
     }
@@ -477,7 +439,9 @@ public class UpdaterController {
     public List<UpdateInfo> getUpdates() {
         List<UpdateInfo> updates = new ArrayList<>();
         for (DownloadEntry entry : mDownloads.values()) {
-            updates.add(entry.mUpdate);
+            if (Utils.isCompatible(entry.mUpdate)) {
+                updates.add(entry.mUpdate);
+            }
         }
         return updates;
     }
@@ -532,5 +496,14 @@ public class UpdaterController {
             return;
         }
         ABUpdateInstaller.getInstance(mContext, this).setPerformanceMode(enable);
+    }
+
+    private class DownloadEntry {
+        final Update mUpdate;
+        DownloadClient mDownloadClient;
+
+        private DownloadEntry(Update update) {
+            mUpdate = update;
+        }
     }
 }

@@ -22,7 +22,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
@@ -32,14 +31,13 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.UpdatesDbHelper;
 import org.pixelexperience.ota.controller.UpdaterService;
-import org.pixelexperience.ota.model.UpdateBaseInfo;
 import org.pixelexperience.ota.model.Update;
+import org.pixelexperience.ota.model.UpdateBaseInfo;
 import org.pixelexperience.ota.model.UpdateInfo;
 
 import java.io.BufferedReader;
@@ -48,10 +46,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
-import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -88,10 +83,15 @@ public class Utils {
         update.setTimestamp(object.getLong("datetime"));
         update.setName(object.getString("filename"));
         update.setDownloadId(object.getString("id"));
-        update.setType(object.getString("romtype"));
         update.setFileSize(object.getLong("size"));
         update.setDownloadUrl(object.getString("url"));
         update.setVersion(object.getString("version"));
+        update.setMaintainer(object.isNull("maintainer") ? "" : object.getString("maintainer"));
+        update.setMaintainerUrl(object.isNull("maintainer_url") ? "" : object.getString("maintainer_url"));
+        update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
+        update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
+        update.setWebsiteUrl(object.isNull("website_url") ? "" : object.getString("website_url"));
+        update.setNewsUrl(object.isNull("news_url") ? "" : object.getString("news_url"));
         return update;
     }
 
@@ -100,28 +100,21 @@ public class Utils {
             Log.d(TAG, update.getName() + " is older than current Android version");
             return false;
         }
-        if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) &&
-                update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
+        if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
             Log.d(TAG, update.getName() + " is older than/equal to the current build");
-            return false;
-        }
-        if (!update.getType().equalsIgnoreCase(SystemProperties.get(Constants.PROP_RELEASE_TYPE))) {
-            Log.d(TAG, update.getName() + " has type " + update.getType());
             return false;
         }
         return true;
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) ||
-                update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
+        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
                 update.getVersion().equalsIgnoreCase(
                         SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
-    public static List<UpdateInfo> parseJson(File file, boolean compatibleOnly)
+    public static UpdateInfo parseJson(File file, boolean compatibleOnly)
             throws IOException, JSONException {
-        List<UpdateInfo> updates = new ArrayList<>();
 
         String json = "";
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -131,46 +124,26 @@ public class Utils {
         }
 
         JSONObject obj = new JSONObject(json);
-        JSONArray updatesList = obj.getJSONArray("response");
-        for (int i = 0; i < updatesList.length(); i++) {
-            if (updatesList.isNull(i)) {
-                continue;
+        try {
+            UpdateInfo update = parseJsonUpdate(obj);
+            if (!compatibleOnly || isCompatible(update)) {
+                return update;
+            } else {
+                Log.d(TAG, "Ignoring incompatible update " + update.getName());
             }
-            try {
-                UpdateInfo update = parseJsonUpdate(updatesList.getJSONObject(i));
-                if (!compatibleOnly || isCompatible(update)) {
-                    updates.add(update);
-                } else {
-                    Log.d(TAG, "Ignoring incompatible update " + update.getName());
-                }
-            } catch (JSONException e) {
-                Log.e(TAG, "Could not parse update object, index=" + i, e);
-            }
+        } catch (JSONException e) {
+            Log.e(TAG, "Could not parse update object", e);
         }
 
-        return updates;
+        return null;
     }
 
-    public static String getServerURL(Context context) {
-        String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
-        String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
-
-        String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
-        if (serverUrl.trim().isEmpty()) {
-            serverUrl = context.getString(R.string.updater_server_url);
-        }
-
-        return serverUrl.replace("{device}", device)
-                .replace("{type}", type)
-                .replace("{incr}", incrementalVersion);
+    public static String getServerURL() {
+        return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_VERSION_CODE));
     }
 
-    public static String getChangelogURL(Context context) {
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
-        return context.getString(R.string.menu_changelog_url, device);
+    public static String getDownloadWebpageUrl(String fileName) {
+        return String.format(Constants.DOWNLOAD_WEBPAGE_URL, SystemProperties.get(Constants.PROP_DEVICE), fileName);
     }
 
     public static void triggerUpdate(Context context, String downloadId) {
@@ -206,20 +179,12 @@ public class Utils {
      */
     public static boolean checkForNewUpdates(File oldJson, File newJson)
             throws IOException, JSONException {
-        List<UpdateInfo> oldList = parseJson(oldJson, true);
-        List<UpdateInfo> newList = parseJson(newJson, true);
-        Set<String> oldIds = new HashSet<>();
-        for (UpdateInfo update : oldList) {
-            oldIds.add(update.getDownloadId());
+        UpdateInfo oldUpdate = parseJson(oldJson, true);
+        UpdateInfo newUpdate = parseJson(newJson, true);
+        if (oldUpdate == null || newUpdate == null) {
+            return false;
         }
-        // In case of no new updates, the old list should
-        // have all (if not more) the updates
-        for (UpdateInfo update : newList) {
-            if (!oldIds.contains(update.getDownloadId())) {
-                return true;
-            }
-        }
-        return false;
+        return !oldUpdate.getDownloadId().equals(newUpdate.getDownloadId());
     }
 
     /**
@@ -391,5 +356,10 @@ public class Utils {
             case Constants.AUTO_UPDATES_CHECK_INTERVAL_MONTHLY:
                 return AlarmManager.INTERVAL_DAY * 30;
         }
+    }
+
+    public static int dpToPx(Context context, int dp) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return Math.round((float) dp * density);
     }
 }

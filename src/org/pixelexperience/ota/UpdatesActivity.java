@@ -23,13 +23,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.icu.text.DateFormat;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
@@ -48,15 +43,12 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import org.json.JSONException;
 import org.pixelexperience.ota.controller.UpdaterController;
 import org.pixelexperience.ota.controller.UpdaterService;
 import org.pixelexperience.ota.download.DownloadClient;
-import org.pixelexperience.ota.misc.BuildInfoUtils;
 import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.misc.StringGenerator;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 
@@ -78,6 +70,24 @@ public class UpdatesActivity extends UpdatesListActivity {
     private RotateAnimation mRefreshAnimation;
 
     private ExtrasFragment mExtrasFragment;
+    private ServiceConnection mConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className,
+                                       IBinder service) {
+            UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
+            mUpdaterService = binder.getService();
+            mAdapter.setUpdaterController(mUpdaterService.getUpdaterController());
+            getUpdatesList();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            mAdapter.setUpdaterController(null);
+            mUpdaterService = null;
+            mAdapter.notifyDataSetChanged();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,9 +139,13 @@ public class UpdatesActivity extends UpdatesListActivity {
     @Override
     public void onStart() {
         super.onStart();
-        Intent intent = new Intent(this, UpdaterService.class);
-        startService(intent);
-        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        try {
+            Intent intent = new Intent(this, UpdaterService.class);
+            startService(intent);
+            bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        } catch (IllegalStateException ignored) {
+
+        }
 
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
@@ -181,56 +195,36 @@ public class UpdatesActivity extends UpdatesListActivity {
         return true;
     }
 
-    private ServiceConnection mConnection = new ServiceConnection() {
-
-        @Override
-        public void onServiceConnected(ComponentName className,
-                                       IBinder service) {
-            UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
-            mUpdaterService = binder.getService();
-            mAdapter.setUpdaterController(mUpdaterService.getUpdaterController());
-            getUpdatesList();
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName componentName) {
-            mAdapter.setUpdaterController(null);
-            mUpdaterService = null;
-            mAdapter.notifyDataSetChanged();
-        }
-    };
-
     private void loadUpdatesList(File jsonFile, boolean manualRefresh)
             throws IOException, JSONException {
+        mExtrasFragment.updatePrefs(Utils.parseJson(jsonFile, false));
         Log.d(TAG, "Adding remote updates");
         UpdaterController controller = mUpdaterService.getUpdaterController();
-        boolean newUpdates = false;
 
-        List<UpdateInfo> updates = Utils.parseJson(jsonFile, true);
-        List<String> updatesOnline = new ArrayList<>();
-        for (UpdateInfo update : updates) {
-            newUpdates |= controller.addUpdate(update);
-            updatesOnline.add(update.getDownloadId());
-        }
-        controller.setUpdatesAvailableOnline(updatesOnline, true);
+        UpdateInfo newUpdate = Utils.parseJson(jsonFile, true);
+        boolean updateAvailable = newUpdate != null && controller.addUpdate(newUpdate);
 
         if (manualRefresh) {
             showSnackbar(
-                    newUpdates ? R.string.snack_updates_found : R.string.snack_no_updates_found,
+                    updateAvailable ? R.string.update_found_notification : R.string.snack_no_updates_found,
                     Snackbar.LENGTH_SHORT);
         }
 
         List<String> updateIds = new ArrayList<>();
         List<UpdateInfo> sortedUpdates = controller.getUpdates();
-        if (sortedUpdates.isEmpty()) {
-            findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
-            findViewById(R.id.recycler_view).setVisibility(View.GONE);
-        } else {
-            findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
-            findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
+        findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
+        findViewById(R.id.recycler_view).setVisibility(View.GONE);
+        findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 35), Utils.dpToPx(this, 5), 0);
+        if (newUpdate != null && Utils.isCompatible(newUpdate) && !sortedUpdates.isEmpty()) {
             sortedUpdates.sort((u1, u2) -> Long.compare(u2.getTimestamp(), u1.getTimestamp()));
             for (UpdateInfo update : sortedUpdates) {
-                updateIds.add(update.getDownloadId());
+                if (Utils.isCompatible(update)) {
+                    updateIds.add(update.getDownloadId());
+                    findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
+                    findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
+                    findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 214), Utils.dpToPx(this, 5), 0);
+                    break; // Limit to 1
+                }
             }
             mAdapter.setData(updateIds);
             mAdapter.notifyDataSetChanged();
@@ -270,7 +264,7 @@ public class UpdatesActivity extends UpdatesListActivity {
     private void downloadUpdatesList(final boolean manualRefresh) {
         final File jsonFile = Utils.getCachedUpdateList(this);
         final File jsonFileTmp = new File(jsonFile.getAbsolutePath() + UUID.randomUUID());
-        String url = Utils.getServerURL(this);
+        String url = Utils.getServerURL();
         Log.d(TAG, "Checking " + url);
 
         DownloadClient.DownloadCallback callback = new DownloadClient.DownloadCallback() {

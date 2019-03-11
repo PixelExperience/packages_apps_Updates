@@ -28,11 +28,7 @@ import android.os.SystemProperties;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.preference.PreferenceManager;
 
-import org.pixelexperience.ota.misc.BuildInfoUtils;
 import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.misc.StringGenerator;
-
-import java.text.DateFormat;
 
 public class UpdaterReceiver extends BroadcastReceiver {
 
@@ -58,10 +54,7 @@ public class UpdaterReceiver extends BroadcastReceiver {
 
     private static void showUpdateFailedNotification(Context context) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String buildDate = StringGenerator.getDateLocalizedUTC(context,
-                DateFormat.MEDIUM, preferences.getLong(Constants.PREF_INSTALL_NEW_TIMESTAMP, 0));
-        String buildInfo = context.getString(R.string.list_build_version_date,
-                BuildInfoUtils.getBuildVersion(), buildDate);
+        String buildInfo = preferences.getString(Constants.PREF_INSTALL_NEW_FILE_NAME, context.getString(R.string.app_name));
 
         Intent notificationIntent = new Intent(context, UpdatesActivity.class);
         PendingIntent intent = PendingIntent.getActivity(context, 0, notificationIntent,

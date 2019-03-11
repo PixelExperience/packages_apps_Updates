@@ -31,15 +31,11 @@ import android.util.Log;
 
 import org.json.JSONException;
 import org.pixelexperience.ota.download.DownloadClient;
-import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.UpdateInfo;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 public class UpdatesCheckReceiver extends BroadcastReceiver {
@@ -51,75 +47,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
 
     private static final String NEW_UPDATES_NOTIFICATION_CHANNEL =
             "new_updates_notification_channel";
-
-    @Override
-    public void onReceive(final Context context, Intent intent) {
-        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            Utils.cleanupDownloadsDir(context);
-        }
-
-        final SharedPreferences preferences =
-                PreferenceManager.getDefaultSharedPreferences(context);
-
-        if (!Utils.isUpdateCheckEnabled(context)) {
-            return;
-        }
-
-        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            // Set a repeating alarm on boot to check for new updates once per day
-            scheduleRepeatingUpdatesCheck(context);
-        }
-
-        if (!Utils.isNetworkAvailable(context)) {
-            Log.d(TAG, "Network not available, scheduling new check");
-            scheduleUpdatesCheck(context);
-            return;
-        }
-
-        final File json = Utils.getCachedUpdateList(context);
-        final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
-        String url = Utils.getServerURL(context);
-        DownloadClient.DownloadCallback callback = new DownloadClient.DownloadCallback() {
-            @Override
-            public void onFailure(boolean cancelled) {
-                Log.e(TAG, "Could not download updates list, scheduling new check");
-                scheduleUpdatesCheck(context);
-            }
-
-            @Override
-            public void onResponse(int statusCode, String url,
-                    DownloadClient.Headers headers) {
-            }
-
-            @Override
-            public void onSuccess(File destination) {
-                try {
-                    if (json.exists() && Utils.checkForNewUpdates(json, jsonNew)) {
-                        showNotification(context);
-                        updateRepeatingUpdatesCheck(context);
-                    }
-                    jsonNew.renameTo(json);
-                    // In case we set a one-shot check because of a previous failure
-                    cancelUpdatesCheck(context);
-                } catch (IOException | JSONException e) {
-                    Log.e(TAG, "Could not parse list, scheduling new check", e);
-                    scheduleUpdatesCheck(context);
-                }
-            }
-        };
-
-        try {
-            DownloadClient downloadClient = new DownloadClient.Builder()
-                    .setUrl(url)
-                    .setDestination(jsonNew)
-                    .setDownloadCallback(callback)
-                    .build();
-            downloadClient.start();
-        } catch (IOException e) {
-            Log.e(TAG, "Could not fetch list, scheduling new check", e);
-            scheduleUpdatesCheck(context);
-        }
-    }
 
     private static void showNotification(Context context) {
         NotificationManager notificationManager =
@@ -135,7 +62,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         PendingIntent intent = PendingIntent.getActivity(context, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         notificationBuilder.setContentIntent(intent);
-        notificationBuilder.setContentTitle(context.getString(R.string.new_updates_found_title));
+        notificationBuilder.setContentTitle(context.getString(R.string.update_found_notification));
         notificationBuilder.setAutoCancel(true);
         notificationManager.createNotificationChannel(notificationChannel);
         notificationManager.notify(0, notificationBuilder.build());
@@ -160,7 +87,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         PendingIntent updateCheckIntent = getRepeatingUpdatesCheckIntent(context);
         AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr.setRepeating(AlarmManager.RTC, System.currentTimeMillis() +
-                Utils.getUpdateCheckInterval(context), Utils.getUpdateCheckInterval(context),
+                        Utils.getUpdateCheckInterval(context), Utils.getUpdateCheckInterval(context),
                 updateCheckIntent);
 
         Date nextCheckDate = new Date(System.currentTimeMillis() +
@@ -195,5 +122,74 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr.cancel(getUpdatesCheckIntent(context));
         Log.d(TAG, "Cancelling pending one-shot check");
+    }
+
+    @Override
+    public void onReceive(final Context context, Intent intent) {
+        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            Utils.cleanupDownloadsDir(context);
+        }
+
+        final SharedPreferences preferences =
+                PreferenceManager.getDefaultSharedPreferences(context);
+
+        if (!Utils.isUpdateCheckEnabled(context)) {
+            return;
+        }
+
+        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            // Set a repeating alarm on boot to check for new updates once per day
+            scheduleRepeatingUpdatesCheck(context);
+        }
+
+        if (!Utils.isNetworkAvailable(context)) {
+            Log.d(TAG, "Network not available, scheduling new check");
+            scheduleUpdatesCheck(context);
+            return;
+        }
+
+        final File json = Utils.getCachedUpdateList(context);
+        final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
+        String url = Utils.getServerURL();
+        DownloadClient.DownloadCallback callback = new DownloadClient.DownloadCallback() {
+            @Override
+            public void onFailure(boolean cancelled) {
+                Log.e(TAG, "Could not download updates list, scheduling new check");
+                scheduleUpdatesCheck(context);
+            }
+
+            @Override
+            public void onResponse(int statusCode, String url,
+                                   DownloadClient.Headers headers) {
+            }
+
+            @Override
+            public void onSuccess(File destination) {
+                try {
+                    if (json.exists() && Utils.checkForNewUpdates(json, jsonNew)) {
+                        showNotification(context);
+                        updateRepeatingUpdatesCheck(context);
+                    }
+                    jsonNew.renameTo(json);
+                    // In case we set a one-shot check because of a previous failure
+                    cancelUpdatesCheck(context);
+                } catch (IOException | JSONException e) {
+                    Log.e(TAG, "Could not parse list, scheduling new check", e);
+                    scheduleUpdatesCheck(context);
+                }
+            }
+        };
+
+        try {
+            DownloadClient downloadClient = new DownloadClient.Builder()
+                    .setUrl(url)
+                    .setDestination(jsonNew)
+                    .setDownloadCallback(callback)
+                    .build();
+            downloadClient.start();
+        } catch (IOException e) {
+            Log.e(TAG, "Could not fetch list, scheduling new check", e);
+            scheduleUpdatesCheck(context);
+        }
     }
 }
