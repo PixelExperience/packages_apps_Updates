@@ -252,8 +252,7 @@ public class Utils {
         long prevTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, 0);
         String lastUpdatePath = preferences.getString(Constants.PREF_INSTALL_PACKAGE_PATH, null);
         boolean reinstalling = preferences.getBoolean(Constants.PREF_INSTALL_AGAIN, false);
-        boolean deleteUpdates = preferences.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false);
-        if ((buildTimestamp != prevTimestamp || reinstalling) && deleteUpdates &&
+        if ((buildTimestamp != prevTimestamp || reinstalling) &&
                 lastUpdatePath != null) {
             File lastUpdate = new File(lastUpdatePath);
             if (lastUpdate.exists()) {

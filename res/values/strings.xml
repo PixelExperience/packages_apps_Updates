@@ -48,7 +48,6 @@
     <string name="menu_auto_updates_check_interval_weekly">Once a week</string>
     <string name="menu_auto_updates_check_interval_monthly">Once a month</string>
     <string name="menu_auto_updates_check_interval_never">Never</string>
-    <string name="menu_auto_delete_updates">Delete updates when installed</string>
     <string name="menu_delete_update">Delete</string>
     <string name="menu_copy_url">Copy URL</string>
     <string name="menu_export_update">Export update</string>
