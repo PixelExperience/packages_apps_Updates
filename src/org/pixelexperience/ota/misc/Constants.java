@@ -34,6 +34,7 @@ public final class Constants {
     public static final String PROP_DEVICE = "org.pixelexperience.device";
     public static final String PROP_BUILD_VERSION = "org.pixelexperience.version";
     public static final String PROP_VERSION_CODE = "org.pixelexperience.ota.version_code";
+    public static final String PROP_DISABLE_UNCRYPT = "sys.ota.disable_uncrypt";
     public static final String OTA_URL = "https://download.pixelexperience.org/ota_v2/%s/%s";
     public static final String DOWNLOAD_WEBPAGE_URL = "https://download.pixelexperience.org/changelog/%s/%s";
     public static final String PREF_INSTALL_OLD_TIMESTAMP = "install_old_timestamp";
