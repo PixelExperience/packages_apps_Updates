@@ -42,6 +42,8 @@ public final class Constants {
     public static final String PREF_INSTALL_PACKAGE_PATH = "install_package_path";
     public static final String PREF_INSTALL_AGAIN = "install_again";
     public static final String PREF_INSTALL_NOTIFIED = "install_notified";
+    public static final String DOWNLOAD_PATH = "/data/system_updates/";
+    public static final String EXPORT_PATH = "PixelExperience-Updates/";
 
     private Constants() {
     }

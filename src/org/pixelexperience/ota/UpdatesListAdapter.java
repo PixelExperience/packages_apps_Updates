@@ -514,7 +514,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void exportUpdate(UpdateInfo update) {
-        File dest = new File(Utils.getExportPath(mActivity), update.getName());
+        File dest = new File(Utils.getExportPath(), update.getName());
         if (dest.exists()) {
             dest = Utils.appendSequentialNumber(dest);
         }

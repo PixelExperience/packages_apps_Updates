@@ -63,13 +63,12 @@ public class Utils {
     private Utils() {
     }
 
-    public static File getDownloadPath(Context context) {
-        return new File(context.getString(R.string.download_path));
+    public static File getDownloadPath() {
+        return new File(Constants.DOWNLOAD_PATH);
     }
 
-    public static File getExportPath(Context context) {
-        File dir = new File(Environment.getExternalStorageDirectory(),
-                context.getString(R.string.export_path));
+    public static File getExportPath() {
+        File dir = new File(Environment.getExternalStorageDirectory(), Constants.EXPORT_PATH);
         if (!dir.isDirectory()) {
             if (dir.exists() || !dir.mkdirs()) {
                 throw new RuntimeException("Could not create directory");
@@ -243,7 +242,7 @@ public class Utils {
      * @param context
      */
     public static void cleanupDownloadsDir(Context context) {
-        File downloadPath = getDownloadPath(context);
+        File downloadPath = getDownloadPath();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
         removeUncryptFiles(downloadPath);
