@@ -117,6 +117,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             viewHolder.mDetails.setVisibility(View.GONE);
             viewHolder.mProgressBar.setIndeterminate(update.getStatus() == UpdateStatus.STARTING);
             viewHolder.mProgressBar.setProgress(update.getProgress());
+            viewHolder.mBuildName.setSelected(false);
         } else if (mUpdaterController.isInstallingUpdate(downloadId)) {
             viewHolder.mDetails.setVisibility(View.GONE);
             setButtonAction(viewHolder.mAction, Action.CANCEL_INSTALLATION, downloadId, true);
@@ -127,11 +128,13 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                             R.string.preparing_ota_first_boot);
             viewHolder.mProgressBar.setIndeterminate(false);
             viewHolder.mProgressBar.setProgress(update.getInstallProgress());
+            viewHolder.mBuildName.setSelected(true);
         } else if (mUpdaterController.isVerifyingUpdate(downloadId)) {
             viewHolder.mDetails.setVisibility(View.GONE);
             setButtonAction(viewHolder.mAction, Action.INSTALL, downloadId, false);
             viewHolder.mProgressText.setText(R.string.list_verifying_update);
             viewHolder.mProgressBar.setIndeterminate(true);
+            viewHolder.mBuildName.setSelected(true);
         } else {
             canDelete = true;
             viewHolder.mDetails.setVisibility(View.GONE);
@@ -145,6 +148,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                     downloaded, total, percentage));
             viewHolder.mProgressBar.setIndeterminate(false);
             viewHolder.mProgressBar.setProgress(update.getProgress());
+            viewHolder.mBuildName.setSelected(false);
         }
 
         viewHolder.itemView.setOnLongClickListener(getLongClickListener(update, canDelete,
@@ -185,6 +189,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         viewHolder.mProgressBar.setVisibility(View.INVISIBLE);
         viewHolder.mProgressText.setVisibility(View.INVISIBLE);
         viewHolder.mBuildSize.setVisibility(View.VISIBLE);
+        viewHolder.mBuildName.setSelected(true);
     }
 
     @Override
@@ -226,7 +231,6 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         viewHolder.mBuildDate.setText(buildDate);
         viewHolder.mBuildName.setText(buildVersion);
         viewHolder.mBuildName.setCompoundDrawables(null, null, null, null);
-        viewHolder.mBuildName.setSelected(true);
         viewHolder.mDetails.setOnClickListener(v -> {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Utils.getDownloadWebpageUrl(update.getName())));
