@@ -395,11 +395,11 @@ public class UpdaterService extends Service {
         mNotificationBuilder.setProgress(100, progress, false);
 
         String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
-        mNotificationStyle.setSummaryText(percent);
+        String speed = Formatter.formatFileSize(this, update.getSpeed());
+        mNotificationStyle.setSummaryText(percent + " • " + speed + "/s");
 
         setNotificationTitle(update);
 
-        String speed = Formatter.formatFileSize(this, update.getSpeed());
         CharSequence eta = StringGenerator.formatETA(this, update.getEta() * 1000);
         mNotificationStyle.bigText(
                 getString(R.string.text_download_speed, eta, speed));
