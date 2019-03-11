@@ -16,6 +16,7 @@
  */
 package org.pixelexperience.ota.controller;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemClock;
@@ -36,6 +37,7 @@ class UpdateInstaller {
 
     private static final String TAG = "UpdateInstaller";
 
+    @SuppressLint("StaticFieldLeak")
     private static UpdateInstaller sInstance = null;
     private static String sInstallingUpdate = null;
     private final Context mContext;

@@ -26,7 +26,7 @@ import java.util.List;
 
 public class PermissionsUtils {
 
-    public static boolean hasPermission(Context context, String permission) {
+    private static boolean hasPermission(Context context, String permission) {
         int permissionState = context.checkSelfPermission(permission);
         return permissionState == PackageManager.PERMISSION_GRANTED;
     }
@@ -39,8 +39,8 @@ public class PermissionsUtils {
      * @param requestCode @see Activity#requestPermissions(String[] , int)
      * @return true if the permission is granted, false otherwise
      */
-    public static boolean checkAndRequestPermissions(final Activity activity,
-                                                     final String[] permissions, final int requestCode) {
+    private static boolean checkAndRequestPermissions(final Activity activity,
+                                                      final String[] permissions, final int requestCode) {
         List<String> permissionsList = new ArrayList<>();
         for (String permission : permissions) {
             if (!hasPermission(activity, permission)) {

@@ -23,9 +23,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.SystemClock;
-import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -129,9 +127,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             Utils.cleanupDownloadsDir(context);
         }
-
-        final SharedPreferences preferences =
-                PreferenceManager.getDefaultSharedPreferences(context);
 
         if (!Utils.isUpdateCheckEnabled(context)) {
             return;

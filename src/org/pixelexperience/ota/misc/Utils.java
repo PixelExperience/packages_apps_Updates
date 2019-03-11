@@ -33,7 +33,6 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.UpdatesDbHelper;
 import org.pixelexperience.ota.controller.UpdaterService;
 import org.pixelexperience.ota.model.Update;
@@ -122,14 +121,14 @@ public class Utils {
     public static UpdateInfo parseJson(File file, boolean compatibleOnly)
             throws IOException, JSONException {
 
-        String json = "";
+        StringBuilder json = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             for (String line; (line = br.readLine()) != null; ) {
-                json += line;
+                json.append(line);
             }
         }
 
-        JSONObject obj = new JSONObject(json);
+        JSONObject obj = new JSONObject(json.toString());
         try {
             UpdateInfo update = parseJsonUpdate(obj);
             if (!compatibleOnly || isCompatible(update)) {
@@ -162,6 +161,9 @@ public class Utils {
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
+        if (cm == null) {
+            return false;
+        }
         NetworkInfo info = cm.getActiveNetworkInfo();
         return !(info == null || !info.isConnected() || !info.isAvailable());
     }
@@ -169,20 +171,14 @@ public class Utils {
     public static boolean isOnWifiOrEthernet(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
+        if (cm == null) {
+            return false;
+        }
         NetworkInfo info = cm.getActiveNetworkInfo();
         return (info != null && (info.getType() == ConnectivityManager.TYPE_ETHERNET
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
     }
 
-    /**
-     * Compares two json formatted updates list files
-     *
-     * @param oldJson old update list
-     * @param newJson new update list
-     * @return true if newJson has at least a compatible update not available in oldJson
-     * @throws IOException
-     * @throws JSONException
-     */
     public static boolean checkForNewUpdates(File oldJson, File newJson)
             throws IOException, JSONException {
         UpdateInfo oldUpdate = parseJson(oldJson, true);
@@ -193,14 +189,6 @@ public class Utils {
         return !oldUpdate.getDownloadId().equals(newUpdate.getDownloadId());
     }
 
-    /**
-     * Get the offset to the compressed data of a file inside the given zip
-     *
-     * @param zipFile   input zip file
-     * @param entryPath full path of the entry
-     * @return the offset of the compressed, or -1 if not found
-     * @throws IllegalArgumentException if the given entry is not found
-     */
     public static long getZipEntryOffset(ZipFile zipFile, String entryPath) {
         // Each entry has an header of (30 + n + m) bytes
         // 'n' is the length of the file name
@@ -223,7 +211,7 @@ public class Utils {
         throw new IllegalArgumentException("The given entry was not found");
     }
 
-    public static void removeUncryptFiles(File downloadPath) {
+    private static void removeUncryptFiles(File downloadPath) {
         File[] uncryptFiles = downloadPath.listFiles(
                 (dir, name) -> name.endsWith(Constants.UNCRYPT_FILE_EXT));
         if (uncryptFiles == null) {
@@ -234,13 +222,6 @@ public class Utils {
         }
     }
 
-    /**
-     * Cleanup the download directory, which is assumed to be a privileged location
-     * the user can't access and that might have stale files. This can happen if
-     * the data of the application are wiped.
-     *
-     * @param context
-     */
     public static void cleanupDownloadsDir(Context context) {
         File downloadPath = getDownloadPath();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -316,7 +297,7 @@ public class Utils {
         return SystemProperties.getBoolean(Constants.PROP_AB_DEVICE, false);
     }
 
-    public static boolean isABUpdate(ZipFile zipFile) {
+    private static boolean isABUpdate(ZipFile zipFile) {
         return zipFile.getEntry(Constants.AB_PAYLOAD_BIN_PATH) != null &&
                 zipFile.getEntry(Constants.AB_PAYLOAD_PROPERTIES_PATH) != null;
     }
@@ -331,13 +312,18 @@ public class Utils {
     public static void addToClipboard(Context context, String label, String text, String toastMessage) {
         ClipboardManager clipboard = (ClipboardManager) context.getSystemService(
                 Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText(label, text);
-        clipboard.setPrimaryClip(clip);
-        Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
+        if (clipboard != null) {
+            ClipData clip = ClipData.newPlainText(label, text);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public static boolean isEncrypted(Context context, File file) {
         StorageManager sm = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
+        if (sm == null) {
+            return false;
+        }
         return sm.isEncrypted(file);
     }
 

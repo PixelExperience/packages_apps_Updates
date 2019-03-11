@@ -16,6 +16,7 @@
  */
 package org.pixelexperience.ota;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -25,6 +26,7 @@ import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.view.ContextThemeWrapper;
@@ -71,7 +73,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     private UpdaterController mUpdaterController;
     private UpdatesListActivity mActivity;
 
-    public UpdatesListAdapter(UpdatesListActivity activity) {
+    UpdatesListAdapter(UpdatesListActivity activity) {
         mActivity = activity;
 
         TypedValue tv = new TypedValue();
@@ -79,18 +81,20 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         mAlphaDisabledValue = tv.getFloat();
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.update_item_view, viewGroup, false);
         return new ViewHolder(view);
     }
 
-    public void setUpdaterController(UpdaterController updaterController) {
+    void setUpdaterController(UpdaterController updaterController) {
         mUpdaterController = updaterController;
         notifyDataSetChanged();
     }
 
+    @SuppressLint("SetTextI18n")
     private void handleActiveStatus(ViewHolder viewHolder, UpdateInfo update) {
         boolean canDelete = false;
 
@@ -108,10 +112,10 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 CharSequence etaString = StringGenerator.formatETA(mActivity, eta * 1000);
                 viewHolder.mProgressText.setText(mActivity.getString(
                         R.string.list_download_progress_eta_new, downloaded, total, etaString,
-                        percentage)+ " • " + speed + "/s");
+                        percentage) + " • " + speed + "/s");
             } else {
                 viewHolder.mProgressText.setText(mActivity.getString(
-                        R.string.list_download_progress_new, downloaded, total, percentage)+ " • " + speed + "/s");
+                        R.string.list_download_progress_new, downloaded, total, percentage) + " • " + speed + "/s");
             }
             setButtonAction(viewHolder.mAction, Action.PAUSE, downloadId, true);
             viewHolder.mDetails.setVisibility(View.GONE);
@@ -193,7 +197,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         if (mDownloadIds == null) {
             viewHolder.mAction.setEnabled(false);
             return;
@@ -257,14 +261,14 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         mDownloadIds = downloadIds;
     }
 
-    public void notifyItemChanged(String downloadId) {
+    void notifyItemChanged(String downloadId) {
         if (mDownloadIds == null) {
             return;
         }
         notifyItemChanged(mDownloadIds.indexOf(downloadId));
     }
 
-    public void removeItem(String downloadId) {
+    void removeItem(String downloadId) {
         if (mDownloadIds == null) {
             return;
         }
@@ -283,7 +287,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         }
 
         View checkboxView = LayoutInflater.from(mActivity).inflate(R.layout.checkbox_view, null);
-        CheckBox checkbox = (CheckBox) checkboxView.findViewById(R.id.checkbox);
+        CheckBox checkbox = checkboxView.findViewById(R.id.checkbox);
         checkbox.setText(R.string.checkbox_mobile_data_warning);
 
         new AlertDialog.Builder(mActivity)
@@ -532,7 +536,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setPositiveButton(android.R.string.ok, null)
                 .setMessage(messageString)
                 .show();
-        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        TextView textView = dialog.findViewById(android.R.id.message);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
@@ -562,7 +566,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         REBOOT,
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         private Button mAction;
         private Button mDetails;
 
@@ -573,17 +577,17 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         private ProgressBar mProgressBar;
         private TextView mProgressText;
 
-        public ViewHolder(final View view) {
+        ViewHolder(final View view) {
             super(view);
-            mAction = (Button) view.findViewById(R.id.update_action);
-            mDetails = (Button) view.findViewById(R.id.details_action);
+            mAction = view.findViewById(R.id.update_action);
+            mDetails = view.findViewById(R.id.details_action);
 
-            mBuildDate = (TextView) view.findViewById(R.id.build_date);
-            mBuildName = (TextView) view.findViewById(R.id.build_name);
-            mBuildSize = (TextView) view.findViewById(R.id.build_size);
+            mBuildDate = view.findViewById(R.id.build_date);
+            mBuildName = view.findViewById(R.id.build_name);
+            mBuildSize = view.findViewById(R.id.build_size);
 
-            mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
-            mProgressText = (TextView) view.findViewById(R.id.progress_text);
+            mProgressBar = view.findViewById(R.id.progress_bar);
+            mProgressText = view.findViewById(R.id.progress_text);
         }
     }
 }

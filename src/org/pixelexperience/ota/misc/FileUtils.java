@@ -50,10 +50,6 @@ public class FileUtils {
         }
     }
 
-    public static void copyFile(File sourceFile, File destFile) throws IOException {
-        copyFile(sourceFile, destFile, null);
-    }
-
     public interface ProgressCallBack {
         void update(int progress);
     }

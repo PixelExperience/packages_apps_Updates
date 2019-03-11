@@ -31,8 +31,8 @@ import java.util.List;
 
 public class UpdatesDbHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 4;
-    public static final String DATABASE_NAME = "updates.db";
+    private static final int DATABASE_VERSION = 4;
+    private static final String DATABASE_NAME = "updates.db";
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + UpdateEntry.TABLE_NAME + " (" +
                     UpdateEntry._ID + " INTEGER PRIMARY KEY," +
@@ -69,25 +69,6 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         onUpgrade(db, oldVersion, newVersion);
     }
 
-    public long addUpdate(Update update) {
-        SQLiteDatabase db = getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(UpdateEntry.COLUMN_NAME_STATUS, update.getPersistentStatus());
-        values.put(UpdateEntry.COLUMN_NAME_PATH, update.getFile().getAbsolutePath());
-        values.put(UpdateEntry.COLUMN_NAME_DOWNLOAD_ID, update.getDownloadId());
-        values.put(UpdateEntry.COLUMN_NAME_TIMESTAMP, update.getTimestamp());
-        values.put(UpdateEntry.COLUMN_NAME_VERSION, update.getVersion());
-        values.put(UpdateEntry.COLUMN_NAME_SIZE, update.getFileSize());
-        values.put(UpdateEntry.COLUMN_NAME_DONATE_URL, update.getDonateUrl());
-        values.put(UpdateEntry.COLUMN_NAME_FORUM_URL, update.getForumUrl());
-        values.put(UpdateEntry.COLUMN_NAME_WEBSITE_URL, update.getWebsiteUrl());
-        values.put(UpdateEntry.COLUMN_NAME_NEWS_URL, update.getNewsUrl());
-        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER, update.getMaintainer());
-        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER_URL, update.getMaintainerUrl());
-        values.put(UpdateEntry.COLUMN_NAME_HASH, update.getHash());
-        return db.insert(UpdateEntry.TABLE_NAME, null, values);
-    }
-
     public long addUpdateWithOnConflict(Update update, int conflictAlgorithm) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -107,59 +88,28 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         return db.insertWithOnConflict(UpdateEntry.TABLE_NAME, null, values, conflictAlgorithm);
     }
 
-    public boolean removeUpdate(String downloadId) {
+    public void removeUpdate(String downloadId) {
         SQLiteDatabase db = getWritableDatabase();
         String selection = UpdateEntry.COLUMN_NAME_DOWNLOAD_ID + " = ?";
         String[] selectionArgs = {downloadId};
-        return db.delete(UpdateEntry.TABLE_NAME, selection, selectionArgs) != 0;
+        db.delete(UpdateEntry.TABLE_NAME, selection, selectionArgs);
     }
 
-    public boolean removeUpdate(long rowId) {
-        SQLiteDatabase db = getWritableDatabase();
-        String selection = UpdateEntry._ID + " = " + rowId;
-        return db.delete(UpdateEntry.TABLE_NAME, selection, null) != 0;
-    }
-
-    public boolean changeUpdateStatus(Update update) {
+    public void changeUpdateStatus(Update update) {
         String selection = UpdateEntry.COLUMN_NAME_DOWNLOAD_ID + " = ?";
         String[] selectionArgs = {update.getDownloadId()};
-        return changeUpdateStatus(selection, selectionArgs, update.getPersistentStatus());
+        changeUpdateStatus(selection, selectionArgs, update.getPersistentStatus());
     }
 
-    public boolean changeUpdateStatus(long rowId, int status) {
-        String selection = UpdateEntry._ID + " = " + rowId;
-        return changeUpdateStatus(selection, null, status);
-    }
-
-    private boolean changeUpdateStatus(String selection, String[] selectionArgs,
-                                       int status) {
+    private void changeUpdateStatus(String selection, String[] selectionArgs,
+                                    int status) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(UpdateEntry.COLUMN_NAME_STATUS, status);
-        return db.update(UpdateEntry.TABLE_NAME, values, selection, selectionArgs) != 0;
-    }
-
-    public Update getUpdate(long rowId) {
-        String selection = UpdateEntry._ID + " = " + rowId;
-        return getUpdate(selection, null);
-    }
-
-    public Update getUpdate(String downloadId) {
-        String selection = UpdateEntry.COLUMN_NAME_DOWNLOAD_ID + " = ?";
-        String[] selectionArgs = {downloadId};
-        return getUpdate(selection, selectionArgs);
-    }
-
-    private Update getUpdate(String selection, String[] selectionArgs) {
-        List<Update> updates = getUpdates(selection, selectionArgs);
-        return updates != null ? updates.get(0) : null;
+        db.update(UpdateEntry.TABLE_NAME, values, selection, selectionArgs);
     }
 
     public List<Update> getUpdates() {
-        return getUpdates(null, null);
-    }
-
-    public List<Update> getUpdates(String selection, String[] selectionArgs) {
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 UpdateEntry.COLUMN_NAME_PATH,
@@ -176,7 +126,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 UpdateEntry.COLUMN_NAME_MAINTAINER_URL,
                 UpdateEntry.COLUMN_NAME_HASH};
         String sort = UpdateEntry.COLUMN_NAME_TIMESTAMP + " DESC";
-        Cursor cursor = db.query(UpdateEntry.TABLE_NAME, projection, selection, selectionArgs,
+        Cursor cursor = db.query(UpdateEntry.TABLE_NAME, projection, null, null,
                 null, null, sort);
         List<Update> updates = new ArrayList<>();
         if (cursor != null) {
@@ -217,19 +167,19 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
     }
 
     public static class UpdateEntry implements BaseColumns {
-        public static final String TABLE_NAME = "updates";
-        public static final String COLUMN_NAME_STATUS = "status";
-        public static final String COLUMN_NAME_PATH = "path";
-        public static final String COLUMN_NAME_DOWNLOAD_ID = "download_id";
-        public static final String COLUMN_NAME_TIMESTAMP = "timestamp";
-        public static final String COLUMN_NAME_VERSION = "version";
-        public static final String COLUMN_NAME_SIZE = "size";
-        public static final String COLUMN_NAME_DONATE_URL = "donate_url";
-        public static final String COLUMN_NAME_FORUM_URL = "forum_url";
-        public static final String COLUMN_NAME_WEBSITE_URL = "website_url";
-        public static final String COLUMN_NAME_NEWS_URL = "news_url";
-        public static final String COLUMN_NAME_MAINTAINER = "maintainer";
-        public static final String COLUMN_NAME_MAINTAINER_URL = "maintainer_url";
-        public static final String COLUMN_NAME_HASH = "hash";
+        static final String TABLE_NAME = "updates";
+        static final String COLUMN_NAME_STATUS = "status";
+        static final String COLUMN_NAME_PATH = "path";
+        static final String COLUMN_NAME_DOWNLOAD_ID = "download_id";
+        static final String COLUMN_NAME_TIMESTAMP = "timestamp";
+        static final String COLUMN_NAME_VERSION = "version";
+        static final String COLUMN_NAME_SIZE = "size";
+        static final String COLUMN_NAME_DONATE_URL = "donate_url";
+        static final String COLUMN_NAME_FORUM_URL = "forum_url";
+        static final String COLUMN_NAME_WEBSITE_URL = "website_url";
+        static final String COLUMN_NAME_NEWS_URL = "news_url";
+        static final String COLUMN_NAME_MAINTAINER = "maintainer";
+        static final String COLUMN_NAME_MAINTAINER_URL = "maintainer_url";
+        static final String COLUMN_NAME_HASH = "hash";
     }
 }

@@ -94,7 +94,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updates);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         mAdapter = new UpdatesListAdapter(this);
         recyclerView.setAdapter(mAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
@@ -124,7 +124,7 @@ public class UpdatesActivity extends UpdatesListActivity {
             }
         };
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -197,17 +197,18 @@ public class UpdatesActivity extends UpdatesListActivity {
         return true;
     }
 
-    private void hideUpdates(){
+    private void hideUpdates() {
         findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
         findViewById(R.id.recycler_view).setVisibility(View.GONE);
         findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 35), Utils.dpToPx(this, 5), 0);
     }
 
-    private void showUpdates(){
+    private void showUpdates() {
         findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
         findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
         findViewById(R.id.extras_view).setPadding(Utils.dpToPx(this, 5), Utils.dpToPx(this, 214), Utils.dpToPx(this, 5), 0);
     }
+
     private void loadUpdatesList(File jsonFile, boolean manualRefresh)
             throws IOException, JSONException {
         mExtrasFragment.updatePrefs(Utils.parseJson(jsonFile, false));

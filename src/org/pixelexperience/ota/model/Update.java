@@ -34,10 +34,6 @@ public class Update extends UpdateBase implements UpdateInfo {
     public Update() {
     }
 
-    public Update(UpdateBaseInfo update) {
-        super(update);
-    }
-
     public Update(UpdateInfo update) {
         super(update);
         mStatus = update.getStatus();
