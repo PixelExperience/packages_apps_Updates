@@ -32,12 +32,11 @@ public class Constants {
     public static final long UPDATE_DEFAULT_FREQ = AlarmManager.INTERVAL_HALF_DAY;
     // Build vars
     public static final String CURRENT_DEVICE_NAME = "org.pixelexperience.device";
-    public static final String CURRENT_VERSION = "org.pixelexperience.version";
+    public static final String CURRENT_BUILD_DATE = "org.pixelexperience.build_date";
     public static final String OTA_URL = "https://download.pixelexperience.org/ota/%s/%s";
     public static final String OTA_VERSION_CODE = "org.pixelexperience.ota.version_code";
     // Expressions
     public static final String FILENAME_DATE_FORMAT = "yyyyMMdd-Hm";
-    public static final String PATTERN_FILENAME_DATE_FORMAT = "(\\d{4}\\d{2}\\d{2}-\\d{2}\\d{2})";
     // Default wipe options
     public static final boolean DELETE_AFTER_INSTALL_DEFAULT = false;
     public static final boolean WIPE_CACHE_BY_DEFAULT = true;

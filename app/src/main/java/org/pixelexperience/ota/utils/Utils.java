@@ -111,22 +111,8 @@ public class Utils {
         return getSystemProperty(Constants.OTA_VERSION_CODE, "");
     }
 
-    public static String getInstalledVersion() {
-        return getSystemProperty(Constants.CURRENT_VERSION, "");
-    }
-
     public static long getInstalledBuildDate() {
-        return getTimestampFromDateString(extractBuildDate(getSystemProperty(Constants.CURRENT_VERSION, ""), Constants.PATTERN_FILENAME_DATE_FORMAT), Constants.FILENAME_DATE_FORMAT);
-    }
-
-    public static String extractBuildDate(String date, String pattern) {
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(date);
-        if (m.find()) {
-            return m.group(1);
-        } else {
-            return "";
-        }
+        return getTimestampFromDateString(getSystemProperty(Constants.CURRENT_BUILD_DATE, ""), Constants.FILENAME_DATE_FORMAT);
     }
 
     public static long getTimestampFromDateString(String date, String format) {
