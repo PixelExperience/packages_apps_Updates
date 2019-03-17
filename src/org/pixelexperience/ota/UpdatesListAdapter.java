@@ -106,16 +106,15 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             String total = Formatter.formatShortFileSize(mActivity, update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
                     update.getProgress() / 100.f);
-            String speed = Formatter.formatFileSize(mActivity, update.getSpeed());
             long eta = update.getEta();
             if (eta > 0) {
                 CharSequence etaString = StringGenerator.formatETA(mActivity, eta * 1000);
                 viewHolder.mProgressText.setText(mActivity.getString(
                         R.string.list_download_progress_eta_new, downloaded, total, etaString,
-                        percentage) + " • " + speed + "/s");
+                        percentage));
             } else {
                 viewHolder.mProgressText.setText(mActivity.getString(
-                        R.string.list_download_progress_new, downloaded, total, percentage) + " • " + speed + "/s");
+                        R.string.list_download_progress_new, downloaded, total, percentage));
             }
             setButtonAction(viewHolder.mAction, Action.PAUSE, downloadId, true);
             viewHolder.mDetails.setVisibility(View.GONE);
