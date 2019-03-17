@@ -19,13 +19,40 @@
     <!-- App name -->
     <string name="app_name">Süsteemi uuendused</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Ekspordi lõpuleviimine</string>
+    <string name="new_updates_channel_title">Uued uuendused</string>
     <string name="ongoing_channel_title">Käimasolevad allalaadimised</string>
+    <string name="update_failed_channel_title">Värskendamine nurjus</string>
+    <string name="verification_failed_notification">Kinnitamine ebaõnnestus</string>
+    <string name="verifying_download_notification">Värskenduse kontrollimine</string>
+    <string name="downloading_notification">Allalaadimine</string>
+    <string name="download_paused_notification">Allalaadimine peatatud</string>
+    <string name="download_paused_error_notification">Allalaadimise viga</string>
+    <string name="download_completed_notification">Allalaadimine lõpetatud</string>
+    <string name="download_starting_notification">Alustan allalaadimist</string>
+    <string name="update_failed_notification">Värskendamine nurjus</string>
     <!-- Menu -->
     <string name="menu_refresh">Värskenda</string>
+    <string name="menu_preferences">Eelistused</string>
+    <string name="menu_auto_updates_check">Automaatne värskenduste kontroll</string>
+    <string name="menu_auto_updates_check_interval_daily">Kord päevas</string>
+    <string name="menu_auto_updates_check_interval_weekly">Kord nädalas</string>
+    <string name="menu_auto_updates_check_interval_monthly">Kord kuus</string>
+    <string name="menu_auto_updates_check_interval_never">Mitte kunagi</string>
+    <string name="menu_delete_update">Kustuta</string>
+    <string name="menu_copy_url">Kopeeri aadress</string>
+    <string name="menu_export_update">Ekspordi värskendus</string>
     <string name="menu_show_changelog">Näita muutuste nimekirja</string>
     <string name="changelog_loading">Laadimine…</string>
+    <string name="label_download_url">Laadimise url</string>
+    <string name="toast_download_url_copied">URL salvestatud</string>
     <!-- General -->
     <string name="update_found_notification">Uuendus on saadaval</string>
+    <string name="snack_no_updates_found">Uusi uuendusi ei ole</string>
+    <string name="snack_updates_check_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="snack_download_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="snack_download_verification_failed">Värskenduse kontroll ebaõnnestus.</string>
+    <string name="snack_download_verified">Allalaadimine lõpetatud.</string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <!-- Actions -->
     <string name="confirm_delete_dialog_title">Kustuta fail</string>
