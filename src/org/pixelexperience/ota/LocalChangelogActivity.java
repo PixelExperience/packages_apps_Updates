@@ -89,4 +89,10 @@ public class LocalChangelogActivity extends AppCompatActivity {
         }, 2000);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 }

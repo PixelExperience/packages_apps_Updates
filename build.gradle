@@ -56,6 +56,13 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Updates.apk"
+        }
+
+    }
 }
 
 dependencies {
