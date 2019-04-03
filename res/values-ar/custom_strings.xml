@@ -42,7 +42,6 @@
     <string name="menu_delete_update">حذف</string>
     <string name="menu_copy_url">نسخ الرابط</string>
     <string name="menu_export_update">تصدير التحديث</string>
-    <string name="menu_show_changelog">إظهار التغييرات</string>
     <string name="changelog_loading">تحميل…</string>
     <string name="label_download_url">عنوان التنزيل</string>
     <string name="toast_download_url_copied">تم نسخ الرابط</string>

@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Dileu</string>
     <string name="menu_copy_url">Copïo\'r URL</string>
     <string name="menu_export_update">Allforio\'r diweddariad</string>
-    <string name="menu_show_changelog">Dangos log newid</string>
     <string name="label_download_url">URL lawrlwytho</string>
     <string name="toast_download_url_copied">Copïwyd yr URL</string>
     <!-- General -->

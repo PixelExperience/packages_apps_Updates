@@ -17,13 +17,64 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Համակարգի թարմացումներ</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Արտահանումն ավարտվեց</string>
+    <string name="new_updates_channel_title">Նոր թարմացումներ</string>
+    <string name="update_failed_channel_title">Թարմացումը ձախողվեց</string>
+    <string name="verification_failed_notification">Ակտիվացումը ձախողվեց</string>
+    <string name="downloading_notification">Ներբեռնվում է</string>
+    <string name="download_paused_notification">Ներբեռնումը դադարեցված է</string>
+    <string name="download_paused_error_notification">Ներբեռնման սխալ</string>
+    <string name="download_completed_notification">Ներբեռնումն ավարտվեց</string>
+    <string name="download_starting_notification">Սկսվում է ներբեռնումը</string>
+    <string name="update_failed_notification">Թարմացումը ձախողվեց</string>
     <!-- Menu -->
+    <string name="menu_refresh">Թարմացնել</string>
+    <string name="menu_preferences">Կարգավորումներ</string>
+    <string name="menu_auto_updates_check">Ինքնաբար ստուգել թարմացումները</string>
+    <string name="menu_auto_updates_check_interval_daily">Օրը մեկ անգամ</string>
+    <string name="menu_auto_updates_check_interval_weekly">Շաբաթը մեկ անգամ</string>
+    <string name="menu_auto_updates_check_interval_monthly">Ամիսը մեկ անգամ</string>
+    <string name="menu_auto_updates_check_interval_never">Երբեք</string>
+    <string name="menu_delete_update">Ջնջել</string>
+    <string name="menu_copy_url">Պատճենել URL-ը</string>
+    <string name="menu_export_update">Արտահանել թարմացումը</string>
+    <string name="changelog_loading">Բեռնում…</string>
+    <string name="label_download_url">Ներբեռնել URL</string>
+    <string name="toast_download_url_copied">URL Պատճենվեց</string>
     <!-- General -->
+    <string name="update_found_notification">Հասանելի է նոր թարմացում</string>
+    <string name="snack_download_verified">Ներբեռնումն ավարտվեց:</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <!-- Actions -->
+    <string name="action_download">Ներբեռնել</string>
+    <string name="action_pause">Դադար</string>
+    <string name="action_resume">Վերսկսել</string>
+    <string name="action_install">Տեղակայել</string>
+    <string name="action_delete">Ջնջել</string>
+    <string name="action_cancel">Չեղարկել</string>
+    <string name="confirm_delete_dialog_title">Ջնջել ֆայլը</string>
+    <string name="pause_button">Դադար</string>
+    <string name="resume_button">Վերսկսել</string>
+    <string name="reboot">Վերամեկնարկել</string>
+    <string name="details_button">Դիտել մանրամասները</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Կիրառել թարմացումները</string>
+    <string name="cancel_installation_dialog_message">Չեղարկե՞լ տեղակայումը:</string>
+    <string name="installing_update_error">Տեղակայման սխալ</string>
+    <string name="dialog_battery_low_title">Մարտկոցի լիցքը քիչ է</string>
     <!-- Export update -->
+    <string name="notification_export_fail">Արտահանման սխալ</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">Զգուշացում</string>
     <!-- Info section -->
+    <string name="donate_info_title">Աջակցել</string>
+    <string name="donate_info_summary">Աջակցել մշակմանը</string>
+    <string name="website_info_title">Վեբկայք</string>
+    <string name="website_info_summary">Այցելեք մեր վեբ կայքը</string>
+    <string name="news_info_title">Նորություններ</string>
+    <string name="forum_info_title">Ֆորում</string>
 </resources>

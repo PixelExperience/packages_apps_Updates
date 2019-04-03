@@ -19,62 +19,93 @@
     <!-- App name -->
     <string name="app_name">Ažuriranja sustava</string>
     <!-- Notifications -->
-    <string name="export_channel_title">Kraj izvoza</string>
+    <string name="export_channel_title">Završetak izvoza</string>
     <string name="new_updates_channel_title">Nova ažuriranja</string>
     <string name="ongoing_channel_title">Preuzimanja u tijeku</string>
+    <string name="update_failed_channel_title">Ažuriranje neuspjelo</string>
     <string name="verification_failed_notification">Potvrda neuspješna</string>
     <string name="verifying_download_notification">Provjera ažuriranja</string>
     <string name="downloading_notification">Preuzimanje</string>
     <string name="download_paused_notification">Preuzimanje pauzirano</string>
-    <string name="download_paused_error_notification">Pogreška preuzimanja</string>
-    <string name="download_completed_notification">Preuzimanje je završeno</string>
+    <string name="download_paused_error_notification">Greška preuzimanja</string>
+    <string name="download_completed_notification">Preuzimanje završeno</string>
     <string name="download_starting_notification">Početak preuzimanja</string>
+    <string name="update_failed_notification">Ažuriranje neuspjelo</string>
     <!-- Menu -->
     <string name="menu_refresh">Osvježi</string>
+    <string name="menu_preferences">Preference</string>
     <string name="menu_auto_updates_check">Provjeri ažuriranja automatski</string>
+    <string name="menu_auto_updates_check_interval_daily">Jedanput dnevno</string>
+    <string name="menu_auto_updates_check_interval_weekly">Jednom tjedno</string>
+    <string name="menu_auto_updates_check_interval_monthly">Jednom mjesečno</string>
+    <string name="menu_auto_updates_check_interval_never">Nikad</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
-    <string name="menu_show_changelog">Prikaži promjene</string>
     <string name="changelog_loading">Učitavanje…</string>
     <string name="label_download_url">Preuzmi URL</string>
     <string name="toast_download_url_copied">URL kopiran</string>
     <!-- General -->
     <string name="update_found_notification">Dostupno je novo ažuriranje</string>
     <string name="snack_no_updates_found">Nema pronađenih novih ažuriranja</string>
-    <string name="snack_updates_check_failed">Provjera ažuriranja nije uspjela. Provjerite internetsku vezu i pokušajte ponovo kasnije.</string>
+    <string name="snack_updates_check_failed">Traženje ažuriranja nije uspjelo. Provjerite mrežnu vezu i pokušajte ponovno kasnije.</string>
     <string name="snack_download_failed">Preuzimanje nije uspjelo. Provjerite internetsku vezu i pokušajte ponovo kasnije.</string>
     <string name="snack_download_verification_failed">Provjera ažuriranja nije uspjela.</string>
-    <string name="snack_download_verified">Preuzimanje je završeno.</string>
+    <string name="snack_download_verified">Preuzimanje završeno.</string>
     <string name="snack_update_not_installable">Ovo se ažuriranje ne može instalirati na trenutnu verziju.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> od <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> od <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Provjera ažuriranja</string>
-    <string name="list_no_updates">Nema pronađenih novih ažuriranja. Za ručnu provjeru novih ažuriranja upotrijebite gumb Osvježi.</string>
+    <string name="list_no_updates">Nema novih ažuriranja. Za ručnu provjeru novih ažuriranja upotrijebite gumb Osvježi.</string>
     <string name="blocked_update_dialog_title">Ažuriranje je blokirano</string>
     <!-- Actions -->
     <string name="action_download">Preuzmi</string>
+    <string name="action_pause">Pauziraj</string>
+    <string name="action_resume">Nastavi</string>
+    <string name="action_install">Instaliraj</string>
+    <string name="action_delete">Izbriši</string>
+    <string name="action_cancel">Odustani</string>
     <string name="confirm_delete_dialog_title">Izbriši datoteku</string>
     <string name="confirm_delete_dialog_message">Želite li izbrisati odabranu datoteku za ažuriranje?</string>
     <string name="pause_button">Pauziraj</string>
     <string name="resume_button">Nastavi</string>
     <string name="reboot">Ponovno pokreni</string>
+    <string name="details_button">Pogledaj detalje</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Primjeni ažuriranje</string>
-    <string name="apply_update_dialog_message">Ažurirat ćete svoj sustav na <xliff:g id="filename">%1$s</xliff:g>.\n\nAko pritisnete <xliff:g id="ok">%2$s</xliff:g>, uređaj će se sam ponovno pokrenuti u načinu oporavka kako bi instalirao ažuriranje.\n\nNapomena: ova značajka zahtijeva kompatibilan Oporavak. U suprotnome će se ažuriranja morati instalirati ručno.</string>
+    <string name="apply_update_dialog_message">Ažurirat ćete svoj sustav na <xliff:g id="filename">%1$s</xliff:g>.\n\nAko pritisnete <xliff:g id="ok">%2$s</xliff:g>, uređaj će se sam ponovno pokrenuti u recovery kako bi instalirao ažuriranje.\n\nNapomena: ova značajka zahtijeva kompatibilan recovery. U suprotnome će se ažuriranja morati instalirati ručno.</string>
     <string name="apply_update_dialog_message_ab">Spremate se ažurirati na <xliff:g id="filename">%1$s </xliff:g>.\n\nAko dodirnete <xliff:g id="ok">%2$s</xliff:g>, uređaj će započeti instalaciju u pozadini.\n\nKad se završi, trebati ćete ponovno pokrenuti uređaj.</string>
     <string name="cancel_installation_dialog_message">Prekinuti instalaciju?</string>
     <string name="installing_update">Instaliranje paketa ažuriranja</string>
-    <string name="installing_update_error">Pogreška prilikom instalacije</string>
+    <string name="installing_update_error">Pogreška instalacije</string>
     <string name="installing_update_finished">Ažuriranje instalirano</string>
     <string name="finalizing_package">Finaliziranje paketa instaliranja</string>
     <string name="preparing_ota_first_boot">Priprema za prvo pokretanje</string>
     <string name="dialog_prepare_zip_message">Preliminarna priprema ažuriranja</string>
+    <string name="dialog_battery_low_title">Slaba baterija</string>
+    <string name="dialog_battery_low_message_pct">Razina baterije je preniska, treba vam barem <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nastavak, <xliff:g id="percent_charging">%2$d</xliff:g>%% ako se puni.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Izvoz ažuriranja</string>
+    <string name="dialog_export_title">Izvozi se ažuriranje</string>
     <string name="notification_export_success">Ažuriranje je izvezeno</string>
-    <string name="notification_export_fail">Pogreška izvoza</string>
+    <string name="notification_export_fail">Greška prilikom izvoza</string>
     <string name="toast_already_exporting">Ažuriranje se već izvozi</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 sekunda preostala</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> sek preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sek preostalo</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minuta preostala</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> min preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> min preostalo</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 sat preostao</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> sati preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sati preostalo</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="update_on_mobile_data_message">Upravo ćete preuzeti paket ažuriranja pomoću mobilnih podataka koji će vjerojatno uzrokovati visoku upotrebu podataka. Želite li nastaviti?</string>

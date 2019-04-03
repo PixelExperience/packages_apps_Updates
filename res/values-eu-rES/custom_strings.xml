@@ -38,7 +38,6 @@
     <string name="menu_delete_update">Ezabatu</string>
     <string name="menu_copy_url">Kopiatu URL-a</string>
     <string name="menu_export_update">Esportatu eguneraketa</string>
-    <string name="menu_show_changelog">Erakutsi aldaketa-egunkaria</string>
     <string name="changelog_loading">Kargatzen…</string>
     <string name="label_download_url">Deskargaren URL-s</string>
     <string name="toast_download_url_copied">URL-a kopiatuta</string>

@@ -20,7 +20,7 @@
     <string name="app_name">Обновления системы</string>
     <!-- Notifications -->
     <string name="export_channel_title">Экспорт завершен</string>
-    <string name="new_updates_channel_title">Новые обновления</string>
+    <string name="new_updates_channel_title">Доступны обновления</string>
     <string name="ongoing_channel_title">Текущие загрузки</string>
     <string name="update_failed_channel_title">Сбой обновления</string>
     <string name="verification_failed_notification">Проверка не удалась</string>
@@ -41,8 +41,8 @@
     <string name="menu_auto_updates_check_interval_never">Никогда</string>
     <string name="menu_delete_update">Удалить</string>
     <string name="menu_copy_url">Копировать URL-адрес</string>
-    <string name="menu_export_update">Экспорт обновлений</string>
-    <string name="menu_show_changelog">Список изменений</string>
+    <string name="menu_export_update">Экспорт обновления</string>
+    <string name="menu_show_changelog">Изменения в текущей версии</string>
     <string name="changelog_loading">Загрузка…</string>
     <string name="label_download_url">Ссылка для скачивания</string>
     <string name="toast_download_url_copied">URL скопирован в буфер обмена</string>
@@ -57,20 +57,20 @@
     <string name="text_download_speed">%1$s, %2$s/с</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Проверка обновлений</string>
+    <string name="list_verifying_update">Проверка обновления</string>
     <string name="list_no_updates">Обновлений не найдено. Чтобы проверить наличие обновлений вручную, используйте кнопку Обновить.</string>
     <string name="blocked_update_dialog_title">Обновление заблокировано</string>
     <!-- Actions -->
     <string name="action_download">Загрузить</string>
     <string name="action_pause">Приостановить</string>
-    <string name="action_resume">Возобновить</string>
+    <string name="action_resume">Продолжить</string>
     <string name="action_install">Установить</string>
     <string name="action_delete">Удалить</string>
     <string name="action_cancel">Отмена</string>
     <string name="confirm_delete_dialog_title">Удалить файл</string>
     <string name="confirm_delete_dialog_message">Удалить выбранный файл обновления?</string>
     <string name="pause_button">Пауза</string>
-    <string name="resume_button">Возобновить</string>
+    <string name="resume_button">Продолжить</string>
     <string name="reboot">Перезапуск</string>
     <string name="details_button">Подробнее</string>
     <!-- Installation -->
@@ -78,7 +78,7 @@
     <string name="apply_update_dialog_message">Будет выполнено обновление до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nПри нажатии кнопки <xliff:g id="ok">%2$s</xliff:g> устройство будет перезапущено и переведено в режим восстановления для установки новой версии.\n\nПримечание: для этой функции необходим совместимый режим восстановления. При возникновении ошибки потребуется установить обновление вручную.</string>
     <string name="apply_update_dialog_message_ab">Будет выполнено обновление до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nПри нажатии кнопки <xliff:g id="ok">%2$s</xliff:g> будет начата установка в фоновом режиме.\n\nПо завершении вам будет предложено перезапустить устройство.</string>
     <string name="cancel_installation_dialog_message">Отменить установку?</string>
-    <string name="installing_update">Установка обновлений</string>
+    <string name="installing_update">Установка обновления</string>
     <string name="installing_update_error">Ошибка установки</string>
     <string name="installing_update_finished">Обновление установлено</string>
     <string name="finalizing_package">Завершение установки</string>
@@ -87,7 +87,7 @@
     <string name="dialog_battery_low_title">Низкий заряд батареи</string>
     <string name="dialog_battery_low_message_pct">Уровень заряда батареи слишком низкий, для продолжения необходимо хотя бы <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряда или <xliff:g id="percent_charging">%2$d</xliff:g>%% во время зарядки.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Экспорт обновлений</string>
+    <string name="dialog_export_title">Экспорт обновления</string>
     <string name="notification_export_success">Обновление экспортировано</string>
     <string name="notification_export_fail">Ошибка экспорта</string>
     <string name="toast_already_exporting">Экспорт уже выполняется</string>
@@ -114,7 +114,7 @@
     <string name="update_on_mobile_data_title">Предупреждение</string>
     <string name="update_on_mobile_data_message">Скачивание обновления по мобильной сети расходует большой объём трафика и может привести к непредвиденным расходам. Продолжить?</string>
     <string name="checkbox_mobile_data_warning">Не показывать снова</string>
-    <string name="menu_mobile_data_warning">Предупрежд. о моб. данных</string>
+    <string name="menu_mobile_data_warning">Предупреждение о моб. данных</string>
     <!-- Info section -->
     <string name="extras_category_title">Дополнения</string>
     <string name="maintainer_info_title">Разработчик</string>

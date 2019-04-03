@@ -19,21 +19,96 @@
     <!-- App name -->
     <string name="app_name">Rendszerfrissítések</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Exportálás-véglegesítés</string>
+    <string name="new_updates_channel_title">Új frissítések</string>
+    <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
+    <string name="update_failed_channel_title">A frissítés nem sikerült</string>
+    <string name="verification_failed_notification">Az ellenőrzés sikertelen</string>
+    <string name="verifying_download_notification">Frissítésellenőrzés</string>
+    <string name="downloading_notification">Letöltés</string>
+    <string name="download_paused_notification">A letöltés szüneteltetve</string>
+    <string name="download_paused_error_notification">Letöltési hiba</string>
+    <string name="download_completed_notification">A letöltés befejeződött</string>
+    <string name="download_starting_notification">A letöltés indítása</string>
+    <string name="update_failed_notification">A frissítés nem sikerült</string>
     <!-- Menu -->
     <string name="menu_refresh">Frissítés</string>
+    <string name="menu_preferences">Tulajdonságok</string>
+    <string name="menu_auto_updates_check">Frissítések automatikus ellenőrzése</string>
+    <string name="menu_auto_updates_check_interval_daily">Naponta egyszer</string>
+    <string name="menu_auto_updates_check_interval_weekly">Hetente egyszer</string>
+    <string name="menu_auto_updates_check_interval_monthly">Havonta egyszer</string>
+    <string name="menu_auto_updates_check_interval_never">Soha</string>
+    <string name="menu_delete_update">Törlés</string>
+    <string name="menu_copy_url">Az URL másolása</string>
+    <string name="menu_export_update">Frissítés-exportálás</string>
     <string name="changelog_loading">Betöltés…</string>
+    <string name="label_download_url">Az URL letöltése</string>
+    <string name="toast_download_url_copied">Az URL másolva</string>
     <!-- General -->
     <string name="update_found_notification">Új frissítés elérhető</string>
+    <string name="snack_no_updates_found">Nem található új frissítés</string>
+    <string name="snack_updates_check_failed">Nem sikerült a frissítéskeresés. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
+    <string name="snack_download_failed">Nem sikerült a frissítések letöltése. Ellenőrizze internetkapcsolatát, majd próbálja újra.</string>
+    <string name="snack_download_verification_failed">A frissítés ellenőrzése meghiúsult.</string>
+    <string name="snack_download_verified">A letöltés befejeződött.</string>
+    <string name="snack_update_not_installable">Ez a frissítés nem telepíthető a jelenlegi verzióra.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> /<xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Frissítésellenőrzés</string>
+    <string name="list_no_updates">Nincsenek új frissítések. A manuális ellenőrzéséhez, használja a Frissítés gombot.</string>
+    <string name="blocked_update_dialog_title">A frissítés blokkolva</string>
     <!-- Actions -->
+    <string name="action_download">Letöltés</string>
+    <string name="action_pause">Szüneteltetés</string>
+    <string name="action_resume">Folytatás</string>
+    <string name="action_install">Telepítés</string>
+    <string name="action_delete">Törlés</string>
+    <string name="action_cancel">Mégse</string>
     <string name="confirm_delete_dialog_title">Fájl törlése</string>
     <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a kijelölt frissítő fájlt?</string>
+    <string name="pause_button">Szüneteltetés</string>
+    <string name="resume_button">Folytatás</string>
+    <string name="reboot">Újraindítás</string>
+    <string name="details_button">Részletek megjelenítése</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Frissítés telepítése</string>
+    <string name="apply_update_dialog_message">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.</string>
+    <string name="apply_update_dialog_message_ab">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék elkezdi a telepítést a háttérben.\n\nAmint kész, újraindításra lesz szükség.</string>
+    <string name="cancel_installation_dialog_message">Megszakítja a telepítést?</string>
+    <string name="installing_update">Frissítőcsomag-telepítés</string>
+    <string name="installing_update_error">Telepítési hiba</string>
+    <string name="installing_update_finished">A frissítés telepítve</string>
+    <string name="finalizing_package">A csomagtelepítés véglegesítése</string>
+    <string name="preparing_ota_first_boot">Felkészülés az első indításra</string>
+    <string name="dialog_prepare_zip_message">A frissítés előzetes előkészítése</string>
+    <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
+    <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
+illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">A frissítés exportálása</string>
+    <string name="notification_export_success">A frissítés exportálva</string>
+    <string name="notification_export_fail">Exportálási hiba</string>
+    <string name="toast_already_exporting">Egy frissítés exportálása már folyamatban van</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 másodperc van hátra</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> másodperc van hátra</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 perc van hátra</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> perc van hátra</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 óra van hátra</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> óra van hátra</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Figyelmeztetés</string>
     <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ez magas adathasználatot eredményezhetet. Szeretné folytatni?</string>
     <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
+    <string name="menu_mobile_data_warning">Mobiladat-figyelmeztetés</string>
     <!-- Info section -->
     <string name="extras_category_title">Extrák</string>
     <string name="maintainer_info_title">Karbantartó</string>

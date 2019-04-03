@@ -35,10 +35,13 @@
     <string name="menu_refresh">Obnoviť</string>
     <string name="menu_preferences">Predvoľby</string>
     <string name="menu_auto_updates_check">Automatická kontrola aktualizácií</string>
+    <string name="menu_auto_updates_check_interval_daily">Raz za deň</string>
+    <string name="menu_auto_updates_check_interval_weekly">Týždenne</string>
+    <string name="menu_auto_updates_check_interval_monthly">Mesačne</string>
+    <string name="menu_auto_updates_check_interval_never">Nikdy</string>
     <string name="menu_delete_update">Vymazať</string>
     <string name="menu_copy_url">Kopírovať URL</string>
     <string name="menu_export_update">Export aktualizácie</string>
-    <string name="menu_show_changelog">Zobraziť zoznam zmien</string>
     <string name="changelog_loading">Načítavanie...</string>
     <string name="label_download_url">URL adresa</string>
     <string name="toast_download_url_copied">URL skopírované</string>
@@ -68,6 +71,7 @@
     <string name="pause_button">Pozastaviť</string>
     <string name="resume_button">Obnoviť</string>
     <string name="reboot">Reštartovať</string>
+    <string name="details_button">Podrobnosti</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
     <string name="apply_update_dialog_message">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>

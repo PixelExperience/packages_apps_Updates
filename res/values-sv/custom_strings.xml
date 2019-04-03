@@ -34,7 +34,6 @@
     <string name="menu_auto_updates_check">Sök efter uppdateringar automatiskt</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
-    <string name="menu_show_changelog">Visa ändringslogg</string>
     <string name="changelog_loading">Laddar…</string>
     <string name="label_download_url">Nedladdningsadress</string>
     <string name="toast_download_url_copied">Webbadressen har kopierats</string>

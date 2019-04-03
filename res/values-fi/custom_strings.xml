@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Poista</string>
     <string name="menu_copy_url">Kopioi URL-osoite</string>
     <string name="menu_export_update">Vie päivitys</string>
-    <string name="menu_show_changelog">Näytä muutosloki</string>
     <string name="changelog_loading">Lataa…</string>
     <string name="label_download_url">Lataussivun URL-osoite</string>
     <string name="toast_download_url_copied">URL-osoite kopioitu</string>

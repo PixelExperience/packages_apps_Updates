@@ -42,7 +42,7 @@
     <string name="menu_delete_update">Șterge</string>
     <string name="menu_copy_url">Copiază URL</string>
     <string name="menu_export_update">Exportează actualizarea</string>
-    <string name="menu_show_changelog">Arată changelog</string>
+    <string name="menu_show_changelog">Modificări în versiunea curentă</string>
     <string name="changelog_loading">Se încarcă…</string>
     <string name="label_download_url">Descărcați URL-ul</string>
     <string name="toast_download_url_copied">URL copiat</string>

@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Desaniciar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Esportar anovamientu</string>
-    <string name="menu_show_changelog">Amosar rexistru de cambeos</string>
     <string name="label_download_url">URL de descarga</string>
     <string name="toast_download_url_copied">Copióse la URL</string>
     <!-- General -->

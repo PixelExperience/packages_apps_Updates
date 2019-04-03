@@ -25,15 +25,32 @@
     <!-- General -->
     <string name="update_found_notification">Nové aktualizace k dispozici</string>
     <!-- Actions -->
+    <string name="action_download">ডাউনলোড</string>
+    <string name="action_pause">বিরাম</string>
+    <string name="action_resume">পুনরারম্ভ</string>
+    <string name="action_install">সংস্থাপন</string>
+    <string name="action_delete">মুছুন</string>
+    <string name="action_cancel">বাতিল</string>
     <string name="confirm_delete_dialog_title">ফাইল মুছুন</string>
     <string name="confirm_delete_dialog_message">নির্বাচিত আধুনিকীকরণ ফাইল গুলি মুছে দিতে চান?</string>
+    <string name="pause_button">বিরাম</string>
+    <string name="resume_button">পুনরারম্ভ</string>
+    <string name="reboot">রিবুট</string>
+    <string name="details_button">বিস্তারিত দেখুন</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
+    <string name="cancel_installation_dialog_message">বর্তমান ইনস্টলেশন বাতিল করতে চান?</string>
     <!-- Export update -->
     <!-- ETA -->
+    <plurals name="eta_hours">
+        <item quantity="one">১ ঘণ্টা বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ঘণ্টা বাকি</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">সাবধানবাণী</string>
     <string name="update_on_mobile_data_message">আপনি মোবাইল ডাটা ব্যবহার করে আধুনিকীকরণের তথ্য ডাউনলোড করতে চলেছেন, যেটি সম্ভবত অনেক ডাটা ব্যবহার করতে পারে। আপনি কি অগ্রসর হতে চান?</string>
     <string name="checkbox_mobile_data_warning">আবার দেখাবেন না</string>
+    <string name="menu_mobile_data_warning">মোবাইল ডাটা সতর্কতা</string>
     <!-- Info section -->
     <string name="extras_category_title">অতিরিক্ত</string>
     <string name="maintainer_info_title">রক্ষণাবেক্ষণকারী</string>

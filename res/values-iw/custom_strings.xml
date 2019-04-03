@@ -38,7 +38,6 @@
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
-    <string name="menu_show_changelog">הצג רשימת שינויים</string>
     <string name="changelog_loading">טוען...</string>
     <string name="label_download_url">כתובת ההורדה</string>
     <string name="toast_download_url_copied">הכתובת הועתקה</string>

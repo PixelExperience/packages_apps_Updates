@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Hapus</string>
     <string name="menu_copy_url">Salin URL</string>
     <string name="menu_export_update">Ekspor pembaruan</string>
-    <string name="menu_show_changelog">Tampilkan catatan perubahan</string>
     <string name="changelog_loading">Memuat…</string>
     <string name="label_download_url">URL Unduh</string>
     <string name="toast_download_url_copied">URL disalin</string>

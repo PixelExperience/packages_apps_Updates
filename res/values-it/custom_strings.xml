@@ -19,12 +19,12 @@
     <!-- App name -->
     <string name="app_name">Aggiornamenti di sistema</string>
     <!-- Notifications -->
-    <string name="export_channel_title">Completamento esportazione</string>
+    <string name="export_channel_title">Completamento dell\'esportazione</string>
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="ongoing_channel_title">Download in corso</string>
     <string name="update_failed_channel_title">Aggiornamento fallito</string>
     <string name="verification_failed_notification">Verifica fallita</string>
-    <string name="verifying_download_notification">Verifica aggiornamenti</string>
+    <string name="verifying_download_notification">Verifica dell\'aggiornamento</string>
     <string name="downloading_notification">Download in corso</string>
     <string name="download_paused_notification">Download in pausa</string>
     <string name="download_paused_error_notification">Errore durante il download</string>
@@ -34,34 +34,33 @@
     <!-- Menu -->
     <string name="menu_refresh">Ricarica</string>
     <string name="menu_preferences">Preferenze</string>
-    <string name="menu_auto_updates_check">Ricerca aggiornamenti automaticamente</string>
+    <string name="menu_auto_updates_check">Controllo aggiornamenti automatici</string>
     <string name="menu_auto_updates_check_interval_daily">Quotidianamente</string>
     <string name="menu_auto_updates_check_interval_weekly">Settimanalmente</string>
     <string name="menu_auto_updates_check_interval_monthly">Mensilmente</string>
     <string name="menu_auto_updates_check_interval_never">Mai</string>
     <string name="menu_delete_update">Elimina</string>
-    <string name="menu_copy_url">Copia indirizzo URL</string>
+    <string name="menu_copy_url">Copia URL</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
-    <string name="menu_show_changelog">Mostra il changelog</string>
     <string name="changelog_loading">Caricamento…</string>
     <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL copiato</string>
+    <string name="toast_download_url_copied">URL Copiata</string>
     <!-- General -->
     <string name="update_found_notification">Nuovo aggiornamento disponibile</string>
     <string name="snack_no_updates_found">Nessun nuovo aggiornamento trovato</string>
     <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
-    <string name="snack_download_failed">Il download dell\'aggiornamento è fallito. Controlla la connessione ad internet e riprova più tardi.</string>
+    <string name="snack_download_failed">Il download è fallito. Controlla la connessione ad internet e riprova più tardi.</string>
     <string name="snack_download_verification_failed">Verifica dell\'aggiornamento fallita.</string>
-    <string name="snack_download_verified">Download aggiornamento completato.</string>
-    <string name="snack_update_not_installable">Questo aggiornamento non può essere installato sopra la versione corrente.</string>
+    <string name="snack_download_verified">Download completato.</string>
+    <string name="snack_update_not_installable">Questo aggiornamento non può essere installato sulla versione corrente.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifica aggiornamento</string>
-    <string name="list_no_updates">Nessun nuovo aggiornamento trovato. Per controllare manualmente nuovi aggiornamenti, tocca il pulsante Aggiorna.</string>
+    <string name="list_no_updates">Nessun nuovo aggiornamento trovato. Per controllare manualmente nuovi aggiornamenti, usa il pulsante Aggiorna.</string>
     <string name="blocked_update_dialog_title">Aggiornamento bloccato</string>
     <!-- Actions -->
-    <string name="action_download">Download</string>
+    <string name="action_download">Scarica</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
     <string name="action_install">Installa</string>
@@ -72,6 +71,7 @@
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Riprendi</string>
     <string name="reboot">Riavvia</string>
+    <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Applica aggiornamento</string>
     <string name="apply_update_dialog_message">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe si preme <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità recovery per installare l\'aggiornamento automaticamente.\n\nNota: Questa funzione richiede una recovery compatibile, in caso contrario si dovrà procedere all\'installazione manualmente.</string>
@@ -82,7 +82,7 @@
     <string name="installing_update_finished">Aggiornamento installato</string>
     <string name="finalizing_package">Finalizzalizzazione del pachetto d\'installazione in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
-    <string name="dialog_prepare_zip_message">Preparazione aggiornamento preliminare</string>
+    <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->

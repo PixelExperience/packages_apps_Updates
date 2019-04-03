@@ -21,13 +21,36 @@
     <!-- Notifications -->
     <!-- Menu -->
     <string name="menu_refresh">ریفریش کریں</string>
+    <string name="changelog_loading">لوڈ ہو رہا ہے…</string>
+    <string name="label_download_url">ڈاؤن لوڈ یو آر ایل</string>
+    <string name="toast_download_url_copied">یو آر ایل نقل کر لیا ہے</string>
     <!-- General -->
     <string name="update_found_notification">نئی اپ ڈیٹ دستیاب ہے</string>
+    <string name="snack_no_updates_found">کوئی نئی اپ ڈیٹ نہیں ملی</string>
+    <string name="snack_updates_check_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
+    <string name="snack_download_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
+    <string name="snack_download_verification_failed">اپ ڈیٹ کی تصدیق ناکام ہوگئی.</string>
+    <string name="snack_download_verified">ڈاؤن لوڈ مکمل.</string>
+    <string name="list_verifying_update">اپ ڈیٹ توثیق کر رہا ہے</string>
     <!-- Actions -->
+    <string name="action_download">ڈاؤن لوڈ</string>
+    <string name="action_pause">روک دیں</string>
+    <string name="action_resume">دوبارہ</string>
+    <string name="action_install">انسٹال کریں</string>
+    <string name="action_delete">خارج کر دیں</string>
+    <string name="action_cancel">منسوخ کریں</string>
+    <string name="pause_button">روک دیں</string>
+    <string name="resume_button">دوبارہ</string>
+    <string name="reboot">ری بوٹ کریں</string>
+    <string name="details_button">تفصیلات دکھائیں</string>
     <!-- Installation -->
+    <string name="dialog_battery_low_title">کم بیٹری</string>
     <!-- Export update -->
     <!-- ETA -->
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">انتباہ</string>
+    <string name="checkbox_mobile_data_warning">دوبارہ مت دکھائیں</string>
+    <string name="menu_mobile_data_warning">موبائل ڈیٹا کے استعمال کا انتباہ</string>
     <!-- Info section -->
     <string name="extras_category_title">ایکسٹراز</string>
     <string name="donate_info_title">عطیہ دیجئے</string>

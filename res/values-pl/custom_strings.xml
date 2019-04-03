@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Usuń</string>
     <string name="menu_copy_url">Kopiuj adres URL</string>
     <string name="menu_export_update">Wyślij aktualizację</string>
-    <string name="menu_show_changelog">Pokaż listę zmian</string>
     <string name="changelog_loading">Ładowanie…</string>
     <string name="label_download_url">Pobierz adres URL</string>
     <string name="toast_download_url_copied">Skopiowano adres URL</string>

@@ -23,7 +23,6 @@
     <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಕೆಳಭರಿತಗಳು</string>
     <!-- Menu -->
     <string name="menu_refresh">ರಿಫ್ರೆಶ್</string>
-    <string name="menu_show_changelog">ಬದಲಾವಣೆಗಳನ್ನು	ತೋರಿಸು</string>
     <string name="changelog_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <!-- General -->
     <string name="update_found_notification">ಹೊಸ ನವೀಕರಣಗಳು ಲಭ್ಯವಿವೆ</string>

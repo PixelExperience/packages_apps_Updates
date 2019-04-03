@@ -42,7 +42,7 @@
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_copy_url">Копирай адреса</string>
     <string name="menu_export_update">Експортиране на актуализация</string>
-    <string name="menu_show_changelog">Покажи промените</string>
+    <string name="menu_show_changelog">Изменения в текущата версия</string>
     <string name="changelog_loading">Зареждане…</string>
     <string name="label_download_url">Изтеглете URL</string>
     <string name="toast_download_url_copied">URL Копиран</string>
@@ -72,6 +72,7 @@
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Възобнови</string>
     <string name="reboot">Рестартиране</string>
+    <string name="details_button">Виж детайли</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Приложи актуализацията</string>
     <string name="apply_update_dialog_message">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nако натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще се рестартира в режим на възстановяване, за да инсталира актуализацията. \ n \ nЗабележка: Тази функция изисква съвместимо Recovery или актуализации трябва да бъдат инсталирани ръчно.</string>

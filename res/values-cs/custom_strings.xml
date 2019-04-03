@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Odstranit</string>
     <string name="menu_copy_url">Kopírovat URL</string>
     <string name="menu_export_update">Export aktualizace</string>
-    <string name="menu_show_changelog">Seznam změn</string>
     <string name="changelog_loading">Načítání…</string>
     <string name="label_download_url">URL stažení</string>
     <string name="toast_download_url_copied">URL zkopírována</string>

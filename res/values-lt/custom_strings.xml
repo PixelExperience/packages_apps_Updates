@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Pašalinti</string>
     <string name="menu_copy_url">Kopijuoti URL</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
-    <string name="menu_show_changelog">Pakeitimų sąrašas</string>
     <string name="changelog_loading">Kraunasi…</string>
     <string name="label_download_url">Atsisiųsti URL</string>
     <string name="toast_download_url_copied">URL nukopijuotas</string>
@@ -55,16 +54,46 @@
     <string name="snack_download_verified">Atsisiuntimas baigtas.</string>
     <string name="snack_update_not_installable">Šis atnaujinimas negali būti įdiegtas ant esamos versijos.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> z <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> iš <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> liko) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Tikrinamas atnaujinimas</string>
+    <string name="list_no_updates">Nerasta jokių naujinių. Jei norite patikrinti naujus naujinimus, naudokite mygtuką Atnaujinti.</string>
+    <string name="blocked_update_dialog_title">Atnaujinimas užblokuotas</string>
     <!-- Actions -->
+    <string name="action_download">Atsisiųsti</string>
+    <string name="action_pause">Pristabdyta</string>
+    <string name="action_resume">Tęsti</string>
+    <string name="action_install">Įdiegti</string>
+    <string name="action_delete">Ištrinti</string>
+    <string name="action_cancel">Atšaukti</string>
     <string name="confirm_delete_dialog_title">Ištrinti failą</string>
     <string name="confirm_delete_dialog_message">Ištrinti pasirinktą atnaujinimo failą?</string>
+    <string name="pause_button">Pristabdyta</string>
+    <string name="resume_button">Tęsti</string>
+    <string name="reboot">Perkrauti</string>
+    <string name="details_button">Peržiūrėti informaciją</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Patvirtinti atnaujinimą</string>
+    <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nKai atnaujins, prietaisas persikraus automatiškai.</string>
+    <string name="cancel_installation_dialog_message">Atšaukti diegimą?</string>
+    <string name="installing_update">Diegiamas atnaujinimo paketas</string>
+    <string name="installing_update_error">Įdiegimo klaida</string>
+    <string name="installing_update_finished">Įdiegtas naujinimas</string>
+    <string name="finalizing_package">Baigiamas paketo diegimas</string>
+    <string name="preparing_ota_first_boot">Pasiruošiama pirmam įkrovimui</string>
+    <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
+    <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Eksportuoti naujinimą</string>
+    <string name="notification_export_success">Atnaujinimas eksportuotas</string>
+    <string name="notification_export_fail">Eksporto klaida</string>
+    <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Dėmesio</string>
     <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
     <string name="checkbox_mobile_data_warning">Daugiau nerodyti</string>
+    <string name="menu_mobile_data_warning">Mobiliojo ryšio duomenų įspėjimas</string>
     <!-- Info section -->
     <string name="extras_category_title">Priedai</string>
     <string name="maintainer_info_title">Kūrėjas/Prižiūrėtojas</string>

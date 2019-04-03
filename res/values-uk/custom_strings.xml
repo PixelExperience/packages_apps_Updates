@@ -42,7 +42,6 @@
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_copy_url">Копіювати URL</string>
     <string name="menu_export_update">Експорт оновлення</string>
-    <string name="menu_show_changelog">Перелік змін</string>
     <string name="changelog_loading">Завантаження…</string>
     <string name="label_download_url">URL-адреса завантаження</string>
     <string name="toast_download_url_copied">URL-адресу скопійовано</string>
