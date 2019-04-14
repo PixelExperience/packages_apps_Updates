@@ -367,7 +367,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         autoCheckInterval.setSelection(Utils.getUpdateCheckSetting(this));
         dataWarning.setChecked(prefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true));
 
-        new AlertDialog.Builder(this)
+        new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.menu_preferences)
                 .setView(view)
                 .setOnDismissListener(dialogInterface -> {

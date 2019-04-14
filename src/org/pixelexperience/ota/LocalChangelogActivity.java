@@ -46,7 +46,7 @@ public class LocalChangelogActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final ProgressDialog dialog = new ProgressDialog(this);
+        final ProgressDialog dialog = new ProgressDialog(this,R.style.AppTheme_AlertDialogStyle);
         final Handler mHandler = new Handler();
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);

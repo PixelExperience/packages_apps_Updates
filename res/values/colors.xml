@@ -5,4 +5,5 @@
     <color name="theme_accent">#ff1a73e8</color>
     <color name="cardview_background">#fff</color>
     <color name="design_snackbar_background_color" tools:override="true">#323232</color>
+    <color name="text_primary">#DE000000</color>
 </resources>
