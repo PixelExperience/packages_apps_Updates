@@ -34,7 +34,6 @@ import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.text.format.Formatter;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.util.TypedValue;
@@ -101,9 +100,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         final String downloadId = update.getDownloadId();
         if (mUpdaterController.isDownloading(downloadId)) {
             canDelete = true;
-            String downloaded = Formatter.formatShortFileSize(mActivity,
-                    update.getFile().length());
-            String total = Formatter.formatShortFileSize(mActivity, update.getFileSize());
+            String downloaded = Utils.readableFileSize(update.getFile().length());
+            String total = Utils.readableFileSize(update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
                     update.getProgress() / 100.f);
             long eta = update.getEta();
@@ -142,9 +140,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             canDelete = true;
             viewHolder.mDetails.setVisibility(View.GONE);
             setButtonAction(viewHolder.mAction, Action.RESUME, downloadId, !isBusy());
-            String downloaded = Formatter.formatShortFileSize(mActivity,
-                    update.getFile().length());
-            String total = Formatter.formatShortFileSize(mActivity, update.getFileSize());
+            String downloaded = Utils.readableFileSize(update.getFile().length());
+            String total = Utils.readableFileSize(update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
                     update.getProgress() / 100.f);
             viewHolder.mProgressText.setText(mActivity.getString(R.string.list_download_progress_new,
@@ -186,7 +183,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             setButtonAction(viewHolder.mAction, Action.DOWNLOAD, downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.VISIBLE);
         }
-        String fileSize = Formatter.formatShortFileSize(mActivity, update.getFileSize());
+        String fileSize = Utils.readableFileSize(update.getFileSize());
         viewHolder.mBuildSize.setText(fileSize);
 
         viewHolder.mProgressBar.setVisibility(View.INVISIBLE);

@@ -29,7 +29,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
-import android.text.format.Formatter;
 import android.util.Log;
 
 import org.pixelexperience.ota.R;
@@ -400,7 +399,7 @@ public class UpdaterService extends Service {
         mNotificationBuilder.setProgress(100, progress, false);
 
         String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
-        String speed = Formatter.formatFileSize(this, update.getSpeed());
+        String speed = Utils.readableFileSize(update.getSpeed());
         mNotificationStyle.setSummaryText(percent + " • " + speed + "/s");
 
         setNotificationTitle(update);
