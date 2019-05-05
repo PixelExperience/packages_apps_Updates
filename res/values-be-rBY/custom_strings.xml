@@ -19,14 +19,41 @@
     <!-- App name -->
     <string name="app_name">Абнаўленні сiстэмы</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Экспарт завершаны</string>
+    <string name="new_updates_channel_title">Новыя абнаўленні</string>
+    <string name="ongoing_channel_title">Бягучыя спампоўкі</string>
+    <string name="update_failed_channel_title">Памылка абнаўлення</string>
+    <string name="verification_failed_notification">Не атрымалася выканаць праверку</string>
+    <string name="verifying_download_notification">Праверка абнаўленняў</string>
+    <string name="downloading_notification">Спампоўваецца</string>
+    <string name="download_paused_notification">Спампоўка прыпынена</string>
+    <string name="download_paused_error_notification">Памылка спампоўвання</string>
+    <string name="download_completed_notification">Спампоўка завершана</string>
+    <string name="download_starting_notification">Запуск спампоўкі</string>
+    <string name="update_failed_notification">Памылка абнаўлення</string>
     <!-- Menu -->
     <string name="menu_refresh">Аднавіць</string>
+    <string name="menu_preferences">Налады</string>
+    <string name="menu_auto_updates_check">Аўтаматычная праверка абнаўленняў</string>
+    <string name="menu_auto_updates_check_interval_daily">Штодня</string>
+    <string name="menu_auto_updates_check_interval_weekly">Штотыднёва</string>
+    <string name="menu_auto_updates_check_interval_monthly">Штомесяц</string>
+    <string name="menu_auto_updates_check_interval_never">Ніколі</string>
+    <string name="menu_delete_update">Выдаліць</string>
+    <string name="menu_copy_url">Капіяваць URL</string>
+    <string name="menu_export_update">Экспарт абнаўлення</string>
+    <string name="menu_show_changelog">Змены ў бягучай версіі</string>
     <string name="changelog_loading">Загрузка…</string>
+    <string name="label_download_url">URL-адрасы спамповак</string>
+    <string name="toast_download_url_copied">URL-адрас скапіяваны</string>
     <!-- General -->
     <string name="update_found_notification">Даступна новае абнаўленне</string>
+    <string name="snack_no_updates_found">Абнаўленні не знойдзены</string>
+    <string name="snack_updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
     <!-- Actions -->
     <string name="confirm_delete_dialog_title">Выдаліць файл</string>
     <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
+    <string name="suspend_button">Прыпынена</string>
     <!-- Installation -->
     <!-- Export update -->
     <!-- ETA -->

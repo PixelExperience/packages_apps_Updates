@@ -35,9 +35,11 @@
     <string name="menu_refresh">רענן</string>
     <string name="menu_preferences">העדפות</string>
     <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
+    <string name="menu_auto_updates_check_interval_daily">פעם ביום</string>
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
+    <string name="menu_show_changelog">שינויים בגרסה הנוכחית</string>
     <string name="changelog_loading">טוען...</string>
     <string name="label_download_url">כתובת ההורדה</string>
     <string name="toast_download_url_copied">הכתובת הועתקה</string>

@@ -31,6 +31,7 @@
     <string name="download_completed_notification">다운로드 완료</string>
     <string name="download_starting_notification">다운로드 시작</string>
     <string name="update_failed_notification">업데이트 실패</string>
+    <string name="installation_suspended_notification">설치가 지연되었습니다.</string>
     <!-- Menu -->
     <string name="menu_refresh">새로고침</string>
     <string name="menu_preferences">설정</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">삭제</string>
     <string name="menu_copy_url">URL 복사</string>
     <string name="menu_export_update">업데이트 내보내기</string>
+    <string name="menu_show_changelog">현재 버전의 번경 사항</string>
     <string name="changelog_loading">로딩 중…</string>
     <string name="label_download_url">다운로드 URL</string>
     <string name="toast_download_url_copied">URL 복사됨</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">선택한 업데이트 파일을 삭제하시겠습니까?</string>
     <string name="pause_button">일시 중지</string>
     <string name="resume_button">이어 받기</string>
+    <string name="suspend_button">지연</string>
     <string name="reboot">다시 시작</string>
     <string name="details_button">자세히 보기</string>
     <!-- Installation -->

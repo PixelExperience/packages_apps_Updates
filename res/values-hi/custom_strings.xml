@@ -19,6 +19,7 @@
     <!-- App name -->
     <string name="app_name">सिस्टम अद्यतनीकरण</string>
     <!-- Notifications -->
+    <string name="new_updates_channel_title">नए अपडेट</string>
     <!-- Menu -->
     <string name="menu_refresh">ताज़ा करना</string>
     <!-- General -->

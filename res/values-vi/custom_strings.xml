@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Tải xuống hoàn tất</string>
     <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
     <string name="update_failed_notification">Cập nhật thất bại</string>
+    <string name="installation_suspended_notification">Cài đặt đã ngừng</string>
     <!-- Menu -->
     <string name="menu_refresh">Làm mới</string>
     <string name="menu_preferences">Tùy chỉnh</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Xóa</string>
     <string name="menu_copy_url">Sao chép URL</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
+    <string name="menu_show_changelog">Thay đổi trong phiên bản hiện tại</string>
     <string name="changelog_loading">Đang tải…</string>
     <string name="label_download_url">Tải xuống URL</string>
     <string name="toast_download_url_copied">Đã sao chép URL</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Xóa các tập tin cập nhật được chọn?</string>
     <string name="pause_button">Tạm dừng</string>
     <string name="resume_button">Tiếp tục</string>
+    <string name="suspend_button">Ngừng</string>
     <string name="reboot">Khởi động lại</string>
     <string name="details_button">Xem chi tiết</string>
     <!-- Installation -->

@@ -42,6 +42,7 @@
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_copy_url">Copier l\'URL</string>
     <string name="menu_export_update">Exporter la mise à jour</string>
+    <string name="menu_show_changelog">Changements dans la version actuelle</string>
     <string name="changelog_loading">Chargement…</string>
     <string name="label_download_url">URL de téléchargement</string>
     <string name="toast_download_url_copied">URL copiée</string>

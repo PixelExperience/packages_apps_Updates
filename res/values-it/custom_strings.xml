@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Download completato</string>
     <string name="download_starting_notification">Avvio download</string>
     <string name="update_failed_notification">Aggiornamento fallito</string>
+    <string name="installation_suspended_notification">Installazione sospesa</string>
     <!-- Menu -->
     <string name="menu_refresh">Ricarica</string>
     <string name="menu_preferences">Preferenze</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia URL</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
+    <string name="menu_show_changelog">Modifiche nella versione corrente</string>
     <string name="changelog_loading">Caricamento…</string>
     <string name="label_download_url">Download URL</string>
     <string name="toast_download_url_copied">URL Copiata</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Cancellare il file di aggiornamento selezionato?</string>
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Riprendi</string>
+    <string name="suspend_button">Sospendi</string>
     <string name="reboot">Riavvia</string>
     <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
@@ -80,16 +83,16 @@
     <string name="installing_update">Installazione del pacchetto aggiornamento</string>
     <string name="installing_update_error">Errore d\'installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
-    <string name="finalizing_package">Finalizzalizzazione del pachetto d\'installazione in corso</string>
+    <string name="finalizing_package">Completamento dell\'installazione del pacchetto in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
     <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Esportazione aggiornamento</string>
+    <string name="dialog_export_title">Esportazione aggiornamento in corso</string>
     <string name="notification_export_success">Aggiornamento esportato</string>
-    <string name="notification_export_fail">Errore esportazione</string>
-    <string name="toast_already_exporting">Esportazione aggiornamento già in corso</string>
+    <string name="notification_export_fail">Errore nell\'esportazione</string>
+    <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 secondo rimanente</item>

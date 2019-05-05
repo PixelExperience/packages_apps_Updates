@@ -31,6 +31,7 @@
     <string name="download_completed_notification">下载完成</string>
     <string name="download_starting_notification">正在开始下载</string>
     <string name="update_failed_notification">更新失败</string>
+    <string name="installation_suspended_notification">安装已挂起</string>
     <!-- Menu -->
     <string name="menu_refresh">刷新</string>
     <string name="menu_preferences">首选项</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">删除</string>
     <string name="menu_copy_url">复制网址</string>
     <string name="menu_export_update">导出更新</string>
+    <string name="menu_show_changelog">当前版本的变化</string>
     <string name="changelog_loading">载入中...</string>
     <string name="label_download_url">下载地址</string>
     <string name="toast_download_url_copied">地址已复制</string>
@@ -54,8 +56,8 @@
     <string name="snack_download_verified">下载完毕。</string>
     <string name="snack_update_not_installable">在当前的版本上无法安装更新。</string>
     <string name="text_download_speed">%1$s, %2$s/秒</string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">正在验证更新</string>
     <string name="list_no_updates">未找到更新。要手动检查更新，请使用刷新按钮。</string>
     <string name="blocked_update_dialog_title">更新已被阻止</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">您确定要删除此更新文件？</string>
     <string name="pause_button">暂停</string>
     <string name="resume_button">继续</string>
+    <string name="suspend_button">挂起</string>
     <string name="reboot">重新启动</string>
     <string name="details_button">查看详情</string>
     <!-- Installation -->

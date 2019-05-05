@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Prenos končan</string>
     <string name="download_starting_notification">Začetek prenosa</string>
     <string name="update_failed_notification">Posodobitev je spodletela</string>
+    <string name="installation_suspended_notification">Namestitev začasno ustavljena</string>
     <!-- Menu -->
     <string name="menu_refresh">Osveži</string>
     <string name="menu_preferences">Nastavitve</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvozi posodobitev</string>
+    <string name="menu_show_changelog">Spremembe v trenutni različici</string>
     <string name="changelog_loading">Nalaganje …</string>
     <string name="label_download_url">URL prenosa</string>
     <string name="toast_download_url_copied">URL kopiran</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Izbriši izbrano posodobitveno datoteko?</string>
     <string name="pause_button">Premor</string>
     <string name="resume_button">Nadaljuj</string>
+    <string name="suspend_button">Začasno ustavi</string>
     <string name="reboot">Vnovično zaženi</string>
     <string name="details_button">Poglej podrobnosti</string>
     <!-- Installation -->

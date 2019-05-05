@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Allalaadimine lõpetatud</string>
     <string name="download_starting_notification">Alustan allalaadimist</string>
     <string name="update_failed_notification">Värskendamine nurjus</string>
+    <string name="installation_suspended_notification">Installimine peatati</string>
     <!-- Menu -->
     <string name="menu_refresh">Värskenda</string>
     <string name="menu_preferences">Eelistused</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Kustuta</string>
     <string name="menu_copy_url">Kopeeri aadress</string>
     <string name="menu_export_update">Ekspordi värskendus</string>
+    <string name="menu_show_changelog">Muudatused praeguses versioonis</string>
     <string name="changelog_loading">Laadimine…</string>
     <string name="label_download_url">Laadimise url</string>
     <string name="toast_download_url_copied">URL salvestatud</string>
@@ -57,7 +59,7 @@
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Uuenduse kinnitamine</string>
-    <string name="list_no_updates">Uusi uuendusi ei leitud. Uuenduste käsitsi kontrollimiseks kasuta nuppu Uuenda.</string>
+    <string name="list_no_updates">Uusi uuendusi ei leitud. Uute uuenduste käsitsi kontrollimiseks kasuta nuppu \"Uuenda\".</string>
     <string name="blocked_update_dialog_title">Uuendamine blokeeritud</string>
     <!-- Actions -->
     <string name="action_download">Lae alla</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Kustuta valitud uuendusfail?</string>
     <string name="pause_button">Paus</string>
     <string name="resume_button">Jätka</string>
+    <string name="suspend_button">Peata</string>
     <string name="reboot">Taaskäivita</string>
     <string name="details_button">Vaata detaile</string>
     <!-- Installation -->

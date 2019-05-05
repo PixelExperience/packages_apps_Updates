@@ -42,6 +42,7 @@
     <string name="menu_delete_update">移除</string>
     <string name="menu_copy_url">複製網址</string>
     <string name="menu_export_update">匯出更新</string>
+    <string name="menu_show_changelog">目前版本變更</string>
     <string name="changelog_loading">載入中...</string>
     <string name="label_download_url">下載網址</string>
     <string name="toast_download_url_copied">網址已複製</string>

@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Завантаження завершено</string>
     <string name="download_starting_notification">Початок завантаження</string>
     <string name="update_failed_notification">Помилка оновлення</string>
+    <string name="installation_suspended_notification">Встановлення призупинено</string>
     <!-- Menu -->
     <string name="menu_refresh">Оновити</string>
     <string name="menu_preferences">Налаштування</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_copy_url">Копіювати URL</string>
     <string name="menu_export_update">Експорт оновлення</string>
+    <string name="menu_show_changelog">Зміни поточної версії</string>
     <string name="changelog_loading">Завантаження…</string>
     <string name="label_download_url">URL-адреса завантаження</string>
     <string name="toast_download_url_copied">URL-адресу скопійовано</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Видалити обраний файл оновлення?</string>
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Продовжити</string>
+    <string name="suspend_button">Призупинити</string>
     <string name="reboot">Перезавантаження</string>
     <string name="details_button">Детальніше</string>
     <!-- Installation -->

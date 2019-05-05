@@ -22,6 +22,7 @@
     <string name="export_channel_title">Export slutförd</string>
     <string name="new_updates_channel_title">Nya uppdateringar</string>
     <string name="ongoing_channel_title">Pågående nedladdningar</string>
+    <string name="update_failed_channel_title">Något gick fel! Uppdateringen Misslyckades</string>
     <string name="verification_failed_notification">Verifieringen misslyckades</string>
     <string name="verifying_download_notification">Verifierar uppdateringen</string>
     <string name="downloading_notification">Laddar ner</string>
@@ -29,38 +30,73 @@
     <string name="download_paused_error_notification">Nedladdningsfel</string>
     <string name="download_completed_notification">Nedladdning slutförd</string>
     <string name="download_starting_notification">Påbörjar nedladdning</string>
+    <string name="update_failed_notification">Något gick fel! Uppdateringen Misslyckades</string>
     <!-- Menu -->
     <string name="menu_refresh">Ladda om</string>
+    <string name="menu_preferences">Inställningar</string>
     <string name="menu_auto_updates_check">Sök efter uppdateringar automatiskt</string>
+    <string name="menu_auto_updates_check_interval_daily">Varje dag</string>
+    <string name="menu_auto_updates_check_interval_weekly">Varje vecka</string>
+    <string name="menu_auto_updates_check_interval_monthly">Varje månad</string>
+    <string name="menu_auto_updates_check_interval_never">Aldrig</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
+    <string name="menu_export_update">Exportera uppdateringen</string>
+    <string name="menu_show_changelog">Ändringar i denna version</string>
     <string name="changelog_loading">Laddar…</string>
     <string name="label_download_url">Nedladdningsadress</string>
     <string name="toast_download_url_copied">Webbadressen har kopierats</string>
     <!-- General -->
     <string name="update_found_notification">Ny uppdatering tillgänglig</string>
     <string name="snack_no_updates_found">Inga nya uppdateringar hittades</string>
+    <string name="snack_updates_check_failed">Sökningen efter uppdateringar misslyckades. Var god kontrollera din internetanslutning och försök igen senare.</string>
+    <string name="snack_download_failed">Nedladdningen misslyckades. Kontrollera din internetanslutning och försök igen senare.</string>
+    <string name="snack_download_verification_failed">Uppdateringen kunde inte verifieras.</string>
     <string name="snack_download_verified">Nedladdningen är slutförd.</string>
+    <string name="snack_update_not_installable">Uppdateringen kan inte installeras över den nuvarande versionen.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> av <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> kvar) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifierar uppdateringen</string>
+    <string name="list_no_updates">Inga nya uppdateringar hittades. För att manuellt söka efter nya uppdateringar, använd knappen Uppdatera.</string>
+    <string name="blocked_update_dialog_title">Uppdatering blockerad</string>
     <!-- Actions -->
     <string name="action_download">Ladda ner</string>
+    <string name="action_pause">Pausa</string>
+    <string name="action_resume">Fortsätt</string>
+    <string name="action_install">Installera</string>
+    <string name="action_delete">Radera</string>
+    <string name="action_cancel">Avbryt</string>
     <string name="confirm_delete_dialog_title">Radera fil</string>
     <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
+    <string name="pause_button">Pausa</string>
     <string name="resume_button">Återuppta</string>
     <string name="reboot">Starta om</string>
+    <string name="details_button">Visa detaljer</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Installera uppdateringen</string>
+    <string name="apply_update_dialog_message">Du är på väg att uppdatera till <xliff:g id="update_name">%1$s</xliff:g>.\n\nOm du trycker på <xliff:g id="ok">%2$s</xliff:g> så kommer enheten att starta om i säkerhetsläget och påbörja uppdateringen.\n\nOBS! Den här funktionen kräver en kompatibel Recovery-programvara annars måste uppdateringen installeras manuellt.</string>
+    <string name="apply_update_dialog_message_ab">Du är på väg att uppdatera till <xliff:g id="update_name">%1$s</xliff:g>.\n\nOm du trycker på <xliff:g id="ok">%2$s</xliff:g> så kommer enheten att påbörja installationen i bakgrunden.\n\nNär den är slutförd kommer du bli ombedd att starta om enheten.</string>
+    <string name="cancel_installation_dialog_message">Avbryt installationen?</string>
     <string name="installing_update">Installerar uppdateringspaketet</string>
     <string name="installing_update_error">Installationsfel</string>
     <string name="installing_update_finished">Uppdateringen har installerats</string>
+    <string name="finalizing_package">Slutför paketinstallationen</string>
+    <string name="preparing_ota_first_boot">Förbereder för första uppstart</string>
+    <string name="dialog_prepare_zip_message">Preliminär förberedelse för uppdatering</string>
     <string name="dialog_battery_low_title">Låg batterinivå</string>
+    <string name="dialog_battery_low_message_pct">Batterinivån är för låg, du beöver minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% av batterikapaciteten för att fortsätta, <xliff:g id="percent_charging">%2$d</xliff:g>%% om du laddar.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporterar uppdateringen</string>
+    <string name="notification_export_success">Uppdateringen exporterades</string>
     <string name="notification_export_fail">Exporteringsfel</string>
+    <string name="toast_already_exporting">Exporterar redan en uppdatering</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varning</string>
     <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
     <string name="checkbox_mobile_data_warning">Visa inte igen</string>
+    <string name="menu_mobile_data_warning">Mobildatavarning</string>
     <!-- Info section -->
     <string name="extras_category_title">Extra</string>
     <string name="maintainer_info_title">Underhållare</string>

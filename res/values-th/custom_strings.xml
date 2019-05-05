@@ -19,21 +19,93 @@
     <!-- App name -->
     <string name="app_name">อัพเดทระบบ</string>
     <!-- Notifications -->
+    <string name="export_channel_title">การส่งออกเสร็จสมบูรณ์</string>
+    <string name="new_updates_channel_title">มีอัพเดตใหม่!</string>
+    <string name="ongoing_channel_title">กำลังดาวน์โหลดอย่างต่อเนื่อง</string>
+    <string name="update_failed_channel_title">การปรับปรุงล้มเหลว</string>
+    <string name="verification_failed_notification">การตรวจสอบล้มเหลว!</string>
+    <string name="verifying_download_notification">กำลังตรวจสอบการอัปเดต</string>
+    <string name="downloading_notification">กำลังดาวน์โหลด</string>
+    <string name="download_paused_notification">หยุดดาวน์โหลดชั่วคราว</string>
+    <string name="download_paused_error_notification">เกิดข้อผิดพลาดในการดาวน์โหลด</string>
+    <string name="download_completed_notification">ดาวน์โหลดเสร็จสมบูรณ์</string>
+    <string name="download_starting_notification">เริ่มต้นดาวน์โหลด</string>
+    <string name="update_failed_notification">การปรับปรุงล้มเหลว</string>
     <!-- Menu -->
     <string name="menu_refresh">โหลดใหม่</string>
+    <string name="menu_preferences">การตั้งค่า</string>
+    <string name="menu_auto_updates_check">ตรวจสอบการปรับปรุงอัตโนมัติ</string>
+    <string name="menu_auto_updates_check_interval_daily">วันละครั้ง</string>
+    <string name="menu_auto_updates_check_interval_weekly">สัปดาห์ละครั้ง</string>
+    <string name="menu_auto_updates_check_interval_monthly">เดือนละครั้ง</string>
+    <string name="menu_auto_updates_check_interval_never">ไม่เคย</string>
+    <string name="menu_delete_update">ลบ</string>
+    <string name="menu_copy_url">คัดลอก URL</string>
+    <string name="menu_export_update">ส่งออกการอัปเดต</string>
+    <string name="menu_show_changelog">การเปลี่ยนแปลงในเวอร์ชั่นปัจจุบัน</string>
     <string name="changelog_loading">กำลังโหลด…</string>
+    <string name="label_download_url">ดาวน์โหลด URL</string>
+    <string name="toast_download_url_copied">คัดลอก URL</string>
     <!-- General -->
     <string name="update_found_notification">มีการอัปเดตใหม่</string>
+    <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
+    <string name="snack_updates_check_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
+    <string name="snack_download_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
+    <string name="snack_download_verification_failed">การตรวจสอบการยืนยันอัปเดตล้มเหลว</string>
+    <string name="snack_download_verified">ดาวน์โหลดเสร็จสมบูรณ์</string>
+    <string name="snack_update_not_installable">การปรับปรุงนี้ไม่สามารถติดตั้งบนโครงสร้างปัจจุบัน</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">ตรวจสอบการปรับปรุง</string>
+    <string name="list_no_updates">ไม่พบการปรับปรุงใหม่ หากต้องการตรวจสอบการอัปเดตใหม่ด้วยตนเองให้ใช้ปุ่มรีเฟรช</string>
+    <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
     <!-- Actions -->
+    <string name="action_download">ดาวน์โหลด</string>
+    <string name="action_pause">หยุดชั่วคราว</string>
+    <string name="action_resume">ดำเนินการต่อ</string>
+    <string name="action_install">ติดตั้ง</string>
+    <string name="action_delete">ลบ</string>
+    <string name="action_cancel">ยกเลิก</string>
     <string name="confirm_delete_dialog_title">ลบไฟล์</string>
     <string name="confirm_delete_dialog_message">ลบไฟล์อัปเดตที่เลือกไว้หรือไม่?</string>
+    <string name="pause_button">หยุดชั่วคราว</string>
+    <string name="resume_button">ดำเนินการต่อ</string>
+    <string name="reboot">เริ่มระบบใหม่</string>
+    <string name="details_button">แสดงรายละเอียด</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">ใช้งานอัปเดต</string>
+    <string name="apply_update_dialog_message">คุณกำลังจะอัปเกรดเป็น <xliff:g id="update_name">%1$s</xliff:g>.\n\nถ้าคุณกด <xliff:g id="ok">%2$s</xliff:g>, อุปกรณ์จะรีสตาร์ทเองในโหมดการกู้คืนเพื่อติดตั้งการอัพเดต\n\nหมายเหตุ: คุณลักษณะนี้ต้องการการกู้คืนที่เข้ากันได้ หรือการอัพเดตจะต้องติดตั้งด้วยตนเอง</string>
+    <string name="apply_update_dialog_message_ab">คุณกำลังจะอัพเกรดเป็น <xliff:g id="update_name">%1$s</xliff:g>.\n\nถ้าคุณกด <xliff:g id="ok">%2$s</xliff:g>, อุปกรณ์จะเริ่มติดตั้งอยู่ในบื้องหลัง\n\nเมื่อการติดตั้งเสร็จสิ้นคุณจะได้รับแจ้งให้รีบูต</string>
+    <string name="cancel_installation_dialog_message">ยกเลิกการติดตั้ง?</string>
+    <string name="installing_update">ติดตั้งแพคเกจการอัพเดต</string>
+    <string name="installing_update_error">มีข้อผิดพลาดในการติดตั้ง</string>
+    <string name="installing_update_finished">อัปเดตแล้ว</string>
+    <string name="finalizing_package">ติดตั้งแพ็กเกจเสร็จสิ้น</string>
+    <string name="preparing_ota_first_boot">กำลังเตรียมพร้อมสำหรับการบูตครั้งแรก</string>
+    <string name="dialog_prepare_zip_message">เตรียมการปรับปรุงเบื้องต้น</string>
+    <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
+    <string name="dialog_battery_low_message_pct">ระดับแบตเตอรี่ต่ำเกินไป คุณจะต้องมีระดับแบตเตอรี่อย่างน้อย <xliff:g id="percent_discharging">%1$d</xliff:g>%% เพื่อดำเนินต่อ <xliff:g id="percent_charging">%2$d</xliff:g>%% หากกำลังชาร์จ</string>
     <!-- Export update -->
+    <string name="dialog_export_title">กำลังส่งออกการปรับปรุง</string>
+    <string name="notification_export_success">การปรับปรุงส่งออกแล้ว</string>
+    <string name="notification_export_fail">การส่งออกเกิดข้อผิดพลาด</string>
+    <string name="toast_already_exporting">ดำเนินการส่งออกอัพเดตเรียบร้อยแล้ว</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> วินาที</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> นาที</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> ชั่วโมง</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">คำเตือน</string>
     <string name="update_on_mobile_data_message">คุณกำลังจะดาวน์โหลดไฟล์ขนาดใหญ่เพื่อใช้ปรับปรุงระบบ ผ่านทางครือข่ายมือถือซึ่งใช้ข้อมูลปริมาณมาก คุณต้องการทำหรือไม่?</string>
     <string name="checkbox_mobile_data_warning">ไม่ต้องแสดงอีก</string>
+    <string name="menu_mobile_data_warning">คำเตือนการใช้งานข้อมูลมือถือ</string>
     <!-- Info section -->
     <string name="extras_category_title">เพิ่มเติม</string>
     <string name="maintainer_info_title">ผู้ดูแล</string>

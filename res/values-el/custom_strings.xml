@@ -42,6 +42,7 @@
     <string name="menu_delete_update">Διαγραφή</string>
     <string name="menu_copy_url">Αντιγραφή URL</string>
     <string name="menu_export_update">Εξαγωγή ενημέρωσης</string>
+    <string name="menu_show_changelog">Αλλαγές στην τρέχουσα έκδοση</string>
     <string name="changelog_loading">Φόρτωση…</string>
     <string name="label_download_url">Λήψη συνδέσμου</string>
     <string name="toast_download_url_copied">Ο σύνδεσμος αντιγράφηκε</string>

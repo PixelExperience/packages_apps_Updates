@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Unduhan selesai</string>
     <string name="download_starting_notification">Memulai unduhan</string>
     <string name="update_failed_notification">Pembaruan gagal</string>
+    <string name="installation_suspended_notification">Instalasi ditangguhkan</string>
     <!-- Menu -->
     <string name="menu_refresh">Segarkan</string>
     <string name="menu_preferences">Preferensi</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Hapus</string>
     <string name="menu_copy_url">Salin URL</string>
     <string name="menu_export_update">Ekspor pembaruan</string>
+    <string name="menu_show_changelog">Perubahan di versi ini</string>
     <string name="changelog_loading">Memuat…</string>
     <string name="label_download_url">URL Unduh</string>
     <string name="toast_download_url_copied">URL disalin</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Hapus berkas pemutakhiran terpilih?</string>
     <string name="pause_button">Jeda</string>
     <string name="resume_button">Lanjutkan</string>
+    <string name="suspend_button">Tangguhkan</string>
     <string name="reboot">Mulai ulang</string>
     <string name="details_button">Lihat detail</string>
     <!-- Installation -->

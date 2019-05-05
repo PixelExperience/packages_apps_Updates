@@ -31,6 +31,7 @@
     <string name="download_completed_notification">A letöltés befejeződött</string>
     <string name="download_starting_notification">A letöltés indítása</string>
     <string name="update_failed_notification">A frissítés nem sikerült</string>
+    <string name="installation_suspended_notification">A telepítés felfüggesztve</string>
     <!-- Menu -->
     <string name="menu_refresh">Frissítés</string>
     <string name="menu_preferences">Tulajdonságok</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Törlés</string>
     <string name="menu_copy_url">Az URL másolása</string>
     <string name="menu_export_update">Frissítés-exportálás</string>
+    <string name="menu_show_changelog">Változások a jelenlegi verzióban</string>
     <string name="changelog_loading">Betöltés…</string>
     <string name="label_download_url">Az URL letöltése</string>
     <string name="toast_download_url_copied">Az URL másolva</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a kijelölt frissítő fájlt?</string>
     <string name="pause_button">Szüneteltetés</string>
     <string name="resume_button">Folytatás</string>
+    <string name="suspend_button">Felfüggesztés</string>
     <string name="reboot">Újraindítás</string>
     <string name="details_button">Részletek megjelenítése</string>
     <!-- Installation -->

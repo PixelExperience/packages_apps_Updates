@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Lataus suoritettu</string>
     <string name="download_starting_notification">Aloitetaan latausta</string>
     <string name="update_failed_notification">Päivitys epäonnistui</string>
+    <string name="installation_suspended_notification">Asennus keskeytetty</string>
     <!-- Menu -->
     <string name="menu_refresh">Päivitä</string>
     <string name="menu_preferences">Ominaisuudet</string>
@@ -42,7 +43,8 @@
     <string name="menu_delete_update">Poista</string>
     <string name="menu_copy_url">Kopioi URL-osoite</string>
     <string name="menu_export_update">Vie päivitys</string>
-    <string name="changelog_loading">Lataa…</string>
+    <string name="menu_show_changelog">Muutokset nykyiseen versioon</string>
+    <string name="changelog_loading">Ladataan…</string>
     <string name="label_download_url">Lataussivun URL-osoite</string>
     <string name="toast_download_url_copied">URL-osoite kopioitu</string>
     <!-- General -->
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Poista valittu päivitystiedosto?</string>
     <string name="pause_button">Tauko</string>
     <string name="resume_button">Jatka</string>
+    <string name="suspend_button">Keskeytä</string>
     <string name="reboot">Käynnistä uudelleen</string>
     <string name="details_button">Näytä tiedot</string>
     <!-- Installation -->

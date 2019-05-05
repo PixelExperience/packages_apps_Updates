@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Stahování bylo dokončeno</string>
     <string name="download_starting_notification">Zahajování stahování</string>
     <string name="update_failed_notification">Aktualizace selhala</string>
+    <string name="installation_suspended_notification">Instalace byla odložena</string>
     <!-- Menu -->
     <string name="menu_refresh">Obnovit</string>
     <string name="menu_preferences">Předvolby</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Odstranit</string>
     <string name="menu_copy_url">Kopírovat URL</string>
     <string name="menu_export_update">Export aktualizace</string>
+    <string name="menu_show_changelog">Změny v aktuální verzi</string>
     <string name="changelog_loading">Načítání…</string>
     <string name="label_download_url">URL stažení</string>
     <string name="toast_download_url_copied">URL zkopírována</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Smazat zvolený soubor aktualizace?</string>
     <string name="pause_button">Pozastavit</string>
     <string name="resume_button">Pokračovat</string>
+    <string name="suspend_button">Pozastavit</string>
     <string name="reboot">Restartovat</string>
     <string name="details_button">Zobrazit podrobnosti</string>
     <!-- Installation -->

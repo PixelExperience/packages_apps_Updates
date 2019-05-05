@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Pobieranie zakończone</string>
     <string name="download_starting_notification">Rozpoczęcie pobierania</string>
     <string name="update_failed_notification">Aktualizacja nie powiodła się</string>
+    <string name="installation_suspended_notification">Instalacja zawieszona</string>
     <!-- Menu -->
     <string name="menu_refresh">Odśwież</string>
     <string name="menu_preferences">Ustawienia</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Usuń</string>
     <string name="menu_copy_url">Kopiuj adres URL</string>
     <string name="menu_export_update">Wyślij aktualizację</string>
+    <string name="menu_show_changelog">Zmiany w obecnej wersji</string>
     <string name="changelog_loading">Ładowanie…</string>
     <string name="label_download_url">Pobierz adres URL</string>
     <string name="toast_download_url_copied">Skopiowano adres URL</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Usunąć wybrany plik?</string>
     <string name="pause_button">Wstrzymaj</string>
     <string name="resume_button">Wznów</string>
+    <string name="suspend_button">Zawieś</string>
     <string name="reboot">Uruchom ponownie</string>
     <string name="details_button">Pokaż szczegóły</string>
     <!-- Installation -->

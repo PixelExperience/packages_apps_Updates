@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_starting_notification">Iniciando descarga</string>
     <string name="update_failed_notification">Actualización fallida</string>
+    <string name="installation_suspended_notification">Instalación suspendida</string>
     <!-- Menu -->
     <string name="menu_refresh">Actualizar</string>
     <string name="menu_preferences">Preferencias</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
+    <string name="menu_show_changelog">Cambios en la última versión</string>
     <string name="changelog_loading">Cargando…</string>
     <string name="label_download_url">URL de descarga</string>
     <string name="toast_download_url_copied">URL copiada</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Reanudar</string>
+    <string name="suspend_button">Suspender</string>
     <string name="reboot">Reiniciar</string>
     <string name="details_button">Ver detalles</string>
     <!-- Installation -->
@@ -91,6 +94,10 @@
     <string name="notification_export_fail">Error de exportación</string>
     <string name="toast_already_exporting">Ya se está exportando una actualización</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 segundo restante</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> segundos restantes</item>
+    </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">1 minuto restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> minutos restantes</item>

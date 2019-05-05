@@ -35,9 +35,14 @@
     <string name="menu_refresh">Actualitza</string>
     <string name="menu_preferences">Preferències</string>
     <string name="menu_auto_updates_check">Comprova automàticament les actualitzacions</string>
+    <string name="menu_auto_updates_check_interval_daily">Una vegada al dia</string>
+    <string name="menu_auto_updates_check_interval_weekly">Un cop per setmana</string>
+    <string name="menu_auto_updates_check_interval_monthly">Un cop al mes</string>
+    <string name="menu_auto_updates_check_interval_never">Mai</string>
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia l\'URL</string>
     <string name="menu_export_update">Exporta l\'actualització</string>
+    <string name="menu_show_changelog">Canvis en la versió actual</string>
     <string name="changelog_loading">Carregant…</string>
     <string name="label_download_url">URL de baixada</string>
     <string name="toast_download_url_copied">URL copiada</string>
@@ -67,6 +72,7 @@
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Reprèn</string>
     <string name="reboot">Reinicia</string>
+    <string name="details_button">Mostrar els detalls</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplica l\'actualització</string>
     <string name="apply_update_dialog_message">Estàs a punt d\'actualitzar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi prems <xliff:g id="ok">%2$s</xliff:g>, el dispositiu es reiniciarà en mode recuperació per instal·lar l\'actualització.\n\nNota: Aquesta funció requereix un «Recovery» compatible o les actualitzacions s\'hauran d\'instal·lar manualment.</string>

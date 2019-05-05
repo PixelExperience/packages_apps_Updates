@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Atsisiuntimas baigtas</string>
     <string name="download_starting_notification">Pradedamas atsiuntimas</string>
     <string name="update_failed_notification">Atnaujinti nepavyko</string>
+    <string name="installation_suspended_notification">Diegimas sustabdytas</string>
     <!-- Menu -->
     <string name="menu_refresh">Įkelti iš naujo</string>
     <string name="menu_preferences">Nuostatos</string>
@@ -42,6 +43,7 @@
     <string name="menu_delete_update">Pašalinti</string>
     <string name="menu_copy_url">Kopijuoti URL</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
+    <string name="menu_show_changelog">Dabartinės versijos pakeitimai</string>
     <string name="changelog_loading">Kraunasi…</string>
     <string name="label_download_url">Atsisiųsti URL</string>
     <string name="toast_download_url_copied">URL nukopijuotas</string>
@@ -70,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Ištrinti pasirinktą atnaujinimo failą?</string>
     <string name="pause_button">Pristabdyta</string>
     <string name="resume_button">Tęsti</string>
+    <string name="suspend_button">Sustabdyta</string>
     <string name="reboot">Perkrauti</string>
     <string name="details_button">Peržiūrėti informaciją</string>
     <!-- Installation -->
@@ -83,12 +86,25 @@
     <string name="preparing_ota_first_boot">Pasiruošiama pirmam įkrovimui</string>
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
+    <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas, jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos, kad tęstumėte, <xliff:g id="procentu_krovimas">%2$d</xliff:g>%%, jei įkraunama.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Eksportuoti naujinimą</string>
     <string name="notification_export_success">Atnaujinimas eksportuotas</string>
     <string name="notification_export_fail">Eksporto klaida</string>
     <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
     <!-- ETA -->
+    <plurals name="eta_minutes">
+        <item quantity="one">Liko 1min</item>
+        <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> min</item>
+        <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> min</item>
+        <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> min</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">Liko 1val</item>
+        <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> val</item>
+        <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> val</item>
+        <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> val</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Dėmesio</string>
     <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
