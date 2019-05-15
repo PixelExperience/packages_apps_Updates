@@ -29,6 +29,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.preference.PreferenceManager;
 
 import org.pixelexperience.ota.misc.Constants;
+import org.pixelexperience.ota.misc.Utils;
 
 public class UpdaterReceiver extends BroadcastReceiver {
 
@@ -91,6 +92,8 @@ public class UpdaterReceiver extends BroadcastReceiver {
                 pref.edit().putBoolean(Constants.PREF_INSTALL_NOTIFIED, true).apply();
                 showUpdateFailedNotification(context);
             }
+
+            Utils.cleanupDownloadsDir(context);
         }
     }
 }
