@@ -16,6 +16,7 @@
  */
 package org.pixelexperience.ota.misc;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -390,10 +391,17 @@ public class Utils {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     public static String readableFileSize(long size) {
-        if(size <= 0) return "0";
-        final String[] units = new String[] { "B", "kB", "MB", "GB", "TB" };
-        int digitGroups = (int) (Math.log10(size)/Math.log10(1024));
-        return new DecimalFormat("#,##0.#").format(size/Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+        String units[] = new String[]{"B", "kB", "MB", "GB", "TB", "PB"};
+        int mod = 1024;
+        double power = (size > 0) ? Math.floor(Math.log(size) / Math.log(mod)) : 0;
+        String unit = units[(int)power];
+        double result = size / Math.pow(mod, power);
+        if (unit.equals("B")|| unit.equals("kB") || unit.equals("MB")){
+            result = (int)result;
+            return String.format("%d %s", (int)result, unit);
+        }
+        return String.format("%01.2f %s", result, unit);
     }
 }
