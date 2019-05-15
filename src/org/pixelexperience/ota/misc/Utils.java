@@ -244,11 +244,6 @@ public class Utils {
             }
         }
 
-        final String DOWNLOADS_CLEANUP_DONE = "cleanup_done";
-        if (preferences.getBoolean(DOWNLOADS_CLEANUP_DONE, false)) {
-            return;
-        }
-
         Log.d(TAG, "Cleaning " + downloadPath);
         if (!downloadPath.isDirectory()) {
             return;
@@ -262,7 +257,9 @@ public class Utils {
         UpdatesDbHelper dbHelper = new UpdatesDbHelper(context);
         List<String> knownPaths = new ArrayList<>();
         for (UpdateInfo update : dbHelper.getUpdates()) {
-            knownPaths.add(update.getFile().getAbsolutePath());
+            if (isCompatible(update)){
+                knownPaths.add(update.getFile().getAbsolutePath());
+            }
         }
         for (File file : files) {
             if (!knownPaths.contains(file.getAbsolutePath())) {
@@ -270,8 +267,6 @@ public class Utils {
                 file.delete();
             }
         }
-
-        preferences.edit().putBoolean(DOWNLOADS_CLEANUP_DONE, true).apply();
     }
 
     public static File appendSequentialNumber(final File file) {
