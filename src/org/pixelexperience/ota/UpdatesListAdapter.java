@@ -438,11 +438,13 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         }
         UpdateInfo update = mUpdaterController.getUpdate(downloadId);
         int resId;
+        String extraMessage = "";
         try {
             if (Utils.isABUpdate(update.getFile())) {
                 resId = R.string.apply_update_dialog_message_ab;
             } else {
                 resId = R.string.apply_update_dialog_message;
+                extraMessage = " (" + Constants.DOWNLOAD_PATH + ")";
             }
         } catch (IOException e) {
             Log.e(TAG, "Could not determine the type of the update");
@@ -451,8 +453,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
         return new AlertDialog.Builder(mActivity)
                 .setTitle(R.string.apply_update_dialog_title)
-                .setMessage(mActivity.getString(resId, update.getName(),
-                        mActivity.getString(android.R.string.ok)))
+                .setMessage(mActivity.getString(resId,update.getName(),
+                        mActivity.getString(android.R.string.ok)) + extraMessage)
                 .setPositiveButton(android.R.string.ok,
                         (dialog, which) -> Utils.triggerUpdate(mActivity, downloadId))
                 .setNegativeButton(android.R.string.cancel, null);
