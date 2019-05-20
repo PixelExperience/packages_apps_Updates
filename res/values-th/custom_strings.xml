@@ -31,6 +31,7 @@
     <string name="download_completed_notification">ดาวน์โหลดเสร็จสมบูรณ์</string>
     <string name="download_starting_notification">เริ่มต้นดาวน์โหลด</string>
     <string name="update_failed_notification">การปรับปรุงล้มเหลว</string>
+    <string name="installation_suspended_notification">การติดตั้งถูกระงับ</string>
     <!-- Menu -->
     <string name="menu_refresh">โหลดใหม่</string>
     <string name="menu_preferences">การตั้งค่า</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">ลบไฟล์อัปเดตที่เลือกไว้หรือไม่?</string>
     <string name="pause_button">หยุดชั่วคราว</string>
     <string name="resume_button">ดำเนินการต่อ</string>
+    <string name="suspend_button">ระงับ</string>
     <string name="reboot">เริ่มระบบใหม่</string>
     <string name="details_button">แสดงรายละเอียด</string>
     <!-- Installation -->

@@ -77,22 +77,22 @@
     <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Applica aggiornamento</string>
-    <string name="apply_update_dialog_message">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe si preme <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità recovery per installare l\'aggiornamento automaticamente.\n\nNota: Questa funzione richiede una recovery compatibile, in caso contrario si dovrà procedere all\'installazione manualmente.</string>
+    <string name="apply_update_dialog_message">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe si preme <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una recovery compatibile, in caso contrario si dovrà procedere all\'installazione manuale.</string>
     <string name="apply_update_dialog_message_ab">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta completato verrà richiesto di riavviare il dispositivo.</string>
     <string name="cancel_installation_dialog_message">Annullare l\'installazione?</string>
     <string name="installing_update">Installazione del pacchetto aggiornamento</string>
     <string name="installing_update_error">Errore d\'installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
-    <string name="finalizing_package">Completamento dell\'installazione del pacchetto in corso</string>
+    <string name="finalizing_package">Finalizzalizzazione del pachetto d\'installazione in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
     <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Esportazione aggiornamento in corso</string>
+    <string name="dialog_export_title">Esportazione aggiornamento</string>
     <string name="notification_export_success">Aggiornamento esportato</string>
-    <string name="notification_export_fail">Errore nell\'esportazione</string>
-    <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
+    <string name="notification_export_fail">Errore esportazione</string>
+    <string name="toast_already_exporting">Esportazione aggiornamento già in corso</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 secondo rimanente</item>

@@ -71,6 +71,7 @@
     <string name="confirm_delete_dialog_message">Vymazať vybraný súbor aktualizácie?</string>
     <string name="pause_button">Pozastaviť</string>
     <string name="resume_button">Obnoviť</string>
+    <string name="suspend_button">Pozastavené</string>
     <string name="reboot">Reštartovať</string>
     <string name="details_button">Podrobnosti</string>
     <!-- Installation -->

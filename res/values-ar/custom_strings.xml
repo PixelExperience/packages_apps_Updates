@@ -31,6 +31,7 @@
     <string name="download_completed_notification">اكتمل التنزيل</string>
     <string name="download_starting_notification">بدء التنزيل</string>
     <string name="update_failed_notification">فشل التحديث</string>
+    <string name="installation_suspended_notification">تم تعليق التثبيت</string>
     <!-- Menu -->
     <string name="menu_refresh">تحديث</string>
     <string name="menu_preferences">التفضيلات</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">حف ملف التحديث المحدد؟</string>
     <string name="pause_button">إيقاف مؤقت</string>
     <string name="resume_button">استئناف</string>
+    <string name="suspend_button">تعليق</string>
     <string name="reboot">إعادة التشغيل</string>
     <string name="details_button">عرض التفاصيل</string>
     <!-- Installation -->
