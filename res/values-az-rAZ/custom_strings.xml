@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Endirmə başa çatdı</string>
     <string name="download_starting_notification">Endirmə başladılır</string>
     <string name="update_failed_notification">Yeniləmə uğursuz oldu</string>
+    <string name="installation_suspended_notification">Quraşdırma təxirə salındı</string>
     <!-- Menu -->
     <string name="menu_refresh">Təzələ</string>
     <string name="menu_preferences">Tənzimləmələr</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Seçilmiş yeniləmə faylı silinsin?</string>
     <string name="pause_button">Saxla</string>
     <string name="resume_button">Davam et</string>
+    <string name="suspend_button">Təxirə sal</string>
     <string name="reboot">Yenidən başlat</string>
     <string name="details_button">Detallara bax</string>
     <!-- Installation -->

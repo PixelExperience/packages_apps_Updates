@@ -72,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Seçilen güncelleme dosyası silinsin mi?</string>
     <string name="pause_button">Duraklat</string>
     <string name="resume_button">Sürdür</string>
+    <string name="suspend_button">Askıya al</string>
     <string name="reboot">Yeniden başlat</string>
     <string name="details_button">Ayrıntıları göster</string>
     <!-- Installation -->

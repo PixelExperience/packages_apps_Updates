@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Téléchargement terminé</string>
     <string name="download_starting_notification">Début du téléchargement</string>
     <string name="update_failed_notification">Échec de la mise à jour</string>
+    <string name="installation_suspended_notification">Installation interrompue</string>
     <!-- Menu -->
     <string name="menu_refresh">Actualiser</string>
     <string name="menu_preferences">Préférences</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Supprimer le fichier de mise à jour sélectionné\u00A0?</string>
     <string name="pause_button">Pause</string>
     <string name="resume_button">Reprendre</string>
+    <string name="suspend_button">Interrompre</string>
     <string name="reboot">Redémarrer</string>
     <string name="details_button">Voir les détails</string>
     <!-- Installation -->

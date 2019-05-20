@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Преузимање је завршено</string>
     <string name="download_starting_notification">Покретање преузимања</string>
     <string name="update_failed_notification">Неуспешно ажурирање</string>
+    <string name="installation_suspended_notification">Инсталација суспендована</string>
     <!-- Menu -->
     <string name="menu_refresh">Освежи</string>
     <string name="menu_preferences">Подешавања</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Избрисати изабрану датотеку за ажурирање?</string>
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Настави</string>
+    <string name="suspend_button">Суспендуј</string>
     <string name="reboot">Покрени поново</string>
     <string name="details_button">Прикажи детаље</string>
     <!-- Installation -->

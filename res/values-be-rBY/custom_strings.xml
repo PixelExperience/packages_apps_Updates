@@ -53,8 +53,15 @@
     <!-- Actions -->
     <string name="confirm_delete_dialog_title">Выдаліць файл</string>
     <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
+    <string name="resume_button">Працягнуць</string>
     <string name="suspend_button">Прыпынена</string>
+    <string name="reboot">Перазапуск</string>
+    <string name="details_button">Паказаць падрабязнасці</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Прымяніць абнаўленне</string>
+    <string name="apply_update_dialog_message">Будзе выканана абнаўленне да версіі <xliff:g id="update_name">%1$s</xliff:g>.\n\nПры націсканні кнопкі "<xliff:g id="ok">%2$s</xliff:g>\" прыладу перазагрузіцца ў рэжым аднаўлення для ўсталёўкі гэтага абнаўлення. \n\nЗаўвага: гэта функцыя патрабуе сумяшчальнага Recovery. У адваротным выпадку абнаўленне трэба будзе ўсталяваць уручную.</string>
+    <string name="apply_update_dialog_message_ab">Вы збіраецеся абнавіцца на <xliff:g id="update_name">%1$s</xliff:g>.\n\nКалі вы націсніце на <xliff:g id="ok">%2$s</xliff:g>, прылада пачне ўсталёўку ў фонавым рэжыме.\n\nПасля ўсталёўкі вам будзе прапанавана перазагрузіць прыладу.</string>
+    <string name="cancel_installation_dialog_message">Скасаваць усталёўку?</string>
     <!-- Export update -->
     <!-- ETA -->
     <!-- Mobile data warning -->

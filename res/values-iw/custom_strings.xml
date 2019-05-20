@@ -31,11 +31,15 @@
     <string name="download_completed_notification">ההורדה הושלמה</string>
     <string name="download_starting_notification">מתחיל להוריד</string>
     <string name="update_failed_notification">העדכון נכשל</string>
+    <string name="installation_suspended_notification">ההתקנה הושהתה</string>
     <!-- Menu -->
     <string name="menu_refresh">רענן</string>
     <string name="menu_preferences">העדפות</string>
     <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
     <string name="menu_auto_updates_check_interval_daily">פעם ביום</string>
+    <string name="menu_auto_updates_check_interval_weekly">פעם בשבוע</string>
+    <string name="menu_auto_updates_check_interval_monthly">פעם בחודש</string>
+    <string name="menu_auto_updates_check_interval_never">לעולם לא</string>
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
@@ -68,7 +72,9 @@
     <string name="confirm_delete_dialog_message">אתה עומד למחוק את הקובץ העדכון שנבחר, לחץ על \"כן\" להמשך.</string>
     <string name="pause_button">השהה</string>
     <string name="resume_button">המשך</string>
+    <string name="suspend_button">השהיה</string>
     <string name="reboot">הפעלה מחדש</string>
+    <string name="details_button">הצגת פרטים</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">החל עדכון</string>
     <string name="apply_update_dialog_message">אתה עומד לשדרג אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תבחר <xliff:g id="ok">%2$s</xliff:g>, המכשיר יופעל מחדש למצב שחזור (Recovery) להתקנת העדכון.\n\nשים לב: תכונה זו דורשת ריקוברי תואם או שהעדכון לא יותקן אוטומטית.</string>

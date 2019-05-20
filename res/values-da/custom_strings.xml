@@ -19,7 +19,13 @@
     <!-- App name -->
     <string name="app_name">Systemopdateringer</string>
     <!-- Notifications -->
+    <string name="new_updates_channel_title">Ny Opdatering</string>
+    <string name="ongoing_channel_title">Igangværende Downloads</string>
+    <string name="update_failed_channel_title">Opdatering mislykkedes</string>
+    <string name="downloading_notification">Henter</string>
+    <string name="download_paused_notification">Download sat på pause</string>
     <!-- Menu -->
+    <string name="menu_auto_updates_check_interval_never">Aldrig</string>
     <!-- General -->
     <string name="update_found_notification">Ny opdatering tilgængelig</string>
     <!-- Actions -->

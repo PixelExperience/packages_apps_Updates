@@ -77,6 +77,7 @@
     <string name="details_button">Peržiūrėti informaciją</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Patvirtinti atnaujinimą</string>
+    <string name="apply_update_dialog_message">Jūs ketinate atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf Jei paspausite <xliff:g id = "ok">%2$s </xliff:g>, įrenginys bus paleistas iš naujo atkūrimo režimu, kad įdiegtų naujinimą: \n\n Pastaba: Ši funkcija reikalauja suderinamo atkūrimo arba atnaujinimo.</string>
     <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nKai atnaujins, prietaisas persikraus automatiškai.</string>
     <string name="cancel_installation_dialog_message">Atšaukti diegimą?</string>
     <string name="installing_update">Diegiamas atnaujinimo paketas</string>
