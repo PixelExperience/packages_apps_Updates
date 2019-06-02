@@ -87,8 +87,8 @@
     <string name="preparing_ota_first_boot">Felkészülés az első indításra</string>
     <string name="dialog_prepare_zip_message">A frissítés előzetes előkészítése</string>
     <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
-    <string name="dialog_battery_low_message_pct">"Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
-illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges."</string>
+    <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
+illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <!-- Export update -->
     <string name="dialog_export_title">A frissítés exportálása</string>
     <string name="notification_export_success">A frissítés exportálva</string>

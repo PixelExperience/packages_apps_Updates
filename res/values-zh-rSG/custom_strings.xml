@@ -31,6 +31,7 @@
     <string name="download_completed_notification">下載完成</string>
     <string name="download_starting_notification">正在開始下載</string>
     <string name="update_failed_notification">更新失敗</string>
+    <string name="installation_suspended_notification">安裝已中斷</string>
     <!-- Menu -->
     <string name="menu_refresh">刷新</string>
     <string name="menu_preferences">使用偏好</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">刪除已選取的更新檔案？</string>
     <string name="pause_button">暫停</string>
     <string name="resume_button">恢復</string>
+    <string name="suspend_button">中斷</string>
     <string name="reboot">重新啟動</string>
     <string name="details_button">檢視詳細</string>
     <!-- Installation -->

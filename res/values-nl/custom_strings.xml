@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Downloaden voltooid</string>
     <string name="download_starting_notification">Download starten</string>
     <string name="update_failed_notification">Update mislukt</string>
+    <string name="installation_suspended_notification">Installatie gestaakt</string>
     <!-- Menu -->
     <string name="menu_refresh">Vernieuwen</string>
     <string name="menu_preferences">Instellingen</string>

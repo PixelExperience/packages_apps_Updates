@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Baixada completada</string>
     <string name="download_starting_notification">S\'està iniciant la baixada</string>
     <string name="update_failed_notification">Actualització fallida</string>
+    <string name="installation_suspended_notification">Instal·lació suspesa</string>
     <!-- Menu -->
     <string name="menu_refresh">Actualitza</string>
     <string name="menu_preferences">Preferències</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Voleu esborrar el fitxer d\'actualització seleccionat?</string>
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Reprèn</string>
+    <string name="suspend_button">Suspèn</string>
     <string name="reboot">Reinicia</string>
     <string name="details_button">Mostrar els detalls</string>
     <!-- Installation -->
