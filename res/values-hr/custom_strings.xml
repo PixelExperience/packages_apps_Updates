@@ -31,7 +31,7 @@
     <string name="download_completed_notification">Preuzimanje završeno</string>
     <string name="download_starting_notification">Početak preuzimanja</string>
     <string name="update_failed_notification">Ažuriranje neuspjelo</string>
-    <string name="installation_suspended_notification">Instalacija zaustavljena</string>
+    <string name="installation_suspended_notification">Instalacija obustavljena</string>
     <!-- Menu -->
     <string name="menu_refresh">Osvježi</string>
     <string name="menu_preferences">Preference</string>
@@ -72,7 +72,7 @@
     <string name="confirm_delete_dialog_message">Želite li izbrisati odabranu datoteku za ažuriranje?</string>
     <string name="pause_button">Pauziraj</string>
     <string name="resume_button">Nastavi</string>
-    <string name="suspend_button">Zaustavljeno</string>
+    <string name="suspend_button">Obustavljeno</string>
     <string name="reboot">Ponovno pokreni</string>
     <string name="details_button">Pogledaj detalje</string>
     <!-- Installation -->

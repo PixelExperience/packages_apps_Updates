@@ -17,50 +17,50 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">システム更新</string>
+    <string name="app_name">システムアップデート</string>
     <!-- Notifications -->
     <string name="export_channel_title">エクスポート完了</string>
-    <string name="new_updates_channel_title">新しい更新</string>
+    <string name="new_updates_channel_title">新しいアップデート</string>
     <string name="ongoing_channel_title">ダウンロード中</string>
-    <string name="update_failed_channel_title">更新に失敗しました</string>
+    <string name="update_failed_channel_title">アップデートに失敗しました</string>
     <string name="verification_failed_notification">検証に失敗しました</string>
-    <string name="verifying_download_notification">更新を検証中</string>
+    <string name="verifying_download_notification">アップデートを検証中</string>
     <string name="downloading_notification">ダウンロード中</string>
     <string name="download_paused_notification">ダウンロードを一時停止しました</string>
     <string name="download_paused_error_notification">ダウンロードエラー</string>
     <string name="download_completed_notification">ダウンロードが完了しました</string>
     <string name="download_starting_notification">ダウンロードを開始中</string>
-    <string name="update_failed_notification">更新に失敗しました</string>
+    <string name="update_failed_notification">アップデートに失敗しました</string>
     <string name="installation_suspended_notification">インストールは保留されました</string>
     <!-- Menu -->
-    <string name="menu_refresh">更新</string>
+    <string name="menu_refresh">再読込</string>
     <string name="menu_preferences">設定</string>
-    <string name="menu_auto_updates_check">更新の自動確認</string>
-    <string name="menu_auto_updates_check_interval_daily">1日に1回</string>
-    <string name="menu_auto_updates_check_interval_weekly">1週間に1回</string>
-    <string name="menu_auto_updates_check_interval_monthly">1か月に1回</string>
+    <string name="menu_auto_updates_check">アップデートの自動確認</string>
+    <string name="menu_auto_updates_check_interval_daily">毎日</string>
+    <string name="menu_auto_updates_check_interval_weekly">毎週</string>
+    <string name="menu_auto_updates_check_interval_monthly">毎月</string>
     <string name="menu_auto_updates_check_interval_never">なし</string>
     <string name="menu_delete_update">削除</string>
     <string name="menu_copy_url">URL のコピー</string>
-    <string name="menu_export_update">更新のエクスポート</string>
+    <string name="menu_export_update">アップデートのエクスポート</string>
     <string name="menu_show_changelog">現バージョンにおける変更点</string>
-    <string name="changelog_loading">読み込み中</string>
+    <string name="changelog_loading">読み込み中…</string>
     <string name="label_download_url">ダウンロード URL</string>
     <string name="toast_download_url_copied">URL をコピーしました</string>
     <!-- General -->
-    <string name="update_found_notification">新しい更新が利用可能です</string>
-    <string name="snack_no_updates_found">新しい更新はありません</string>
-    <string name="snack_updates_check_failed">更新を確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>
+    <string name="update_found_notification">新しいアップデートが利用可能です</string>
+    <string name="snack_no_updates_found">新しいアップデートはありません</string>
+    <string name="snack_updates_check_failed">アップデートを確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>
     <string name="snack_download_failed">ダウンロードに失敗しました。インターネット接続を確認して、もう一度やり直して下さい。</string>
-    <string name="snack_download_verification_failed">更新の検証に失敗しました</string>
+    <string name="snack_download_verification_failed">アップデートの検証に失敗しました</string>
     <string name="snack_download_verified">ダウンロード完了</string>
-    <string name="snack_update_not_installable">この更新は現在のビルドに上書きインストールできません</string>
-    <string name="text_download_speed">%1$s、%2$s/s</string>
+    <string name="snack_update_not_installable">このアップデートは現在のビルドに上書きインストールできません</string>
+    <string name="text_download_speed">%1$s, %2$s/秒</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">更新を確認</string>
-    <string name="list_no_updates">新しい更新はありません。新しい更新を手動で確認するには、更新ボタンを押して下さい。</string>
-    <string name="blocked_update_dialog_title">更新をブロックしました</string>
+    <string name="list_verifying_update">アップデートを確認</string>
+    <string name="list_no_updates">新しいアップデートはありません。新しいアップデートを手動で確認するには、更新ボタンを押して下さい。</string>
+    <string name="blocked_update_dialog_title">アップデートをブロックしました</string>
     <!-- Actions -->
     <string name="action_download">ダウンロード</string>
     <string name="action_pause">一時停止</string>
@@ -69,7 +69,7 @@
     <string name="action_delete">削除</string>
     <string name="action_cancel">キャンセル</string>
     <string name="confirm_delete_dialog_title">ファイルの削除</string>
-    <string name="confirm_delete_dialog_message">選択した更新ファイルを削除しますか?</string>
+    <string name="confirm_delete_dialog_message">選択したアップデートファイルを削除しますか?</string>
     <string name="pause_button">一時停止</string>
     <string name="resume_button">再開</string>
     <string name="suspend_button">保留</string>
@@ -77,22 +77,22 @@
     <string name="details_button">詳細を表示</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">更新を適用</string>
-    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>に更新しようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、更新をインストールするために端末をリカバリーモードでに再起動します。\n\n注意: この機能には対応したリカバリーが必要です。なければ手動でインストールする必要があります。</string>
-    <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> に更新しようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、バックグラウンドでインストールを開始します。\n\nインストールが完了したら、再起動を促すプロンプトが表示されます。</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、アップデートをインストールするために端末をリカバリーモードでに再起動します。\n\n注意: この機能には対応したリカバリーが必要です。なければ手動でインストールする必要があります。</string>
+    <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、バックグラウンドでインストールを開始します。\n\nインストールが完了したら、再起動を促すプロンプトが表示されます。</string>
     <string name="cancel_installation_dialog_message">インストールをキャンセルしますか？</string>
-    <string name="installing_update">更新パッケージをインストール中</string>
+    <string name="installing_update">アップデートパッケージをインストール中</string>
     <string name="installing_update_error">インストールエラー</string>
-    <string name="installing_update_finished">更新のインストール完了</string>
+    <string name="installing_update_finished">アップデートのインストール完了</string>
     <string name="finalizing_package">パッケージのインストールを完了中</string>
     <string name="preparing_ota_first_boot">初回起動を準備中</string>
-    <string name="dialog_prepare_zip_message">予備の更新準備</string>
-    <string name="dialog_battery_low_title">バッテリー残量少</string>
+    <string name="dialog_prepare_zip_message">予備のアップデート準備</string>
+    <string name="dialog_battery_low_title">バッテリー残量低下</string>
     <string name="dialog_battery_low_message_pct">バッテリー残量が不足しています。続行するには<xliff:g id="percent_discharging">%1$d</xliff:g>%%、充電時は<xliff:g id="percent_charging">%2$d</xliff:g>%%のバッテリー残量が必要です。</string>
     <!-- Export update -->
-    <string name="dialog_export_title">更新のエクスポート中</string>
-    <string name="notification_export_success">更新のエクスポート</string>
+    <string name="dialog_export_title">アップデートのエクスポート中</string>
+    <string name="notification_export_success">アップデートのエクスポート</string>
     <string name="notification_export_fail">エラー出力</string>
-    <string name="toast_already_exporting">既に更新をエクスポートしています</string>
+    <string name="toast_already_exporting">既にアップデートをエクスポートしています</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">残り<xliff:g id="count">%d</xliff:g>秒</item>
@@ -105,7 +105,7 @@
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">警告</string>
-    <string name="update_on_mobile_data_message">モバイルデータ通信で更新プログラムをダウンロードするとデータ使用量が増加する可能性があります。続行しますか?</string>
+    <string name="update_on_mobile_data_message">モバイルデータ通信でアップデートプログラムをダウンロードするとデータ使用量が増加する可能性があります。続行しますか?</string>
     <string name="checkbox_mobile_data_warning">再び表示しない</string>
     <string name="menu_mobile_data_warning">モバイルデータの警告</string>
     <!-- Info section -->

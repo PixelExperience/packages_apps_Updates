@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">Systeemupdates</string>
+    <string name="app_name">Systeem updates</string>
     <!-- Notifications -->
     <string name="export_channel_title">Exporteren voltooid</string>
     <string name="new_updates_channel_title">Nieuwe updates</string>
@@ -43,6 +43,7 @@
     <string name="menu_delete_update">Verwijderen</string>
     <string name="menu_copy_url">URL kopiëren</string>
     <string name="menu_export_update">Update exporteren</string>
+    <string name="menu_show_changelog">Wijzingingen in huidige versie</string>
     <string name="changelog_loading">Bezig met laden…</string>
     <string name="label_download_url">Download-URL</string>
     <string name="toast_download_url_copied">URL gekopieerd</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">Weet u zeker dat u het gedownloade updatebestand wilt verwijderen?</string>
     <string name="pause_button">Pauzeren</string>
     <string name="resume_button">Hervatten</string>
+    <string name="suspend_button">Onderbreken</string>
     <string name="reboot">Herstarten</string>
     <string name="details_button">Details weergeven</string>
     <!-- Installation -->

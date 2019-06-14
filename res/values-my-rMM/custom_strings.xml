@@ -17,13 +17,94 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">စနစ်အားတိုးမြင့်ခြင်း</string>
     <!-- Notifications -->
+    <string name="export_channel_title">ပြင်ပသို့ ဖိုင်ထုတ်ကူးယူခြင်း ပြီးဆုံးသည်</string>
+    <string name="new_updates_channel_title">စနစ်တိုးမြှင့်မှု အသစ်များ</string>
+    <string name="ongoing_channel_title">ဆက်လက်ဒေါင်းနေဆဲ ဒေါင်းလုဒ်များ</string>
+    <string name="update_failed_channel_title">အဆင့်မြင့်တင်ခြင်း မအောင်မြင်ပါ</string>
+    <string name="verification_failed_notification">မှန်ကန်ကြောင်း စစ်ဆေးခြင်း မအောင်မြင်ပါ</string>
+    <string name="verifying_download_notification">အဆင့်မြှင့်တင်မှုအတွက် မှန်ကန်ကြောင်း စစ်ဆေးခြင်း</string>
+    <string name="downloading_notification">‌ဒေါင်းလုဒ်ဆွဲနေသည်</string>
+    <string name="download_paused_notification">ဒေါင်းလုဒ်ဆွဲခြင်း ရပ်တန့်သွားသည်</string>
+    <string name="download_paused_error_notification">ဒေါင်းလုဒ်ဆွဲရာတွင် ချို့ယွင်းမှု ဖြစ်သွားသည်</string>
+    <string name="download_completed_notification">‌ဒေါင်းလုဒ်ဆွဲခြင်း ပြီးဆုံးသည်</string>
+    <string name="download_starting_notification">ဒေါင်းလုဒ်ဆွဲခြင်း စတင်နေသည်</string>
+    <string name="update_failed_notification">အဆင့်မြင့်တင်ခြင်း မအောင်မြင်ပါ</string>
+    <string name="installation_suspended_notification">ထည့်သွင်းခြင်း ခေတ္တရပ်ဆိုင်းသွားသည်</string>
     <!-- Menu -->
+    <string name="menu_refresh">အသစ်ပြန်လည်ပြရန်</string>
+    <string name="menu_preferences">ချိန်ညှိမှုများ</string>
+    <string name="menu_auto_updates_check">အဆင့်မြှင့်တင်မှုများအား အလိုအလျောက်စစ်ဆေးခြင်း</string>
+    <string name="menu_auto_updates_check_interval_daily">တနေ့တခါ</string>
+    <string name="menu_auto_updates_check_interval_weekly">တပတ်တခါ</string>
+    <string name="menu_auto_updates_check_interval_monthly">တလ တခါ</string>
+    <string name="menu_auto_updates_check_interval_never">မစစ်ဆေးပါ။</string>
+    <string name="menu_delete_update">ဖျက်ရန်</string>
+    <string name="menu_copy_url">URL ကို ကူးရန်</string>
+    <string name="menu_export_update">အဆင့်မြင့်တင်မှုဖိုင်အား ပြင်ပသို့ ဖိုင်ထုတ်မည်</string>
+    <string name="menu_show_changelog">ယခုဗားရှင်းတွင် ပြောင်းလဲမှုများ</string>
+    <string name="changelog_loading">တင်နေပါသည်…</string>
+    <string name="label_download_url">URL ကို ‌ဒေါင်းလုဒ်ဆွဲရန်</string>
+    <string name="toast_download_url_copied">URL ကို ကူးယူပြီးပါပြီ</string>
     <!-- General -->
+    <string name="update_found_notification">အဆင့်မြှင့်တင်မှုအသစ် ရရှိနိုင်ပါပြီ</string>
+    <string name="snack_no_updates_found">အဆင့်မြှင့်တင်မှုအသစ်များအား မတွေ့ရှိပါ</string>
+    <string name="snack_updates_check_failed">အဆင့်မြှင့်တင်မှု စစ်ဆေးခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး နောက်တခေါက် ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
+    <string name="snack_download_failed">‌ဒေါင်းလုဒ်ဆွဲခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
+    <string name="snack_download_verification_failed">အဆင့်မြှင့်တင်မှု စစ်ဆေးခြင်း မအောင်မြင်ပါ။</string>
+    <string name="snack_download_verified">‌ဒေါင်းလုဒ်ဆွဲခြင်း ပြီးဆုံးသည်</string>
+    <string name="snack_update_not_installable">ယခုတည်ဆောက်ထားသည့် OS ပေါ်တွင် အဆင့်မြှင့်တင်မှုကို ထည့်သွင်း၍ မရပါ။</string>
+    <string name="text_download_speed">%1$s, %2$s/စက္ကန့်</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ၏ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ၏ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">အဆင့်မြှင့်တင်မှုအတွက် မှန်ကန်ကြောင်း စစ်ဆေးခြင်း</string>
+    <string name="list_no_updates">အဆင့်မြှင့်တင်မှုများ ရှာမတွေ့ပါ။ အဆင့်မြှင့်တင်မှုအသစ်များ စစ်ဆေးရန် Refresh ခလုတ်ကို အသုံးပြုပါ။</string>
+    <string name="blocked_update_dialog_title">အဆင့်မြှင့်တင်မှု ပိတ်ဆို့ထားပါသည်။</string>
     <!-- Actions -->
+    <string name="action_download">ဒေါင်းလုဒ်</string>
+    <string name="action_pause">ခေတ္တရပ်</string>
+    <string name="action_resume">ပြန်လည်စတင်မည်</string>
+    <string name="action_install">ထည့်သွင်းရန်</string>
+    <string name="action_delete">ဖျက်ရန်</string>
+    <string name="action_cancel">ပယ်ဖျက်ရန်</string>
+    <string name="confirm_delete_dialog_title">ဖိုင်ကို ဖျက်မလား</string>
+    <string name="confirm_delete_dialog_message">ရွေးချယ်ထားသည့် အဆင့်မြှင့်တင်မှုဖိုင်ကို ဖျက်မလား</string>
+    <string name="pause_button">ရပ်တန့်ပါ</string>
+    <string name="resume_button">ပြန်လည်စတင်မည်</string>
+    <string name="suspend_button">ခေတ္တဆိုင်းငံ့ထားရန်</string>
+    <string name="reboot">ပြန်လည်စတင်မည်</string>
+    <string name="details_button">အသေးစိတ်ကြည့်ရန်</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">အဆင့်မြှင့်တင်မှု ပြုလုပ်ရန်</string>
+    <string name="cancel_installation_dialog_message">သွင်းခြင်းကို ပယ်ဖျက်မလား?</string>
+    <string name="preparing_ota_first_boot">ကနဦး စနစ်စတင်မှုအတွက် ပြင်ဆင်နေပါသည် . . .</string>
+    <string name="dialog_battery_low_title">ဖုန်းအား နည်းနေပါပြီ။</string>
     <!-- Export update -->
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="other">၁ စက္ကန့်သာ ကျန်ပါသည်။
+<xliff:g id="count">%d</xliff:g> စက္ကန့်သာ ကျန်ပါသည်။</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="other">၁ မိနစ်သာ ကျန်ပါသည်။
+<xliff:g id="count">%d</xliff:g> မိနစ်သာ ကျန်ပါသည်။</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="other">၁ နာရီသာ ကျန်ပါသည်။
+<xliff:g id="count">%d</xliff:g> နာရီသာ ကျန်ပါသည်။</item>
+    </plurals>
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">သတိပြုရန်</string>
+    <string name="checkbox_mobile_data_warning">ထပ်မပြပါနှင့်</string>
+    <string name="menu_mobile_data_warning">မိုဘိုင်းဒေတာ သတိပေးချက်</string>
     <!-- Info section -->
+    <string name="extras_category_title">အပိုဆောင်းများ</string>
+    <string name="maintainer_info_title">ပြုပြင်ပေးသူ</string>
+    <string name="donate_info_title">လှူရန်</string>
+    <string name="donate_info_summary">တိုးတက်တီတွင်မှုအတွက် ပံ့ပိုးပါ</string>
+    <string name="website_info_title">ဝဘ်ဆိုက်</string>
+    <string name="website_info_summary">ကျွန်ုပ်တို့၏ ၀ဘ်ဆိုဒ်ကို ကြည့်ရှူရန်</string>
+    <string name="news_info_title">သတင်းများ</string>
+    <string name="forum_info_title">ဖိုရမ်</string>
 </resources>

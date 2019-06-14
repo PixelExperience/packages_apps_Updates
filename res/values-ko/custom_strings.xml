@@ -29,9 +29,9 @@
     <string name="download_paused_notification">다운로드 일시 중지됨</string>
     <string name="download_paused_error_notification">다운로드 오류</string>
     <string name="download_completed_notification">다운로드 완료</string>
-    <string name="download_starting_notification">다운로드 시작</string>
+    <string name="download_starting_notification">다운로드 시작 중</string>
     <string name="update_failed_notification">업데이트 실패</string>
-    <string name="installation_suspended_notification">설치가 지연되었습니다.</string>
+    <string name="installation_suspended_notification">설치가 지연됨</string>
     <!-- Menu -->
     <string name="menu_refresh">새로고침</string>
     <string name="menu_preferences">설정</string>
@@ -48,7 +48,7 @@
     <string name="label_download_url">다운로드 URL</string>
     <string name="toast_download_url_copied">URL 복사됨</string>
     <!-- General -->
-    <string name="update_found_notification">새 업데이트가 있음</string>
+    <string name="update_found_notification">새로운 업데이트 사용 가능</string>
     <string name="snack_no_updates_found">새로운 업데이트 없음</string>
     <string name="snack_updates_check_failed">업데이트 확인에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.</string>
     <string name="snack_download_failed">다운로드에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.</string>
@@ -56,8 +56,8 @@
     <string name="snack_download_verified">다운로드가 완료되었습니다.</string>
     <string name="snack_update_not_installable">현재 빌드에서는 이 업데이트를 설치할 수 없습니다.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">업데이트 검증 중</string>
     <string name="list_no_updates">새로운 업데이트가 없습니다. 수동으로 새 업데이트를 확인하려면 새로고침 버튼을 누르세요.</string>
     <string name="blocked_update_dialog_title">업데이트 차단됨</string>
@@ -77,8 +77,8 @@
     <string name="details_button">자세히 보기</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">업데이트 적용</string>
-    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> 버전으로 업그레이드를 시도하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 업데이트를 설치하기 위해 기기가 리커버리 모드로 다시 시작됩니다.\n\n주의: 이 기능은 호환되는 리커버리가 필요하며, 없을 경우 업데이트를 수동으로 설치해야 합니다.</string>
-    <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> 버전으로 업그레이드를 시도하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 백그라운드에서 이 업데이트를 설치합니다.\n\n설치가 완료되면 기기를 다시 시작할 것인지 묻는 대화 상자가 나타납니다.</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>(으)로 업그레이드를 시도하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 업데이트를 설치하기 위해 기기가 복구 모드로 다시 시작됩니다.\n\n주의: 이 기능은 호환되는 리커버리가 필요하며, 없을 경우 업데이트를 수동으로 설치해야 합니다.</string>
+    <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g>(으)로 업그레이드를 시도하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면 백그라운드에서 설치를 시작합니다.\n\n설치가 완료되면 기기를 다시 시작할 것인지 묻는 대화 상자가 나타납니다.</string>
     <string name="cancel_installation_dialog_message">설치를 취소하시겠습니까?</string>
     <string name="installing_update">업데이트 패키지 설치 중</string>
     <string name="installing_update_error">설치 오류</string>
@@ -87,7 +87,7 @@
     <string name="preparing_ota_first_boot">첫 번째 부팅 준비 중</string>
     <string name="dialog_prepare_zip_message">예비 업데이트 준비</string>
     <string name="dialog_battery_low_title">배터리 부족</string>
-    <string name="dialog_battery_low_message_pct">배터리 수준이 너무 낮습니다. 계속하려면 방전 중일 경우 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 이상, 충전 중일 경우 <xliff:g id="percent_charging">%2$d</xliff:g>%% 이상의 배터리 수준이 필요합니다.</string>
+    <string name="dialog_battery_low_message_pct">배터리 수준이 너무 낮습니다. 계속하려면 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 이상, 충전 중일 경우 <xliff:g id="percent_charging">%2$d</xliff:g>%% 이상의 배터리 수준이 필요합니다.</string>
     <!-- Export update -->
     <string name="dialog_export_title">업데이트 내보내는 중</string>
     <string name="notification_export_success">업데이트를 내보냈습니다.</string>
