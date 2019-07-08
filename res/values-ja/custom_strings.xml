@@ -35,7 +35,7 @@
     <!-- Menu -->
     <string name="menu_refresh">再読込</string>
     <string name="menu_preferences">設定</string>
-    <string name="menu_auto_updates_check">アップデートの自動確認</string>
+    <string name="menu_auto_updates_check">自動確認</string>
     <string name="menu_auto_updates_check_interval_daily">毎日</string>
     <string name="menu_auto_updates_check_interval_weekly">毎週</string>
     <string name="menu_auto_updates_check_interval_monthly">毎月</string>
@@ -76,7 +76,7 @@
     <string name="reboot">再起動</string>
     <string name="details_button">詳細を表示</string>
     <!-- Installation -->
-    <string name="apply_update_dialog_title">更新を適用</string>
+    <string name="apply_update_dialog_title">アップデートを適用</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、アップデートをインストールするために端末をリカバリーモードでに再起動します。\n\n注意: この機能には対応したリカバリーが必要です。なければ手動でインストールする必要があります。</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、バックグラウンドでインストールを開始します。\n\nインストールが完了したら、再起動を促すプロンプトが表示されます。</string>
     <string name="cancel_installation_dialog_message">インストールをキャンセルしますか？</string>
@@ -114,10 +114,10 @@
     <string name="donate_info_title">寄付</string>
     <string name="donate_info_summary">開発を支援する</string>
     <string name="website_info_title">ウェブサイト</string>
-    <string name="website_info_summary">ウェブサイトを表示</string>
+    <string name="website_info_summary">ウェブサイトを表示する</string>
     <string name="news_info_title">ニュース</string>
-    <string name="news_info_summary">更新やその他のニュースを入手する</string>
+    <string name="news_info_summary">アップデートやその他のニュースを入手する</string>
     <string name="forum_info_title">フォーラム</string>
-    <string name="forum_info_summary">フォーラムの記事を表示</string>
+    <string name="forum_info_summary">フォーラムの記事を表示する</string>
     <string name="error_open_url">ブラウザで URL を開くのに失敗しました</string>
 </resources>

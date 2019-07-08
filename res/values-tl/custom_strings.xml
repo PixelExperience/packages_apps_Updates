@@ -19,12 +19,24 @@
     <!-- App name -->
     <string name="app_name">Mga update para sa system</string>
     <!-- Notifications -->
+    <string name="download_starting_notification">Nagsimula ng mag download</string>
     <!-- Menu -->
+    <string name="menu_auto_updates_check_interval_daily">Isang beses sa isang araw</string>
+    <string name="menu_auto_updates_check_interval_weekly">Isang beses sa isang linggo</string>
+    <string name="menu_auto_updates_check_interval_monthly">Isang beses sa isang buwan</string>
+    <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
+    <string name="label_download_url">I-download ang URL</string>
+    <string name="toast_download_url_copied">Nakopya ang URL</string>
     <!-- General -->
     <string name="update_found_notification">Mayroong bagong update</string>
+    <string name="snack_download_failed">Nabigo sa pag download. Pakiusap na tignan ang iyong internet koneksyon at subukan muli mamaya.</string>
+    <string name="snack_download_verification_failed">Ang update verification ay nabigo.</string>
+    <string name="snack_update_not_installable">Itong update ay hindi maaring ma install sa kasalukuyang build.</string>
+    <string name="list_no_updates">Walang bagong updates na natagpuan. Para makita kung may bagong updates, gamitin ang Refresh button.</string>
     <!-- Actions -->
     <string name="confirm_delete_dialog_title">Burahin ang file</string>
     <!-- Installation -->
+    <string name="dialog_battery_low_message_pct">Ang level ng baterya ay mababa na, kailangan mo kahit <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya para makapag patuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagkakarga.</string>
     <!-- Export update -->
     <!-- ETA -->
     <!-- Mobile data warning -->

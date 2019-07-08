@@ -43,7 +43,7 @@
     <string name="menu_delete_update">删除</string>
     <string name="menu_copy_url">复制网址</string>
     <string name="menu_export_update">导出更新</string>
-    <string name="menu_show_changelog">当前版本的变化</string>
+    <string name="menu_show_changelog">新版特性</string>
     <string name="changelog_loading">载入中...</string>
     <string name="label_download_url">下载地址</string>
     <string name="toast_download_url_copied">地址已复制</string>

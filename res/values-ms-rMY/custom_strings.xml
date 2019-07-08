@@ -19,16 +19,78 @@
     <!-- App name -->
     <string name="app_name">Kemaskini sistem</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Penyelesaian eksport</string>
+    <string name="new_updates_channel_title">Kemaskini baru</string>
+    <string name="ongoing_channel_title">Muat turun sedang berlaku</string>
+    <string name="update_failed_channel_title">Kemas kini gagal</string>
+    <string name="verification_failed_notification">Pengesahan gagal</string>
+    <string name="verifying_download_notification">Mengesahkan kemas kini</string>
+    <string name="downloading_notification">Sedang memuat turun</string>
+    <string name="download_paused_notification">Muat turun dijeda</string>
+    <string name="download_paused_error_notification">Ralat muat turun</string>
+    <string name="download_completed_notification">Muat turun selesai</string>
+    <string name="download_starting_notification">Memulakan muat turun</string>
+    <string name="update_failed_notification">Kemas kini gagal</string>
+    <string name="installation_suspended_notification">Pemasangan tergantung</string>
     <!-- Menu -->
     <string name="menu_refresh">Muat Semula</string>
+    <string name="menu_preferences">Pilihan</string>
+    <string name="menu_auto_updates_check">Semakan kemas kini auto</string>
+    <string name="menu_auto_updates_check_interval_daily">Sekali sehari</string>
+    <string name="menu_auto_updates_check_interval_weekly">Sekali seminggu</string>
+    <string name="menu_auto_updates_check_interval_monthly">Sekali sebulan</string>
+    <string name="menu_auto_updates_check_interval_never">Tidak akan</string>
+    <string name="menu_delete_update">Padam</string>
+    <string name="menu_copy_url">Salin URL</string>
+    <string name="menu_export_update">Eksport kemas kini</string>
+    <string name="menu_show_changelog">Perubahan dalam versi ini</string>
     <string name="changelog_loading">Memuatkan…</string>
+    <string name="label_download_url">Muat turun URL</string>
+    <string name="toast_download_url_copied">URL Disalin</string>
     <!-- General -->
     <string name="update_found_notification">Ada kemaskini terbaru</string>
+    <string name="snack_no_updates_found">Tiada kemas kini baru dijumpai</string>
+    <string name="snack_updates_check_failed">Semakan kemas kini gagal. Sila periksa sambungan internet anda dan cuba lagi kemudian.</string>
+    <string name="snack_download_failed">Muat turun gagal. Sila periksa sambungan internet anda dan cuba lagi kemudian.</string>
+    <string name="snack_download_verification_failed">Pengesahan kemas kini gagal.</string>
+    <string name="snack_download_verified">Muat turun selesai.</string>
+    <string name="snack_update_not_installable">Kemas kini ini tidak boleh dipasang bersama binaan ini.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Mengesahkan kemas kini</string>
+    <string name="list_no_updates">Tiada kemas kini baru dijumpai. Untuk menyemak kemaskini secara manual, tekan butang Segar Semula.</string>
+    <string name="blocked_update_dialog_title">Kemas kini disekat</string>
     <!-- Actions -->
+    <string name="action_download">Muat turun</string>
+    <string name="action_pause">Jeda</string>
+    <string name="action_resume">Teruskan</string>
+    <string name="action_install">Pasang</string>
+    <string name="action_delete">Padam</string>
+    <string name="action_cancel">Batal</string>
     <string name="confirm_delete_dialog_title">Padam fail</string>
     <string name="confirm_delete_dialog_message">Padam fail kemaskini yang telah dipilih?</string>
+    <string name="pause_button">Jeda</string>
+    <string name="resume_button">Teruskan</string>
+    <string name="suspend_button">Gantung</string>
+    <string name="reboot">Boot semula</string>
+    <string name="details_button">Lihat butiran</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Tetapkan kemaskini</string>
+    <string name="apply_update_dialog_message">Anda akan menaik taraf kepada <xliff:g id="update_name">%1$s</xliff:g>.\n\nJika anda tekan <xliff:g id="ok">%2$s</xliff:g>, peranti akan hidup semula sendiri dalam mod pemulihan untuk memasang kemas kini tersebut.\n\nNota: Ciri ini memerlukan Pemulihan yang serasi atau kemas kini perlu dipasang secara manual.</string>
+    <string name="apply_update_dialog_message_ab">Anda akan menaik taraf kepada <xliff:g id="update_name">%1$s</xliff:g>.\n\nJika anda tekan <xliff:g id="ok">%2$s</xliff:g>, peranti akan memulakan pemasangan.\n\nSesudah selesai, anda akan diminta untuk but semula.</string>
+    <string name="cancel_installation_dialog_message">Batalkan pemasangan?</string>
+    <string name="installing_update">Memasang pakej kemas kini</string>
+    <string name="installing_update_error">Ralat pemasangan</string>
+    <string name="installing_update_finished">Kemas kini dipasang</string>
+    <string name="finalizing_package">Mengakhiri pemasangan pakej</string>
+    <string name="dialog_prepare_zip_message">Persediaan awal kemas kini</string>
+    <string name="dialog_battery_low_title">Bateri lemah</string>
+    <string name="dialog_battery_low_message_pct">Paras bateri terlalu lemah, anda perlu sekurang-kurangnya <xliff:g id="percent_discharging">%1$d</xliff:g>%% bateri untuk teruskan, <xliff:g id="percent_charging">%2$d</xliff:g>%% jika sedang mengecas.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Mengeksport kemas kini</string>
+    <string name="notification_export_success">Kemas kini telah dieksport</string>
+    <string name="notification_export_fail">Ralat eksport</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Amaran</string>
@@ -38,7 +100,7 @@
     <string name="extras_category_title">Tambahan</string>
     <string name="maintainer_info_title">Penyelenggara</string>
     <string name="donate_info_title">Menyumbang</string>
-    <string name="donate_info_summary">Sokongan pembangunan</string>
+    <string name="donate_info_summary">Sokong pembangunan</string>
     <string name="website_info_title">Laman sesawang</string>
     <string name="website_info_summary">Kunjungi laman sesawang kami</string>
     <string name="news_info_title">Berita</string>

@@ -29,16 +29,17 @@
     <string name="download_paused_notification">Descarga en pausa</string>
     <string name="download_paused_error_notification">Erro na descarga</string>
     <string name="download_completed_notification">Descarga completada</string>
-    <string name="download_starting_notification">Iniciando descarga</string>
+    <string name="download_starting_notification">Comezando a descarga</string>
     <string name="update_failed_notification">Erro ao actualizar</string>
+    <string name="installation_suspended_notification">Instalación suspensa</string>
     <!-- Menu -->
     <string name="menu_refresh">Actualizar</string>
     <string name="menu_preferences">Preferencias</string>
-    <string name="menu_auto_updates_check">Buscar actualizacións automaticamente</string>
-    <string name="menu_auto_updates_check_interval_daily">Unha vez o día</string>
-    <string name="menu_auto_updates_check_interval_weekly">Unha vez á sema</string>
+    <string name="menu_auto_updates_check">Buscar actualizacións de xeito automático</string>
+    <string name="menu_auto_updates_check_interval_daily">Unha vez ao día</string>
+    <string name="menu_auto_updates_check_interval_weekly">Unha vez á semán</string>
     <string name="menu_auto_updates_check_interval_monthly">Unha vez o mes</string>
-    <string name="menu_auto_updates_check_interval_never">Nunca</string>
+    <string name="menu_auto_updates_check_interval_never">Endexamais</string>
     <string name="menu_delete_update">Eliminar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
@@ -71,6 +72,7 @@
     <string name="confirm_delete_dialog_message">¿Eliminar o ficheiro de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Continuar</string>
+    <string name="suspend_button">Suspender</string>
     <string name="reboot">Reiniciar</string>
     <string name="details_button">Ver detalles</string>
     <!-- Installation -->

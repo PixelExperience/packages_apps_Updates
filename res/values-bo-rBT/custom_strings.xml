@@ -19,21 +19,95 @@
     <!-- App name -->
     <string name="app_name">བརྒྱུད་ཁུངས་གསར་བསྒྱུར།</string>
     <!-- Notifications -->
+    <string name="export_channel_title">དྲངས་ཕྱུང་ལེགས་གྲུབ་ཟིན་པ།</string>
+    <string name="new_updates_channel_title">གསར་བསྒྱུར་གསར་ཤོས།</string>
+    <string name="ongoing_channel_title">ཕབ་ལེན་བྱེད་བཞིན་པ།</string>
+    <string name="update_failed_channel_title">གསར་བསྒྱུར་བྱེད་མ་ཐུབ་པ།</string>
+    <string name="verification_failed_notification">ར་སྤྲོད་ཕམ་ཉེས་བྱུང་བ།</string>
+    <string name="verifying_download_notification">གསར་བསྒྱུར་ལ་ར་སྤྲོད་ཞིབ་བཤེར་བྱེད་བཞིན་པ།</string>
+    <string name="downloading_notification">ཕབ་ལེན་བྱེད་བཞིན་པ།</string>
+    <string name="download_paused_notification">ཕབ་ལེན་མཚམས་བཞག་པ།</string>
+    <string name="download_paused_error_notification">ཕབ་ལེན་ལ་ནོར་འཁྲུལ་བྱུང་བ།</string>
+    <string name="download_completed_notification">ཕབ་ལེན་ལེགས་གྲུབ་བྱུང་བ།</string>
+    <string name="download_starting_notification">ཕབ་ལེན་མགོ་རྩོམ་བཞིན་པ།</string>
+    <string name="update_failed_notification">གསར་བསྒྱུར་བྱེད་མ་ཐུབ། </string>
+    <string name="installation_suspended_notification">ནང་འཇུག་སྐབས་སྡོད་བྱས་ཟིན། </string>
     <!-- Menu -->
     <string name="menu_refresh">བའྐྱར་འཇུག་བྱ།</string>
+    <string name="menu_preferences">གཏོའི་གདམ་ཚན།</string>
+    <string name="menu_auto_updates_check">རང་འགུལ་གྱིས་ཐོན་རིམ་ལ་ཞིབ་བཤེར་བྱེད་པ།</string>
+    <string name="menu_auto_updates_check_interval_daily">ཉིན་རེར་ཐེངས་རེ།</string>
+    <string name="menu_auto_updates_check_interval_weekly">གཟའ་རེར་ཐེངས་རེ།</string>
+    <string name="menu_auto_updates_check_interval_monthly">ཟླ་རེར་ཐེངས་རེ།</string>
+    <string name="menu_auto_updates_check_interval_never">གཏན་དུ་མི་བྱེད།</string>
+    <string name="menu_delete_update">བསུབ་པ།</string>
+    <string name="menu_copy_url">དྲ་ཚིགས་ཀྱི་ས་གནས་བསྐྱར་བཤུ།</string>
+    <string name="menu_export_update">གསར་བསྒྱུར་ཕྱིར་གཏོང་བྱེད་པ།</string>
+    <string name="menu_show_changelog">ཐོན་རིམ་གསར་བའི་ཁྱད་གཤིས།</string>
     <string name="changelog_loading">ནང་འཇུག་བྱེད་བཞིན་ཡོོད།</string>
+    <string name="label_download_url">ཕབ་ལེན་ས་གནས།</string>
+    <string name="toast_download_url_copied">ས་གནས་བསྐྱར་བཤུས་བྱས་ཟིན།</string>
     <!-- General -->
     <string name="update_found_notification">སྤྱོད་རུང་བའི་གསར་བསྒྱུར་འདུག</string>
+    <string name="snack_no_updates_found">ཐོན་རིམ་གསར་བ་མི་འདུག</string>
+    <string name="snack_updates_check_failed">ཐོན་རིམ་གསར་བར་ཞིབ་བཤེར་བྱེད་མ་ཐུབ།   ཉིད་ཀྱི་དྲ་རྒྱའི་སྦྲེལ་མཐུད་ཀྱི་གནས་ཚུལ་ལ་གཟིགས་རོགས། </string>
+    <string name="snack_download_failed">ཕབ་ལེན་བྱེད་མ་ཐུབ།  ཉིད་ཀྱིས་དྲ་རྒྱར་ཞིབ་བཤེར་བྱ་རོགས།</string>
+    <string name="snack_download_verification_failed">གསར་བསྒྱུར་ལ་ཞིབ་བཤེར་དང་ར་སྤྲོད་བྱེད་མ་ཐུབ།</string>
+    <string name="snack_download_verified">ཕབ་ལེན་བྱས་ཚར་བ།</string>
+    <string name="snack_update_not_installable">ད་སྐབས་ཀྱི་ཐོན་རིམ་སྟེང་གསར་བསྒྱུར་ནང་འཇུག་བྱེད་མི་ཐུབ།</string>
+    <string name="text_download_speed">%1$s, %2$s/སྐར་ཆ།</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ཡི <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ཡི <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">གསར་བསྒྱུར་ལ་ཞིབ་བཤེར་བྱེད་བཞིན་ཡོད།</string>
+    <string name="list_no_updates">གསར་བསྒྱུར་རྙེད་མ་བྱུང་།  ལག་འགུལ་གྱིས་འཚོལ་རོགས།</string>
+    <string name="blocked_update_dialog_title">གསར་བསྒྱུར་བཀག་འགོག་བྱས་ཟིན།</string>
     <!-- Actions -->
+    <string name="action_download">ཕབ་ལེན།</string>
+    <string name="action_pause">མཚམས་འཇོག</string>
+    <string name="action_resume">མུ་མཐུད། </string>
+    <string name="action_install">ནང་འཇུག</string>
+    <string name="action_delete">བསུབ་པ།</string>
+    <string name="action_cancel">ཕྱིར་སློག</string>
     <string name="confirm_delete_dialog_title">ཡིག་ཆ་བསུབ་པ།</string>
     <string name="confirm_delete_dialog_message">གསར་བསྒྱུར་གྱི་ཡིག་ཆ་འདི་བསུབ་བམ།</string>
+    <string name="pause_button">མཚམས་འཇོག</string>
+    <string name="resume_button">མུམཐུད། </string>
+    <string name="suspend_button">རྒྱབ་ལོག</string>
+    <string name="reboot">བསྐྱར་སློང་།</string>
+    <string name="details_button">ཞིབ་ཕྲ་གཟིགས་པ།</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">ཉེར་སྤྱོད་གསར་བསྒྱུར། </string>
+    <string name="apply_update_dialog_message">ཉིད་ཀྱིས་ཐོན་རིམ<xliff:g id="update_name">%1$s</xliff:g>ལ་གསར་བསྒྱུར་བྱེད་མགོ་རྩོམ་གྱིན་འདུག \n\nགལ་ཏེ་<xliff:g id="ok">%2$s</xliff:g>མནན་ན།  ཁ་པར་བསྐྱར་སྒྲིག་རྣམ་པར་བསྐྱར་སློང་བྱས་ཏེ་གསར་བསྒྱུར་བྱེད་ངེས། \n\nདྲན་སྐུལ།  བྱེད་ནུས་འདིར་འོས་འཚམ་གྱི་བསྐྱར་སྒྲིག་བྱ་རིམ་ཞིག་མཁོ། དེ་མིན་ལག་འགུལ་གྱིས་ནང་འཇུག་བྱེད་དགོས།</string>
+    <string name="apply_update_dialog_message_ab">ཉིད་ཀྱིས<xliff:g id="update_name">%1$s</xliff:g>ལ་གསར་བསྒྱུར་བྱ་མགོ་རྩོམ་གྱིན་འདུག  \n\n གལ་ཏེ་<xliff:g id="ok">%2$s</xliff:g>མནན་ན།  ཁ་པར་གྱིས་རྒྱབ་ལོག་ནས་ནང་འཇུག་བྱེད་ངེས། \n\n ནང་འཇུག་བྱས་ཚར་རྗེས་བསྐྱར་སློང་གི་བརྡ་རྒྱག་ངེས་ཡིན།</string>
+    <string name="cancel_installation_dialog_message">ནང་འཇུག་བྱེད་མཚམས་འཇོག་གམ།</string>
+    <string name="installing_update">གསར་བསྒྱུར་ཡིག་ཆ་ནང་འཇུག་བྱེད་བཞིན་པ།</string>
+    <string name="installing_update_error">ནང་འཇུག་ལ་ནོར་འཁྲུལ་བྱུང་།</string>
+    <string name="installing_update_finished">གསར་བསྒྱུར་ནང་འཇུག་བྱས་ཟིན།</string>
+    <string name="finalizing_package">ནང་འཇུག་བྱེད་ཚར་ལ་ཉེ།</string>
+    <string name="preparing_ota_first_boot">ཐེངས་དང་པོའི་སྐུལ་སློང་ལ་གྲ་སྒྲིག་བྱེད་བཞིན་པ།</string>
+    <string name="dialog_prepare_zip_message">གསར་བསྒྱུར་གྲ་སྒྲིག</string>
+    <string name="dialog_battery_low_title">གློག་ཚད་དམའ་བ། </string>
+    <string name="dialog_battery_low_message_pct">གློག་ཚད་དམའ་དྲགས་པ།   མ་མཐའ་ཡང་གློག <xliff:g id="percent_discharging">%1$d</xliff:g>%% ཡོད་ན་ད་གཟོད་མཐུད་དུ་ནང་འཇུག་བྱེད་ཐུབ། གལ་ཏེ་གློག་གསོག་བཞིན་ཡོད་ན་གློག་ཚད <xliff:g id="percent_charging">%2$d</xliff:g>%% ཡོད་ན་ད་གཟོད་མུ་མཐུད་དུ་ནང་འཇུག་བྱེད་ཐུབ།</string>
     <!-- Export update -->
+    <string name="dialog_export_title">ཕྱིར་འདོན་བྱེད་བཞིན་པ།</string>
+    <string name="notification_export_success">ཕྱིར་འདོན་བྱས་ཟིན།</string>
+    <string name="notification_export_fail">ཕྱིར་འདོན་ལ་ནོར་འཁྲུལ་བྱུང་བ།</string>
+    <string name="toast_already_exporting">གསར་བསྒྱུར་དྲངས་ཕྱུངས་བྱས་ཟིན།</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="other">སྐར་ཆ<xliff:g id="count">%d</xliff:g> ཙམ་ལྷག</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="other">སྐར་མ<xliff:g id="count">%d</xliff:g> ཙམ་ལྷག</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="other">དུས་ཚོད<xliff:g id="count">%d</xliff:g> ཙམ་ལྷག</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">སྤོ་སྒུལ་དྲ་རྒྱ་བེད་སྤྱོད་ཀྱི་ཉེན་བརྡ།</string>
     <string name="update_on_mobile_data_message">ཁྱེད་ཀྱིས་སྤོ་སྒུལ་དྲ་རྒྱས་གསར་བསྒྱུར་གྱི་ཡིག་ཆ་ཕབ་ལེན་བྱེད་དམ། འདི་ལྟར་བྱས་ན་གཞི་ཚད་མང་པོ་སྤྱོད་ངེས།  སྔར་བ་བཞིན་ཕབ་ལེན་བྱེད་དམ།</string>
     <string name="checkbox_mobile_data_warning">བསྐྱར་འདྲི་མ་བྱེད།</string>
+    <string name="menu_mobile_data_warning">སྤོ་འགུལ་གཞི་གྲངས་ཀྱི་ཉེན་བརྡ།</string>
     <!-- Info section -->
     <string name="extras_category_title">ཟུར་སྣོན་བྱས་པའི་བྱེད་ནུས།</string>
     <string name="maintainer_info_title">སྲུང་འཛིན་པ།</string>

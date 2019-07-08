@@ -17,13 +17,98 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Aġġornamenti tas-sistema</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Tlestija tal-esportazzjoni</string>
+    <string name="new_updates_channel_title">Aġġornamenti ġodda</string>
+    <string name="ongoing_channel_title">Tniżżil kurrenti</string>
+    <string name="update_failed_channel_title">L-aġġornament falla</string>
+    <string name="verification_failed_notification">Verifika falliet</string>
+    <string name="verifying_download_notification">Verifika tal-aġġornament</string>
+    <string name="downloading_notification">Tniżżil</string>
+    <string name="download_paused_notification">Pawsa tat-tniżżil</string>
+    <string name="download_paused_error_notification">Żball fit-Tniżżil</string>
+    <string name="download_completed_notification">Tniżżil lest</string>
+    <string name="download_starting_notification">Bidu tat-tniżżil</string>
+    <string name="update_failed_notification">L-aġġornament falla</string>
+    <string name="installation_suspended_notification">Installazzjoni sospiża</string>
     <!-- Menu -->
+    <string name="menu_refresh">Riffriskar</string>
+    <string name="menu_preferences">Preferenzi</string>
+    <string name="menu_auto_updates_check">Aġġornamenti awtomatiku qed jiġu ċċekkjati</string>
+    <string name="menu_auto_updates_check_interval_daily">Darba kuljum</string>
+    <string name="menu_auto_updates_check_interval_weekly">Darba fil-ġimgħa</string>
+    <string name="menu_auto_updates_check_interval_monthly">Darba fix-xahar</string>
+    <string name="menu_auto_updates_check_interval_never">Qatt</string>
+    <string name="menu_delete_update">Ħassar</string>
+    <string name="menu_copy_url">Ikkopja l-URL</string>
+    <string name="menu_export_update">L-esportazzjoni tal-aġġornament</string>
+    <string name="menu_show_changelog">Bidliet fil-verżjoni kurrenti</string>
+    <string name="changelog_loading">Tagħbija…</string>
+    <string name="label_download_url">Niżżel il-URL</string>
+    <string name="toast_download_url_copied">URL Ikkupjat</string>
     <!-- General -->
+    <string name="update_found_notification">Instab aġġornament ġdid</string>
+    <string name="snack_no_updates_found">Ma nstab l-ebda aġġornament ġdid</string>
+    <string name="snack_updates_check_failed">Il-kontroll tal-aġġornament falla. Jekk jogħġbok iċċekkja l-konnessjoni bl-internet tiegħek u erġa \'pprova aktar tard.</string>
+    <string name="snack_download_failed">It-tniżżil falla. Jekk jogħġbok iċċekkja l-konnessjoni bl-internet tiegħek u erġa\' pprova aktar tard.</string>
+    <string name="snack_download_verification_failed">Il-verifika tal-aġġornament falliet.</string>
+    <string name="snack_download_verified">Tniżżil lest.</string>
+    <string name="snack_update_not_installable">Dan l-aġġornament ma jistax jiġi installat fuq il-binja kurrenti.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Verifika tal-aġġornament</string>
+    <string name="list_no_updates">Ma nstab l-ebda aġġornament ġdid. Biex tiċċekkja manwalment għal aġġornamenti ġodda, uża l-buttuna Riffriskar.</string>
+    <string name="blocked_update_dialog_title">Aġġornament imblukkat</string>
     <!-- Actions -->
+    <string name="action_download">Niżżel</string>
+    <string name="action_pause">Pawsa</string>
+    <string name="action_resume">Kompli</string>
+    <string name="action_install">Installa</string>
+    <string name="action_delete">Ħassar</string>
+    <string name="action_cancel">Ikkanċella</string>
+    <string name="confirm_delete_dialog_title">Ħassar il-fajl</string>
+    <string name="confirm_delete_dialog_message">Ħassar il-fajl tal-aġġornament magħżul?</string>
+    <string name="pause_button">Pawsa</string>
+    <string name="resume_button">Kompli</string>
+    <string name="suspend_button">Sospendi</string>
+    <string name="reboot">Reboot</string>
+    <string name="details_button">Ara d-dettalji</string>
     <!-- Installation -->
+    <string name="apply_update_dialog_title">Applika aġġornament</string>
+    <string name="apply_update_dialog_message">Int sejjer taġġorna għal <xliff:g id="update_name">%1$s</xliff:g>.\n\nJekk tagħfas <xliff:g id="ok">%2$s</xliff:g>, l-apparat se jirristartja fl-irkupru sabiex jinstalla l-aġġornament.\n\nNota: Din il-karatteristika jirrikjedi irkupru kompatibbli jew inkella l-aġġornament iridu jiġu installati manwali.</string>
+    <string name="apply_update_dialog_message_ab">Int sejjer taġġorna għal <xliff:g id="update_name">%1$s</xliff:g>.\n\nJekk tagħfas <xliff:g id="ok">%2$s</xliff:g>, l-apparat se jibda jinstalla fl-isfond.\n\nLadarba titlesta, tkun imħeġġeġ biex isegwi reboot.</string>
+    <string name="cancel_installation_dialog_message">Ikkanċella l-installazzjoni?</string>
+    <string name="installing_update">Installazzjoni tal-pakkett għall-aġġornament</string>
+    <string name="installing_update_error">Żball fl-installazzjoni</string>
+    <string name="installing_update_finished">Aġġornament installat</string>
+    <string name="finalizing_package">Finalizzazzjoni tal-pakkett għall-installazzjoni</string>
+    <string name="preparing_ota_first_boot">Tħejjija għall-ewwel xgħela</string>
+    <string name="dialog_prepare_zip_message">Preparazzjoni ta\' aġġornament preliminari</string>
+    <string name="dialog_battery_low_title">Batterija baxxa</string>
+    <string name="dialog_battery_low_message_pct">Il-livell tal-batterija hija baxxa wisq, għalinqas irid ikollok <xliff:g id="percent_discharging">%1$d</xliff:g>%% tal-batterija sabiex tkompli, <xliff:g id="percent_charging">%2$d</xliff:g>%% jekk qed tiċċarġja.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">L-esportazzjoni tal-aġġornament</string>
+    <string name="notification_export_success">Aġġornament esportat</string>
+    <string name="notification_export_fail">Żball ta \'esportazzjoni</string>
+    <string name="toast_already_exporting">Diġà qed tesporta aġġornament</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">Twissija</string>
+    <string name="update_on_mobile_data_message">Qed tniżżel pakkett ta \'aġġornament bl-użu tad-data tal-mowbajl li x\'aktarx se tikkawża użu għoli tad-data. Tixtieq tipproċedi?</string>
+    <string name="checkbox_mobile_data_warning">Terġax turi</string>
+    <string name="menu_mobile_data_warning">Twissija mobbli tad-data</string>
     <!-- Info section -->
+    <string name="extras_category_title">Extras</string>
+    <string name="maintainer_info_title">Maintainer</string>
+    <string name="donate_info_title">Donatja</string>
+    <string name="donate_info_summary">Appoġġja l-iżvilupp</string>
+    <string name="website_info_title">Sit tal-Web</string>
+    <string name="website_info_summary">Żur il-websajt tagħna</string>
+    <string name="news_info_title">Aħbarijiet</string>
+    <string name="news_info_summary">Ibqa\' infurmat dwar aġġornamenti u aħbarijiet oħra</string>
+    <string name="forum_info_title">Forum</string>
+    <string name="forum_info_summary">Ara l-postijiet tal-forum</string>
+    <string name="error_open_url">Ma rnexxiliex tiftaħ URL fil-browser</string>
 </resources>

@@ -94,6 +94,12 @@
     <string name="notification_export_fail">Eksporto klaida</string>
     <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">Liko 1sekundė</item>
+        <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
+        <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> sekundžių</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sekundžių</item>
+    </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">Liko 1min</item>
         <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> min</item>
