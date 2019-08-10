@@ -79,7 +79,7 @@ public class Utils {
     }
 
     public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates_v2.json");
+        return new File(context.getCacheDir(), "updates_v3.json");
     }
 
     // This should really return an UpdateBaseInfo object, but currently this only
