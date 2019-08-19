@@ -100,6 +100,18 @@
         <item quantity="many">залишилось <xliff:g id="count">%d</xliff:g> секунд(и)</item>
         <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> секунд(и)</item>
     </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">Залишилась одна хвилина</item>
+        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> хвилини</item>
+        <item quantity="many">Залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="other">Залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">Залишилась одна година</item>
+        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> години</item>
+        <item quantity="many">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="other">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Попередження</string>
     <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що, ймовірно, призведе до високого використання даних. Ви хочете продовжити?</string>

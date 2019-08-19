@@ -73,7 +73,7 @@
     <string name="pause_button">일시 중지</string>
     <string name="resume_button">이어 받기</string>
     <string name="suspend_button">지연</string>
-    <string name="reboot">다시 시작</string>
+    <string name="reboot">다시 부팅</string>
     <string name="details_button">자세히 보기</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">업데이트 적용</string>

@@ -33,12 +33,12 @@
     <string name="update_failed_notification">Aggiornamento fallito</string>
     <string name="installation_suspended_notification">Installazione sospesa</string>
     <!-- Menu -->
-    <string name="menu_refresh">Ricarica</string>
+    <string name="menu_refresh">Aggiorna</string>
     <string name="menu_preferences">Preferenze</string>
-    <string name="menu_auto_updates_check">Controllo aggiornamenti automatici</string>
-    <string name="menu_auto_updates_check_interval_daily">Quotidianamente</string>
-    <string name="menu_auto_updates_check_interval_weekly">Settimanalmente</string>
-    <string name="menu_auto_updates_check_interval_monthly">Mensilmente</string>
+    <string name="menu_auto_updates_check">Verifica disponibilità aggiornamenti</string>
+    <string name="menu_auto_updates_check_interval_daily">Ogni giorno</string>
+    <string name="menu_auto_updates_check_interval_weekly">Ogni settimana</string>
+    <string name="menu_auto_updates_check_interval_monthly">Ogni mese</string>
     <string name="menu_auto_updates_check_interval_never">Mai</string>
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia URL</string>
@@ -49,7 +49,7 @@
     <string name="toast_download_url_copied">URL Copiata</string>
     <!-- General -->
     <string name="update_found_notification">Nuovo aggiornamento disponibile</string>
-    <string name="snack_no_updates_found">Nessun nuovo aggiornamento trovato</string>
+    <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
     <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
     <string name="snack_download_failed">Il download è fallito. Controlla la connessione ad internet e riprova più tardi.</string>
     <string name="snack_download_verification_failed">Verifica dell\'aggiornamento fallita.</string>
@@ -59,7 +59,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifica aggiornamento</string>
-    <string name="list_no_updates">Nessun nuovo aggiornamento trovato. Per controllare manualmente nuovi aggiornamenti, usa il pulsante Aggiorna.</string>
+    <string name="list_no_updates">Nessun aggiornamento disponibile. Per verificare la presenza di aggiornamenti, tocca il pulsante Aggiorna.</string>
     <string name="blocked_update_dialog_title">Aggiornamento bloccato</string>
     <!-- Actions -->
     <string name="action_download">Scarica</string>
@@ -69,7 +69,7 @@
     <string name="action_delete">Elimina</string>
     <string name="action_cancel">Annulla</string>
     <string name="confirm_delete_dialog_title">Elimina file</string>
-    <string name="confirm_delete_dialog_message">Cancellare il file di aggiornamento selezionato?</string>
+    <string name="confirm_delete_dialog_message">Eliminare il file di aggiornamento selezionato?</string>
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Riprendi</string>
     <string name="suspend_button">Sospendi</string>
@@ -77,17 +77,17 @@
     <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Applica aggiornamento</string>
-    <string name="apply_update_dialog_message">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe si preme <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una recovery compatibile, in caso contrario si dovrà procedere all\'installazione manuale.</string>
-    <string name="apply_update_dialog_message_ab">Si sta per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta completato verrà richiesto di riavviare il dispositivo.</string>
+    <string name="apply_update_dialog_message">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità Recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una Recovery compatibile. In caso contrario dovrai procedere con l\'installazione manuale.</string>
+    <string name="apply_update_dialog_message_ab">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta terminata, ti verrà richiesto di riavviare il dispositivo.</string>
     <string name="cancel_installation_dialog_message">Annullare l\'installazione?</string>
     <string name="installing_update">Installazione del pacchetto aggiornamento</string>
     <string name="installing_update_error">Errore d\'installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
-    <string name="finalizing_package">Finalizzalizzazione del pachetto d\'installazione in corso</string>
+    <string name="finalizing_package">Completamento dell\'installazione del pacchetto in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
     <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
-    <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
+    <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Esportazione aggiornamento</string>
     <string name="notification_export_success">Aggiornamento esportato</string>
@@ -108,18 +108,18 @@
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attenzione</string>
-    <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili, ciò potrebbe comportare un utilizzo elevato di dati. Vuoi procedere?</string>
+    <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili. Ciò potrebbe comportare un utilizzo elevato dei dati. Vuoi procedere?</string>
     <string name="checkbox_mobile_data_warning">Non mostrare di nuovo</string>
     <string name="menu_mobile_data_warning">Avviso utilizzo dati mobili</string>
     <!-- Info section -->
     <string name="extras_category_title">Extra</string>
     <string name="maintainer_info_title">Manutentore</string>
-    <string name="donate_info_title">Donazione</string>
-    <string name="donate_info_summary">Supporta lo sviluppo</string>
-    <string name="website_info_title">Sito Web</string>
+    <string name="donate_info_title">Fai una donazione</string>
+    <string name="donate_info_summary">Sostieni lo sviluppo</string>
+    <string name="website_info_title">Sito web</string>
     <string name="website_info_summary">Visita il nostro sito web</string>
     <string name="news_info_title">Novità</string>
-    <string name="news_info_summary">Rimani informato sugli aggiornamenti e altre novità</string>
+    <string name="news_info_summary">Rimani aggiornato sugli aggiornamenti e altre novità</string>
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Visualizza i post del forum</string>
     <string name="error_open_url">Impossibile aprire l\'URL nel browser</string>
