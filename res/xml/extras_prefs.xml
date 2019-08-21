@@ -3,34 +3,40 @@
 
     <PreferenceCategory
         android:key="extras_category"
-        android:title="@string/extras_category_title">
+        android:title="@string/extras_category_title"
+        android:layout="@layout/preference_category_material_settings">
         <Preference
             android:icon="@drawable/ic_web_icon"
             android:key="website_info"
             android:summary="@string/website_info_summary"
-            android:title="@string/website_info_title" />
+            android:title="@string/website_info_title"
+            android:layout="@layout/preference_material_settings" />
 
         <Preference
             android:icon="@drawable/ic_news_icon"
             android:key="news_info"
             android:summary="@string/news_info_summary"
-            android:title="@string/news_info_title" />
+            android:title="@string/news_info_title"
+            android:layout="@layout/preference_material_settings" />
 
         <Preference
             android:icon="@drawable/ic_donate_icon"
             android:key="donate_info"
             android:summary="@string/donate_info_summary"
-            android:title="@string/donate_info_title" />
+            android:title="@string/donate_info_title"
+            android:layout="@layout/preference_material_settings" />
 
         <Preference
             android:icon="@drawable/ic_forum_icon"
             android:key="forum_info"
             android:summary="@string/forum_info_summary"
-            android:title="@string/forum_info_title" />
+            android:title="@string/forum_info_title"
+            android:layout="@layout/preference_material_settings" />
 
         <Preference
             android:icon="@drawable/ic_maintainers_icon"
             android:key="maintainer_info"
-            android:title="@string/maintainer_info_title" />
+            android:title="@string/maintainer_info_title"
+            android:layout="@layout/preference_material_settings" />
     </PreferenceCategory>
 </PreferenceScreen>
