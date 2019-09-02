@@ -23,7 +23,7 @@
     <string name="new_updates_channel_title">Bản cập nhật mới</string>
     <string name="ongoing_channel_title">Đang tải xuống</string>
     <string name="update_failed_channel_title">Cập nhật thất bại</string>
-    <string name="verification_failed_notification">Xác minh thất bại</string>
+    <string name="verification_failed_notification">Xác thực thất bại</string>
     <string name="verifying_download_notification">Đang xác thực bản cập nhật</string>
     <string name="downloading_notification">Đang tải xuống</string>
     <string name="download_paused_notification">Đã tạm dừng tải xuống</string>
@@ -31,7 +31,7 @@
     <string name="download_completed_notification">Tải xuống hoàn tất</string>
     <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
     <string name="update_failed_notification">Cập nhật thất bại</string>
-    <string name="installation_suspended_notification">Cài đặt đã ngừng</string>
+    <string name="installation_suspended_notification">Tạm hoãn cài đặt</string>
     <!-- Menu -->
     <string name="menu_refresh">Làm mới</string>
     <string name="menu_preferences">Tùy chỉnh</string>
@@ -72,7 +72,7 @@
     <string name="confirm_delete_dialog_message">Xóa các tập tin cập nhật được chọn?</string>
     <string name="pause_button">Tạm dừng</string>
     <string name="resume_button">Tiếp tục</string>
-    <string name="suspend_button">Ngừng</string>
+    <string name="suspend_button">Tạm hoãn</string>
     <string name="reboot">Khởi động lại</string>
     <string name="details_button">Xem chi tiết</string>
     <!-- Installation -->

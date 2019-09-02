@@ -34,7 +34,7 @@
     <string name="installation_suspended_notification">Installazione sospesa</string>
     <!-- Menu -->
     <string name="menu_refresh">Aggiorna</string>
-    <string name="menu_preferences">Preferenze</string>
+    <string name="menu_preferences">Impostazioni</string>
     <string name="menu_auto_updates_check">Verifica disponibilità aggiornamenti</string>
     <string name="menu_auto_updates_check_interval_daily">Ogni giorno</string>
     <string name="menu_auto_updates_check_interval_weekly">Ogni settimana</string>
@@ -43,12 +43,12 @@
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia URL</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
-    <string name="menu_show_changelog">Modifiche nella versione corrente</string>
+    <string name="menu_show_changelog">Cronologia versioni</string>
     <string name="changelog_loading">Caricamento…</string>
     <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copiata</string>
+    <string name="toast_download_url_copied">URL copiato</string>
     <!-- General -->
-    <string name="update_found_notification">Nuovo aggiornamento disponibile</string>
+    <string name="update_found_notification">Aggiornamento disponibile</string>
     <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
     <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
     <string name="snack_download_failed">Il download è fallito. Controlla la connessione ad internet e riprova più tardi.</string>
@@ -92,7 +92,7 @@
     <string name="dialog_export_title">Esportazione aggiornamento</string>
     <string name="notification_export_success">Aggiornamento esportato</string>
     <string name="notification_export_fail">Errore esportazione</string>
-    <string name="toast_already_exporting">Esportazione aggiornamento già in corso</string>
+    <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 secondo rimanente</item>
@@ -108,11 +108,11 @@
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attenzione</string>
-    <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili. Ciò potrebbe comportare un utilizzo elevato dei dati. Vuoi procedere?</string>
-    <string name="checkbox_mobile_data_warning">Non mostrare di nuovo</string>
+    <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili. Ciò potrebbe comportare un utilizzo elevato dei dati. Vuoi continuare?</string>
+    <string name="checkbox_mobile_data_warning">Non mostrare più</string>
     <string name="menu_mobile_data_warning">Avviso utilizzo dati mobili</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extra</string>
+    <string name="extras_category_title">Altro</string>
     <string name="maintainer_info_title">Manutentore</string>
     <string name="donate_info_title">Fai una donazione</string>
     <string name="donate_info_summary">Sostieni lo sviluppo</string>
