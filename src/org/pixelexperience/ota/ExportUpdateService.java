@@ -23,11 +23,12 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
 import org.pixelexperience.ota.misc.FileUtils;
+
+import androidx.core.app.NotificationCompat;
 
 import java.io.File;
 import java.io.IOException;

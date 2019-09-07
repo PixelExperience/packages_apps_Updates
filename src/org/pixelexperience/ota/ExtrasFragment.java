@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.widget.ListView;
 
 import org.pixelexperience.ota.model.UpdateInfo;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class ExtrasFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener {
 

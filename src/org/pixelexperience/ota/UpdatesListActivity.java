@@ -16,7 +16,7 @@
  */
 package org.pixelexperience.ota;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class UpdatesListActivity extends AppCompatActivity {
     public abstract void showSnackbar(int stringId, int duration);
