@@ -48,10 +48,11 @@
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textColorPrimary">@color/text_primary</item>
     </style>
-    <style name="TextAppearancePreferenceCategory">
-        <item name="android:textSize">@*android:dimen/text_size_body_2_material</item>
-        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
-        <item name="android:textColor">@color/theme_accent</item>
+    <style name="TextAppearancePreferenceCategory" parent="@*android:style/TextAppearance.DeviceDefault.Body2">>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">11sp</item>
+        <!-- 0.8 Spacing, 0.8/11 = 0.072727273 -->
+        <item name="android:letterSpacing">0.072727273</item>
     </style>
     <style name="TextAppearancePreference">
         <item name="android:textSize">@*android:dimen/text_size_subhead_material</item>
