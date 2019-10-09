@@ -114,7 +114,7 @@
     <!-- Info section -->
     <string name="extras_category_title">Ekstralar</string>
     <string name="maintainer_info_title">Cihaz sorumlusu</string>
-    <string name="donate_info_title">Bağış yap</string>
+    <string name="donate_info_title">Bağış yapın</string>
     <string name="donate_info_summary">Geliştirmeyi destekle</string>
     <string name="website_info_title">İnternet sitesi</string>
     <string name="website_info_summary">İnternet sitemizi ziyaret edin</string>

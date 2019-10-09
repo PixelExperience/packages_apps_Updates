@@ -81,7 +81,7 @@
     <string name="apply_update_dialog_message_ab">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta terminata, ti verrà richiesto di riavviare il dispositivo.</string>
     <string name="cancel_installation_dialog_message">Annullare l\'installazione?</string>
     <string name="installing_update">Installazione del pacchetto aggiornamento</string>
-    <string name="installing_update_error">Errore d\'installazione</string>
+    <string name="installing_update_error">Errore di installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
     <string name="finalizing_package">Completamento dell\'installazione del pacchetto in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
@@ -91,7 +91,7 @@
     <!-- Export update -->
     <string name="dialog_export_title">Esportazione aggiornamento</string>
     <string name="notification_export_success">Aggiornamento esportato</string>
-    <string name="notification_export_fail">Errore esportazione</string>
+    <string name="notification_export_fail">Errore durante l\'esportazione</string>
     <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

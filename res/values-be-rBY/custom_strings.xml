@@ -31,6 +31,7 @@
     <string name="download_completed_notification">Спампоўка завершана</string>
     <string name="download_starting_notification">Запуск спампоўкі</string>
     <string name="update_failed_notification">Памылка абнаўлення</string>
+    <string name="installation_suspended_notification">Устаноўка прыпынена</string>
     <!-- Menu -->
     <string name="menu_refresh">Аднавіць</string>
     <string name="menu_preferences">Налады</string>
@@ -55,6 +56,8 @@
     <string name="snack_download_verified">Спампоўка завершана.</string>
     <string name="snack_update_not_installable">Гэта абнаўленне не можа быць ўстаноўлена па-над бягучай зборкай.</string>
     <string name="text_download_speed">%1$s, %2$s/с</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Праверка абнаўленняў</string>
     <string name="list_no_updates">Новыя абнаўленні не знойдзены. Каб праверыць абнаўленні ўручную, націсніце кнопку Абнавіць.</string>
     <string name="blocked_update_dialog_title">Абнаўленне заблакавана</string>
@@ -103,10 +106,17 @@
         <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> хвілін</item>
         <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> хвілін</item>
     </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">засталася адна гадзіна</item>
+        <item quantity="few">засталося <xliff:g id="count">%d</xliff:g> гадзіны</item>
+        <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
+        <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Папярэджанне</string>
     <string name="update_on_mobile_data_message">Вы збіраецеся спампаваць пакет абнаўлення, выкарыстоўваючы мабільную перадачу дадзеных, за якую, верагодна, спаганяецца дадатковая плата. Вы хочаце працягнуць?</string>
     <string name="checkbox_mobile_data_warning">Больш не паказваць</string>
+    <string name="menu_mobile_data_warning">Папярэджанне аб мабільных даных</string>
     <!-- Info section -->
     <string name="extras_category_title">Дапаўненні</string>
     <string name="maintainer_info_title">Суправаджальнік</string>
