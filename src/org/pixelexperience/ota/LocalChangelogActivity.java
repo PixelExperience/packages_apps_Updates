@@ -16,24 +16,15 @@
 package org.pixelexperience.ota;
 
 import android.app.ProgressDialog;
-import android.content.res.Resources;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
-import android.util.TypedValue;
 import android.widget.TextView;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class LocalChangelogActivity extends AppCompatActivity {
 
@@ -54,8 +45,6 @@ public class LocalChangelogActivity extends AppCompatActivity {
         dialog.show();
         mHandler.postDelayed(() -> {
             StringBuilder data = new StringBuilder();
-            Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_.-]+/)+)");
-            Pattern p3 = Pattern.compile("(\\d\\d-\\d\\d-\\d{4})");
             int numRead;
             char tmp[] = new char[2048];
             try (InputStreamReader inputReader = new FileReader(CHANGELOG_PATH)) {
@@ -66,24 +55,8 @@ public class LocalChangelogActivity extends AppCompatActivity {
             } catch (IOException ignored) {
             }
 
-            SpannableStringBuilder sb = new SpannableStringBuilder(data);
-            Resources.Theme theme = getTheme();
-            TypedValue typedValue = new TypedValue();
-            theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
-
-            final int color = getColor(typedValue.resourceId);
-            Matcher m = p2.matcher(data);
-            while (m.find()) {
-                sb.setSpan(new StyleSpan(Typeface.BOLD), m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                sb.setSpan(new ForegroundColorSpan(color), m.start(0), m.end(0), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            }
-            m = p3.matcher(data);
-            while (m.find()) {
-                sb.setSpan(new StyleSpan(Typeface.BOLD + Typeface.ITALIC), m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            }
-
             final TextView textView = findViewById(R.id.changelog_text);
-            textView.setText(sb);
+            textView.setText(data);
 
             mHandler.postDelayed(dialog::dismiss, 1000);
         }, 2000);
