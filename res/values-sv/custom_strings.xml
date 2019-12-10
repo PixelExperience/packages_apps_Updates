@@ -92,6 +92,10 @@
     <string name="notification_export_fail">Exporteringsfel</string>
     <string name="toast_already_exporting">Exporterar redan en uppdatering</string>
     <!-- ETA -->
+    <plurals name="eta_hours">
+        <item quantity="one">1 timme kvar</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> timmar kvar</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varning</string>
     <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>

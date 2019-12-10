@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">Rendszerfrissítések</string>
+    <string name="app_name">Rendszer frissítések</string>
     <!-- Notifications -->
     <string name="export_channel_title">Exportálás-véglegesítés</string>
     <string name="new_updates_channel_title">Új frissítések</string>

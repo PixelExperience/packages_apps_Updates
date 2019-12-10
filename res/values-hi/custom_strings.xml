@@ -20,6 +20,7 @@
     <string name="app_name">सिस्टम अद्यतनीकरण</string>
     <!-- Notifications -->
     <string name="new_updates_channel_title">नए अपडेट</string>
+    <string name="verifying_download_notification">अपडेट की पुष्टि हो रही है</string>
     <!-- Menu -->
     <string name="menu_refresh">ताज़ा करना</string>
     <!-- General -->
