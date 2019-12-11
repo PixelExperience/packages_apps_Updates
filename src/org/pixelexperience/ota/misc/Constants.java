@@ -39,7 +39,7 @@ public final class Constants {
     static final String PROP_DEVICE = "org.pixelexperience.device";
     static final String PROP_BUILD_VERSION = "org.pixelexperience.version";
     static final String PROP_VERSION_CODE = "org.pixelexperience.ota.version_code";
-    static final String OTA_URL = "https://download.pixelexperience.org/ota_v3/%s/%s";
+    static final String OTA_URL = "https://download.pixelexperience.org/ota_v4_dev/%s/%s";
     static final String DOWNLOAD_WEBPAGE_URL = "https://download.pixelexperience.org/changelog/%s/%s";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";
     static final String EXPORT_PATH = "PixelExperience-Updates/";
