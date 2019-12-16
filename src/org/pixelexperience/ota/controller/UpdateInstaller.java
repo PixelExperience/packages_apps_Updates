@@ -75,7 +75,7 @@ class UpdateInstaller {
 
         UpdateInfo update = mUpdaterController.getUpdate(downloadId);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
+        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE_UTC, 0);
         long lastBuildTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP,
                 buildTimestamp);
         boolean isReinstalling = buildTimestamp == lastBuildTimestamp;

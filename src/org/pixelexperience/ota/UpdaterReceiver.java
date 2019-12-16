@@ -49,7 +49,7 @@ public class UpdaterReceiver extends BroadcastReceiver {
             return false;
         }
 
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
+        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE_UTC, 0);
         long lastBuildTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, -1);
         return buildTimestamp == lastBuildTimestamp;
     }

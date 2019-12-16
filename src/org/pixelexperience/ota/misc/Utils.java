@@ -107,7 +107,7 @@ public class Utils {
             Log.d(TAG, update.getName() + " is older than current Android version");
             return false;
         }
-        if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
+        if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE_UTC, 0)) {
             Log.d(TAG, update.getName() + " is older than/equal to the current build");
             return false;
         }
@@ -115,7 +115,7 @@ public class Utils {
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
+        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE_UTC, 0)) &&
                 update.getVersion().equalsIgnoreCase(
                         SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
@@ -230,7 +230,7 @@ public class Utils {
 
         removeUncryptFiles(downloadPath);
 
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
+        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE_UTC, 0);
         long prevTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, 0);
         String lastUpdatePath = preferences.getString(Constants.PREF_INSTALL_PACKAGE_PATH, null);
         boolean reinstalling = preferences.getBoolean(Constants.PREF_INSTALL_AGAIN, false);
