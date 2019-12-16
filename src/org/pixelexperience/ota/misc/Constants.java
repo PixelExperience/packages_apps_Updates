@@ -24,7 +24,7 @@ public final class Constants {
     public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
     public static final String UNCRYPT_FILE_EXT = ".uncrypt";
     public static final String PROP_BUILD_DATE = "org.pixelexperience.build_date_utc";
-    public static final String PROP_DISABLE_UNCRYPT = "sys.ota.disable_uncrypt";
+    public static final String PROP_RECOVERY_UPDATE = "persist.sys.recovery_update";
     public static final String PREF_INSTALL_OLD_TIMESTAMP = "install_old_timestamp";
     public static final String PREF_INSTALL_NEW_TIMESTAMP = "install_new_timestamp";
     public static final String PREF_INSTALL_NEW_FILE_NAME = "install_new_file_name";
