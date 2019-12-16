@@ -88,7 +88,7 @@ class UpdateInstaller {
                 .putBoolean(Constants.PREF_INSTALL_NOTIFIED, false)
                 .apply();
 
-        if (SystemProperties.get(Constants.PROP_DISABLE_UNCRYPT, "0").equals("0") && Utils.isEncrypted(mContext, update.getFile())) {
+        if (SystemProperties.get(Constants.PROP_RECOVERY_UPDATE, "").equals("true") && Utils.isEncrypted(mContext, update.getFile())) {
             // uncrypt rewrites the file so that it can be read without mounting
             // the filesystem, so create a copy of it.
             prepareForUncryptAndInstall(update);
