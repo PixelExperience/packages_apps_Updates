@@ -17,6 +17,7 @@
 package org.pixelexperience.ota.download;
 
 import android.os.SystemClock;
+import android.os.SystemProperties;
 import android.util.Log;
 
 import java.io.File;
@@ -33,6 +34,8 @@ import java.util.PriorityQueue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.pixelexperience.ota.misc.Constants;
+
 public class HttpURLConnectionClient implements DownloadClient {
 
     private final static String TAG = "HttpURLConnectionClient";
@@ -48,11 +51,16 @@ public class HttpURLConnectionClient implements DownloadClient {
                             DownloadClient.DownloadCallback callback,
                             boolean useDuplicateLinks) throws IOException {
         mClient = (HttpURLConnection) new URL(url).openConnection();
-        mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
+        setExtraHeaders();
         mDestination = destination;
         mProgressListener = progressListener;
         mCallback = callback;
         mUseDuplicateLinks = useDuplicateLinks;
+    }
+
+    private void setExtraHeaders(){
+        mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
+        mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
     }
 
     private static boolean isSuccessCode(int statusCode) {
@@ -167,7 +175,7 @@ public class HttpURLConnectionClient implements DownloadClient {
             String range = mClient.getRequestProperty("Range");
             mClient.disconnect();
             mClient = (HttpURLConnection) newUrl.openConnection();
-            mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
+            setExtraHeaders();
             if (range != null) {
                 mClient.setRequestProperty("Range", range);
             }
