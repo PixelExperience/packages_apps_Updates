@@ -44,6 +44,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
@@ -141,13 +142,13 @@ public class UpdatesActivity extends UpdatesListActivity {
                 .replace(R.id.extras_view, mExtrasFragment)
                 .commit();
         
-        
+        ExtendedFloatingActionButton click = findViewById(R.id.click);
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 downloadUpdatesList(true);
             }
-        }); 
+        });
     }
 
     @Override
