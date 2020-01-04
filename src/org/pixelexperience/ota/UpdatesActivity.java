@@ -140,6 +140,14 @@ public class UpdatesActivity extends UpdatesListActivity {
         getFragmentManager().beginTransaction()
                 .replace(R.id.extras_view, mExtrasFragment)
                 .commit();
+        
+        
+        click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                downloadUpdatesList(true);
+            }
+        }); 
     }
 
     @Override
