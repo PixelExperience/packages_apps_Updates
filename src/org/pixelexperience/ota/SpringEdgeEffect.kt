@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.EdgeEffect
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
-import androidx.recyclerview.widget.RecyclerView//
 import androidx.recyclerview.widget.RecyclerView.EdgeEffectFactory.*
 import kotlin.reflect.KMutableProperty0
 
@@ -94,8 +93,6 @@ class SpringEdgeEffect(
             return result
         }
 
-        //fun createFactory() = SpringEdgeEffectFactory()
-
         fun createEdgeEffect(direction: Int, reverseAbsorb: Boolean = false): EdgeEffect? {
             return when (direction) {
                 DIRECTION_LEFT -> SpringEdgeEffect(view.context, view::getWidth, ::shiftX, ::activeEdgeX, 0.3f, reverseAbsorb)
@@ -105,12 +102,5 @@ class SpringEdgeEffect(
                 else -> null
             }
         }
-
-        /*inner class SpringEdgeEffectFactory : RecyclerView.EdgeEffectFactory() {
-
-            override fun createEdgeEffect(recyclerView: RecyclerView, direction: Int): EdgeEffect {
-                return createEdgeEffect(direction) ?: super.createEdgeEffect(recyclerView, direction)
-            }
-        }*/
     }
 }
