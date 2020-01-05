@@ -1,4 +1,4 @@
-package io.protowise.max.android.SpringLayout
+package org.pixelexperience.ota
 
 import androidx.dynamicanimation.animation.FloatPropertyCompat
 import org.xmlpull.v1.XmlPullParser
