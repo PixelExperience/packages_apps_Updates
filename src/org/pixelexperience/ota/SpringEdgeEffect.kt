@@ -1,4 +1,4 @@
-package io.protowise.max.android.SpringLayout
+package org.pixelexperience.ota
 
 import android.content.Context
 import android.graphics.Canvas
