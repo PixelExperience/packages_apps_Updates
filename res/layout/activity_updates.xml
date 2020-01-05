@@ -19,7 +19,7 @@
             app:popupTheme="@style/AppTheme.PopupMenuStyle" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <io.protowise.max.android.SpringLayout.FrameLayout
+    <org.pixelexperience.ota.FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -65,7 +65,7 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </io.protowise.max.android.SpringLayout.FrameLayout>
+    </org.pixelexperience.ota.FrameLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomBar"
