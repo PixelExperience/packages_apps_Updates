@@ -1,4 +1,4 @@
-package io.protowise.max.android.SpringLayout
+package org.pixelexperience.ota
 
 import kotlin.math.abs
 import kotlin.math.roundToInt
