@@ -316,7 +316,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 break;
             case PAUSE:
                 button.setText(R.string.action_pause);
-                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_pause, 0, 0, 0);
+                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_pause, 0, 0, 0);
                 button.setEnabled(enabled);
                 clickListener = enabled ? view -> mUpdaterController.pauseDownload(downloadId)
                         : null;
@@ -356,7 +356,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             break;
             case INFO: {
                 button.setText(R.string.details_button);
-                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_information, 0, 0, 0);
+                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_new, 0, 0, 0);
                 button.setEnabled(enabled);
                 clickListener = enabled ? view -> showInfoDialog() : null;
             }

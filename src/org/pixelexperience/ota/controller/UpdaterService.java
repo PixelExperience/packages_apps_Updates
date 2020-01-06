@@ -265,7 +265,7 @@ public class UpdaterService extends Service {
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(android.R.drawable.stat_sys_download);
                 mNotificationBuilder.mActions.clear();
-                mNotificationBuilder.addAction(android.R.drawable.ic_media_pause,
+                mNotificationBuilder.addAction(R.drawable.ic_pause,
                         getString(R.string.pause_button),
                         getPausePendingIntent(update.getDownloadId()));
                 mNotificationBuilder.setTicker(text);
@@ -283,7 +283,7 @@ public class UpdaterService extends Service {
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_pause);
-                mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
+                mNotificationBuilder.addAction(R.drawable.ic_updateui_resume,
                         getString(R.string.resume_button),
                         getResumePendingIntent(update.getDownloadId()));
                 mNotificationBuilder.setTicker(text);
@@ -302,8 +302,8 @@ public class UpdaterService extends Service {
                 String text = getString(R.string.download_paused_error_notification);
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
-                mNotificationBuilder.setSmallIcon(android.R.drawable.stat_sys_warning);
-                mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
+                mNotificationBuilder.setSmallIcon(R.drawable.ic_warning);
+                mNotificationBuilder.addAction(R.drawable.ic_updateui_resume,
                         getString(R.string.resume_button),
                         getResumePendingIntent(update.getDownloadId()));
                 mNotificationBuilder.setTicker(text);
@@ -344,7 +344,7 @@ public class UpdaterService extends Service {
                 stopForeground(STOP_FOREGROUND_DETACH);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
-                mNotificationBuilder.setSmallIcon(android.R.drawable.stat_sys_warning);
+                mNotificationBuilder.setSmallIcon(R.drawable.ic_warning);
                 mNotificationBuilder.setProgress(0, 0, false);
                 String text = getString(R.string.verification_failed_notification);
                 mNotificationBuilder.setContentText(text);
@@ -366,7 +366,7 @@ public class UpdaterService extends Service {
                         getString(R.string.installing_update);
                 mNotificationStyle.bigText(text);
                 if (ABUpdateInstaller.isInstallingUpdate(this)) {
-                    mNotificationBuilder.addAction(android.R.drawable.ic_media_pause,
+                    mNotificationBuilder.addAction(R.drawable.ic_pause,
                             getString(R.string.suspend_button),
                             getSuspendInstallationPendingIntent());
                 }
@@ -399,7 +399,7 @@ public class UpdaterService extends Service {
             case INSTALLATION_FAILED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
                 mNotificationBuilder.setStyle(null);
-                mNotificationBuilder.setSmallIcon(android.R.drawable.stat_sys_warning);
+                mNotificationBuilder.setSmallIcon(R.drawable.ic_warning);
                 mNotificationBuilder.setProgress(0, 0, false);
                 String text = getString(R.string.installing_update_error);
                 mNotificationBuilder.setContentText(text);
@@ -425,7 +425,7 @@ public class UpdaterService extends Service {
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_pause);
-                mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
+                mNotificationBuilder.addAction(R.drawable.ic_updateui_resume,
                         getString(R.string.resume_button),
                         getResumeInstallationPendingIntent());
                 mNotificationBuilder.setTicker(text);
