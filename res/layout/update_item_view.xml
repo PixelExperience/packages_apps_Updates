@@ -121,7 +121,6 @@
                 android:textSize="15sp"
                 android:drawablePadding="4dp"
                 android:textAllCaps="false"
-                app:cornerRadius="8dp"
                 tools:text="Pause" />
 
             <com.google.android.material.button.MaterialButton
@@ -131,11 +130,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
                 android:text="@string/details_button"
-                android:drawablePadding="4dp"
+                android:drawablePadding="5dp"
                 android:textAllCaps="false"
                 android:drawableStart="@drawable/ic_updateui_new"
                 android:layout_marginStart="10dp"
-                app:cornerRadius="8dp"/>
+                app:cornerRadius="10dp"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
