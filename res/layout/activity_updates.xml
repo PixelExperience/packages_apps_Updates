@@ -6,24 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/theme_primary">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleTextAppearance="@style/ToolbarTitle"
-            app:popupTheme="@style/AppTheme.PopupMenuStyle" />
-    </com.google.android.material.appbar.AppBarLayout>
-
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
             android:orientation="vertical">
 
             <TextView
@@ -47,8 +36,7 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="5dp"
-                android:scrollbars="vertical"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                android:scrollbars="vertical"/>
 
             <FrameLayout
                 android:id="@+id/extras_view"
@@ -56,8 +44,30 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                android:paddingBottom="120dp"/>
 
         </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_toolbar"
+        android:theme="@style/ToolbarMenuTheme"
+        app:navigationIcon="@drawable/ic_back"/>
+
+    <Button
+        style="@style/Widget.RaisedButton"
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check for update"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_anchorGravity="center_horizontal"
+        app:layout_anchor="@id/bottomBar"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
