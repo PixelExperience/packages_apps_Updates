@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/theme_primary">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleTextAppearance="@style/ToolbarTitle"
-            app:popupTheme="@style/AppTheme.PopupMenuStyle" />
-    </com.google.android.material.appbar.AppBarLayout>
-
     <org.pixelexperience.ota.FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,8 +59,10 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_gravity="bottom"
-        app:backgroundTint="@color/cardview_background"
         app:elevation="6dp"
+        app:menu="@menu/menu_toolbar"
+        android:theme="@style/ToolbarMenuTheme"
+        app:navigationIcon="back"
         app:fabAlignmentMode="center"/>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -84,6 +73,7 @@
         android:text="Check for update"
         android:textAlignment="center"
         android:textAllCaps="false"
+        app:layout_anchorGravity="center_horizontal"
         app:layout_anchor="@id/bottomBar"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
