@@ -6,24 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/theme_primary">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleTextAppearance="@style/ToolbarTitle"
-            app:popupTheme="@style/AppTheme.PopupMenuStyle" />
-    </com.google.android.material.appbar.AppBarLayout>
-
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
             android:orientation="vertical">
 
             <TextView
@@ -32,11 +21,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingStart="46dp"
-                android:paddingTop="5dp"
+                android:paddingTop="15dp"
                 android:paddingEnd="46dp"
                 android:paddingBottom="5dp"
+                android:drawableTop="@drawable/ic_warning"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/google_blue"
                 android:text="@string/list_no_updates"
-                android:textColor="?android:textColorSecondary" />
+                android:textColor="?android:textColorSecondary"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -47,8 +39,7 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="5dp"
-                android:scrollbars="vertical"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                android:scrollbars="vertical"/>
 
             <FrameLayout
                 android:id="@+id/extras_view"
@@ -56,8 +47,37 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                android:layout_marginBottom="120dp"/>
 
         </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:theme="@style/ToolbarMenuTheme"
+        android:background="@color/theme_bottom_appbar"
+        android:layout_gravity="bottom"
+        app:navigationIcon="@drawable/ic_back"/>
+
+    <Button
+        style="@style/Widget.RaisedButton"
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_for_update"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal|bottom"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/view_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
