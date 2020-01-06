@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +8,8 @@
     android:foreground="?attr/selectableItemBackground"
     android:nextFocusRight="@+id/update_action"
     app:cardBackgroundColor="@color/cardview_background"
-    app:cardCornerRadius="8dp"
-    app:contentPaddingBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:contentPaddingBottom="16dp"
     app:contentPaddingLeft="16dp"
     app:contentPaddingRight="16dp"
     app:contentPaddingTop="16dp">
@@ -23,26 +23,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:alpha="0.87"
-            android:drawablePadding="4dp"
+            android:layout_gravity="center"    
+            android:drawableTop="@drawable/ic_system_update"
+            android:drawableTint="@color/google_blue"
+            android:drawablePadding="15dp"
             android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
-            android:paddingBottom="12dp"
-            android:drawableStart="@drawable/ic_updateui_new"
+            android:padding="15dp"
             android:text="@string/update_found_notification"
-            android:textColor="@color/theme_accent"
-            android:textSize="18sp" />
+            android:textColor="?android:textColorPrimary"
+            android:textAlignment="center"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/build_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="8dp"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
-            android:paddingBottom="8sp"
             android:singleLine="true"
-            android:textSize="16sp"
-            tools:text="PixelExperience_device-9.0-20190324-0250-CAF-OFFICIAL.zip" />
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="?android:textColorSecondary"
+            tools:text="PixelExperience_device-9.0-20190324-0250-CAF-OFFICIAL.zip"/>
 
         <TextView
             android:id="@+id/build_date"
@@ -50,7 +55,10 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:textSize="14sp"
-            tools:text="29 February 2018" />
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-5dp"
+            android:textColor="?android:textColorSecondary"
+            tools:text="29 February 2018"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -58,9 +66,13 @@
 
             <ProgressBar
                 android:id="@+id/progress_bar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:progressDrawable="@drawable/ic_progress_bg"
                 android:paddingTop="4sp"
                 android:visibility="invisible"
                 tools:progress="65"
@@ -70,10 +82,13 @@
                 android:id="@+id/progress_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/progress_bar"
+                android:layout_marginTop="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
                 android:ellipsize="marquee"
                 android:singleLine="true"
                 android:textSize="14sp"
+                android:textColor="?android:textColorSecondary"
                 android:visibility="invisible"
                 tools:text="162 of 300 MB (3 minutes left) • 65%"
                 tools:visibility="visible" />
@@ -82,42 +97,52 @@
                 android:id="@+id/build_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8sp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="5dp"
                 android:singleLine="true"
                 android:textSize="14sp"
+                android:textColor="?android:textColorSecondary"
                 tools:text="300 MB"
                 tools:visibility="invisible" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="8dp"
+            android:gravity="end"
+            android:paddingTop="25dp"
             android:weightSum="1">
 
             <Button
-                android:id="@id/update_action"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:id="@+id/update_action"
+                style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
-                android:textSize="15sp"
-                android:drawablePadding="4dp"
+                android:drawablePadding="5dp"
                 android:textAllCaps="false"
+                android:drawableTint="#ffffff"
+                android:drawableStart="@drawable/ic_pause"
+                android:textColor="#ffffff"
                 tools:text="Pause" />
 
             <Button
                 android:id="@+id/details_action"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
                 android:text="@string/details_button"
-                android:drawableStart="@drawable/ic_updateui_information"
-                android:drawablePadding="4dp"
-                android:textAllCaps="false" />
+                android:drawablePadding="5dp"
+                android:textAllCaps="false"
+                android:drawableStart="@drawable/ic_updateui_new"
+                android:drawableTint="#ffffff"
+                android:textColor="#ffffff"
+                android:layout_marginStart="10dp"/>
         </LinearLayout>
 
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+
+</com.google.android.material.card.MaterialCardView>
