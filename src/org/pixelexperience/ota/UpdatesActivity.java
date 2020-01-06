@@ -142,8 +142,8 @@ public class UpdatesActivity extends UpdatesListActivity {
                 .replace(R.id.extras_view, mExtrasFragment)
                 .commit();
         
-        ExtendedFloatingActionButton click = findViewById(R.id.click);
-        click.setOnClickListener(new View.OnClickListener() {
+        ExtendedFloatingActionButton check = findViewById(R.id.check);
+        check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 downloadUpdatesList(true);
