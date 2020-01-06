@@ -2,17 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_refresh"
-        android:icon="@drawable/ic_menu_refresh"
-        android:title="@string/menu_refresh"
-        android:enabled="false"
-        android:visible="false" />
-    <item
         android:id="@+id/menu_preferences"
         android:title="@string/menu_preferences"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/menu_show_changelog"
         android:title="@string/menu_show_changelog"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>
