@@ -21,31 +21,29 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.DialogInterface;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Switch;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.Toolbar;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
@@ -128,10 +126,6 @@ public class UpdatesActivity extends UpdatesListActivity {
             }
         };
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mRefreshAnimation = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
         mRefreshAnimation.setInterpolator(new LinearInterpolator());
@@ -140,6 +134,26 @@ public class UpdatesActivity extends UpdatesListActivity {
         getFragmentManager().beginTransaction()
                 .replace(R.id.extras_view, mExtrasFragment)
                 .commit();
+        
+        Button check = findViewById(R.id.check);
+        check.setOnClickListener(view -> downloadUpdatesList(true));
+
+        BottomAppBar bottomBar = findViewById(R.id.bottomBar);
+        bottomBar.setOnMenuItemClickListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.menu_preferences: {
+                    showPreferencesDialog();
+                    return true;
+                }
+                case R.id.menu_show_changelog: {
+                    startActivity(new Intent(this, LocalChangelogActivity.class));
+                    return true;
+                }
+            }
+            return true;
+        });
+
+        bottomBar.setNavigationOnClickListener(v -> onBackPressed());
     }
 
     @Override
@@ -168,37 +182,6 @@ public class UpdatesActivity extends UpdatesListActivity {
             unbindService(mConnection);
         }
         super.onStop();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_refresh: {
-                downloadUpdatesList(true);
-                return true;
-            }
-            case R.id.menu_preferences: {
-                showPreferencesDialog();
-                return true;
-            }
-            case R.id.menu_show_changelog: {
-                startActivity(new Intent(this, LocalChangelogActivity.class));
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
     }
 
     private void hideUpdates() {
@@ -374,6 +357,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.menu_preferences)
                 .setView(view)
+                .setNegativeButton("Cancel", (dialog, id) -> dialog.cancel())
                 .setOnDismissListener(dialogInterface -> {
                     prefs.edit()
                             .putInt(Constants.PREF_AUTO_UPDATES_CHECK_INTERVAL,
