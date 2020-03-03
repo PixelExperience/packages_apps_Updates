@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:extra_card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <org.pixelexperience.ota.ExtraCardView
+            android:id="@+id/maintainer_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp"
+            extra_card_view:image="@drawable/ic_maintainers_icon"
+            extra_card_view:title="@string/maintainer_info_title" />
+
+        <org.pixelexperience.ota.ExtraCardView
+            android:id="@+id/donate_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp"
+            extra_card_view:image="@drawable/ic_donate_icon"
+            extra_card_view:summary="@string/donate_info_summary"
+            extra_card_view:title="@string/donate_info_title" />
+
+        <org.pixelexperience.ota.ExtraCardView
+            android:id="@+id/forum_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp"
+            extra_card_view:image="@drawable/ic_forum_icon"
+            extra_card_view:summary="@string/forum_info_summary"
+            extra_card_view:title="@string/forum_info_title" />
+
+        <org.pixelexperience.ota.ExtraCardView
+            android:id="@+id/website_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp"
+            extra_card_view:image="@drawable/ic_web_icon"
+            extra_card_view:summary="@string/website_info_summary"
+            extra_card_view:title="@string/website_info_title" />
+
+        <org.pixelexperience.ota.ExtraCardView
+            android:id="@+id/news_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:contentPaddingTop="16dp"
+            extra_card_view:image="@drawable/ic_news_icon"
+            extra_card_view:summary="@string/news_info_summary"
+            extra_card_view:title="@string/news_info_title" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

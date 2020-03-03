@@ -20,7 +20,7 @@
             android:text="@string/menu_auto_updates_check"
             android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
-            android:fontFamily="@*android:string/config_headlineFontFamily" />
+            android:fontFamily="@string/defaultFontFamily" />
 
         <Spinner
             android:id="@+id/preferences_auto_updates_check_interval"
@@ -37,5 +37,5 @@
         android:layout_marginBottom="16dp"
         android:text="@string/menu_mobile_data_warning"
         android:textSize="16sp"
-        android:fontFamily="@*android:string/config_headlineFontFamily" />
+        android:fontFamily="@string/defaultFontFamily" />
 </LinearLayout>

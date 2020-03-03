@@ -4,7 +4,7 @@
         android:color="#EEFFFFFF">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/google_blue" />
+            <solid android:color="@color/raised_button_color" />
             <corners android:radius="30dp" />
         </shape>
     </item>
