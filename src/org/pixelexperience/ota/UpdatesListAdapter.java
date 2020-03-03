@@ -276,9 +276,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void startDownloadWithWarning(final String downloadId) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mActivity);
-        boolean warn = preferences.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
-        if (Utils.isOnWifiOrEthernet(mActivity) || !warn) {
+        if (Utils.isOnWifiOrEthernet(mActivity)) {
             mUpdaterController.startDownload(downloadId);
             return;
         }
@@ -294,9 +292,6 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setPositiveButton(R.string.action_download,
                         (dialog, which) -> {
                             if (checkbox.isChecked()) {
-                                preferences.edit()
-                                        .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
-                                        .apply();
                                 mActivity.supportInvalidateOptionsMenu();
                             }
                             mUpdaterController.startDownload(downloadId);

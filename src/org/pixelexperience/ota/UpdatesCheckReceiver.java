@@ -79,10 +79,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
     }
 
     public static void scheduleRepeatingUpdatesCheck(Context context) {
-        if (!Utils.isUpdateCheckEnabled(context)) {
-            return;
-        }
-
         PendingIntent updateCheckIntent = getRepeatingUpdatesCheckIntent(context);
         AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr.setRepeating(AlarmManager.RTC, System.currentTimeMillis() +
@@ -127,13 +123,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             Utils.cleanupDownloadsDir(context);
-        }
-
-        if (!Utils.isUpdateCheckEnabled(context)) {
-            return;
-        }
-
-        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             // Set a repeating alarm on boot to check for new updates once per day
             scheduleRepeatingUpdatesCheck(context);
         }
