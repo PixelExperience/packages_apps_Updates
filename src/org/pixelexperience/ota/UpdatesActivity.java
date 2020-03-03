@@ -30,12 +30,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
@@ -44,9 +42,8 @@ import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
@@ -72,6 +69,8 @@ public class UpdatesActivity extends UpdatesListActivity {
     private UpdatesListAdapter mAdapter;
 
     private ExtrasFragment mExtrasFragment;
+    private SwipeRefreshLayout mSwipeRefresh;
+    private Button mRefreshButton;
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
@@ -131,13 +130,19 @@ public class UpdatesActivity extends UpdatesListActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button check = findViewById(R.id.check);
-        check.setOnClickListener(view -> downloadUpdatesList(true));
-
         mExtrasFragment = new ExtrasFragment();
-        getFragmentManager().beginTransaction()
+        getSupportFragmentManager().beginTransaction()
                 .replace(R.id.extras_view, mExtrasFragment)
                 .commit();
+
+        setupRefreshComponents();
+    }
+
+    private void setupRefreshComponents() {
+        mRefreshButton = findViewById(R.id.check);
+        mRefreshButton.setOnClickListener(view -> downloadUpdatesList(true));
+        mSwipeRefresh = findViewById(R.id.swiperefresh);
+        mSwipeRefresh.setEnabled(false);
     }
 
     @Override
@@ -281,6 +286,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                     if (!cancelled) {
                         showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
                     }
+                    refreshAnimationStop();
                 });
             }
 
@@ -294,6 +300,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                 runOnUiThread(() -> {
                     Log.d(TAG, "List downloaded");
                     processNewJson(jsonFile, jsonFileTmp, manualRefresh);
+                    refreshAnimationStop();
                 });
             }
         };
@@ -310,8 +317,24 @@ public class UpdatesActivity extends UpdatesListActivity {
             showSnackbar(R.string.snack_updates_check_failed, Snackbar.LENGTH_LONG);
             return;
         }
-
+        refreshAnimationStart();
         downloadClient.start();
+    }
+
+    private void refreshAnimationStart() {
+        if (mRefreshButton == null || mSwipeRefresh == null) {
+            setupRefreshComponents();
+        }
+        mSwipeRefresh.setRefreshing(true);
+        mRefreshButton.setEnabled(false);
+    }
+
+    private void refreshAnimationStop() {
+        if (mRefreshButton == null || mSwipeRefresh == null) {
+            setupRefreshComponents();
+        }
+        mSwipeRefresh.setRefreshing(false);
+        mRefreshButton.setEnabled(true);
     }
 
     private void handleDownloadStatusChange(String downloadId) {
@@ -331,7 +354,10 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     @Override
     public void showSnackbar(int stringId, int duration) {
-        Snackbar.make(findViewById(R.id.view_snackbar), stringId, duration).show();
+        Snackbar snack = Snackbar.make(findViewById(R.id.view_snackbar), stringId, duration);
+        TextView tv = (TextView) snack.getView().findViewById(com.google.android.material.R.id.snackbar_text);
+        tv.setTextColor(getColor(R.color.text_primary));
+        snack.show();
     }
 
     private void showPreferencesDialog() {

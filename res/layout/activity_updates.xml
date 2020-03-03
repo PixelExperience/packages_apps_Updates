@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,7 +32,7 @@
                 android:drawablePadding="15dp"
                 android:drawableTint="@color/google_blue"
                 android:text="@string/list_no_updates"
-                android:textColor="?android:textColorSecondary"/>
+                android:textColor="?android:textColorSecondary" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -39,15 +43,14 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="5dp"
-                android:scrollbars="vertical"/>
+                android:scrollbars="vertical" />
 
-            <FrameLayout
+            <LinearLayout
                 android:id="@+id/extras_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:layout_marginBottom="120dp"/>
+                android:layout_marginBottom="90dp"
+                android:orientation="vertical" />
 
         </LinearLayout>
 
@@ -60,24 +63,30 @@
         android:theme="@style/ToolbarMenuTheme"
         android:background="@color/theme_bottom_appbar"
         android:layout_gravity="bottom"
-        app:navigationIcon="@drawable/ic_back"/>
+        app:navigationIcon="@drawable/ic_back" />
+
+    <FrameLayout
+        android:id="@+id/view_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         style="@style/Widget.RaisedButton"
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
         android:text="@string/check_for_update"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#ffffff"
+        android:drawableStart="@drawable/ic_menu_refresh"
+        android:drawablePadding="5dp"
+        android:drawableTint="?android:textColorPrimaryInverse"
+        android:fontFamily="@string/defaultFontFamilyMedium"
         android:layout_marginBottom="30dp"
-        android:layout_gravity="center_horizontal|bottom"/>
+        android:textColor="?android:textColorPrimaryInverse" />
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/view_snackbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="90dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
