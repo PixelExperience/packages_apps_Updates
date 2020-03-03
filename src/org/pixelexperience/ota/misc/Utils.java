@@ -306,13 +306,12 @@ public class Utils {
         return isAB;
     }
 
-    public static void addToClipboard(Context context, String label, String text, String toastMessage) {
+    public static void addToClipboard(Context context, String label, String text) {
         ClipboardManager clipboard = (ClipboardManager) context.getSystemService(
                 Context.CLIPBOARD_SERVICE);
         if (clipboard != null) {
             ClipData clip = ClipData.newPlainText(label, text);
             clipboard.setPrimaryClip(clip);
-            Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
         }
     }
 

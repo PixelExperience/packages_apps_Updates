@@ -314,6 +314,8 @@ public class UpdaterService extends Service {
                 break;
             }
             case VERIFYING: {
+                mNotificationBuilder.setOngoing(false);
+                mNotificationManager.cancel(NOTIFICATION_ID);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setProgress(0, 0, true);
                 mNotificationStyle.setSummaryText(null);
@@ -327,6 +329,8 @@ public class UpdaterService extends Service {
             }
             case VERIFIED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
+                mNotificationBuilder.setOngoing(false);
+                mNotificationManager.cancel(NOTIFICATION_ID);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
@@ -342,6 +346,8 @@ public class UpdaterService extends Service {
             }
             case VERIFICATION_FAILED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
+                mNotificationBuilder.setOngoing(false);
+                mNotificationManager.cancel(NOTIFICATION_ID);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_warning);

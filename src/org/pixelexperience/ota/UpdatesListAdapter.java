@@ -35,6 +35,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -151,43 +152,43 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             viewHolder.mBuildName.setSelected(false);
         }
 
-        viewHolder.itemView.setOnLongClickListener(getLongClickListener(update, canDelete,
-                viewHolder.mBuildDate));
+        viewHolder.mOptionsButton.setOnClickListener(getOptionsButtonClickListener(update, canDelete,
+                viewHolder.mOptionsButton));
         viewHolder.mProgressBar.setVisibility(View.VISIBLE);
         viewHolder.mProgressText.setVisibility(View.VISIBLE);
-        viewHolder.mBuildSize.setVisibility(View.INVISIBLE);
+        viewHolder.mBuildSize.setVisibility(View.GONE);
     }
 
     private void handleNotActiveStatus(ViewHolder viewHolder, UpdateInfo update) {
         final String downloadId = update.getDownloadId();
         if (mUpdaterController.isWaitingForReboot(downloadId)) {
-            viewHolder.itemView.setOnLongClickListener(
-                    getLongClickListener(update, false, viewHolder.mBuildDate));
+            viewHolder.mOptionsButton.setOnClickListener(
+                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
             setButtonAction(viewHolder.mAction, Action.REBOOT, downloadId, true);
             viewHolder.mDetails.setVisibility(View.GONE);
         } else if (update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED) {
-            viewHolder.itemView.setOnLongClickListener(
-                    getLongClickListener(update, true, viewHolder.mBuildDate));
+            viewHolder.mOptionsButton.setOnClickListener(
+                    getOptionsButtonClickListener(update, true, viewHolder.mOptionsButton));
             setButtonAction(viewHolder.mAction,
                     Utils.canInstall(update) ? Action.INSTALL : Action.DELETE,
                     downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.GONE);
         } else if (!Utils.canInstall(update)) {
-            viewHolder.itemView.setOnLongClickListener(
-                    getLongClickListener(update, false, viewHolder.mBuildDate));
+            viewHolder.mOptionsButton.setOnClickListener(
+                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
             setButtonAction(viewHolder.mAction, Action.INFO, downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.GONE);
         } else {
-            viewHolder.itemView.setOnLongClickListener(
-                    getLongClickListener(update, false, viewHolder.mBuildDate));
+            viewHolder.mOptionsButton.setOnClickListener(
+                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
             setButtonAction(viewHolder.mAction, Action.DOWNLOAD, downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.VISIBLE);
         }
         String fileSize = Utils.readableFileSize(update.getFileSize());
         viewHolder.mBuildSize.setText(fileSize);
 
-        viewHolder.mProgressBar.setVisibility(View.INVISIBLE);
-        viewHolder.mProgressText.setVisibility(View.INVISIBLE);
+        viewHolder.mProgressBar.setVisibility(View.GONE);
+        viewHolder.mProgressText.setVisibility(View.GONE);
         viewHolder.mBuildSize.setVisibility(View.VISIBLE);
         viewHolder.mBuildName.setSelected(true);
     }
@@ -356,7 +357,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             break;
             case INFO: {
                 button.setText(R.string.details_button);
-                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_new, 0, 0, 0);
+                button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_information, 0, 0, 0);
                 button.setEnabled(enabled);
                 clickListener = enabled ? view -> showInfoDialog() : null;
             }
@@ -417,12 +418,9 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setNegativeButton(android.R.string.cancel, null);
     }
 
-    private View.OnLongClickListener getLongClickListener(final UpdateInfo update,
+    private View.OnClickListener getOptionsButtonClickListener(final UpdateInfo update,
                                                           final boolean canDelete, View anchor) {
-        return view -> {
-            startActionMode(update, canDelete, anchor);
-            return true;
-        };
+        return v -> startActionMode(update, canDelete, anchor);
     }
 
     private AlertDialog.Builder getInstallDialog(final String downloadId) {
@@ -472,6 +470,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setNegativeButton(android.R.string.cancel, null);
     }
 
+    @SuppressLint("RestrictedApi")
     private void startActionMode(final UpdateInfo update, final boolean canDelete, View anchor) {
         mSelectedDownload = update.getDownloadId();
         notifyItemChanged(update.getDownloadId());
@@ -496,8 +495,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 case R.id.menu_copy_url:
                     Utils.addToClipboard(mActivity,
                             mActivity.getString(R.string.label_download_url),
-                            Utils.getDownloadWebpageUrl(update.getName()),
-                            mActivity.getString(R.string.toast_download_url_copied));
+                            Utils.getDownloadWebpageUrl(update.getName()));
+                    mActivity.showSnackbar(R.string.toast_download_url_copied, Snackbar.LENGTH_SHORT);
                     return true;
                 case R.id.menu_export_update:
                     // TODO: start exporting once the permission has been granted
@@ -566,6 +565,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         private Button mAction;
+        private ImageView mOptionsButton;
         private Button mDetails;
 
         private TextView mBuildDate;
@@ -578,6 +578,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         ViewHolder(final View view) {
             super(view);
             mAction = view.findViewById(R.id.update_action);
+            mOptionsButton = view.findViewById(R.id.options_action);
             mDetails = view.findViewById(R.id.details_action);
 
             mBuildDate = view.findViewById(R.id.build_date);

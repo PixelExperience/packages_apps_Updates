@@ -10,7 +10,7 @@
     app:cardElevation="2dp"
     app:cardBackgroundColor="@color/cardview_background"
     app:cardCornerRadius="16dp"
-    app:contentPaddingBottom="16dp"
+    app:contentPaddingBottom="20dp"
     app:contentPaddingLeft="16dp"
     app:contentPaddingRight="16dp"
     app:contentPaddingTop="16dp">
@@ -21,6 +21,21 @@
         android:orientation="vertical"
         android:weightSum="1">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|end"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/options_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/ic_menu_icon"
+                android:padding="4dip"
+                android:gravity="top|end" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +51,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
+                android:fontFamily="@string/defaultFontFamilyMedium"
                 android:padding="20dp"
                 android:text=" System update available "
                 android:textColor="?android:textColorPrimary"
@@ -71,6 +86,16 @@
             android:textColor="?android:textColorSecondary"
             tools:text="15 January 2020"/>
 
+        <TextView
+            android:id="@+id/build_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColor="?android:textColorSecondary"
+            tools:text="300 MB"
+            tools:visibility="visible" />
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -85,7 +110,7 @@
                 android:layout_marginTop="15dp"
                 android:progressDrawable="@drawable/ic_progress_bg"
                 android:paddingTop="4sp"
-                android:visibility="invisible"
+                android:visibility="gone"
                 tools:progress="65"
                 tools:visibility="visible" />
 
@@ -100,22 +125,10 @@
                 android:singleLine="true"
                 android:textSize="14sp"
                 android:textColor="?android:textColorSecondary"
-                android:visibility="invisible"
+                android:visibility="gone"
                 tools:text="162 of 300 MB (3 minutes left) • 65%"
                 tools:visibility="visible" />
 
-            <TextView
-                android:id="@+id/build_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="35dp"
-                android:layout_marginStart="5dp"
-                android:singleLine="true"
-                android:textSize="14sp"
-                android:textColor="?android:textColorSecondary"
-                tools:text="300 MB"
-                tools:visibility="invisible" />
         </RelativeLayout>
 
         <LinearLayout
@@ -131,12 +144,12 @@
                 style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
+                android:fontFamily="@string/defaultFontFamilyMedium"
                 android:drawablePadding="5dp"
                 android:textAllCaps="false"
-                android:drawableTint="#ffffff"
+                android:drawableTint="?android:textColorPrimaryInverse"
                 android:drawableStart="@drawable/ic_pause"
-                android:textColor="#ffffff"
+                android:textColor="?android:textColorPrimaryInverse"
                 tools:text="Pause" />
 
             <Button
@@ -144,13 +157,13 @@
                 style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
+                android:fontFamily="@string/defaultFontFamilyMedium"
                 android:text="@string/details_button"
                 android:drawablePadding="5dp"
                 android:textAllCaps="false"
-                android:drawableStart="@drawable/ic_updateui_new"
-                android:drawableTint="#ffffff"
-                android:textColor="#ffffff"
+                android:drawableStart="@drawable/ic_updateui_information"
+                android:drawableTint="?android:textColorPrimaryInverse"
+                android:textColor="?android:textColorPrimaryInverse"
                 android:layout_marginStart="10dp"/>
         </LinearLayout>
 
