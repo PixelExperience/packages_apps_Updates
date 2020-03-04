@@ -25,8 +25,8 @@
     </style>
 
     <style name="ToolbarMenuTheme" parent="Widget.MaterialComponents.BottomAppBar">
-        <item name="drawableTint">?android:textColorSecondary</item>
-        <item name="android:tint">?android:textColorSecondary</item>
+        <item name="drawableTint">@color/text_primary</item>
+        <item name="android:tint">@color/text_primary</item>
     </style>
 
     <style name="ToolbarTitle" parent="android:TextAppearance.Material.Title">
