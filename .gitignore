@@ -8,6 +8,3 @@
 /gradle
 /gradlew
 /gradlew.bat
-/system_libs/*.jar
-/keystore.properties
-*.jks
