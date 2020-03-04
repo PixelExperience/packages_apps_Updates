@@ -90,7 +90,7 @@
     <!-- Export update -->
     <string name="dialog_export_title">Exporting update to internal storage</string>
     <string name="notification_export_success">Update exported to internal storage</string>
-    <string name="notification_export_fail">Export error</string>
+    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">Already exporting an update</string>
 
     <!-- ETA -->

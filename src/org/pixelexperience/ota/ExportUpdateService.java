@@ -16,6 +16,7 @@
  */
 package org.pixelexperience.ota;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -24,9 +25,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import org.pixelexperience.ota.misc.FileUtils;
 
@@ -35,6 +36,15 @@ import java.io.IOException;
 import java.text.NumberFormat;
 
 public class ExportUpdateService extends Service {
+
+    public static final String ACTION_EXPORT_STATUS = "action_export_status";
+    public static final String EXTRA_EXPORT_STATUS = "extra_export_status";
+    public static final int EXPORT_STATUS_RUNNING = 0;
+    public static final int EXPORT_STATUS_ALREADY_RUNNING = 1;
+    public static final int EXPORT_STATUS_SUCCESS = 2;
+    public static final int EXPORT_STATUS_FAILED = 3;
+
+    public static final int EXPORT_STATUS_PERMISSION_REQUEST_CODE = 869821;
 
     public static final String ACTION_START_EXPORTING = "start_exporting";
     public static final String ACTION_STOP_EXPORTING = "stop_exporting";
@@ -48,6 +58,7 @@ public class ExportUpdateService extends Service {
     private volatile boolean mIsExporting = false;
 
     private Thread mExportThread;
+    private LocalBroadcastManager mBroadcastManager;
     private ExportRunnable mExportRunnable;
 
     @Override
@@ -57,10 +68,11 @@ public class ExportUpdateService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        mBroadcastManager = LocalBroadcastManager.getInstance(this);
         if (ACTION_START_EXPORTING.equals(intent.getAction())) {
             if (mIsExporting) {
                 Log.e(TAG, "Already exporting an update");
-                Toast.makeText(this, R.string.toast_already_exporting, Toast.LENGTH_SHORT).show();
+                notifyExportStatusChanged(EXPORT_STATUS_ALREADY_RUNNING);
                 return START_NOT_STICKY;
             }
             mIsExporting = true;
@@ -90,7 +102,22 @@ public class ExportUpdateService extends Service {
         return START_NOT_STICKY;
     }
 
+    void notifyExportStatusChanged(int status) {
+        new Thread(() -> {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Intent intent = new Intent();
+            intent.setAction(ACTION_EXPORT_STATUS);
+            intent.putExtra(EXTRA_EXPORT_STATUS, status);
+            mBroadcastManager.sendBroadcast(intent);
+        }).start();
+    }
+
     private void startExporting(File source, File destination) {
+        notifyExportStatusChanged(EXPORT_STATUS_RUNNING);
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         NotificationChannel notificationChannel = new NotificationChannel(
@@ -131,7 +158,8 @@ public class ExportUpdateService extends Service {
         startForeground(NOTIFICATION_ID, notificationBuilder.build());
         notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
 
-        Runnable runnableComplete = () -> {
+        @SuppressLint("RestrictedApi") Runnable runnableComplete = () -> {
+            notifyExportStatusChanged(EXPORT_STATUS_SUCCESS);
             notificationStyle.setSummaryText(null);
             notificationStyle.setBigContentTitle(
                     getString(R.string.notification_export_success));
@@ -144,7 +172,8 @@ public class ExportUpdateService extends Service {
             stopForeground(STOP_FOREGROUND_DETACH);
         };
 
-        Runnable runnableFailed = () -> {
+        @SuppressLint("RestrictedApi") Runnable runnableFailed = () -> {
+            notifyExportStatusChanged(EXPORT_STATUS_FAILED);
             notificationStyle.setSummaryText(null);
             notificationStyle.setBigContentTitle(
                     getString(R.string.notification_export_fail));
