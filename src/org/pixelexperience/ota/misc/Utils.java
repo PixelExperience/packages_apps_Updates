@@ -156,13 +156,7 @@ public class Utils {
     }
 
     public static String getServerURL() {
-        String buildType = getBuildType();
-        if (buildType.equals("OFFICIAL")){
-            return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }else if (buildType.equals("CI")){
-            return String.format(Constants.OTA_CI_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }
-        return null;
+        return String.format(Constants.OTA_CI_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
     public static String getMaintainerURL(String username) {
