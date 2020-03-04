@@ -152,8 +152,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             viewHolder.mBuildName.setSelected(false);
         }
 
-        viewHolder.mOptionsButton.setOnClickListener(getOptionsButtonClickListener(update, canDelete,
-                viewHolder.mOptionsButton));
+        setupOptionMenuListeners(update, canDelete, viewHolder);
         viewHolder.mProgressBar.setVisibility(View.VISIBLE);
         viewHolder.mProgressText.setVisibility(View.VISIBLE);
         viewHolder.mBuildSize.setVisibility(View.GONE);
@@ -162,25 +161,21 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     private void handleNotActiveStatus(ViewHolder viewHolder, UpdateInfo update) {
         final String downloadId = update.getDownloadId();
         if (mUpdaterController.isWaitingForReboot(downloadId)) {
-            viewHolder.mOptionsButton.setOnClickListener(
-                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
+            setupOptionMenuListeners(update, false, viewHolder);
             setButtonAction(viewHolder.mAction, Action.REBOOT, downloadId, true);
             viewHolder.mDetails.setVisibility(View.GONE);
         } else if (update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED) {
-            viewHolder.mOptionsButton.setOnClickListener(
-                    getOptionsButtonClickListener(update, true, viewHolder.mOptionsButton));
+            setupOptionMenuListeners(update, true, viewHolder);
             setButtonAction(viewHolder.mAction,
                     Utils.canInstall(update) ? Action.INSTALL : Action.DELETE,
                     downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.GONE);
         } else if (!Utils.canInstall(update)) {
-            viewHolder.mOptionsButton.setOnClickListener(
-                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
+            setupOptionMenuListeners(update, false, viewHolder);
             setButtonAction(viewHolder.mAction, Action.INFO, downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.GONE);
         } else {
-            viewHolder.mOptionsButton.setOnClickListener(
-                    getOptionsButtonClickListener(update, false, viewHolder.mOptionsButton));
+            setupOptionMenuListeners(update, false, viewHolder);
             setButtonAction(viewHolder.mAction, Action.DOWNLOAD, downloadId, !isBusy());
             viewHolder.mDetails.setVisibility(View.VISIBLE);
         }
@@ -413,9 +408,12 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setNegativeButton(android.R.string.cancel, null);
     }
 
-    private View.OnClickListener getOptionsButtonClickListener(final UpdateInfo update,
-                                                          final boolean canDelete, View anchor) {
-        return v -> startActionMode(update, canDelete, anchor);
+    private void setupOptionMenuListeners(UpdateInfo update, final boolean canDelete, ViewHolder viewHolder){
+        viewHolder.itemView.setOnLongClickListener(v -> {
+            startActionMode(update, canDelete, viewHolder.mBuildDate);
+            return true;
+        });
+        viewHolder.mOptionsButton.setOnClickListener(v -> startActionMode(update, canDelete, viewHolder.mOptionsButton));
     }
 
     private AlertDialog.Builder getInstallDialog(final String downloadId) {
