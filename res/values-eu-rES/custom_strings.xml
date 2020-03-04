@@ -31,9 +31,6 @@
     <string name="download_starting_notification">Deskarga hasten</string>
     <string name="update_failed_notification">Eguneraketak huts egin du</string>
     <!-- Menu -->
-    <string name="menu_refresh">Berritu</string>
-    <string name="menu_preferences">Hobespenak</string>
-    <string name="menu_auto_updates_check">Eguneraketen egiaztaketa automatikoa</string>
     <string name="menu_delete_update">Ezabatu</string>
     <string name="menu_copy_url">Kopiatu URL-a</string>
     <string name="menu_export_update">Esportatu eguneraketa</string>
@@ -101,9 +98,7 @@
     <string name="update_on_mobile_data_title">Kontuz</string>
     <string name="update_on_mobile_data_message">Eguneratze pakete bat deskargatuko duzu datu mugikorrak erabiliz, honek datuen erabilera handia egingo du. Ziur aurrera jarraitu nahi duzula?</string>
     <string name="checkbox_mobile_data_warning">Ez erakutsi berriro</string>
-    <string name="menu_mobile_data_warning">Datu mugikorren abisua</string>
     <!-- Info section -->
-    <string name="extras_category_title">Gehigarriak</string>
     <string name="maintainer_info_title">Mantentzailea</string>
     <string name="donate_info_title">Diruz lagundu</string>
     <string name="donate_info_summary">Garapena lagundu</string>

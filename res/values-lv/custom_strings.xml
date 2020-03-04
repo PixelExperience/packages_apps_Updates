@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Atjaunināšana Neizdevās</string>
     <string name="installation_suspended_notification">Instalācija apturēta</string>
     <!-- Menu -->
-    <string name="menu_refresh">Atjaunot</string>
-    <string name="menu_preferences">Iestatījumi</string>
-    <string name="menu_auto_updates_check">Pārbaudīt vai ir atjauninājumu</string>
-    <string name="menu_auto_updates_check_interval_daily">Reizi dienā</string>
-    <string name="menu_auto_updates_check_interval_weekly">Reizi nedēļā</string>
-    <string name="menu_auto_updates_check_interval_monthly">Reizi mēnesī</string>
-    <string name="menu_auto_updates_check_interval_never">Nekad</string>
     <string name="menu_delete_update">Dzēst</string>
     <string name="menu_copy_url">Nokopēt URL</string>
     <string name="menu_export_update">Eksportēt atjauninājumu</string>
@@ -92,7 +85,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
-    <string name="extras_category_title">Papildus</string>
     <string name="donate_info_title">Ziedot</string>
     <string name="website_info_title">Tīmekļa vietne</string>
     <string name="news_info_title">Jaunumi</string>

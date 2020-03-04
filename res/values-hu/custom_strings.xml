@@ -32,13 +32,6 @@
     <string name="update_failed_notification">A frissítés nem sikerült</string>
     <string name="installation_suspended_notification">A telepítés felfüggesztve</string>
     <!-- Menu -->
-    <string name="menu_refresh">Frissítés</string>
-    <string name="menu_preferences">Tulajdonságok</string>
-    <string name="menu_auto_updates_check">Frissítések automatikus ellenőrzése</string>
-    <string name="menu_auto_updates_check_interval_daily">Naponta egyszer</string>
-    <string name="menu_auto_updates_check_interval_weekly">Hetente egyszer</string>
-    <string name="menu_auto_updates_check_interval_monthly">Havonta egyszer</string>
-    <string name="menu_auto_updates_check_interval_never">Soha</string>
     <string name="menu_delete_update">Törlés</string>
     <string name="menu_copy_url">Az URL másolása</string>
     <string name="menu_export_update">Frissítés-exportálás</string>
@@ -110,9 +103,7 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="update_on_mobile_data_title">Figyelmeztetés</string>
     <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ez magas adathasználatot eredményezhetet. Szeretné folytatni?</string>
     <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
-    <string name="menu_mobile_data_warning">Mobiladat-figyelmeztetés</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extrák</string>
     <string name="maintainer_info_title">Karbantartó</string>
     <string name="donate_info_title">Támogatás</string>
     <string name="donate_info_summary">A fejlesztés támogatása</string>

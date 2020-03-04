@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Aniciando descarga</string>
     <string name="update_failed_notification">Falló l\'anovamientu</string>
     <!-- Menu -->
-    <string name="menu_refresh">Refrescar</string>
-    <string name="menu_preferences">Preferencies</string>
-    <string name="menu_auto_updates_check">Comprobación automática d\'anovamientos</string>
-    <string name="menu_auto_updates_check_interval_daily">Una vegada al día</string>
-    <string name="menu_auto_updates_check_interval_weekly">Una vegada por selmana</string>
-    <string name="menu_auto_updates_check_interval_monthly">Una vegada al mes</string>
-    <string name="menu_auto_updates_check_interval_never">Enxamás</string>
     <string name="menu_delete_update">Desaniciar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Esportar anovamientu</string>
@@ -103,6 +96,5 @@
     <string name="update_on_mobile_data_title">Alvertencia</string>
     <string name="update_on_mobile_data_message">Tas a piques de baxar un paquete d\'anovamientu usando los datos móviles que pue causar un usu altu de datos. ¿Prestaríate siguir?</string>
     <string name="checkbox_mobile_data_warning">Nun amosar más</string>
-    <string name="menu_mobile_data_warning">Alvertencia de datos de móviles</string>
     <!-- Info section -->
 </resources>

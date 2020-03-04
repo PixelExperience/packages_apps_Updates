@@ -34,7 +34,6 @@
     <string name="check_for_update">Check for update</string>
 
     <!-- Menu -->
-    <string name="menu_refresh">Refresh</string>
     <string name="menu_delete_update">Delete</string>
     <string name="menu_copy_url">Copy URL</string>
     <string name="menu_export_update">Export update</string>
@@ -55,7 +54,7 @@
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifying update</string>
-    <string name="list_no_updates">No new update found. To manually check for a new update, use the "\""Check for update"\"" button.</string>
+    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Update blocked</string>
 
     <!-- Actions -->
@@ -113,7 +112,6 @@
     <string name="checkbox_mobile_data_warning">Do not show again</string>
 
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">Support the development</string>

@@ -32,13 +32,6 @@
     <string name="update_failed_notification">העדכון נכשל</string>
     <string name="installation_suspended_notification">ההתקנה הושהתה</string>
     <!-- Menu -->
-    <string name="menu_refresh">רענן</string>
-    <string name="menu_preferences">העדפות</string>
-    <string name="menu_auto_updates_check">בדיקת עדכונים אוטומטית</string>
-    <string name="menu_auto_updates_check_interval_daily">פעם ביום</string>
-    <string name="menu_auto_updates_check_interval_weekly">פעם בשבוע</string>
-    <string name="menu_auto_updates_check_interval_monthly">פעם בחודש</string>
-    <string name="menu_auto_updates_check_interval_never">לעולם לא</string>
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
@@ -115,9 +108,7 @@
     <string name="update_on_mobile_data_title">אזהרה!</string>
     <string name="update_on_mobile_data_message">אתה עומד להוריד חבילת עדכונים באמצעות האינטרנט הסלולרי שסביר להניח יגרום לבזבוז חלק גדול מחבילת הגלישה שלך. להמשיך?</string>
     <string name="checkbox_mobile_data_warning">אל תציג שוב</string>
-    <string name="menu_mobile_data_warning">אזהרת אינטרנט סלולרי</string>
     <!-- Info section -->
-    <string name="extras_category_title">תוספות</string>
     <string name="maintainer_info_title">מתחזקים</string>
     <string name="donate_info_title">תרום</string>
     <string name="donate_info_summary">תמיכה במפתחים</string>

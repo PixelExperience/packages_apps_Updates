@@ -32,13 +32,6 @@
     <string name="update_failed_notification">အဆင့်မြင့်တင်ခြင်း မအောင်မြင်ပါ</string>
     <string name="installation_suspended_notification">ထည့်သွင်းခြင်း ခေတ္တရပ်ဆိုင်းသွားသည်</string>
     <!-- Menu -->
-    <string name="menu_refresh">အသစ်ပြန်လည်ပြရန်</string>
-    <string name="menu_preferences">ချိန်ညှိမှုများ</string>
-    <string name="menu_auto_updates_check">အဆင့်မြှင့်တင်မှုများအား အလိုအလျောက်စစ်ဆေးခြင်း</string>
-    <string name="menu_auto_updates_check_interval_daily">တနေ့တခါ</string>
-    <string name="menu_auto_updates_check_interval_weekly">တပတ်တခါ</string>
-    <string name="menu_auto_updates_check_interval_monthly">တလ တခါ</string>
-    <string name="menu_auto_updates_check_interval_never">မစစ်ဆေးပါ။</string>
     <string name="menu_delete_update">ဖျက်ရန်</string>
     <string name="menu_copy_url">URL ကို ကူးရန်</string>
     <string name="menu_export_update">အဆင့်မြင့်တင်မှုဖိုင်အား ပြင်ပသို့ ဖိုင်ထုတ်မည်</string>
@@ -96,9 +89,7 @@
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">သတိပြုရန်</string>
     <string name="checkbox_mobile_data_warning">ထပ်မပြပါနှင့်</string>
-    <string name="menu_mobile_data_warning">မိုဘိုင်းဒေတာ သတိပေးချက်</string>
     <!-- Info section -->
-    <string name="extras_category_title">အပိုဆောင်းများ</string>
     <string name="maintainer_info_title">ပြုပြင်ပေးသူ</string>
     <string name="donate_info_title">လှူရန်</string>
     <string name="donate_info_summary">တိုးတက်တီတွင်မှုအတွက် ပံ့ပိုးပါ</string>

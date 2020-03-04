@@ -32,13 +32,6 @@
     <string name="update_failed_notification">更新失敗</string>
     <string name="installation_suspended_notification">安裝已中斷</string>
     <!-- Menu -->
-    <string name="menu_refresh">重新整理</string>
-    <string name="menu_preferences">使用偏好</string>
-    <string name="menu_auto_updates_check">自動更新檢查</string>
-    <string name="menu_auto_updates_check_interval_daily">每天一次</string>
-    <string name="menu_auto_updates_check_interval_weekly">每週一次</string>
-    <string name="menu_auto_updates_check_interval_monthly">每月一次</string>
-    <string name="menu_auto_updates_check_interval_never">永不</string>
     <string name="menu_delete_update">移除</string>
     <string name="menu_copy_url">複製網址</string>
     <string name="menu_export_update">匯出更新</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">下載的更新檔案有可能會使用較高的行動數據，您要繼續嗎？</string>
     <string name="checkbox_mobile_data_warning">不再顯示</string>
-    <string name="menu_mobile_data_warning">行動數據警告</string>
     <!-- Info section -->
-    <string name="extras_category_title">附加功能</string>
     <string name="maintainer_info_title">維護者</string>
     <string name="donate_info_title">捐贈</string>
     <string name="donate_info_summary">支持開發作業</string>

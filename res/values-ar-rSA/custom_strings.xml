@@ -31,13 +31,6 @@
     <string name="download_starting_notification">بدء التنزيل</string>
     <string name="update_failed_notification">فشل التحديث</string>
     <!-- Menu -->
-    <string name="menu_refresh">تحديث</string>
-    <string name="menu_preferences">التفضيلات</string>
-    <string name="menu_auto_updates_check">التحقق من التحديثات التلقائية</string>
-    <string name="menu_auto_updates_check_interval_daily">مرة في اليوم</string>
-    <string name="menu_auto_updates_check_interval_weekly">مرة في الأسبوع</string>
-    <string name="menu_auto_updates_check_interval_monthly">مرة في الشهر</string>
-    <string name="menu_auto_updates_check_interval_never">مطلقًا</string>
     <string name="menu_delete_update">حذف</string>
     <string name="menu_copy_url">نسخ الرابط</string>
     <string name="menu_export_update">تصدير التحديث</string>
@@ -118,9 +111,7 @@
     <string name="update_on_mobile_data_title">تحذير</string>
     <string name="update_on_mobile_data_message">أنت على وشك أن تقوم بتنزيل حزمة تحديث باستخدام البيانات مما سيتسبب في استخدام عالي للبيانات. هل تريد المتابعة؟</string>
     <string name="checkbox_mobile_data_warning">لا تظهر مرة أخرى</string>
-    <string name="menu_mobile_data_warning">تحذير البيانات</string>
     <!-- Info section -->
-    <string name="extras_category_title">إضافات</string>
     <string name="maintainer_info_title">المشرف</string>
     <string name="donate_info_title">التبرع</string>
     <string name="donate_info_summary">إدعم المطور</string>

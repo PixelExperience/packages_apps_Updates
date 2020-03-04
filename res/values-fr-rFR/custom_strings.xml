@@ -31,9 +31,6 @@
     <string name="download_starting_notification">Début du téléchargement</string>
     <string name="update_failed_notification">Échec de la mise à jour</string>
     <!-- Menu -->
-    <string name="menu_refresh">Actualiser</string>
-    <string name="menu_preferences">Préférences</string>
-    <string name="menu_auto_updates_check">Vérification des mises à jour automatique</string>
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_copy_url">Copier l\'URL</string>
     <string name="menu_export_update">Exporter la mise à jour</string>
@@ -102,9 +99,7 @@
     <string name="update_on_mobile_data_title">Attention</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
     <string name="checkbox_mobile_data_warning">Ne plus afficher ce message</string>
-    <string name="menu_mobile_data_warning">Avertissement d\'usage des données mobiles</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Mainteneur</string>
     <string name="donate_info_title">Faire un don</string>
     <string name="donate_info_summary">Soutenez le développement</string>

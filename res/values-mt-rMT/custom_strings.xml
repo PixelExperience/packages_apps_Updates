@@ -32,13 +32,6 @@
     <string name="update_failed_notification">L-aġġornament falla</string>
     <string name="installation_suspended_notification">Installazzjoni sospiża</string>
     <!-- Menu -->
-    <string name="menu_refresh">Riffriskar</string>
-    <string name="menu_preferences">Preferenzi</string>
-    <string name="menu_auto_updates_check">Aġġornamenti awtomatiku qed jiġu ċċekkjati</string>
-    <string name="menu_auto_updates_check_interval_daily">Darba kuljum</string>
-    <string name="menu_auto_updates_check_interval_weekly">Darba fil-ġimgħa</string>
-    <string name="menu_auto_updates_check_interval_monthly">Darba fix-xahar</string>
-    <string name="menu_auto_updates_check_interval_never">Qatt</string>
     <string name="menu_delete_update">Ħassar</string>
     <string name="menu_copy_url">Ikkopja l-URL</string>
     <string name="menu_export_update">L-esportazzjoni tal-aġġornament</string>
@@ -97,9 +90,7 @@
     <string name="update_on_mobile_data_title">Twissija</string>
     <string name="update_on_mobile_data_message">Qed tniżżel pakkett ta \'aġġornament bl-użu tad-data tal-mowbajl li x\'aktarx se tikkawża użu għoli tad-data. Tixtieq tipproċedi?</string>
     <string name="checkbox_mobile_data_warning">Terġax turi</string>
-    <string name="menu_mobile_data_warning">Twissija mobbli tad-data</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Donatja</string>
     <string name="donate_info_summary">Appoġġja l-iżvilupp</string>

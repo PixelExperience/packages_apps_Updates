@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Herunterladen wird gestartet</string>
     <string name="update_failed_notification">Update fehlgeschlagen</string>
     <!-- Menu -->
-    <string name="menu_refresh">Aktualisieren</string>
-    <string name="menu_preferences">Voreinstellungen</string>
-    <string name="menu_auto_updates_check">Automatisch nach Updates suchen</string>
-    <string name="menu_auto_updates_check_interval_daily">Einmal am Tag</string>
-    <string name="menu_auto_updates_check_interval_weekly">Einmal pro Woche</string>
-    <string name="menu_auto_updates_check_interval_monthly">Einmal pro Monat</string>
-    <string name="menu_auto_updates_check_interval_never">Niemals</string>
     <string name="menu_delete_update">Löschen</string>
     <string name="menu_copy_url">URL in Zwischenablage kopieren</string>
     <string name="menu_export_update">Update exportieren</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">Warnung</string>
     <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
     <string name="checkbox_mobile_data_warning">Nicht mehr anzeigen</string>
-    <string name="menu_mobile_data_warning">Mobildaten-Warnung</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Betreuer</string>
     <string name="donate_info_title">Spenden</string>
     <string name="donate_info_summary">Unterstütze die Entwicklung</string>

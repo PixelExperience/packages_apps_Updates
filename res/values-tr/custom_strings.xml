@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Güncelleme başarısız</string>
     <string name="installation_suspended_notification">Kurulum askıya alındı</string>
     <!-- Menu -->
-    <string name="menu_refresh">Yenile</string>
-    <string name="menu_preferences">Tercihler</string>
-    <string name="menu_auto_updates_check">Otomatik güncelleme kontrolü</string>
-    <string name="menu_auto_updates_check_interval_daily">Günde bir defa</string>
-    <string name="menu_auto_updates_check_interval_weekly">Haftada bir defa</string>
-    <string name="menu_auto_updates_check_interval_monthly">Ayda bir defa</string>
-    <string name="menu_auto_updates_check_interval_never">Asla</string>
     <string name="menu_delete_update">Sil</string>
     <string name="menu_copy_url">Bağlantıyı kopyala</string>
     <string name="menu_export_update">Güncellemeyi dışarı aktar</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Uyarı</string>
     <string name="update_on_mobile_data_message">Büyük bir olasılıkla yüksek veri kullanımına neden olacak mobil veri kullanarak bir güncelleme paketi indirmek üzeresiniz. Devam etmek ister misiniz?</string>
     <string name="checkbox_mobile_data_warning">Tekrar gösterme</string>
-    <string name="menu_mobile_data_warning">Mobil veri uyarısı</string>
     <!-- Info section -->
-    <string name="extras_category_title">Ekstralar</string>
     <string name="maintainer_info_title">Cihaz sorumlusu</string>
     <string name="donate_info_title">Bağış yap</string>
     <string name="donate_info_summary">Geliştirmeyi destekle</string>

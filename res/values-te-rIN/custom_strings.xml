@@ -27,7 +27,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
-    <string name="extras_category_title">ఎక్స్ట్రాలు</string>
     <string name="maintainer_info_title">సంరక్షకునికి</string>
     <string name="donate_info_title">దానం</string>
     <string name="donate_info_summary">మద్దతు మెరుగుపడింది</string>

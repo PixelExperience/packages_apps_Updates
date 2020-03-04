@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Загрузка началась</string>
     <string name="update_failed_notification">Сбой обновления</string>
     <!-- Menu -->
-    <string name="menu_refresh">Обновить</string>
-    <string name="menu_preferences">Настройки</string>
-    <string name="menu_auto_updates_check">Автоматическая проверка обновлений</string>
-    <string name="menu_auto_updates_check_interval_daily">Раз в день</string>
-    <string name="menu_auto_updates_check_interval_weekly">Раз в неделю</string>
-    <string name="menu_auto_updates_check_interval_monthly">Раз в месяц</string>
-    <string name="menu_auto_updates_check_interval_never">Никогда</string>
     <string name="menu_delete_update">Удалить</string>
     <string name="menu_copy_url">Копировать URL-адрес</string>
     <string name="menu_export_update">Экспорт обновлений</string>
@@ -112,9 +105,7 @@
     <string name="update_on_mobile_data_title">Предупреждение</string>
     <string name="update_on_mobile_data_message">Скачивание обновления по мобильной сети расходует большой объём трафика и может привести к непредвиденным расходам. Продолжить?</string>
     <string name="checkbox_mobile_data_warning">Не показывать снова</string>
-    <string name="menu_mobile_data_warning">Предупрежд. о моб. данных</string>
     <!-- Info section -->
-    <string name="extras_category_title">Дополнения</string>
     <string name="maintainer_info_title">Разработчик</string>
     <string name="donate_info_title">Пожертвовать</string>
     <string name="donate_info_summary">Поддержать разработку</string>

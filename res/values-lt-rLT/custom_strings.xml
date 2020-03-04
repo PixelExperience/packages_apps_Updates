@@ -21,7 +21,6 @@
     <string name="export_channel_title">Eksportavimo eiga</string>
     <string name="new_updates_channel_title">Nauji atnaujinimai</string>
     <!-- Menu -->
-    <string name="menu_refresh">Įkelti iš naujo</string>
     <string name="changelog_loading">Kraunasi…</string>
     <!-- General -->
     <string name="update_found_notification">Pasiekiami nauji atnaujinimai</string>
@@ -36,7 +35,6 @@
     <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
     <string name="checkbox_mobile_data_warning">Daugiau nerodyti</string>
     <!-- Info section -->
-    <string name="extras_category_title">Priedai</string>
     <string name="maintainer_info_title">Kūrėjas/Prižiūrėtojas</string>
     <string name="donate_info_title">Paaukoti</string>
     <string name="donate_info_summary">Paremti programos vystymą</string>

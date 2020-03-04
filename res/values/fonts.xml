@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="defaultFontFamily">google-sans</string>
-    <string name="defaultFontFamilyMedium">google-sans-medium</string>
+    <string name="defaultFontFamilyMedium" translatable="false">google-sans-medium</string>
 </resources>

@@ -19,7 +19,6 @@
     <string name="app_name">به‌روز‌رسانی‌های سیستم</string>
     <!-- Notifications -->
     <!-- Menu -->
-    <string name="menu_refresh">تازه‌سازی</string>
     <string name="changelog_loading">در حال بارگذاری…</string>
     <!-- General -->
     <string name="update_found_notification">به‌روزرسانی جدیدی موجود است</string>
@@ -34,7 +33,6 @@
     <string name="update_on_mobile_data_message">شما در حال بارگیری بسته به‌روزرسانی با داده سیم‌کارت هستید که احتمالاً حجم داده زیادی مصرف می‌کند. آیا می‌خواهید ادامه دهید؟</string>
     <string name="checkbox_mobile_data_warning">دوباره نمایش نده</string>
     <!-- Info section -->
-    <string name="extras_category_title">افزونه‌ها</string>
     <string name="maintainer_info_title">برقرار نگه‌دارنده</string>
     <string name="donate_info_title">کمک مالی</string>
     <string name="donate_info_summary">از توسعه رام حمایت کنید</string>

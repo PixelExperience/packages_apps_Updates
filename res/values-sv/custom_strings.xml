@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Påbörjar nedladdning</string>
     <string name="update_failed_notification">Något gick fel! Uppdateringen Misslyckades</string>
     <!-- Menu -->
-    <string name="menu_refresh">Ladda om</string>
-    <string name="menu_preferences">Inställningar</string>
-    <string name="menu_auto_updates_check">Sök efter uppdateringar automatiskt</string>
-    <string name="menu_auto_updates_check_interval_daily">Varje dag</string>
-    <string name="menu_auto_updates_check_interval_weekly">Varje vecka</string>
-    <string name="menu_auto_updates_check_interval_monthly">Varje månad</string>
-    <string name="menu_auto_updates_check_interval_never">Aldrig</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
     <string name="menu_export_update">Exportera uppdateringen</string>
@@ -95,9 +88,7 @@
     <string name="update_on_mobile_data_title">Varning</string>
     <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
     <string name="checkbox_mobile_data_warning">Visa inte igen</string>
-    <string name="menu_mobile_data_warning">Mobildatavarning</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extra</string>
     <string name="maintainer_info_title">Underhållare</string>
     <string name="donate_info_title">Donera</string>
     <string name="donate_info_summary">Stöd utvecklingen</string>

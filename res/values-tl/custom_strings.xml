@@ -20,9 +20,6 @@
     <!-- Notifications -->
     <string name="download_starting_notification">Nagsimula ng mag download</string>
     <!-- Menu -->
-    <string name="menu_auto_updates_check_interval_daily">Isang beses sa isang araw</string>
-    <string name="menu_auto_updates_check_interval_weekly">Isang beses sa isang linggo</string>
-    <string name="menu_auto_updates_check_interval_monthly">Isang beses sa isang buwan</string>
     <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
     <string name="label_download_url">I-download ang URL</string>
     <string name="toast_download_url_copied">Nakopya ang URL</string>
@@ -43,7 +40,6 @@
     <string name="update_on_mobile_data_message">Ikaw ay magda-download ng update package gamit ang mobile data na maaaring magdulot ng mataas na paggamit ng data. Gusto mo bang magpatuloy?</string>
     <string name="checkbox_mobile_data_warning">Huwag ulit ipakita</string>
     <!-- Info section -->
-    <string name="extras_category_title">Mga extra</string>
     <string name="maintainer_info_title">Taga-maintain</string>
     <string name="donate_info_title">Mag-donate</string>
     <string name="donate_info_summary">Suportahan ang pag-develop</string>

@@ -29,8 +29,6 @@
     <string name="download_completed_notification">Nedladdning slutförd</string>
     <string name="download_starting_notification">Påbörjar nedladdning</string>
     <!-- Menu -->
-    <string name="menu_refresh">Ladda om</string>
-    <string name="menu_auto_updates_check">Sök efter uppdateringar automatiskt</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
     <string name="menu_show_changelog">Visa ändringslogg</string>
@@ -62,7 +60,6 @@
     <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
     <string name="checkbox_mobile_data_warning">Visa inte igen</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extra</string>
     <string name="maintainer_info_title">Underhållare</string>
     <string name="donate_info_title">Donera</string>
     <string name="donate_info_summary">Stöd utvecklingen</string>

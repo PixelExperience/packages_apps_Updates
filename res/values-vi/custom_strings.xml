@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Cập nhật thất bại</string>
     <string name="installation_suspended_notification">Tạm hoãn cài đặt</string>
     <!-- Menu -->
-    <string name="menu_refresh">Làm mới</string>
-    <string name="menu_preferences">Tùy chỉnh</string>
-    <string name="menu_auto_updates_check">Tự động kiểm tra bản cập nhật</string>
-    <string name="menu_auto_updates_check_interval_daily">Mỗi ngày một lần</string>
-    <string name="menu_auto_updates_check_interval_weekly">Mỗi tuần một lần</string>
-    <string name="menu_auto_updates_check_interval_monthly">Mỗi tháng một lần</string>
-    <string name="menu_auto_updates_check_interval_never">Không bao giờ</string>
     <string name="menu_delete_update">Xóa</string>
     <string name="menu_copy_url">Sao chép URL</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">Cảnh báo</string>
     <string name="update_on_mobile_data_message">Bạn sắp tải xuống một gói cập nhật sử dụng dữ liệu di động có khả năng gây ra việc sử dụng dữ liệu cao. Bạn có muốn tiến hành không?</string>
     <string name="checkbox_mobile_data_warning">Không hiện lại</string>
-    <string name="menu_mobile_data_warning">Cảnh báo dữ liệu di động</string>
     <!-- Info section -->
-    <string name="extras_category_title">Tính năng bổ xung</string>
     <string name="maintainer_info_title">Người duy trì</string>
     <string name="donate_info_title">Ủng hộ</string>
     <string name="donate_info_summary">Hỗ trợ việc phát triển</string>

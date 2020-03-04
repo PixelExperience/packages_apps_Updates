@@ -31,9 +31,6 @@
     <string name="download_starting_notification">Memulai unduhan</string>
     <string name="update_failed_notification">Pembaruan gagal</string>
     <!-- Menu -->
-    <string name="menu_refresh">Segarkan</string>
-    <string name="menu_preferences">Preferensi</string>
-    <string name="menu_auto_updates_check">Periksa pembaruan otomatis</string>
     <string name="menu_delete_update">Hapus</string>
     <string name="menu_copy_url">Salin URL</string>
     <string name="menu_export_update">Ekspor pembaruan</string>
@@ -99,9 +96,7 @@
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan megunduh paket pemutakhiran menggunakan data seluler yang mungkin akan menyebabkan penggunaan data yang tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>
-    <string name="menu_mobile_data_warning">Peringatan data seluler</string>
     <!-- Info section -->
-    <string name="extras_category_title">Tambahan</string>
     <string name="maintainer_info_title">Pengelola</string>
     <string name="donate_info_title">Donasi</string>
     <string name="donate_info_summary">Dukung pengembangan</string>

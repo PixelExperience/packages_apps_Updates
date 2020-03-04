@@ -32,13 +32,6 @@
     <string name="update_failed_notification">གསར་བསྒྱུར་བྱེད་མ་ཐུབ། </string>
     <string name="installation_suspended_notification">ནང་འཇུག་སྐབས་སྡོད་བྱས་ཟིན། </string>
     <!-- Menu -->
-    <string name="menu_refresh">བའྐྱར་འཇུག་བྱ།</string>
-    <string name="menu_preferences">གཏོའི་གདམ་ཚན།</string>
-    <string name="menu_auto_updates_check">རང་འགུལ་གྱིས་ཐོན་རིམ་ལ་ཞིབ་བཤེར་བྱེད་པ།</string>
-    <string name="menu_auto_updates_check_interval_daily">ཉིན་རེར་ཐེངས་རེ།</string>
-    <string name="menu_auto_updates_check_interval_weekly">གཟའ་རེར་ཐེངས་རེ།</string>
-    <string name="menu_auto_updates_check_interval_monthly">ཟླ་རེར་ཐེངས་རེ།</string>
-    <string name="menu_auto_updates_check_interval_never">གཏན་དུ་མི་བྱེད།</string>
     <string name="menu_delete_update">བསུབ་པ།</string>
     <string name="menu_copy_url">དྲ་ཚིགས་ཀྱི་ས་གནས་བསྐྱར་བཤུ།</string>
     <string name="menu_export_update">གསར་བསྒྱུར་ཕྱིར་གཏོང་བྱེད་པ།</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">སྤོ་སྒུལ་དྲ་རྒྱ་བེད་སྤྱོད་ཀྱི་ཉེན་བརྡ།</string>
     <string name="update_on_mobile_data_message">ཁྱེད་ཀྱིས་སྤོ་སྒུལ་དྲ་རྒྱས་གསར་བསྒྱུར་གྱི་ཡིག་ཆ་ཕབ་ལེན་བྱེད་དམ། འདི་ལྟར་བྱས་ན་གཞི་ཚད་མང་པོ་སྤྱོད་ངེས།  སྔར་བ་བཞིན་ཕབ་ལེན་བྱེད་དམ།</string>
     <string name="checkbox_mobile_data_warning">བསྐྱར་འདྲི་མ་བྱེད།</string>
-    <string name="menu_mobile_data_warning">སྤོ་འགུལ་གཞི་གྲངས་ཀྱི་ཉེན་བརྡ།</string>
     <!-- Info section -->
-    <string name="extras_category_title">ཟུར་སྣོན་བྱས་པའི་བྱེད་ནུས།</string>
     <string name="maintainer_info_title">སྲུང་འཛིན་པ།</string>
     <string name="donate_info_title">ཞལ་འདེབས།</string>
     <string name="donate_info_summary">གསར་སྤེལ་ལ་རྒྱབ་སྐྱོར་བྱེད་པ།</string>

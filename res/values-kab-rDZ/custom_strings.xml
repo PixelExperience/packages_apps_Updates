@@ -19,7 +19,6 @@
     <string name="app_name">Anagraw ileqman</string>
     <!-- Notifications -->
     <!-- Menu -->
-    <string name="menu_refresh">Sismeḍ</string>
     <!-- General -->
     <string name="update_found_notification">Ileqman imaynuten wejden</string>
     <!-- Actions -->
@@ -33,7 +32,6 @@
     <string name="update_on_mobile_data_message">Aql ak-id ad sidreḍ yiwen n lqem s useqdec n isefka izirazen ad waṭas n isefka ara yettwasqedcen.tebɣiḍ attkemmleḍ?</string>
     <string name="checkbox_mobile_data_warning">Ur d-skan ara tikelt nniḍen</string>
     <!-- Info section -->
-    <string name="extras_category_title">Ugar</string>
     <string name="maintainer_info_title">Adiwinni</string>
     <string name="donate_info_title">Tikci</string>
     <string name="donate_info_summary">Fked tallalt i unegmu</string>

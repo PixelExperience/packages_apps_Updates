@@ -27,7 +27,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
-    <string name="extras_category_title">Mere</string>
     <string name="maintainer_info_title">Vedligeholder</string>
     <string name="donate_info_title">Donér</string>
     <string name="donate_info_summary">Støt udviklingen</string>

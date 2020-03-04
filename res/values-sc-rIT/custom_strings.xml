@@ -21,7 +21,6 @@
     <string name="update_failed_channel_title">Agiornamentu fallidu</string>
     <string name="update_failed_notification">Agiornamentu fallidu</string>
     <!-- Menu -->
-    <string name="menu_preferences">Preferèntzias</string>
     <string name="menu_delete_update">Iscantzella</string>
     <!-- General -->
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> de <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>

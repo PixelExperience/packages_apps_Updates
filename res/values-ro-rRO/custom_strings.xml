@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Pornire descărcare</string>
     <string name="update_failed_notification">Actualizare eșuată</string>
     <!-- Menu -->
-    <string name="menu_refresh">Reîmprospătare</string>
-    <string name="menu_preferences">Preferințe</string>
-    <string name="menu_auto_updates_check">Verificare automată a actualizărilor</string>
-    <string name="menu_auto_updates_check_interval_daily">Odată pe zi</string>
-    <string name="menu_auto_updates_check_interval_weekly">Odată pe săptămână</string>
-    <string name="menu_auto_updates_check_interval_monthly">Odată pe lună</string>
-    <string name="menu_auto_updates_check_interval_never">Niciodată</string>
     <string name="menu_delete_update">Șterge</string>
     <string name="menu_copy_url">Copiază URL</string>
     <string name="menu_export_update">Exportează actualizarea</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Avertisment</string>
     <string name="update_on_mobile_data_message">Sunteți pe cale de a descărca un pachet de actualizare folosind datele mobile care, probabil, vor provoca o utilizare mare de date. Doriţi să continuaţi?</string>
     <string name="checkbox_mobile_data_warning">Nu se mai afișează</string>
-    <string name="menu_mobile_data_warning">Avertizare de date mobile</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extra</string>
     <string name="maintainer_info_title">Dezvoltator</string>
     <string name="donate_info_title">Donează</string>
     <string name="donate_info_summary">Susțineți dezvoltarea</string>

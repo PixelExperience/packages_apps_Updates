@@ -32,13 +32,6 @@
     <string name="update_failed_notification">更新失败</string>
     <string name="installation_suspended_notification">安装已挂起</string>
     <!-- Menu -->
-    <string name="menu_refresh">刷新</string>
-    <string name="menu_preferences">首选项</string>
-    <string name="menu_auto_updates_check">自动检查更新</string>
-    <string name="menu_auto_updates_check_interval_daily">每天一次</string>
-    <string name="menu_auto_updates_check_interval_weekly">每周一次</string>
-    <string name="menu_auto_updates_check_interval_monthly">每月一次</string>
-    <string name="menu_auto_updates_check_interval_never">永不</string>
     <string name="menu_delete_update">删除</string>
     <string name="menu_copy_url">复制网址</string>
     <string name="menu_export_update">导出更新</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">移动数据使用警告</string>
     <string name="update_on_mobile_data_message">您将通过移动数据网络下载更新包，这可能会导致较大的数据用量，是否继续？</string>
     <string name="checkbox_mobile_data_warning">不再询问</string>
-    <string name="menu_mobile_data_warning">移动数据警告</string>
     <!-- Info section -->
-    <string name="extras_category_title">附加功能</string>
     <string name="maintainer_info_title">维护者</string>
     <string name="donate_info_title">捐赠</string>
     <string name="donate_info_summary">支持开发</string>

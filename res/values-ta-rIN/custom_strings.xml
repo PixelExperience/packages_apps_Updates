@@ -27,7 +27,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
-    <string name="extras_category_title">உபரி</string>
     <string name="maintainer_info_title">பராமரிப்பாளர்</string>
     <string name="donate_info_title">நங்கொடை</string>
     <string name="donate_info_summary">ஆதரவு வளர்ச்சி</string>

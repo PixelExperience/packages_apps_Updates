@@ -32,13 +32,6 @@
     <string name="update_failed_notification">アップデートに失敗しました</string>
     <string name="installation_suspended_notification">インストールは保留されました</string>
     <!-- Menu -->
-    <string name="menu_refresh">再読込</string>
-    <string name="menu_preferences">設定</string>
-    <string name="menu_auto_updates_check">自動確認</string>
-    <string name="menu_auto_updates_check_interval_daily">毎日</string>
-    <string name="menu_auto_updates_check_interval_weekly">毎週</string>
-    <string name="menu_auto_updates_check_interval_monthly">毎月</string>
-    <string name="menu_auto_updates_check_interval_never">なし</string>
     <string name="menu_delete_update">削除</string>
     <string name="menu_copy_url">URL のコピー</string>
     <string name="menu_export_update">アップデートのエクスポート</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">モバイルデータ通信でアップデートプログラムをダウンロードするとデータ使用量が増加する可能性があります。続行しますか?</string>
     <string name="checkbox_mobile_data_warning">再び表示しない</string>
-    <string name="menu_mobile_data_warning">モバイルデータの警告</string>
     <!-- Info section -->
-    <string name="extras_category_title">その他</string>
     <string name="maintainer_info_title">メンテナ</string>
     <string name="donate_info_title">寄付</string>
     <string name="donate_info_summary">開発を支援する</string>

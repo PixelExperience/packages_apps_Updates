@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Започни сваляне</string>
     <string name="update_failed_notification">Актуализацията прекратена</string>
     <!-- Menu -->
-    <string name="menu_refresh">Обнови</string>
-    <string name="menu_preferences">Настройки</string>
-    <string name="menu_auto_updates_check">Автоматична проверка за актуализациите</string>
-    <string name="menu_auto_updates_check_interval_daily">Ежедневно</string>
-    <string name="menu_auto_updates_check_interval_weekly">Ежеседмично</string>
-    <string name="menu_auto_updates_check_interval_monthly">Ежемесечно</string>
-    <string name="menu_auto_updates_check_interval_never">Никога</string>
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_copy_url">Копирай адреса</string>
     <string name="menu_export_update">Експортиране на актуализация</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">Внимание</string>
     <string name="update_on_mobile_data_message">На път сте да изтеглите пакет за актуализиране, използвайки мобилни данни, което вероятно ще доведе до високо използване на данните. Искате ли да продължите?</string>
     <string name="checkbox_mobile_data_warning">Не показвай отново</string>
-    <string name="menu_mobile_data_warning">Предупреждение за мобилни данни</string>
     <!-- Info section -->
-    <string name="extras_category_title">Екстри</string>
     <string name="maintainer_info_title">Отговорник</string>
     <string name="donate_info_title">Даряване</string>
     <string name="donate_info_summary">Подкрепете разработката</string>

@@ -28,8 +28,6 @@
     <string name="download_completed_notification">Завантаження завершено</string>
     <string name="download_starting_notification">Початок завантаження</string>
     <!-- Menu -->
-    <string name="menu_refresh">Оновити</string>
-    <string name="menu_auto_updates_check">Автоматична перевірка оновлень</string>
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_copy_url">Копіювати URL</string>
     <string name="menu_export_update">Експорт оновлення</string>
@@ -74,9 +72,7 @@
     <string name="update_on_mobile_data_title">Попередження</string>
     <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що, ймовірно, призведе до високого використання даних. Ви хочете продовжити?</string>
     <string name="checkbox_mobile_data_warning">Більше не показувати</string>
-    <string name="menu_mobile_data_warning">Попередження про мобільні дані</string>
     <!-- Info section -->
-    <string name="extras_category_title">Додаткові можливості</string>
     <string name="maintainer_info_title">Розробники</string>
     <string name="donate_info_title">Підтримати проект</string>
     <string name="donate_info_summary">Підтримати розробку</string>

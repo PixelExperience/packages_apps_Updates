@@ -29,9 +29,6 @@
     <string name="download_starting_notification">Starter nedlasting</string>
     <string name="update_failed_notification">Oppdatering feilet</string>
     <!-- Menu -->
-    <string name="menu_refresh">Oppdater</string>
-    <string name="menu_preferences">Innstillinger</string>
-    <string name="menu_auto_updates_check">Auto-oppdateringssjekk</string>
     <string name="menu_delete_update">Slett</string>
     <string name="menu_copy_url">Kopier nettadresse</string>
     <string name="menu_export_update">Eksporter oppdatering</string>
@@ -82,6 +79,5 @@
     <string name="update_on_mobile_data_title">Advarsel</string>
     <string name="update_on_mobile_data_message">Du er i ferd med å laste ned en oppdateringspakke ved bruk av mobildata, noe som antagelig vil forårsake høy databruk. Ønsker du å fortsette?</string>
     <string name="checkbox_mobile_data_warning">Ikke vis igjen</string>
-    <string name="menu_mobile_data_warning">Advarsel for mobildata</string>
     <!-- Info section -->
 </resources>
