@@ -7,9 +7,9 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
     android:nextFocusRight="@+id/update_action"
-    app:cardElevation="2dp"
     app:cardBackgroundColor="@color/cardview_background"
     app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
     app:contentPaddingBottom="20dp"
     app:contentPaddingLeft="16dp"
     app:contentPaddingRight="16dp"
@@ -26,27 +26,29 @@
             android:layout_height="wrap_content"
             android:gravity="top|end"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/options_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:src="@drawable/ic_menu_icon"
+                android:gravity="top|end"
                 android:padding="4dip"
-                android:gravity="top|end" />
+                android:src="@drawable/ic_menu_icon" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:tint="@color/google_blue"
-                android:src="@drawable/ic_system_update"/>
+                android:src="@drawable/ic_system_update"
+                android:tint="@color/google_blue" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,8 +56,8 @@
                 android:fontFamily="@string/defaultFontFamilyMedium"
                 android:padding="20dp"
                 android:text=" System update available "
-                android:textColor="?android:textColorPrimary"
                 android:textAlignment="center"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="22sp" />
 
         </LinearLayout>
@@ -64,27 +66,27 @@
             android:id="@+id/build_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
             android:textColor="?android:textColorSecondary"
-            tools:text="PixelExperience_device-10.0-20200115-2020-OFFICIAL.zip"/>
+            android:textSize="18sp"
+            tools:text="PixelExperience_device-10.0-20200115-2020-OFFICIAL.zip" />
 
         <TextView
             android:id="@+id/build_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:textSize="14sp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="-5dp"
+            android:maxLines="2"
             android:textColor="?android:textColorSecondary"
-            tools:text="15 January 2020"/>
+            android:textSize="14sp"
+            tools:text="15 January 2020" />
 
         <TextView
             android:id="@+id/build_size"
@@ -92,10 +94,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:singleLine="true"
-            android:textSize="14sp"
             android:textColor="?android:textColorSecondary"
+            android:textSize="14sp"
             tools:text="300 MB"
             tools:visibility="visible" />
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -105,11 +108,11 @@
                 style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="5dp"
-                android:maxHeight="5dp"
                 android:layout_marginTop="15dp"
-                android:progressDrawable="@drawable/ic_progress_bg"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
                 android:paddingTop="4sp"
+                android:progressDrawable="@drawable/ic_progress_bg"
                 android:visibility="gone"
                 tools:progress="65"
                 tools:visibility="visible" />
@@ -118,13 +121,13 @@
                 android:id="@+id/progress_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="35dp"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:textSize="14sp"
                 android:textColor="?android:textColorSecondary"
+                android:textSize="14sp"
                 android:visibility="gone"
                 tools:text="162 of 300 MB (3 minutes left) • 65%"
                 tools:visibility="visible" />
@@ -134,8 +137,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="end"
+            android:orientation="horizontal"
             android:paddingTop="25dp"
             android:weightSum="1">
 
@@ -144,11 +147,11 @@
                 style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:fontFamily="@string/defaultFontFamilyMedium"
-                android:drawablePadding="5dp"
-                android:textAllCaps="false"
-                android:drawableTint="?android:textColorPrimaryInverse"
                 android:drawableStart="@drawable/ic_pause"
+                android:drawablePadding="5dp"
+                android:drawableTint="?android:textColorPrimaryInverse"
+                android:fontFamily="@string/defaultFontFamilyMedium"
+                android:textAllCaps="false"
                 android:textColor="?android:textColorPrimaryInverse"
                 tools:text="Pause" />
 
@@ -157,14 +160,14 @@
                 style="@style/Widget.RaisedButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_updateui_information"
+                android:drawablePadding="5dp"
+                android:drawableTint="?android:textColorPrimaryInverse"
                 android:fontFamily="@string/defaultFontFamilyMedium"
                 android:text="@string/details_button"
-                android:drawablePadding="5dp"
                 android:textAllCaps="false"
-                android:drawableStart="@drawable/ic_updateui_information"
-                android:drawableTint="?android:textColorPrimaryInverse"
-                android:textColor="?android:textColorPrimaryInverse"
-                android:layout_marginStart="10dp"/>
+                android:textColor="?android:textColorPrimaryInverse" />
         </LinearLayout>
 
     </LinearLayout>

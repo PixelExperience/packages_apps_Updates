@@ -24,12 +24,12 @@ import android.os.UpdateEngineCallback;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.preference.PreferenceManager;
+
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.Update;
 import org.pixelexperience.ota.model.UpdateStatus;
-
-import androidx.preference.PreferenceManager;
 
 import java.io.BufferedReader;
 import java.io.File;

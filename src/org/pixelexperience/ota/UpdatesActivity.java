@@ -343,7 +343,7 @@ public class UpdatesActivity extends UpdatesListActivity {
     @Override
     public void showSnackbar(int stringId, int duration) {
         Snackbar snack = Snackbar.make(findViewById(R.id.view_snackbar), stringId, duration);
-        TextView tv = (TextView) snack.getView().findViewById(com.google.android.material.R.id.snackbar_text);
+        TextView tv = snack.getView().findViewById(com.google.android.material.R.id.snackbar_text);
         tv.setTextColor(getColor(R.color.text_primary));
         snack.show();
     }

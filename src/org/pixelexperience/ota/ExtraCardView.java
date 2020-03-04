@@ -1,9 +1,7 @@
 package org.pixelexperience.ota;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.TypedArray;
-import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,7 +43,8 @@ public class ExtraCardView extends CardView {
             a.recycle();
         }
     }
-    public void setSummary(String summary){
+
+    public void setSummary(String summary) {
         summaryView.setText(summary);
     }
 }
