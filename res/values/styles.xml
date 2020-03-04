@@ -33,14 +33,20 @@
         <item name="android:fontFamily">@string/defaultFontFamilyMedium</item>
         <item name="android:textColor">@color/theme_accent</item>
     </style>
-    <style name="AppTheme.AlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
-        <item name="colorAccent">@color/theme_accent</item>
+    <style name="AppTheme.AlertDialogStyle" parent="android:Theme.DeviceDefault.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/google_blue</item>
+        <item name="android:buttonBarButtonStyle">@style/AlertDialogButtonStyle</item>
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:colorBackground">@color/cardview_background</item>
         <item name="android:background">@color/cardview_background</item>
         <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
         <item name="dialogCornerRadius">16dp</item>
+    </style>
+    <style name="AlertDialogButtonStyle" parent="android:Widget.DeviceDefault.Button.Borderless.Colored">
+        <item name="android:textColor">@color/google_blue</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">48dip</item>
     </style>
     <style name="DialogWindowTitle">
         <item name="android:textAppearance">@style/DialogWindowTitleTextAppearance</item>
