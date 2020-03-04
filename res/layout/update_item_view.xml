@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="5dp"
-                android:padding="5dp"
+                android:maxHeight="5dp"
                 android:layout_marginTop="15dp"
                 android:progressDrawable="@drawable/ic_progress_bg"
                 android:paddingTop="4sp"
