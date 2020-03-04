@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.BatteryManager;
@@ -42,6 +43,7 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -269,7 +271,13 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void startDownloadWithWarning(final String downloadId) {
-        if (Utils.isOnWifiOrEthernet(mActivity)) {
+        if (!Utils.isNetworkAvailable(mActivity)) {
+            mUpdaterController.notifyNetworkUnavailable();
+            return;
+        }
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        boolean warn = preferences.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+        if (Utils.isOnWifiOrEthernet(mActivity) || !warn) {
             mUpdaterController.startDownload(downloadId);
             return;
         }
@@ -285,6 +293,9 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setPositiveButton(R.string.action_download,
                         (dialog, which) -> {
                             if (checkbox.isChecked()) {
+                                preferences.edit()
+                                        .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
+                                        .apply();
                                 mActivity.supportInvalidateOptionsMenu();
                             }
                             mUpdaterController.startDownload(downloadId);

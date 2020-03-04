@@ -105,6 +105,8 @@ public class UpdatesActivity extends UpdatesListActivity {
                     String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
                     handleDownloadStatusChange(downloadId);
                     mAdapter.notifyDataSetChanged();
+                } else if (UpdaterController.ACTION_NETWORK_UNAVAILABLE.equals(intent.getAction())) {
+                    showSnackbar(R.string.snack_download_failed, Snackbar.LENGTH_LONG);
                 } else if (UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction()) ||
                         UpdaterController.ACTION_INSTALL_PROGRESS.equals(intent.getAction())) {
                     String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
@@ -154,6 +156,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
+        intentFilter.addAction(UpdaterController.ACTION_NETWORK_UNAVAILABLE);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
     }
 

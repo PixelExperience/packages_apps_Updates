@@ -20,6 +20,7 @@ public final class Constants {
     public static final String AB_PAYLOAD_BIN_PATH = "payload.bin";
     public static final String AB_PAYLOAD_PROPERTIES_PATH = "payload_properties.txt";
     public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
+    public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String UNCRYPT_FILE_EXT = ".uncrypt";
     public static final String PROP_BUILD_DATE = "org.pixelexperience.build_date_utc";
     public static final String PROP_RECOVERY_UPDATE = "persist.sys.recovery_update";
