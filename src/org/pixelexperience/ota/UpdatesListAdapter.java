@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.BatteryManager;
@@ -73,6 +74,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     private String mSelectedDownload;
     private UpdaterController mUpdaterController;
     private UpdatesListActivity mActivity;
+    private UpdateInfo mSelectedUpdate;
 
     UpdatesListAdapter(UpdatesListActivity activity) {
         mActivity = activity;
@@ -475,6 +477,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     @SuppressLint("RestrictedApi")
     private void startActionMode(final UpdateInfo update, final boolean canDelete, View anchor) {
         mSelectedDownload = update.getDownloadId();
+        mSelectedUpdate = update;
         notifyItemChanged(update.getDownloadId());
 
         ContextThemeWrapper wrapper = new ContextThemeWrapper(mActivity,
@@ -501,12 +504,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                     mActivity.showSnackbar(R.string.toast_download_url_copied, Snackbar.LENGTH_SHORT);
                     return true;
                 case R.id.menu_export_update:
-                    // TODO: start exporting once the permission has been granted
-                    boolean hasPermission = PermissionsUtils.checkAndRequestStoragePermission(
-                            mActivity, 0);
-                    if (hasPermission) {
-                        exportUpdate(update);
-                    }
+                    exportUpdate();
                     return true;
             }
             return false;
@@ -516,14 +514,19 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         helper.show();
     }
 
-    private void exportUpdate(UpdateInfo update) {
-        File dest = new File(Utils.getExportPath(), update.getName());
+    private void exportUpdate() {
+        boolean hasPermission = PermissionsUtils.checkAndRequestStoragePermission(
+                mActivity, ExportUpdateService.EXPORT_STATUS_PERMISSION_REQUEST_CODE);
+        if (!hasPermission) {
+            return;
+        }
+        File dest = new File(Utils.getExportPath(), mSelectedUpdate.getName());
         if (dest.exists()) {
             dest = Utils.appendSequentialNumber(dest);
         }
         Intent intent = new Intent(mActivity, ExportUpdateService.class);
         intent.setAction(ExportUpdateService.ACTION_START_EXPORTING);
-        intent.putExtra(ExportUpdateService.EXTRA_SOURCE_FILE, update.getFile());
+        intent.putExtra(ExportUpdateService.EXTRA_SOURCE_FILE, mSelectedUpdate.getFile());
         intent.putExtra(ExportUpdateService.EXTRA_DEST_FILE, dest);
         mActivity.startService(intent);
     }
@@ -537,6 +540,14 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .show();
         TextView textView = dialog.findViewById(android.R.id.message);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    void onRequestPermissionsResult(int requestCode, int[] grantResults) {
+        if (grantResults.length > 0 &&
+                grantResults[0] == PackageManager.PERMISSION_GRANTED &&
+                requestCode == ExportUpdateService.EXPORT_STATUS_PERMISSION_REQUEST_CODE){
+            exportUpdate();
+        }
     }
 
     private boolean isBatteryLevelOk() {
