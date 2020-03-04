@@ -24,14 +24,14 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import org.pixelexperience.ota.UpdatesDbHelper;
 import org.pixelexperience.ota.download.DownloadClient;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.Update;
 import org.pixelexperience.ota.model.UpdateInfo;
 import org.pixelexperience.ota.model.UpdateStatus;
-
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.File;
 import java.io.IOException;

@@ -23,13 +23,13 @@ import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
 
+import androidx.preference.PreferenceManager;
+
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.FileUtils;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 import org.pixelexperience.ota.model.UpdateStatus;
-
-import androidx.preference.PreferenceManager;
 
 import java.io.File;
 import java.io.IOException;
