@@ -181,8 +181,11 @@ public class Utils {
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
     }
 
-    public static boolean checkForNewUpdates(File oldJson, File newJson)
+    public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot)
             throws IOException, JSONException {
+        if (!oldJson.exists() || fromBoot){
+            return parseJson(newJson, true) != null;
+        }
         UpdateInfo oldUpdate = parseJson(oldJson, true);
         UpdateInfo newUpdate = parseJson(newJson, true);
         if (oldUpdate == null || newUpdate == null) {
