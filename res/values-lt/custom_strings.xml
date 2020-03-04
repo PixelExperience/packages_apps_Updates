@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Atnaujinti nepavyko</string>
     <string name="installation_suspended_notification">Diegimas sustabdytas</string>
     <!-- Menu -->
-    <string name="menu_refresh">Įkelti iš naujo</string>
-    <string name="menu_preferences">Nuostatos</string>
-    <string name="menu_auto_updates_check">Automatinis naujinimų tikrinimas</string>
-    <string name="menu_auto_updates_check_interval_daily">Kasdien</string>
-    <string name="menu_auto_updates_check_interval_weekly">Kas savaitę</string>
-    <string name="menu_auto_updates_check_interval_monthly">Kas mėnesį</string>
-    <string name="menu_auto_updates_check_interval_never">Niekada</string>
     <string name="menu_delete_update">Pašalinti</string>
     <string name="menu_copy_url">Kopijuoti URL</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
@@ -115,9 +108,7 @@
     <string name="update_on_mobile_data_title">Dėmesio</string>
     <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
     <string name="checkbox_mobile_data_warning">Daugiau nerodyti</string>
-    <string name="menu_mobile_data_warning">Mobiliojo ryšio duomenų įspėjimas</string>
     <!-- Info section -->
-    <string name="extras_category_title">Priedai</string>
     <string name="maintainer_info_title">Kūrėjas/Prižiūrėtojas</string>
     <string name="donate_info_title">Paaukoti</string>
     <string name="donate_info_summary">Paremti programos vystymą</string>

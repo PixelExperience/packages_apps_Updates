@@ -31,9 +31,6 @@
     <string name="download_starting_notification">ダウンロードを開始中</string>
     <string name="update_failed_notification">更新に失敗しました</string>
     <!-- Menu -->
-    <string name="menu_refresh">更新</string>
-    <string name="menu_preferences">設定</string>
-    <string name="menu_auto_updates_check">アップデートの自動確認</string>
     <string name="menu_delete_update">削除</string>
     <string name="menu_copy_url">URL のコピー</string>
     <string name="menu_export_update">アップデートのエクスポート</string>
@@ -99,9 +96,7 @@
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">モバイルデータ通信で更新プログラムをダウンロードするとデータ使用量が増加する可能性があります。続行しますか?</string>
     <string name="checkbox_mobile_data_warning">再び表示しない</string>
-    <string name="menu_mobile_data_warning">モバイルデータの警告</string>
     <!-- Info section -->
-    <string name="extras_category_title">その他</string>
     <string name="maintainer_info_title">メンテナ</string>
     <string name="donate_info_title">寄付</string>
     <string name="donate_info_summary">開発を支援する</string>

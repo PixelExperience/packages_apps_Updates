@@ -32,13 +32,6 @@
     <string name="update_failed_notification">업데이트 실패</string>
     <string name="installation_suspended_notification">설치가 보류됨</string>
     <!-- Menu -->
-    <string name="menu_refresh">새로고침</string>
-    <string name="menu_preferences">환경설정</string>
-    <string name="menu_auto_updates_check">업데이트 자동 확인</string>
-    <string name="menu_auto_updates_check_interval_daily">하루에 한 번</string>
-    <string name="menu_auto_updates_check_interval_weekly">일주일에 한 번</string>
-    <string name="menu_auto_updates_check_interval_monthly">한 달에 한 번</string>
-    <string name="menu_auto_updates_check_interval_never">사용 안 함</string>
     <string name="menu_delete_update">삭제</string>
     <string name="menu_copy_url">URL 복사</string>
     <string name="menu_export_update">업데이트 내보내기</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">경고</string>
     <string name="update_on_mobile_data_message">모바일 데이터를 사용하여 업데이트 패키지를 다운로드하는 것은 많은 데이터 사용량을 야기할 수 있습니다. 계속하시겠습니까?</string>
     <string name="checkbox_mobile_data_warning">다시 보지 않기</string>
-    <string name="menu_mobile_data_warning">모바일 데이터 경고</string>
     <!-- Info section -->
-    <string name="extras_category_title">부가 기능</string>
     <string name="maintainer_info_title">관리자</string>
     <string name="donate_info_title">기부</string>
     <string name="donate_info_summary">개발 지원하기</string>

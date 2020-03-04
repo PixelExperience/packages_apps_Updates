@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Запуск спампоўкі</string>
     <string name="update_failed_notification">Памылка абнаўлення</string>
     <!-- Menu -->
-    <string name="menu_refresh">Аднавіць</string>
-    <string name="menu_preferences">Налады</string>
-    <string name="menu_auto_updates_check">Аўтаматычная праверка абнаўленняў</string>
-    <string name="menu_auto_updates_check_interval_daily">Штодня</string>
-    <string name="menu_auto_updates_check_interval_weekly">Штотыднёва</string>
-    <string name="menu_auto_updates_check_interval_monthly">Штомесяц</string>
-    <string name="menu_auto_updates_check_interval_never">Ніколі</string>
     <string name="menu_delete_update">Выдаліць</string>
     <string name="menu_copy_url">Капіяваць URL</string>
     <string name="menu_export_update">Экспарт абнаўлення</string>
@@ -107,7 +100,6 @@
     <string name="update_on_mobile_data_message">Вы збіраецеся спампаваць пакет абнаўлення, выкарыстоўваючы мабільную перадачу дадзеных, за якую, верагодна, спаганяецца дадатковая плата. Вы хочаце працягнуць?</string>
     <string name="checkbox_mobile_data_warning">Больш не паказваць</string>
     <!-- Info section -->
-    <string name="extras_category_title">Дапаўненні</string>
     <string name="maintainer_info_title">Суправаджальнік</string>
     <string name="donate_info_title">Ахвяраваць</string>
     <string name="donate_info_summary">Падтрымаць распрацоўку</string>

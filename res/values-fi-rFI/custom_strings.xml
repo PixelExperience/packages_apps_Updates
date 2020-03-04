@@ -31,9 +31,6 @@
     <string name="download_starting_notification">Aloitetaan latausta</string>
     <string name="update_failed_notification">Päivitys epäonnistui</string>
     <!-- Menu -->
-    <string name="menu_refresh">Päivitä</string>
-    <string name="menu_preferences">Ominaisuudet</string>
-    <string name="menu_auto_updates_check">Automaattinen päivitysten tarkistus</string>
     <string name="menu_delete_update">Poista</string>
     <string name="menu_copy_url">Kopioi URL-osoite</string>
     <string name="menu_export_update">Vie päivitys</string>
@@ -102,9 +99,7 @@
     <string name="update_on_mobile_data_title">Varoitus</string>
     <string name="update_on_mobile_data_message">Olet lataamassa päivityspakettia käyttämällä mobiilidataa, joka voi todennäköisesti aiheuttaa tiedonsiirtokuluja. Haluatko jatkaa?</string>
     <string name="checkbox_mobile_data_warning">Älä näytä uudestaan</string>
-    <string name="menu_mobile_data_warning">Mobiilidatavaroitus</string>
     <!-- Info section -->
-    <string name="extras_category_title">Ekstrat</string>
     <string name="maintainer_info_title">Ylläpitäjä</string>
     <string name="donate_info_title">Lahjoita</string>
     <string name="donate_info_summary">Tue kehitystä</string>

@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Värskendamine nurjus</string>
     <string name="installation_suspended_notification">Installimine peatati</string>
     <!-- Menu -->
-    <string name="menu_refresh">Värskenda</string>
-    <string name="menu_preferences">Eelistused</string>
-    <string name="menu_auto_updates_check">Automaatne värskenduste kontroll</string>
-    <string name="menu_auto_updates_check_interval_daily">Kord päevas</string>
-    <string name="menu_auto_updates_check_interval_weekly">Kord nädalas</string>
-    <string name="menu_auto_updates_check_interval_monthly">Kord kuus</string>
-    <string name="menu_auto_updates_check_interval_never">Mitte kunagi</string>
     <string name="menu_delete_update">Kustuta</string>
     <string name="menu_copy_url">Kopeeri aadress</string>
     <string name="menu_export_update">Ekspordi värskendus</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Hoiatus</string>
     <string name="update_on_mobile_data_message">Olete alla laadimas värskendust mobiilse andmesideühendusega, mis võib tekitada suurt andmemahu kasutust. Kas soovite jätkata?</string>
     <string name="checkbox_mobile_data_warning">Ära enam näita</string>
-    <string name="menu_mobile_data_warning">Mobiilse andmeside kasutamise hoiatus</string>
     <!-- Info section -->
-    <string name="extras_category_title">Lisad</string>
     <string name="maintainer_info_title">Hooldaja</string>
     <string name="donate_info_title">Anneta</string>
     <string name="donate_info_summary">Toeta arengut</string>

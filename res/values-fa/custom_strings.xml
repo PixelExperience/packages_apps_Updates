@@ -32,13 +32,6 @@
     <string name="update_failed_notification">به‌روز رسانی موفق نبود</string>
     <string name="installation_suspended_notification">فرآیند نصب متوقف شد</string>
     <!-- Menu -->
-    <string name="menu_refresh">تازه‌سازی</string>
-    <string name="menu_preferences">تنظیمات</string>
-    <string name="menu_auto_updates_check">بررسی خودکار نسخه‌های به‌روز</string>
-    <string name="menu_auto_updates_check_interval_daily">روزانه</string>
-    <string name="menu_auto_updates_check_interval_weekly">هفتگی</string>
-    <string name="menu_auto_updates_check_interval_monthly">ماهانه</string>
-    <string name="menu_auto_updates_check_interval_never">هرگز</string>
     <string name="menu_delete_update">حذف</string>
     <string name="menu_copy_url">کپی URL</string>
     <string name="menu_export_update">صادر کردن نسخه به‌روز</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">هشدار</string>
     <string name="update_on_mobile_data_message">شما در حال بارگیری بسته به‌روزرسانی با داده سیم‌کارت هستید که احتمالاً حجم داده زیادی مصرف می‌کند. آیا می‌خواهید ادامه دهید؟</string>
     <string name="checkbox_mobile_data_warning">دوباره نمایش نده</string>
-    <string name="menu_mobile_data_warning">هشدار مصرف داده سیم‌کارت</string>
     <!-- Info section -->
-    <string name="extras_category_title">افزونه‌ها</string>
     <string name="maintainer_info_title">برقرار نگه‌دارنده</string>
     <string name="donate_info_title">کمک مالی</string>
     <string name="donate_info_summary">از توسعه رام حمایت کنید</string>

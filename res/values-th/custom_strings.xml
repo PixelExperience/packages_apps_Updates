@@ -32,13 +32,6 @@
     <string name="update_failed_notification">การปรับปรุงล้มเหลว</string>
     <string name="installation_suspended_notification">การติดตั้งถูกระงับ</string>
     <!-- Menu -->
-    <string name="menu_refresh">โหลดใหม่</string>
-    <string name="menu_preferences">การตั้งค่า</string>
-    <string name="menu_auto_updates_check">ตรวจสอบการปรับปรุงอัตโนมัติ</string>
-    <string name="menu_auto_updates_check_interval_daily">วันละครั้ง</string>
-    <string name="menu_auto_updates_check_interval_weekly">สัปดาห์ละครั้ง</string>
-    <string name="menu_auto_updates_check_interval_monthly">เดือนละครั้ง</string>
-    <string name="menu_auto_updates_check_interval_never">ไม่เคย</string>
     <string name="menu_delete_update">ลบ</string>
     <string name="menu_copy_url">คัดลอก URL</string>
     <string name="menu_export_update">ส่งออกการอัปเดต</string>
@@ -106,9 +99,7 @@
     <string name="update_on_mobile_data_title">คำเตือน</string>
     <string name="update_on_mobile_data_message">คุณกำลังจะดาวน์โหลดไฟล์ขนาดใหญ่เพื่อใช้ปรับปรุงระบบ ผ่านทางครือข่ายมือถือซึ่งใช้ข้อมูลปริมาณมาก คุณต้องการทำหรือไม่?</string>
     <string name="checkbox_mobile_data_warning">ไม่ต้องแสดงอีก</string>
-    <string name="menu_mobile_data_warning">คำเตือนการใช้งานข้อมูลมือถือ</string>
     <!-- Info section -->
-    <string name="extras_category_title">เพิ่มเติม</string>
     <string name="maintainer_info_title">ผู้ดูแล</string>
     <string name="donate_info_title">ร่วมสนับสนุน</string>
     <string name="donate_info_summary">สนับสนุนการพัฒนา</string>

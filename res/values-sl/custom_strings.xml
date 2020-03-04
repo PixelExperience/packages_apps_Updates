@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Posodobitev je spodletela</string>
     <string name="installation_suspended_notification">Namestitev začasno ustavljena</string>
     <!-- Menu -->
-    <string name="menu_refresh">Osveži</string>
-    <string name="menu_preferences">Nastavitve</string>
-    <string name="menu_auto_updates_check">Samodejno preverjanje za posodobitve</string>
-    <string name="menu_auto_updates_check_interval_daily">Enkrat na dan</string>
-    <string name="menu_auto_updates_check_interval_weekly">Enkrat na teden</string>
-    <string name="menu_auto_updates_check_interval_monthly">Enkrat na mesec</string>
-    <string name="menu_auto_updates_check_interval_never">Nikoli</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvozi posodobitev</string>
@@ -115,9 +108,7 @@
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
-    <string name="menu_mobile_data_warning">Opozorilo mobilnih podatkov</string>
     <!-- Info section -->
-    <string name="extras_category_title">Dodatki</string>
     <string name="maintainer_info_title">Vzdrževalec</string>
     <string name="donate_info_title">Prispevaj</string>
     <string name="donate_info_summary">Podprite razvoj</string>

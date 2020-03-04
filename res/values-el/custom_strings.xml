@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Η ενημέρωση απέτυχε</string>
     <string name="installation_suspended_notification">Η εγκατάσταση έχει διακοπεί</string>
     <!-- Menu -->
-    <string name="menu_refresh">Ανανέωση</string>
-    <string name="menu_preferences">Προτιμήσεις</string>
-    <string name="menu_auto_updates_check">Αυτόματος έλεγχος ενημερώσεων</string>
-    <string name="menu_auto_updates_check_interval_daily">Μία φορά την ημέρα</string>
-    <string name="menu_auto_updates_check_interval_weekly">Μία φορά την εβδομάδα</string>
-    <string name="menu_auto_updates_check_interval_monthly">Μία φορά το μήνα</string>
-    <string name="menu_auto_updates_check_interval_never">Ποτέ</string>
     <string name="menu_delete_update">Διαγραφή</string>
     <string name="menu_copy_url">Αντιγραφή URL</string>
     <string name="menu_export_update">Εξαγωγή ενημέρωσης</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="update_on_mobile_data_message">Είστε έτοιμος να κατεβάσετε ένα πακέτο ενημέρωσης χρησιμοποιώντας δεδομένα κινητής τηλεφωνίας, το οποίο είναι πιθανό να προκαλέσει υψηλή χρήση δεδομένων. Θα θέλατε να συνεχίσετε;</string>
     <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
-    <string name="menu_mobile_data_warning">Προειδοποίηση δεδομένων κινητής τηλ.</string>
     <!-- Info section -->
-    <string name="extras_category_title">Πρόσθετα</string>
     <string name="maintainer_info_title">Συντηρητής</string>
     <string name="donate_info_title">Δωρεές</string>
     <string name="donate_info_summary">Υποστηρίξτε την ανάπτυξη εφαρμογών</string>

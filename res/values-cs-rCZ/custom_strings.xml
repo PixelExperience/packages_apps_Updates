@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Zahajování stahování</string>
     <string name="update_failed_notification">Aktualizace se nezdařila</string>
     <!-- Menu -->
-    <string name="menu_refresh">Obnovit</string>
-    <string name="menu_preferences">Předvolby</string>
-    <string name="menu_auto_updates_check">Automatická kontrola aktualizací</string>
-    <string name="menu_auto_updates_check_interval_daily">Jednou denně</string>
-    <string name="menu_auto_updates_check_interval_weekly">Jednou týdně</string>
-    <string name="menu_auto_updates_check_interval_monthly">Jednou měsíčně</string>
-    <string name="menu_auto_updates_check_interval_never">Nikdy</string>
     <string name="menu_delete_update">Odstranit</string>
     <string name="menu_copy_url">Kopírovat URL</string>
     <string name="menu_export_update">Export aktualizace</string>
@@ -113,9 +106,7 @@
     <string name="update_on_mobile_data_title">Varování</string>
     <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
     <string name="checkbox_mobile_data_warning">Znovu nezobrazovat</string>
-    <string name="menu_mobile_data_warning">Upozornění mobilních dat</string>
     <!-- Info section -->
-    <string name="extras_category_title">Doplňky</string>
     <string name="maintainer_info_title">Správce</string>
     <string name="donate_info_title">Přispět</string>
     <string name="donate_info_summary">Podpořte vývoj</string>

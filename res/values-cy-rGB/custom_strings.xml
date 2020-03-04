@@ -31,13 +31,6 @@
     <string name="download_starting_notification">Yn dechrau lawrlwytho</string>
     <string name="update_failed_notification">Methodd y diweddariad</string>
     <!-- Menu -->
-    <string name="menu_refresh">Ail-lwytho</string>
-    <string name="menu_preferences">Dewisiadau</string>
-    <string name="menu_auto_updates_check">Gwirio yn awtomatig</string>
-    <string name="menu_auto_updates_check_interval_daily">Unwaith y dydd</string>
-    <string name="menu_auto_updates_check_interval_weekly">Unwaith yr wythnos</string>
-    <string name="menu_auto_updates_check_interval_monthly">Unwaith y mis</string>
-    <string name="menu_auto_updates_check_interval_never">Byth</string>
     <string name="menu_delete_update">Dileu</string>
     <string name="menu_copy_url">Copïo\'r URL</string>
     <string name="menu_export_update">Allforio\'r diweddariad</string>
@@ -116,6 +109,5 @@
     <string name="update_on_mobile_data_title">Rhybudd</string>
     <string name="update_on_mobile_data_message">Rwyt ar fin lawrlwytho pecyn diweddaru gyda llawer o ddata dros gysylltiad data symudol. Wyt ti am barhau?</string>
     <string name="checkbox_mobile_data_warning">Peidio â dangos eto</string>
-    <string name="menu_mobile_data_warning">Rhybudd data symudol</string>
     <!-- Info section -->
 </resources>

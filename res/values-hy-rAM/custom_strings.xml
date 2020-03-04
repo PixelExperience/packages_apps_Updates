@@ -29,13 +29,6 @@
     <string name="download_starting_notification">Սկսվում է ներբեռնումը</string>
     <string name="update_failed_notification">Թարմացումը ձախողվեց</string>
     <!-- Menu -->
-    <string name="menu_refresh">Թարմացնել</string>
-    <string name="menu_preferences">Կարգավորումներ</string>
-    <string name="menu_auto_updates_check">Ինքնաբար ստուգել թարմացումները</string>
-    <string name="menu_auto_updates_check_interval_daily">Օրը մեկ անգամ</string>
-    <string name="menu_auto_updates_check_interval_weekly">Շաբաթը մեկ անգամ</string>
-    <string name="menu_auto_updates_check_interval_monthly">Ամիսը մեկ անգամ</string>
-    <string name="menu_auto_updates_check_interval_never">Երբեք</string>
     <string name="menu_delete_update">Ջնջել</string>
     <string name="menu_copy_url">Պատճենել URL-ը</string>
     <string name="menu_export_update">Արտահանել թարմացումը</string>

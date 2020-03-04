@@ -31,9 +31,6 @@
     <string name="download_starting_notification">S\'està iniciant la baixada</string>
     <string name="update_failed_notification">Actualització fallida</string>
     <!-- Menu -->
-    <string name="menu_refresh">Actualitza</string>
-    <string name="menu_preferences">Preferències</string>
-    <string name="menu_auto_updates_check">Comprova automàticament les actualitzacions</string>
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia l\'URL</string>
     <string name="menu_export_update">Exporta l\'actualització</string>
@@ -102,9 +99,7 @@
     <string name="update_on_mobile_data_title">Atenció</string>
     <string name="update_on_mobile_data_message">Esteu a punt de baixar un paquet d\'actualització amb dades mòbils que probablement generarà un alt ús de dades. Voleu continuar?</string>
     <string name="checkbox_mobile_data_warning">No mostrar de nou</string>
-    <string name="menu_mobile_data_warning">Avís d\'ús de dades</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extres</string>
     <string name="maintainer_info_title">Mantenidor</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Recolzar el desenvolupament</string>

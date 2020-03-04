@@ -21,7 +21,6 @@
     <string name="export_channel_title">ನಿರ್ಯಾತ ಪೂರ್ಣತೆ</string>
     <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಕೆಳಭರಿತಗಳು</string>
     <!-- Menu -->
-    <string name="menu_refresh">ರಿಫ್ರೆಶ್</string>
     <string name="changelog_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <!-- General -->
     <string name="update_found_notification">ಹೊಸ ನವೀಕರಣಗಳು ಲಭ್ಯವಿವೆ</string>
@@ -47,7 +46,6 @@
     <string name="update_on_mobile_data_message">ನೀವೀಗ ನವೀಕರಣೆಯ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
     <string name="checkbox_mobile_data_warning">ಪುನಃ ತೋರಿಸಬೇಡ</string>
     <!-- Info section -->
-    <string name="extras_category_title">ಎಕ್ಸಟ್ರಾಸ್</string>
     <string name="maintainer_info_title">ಮೆಂಟೈನರ್</string>
     <string name="donate_info_title">ದಾನ</string>
     <string name="donate_info_summary">ಅಭಿವೃದ್ಧಿಯನ್ನು ಬೆಂಬಲಿಸಿ</string>

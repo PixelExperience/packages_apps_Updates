@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Ažuriranje neuspjelo</string>
     <string name="installation_suspended_notification">Instalacija obustavljena</string>
     <!-- Menu -->
-    <string name="menu_refresh">Osvježi</string>
-    <string name="menu_preferences">Preference</string>
-    <string name="menu_auto_updates_check">Provjeri ažuriranja automatski</string>
-    <string name="menu_auto_updates_check_interval_daily">Jedanput dnevno</string>
-    <string name="menu_auto_updates_check_interval_weekly">Jednom tjedno</string>
-    <string name="menu_auto_updates_check_interval_monthly">Jednom mjesečno</string>
-    <string name="menu_auto_updates_check_interval_never">Nikad</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
@@ -112,9 +105,7 @@
     <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="update_on_mobile_data_message">Upravo ćete preuzeti paket ažuriranja pomoću mobilnih podataka koji će vjerojatno uzrokovati visoku upotrebu podataka. Želite li nastaviti?</string>
     <string name="checkbox_mobile_data_warning">Ne prikazuj ponovno</string>
-    <string name="menu_mobile_data_warning">Upozorenje o mobilnim podacima</string>
     <!-- Info section -->
-    <string name="extras_category_title">Dodaci</string>
     <string name="maintainer_info_title">Održavatelj</string>
     <string name="donate_info_title">Doniraj</string>
     <string name="donate_info_summary">Podrži razvoj</string>

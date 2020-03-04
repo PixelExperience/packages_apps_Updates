@@ -19,7 +19,6 @@
     <string name="app_name">Rendszerfrissítések</string>
     <!-- Notifications -->
     <!-- Menu -->
-    <string name="menu_refresh">Frissítés</string>
     <string name="changelog_loading">Betöltés…</string>
     <!-- General -->
     <string name="update_found_notification">Új frissítés elérhető</string>
@@ -34,7 +33,6 @@
     <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ez magas adathasználatot eredményezhetet. Szeretné folytatni?</string>
     <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extrák</string>
     <string name="maintainer_info_title">Karbantartó</string>
     <string name="donate_info_title">Támogatás</string>
     <string name="donate_info_summary">A fejlesztés támogatása</string>

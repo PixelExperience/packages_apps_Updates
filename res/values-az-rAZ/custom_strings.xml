@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Yeniləmə uğursuz oldu</string>
     <string name="installation_suspended_notification">Quraşdırma təxirə salındı</string>
     <!-- Menu -->
-    <string name="menu_refresh">Təzələ</string>
-    <string name="menu_preferences">Tənzimləmələr</string>
-    <string name="menu_auto_updates_check">Avtomatik yeniləmə yoxlanışı</string>
-    <string name="menu_auto_updates_check_interval_daily">Gündə 1 dəfə</string>
-    <string name="menu_auto_updates_check_interval_weekly">Həftədə 1 dəfə</string>
-    <string name="menu_auto_updates_check_interval_monthly">Ayda 1 dəfə</string>
-    <string name="menu_auto_updates_check_interval_never">Heç vaxt</string>
     <string name="menu_delete_update">Sil</string>
     <string name="menu_copy_url">URL-ni Kopyala</string>
     <string name="menu_export_update">Yeniləməni ixrac et</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Xəbərdarlıq</string>
     <string name="update_on_mobile_data_message">Yüksək məlumat istifadəsinə səbəb ola biləcək yeniləmə paketini mobil trafik istifadə edərək endirmək üzrəsiniz. Davam etmək istəyirsiniz?</string>
     <string name="checkbox_mobile_data_warning">Bir də göstərmə</string>
-    <string name="menu_mobile_data_warning">Mobil trafik xəbərdarlığı</string>
     <!-- Info section -->
-    <string name="extras_category_title">Ekstralar</string>
     <string name="maintainer_info_title">Cihaz tərtibatçısı</string>
     <string name="donate_info_title">İanə et</string>
     <string name="donate_info_summary">İnkişaf Etdirməni Dəstəklə</string>

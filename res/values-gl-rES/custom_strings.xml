@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Erro ao actualizar</string>
     <string name="installation_suspended_notification">Instalación suspensa</string>
     <!-- Menu -->
-    <string name="menu_refresh">Actualizar</string>
-    <string name="menu_preferences">Preferencias</string>
-    <string name="menu_auto_updates_check">Buscar actualizacións de xeito automático</string>
-    <string name="menu_auto_updates_check_interval_daily">Unha vez ao día</string>
-    <string name="menu_auto_updates_check_interval_weekly">Unha vez á semán</string>
-    <string name="menu_auto_updates_check_interval_monthly">Unha vez o mes</string>
-    <string name="menu_auto_updates_check_interval_never">Endexamais</string>
     <string name="menu_delete_update">Eliminar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
@@ -109,9 +102,7 @@
     <string name="update_on_mobile_data_title">Aviso</string>
     <string name="update_on_mobile_data_message">Estás a punto de descargar un paquete de actualización a través da conexión de datos móbeis o que xerará un maior consumo de datos. Tes a certeza de querer continuar?</string>
     <string name="checkbox_mobile_data_warning">Non volver a amosar</string>
-    <string name="menu_mobile_data_warning">Aviso de datos móbiles</string>
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Mantedor</string>
     <string name="donate_info_title">Doazón</string>
     <string name="donate_info_summary">Apoie o desarollador</string>

@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Неуспешно ажурирање</string>
     <string name="installation_suspended_notification">Инсталација суспендована</string>
     <!-- Menu -->
-    <string name="menu_refresh">Освежи</string>
-    <string name="menu_preferences">Подешавања</string>
-    <string name="menu_auto_updates_check">Аутоматски провери ажурирања</string>
-    <string name="menu_auto_updates_check_interval_daily">Једном дневно</string>
-    <string name="menu_auto_updates_check_interval_weekly">Једном недељно</string>
-    <string name="menu_auto_updates_check_interval_monthly">Једном месечно</string>
-    <string name="menu_auto_updates_check_interval_never">Никада</string>
     <string name="menu_delete_update">Обриши</string>
     <string name="menu_copy_url">Копирај URL</string>
     <string name="menu_export_update">Извези ажурирања</string>
@@ -112,9 +105,7 @@
     <string name="update_on_mobile_data_title">Упозорење</string>
     <string name="update_on_mobile_data_message">Преузимање надоградњи преко мобилне мреже троши доста саобраћаја и може довести до непредвиђених трошкова. Да ли желите да наставите?</string>
     <string name="checkbox_mobile_data_warning">Не приказуј поново</string>
-    <string name="menu_mobile_data_warning">Упозорење мобилних података</string>
     <!-- Info section -->
-    <string name="extras_category_title">Додаци</string>
     <string name="maintainer_info_title">Програмер</string>
     <string name="donate_info_title">Донирај</string>
     <string name="donate_info_summary">Подржите развој</string>

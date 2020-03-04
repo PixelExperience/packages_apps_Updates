@@ -34,7 +34,6 @@
     <string name="check_for_update">Check for update</string>
 
     <!-- Menu -->
-    <string name="menu_refresh">Refresh</string>
     <string name="menu_delete_update">Delete</string>
     <string name="menu_copy_url">Copy URL</string>
     <string name="menu_export_update">Export update</string>
@@ -113,7 +112,6 @@
     <string name="checkbox_mobile_data_warning">Do not show again</string>
 
     <!-- Info section -->
-    <string name="extras_category_title">Extras</string>
     <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Donate</string>
     <string name="donate_info_summary">Support the development</string>

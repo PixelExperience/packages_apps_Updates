@@ -32,13 +32,6 @@
     <string name="update_failed_notification">Kemas kini gagal</string>
     <string name="installation_suspended_notification">Pemasangan tergantung</string>
     <!-- Menu -->
-    <string name="menu_refresh">Muat Semula</string>
-    <string name="menu_preferences">Pilihan</string>
-    <string name="menu_auto_updates_check">Semakan kemas kini auto</string>
-    <string name="menu_auto_updates_check_interval_daily">Sekali sehari</string>
-    <string name="menu_auto_updates_check_interval_weekly">Sekali seminggu</string>
-    <string name="menu_auto_updates_check_interval_monthly">Sekali sebulan</string>
-    <string name="menu_auto_updates_check_interval_never">Tidak akan</string>
     <string name="menu_delete_update">Padam</string>
     <string name="menu_copy_url">Salin URL</string>
     <string name="menu_export_update">Eksport kemas kini</string>
@@ -96,7 +89,6 @@
     <string name="update_on_mobile_data_message">Anda akan memuat turun pakej kemaskini menggunakan data mudah alih yang akan mengakibatkan penggunaan data yang tinggi. Ingin teruskan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tunjukkan lagi</string>
     <!-- Info section -->
-    <string name="extras_category_title">Tambahan</string>
     <string name="maintainer_info_title">Penyelenggara</string>
     <string name="donate_info_title">Menyumbang</string>
     <string name="donate_info_summary">Sokong pembangunan</string>
