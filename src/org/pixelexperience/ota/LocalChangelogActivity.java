@@ -38,7 +38,7 @@ public class LocalChangelogActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final ProgressDialog dialog = new ProgressDialog(this,R.style.AppTheme_AlertDialogStyle);
+        final ProgressDialog dialog = new ProgressDialog(this, R.style.AppTheme_AlertDialogStyle);
         final Handler mHandler = new Handler();
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
@@ -47,7 +47,7 @@ public class LocalChangelogActivity extends AppCompatActivity {
         mHandler.postDelayed(() -> {
             StringBuilder data = new StringBuilder();
             int numRead;
-            char tmp[] = new char[2048];
+            char[] tmp = new char[2048];
             try (InputStreamReader inputReader = new FileReader(CHANGELOG_PATH)) {
 
                 while ((numRead = inputReader.read(tmp)) >= 0) {

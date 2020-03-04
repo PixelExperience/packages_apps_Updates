@@ -20,6 +20,8 @@ import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
 
+import org.pixelexperience.ota.misc.Constants;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -33,8 +35,6 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.pixelexperience.ota.misc.Constants;
 
 public class HttpURLConnectionClient implements DownloadClient {
 
@@ -58,11 +58,6 @@ public class HttpURLConnectionClient implements DownloadClient {
         mUseDuplicateLinks = useDuplicateLinks;
     }
 
-    private void setExtraHeaders(){
-        mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
-        mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
-    }
-
     private static boolean isSuccessCode(int statusCode) {
         return (statusCode / 100) == 2;
     }
@@ -73,6 +68,11 @@ public class HttpURLConnectionClient implements DownloadClient {
 
     private static boolean isPartialContentCode(int statusCode) {
         return statusCode == 206;
+    }
+
+    private void setExtraHeaders() {
+        mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
+        mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
     }
 
     @Override

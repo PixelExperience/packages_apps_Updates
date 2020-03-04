@@ -26,9 +26,9 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.pixelexperience.ota.misc.FileUtils;
-
 import androidx.core.app.NotificationCompat;
+
+import org.pixelexperience.ota.misc.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
