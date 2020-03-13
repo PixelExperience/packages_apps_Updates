@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Mise à jour du système</string>
     <!-- Notifications -->
     <string name="export_channel_title">Fin de l\'exportation</string>
     <string name="new_updates_channel_title">Nouvelles mises à jour</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Début du téléchargement</string>
     <string name="update_failed_notification">Échec de la mise à jour</string>
     <string name="installation_suspended_notification">Installation interrompue</string>
+    <string name="check_for_update">Vérifier les mises à jour</string>
     <!-- Menu -->
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_copy_url">Copier l\'URL</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">URL de téléchargement</string>
     <string name="toast_download_url_copied">URL copiée</string>
     <!-- General -->
+    <string name="update_found_notification">Une mise à jour système est disponible</string>
     <string name="snack_no_updates_found">Aucune nouvelle mise à jour disponible</string>
     <string name="snack_updates_check_failed">La vérification de nouvelles mises à jour a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
     <string name="snack_download_failed">Le téléchargement a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
     <string name="snack_download_verification_failed">La vérification de la mise à jour a échoué.</string>
     <string name="snack_download_verified">Téléchargement terminé.</string>
     <string name="snack_update_not_installable">Cette mise à jour ne peut pas être installée sur votre version actuelle.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> sur <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> sur <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Vérification de la mise à jour en cours</string>
+    <string name="list_no_updates">Aucune nouvelle mise à jour disponible.</string>
     <string name="blocked_update_dialog_title">Mise à jour bloquée</string>
     <!-- Actions -->
     <string name="action_download">Télécharger</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporter la mise à jour vers le stockage interne</string>
+    <string name="notification_export_success">Mise à jour exportée vers le stockage interne</string>
+    <string name="notification_export_fail">Echec lors de l\'export de la mise à jour vers le stockage interne</string>
     <string name="toast_already_exporting">Une mise à jour est déjà en cours d\'export</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

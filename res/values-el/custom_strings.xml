@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Ενημέρωση συστήματος</string>
     <!-- Notifications -->
     <string name="export_channel_title">Ολοκλήρωση εξαγωγής</string>
     <string name="new_updates_channel_title">Νέες ενημερώσεις</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Έναρξη λήψης</string>
     <string name="update_failed_notification">Η ενημέρωση απέτυχε</string>
     <string name="installation_suspended_notification">Η εγκατάσταση έχει διακοπεί</string>
+    <string name="check_for_update">Έλεγχος για ενημερώσεις</string>
     <!-- Menu -->
     <string name="menu_delete_update">Διαγραφή</string>
     <string name="menu_copy_url">Αντιγραφή URL</string>
@@ -39,6 +41,7 @@
     <string name="label_download_url">Λήψη συνδέσμου</string>
     <string name="toast_download_url_copied">Ο σύνδεσμος αντιγράφηκε</string>
     <!-- General -->
+    <string name="update_found_notification">Διαθέσιμη ενημέρωση συστήματος</string>
     <string name="snack_no_updates_found">Δεν βρέθηκαν νέες ενημερώσεις</string>
     <string name="snack_updates_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
     <string name="snack_download_failed">Η λήψη απέτυχε. Παρακαλούμε ελέγξτε την σύνδεση σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
@@ -49,6 +52,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> από <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> από <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Επαλήθευση ενημέρωσης</string>
+    <string name="list_no_updates">Δεν βρέθηκαν νέες ενημερώσεις.</string>
     <string name="blocked_update_dialog_title">Η ενημέρωση μπλοκαρίστηκε</string>
     <!-- Actions -->
     <string name="action_download">Λήψη</string>
@@ -78,6 +82,9 @@
     <string name="dialog_battery_low_title">Χαμηλή μπαταρία</string>
     <string name="dialog_battery_low_message_pct">Η στάθμη της μπαταρίας είναι πολύ χαμηλή, χρειάζεστε τουλάχιστον <xliff:g id="percent_discharging">%1$d</xliff:g>%% της μπαταρίας για να συνεχίσετε ή <xliff:g id="percent_charging">%2$d</xliff:g>%% κατά την φόρτιση.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Εξαγωγή ενημέρωσης στον εσωτερικό χώρο</string>
+    <string name="notification_export_success">Η ενημέρωση εξήχθη στον εσωτερικό χώρο</string>
+    <string name="notification_export_fail">Αδυναμία εξαγωγής ενημέρωσης στον εσωτερικό χώρο</string>
     <string name="toast_already_exporting">Εξάγεται ήδη μία ενημέρωση</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

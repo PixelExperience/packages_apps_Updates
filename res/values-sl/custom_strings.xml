@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Posodobitev sistema</string>
     <!-- Notifications -->
     <string name="export_channel_title">Zaključek izvoza</string>
     <string name="new_updates_channel_title">Nove posodobitve</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Začetek prenosa</string>
     <string name="update_failed_notification">Posodobitev je spodletela</string>
     <string name="installation_suspended_notification">Namestitev začasno ustavljena</string>
+    <string name="check_for_update">Preveri za posodobitev</string>
     <!-- Menu -->
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_copy_url">Kopiraj URL</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">URL prenosa</string>
     <string name="toast_download_url_copied">URL kopiran</string>
     <!-- General -->
+    <string name="update_found_notification">Na voljo je posodobitev sistema</string>
     <string name="snack_no_updates_found">Ni najdenih novih posodobitev</string>
     <string name="snack_updates_check_failed">Preverjanje za posodobitve je spodletelo. Preverite svojo internetno povezavo in poskusite znova kasneje.</string>
     <string name="snack_download_failed">Prenos je spodletel. Preverite svojo internetno povezavo in poskusite znova kasneje.</string>
     <string name="snack_download_verification_failed">Preverjanje posodobitve je spodletelo.</string>
     <string name="snack_download_verified">Prenos končan.</string>
     <string name="snack_update_not_installable">Te posodobitve ni mogoče namestiti preko trenutne izgradnje.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> od <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> od <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Preverjanje posodobitve</string>
+    <string name="list_no_updates">Ni najdene nove posodobitve</string>
     <string name="blocked_update_dialog_title">Posodobitev blokirana</string>
     <!-- Actions -->
     <string name="action_download">Prenesi</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Nizko stanje akumulatorja</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, <xliff:g id="percent_charging">%2$d</xliff:g>%% med polnjenjem.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Izvažanje posodobitve na notranji pomnilnik</string>
+    <string name="notification_export_success">Posodobitev izvožena na notranji pomnilnik</string>
+    <string name="notification_export_fail">Izvoz posodobitve na notranji pomnilnik je spodletel</string>
     <string name="toast_already_exporting">Posodobitev se že izvaža</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
@@ -109,6 +117,7 @@
     <string name="website_info_summary">Obiščite našo spletno stran</string>
     <string name="news_info_title">Novice</string>
     <string name="news_info_summary">Ostanite obveščeni o zadnjih posodobitvah in drugih novicah</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Poglejte objave na forumu</string>
     <string name="error_open_url">Odpiranje URL-ja v brskalniku je spodletelo</string>
 </resources>

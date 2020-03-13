@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Actualització del sistema</string>
     <!-- Notifications -->
     <string name="export_channel_title">Exportació completada</string>
     <string name="new_updates_channel_title">Noves actualitzacions</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">S\'està iniciant la baixada</string>
     <string name="update_failed_notification">Actualització fallida</string>
     <string name="installation_suspended_notification">Instal·lació suspesa</string>
+    <string name="check_for_update">Cercar actualitzacions</string>
     <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_copy_url">Copia l\'URL</string>
@@ -39,6 +41,7 @@
     <string name="label_download_url">URL de baixada</string>
     <string name="toast_download_url_copied">URL copiada</string>
     <!-- General -->
+    <string name="update_found_notification">Actualització del sistema disponible</string>
     <string name="snack_no_updates_found">No s\'han trobat noves actualitzacions</string>
     <string name="snack_updates_check_failed">Ha fallat la comprovació d\'actualització. Verifiqueu la connexió a Internet i tomeu-ho a provar més tard.</string>
     <string name="snack_download_failed">Ha fallat la la baixada. Verifiqueu la connexió a Internet i torneu-ho a provar més tard.</string>
@@ -48,6 +51,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">S\'està verificant l\'actualització</string>
+    <string name="list_no_updates">No s\'han trobat noves actualitzacions.</string>
     <string name="blocked_update_dialog_title">Actualització bloquejada</string>
     <!-- Actions -->
     <string name="action_download">Baixa</string>
@@ -77,6 +81,9 @@
     <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">El nivell de la bateria és massa baix, necessiteu com a mínim <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria per continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositiu s\'està carregant.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exportant actualització a l\'emmagatzematge intern</string>
+    <string name="notification_export_success">Actualització exportada a l\'emmagatzematge intern</string>
+    <string name="notification_export_fail">Exportar actualització a l\'emmagatzematge intern ha fallat</string>
     <string name="toast_already_exporting">Ja s\'està exportant una actualització</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

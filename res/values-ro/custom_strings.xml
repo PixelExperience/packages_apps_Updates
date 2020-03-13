@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Actualizare sistem</string>
     <!-- Notifications -->
     <string name="export_channel_title">Completare export</string>
     <string name="new_updates_channel_title">Actualizări noi</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Pornire descărcare</string>
     <string name="update_failed_notification">Actualizare eșuată</string>
     <string name="installation_suspended_notification">Instalarea a fost suspendată</string>
+    <string name="check_for_update">Verificare actualizări</string>
     <!-- Menu -->
     <string name="menu_delete_update">Șterge</string>
     <string name="menu_copy_url">Copiază URL</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">Descărcați URL-ul</string>
     <string name="toast_download_url_copied">URL copiat</string>
     <!-- General -->
+    <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="snack_updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
     <string name="snack_download_failed">Descărcarea a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
     <string name="snack_download_verification_failed">Verificarea actualizării a eșuat.</string>
     <string name="snack_download_verified">Descărcare terminată.</string>
     <string name="snack_update_not_installable">Această actualizare nu poate fi instalată pe build-ul curent.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> din <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> din <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verificare actualizare</string>
+    <string name="list_no_updates">Nu s-au găsit actualizări noi.</string>
     <string name="blocked_update_dialog_title">Actualizare blocată</string>
     <!-- Actions -->
     <string name="action_download">Descărcați</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Baterie slabă</string>
     <string name="dialog_battery_low_message_pct">Nivelul bateriei este prea scăzut. Aveți nevoie de cel puțin<xliff:g id="percent_discharging">%1$d</xliff:g>%% pentru a continua, <xliff:g id="percent_charging">%2$d</xliff:g>%% dacă telefonul este la încărcat.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exportarea actualizării în spațiul de stocare intern</string>
+    <string name="notification_export_success">Actualizare exportată în stocare internă</string>
+    <string name="notification_export_fail">Exportarea actualizării nu a reușit</string>
     <string name="toast_already_exporting">Se exportează deja o actualizare</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
@@ -106,6 +114,7 @@
     <string name="website_info_summary">Vizitați pagina noastră web</string>
     <string name="news_info_title">Noutăți</string>
     <string name="news_info_summary">Rămâneți informat despre actualizări şi alte noutăți</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vizualizaţi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
 </resources>

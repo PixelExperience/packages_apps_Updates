@@ -21,38 +21,38 @@
     <string name="export_channel_title">Completamento dell\'esportazione</string>
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="ongoing_channel_title">Download in corso</string>
-    <string name="update_failed_channel_title">Aggiornamento fallito</string>
-    <string name="verification_failed_notification">Verifica fallita</string>
+    <string name="update_failed_channel_title">Aggiornamenti non riusciti</string>
+    <string name="verification_failed_notification">Verifica non riuscita</string>
     <string name="verifying_download_notification">Verifica dell\'aggiornamento</string>
     <string name="downloading_notification">Download in corso</string>
     <string name="download_paused_notification">Download in pausa</string>
     <string name="download_paused_error_notification">Errore durante il download</string>
     <string name="download_completed_notification">Download completato</string>
     <string name="download_starting_notification">Avvio download</string>
-    <string name="update_failed_notification">Aggiornamento fallito</string>
+    <string name="update_failed_notification">Aggiornamento non riuscito</string>
     <string name="installation_suspended_notification">Installazione sospesa</string>
     <string name="check_for_update">Verifica la presenza di aggiornamenti</string>
     <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
-    <string name="menu_copy_url">Copia URL</string>
+    <string name="menu_copy_url">Copia link</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
     <string name="menu_show_changelog">Cronologia versioni</string>
     <string name="changelog_loading">Caricamento…</string>
-    <string name="label_download_url">Scarica l\'URL</string>
-    <string name="toast_download_url_copied">URL copiato</string>
+    <string name="label_download_url">Link per il download</string>
+    <string name="toast_download_url_copied">Link copiato</string>
     <!-- General -->
     <string name="update_found_notification">Aggiornamento di sistema disponibile</string>
     <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
     <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
-    <string name="snack_download_failed">Il download è fallito. Controlla la connessione ad internet e riprova più tardi.</string>
+    <string name="snack_download_failed">Il download non è riuscito. Controlla la connessione ad internet e riprova più tardi.</string>
     <string name="snack_download_verification_failed">Verifica dell\'aggiornamento fallita.</string>
     <string name="snack_download_verified">Download completato.</string>
-    <string name="snack_update_not_installable">Questo aggiornamento non può essere installato sulla versione corrente.</string>
+    <string name="snack_update_not_installable">Aggiornamento incompatibile con la versione corrente.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifica aggiornamento</string>
-    <string name="list_no_updates">Nessun nuovo aggiornamento trovato.</string>
+    <string name="list_no_updates">Nessun aggiornamento disponibile.</string>
     <string name="blocked_update_dialog_title">Aggiornamento bloccato</string>
     <!-- Actions -->
     <string name="action_download">Scarica</string>
@@ -73,18 +73,18 @@
     <string name="apply_update_dialog_message">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità Recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una Recovery compatibile. In caso contrario dovrai procedere con l\'installazione manuale.</string>
     <string name="apply_update_dialog_message_ab">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta terminata, ti verrà richiesto di riavviare il dispositivo.</string>
     <string name="cancel_installation_dialog_message">Annullare l\'installazione?</string>
-    <string name="installing_update">Installazione del pacchetto aggiornamento</string>
+    <string name="installing_update">Installazione del pacchetto di aggiornamento</string>
     <string name="installing_update_error">Errore di installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
-    <string name="finalizing_package">Completamento dell\'installazione del pacchetto in corso</string>
+    <string name="finalizing_package">Completamento dell\'installazione in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
     <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Esportando l\'aggiornamento alla memoria interna</string>
-    <string name="notification_export_success">Aggiornamento esportato alla memoria interna</string>
-    <string name="notification_export_fail">Non è stato possibile esportare l\'aggiornamento alla memoria interna</string>
+    <string name="dialog_export_title">Esportazione dell\'aggiornamento nella memoria interna in corso</string>
+    <string name="notification_export_success">Aggiornamento esportato nella memoria interna</string>
+    <string name="notification_export_fail">Non è stato possibile esportare l\'aggiornamento nella memoria interna</string>
     <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
@@ -113,5 +113,5 @@
     <string name="news_info_summary">Rimani aggiornato sugli aggiornamenti e altre novità</string>
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Visualizza i post del forum</string>
-    <string name="error_open_url">Impossibile aprire l\'URL nel browser</string>
+    <string name="error_open_url">Apertura del link non riuscita</string>
 </resources>

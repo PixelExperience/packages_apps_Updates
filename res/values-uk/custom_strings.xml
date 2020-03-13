@@ -52,6 +52,7 @@
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Перевірка оновлення</string>
+    <string name="list_no_updates">Оновлень не знайдено.</string>
     <string name="blocked_update_dialog_title">Оновлення заблоковане</string>
     <!-- Actions -->
     <string name="action_download">Завантажити</string>
@@ -81,6 +82,9 @@
     <string name="dialog_battery_low_title">Низький заряд батареї</string>
     <string name="dialog_battery_low_message_pct">Рівень заряду батареї занизький, для продовження необхідно принаймні <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряду або <xliff:g id="percent_charging">%2$d</xliff:g>%% під час зарядки.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Експорт оновлення до внутрішнього сховища</string>
+    <string name="notification_export_success">Оновлення, що експортується до внутрішнього сховища</string>
+    <string name="notification_export_fail">Не вдалося експортувати оновлення до внутрішнього сховища</string>
     <string name="toast_already_exporting">Оновлення вже експортується</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

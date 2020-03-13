@@ -35,7 +35,7 @@
     <!-- Menu -->
     <string name="menu_delete_update">Sil</string>
     <string name="menu_copy_url">Bağlantıyı kopyala</string>
-    <string name="menu_export_update">Güncellemeyi dışarı aktar</string>
+    <string name="menu_export_update">Güncellemeyi dışa aktar</string>
     <string name="menu_show_changelog">Mevcut sürümdeki değişiklikler</string>
     <string name="changelog_loading">Yükleniyor…</string>
     <string name="label_download_url">İndirme bağlantısı</string>
@@ -52,6 +52,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Güncelleme doğrulanıyor</string>
+    <string name="list_no_updates">Yeni güncelleme bulunamadı.</string>
     <string name="blocked_update_dialog_title">Güncelleme engellendi</string>
     <!-- Actions -->
     <string name="action_download">İndir</string>
@@ -69,7 +70,7 @@
     <string name="details_button">Ayrıntıları göster</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
-    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modun da yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modunda yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> tuşuna basarsanız, cihaz arka planda yüklemeye başlayacaktır.\n\nİşlem tamamlandığında, yeniden başlatmanız istenir.</string>
     <string name="cancel_installation_dialog_message">Yükleme iptal edilsin mi?</string>
     <string name="installing_update">Güncelleme paketi yükleniyor</string>
@@ -82,6 +83,7 @@
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Güncelleme dahili depolamaya aktarılıyor</string>
+    <string name="notification_export_success">Güncelleme dahili depolamaya aktarıldı</string>
     <string name="notification_export_fail">Güncelleme dahili depolamaya çıkartılırken hata</string>
     <string name="toast_already_exporting">Zaten bir güncelleme dışa aktarılıyor</string>
     <!-- ETA -->

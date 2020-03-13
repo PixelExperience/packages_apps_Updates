@@ -16,9 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Süsteemivärskendused</string>
     <!-- Notifications -->
     <string name="export_channel_title">Ekspordi lõpuleviimine</string>
-    <string name="new_updates_channel_title">Uued uuendused</string>
+    <string name="new_updates_channel_title">Uued värkendused</string>
     <string name="ongoing_channel_title">Käimasolevad allalaadimised</string>
     <string name="update_failed_channel_title">Värskendamine nurjus</string>
     <string name="verification_failed_notification">Kinnitamine ebaõnnestus</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Alustan allalaadimist</string>
     <string name="update_failed_notification">Värskendamine nurjus</string>
     <string name="installation_suspended_notification">Installimine peatati</string>
+    <string name="check_for_update">Kontrolli värskendusi</string>
     <!-- Menu -->
     <string name="menu_delete_update">Kustuta</string>
     <string name="menu_copy_url">Kopeeri aadress</string>
@@ -39,16 +41,19 @@
     <string name="label_download_url">Laadimise url</string>
     <string name="toast_download_url_copied">URL salvestatud</string>
     <!-- General -->
-    <string name="snack_no_updates_found">Uusi uuendusi ei ole</string>
-    <string name="snack_updates_check_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
-    <string name="snack_download_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="update_found_notification">Süsteemivärskendus on saadaval</string>
+    <string name="snack_no_updates_found">Uusi värskendusi ei ole</string>
+    <string name="snack_updates_check_failed">Värskenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="snack_download_failed">Värskenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
     <string name="snack_download_verification_failed">Värskenduse kontroll ebaõnnestus.</string>
     <string name="snack_download_verified">Allalaadimine lõpetatud.</string>
-    <string name="snack_update_not_installable">Seda uuendust ei saa installida praeguse püsivara peale.</string>
+    <string name="snack_update_not_installable">Seda värskendust ei saa installida praeguse püsivara peale.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Uuenduse kinnitamine</string>
-    <string name="blocked_update_dialog_title">Uuendamine blokeeritud</string>
+    <string name="list_verifying_update">Värskenduse kinnitamine</string>
+    <string name="list_no_updates">Uut  värskendust ei ole.</string>
+    <string name="blocked_update_dialog_title">Varskendamine blokeeritud</string>
     <!-- Actions -->
     <string name="action_download">Lae alla</string>
     <string name="action_pause">Paus</string>
@@ -57,27 +62,30 @@
     <string name="action_delete">Kustuta</string>
     <string name="action_cancel">Tühista</string>
     <string name="confirm_delete_dialog_title">Kustuta fail</string>
-    <string name="confirm_delete_dialog_message">Kustuta valitud uuendusfail?</string>
+    <string name="confirm_delete_dialog_message">Kustuta valitud värskendusfail?</string>
     <string name="pause_button">Paus</string>
     <string name="resume_button">Jätka</string>
     <string name="suspend_button">Peata</string>
     <string name="reboot">Taaskäivita</string>
     <string name="details_button">Vaata detaile</string>
     <!-- Installation -->
-    <string name="apply_update_dialog_title">Rakenda uuendus</string>
-    <string name="apply_update_dialog_message">Uuendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, käivitub seade uuenduste installimiseks taaskasutamis režiimis.\n\nMärkus: See funktsioon nõuab ühilduvat taastamist või uuendusi tuleb installida käsitsi.</string>
-    <string name="apply_update_dialog_message_ab">Uuendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, hakkab seade installima taustal.\n\nKui olete lõpetanud, palutakse teil taaskäivitada.</string>
+    <string name="apply_update_dialog_title">Rakenda värskendus</string>
+    <string name="apply_update_dialog_message">Värskendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, käivitub seade värskenduste installimiseks taaskasutamis režiimis.\n\nMärkus: See funktsioon nõuab ühilduvat taastamist või värskendusi tuleb installida käsitsi.</string>
+    <string name="apply_update_dialog_message_ab">Värskendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, hakkab seade installima taustal.\n\nKui olete lõpetanud, palutakse teil taaskäivitada.</string>
     <string name="cancel_installation_dialog_message">Kas soovite installimise tühistada?</string>
-    <string name="installing_update">Uuenduspaketi installimine</string>
+    <string name="installing_update">Värskenduspaketi installimine</string>
     <string name="installing_update_error">Installimisviga</string>
-    <string name="installing_update_finished">Uuendus installitud</string>
+    <string name="installing_update_finished">Värskendus installitud</string>
     <string name="finalizing_package">Paketi installimise lõpetamine</string>
     <string name="preparing_ota_first_boot">Esmakordse laadimise ettevalmistamine</string>
-    <string name="dialog_prepare_zip_message">Esmane uuendamise ettevalmistamine</string>
+    <string name="dialog_prepare_zip_message">Esmane värskendamise ettevalmistamine</string>
     <string name="dialog_battery_low_title">Madal akutase</string>
     <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <!-- Export update -->
-    <string name="toast_already_exporting">Ekspordite juba uuendust</string>
+    <string name="dialog_export_title">Värskenduse eksportimine sisemisse salvestusruumi</string>
+    <string name="notification_export_success">Värskendus eksporditi sisemisse salvestusruumi</string>
+    <string name="notification_export_fail">Värskenduse eksportimine sisemisse salvestusse ei õnnestunud</string>
+    <string name="toast_already_exporting">Ekspordite juba värskendust</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund jäänud</item>
@@ -102,7 +110,7 @@
     <string name="website_info_title">Koduleht</string>
     <string name="website_info_summary">Külasta meie kodulehte</string>
     <string name="news_info_title">Uudised</string>
-    <string name="news_info_summary">Ole kursis uuenduste ja muude uudistega</string>
+    <string name="news_info_summary">Ole kursis värskenduste ja muude uudistega</string>
     <string name="forum_info_title">Foorum</string>
     <string name="forum_info_summary">Vaata foorumi postitusi</string>
     <string name="error_open_url">Brauseris URL-i avamine ebaõnnestus</string>

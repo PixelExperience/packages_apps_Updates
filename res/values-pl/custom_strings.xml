@@ -20,7 +20,7 @@
     <!-- Notifications -->
     <string name="export_channel_title">Eksport zakończony</string>
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
-    <string name="ongoing_channel_title">Trwające pobieranie</string>
+    <string name="ongoing_channel_title">Trwające pobierania</string>
     <string name="update_failed_channel_title">Aktualizacja nie powiodła się</string>
     <string name="verification_failed_notification">Weryfikacja nie powiodła się</string>
     <string name="verifying_download_notification">Weryfikacja aktualizacji</string>
@@ -43,15 +43,16 @@
     <!-- General -->
     <string name="update_found_notification">Aktualizacja systemu jest dostępna</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
-    <string name="snack_updates_check_failed">Sprawdzanie aktualizacji nie powiodło się. Sprawdź połączenie z Internetem i spróbuj ponownie.</string>
-    <string name="snack_download_failed">Pobieranie nie powiodło się. Sprawdź połączenie z Internetem i spróbuj ponownie później.</string>
-    <string name="snack_download_verification_failed">Weryfikacja aktualizacji się nie powiodła.</string>
+    <string name="snack_updates_check_failed">Sprawdzanie aktualizacji nie powiodło się. Sprawdź swoje połączenie z Internetem i spróbuj ponownie.</string>
+    <string name="snack_download_failed">Pobieranie nie powiodło się. Sprawdź swoje połączenie z Internetem i spróbuj ponownie później.</string>
+    <string name="snack_download_verification_failed">Weryfikacja aktualizacji nie powiodła się. </string>
     <string name="snack_download_verified">Pobieranie zakończone.</string>
     <string name="snack_update_not_installable">Ta aktualizacja nie może zostać zainstalowana na bieżącej wersji systemu.</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Sprawdzanie aktualizacji</string>
+    <string name="list_no_updates">Nie znaleziono nowych aktualizacji.</string>
     <string name="blocked_update_dialog_title">Aktualizacja zablokowana</string>
     <!-- Actions -->
     <string name="action_download">Pobierz</string>

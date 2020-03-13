@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">系統更新</string>
     <!-- Notifications -->
     <string name="export_channel_title">匯出完成</string>
     <string name="new_updates_channel_title">新的更新</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">正在開始下載</string>
     <string name="update_failed_notification">更新失敗</string>
     <string name="installation_suspended_notification">安裝已中斷</string>
+    <string name="check_for_update">檢查更新</string>
     <!-- Menu -->
     <string name="menu_delete_update">刪除</string>
     <string name="menu_copy_url">複製網址</string>
@@ -39,6 +41,7 @@
     <string name="label_download_url">下載網址</string>
     <string name="toast_download_url_copied">網址已複製</string>
     <!-- General -->
+    <string name="update_found_notification">系統有更新套件可用！</string>
     <string name="snack_no_updates_found">沒有找到新的更新</string>
     <string name="snack_updates_check_failed">更新檢查失敗。請檢查您的網路連線並稍後重試。</string>
     <string name="snack_download_failed">下載失敗。請檢查您的網路連線並稍後重試。</string>

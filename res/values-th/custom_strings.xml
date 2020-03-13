@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">อัพเดตระบบ</string>
     <!-- Notifications -->
     <string name="export_channel_title">การส่งออกเสร็จสมบูรณ์</string>
     <string name="new_updates_channel_title">มีอัพเดตใหม่!</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">เริ่มต้นดาวน์โหลด</string>
     <string name="update_failed_notification">การปรับปรุงล้มเหลว</string>
     <string name="installation_suspended_notification">การติดตั้งถูกระงับ</string>
+    <string name="check_for_update">ตรวจสอบการอัพเดต</string>
     <!-- Menu -->
     <string name="menu_delete_update">ลบ</string>
     <string name="menu_copy_url">คัดลอก URL</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">ดาวน์โหลด URL</string>
     <string name="toast_download_url_copied">คัดลอก URL</string>
     <!-- General -->
+    <string name="update_found_notification">มีการอัปเดตใหม่ในขณะนี้</string>
     <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
     <string name="snack_updates_check_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
     <string name="snack_download_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
     <string name="snack_download_verification_failed">การตรวจสอบการยืนยันอัปเดตล้มเหลว</string>
     <string name="snack_download_verified">ดาวน์โหลดเสร็จสมบูรณ์</string>
     <string name="snack_update_not_installable">การปรับปรุงนี้ไม่สามารถติดตั้งบนโครงสร้างปัจจุบัน</string>
+    <string name="text_download_speed">%1$s, %2$s/วินาที</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">ตรวจสอบการปรับปรุง</string>
+    <string name="list_no_updates">ไม่พบการอัพเดตใหม่.</string>
     <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
     <!-- Actions -->
     <string name="action_download">ดาวน์โหลด</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
     <string name="dialog_battery_low_message_pct">ระดับแบตเตอรี่ต่ำเกินไป คุณจะต้องมีระดับแบตเตอรี่อย่างน้อย <xliff:g id="percent_discharging">%1$d</xliff:g>%% เพื่อดำเนินต่อ <xliff:g id="percent_charging">%2$d</xliff:g>%% หากกำลังชาร์จ</string>
     <!-- Export update -->
+    <string name="dialog_export_title">ส่งออกการอัพเดตไปยังที่เก็บข้อมูลภายใน</string>
+    <string name="notification_export_success">อัพเดตที่ส่งออกไปยังที่เก็บข้อมูลภายใน</string>
+    <string name="notification_export_fail">ไม่สามารถส่งออกการอัพเดตไปยังที่จัดเก็บข้อมูลภายใน</string>
     <string name="toast_already_exporting">ดำเนินการส่งออกอัพเดตเรียบร้อยแล้ว</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

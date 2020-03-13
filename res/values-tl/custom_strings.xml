@@ -16,7 +16,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Pag-update ng system</string>
     <!-- Notifications -->
+    <string name="export_channel_title">Pagkumpleto ng pag-export</string>
+    <string name="new_updates_channel_title">Mga bagong update</string>
+    <string name="ongoing_channel_title">Patuloy na pag-download</string>
+    <string name="update_failed_channel_title">Nabigo ang pag-update</string>
+    <string name="verification_failed_notification">Nabigo ang pag-verify</string>
+    <string name="verifying_download_notification">Pag-verify ng pag-update</string>
+    <string name="downloading_notification">Pag-download</string>
+    <string name="download_paused_notification">Naka-pause ang pag-download</string>
     <string name="download_starting_notification">Nagsimula ng mag download</string>
     <!-- Menu -->
     <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
