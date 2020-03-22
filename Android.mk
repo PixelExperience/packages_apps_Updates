@@ -8,6 +8,12 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_USE_AAPT2 := true
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    gson
+
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
+    gson:libs/gson.jar
+
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     com.google.android.material_material \
     androidx.core_core \
