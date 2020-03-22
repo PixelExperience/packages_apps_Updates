@@ -77,7 +77,7 @@ public class Utils {
     }
 
     public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates_v3.json");
+        return new File(context.getCacheDir(), "updates_v4.json");
     }
 
     // This should really return an UpdateBaseInfo object, but currently this only
@@ -144,7 +144,7 @@ public class Utils {
     }
 
     public static String getServerURL() {
-        return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_VERSION_CODE));
+        return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
     public static String getDownloadWebpageUrl(String fileName) {
