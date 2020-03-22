@@ -23,6 +23,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.pixelexperience.ota.model.MaintainerInfo;
 import org.pixelexperience.ota.model.Update;
 
 import java.io.File;
@@ -31,7 +35,7 @@ import java.util.List;
 
 public class UpdatesDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
     private static final String DATABASE_NAME = "updates.db";
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + UpdateEntry.TABLE_NAME + " (" +
@@ -46,8 +50,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                     UpdateEntry.COLUMN_NAME_FORUM_URL + " TEXT," +
                     UpdateEntry.COLUMN_NAME_WEBSITE_URL + " TEXT," +
                     UpdateEntry.COLUMN_NAME_NEWS_URL + " TEXT," +
-                    UpdateEntry.COLUMN_NAME_MAINTAINER + " TEXT," +
-                    UpdateEntry.COLUMN_NAME_MAINTAINER_URL + " TEXT," +
+                    UpdateEntry.COLUMN_NAME_MAINTAINERS + " TEXT," +
                     UpdateEntry.COLUMN_NAME_HASH + " TEXT)";
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + UpdateEntry.TABLE_NAME;
@@ -82,8 +85,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         values.put(UpdateEntry.COLUMN_NAME_FORUM_URL, update.getForumUrl());
         values.put(UpdateEntry.COLUMN_NAME_WEBSITE_URL, update.getWebsiteUrl());
         values.put(UpdateEntry.COLUMN_NAME_NEWS_URL, update.getNewsUrl());
-        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER, update.getMaintainer());
-        values.put(UpdateEntry.COLUMN_NAME_MAINTAINER_URL, update.getMaintainerUrl());
+        values.put(UpdateEntry.COLUMN_NAME_MAINTAINERS, new Gson().toJson(update.getMaintainers()));
         values.put(UpdateEntry.COLUMN_NAME_HASH, update.getHash());
         return db.insertWithOnConflict(UpdateEntry.TABLE_NAME, null, values, conflictAlgorithm);
     }
@@ -122,8 +124,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 UpdateEntry.COLUMN_NAME_FORUM_URL,
                 UpdateEntry.COLUMN_NAME_WEBSITE_URL,
                 UpdateEntry.COLUMN_NAME_NEWS_URL,
-                UpdateEntry.COLUMN_NAME_MAINTAINER,
-                UpdateEntry.COLUMN_NAME_MAINTAINER_URL,
+                UpdateEntry.COLUMN_NAME_MAINTAINERS,
                 UpdateEntry.COLUMN_NAME_HASH};
         String sort = UpdateEntry.COLUMN_NAME_TIMESTAMP + " DESC";
         Cursor cursor = db.query(UpdateEntry.TABLE_NAME, projection, null, null,
@@ -153,10 +154,9 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
                 update.setWebsiteUrl(cursor.getString(index));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_NEWS_URL);
                 update.setNewsUrl(cursor.getString(index));
-                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_MAINTAINER);
-                update.setMaintainer(cursor.getString(index));
-                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_MAINTAINER_URL);
-                update.setMaintainerUrl(cursor.getString(index));
+                index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_MAINTAINERS);
+                update.setMaintainers(new Gson().fromJson(cursor.getString(index), new TypeToken<ArrayList<MaintainerInfo>>() {
+                }.getType()));
                 index = cursor.getColumnIndex(UpdateEntry.COLUMN_NAME_HASH);
                 update.setHash(cursor.getString(index));
                 updates.add(update);
@@ -178,8 +178,7 @@ public class UpdatesDbHelper extends SQLiteOpenHelper {
         static final String COLUMN_NAME_FORUM_URL = "forum_url";
         static final String COLUMN_NAME_WEBSITE_URL = "website_url";
         static final String COLUMN_NAME_NEWS_URL = "news_url";
-        static final String COLUMN_NAME_MAINTAINER = "maintainer";
-        static final String COLUMN_NAME_MAINTAINER_URL = "maintainer_url";
+        static final String COLUMN_NAME_MAINTAINERS = "maintainer";
         static final String COLUMN_NAME_HASH = "hash";
     }
 }

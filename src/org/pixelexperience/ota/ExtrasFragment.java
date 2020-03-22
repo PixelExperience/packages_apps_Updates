@@ -1,5 +1,6 @@
 package org.pixelexperience.ota;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,17 +8,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import org.pixelexperience.ota.misc.Utils;
+import org.pixelexperience.ota.model.MaintainerInfo;
 import org.pixelexperience.ota.model.UpdateInfo;
+
+import java.util.ArrayList;
 
 public class ExtrasFragment extends Fragment {
 
     private View mainView;
-    private ExtraCardView maintainerCard;
+    private LinearLayout maintainersLayout;
     private ExtraCardView donateCard;
     private ExtraCardView forumCard;
     private ExtraCardView websiteCard;
@@ -27,7 +33,7 @@ public class ExtrasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mainView = inflater.inflate(R.layout.extras_fragment, container, false);
-        maintainerCard = mainView.findViewById(R.id.maintainer_card);
+        maintainersLayout = mainView.findViewById(R.id.maintainers);
         donateCard = mainView.findViewById(R.id.donate_card);
         forumCard = mainView.findViewById(R.id.forum_card);
         websiteCard = mainView.findViewById(R.id.website_card);
@@ -48,12 +54,15 @@ public class ExtrasFragment extends Fragment {
             return;
         }
 
-        if (update.getMaintainer() != null && !update.getMaintainer().isEmpty()) {
-            maintainerCard.setSummary(update.getMaintainer());
-            if (update.getMaintainerUrl() != null && !update.getMaintainerUrl().isEmpty()) {
-                maintainerCard.setOnClickListener(v -> openUrl(update.getMaintainerUrl()));
+        ArrayList<MaintainerInfo> maintainers = update.getMaintainers();
+        if (maintainers != null && !maintainers.isEmpty()) {
+            maintainersLayout.removeAllViews();
+            for (MaintainerInfo maintainer : maintainers) {
+                ExtraCardView maintainerCard = createMaintainerCard(getActivity());
+                maintainerCard.setSummary(maintainer.getName());
+                maintainerCard.setOnClickListener(v -> openUrl(Utils.getMaintainerURL(maintainer.getUsername())));
                 maintainerCard.setClickable(true);
-                maintainerCard.setVisibility(View.VISIBLE);
+                maintainersLayout.addView(maintainerCard);
             }
         }
 
@@ -81,6 +90,22 @@ public class ExtrasFragment extends Fragment {
             newsCard.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    private ExtraCardView createMaintainerCard(Context context) {
+        ExtraCardView card = new ExtraCardView(context);
+        card.setTitle(getString(R.string.maintainer_info_title));
+        card.setImage(getResources().getDrawable(R.drawable.ic_maintainers_icon, context.getTheme()));
+        card.setCardBackgroundColor(getResources().getColor(R.color.cardview_background, context.getTheme()));
+        card.setRadius(getResources().getDimension(R.dimen.extra_card_corner_radius));
+        card.setCardElevation(getResources().getDimension(R.dimen.extra_card_elevation));
+        int padding = (int) getResources().getDimension(R.dimen.extra_card_content_padding);
+        card.setContentPadding(padding, padding, padding, padding);
+        int extraMargin = (int) getResources().getDimension(R.dimen.extra_card_layout_margin);
+        LinearLayout.LayoutParams buttonLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        buttonLayoutParams.setMargins(extraMargin, extraMargin, extraMargin, extraMargin);
+        card.setLayoutParams(buttonLayoutParams);
+        return card;
     }
 
     private void showSnackbar(int stringId, int duration) {
