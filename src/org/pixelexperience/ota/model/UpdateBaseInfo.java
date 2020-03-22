@@ -16,6 +16,8 @@
  */
 package org.pixelexperience.ota.model;
 
+import java.util.ArrayList;
+
 public interface UpdateBaseInfo {
     String getName();
 
@@ -37,9 +39,7 @@ public interface UpdateBaseInfo {
 
     String getNewsUrl();
 
-    String getMaintainer();
-
-    String getMaintainerUrl();
+    ArrayList<MaintainerInfo> getMaintainers();
 
     String getHash();
 }

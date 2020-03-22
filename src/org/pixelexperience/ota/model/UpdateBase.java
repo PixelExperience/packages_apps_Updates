@@ -16,6 +16,8 @@
  */
 package org.pixelexperience.ota.model;
 
+import java.util.ArrayList;
+
 public class UpdateBase implements UpdateBaseInfo {
 
     private String mName;
@@ -28,8 +30,7 @@ public class UpdateBase implements UpdateBaseInfo {
     private String mForumUrl;
     private String mWebsiteUrl;
     private String mNewsUrl;
-    private String mMaintainer;
-    private String mMaintainerUrl;
+    private ArrayList<MaintainerInfo> mMaintainers;
     private String mHash;
 
     UpdateBase() {
@@ -135,21 +136,12 @@ public class UpdateBase implements UpdateBaseInfo {
     }
 
     @Override
-    public String getMaintainer() {
-        return mMaintainer;
+    public ArrayList<MaintainerInfo> getMaintainers() {
+        return mMaintainers;
     }
 
-    public void setMaintainer(String maintainer) {
-        mMaintainer = maintainer;
-    }
-
-    @Override
-    public String getMaintainerUrl() {
-        return mMaintainerUrl;
-    }
-
-    public void setMaintainerUrl(String maintainerUrl) {
-        mMaintainerUrl = maintainerUrl;
+    public void setMaintainers(ArrayList<MaintainerInfo> maintainers) {
+        mMaintainers = maintainers;
     }
 
     @Override
