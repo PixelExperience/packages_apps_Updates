@@ -155,7 +155,7 @@ public class Utils {
     }
 
     public static String getServerURL() {
-        return String.format(Constants.OTA_URL, "beryllium", SystemProperties.get(Constants.PROP_BUILD_VERSION));
+        return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
     public static String getMaintainerURL(String username) {
