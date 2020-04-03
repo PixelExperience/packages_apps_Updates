@@ -80,6 +80,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     private UpdatesListActivity mActivity;
     private UpdateInfo mSelectedUpdate;
 
+    private AlertDialog infoDialog;
+
     UpdatesListAdapter(UpdatesListActivity activity) {
         mActivity = activity;
 
@@ -93,6 +95,15 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.update_item_view, viewGroup, false);
         return new ViewHolder(view);
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        super.onViewDetachedFromWindow(holder);
+
+        if (infoDialog != null) {
+            infoDialog.dismiss();
+        }
     }
 
     void setUpdaterController(UpdaterController updaterController) {
@@ -537,12 +548,15 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
     private void showInfoDialog() {
         String messageString = mActivity.getString(R.string.snack_update_not_installable);
-        AlertDialog dialog = new AlertDialog.Builder(mActivity, R.style.AppTheme_AlertDialogStyle)
+        if (infoDialog != null) {
+            infoDialog.dismiss();
+        }
+        infoDialog = new AlertDialog.Builder(mActivity, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.blocked_update_dialog_title)
                 .setPositiveButton(android.R.string.ok, null)
                 .setMessage(messageString)
                 .show();
-        TextView textView = dialog.findViewById(android.R.id.message);
+        TextView textView = infoDialog.findViewById(android.R.id.message);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
