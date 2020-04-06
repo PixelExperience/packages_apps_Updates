@@ -82,6 +82,9 @@
     <string name="dialog_battery_low_title">低電量</string>
     <string name="dialog_battery_low_message_pct">電池電量過低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的電量才能繼續；如果正在充電，則需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的電量才能繼續。</string>
     <!-- Export update -->
+    <string name="dialog_export_title">將更新導出至内部存储</string>
+    <string name="notification_export_success">已將更新導出至内部存储</string>
+    <string name="notification_export_fail">未能將更新匯出到內部儲存</string>
     <string name="toast_already_exporting">已匯出更新</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

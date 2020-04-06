@@ -16,9 +16,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">ವ್ಯವಸ್ತೆಯ ನವೀಕರಣೆ</string>
     <!-- Notifications -->
     <string name="export_channel_title">ನಿರ್ಯಾತ ಪೂರ್ಣತೆ</string>
+    <string name="new_updates_channel_title">ನವ ನವೀಕರಣೆಗಳು</string>
     <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಕೆಳಭರಿತಗಳು</string>
+    <string name="update_failed_channel_title">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="verification_failed_notification">ಧೃಢಿಕರಣ ವಿಫಲವಾಯಿತು</string>
+    <string name="verifying_download_notification">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
     <!-- Menu -->
     <string name="changelog_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <!-- General -->

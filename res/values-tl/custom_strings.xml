@@ -38,8 +38,14 @@
     <!-- Actions -->
     <string name="confirm_delete_dialog_title">Burahin ang file</string>
     <!-- Installation -->
+    <string name="finalizing_package">Pagtatapos ng pag-install ng package</string>
+    <string name="preparing_ota_first_boot">Paghahanda para sa unang boot</string>
+    <string name="dialog_prepare_zip_message">Paunang paghahanda sa pag-update</string>
     <string name="dialog_battery_low_message_pct">Ang level ng baterya ay mababa na, kailangan mo kahit <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya para makapag patuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagkakarga.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Pag-export ng pag-update sa panloob na imbakan</string>
+    <string name="notification_export_success">I-update ang nai-export sa panloob na imbakan</string>
+    <string name="notification_export_fail">Nabigong i-export ang pag-update sa panloob na imbakan</string>
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Babala</string>

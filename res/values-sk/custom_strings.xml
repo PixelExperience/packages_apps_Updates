@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Aktualizácia systému</string>
     <!-- Notifications -->
     <string name="export_channel_title">Dokončenie exportu</string>
     <string name="new_updates_channel_title">Nové aktualizácie</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Spúšťam sťahovanie</string>
     <string name="update_failed_notification">Aktualizácia zlyhala</string>
     <string name="installation_suspended_notification">Inštalácia bola odložená</string>
+    <string name="check_for_update">Vyhľadať aktualizáciu</string>
     <!-- Menu -->
     <string name="menu_delete_update">Vymazať</string>
     <string name="menu_copy_url">Kopírovať URL</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">URL adresa</string>
     <string name="toast_download_url_copied">URL skopírované</string>
     <!-- General -->
+    <string name="update_found_notification">Aktualizácia systému je k dispozícii</string>
     <string name="snack_no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
     <string name="snack_updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím vaše internetové pripojenie a skúste to znova neskôr.</string>
     <string name="snack_download_failed">Sťahovanie zlyhalo. Skontrolujte vaše pripojenie a skúste to znovu.</string>
     <string name="snack_download_verification_failed">Overovanie aktualizácie zlyhalo.</string>
     <string name="snack_download_verified">Sťahovanie dokončené.</string>
     <string name="snack_update_not_installable">Táto aktualizácia sa nedá nainštalovať na aktuálnu zostavu.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Overujem aktualizáciu</string>
+    <string name="list_no_updates">Nenašli sa žiadne nové aktualizácie.</string>
     <string name="blocked_update_dialog_title">Aktualizácia bola zablokovaná</string>
     <!-- Actions -->
     <string name="action_download">Stiahnuť</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Vybitá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Export aktualizácie do interného úložiska</string>
+    <string name="notification_export_success">Aktualizácia bola exportovaná do interného úložiska.</string>
+    <string name="notification_export_fail">Exportovanie aktualizácie do interného úložiska zlyhalo</string>
     <string name="toast_already_exporting">Aktualizácia sa už exportuje</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

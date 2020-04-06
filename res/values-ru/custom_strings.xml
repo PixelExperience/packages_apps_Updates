@@ -21,7 +21,7 @@
     <string name="export_channel_title">Экспорт завершен</string>
     <string name="new_updates_channel_title">Доступны обновления</string>
     <string name="ongoing_channel_title">Текущие загрузки</string>
-    <string name="update_failed_channel_title">Сбой обновления</string>
+    <string name="update_failed_channel_title">Не удалось обновить</string>
     <string name="verification_failed_notification">Проверка не удалась</string>
     <string name="verifying_download_notification">Проверка обновления</string>
     <string name="downloading_notification">Загрузка</string>

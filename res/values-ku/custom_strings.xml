@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- App name -->
+    <string name="app_name">نوێکردنەوەی سیستەم</string>
+    <!-- Notifications -->
+    <string name="export_channel_title">پاشەکەوتکردنی یەسەرچوون</string>
+    <string name="new_updates_channel_title">وەشانی نوێ</string>
+    <string name="ongoing_channel_title">داگرتنە چالاکەکان</string>
+    <string name="update_failed_channel_title">نوێکردنەوە شکستی هێنا</string>
+    <string name="verification_failed_notification">دڵنیاکردنەوە شکستی هێنا</string>
+    <string name="verifying_download_notification">دڵنیاکردنەوەی نوێکردنەوە</string>
+    <string name="downloading_notification">دادەگیرێت</string>
+    <string name="download_paused_notification">داگرتن ڕاگیرا</string>
+    <string name="download_paused_error_notification">هەڵە ڕوویدا لە داگرتن</string>
+    <string name="download_completed_notification">داگرتن تەواو بوو</string>
+    <string name="download_starting_notification">دەستپێکردنی داگرتن</string>
+    <string name="update_failed_notification">نوێکردنەوە شکستی هێنا</string>
+    <string name="installation_suspended_notification">دامەزراندن هەڵواسرا</string>
+    <string name="check_for_update">پشکنین بۆ نوێکردنەوە</string>
+    <!-- Menu -->
+    <string name="menu_delete_update">سڕینەوە</string>
+    <string name="menu_copy_url">لەبەرگرتنەوەی بەستەر</string>
+    <string name="menu_export_update">پاشەکەوتکردنی نوێکردنەوە</string>
+    <string name="menu_show_changelog">گۆڕانکارییەکان لە وەشانی ئێستادا</string>
+    <string name="changelog_loading">باردەکرێت...</string>
+    <string name="label_download_url">داگرتنی بەستەر</string>
+    <string name="toast_download_url_copied">بەستەر لەبەرگیرایەوە</string>
+    <!-- General -->
+    <string name="update_found_notification">نوێکاری سیستەم بەردەستە</string>
+    <string name="snack_no_updates_found">هیچ نوێکارییەک نەدۆزرایەوە</string>
+    <string name="snack_updates_check_failed">پشکنین بۆ نوێکردنەوە شکستی هێنا. تکایە هێڵی ئینتەرنێتەکەت بپشکنە پاشان هەوڵ بدەرەوە.</string>
+    <string name="snack_download_failed">داگرتن شکستی هێنا. تکایە هێڵی ئینتەرنێتەکەت بپشکنە و پاشان هەوڵ بدەرەوە.</string>
+    <string name="snack_download_verification_failed">دڵنیاکردنەوەی نوێکاری شکستی هێنا.</string>
+    <string name="snack_download_verified">داگرتن تەواو بوو.</string>
+    <string name="snack_update_not_installable">ئەم نوێکارییە ناتوانرێ دابمەزرێت لەسەر پێکهاتەی ئێستا.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">دڵنیاکردنەوەی نوێکردنەوە</string>
+    <string name="list_no_updates">هیچ نوێکردنه‌وه‌یه‌ک نه‌دۆزرایه‌وه‌</string>
+    <string name="blocked_update_dialog_title">نوێکردنەوە سڕکراوە</string>
+    <!-- Actions -->
+    <string name="action_download">داگرتن</string>
+    <string name="action_pause">ڕاگرتن</string>
+    <string name="action_resume">خستنەوەکار</string>
+    <string name="action_install">دامەزراندن</string>
+    <string name="action_delete">سڕینەوە</string>
+    <string name="action_cancel">پاشگەزبونەوە</string>
+    <string name="confirm_delete_dialog_title">سڕینەوەی پەڕگە</string>
+    <string name="confirm_delete_dialog_message">پەڕگەی دیاریکراوی نوێکردنەوە بسڕدرێتەوە؟</string>
+    <string name="pause_button">ڕاگرتن</string>
+    <string name="resume_button">خستنەوەکار</string>
+    <string name="suspend_button">هەڵواسین</string>
+    <string name="reboot">داگیرساندنه‌وه‌</string>
+    <string name="details_button">بینینی وردەکارییەکان</string>
+    <!-- Installation -->
+    <string name="apply_update_dialog_title">جێبەجێکردنی نوێکردنەوە</string>
+    <string name="apply_update_dialog_message">تۆ خەریکی بەرزکردنەوەی بۆ <xliff:g id="update_name">%1$s</xliff:g>. .\n\n گەر گرتەبکەی لەسەر <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت هەڵدەبێتەوە و دەچێتە دۆخی ڕیکەڤریەوە بۆ دامەزراندانی وەشانەکە. \n\n تێبینی : ئەم تایبەتمەندییە پێویستی بە دۆخی ڕیکەڤرییەکی تەواو هەیە یاخوود پێویستە خۆت دایبمەزرێنیت.</string>
+    <string name="apply_update_dialog_message_ab">تۆ خەریکی بەرزکردنەوەیت بۆ <xliff:g id="update_name">%1$s</xliff:g>. \n\n گەر کرتەبکەیت لە <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت لە پاشبنەمادا وەشانەکە دادەمەزرێنێت. \n\nکاتێ کە تەواو دەبێت پرسیارت لێدەکرێ بۆ هەڵبوونەوەی ئامێرەکەت.</string>
+    <string name="cancel_installation_dialog_message">هەڵوەشاندەنەوەی دامەزراندن؟</string>
+    <string name="installing_update">دامەزراندنی بوخچەی نوێکردنەوە</string>
+    <string name="installing_update_error">هەڵە ڕوویدا لە دامەزراندن</string>
+    <string name="installing_update_finished">نوێکردنەوە دامەزرا</string>
+    <string name="finalizing_package">تەواوکردنی بوخچەی دامەزراندن</string>
+    <string name="preparing_ota_first_boot">ئامادکردن بۆ یەکەم کارکردن</string>
+    <string name="dialog_prepare_zip_message">ئامادەکردنی سەرەتایی نوێکاری</string>
+    <string name="dialog_battery_low_title">کەمی ووزە</string>
+    <string name="dialog_battery_low_message_pct">ڕێژەی ووزە زۆر کەمە، پێویستە لانی کەم ڕێژەی ووزەکەت <xliff:g id="percent_discharging">%1$d</xliff:g>%%  بێت بۆ بەردەوامبوون، <xliff:g id="percent_charging">%2$d</xliff:g>%% گەر لەسەر بارگاویکردن بێت.</string>
+    <!-- Export update -->
+    <string name="dialog_export_title">پاشەکەوتکردنی نوێکاری بۆ بیرگەی ناوەکی</string>
+    <string name="notification_export_success">نوێکاری پاشەکەوتکرا بۆ بیرگەی ناوەکی</string>
+    <string name="notification_export_fail">پاشەکەوتی نوێکاری بۆ بیرگەی ناوەکی شکستی هێنا</string>
+    <string name="toast_already_exporting">لە ئێستادا نوێکارییەک پاشەکەوت دەکرێت</string>
+    <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">١ چرکە ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> چرکە ماوە</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">١ خولەک ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> خولەک ماوە</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">١ کاتژمێر ماوە</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> کاتژمێر ماوە</item>
+    </plurals>
+    <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">ئاگاداربە</string>
+    <string name="update_on_mobile_data_message">تۆ خەریکیت بوخچەی نوێکارییەک دادەگریت لەڕێگای داتای مۆبایلەکەتەوە کە ئەمەش دەبێتە هۆی بەکارهێنانی داتایەکی زۆر. دەتەوێ بەردەوام بیت؟</string>
+    <string name="checkbox_mobile_data_warning">پیشان نەدرێتەوە</string>
+    <!-- Info section -->
+    <string name="maintainer_info_title">پەرەپێدەر</string>
+    <string name="donate_info_title">کۆمەککردن</string>
+    <string name="donate_info_summary">پاڵپشتیکردنی پەرەپێدەران</string>
+    <string name="website_info_title">ماڵپەڕ</string>
+    <string name="website_info_summary">سەردانی ماڵپەرەکەمان بکە</string>
+    <string name="news_info_title">هەواڵ</string>
+    <string name="news_info_summary">لە هەواڵی نوێدا بمێنەرەوە بۆ نوێکاری و هەواڵەکانیتر</string>
+    <string name="forum_info_title">کۆڕبەند</string>
+    <string name="forum_info_summary">بینینی بابەتەکانی کۆڕبەند</string>
+    <string name="error_open_url"> کردنەوەی بەستەر لە وێبگەردا شکستی هێنا</string>
+</resources>

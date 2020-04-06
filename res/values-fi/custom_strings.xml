@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Järjestelmäpäivitys</string>
     <!-- Notifications -->
     <string name="export_channel_title">Vienti valmis</string>
     <string name="new_updates_channel_title">Uudet päivitykset</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Aloitetaan latausta</string>
     <string name="update_failed_notification">Päivitys epäonnistui</string>
     <string name="installation_suspended_notification">Asennus keskeytetty</string>
+    <string name="check_for_update">Tarkista päivitykset</string>
     <!-- Menu -->
     <string name="menu_delete_update">Poista</string>
     <string name="menu_copy_url">Kopioi URL-osoite</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">Lataussivun URL-osoite</string>
     <string name="toast_download_url_copied">URL-osoite kopioitu</string>
     <!-- General -->
+    <string name="update_found_notification">Päivitys on saatavilla</string>
     <string name="snack_no_updates_found">Uusia päivityksiä ei löytynyt</string>
     <string name="snack_updates_check_failed">Päivitysten tarkistaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
     <string name="snack_download_failed">Lataaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
     <string name="snack_download_verification_failed">Päivityksen vahvistaminen epäonnistui.</string>
     <string name="snack_download_verified">Lataus suoritettu.</string>
     <string name="snack_update_not_installable">Tätä päivitystä ei voida asentaa nykyisen version päälle.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Todentaa päivitystä</string>
+    <string name="list_no_updates">Uutta päivitystä ei löytynyt.</string>
     <string name="blocked_update_dialog_title">Päivitys estetty</string>
     <!-- Actions -->
     <string name="action_download">Lataa</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Akku vähissä</string>
     <string name="dialog_battery_low_message_pct">Akun varaus on liian matala, tarvitset vähintään <xliff:g id="percent_discharging">%1$d</xliff:g>%% jatkaaksesi, <xliff:g id="percent_charging">%2$d</xliff:g>%% jos laite on latauksessa.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Viedään päivitystä sisäiseen tallennustilaan</string>
+    <string name="notification_export_success">Päivitys viety sisäiseen tallennustilaan</string>
+    <string name="notification_export_fail">Päivityksen vienti sisäiseen tallennustilaan epäonnistui</string>
     <string name="toast_already_exporting">Päivityksen vieminen jo käynnissä</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

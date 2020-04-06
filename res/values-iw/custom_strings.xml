@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">עדכון מערכת</string>
     <!-- Notifications -->
     <string name="export_channel_title">השלמת הייצוא</string>
     <string name="new_updates_channel_title">עדכונים חדשים</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">מתחיל להוריד</string>
     <string name="update_failed_notification">העדכון נכשל</string>
     <string name="installation_suspended_notification">ההתקנה הושהתה</string>
+    <string name="check_for_update">בדוק עדכונים</string>
     <!-- Menu -->
     <string name="menu_delete_update">מחק</string>
     <string name="menu_copy_url">העתק כתובת אינטרנט</string>
@@ -39,6 +41,7 @@
     <string name="label_download_url">כתובת ההורדה</string>
     <string name="toast_download_url_copied">הכתובת הועתקה</string>
     <!-- General -->
+    <string name="update_found_notification">עדכון מערכת זמין</string>
     <string name="snack_no_updates_found">לא נמצאו עדכונים חדשים</string>
     <string name="snack_updates_check_failed">בדיקת העדכונים נכשלה. בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
     <string name="snack_download_failed">ההורדה נכשלה. בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
@@ -49,6 +52,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">מאמת עדכון</string>
+    <string name="list_no_updates">לא נמצאו עדכונים חדשים.</string>
     <string name="blocked_update_dialog_title">העדכון חסום</string>
     <!-- Actions -->
     <string name="action_download">הורד</string>
@@ -78,6 +82,9 @@
     <string name="dialog_battery_low_title">סוללה חלשה</string>
     <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">ייצא קובץ עדכון לאחסון הפנימי</string>
+    <string name="notification_export_success">העדכון יוצא בהצלחה לאחסון הפנימי</string>
+    <string name="notification_export_fail">נכשל בייצוא העדכון לאחסון הפנימי</string>
     <string name="toast_already_exporting">כבר באמצע ייצוא עדכון</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

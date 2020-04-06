@@ -17,7 +17,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
     <!-- Notifications -->
+    <string name="update_failed_channel_title">اپ ڈیٹ ناکام ہو گئی</string>
+    <string name="verification_failed_notification">توثیق میں ناکامی ہوئی</string>
+    <string name="verifying_download_notification">اپ ڈیٹ توثیق کر رہا ہے</string>
+    <string name="check_for_update">اپ ڈیٹ کی پڑتال کریں</string>
     <!-- Menu -->
+    <string name="menu_delete_update">حذف کریں</string>
     <string name="changelog_loading">لوڈ ہو رہا ہے…</string>
     <string name="label_download_url">ڈاؤن لوڈ یو آر ایل</string>
     <string name="toast_download_url_copied">یو آر ایل نقل کر لیا ہے</string>
@@ -27,6 +32,7 @@
     <string name="snack_download_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
     <string name="snack_download_verification_failed">اپ ڈیٹ کی تصدیق ناکام ہوگئی.</string>
     <string name="snack_download_verified">ڈاؤن لوڈ مکمل.</string>
+    <string name="text_download_speed">%1$s، %2$s فی سیکنڈ</string>
     <string name="list_verifying_update">اپ ڈیٹ توثیق کر رہا ہے</string>
     <!-- Actions -->
     <string name="action_download">ڈاؤن لوڈ</string>
@@ -49,5 +55,6 @@
     <!-- Info section -->
     <string name="donate_info_title">عطیہ دیجئے</string>
     <string name="website_info_title">ویب سائٹ</string>
+    <string name="news_info_title">خبریں</string>
     <string name="forum_info_title">فورم</string>
 </resources>

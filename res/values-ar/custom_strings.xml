@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">تحديث النظام</string>
     <!-- Notifications -->
     <string name="export_channel_title">اكتمال التصدير</string>
     <string name="new_updates_channel_title">تحديثات جديدة</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">بدء التنزيل</string>
     <string name="update_failed_notification">فشل التحديث</string>
     <string name="installation_suspended_notification">تم تعليق التثبيت</string>
+    <string name="check_for_update">التحقق من وجود التحديث</string>
     <!-- Menu -->
     <string name="menu_delete_update">حذف</string>
     <string name="menu_copy_url">نسخ الرابط</string>
@@ -39,6 +41,7 @@
     <string name="label_download_url">عنوان التنزيل</string>
     <string name="toast_download_url_copied">تم نسخ الرابط</string>
     <!-- General -->
+    <string name="update_found_notification">يتوفر تحديث للنظام</string>
     <string name="snack_no_updates_found">لا توجد تحديثات جديدة</string>
     <string name="snack_updates_check_failed">فشل التحقق من وجود تحديث. برجاء التحقق من اتصالك بالإنترنت وإعادة المحاولة لاحقًا.</string>
     <string name="snack_download_failed">فشل التنزيل. برجاء التحقق من اتصالك بالإنترنت وإعادة المحاولة لاحقًا.</string>
@@ -79,6 +82,9 @@
     <string name="dialog_battery_low_title">البطارية منخفضة</string>
     <string name="dialog_battery_low_message_pct">مستوى شحن البطارية منخفض للغاية؛ وتحتاج على الأقل <xliff:g id="percent_discharging">%1$d</xliff:g>%% من البطارية للمتابعة، <xliff:g id="percent_charging">%2$d</xliff:g>%% في حالة الشحن.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">تصدير التحديث إلى التخزين الداخلي</string>
+    <string name="notification_export_success">تم تصدير التحديث إلى وحدة التخزين الداخلية</string>
+    <string name="notification_export_fail">فشل في تصدير التحديث إلى وحدة التخزين الداخلية</string>
     <string name="toast_already_exporting">جاري تصدير تحديث بالفعل</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

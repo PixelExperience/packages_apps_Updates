@@ -16,26 +16,43 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Համակարգի թարմացում</string>
     <!-- Notifications -->
     <string name="export_channel_title">Արտահանումն ավարտվեց</string>
     <string name="new_updates_channel_title">Նոր թարմացումներ</string>
-    <string name="update_failed_channel_title">Թարմացումը ձախողվեց</string>
-    <string name="verification_failed_notification">Ակտիվացումը ձախողվեց</string>
+    <string name="ongoing_channel_title">Ընթացիկ ներբեռնումներ</string>
+    <string name="update_failed_channel_title">Թարմացումը ձախողվել է</string>
+    <string name="verification_failed_notification">Ստուգումը ձախողվել է</string>
+    <string name="verifying_download_notification">Ստուգվում է թարմացումը</string>
     <string name="downloading_notification">Ներբեռնվում է</string>
     <string name="download_paused_notification">Ներբեռնումը դադարեցված է</string>
     <string name="download_paused_error_notification">Ներբեռնման սխալ</string>
-    <string name="download_completed_notification">Ներբեռնումն ավարտվեց</string>
+    <string name="download_completed_notification">Ներբեռնումն ավարտվել է</string>
     <string name="download_starting_notification">Սկսվում է ներբեռնումը</string>
-    <string name="update_failed_notification">Թարմացումը ձախողվեց</string>
+    <string name="update_failed_notification">Թարմացումը ձախողվել է</string>
+    <string name="installation_suspended_notification">Տեղադրումը դադարեցվել է</string>
+    <string name="check_for_update">Կատարել թարմացումների ստուգում</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ջնջել</string>
     <string name="menu_copy_url">Պատճենել URL-ը</string>
     <string name="menu_export_update">Արտահանել թարմացումը</string>
+    <string name="menu_show_changelog">Տվյալ թողարկման փոփոխությունները</string>
     <string name="changelog_loading">Բեռնում…</string>
     <string name="label_download_url">Ներբեռնել URL</string>
-    <string name="toast_download_url_copied">URL Պատճենվեց</string>
+    <string name="toast_download_url_copied">URL պատճենվել է</string>
     <!-- General -->
+    <string name="update_found_notification">Հասանելի է համակարգի թարմացում</string>
+    <string name="snack_no_updates_found">Նոր թարմացում չկա</string>
+    <string name="snack_updates_check_failed">Թարմացման ստուգումը ձախողվել է։ Խնդրում ենք ստուգել ձեր ինտերնետ կապը և կրկին փորձել</string>
+    <string name="snack_download_failed">Ներբեռնումը ձախողվել է։ Խնդրում ենք ստուգել ձեր ինտերնետ կապը և կրկին փորձել</string>
+    <string name="snack_download_verification_failed">Թարմացման ստուգումը ձախողվել է։</string>
     <string name="snack_download_verified">Ներբեռնումն ավարտվեց:</string>
+    <string name="snack_update_not_installable">Թարմացումը չի կարող տեղադրվել եղած թողարկման վրա։</string>
+    <string name="text_download_speed">%1$s, %2$s/վրկ</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g>-ը <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>)-ից • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Ստուգվում է թարմացումը</string>
+    <string name="list_no_updates">Նոր թարմացում չի հայտնաբերվել</string>
     <!-- Actions -->
     <string name="action_download">Ներբեռնել</string>
     <string name="action_pause">Դադար</string>
@@ -44,12 +61,15 @@
     <string name="action_delete">Ջնջել</string>
     <string name="action_cancel">Չեղարկել</string>
     <string name="confirm_delete_dialog_title">Ջնջել ֆայլը</string>
-    <string name="pause_button">Դադար</string>
+    <string name="confirm_delete_dialog_message">Ջնջե՞լ ընտրված թարմացման ֆայլը։</string>
+    <string name="pause_button">Կանգնեցնել</string>
     <string name="resume_button">Վերսկսել</string>
+    <string name="suspend_button">Հետաձգել</string>
     <string name="reboot">Վերամեկնարկել</string>
     <string name="details_button">Դիտել մանրամասները</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Կիրառել թարմացումները</string>
+    <string name="apply_update_dialog_message">Ձուք պատրաստվում եք թարմացնել <xliff:g id="update_name">%1$s</xliff:g>․\n\nԵթե դուք սեղմեք <xliff:g id="ok">%2$s</xliff:g>, սարքավորումը կվերամեկնարկվի վերականգնման ռեժիմով որպեսզի տեղադրվեն թարմացումները։\n\nԴիտարկում․ Այս հնարավորությունը պահանջում է համապատասխան \"Վերականգնում կամ թարմացումներ\" նստեցված լինելը։</string>
     <string name="cancel_installation_dialog_message">Չեղարկե՞լ տեղակայումը:</string>
     <string name="installing_update_error">Տեղակայման սխալ</string>
     <string name="dialog_battery_low_title">Մարտկոցի լիցքը քիչ է</string>
