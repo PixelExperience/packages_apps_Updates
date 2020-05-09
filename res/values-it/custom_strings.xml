@@ -69,16 +69,16 @@
     <string name="reboot">Riavvia</string>
     <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
-    <string name="apply_update_dialog_title">Applica aggiornamento</string>
+    <string name="apply_update_dialog_title">Installa aggiornamento</string>
     <string name="apply_update_dialog_message">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità Recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una Recovery compatibile. In caso contrario dovrai procedere con l\'installazione manuale.</string>
     <string name="apply_update_dialog_message_ab">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta terminata, ti verrà richiesto di riavviare il dispositivo.</string>
     <string name="cancel_installation_dialog_message">Annullare l\'installazione?</string>
-    <string name="installing_update">Installazione del pacchetto di aggiornamento</string>
+    <string name="installing_update">Installazione dell\'aggiornamento</string>
     <string name="installing_update_error">Errore di installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
     <string name="finalizing_package">Completamento dell\'installazione in corso</string>
     <string name="preparing_ota_first_boot">Preparazione per il primo avvio</string>
-    <string name="dialog_prepare_zip_message">Preparazione preliminare all\'aggiornamento</string>
+    <string name="dialog_prepare_zip_message">Preparazione dell\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <!-- Export update -->

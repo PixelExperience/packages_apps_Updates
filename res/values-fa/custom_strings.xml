@@ -34,12 +34,12 @@
     <string name="check_for_update">بررسی بروزرسانی ها</string>
     <!-- Menu -->
     <string name="menu_delete_update">حذف</string>
-    <string name="menu_copy_url">کپی URL</string>
+    <string name="menu_copy_url">کپی لینک</string>
     <string name="menu_export_update">صادر کردن نسخه به‌روز</string>
     <string name="menu_show_changelog">تغییرات نسبت به نسخه فعلی</string>
     <string name="changelog_loading">در حال بارگذاری…</string>
     <string name="label_download_url">لینک بارگیری</string>
-    <string name="toast_download_url_copied">آدرس کپی شد</string>
+    <string name="toast_download_url_copied">لینک کپی شد</string>
     <!-- General -->
     <string name="update_found_notification">به‌روزرسانی جدیدی موجود است</string>
     <string name="snack_no_updates_found">به‌روز رسانی جدیدی یافت نشد</string>
@@ -82,9 +82,9 @@
     <string name="dialog_battery_low_title">باتری ضعیف است</string>
     <string name="dialog_battery_low_message_pct">سطح باتری بسیار کم است، برای ادامه کار شما به <xliff:g id="percent_discharging">%1$d</xliff:g>%% از ظرفیت باتری یا <xliff:g id="percent_charging">%2$d</xliff:g>%% اگر در حال شارژ هستید،‌ نیاز دارید.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">در حال گرفتن خروجی بروزرسانی به حافظه داخلی</string>
+    <string name="dialog_export_title">صادر کردن به روزرسانی به حافظه داخلی</string>
     <string name="notification_export_success">بروزرسانی در حافظه داخلی ذخیره شد</string>
-    <string name="notification_export_fail">گرفتن خروجی بروزرسانی به حافظه داخلی غیر موفق بود</string>
+    <string name="notification_export_fail">صادر کردن به روزرسانی به حافظه داخلی انجام نشد</string>
     <string name="toast_already_exporting">نسخه به‌روز قبلاً صادر شده است</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

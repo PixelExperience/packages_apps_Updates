@@ -72,7 +72,7 @@
     <string name="apply_update_dialog_title">Update installieren</string>
     <string name="apply_update_dialog_message">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s</xliff:g> drücken, wird das Gerät im Recovery-Modus gestartet, um das Update durchzuführen.\n\nHinweis: Diese Funktion erfordert ein kompatibles Recovery-System, anderenfalls muss das Update manuell installiert werden.</string>
     <string name="apply_update_dialog_message_ab">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s drücken</xliff:g>, beginnt das Gerät im Hintergrund mit der Installation\n\nSobald diese abgeschlossen ist, werden Sie zum Neustart aufgefordert.</string>
-    <string name="cancel_installation_dialog_message">Installation abbrechen?</string>
+    <string name="cancel_installation_dialog_message">Die Installation abbrechen?</string>
     <string name="installing_update">Update-Paket wird installiert</string>
     <string name="installing_update_error">Installationsfehler</string>
     <string name="installing_update_finished">Update installiert</string>
@@ -80,24 +80,24 @@
     <string name="preparing_ota_first_boot">Erster Start wird vorbereitet</string>
     <string name="dialog_prepare_zip_message">Update wird vorbereitet</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
-    <string name="dialog_battery_low_message_pct">Ihr Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
+    <string name="dialog_battery_low_message_pct">Der Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Exportiere Update zum internen Speicher</string>
-    <string name="notification_export_success">Update zum internen Speicher exportiert</string>
-    <string name="notification_export_fail">Konnte das Update nicht auf den internen Speicher exportieren</string>
-    <string name="toast_already_exporting">Update wird bereits exportiert</string>
+    <string name="dialog_export_title">Update auf den internen Speicher exportieren</string>
+    <string name="notification_export_success">Update wurde auf den internen Speicher exportiert</string>
+    <string name="notification_export_fail">Das Update konnte nicht auf den internen Speicher exportiert werden</string>
+    <string name="toast_already_exporting">Ein Update wird bereits exportiert</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
-        <item quantity="one">noch 1 Sekunde</item>
+        <item quantity="one">noch 1 Sekunde verbleibend</item>
         <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Sekunden</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">noch 1 Minute</item>
-        <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Minuten</item>
+        <item quantity="one">noch 1 Minute verbleibend</item>
+        <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Minuten verbleibend</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">noch 1 Stunde</item>
-        <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Stunden</item>
+        <item quantity="one">noch 1 Stunde verbleibend</item>
+        <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Stunden verbleibend</item>
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Warnung</string>
@@ -112,6 +112,6 @@
     <string name="news_info_title">Neuigkeiten</string>
     <string name="news_info_summary">Bleiben Sie informiert über Updates und andere Neuigkeiten</string>
     <string name="forum_info_title">Forum</string>
-    <string name="forum_info_summary">Zeige Forenbeiträge</string>
+    <string name="forum_info_summary">Forenbeiträge ansehen</string>
     <string name="error_open_url">Öffnen der URL im Browser fehlgeschlagen</string>
 </resources>

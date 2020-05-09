@@ -16,12 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Aġġornament tas-sistema</string>
     <!-- Notifications -->
     <string name="export_channel_title">Tlestija tal-esportazzjoni</string>
     <string name="new_updates_channel_title">Aġġornamenti ġodda</string>
     <string name="ongoing_channel_title">Tniżżil kurrenti</string>
     <string name="update_failed_channel_title">L-aġġornament falla</string>
-    <string name="verification_failed_notification">Verifika falliet</string>
+    <string name="verification_failed_notification">Falla tal-verifikazzjoni</string>
     <string name="verifying_download_notification">Verifika tal-aġġornament</string>
     <string name="downloading_notification">Tniżżil</string>
     <string name="download_paused_notification">Pawsa tat-tniżżil</string>

@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Системен актуализатор</string>
     <!-- Notifications -->
     <string name="export_channel_title">Експортирането приключи</string>
     <string name="new_updates_channel_title">Нови актуализации</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Започни сваляне</string>
     <string name="update_failed_notification">Актуализацията прекратена</string>
     <string name="installation_suspended_notification">Инсталацията е прекратена</string>
+    <string name="check_for_update">Проверка за актуализации</string>
     <!-- Menu -->
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_copy_url">Копирай адреса</string>
@@ -39,15 +41,18 @@
     <string name="label_download_url">Изтеглете URL</string>
     <string name="toast_download_url_copied">URL Копиран</string>
     <!-- General -->
+    <string name="update_found_notification">Има нова актуализация</string>
     <string name="snack_no_updates_found">Няма нови актуализации</string>
     <string name="snack_updates_check_failed">Проверката за актуализации се провали. Моля проверете връзката с интернет и опитайте отново по-късно.</string>
     <string name="snack_download_failed">Неуспешно изтегляне. Моля проверете вашата интернет връзка и опитайте отново по-късно.</string>
     <string name="snack_download_verification_failed">Проверката на актуализацията е неуспешна.</string>
     <string name="snack_download_verified">Изтеглянето приключи.</string>
     <string name="snack_update_not_installable">Тази актуализация не може да бъде инсталирана на текущата версия.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> от <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Проверка на актуализацията</string>
+    <string name="list_no_updates">Няма нови актуализации.</string>
     <string name="blocked_update_dialog_title">Актуализацията е блокирана</string>
     <!-- Actions -->
     <string name="action_download">Изтегли</string>
@@ -77,6 +82,9 @@
     <string name="dialog_battery_low_title">Изтощена батерия</string>
     <string name="dialog_battery_low_message_pct">Нивото на батерията е прекалено ниско, необходимо е най-малко <xliff:g id="percent_discharging">%1$d</xliff:g>%% за да продължите, <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Експортиране на актуализация към вътрешно хранилище</string>
+    <string name="notification_export_success">Актуализацията е експортирана към вътрешно хранилище</string>
+    <string name="notification_export_fail">Не успя да експортира актуализаиция във вътрешно хранилище</string>
     <string name="toast_already_exporting">Вече изнася актуализация</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
