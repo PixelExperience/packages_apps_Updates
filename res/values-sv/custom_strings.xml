@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">Export slutförd</string>
     <string name="new_updates_channel_title">Nya uppdateringar</string>
@@ -29,6 +30,8 @@
     <string name="download_completed_notification">Nedladdning slutförd</string>
     <string name="download_starting_notification">Påbörjar nedladdning</string>
     <string name="update_failed_notification">Något gick fel! Uppdateringen Misslyckades</string>
+    <string name="installation_suspended_notification">Installation suspended</string>
+    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_copy_url">Kopiera webbadress</string>
@@ -38,15 +41,18 @@
     <string name="label_download_url">Nedladdningsadress</string>
     <string name="toast_download_url_copied">Webbadressen har kopierats</string>
     <!-- General -->
+    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">Inga nya uppdateringar hittades</string>
     <string name="snack_updates_check_failed">Sökningen efter uppdateringar misslyckades. Var god kontrollera din internetanslutning och försök igen senare.</string>
     <string name="snack_download_failed">Nedladdningen misslyckades. Kontrollera din internetanslutning och försök igen senare.</string>
     <string name="snack_download_verification_failed">Uppdateringen kunde inte verifieras.</string>
     <string name="snack_download_verified">Nedladdningen är slutförd.</string>
     <string name="snack_update_not_installable">Uppdateringen kan inte installeras över den nuvarande versionen.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> av <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> kvar) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifierar uppdateringen</string>
+    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Uppdatering blockerad</string>
     <!-- Actions -->
     <string name="action_download">Ladda ner</string>
@@ -59,6 +65,7 @@
     <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Återuppta</string>
+    <string name="suspend_button">Suspend</string>
     <string name="reboot">Starta om</string>
     <string name="details_button">Visa detaljer</string>
     <!-- Installation -->
@@ -75,8 +82,19 @@
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <string name="dialog_battery_low_message_pct">Batterinivån är för låg, du beöver minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% av batterikapaciteten för att fortsätta, <xliff:g id="percent_charging">%2$d</xliff:g>%% om du laddar.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporting update to internal storage</string>
+    <string name="notification_export_success">Update exported to internal storage</string>
+    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">Exporterar redan en uppdatering</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+    </plurals>
     <plurals name="eta_hours">
         <item quantity="one">1 timme kvar</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> timmar kvar</item>
@@ -93,6 +111,7 @@
     <string name="website_info_summary">Besök vår hemsida</string>
     <string name="news_info_title">Nyheter</string>
     <string name="news_info_summary">Håll dig informerad om uppdateringar och andra nyheter</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Visa inlägg i forumet</string>
     <string name="error_open_url">Det gick inte att öppna URL i webbläsaren</string>
 </resources>

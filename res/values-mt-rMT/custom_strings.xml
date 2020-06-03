@@ -31,6 +31,7 @@
     <string name="download_starting_notification">Bidu tat-tniżżil</string>
     <string name="update_failed_notification">L-aġġornament falla</string>
     <string name="installation_suspended_notification">Installazzjoni sospiża</string>
+    <string name="check_for_update">Iċċekkja għal update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ħassar</string>
     <string name="menu_copy_url">Ikkopja l-URL</string>
@@ -40,15 +41,18 @@
     <string name="label_download_url">Niżżel il-URL</string>
     <string name="toast_download_url_copied">URL Ikkupjat</string>
     <!-- General -->
+    <string name="update_found_notification">Update tas-sistema huwa disponibbli</string>
     <string name="snack_no_updates_found">Ma nstab l-ebda aġġornament ġdid</string>
     <string name="snack_updates_check_failed">Il-kontroll tal-aġġornament falla. Jekk jogħġbok iċċekkja l-konnessjoni bl-internet tiegħek u erġa \'pprova aktar tard.</string>
     <string name="snack_download_failed">It-tniżżil falla. Jekk jogħġbok iċċekkja l-konnessjoni bl-internet tiegħek u erġa\' pprova aktar tard.</string>
     <string name="snack_download_verification_failed">Il-verifika tal-aġġornament falliet.</string>
     <string name="snack_download_verified">Tniżżil lest.</string>
     <string name="snack_update_not_installable">Dan l-aġġornament ma jistax jiġi installat fuq il-binja kurrenti.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifika tal-aġġornament</string>
+    <string name="list_no_updates">Ma nstab l-ebda update ġdid</string>
     <string name="blocked_update_dialog_title">Aġġornament imblukkat</string>
     <!-- Actions -->
     <string name="action_download">Niżżel</string>
@@ -62,6 +66,7 @@
     <string name="pause_button">Pawsa</string>
     <string name="resume_button">Kompli</string>
     <string name="suspend_button">Sospendi</string>
+    <string name="reboot">Irristartja</string>
     <string name="details_button">Ara d-dettalji</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Applika aġġornament</string>
@@ -77,19 +82,42 @@
     <string name="dialog_battery_low_title">Batterija baxxa</string>
     <string name="dialog_battery_low_message_pct">Il-livell tal-batterija hija baxxa wisq, għalinqas irid ikollok <xliff:g id="percent_discharging">%1$d</xliff:g>%% tal-batterija sabiex tkompli, <xliff:g id="percent_charging">%2$d</xliff:g>%% jekk qed tiċċarġja.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Esportazzjoni tal-update għall-ħażna interna</string>
+    <string name="notification_export_success">Update kienet esportata għall-ħażna interna</string>
+    <string name="notification_export_fail">Ma rnexxiex jesporta l-update għall-ħażna interna</string>
     <string name="toast_already_exporting">Diġà qed tesporta aġġornament</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">Fadal sekonda</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> sekondi</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">Fadal minuta</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> minuti</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">Fadal siegħa</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> siegħat</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Twissija</string>
     <string name="update_on_mobile_data_message">Qed tniżżel pakkett ta \'aġġornament bl-użu tad-data tal-mowbajl li x\'aktarx se tikkawża użu għoli tad-data. Tixtieq tipproċedi?</string>
     <string name="checkbox_mobile_data_warning">Terġax turi</string>
     <!-- Info section -->
+    <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Donatja</string>
     <string name="donate_info_summary">Appoġġja l-iżvilupp</string>
     <string name="website_info_title">Sit tal-Web</string>
     <string name="website_info_summary">Żur il-websajt tagħna</string>
     <string name="news_info_title">Aħbarijiet</string>
     <string name="news_info_summary">Ibqa\' infurmat dwar aġġornamenti u aħbarijiet oħra</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Ara l-postijiet tal-forum</string>
     <string name="error_open_url">Ma rnexxiliex tiftaħ URL fil-browser</string>
 </resources>

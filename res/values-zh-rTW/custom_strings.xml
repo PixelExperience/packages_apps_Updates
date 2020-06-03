@@ -20,7 +20,7 @@
     <!-- Notifications -->
     <string name="export_channel_title">匯出完成</string>
     <string name="new_updates_channel_title">有新的更新</string>
-    <string name="ongoing_channel_title">目前下載</string>
+    <string name="ongoing_channel_title">正在進行的下載</string>
     <string name="update_failed_channel_title">更新失敗</string>
     <string name="verification_failed_notification">驗證失敗</string>
     <string name="verifying_download_notification">正在驗證更新</string>
@@ -33,7 +33,7 @@
     <string name="installation_suspended_notification">安裝已中斷</string>
     <string name="check_for_update">檢查更新</string>
     <!-- Menu -->
-    <string name="menu_delete_update">移除</string>
+    <string name="menu_delete_update">刪除</string>
     <string name="menu_copy_url">複製網址</string>
     <string name="menu_export_update">匯出更新</string>
     <string name="menu_show_changelog">目前版本變更</string>

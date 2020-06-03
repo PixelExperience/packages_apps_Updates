@@ -47,6 +47,13 @@
     <string name="snack_download_failed">আধুনিকরণ ডাউনলোড ব্যর্থ হয়েছে। আপনার ইন্টারনেট সংযোগ চেক করে আবার চেষ্টা করুন।</string>
     <string name="snack_download_verification_failed">আধুনিকীকরণটি যাচাইকরণ ব্যার্থ হয়েছে।</string>
     <string name="snack_download_verified">ডাউনলোড সম্পূর্ণ হয়েছে।</string>
+    <string name="snack_update_not_installable">This update can\'t be installed on top of the current build.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Verifying update</string>
+    <string name="list_no_updates">No new update found.</string>
+    <string name="blocked_update_dialog_title">Update blocked</string>
     <!-- Actions -->
     <string name="action_download">ডাউনলোড</string>
     <string name="action_pause">বিরাম</string>
@@ -58,13 +65,36 @@
     <string name="confirm_delete_dialog_message">নির্বাচিত আধুনিকীকরণ ফাইল গুলি মুছে দিতে চান?</string>
     <string name="pause_button">বিরাম</string>
     <string name="resume_button">পুনরারম্ভ</string>
+    <string name="suspend_button">Suspend</string>
     <string name="reboot">রিবুট</string>
     <string name="details_button">বিস্তারিত দেখুন</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
+    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
     <string name="cancel_installation_dialog_message">বর্তমান ইনস্টলেশন বাতিল করতে চান?</string>
+    <string name="installing_update">Installing update package</string>
+    <string name="installing_update_error">Install error</string>
+    <string name="installing_update_finished">Update installed</string>
+    <string name="finalizing_package">Finalizing package installation</string>
+    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
+    <string name="dialog_battery_low_title">Low battery</string>
+    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporting update to internal storage</string>
+    <string name="notification_export_success">Update exported to internal storage</string>
+    <string name="notification_export_fail">Failed to export update to internal storage</string>
+    <string name="toast_already_exporting">Already exporting an update</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+    </plurals>
     <plurals name="eta_hours">
         <item quantity="one">১ ঘণ্টা বাকি</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ঘণ্টা বাকি</item>

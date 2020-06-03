@@ -53,6 +53,7 @@
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g>-ը <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>)-ից • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Ստուգվում է թարմացումը</string>
     <string name="list_no_updates">Նոր թարմացում չի հայտնաբերվել</string>
+    <string name="blocked_update_dialog_title">Update blocked</string>
     <!-- Actions -->
     <string name="action_download">Ներբեռնել</string>
     <string name="action_pause">Դադար</string>
@@ -70,18 +71,47 @@
     <!-- Installation -->
     <string name="apply_update_dialog_title">Կիրառել թարմացումները</string>
     <string name="apply_update_dialog_message">Ձուք պատրաստվում եք թարմացնել <xliff:g id="update_name">%1$s</xliff:g>․\n\nԵթե դուք սեղմեք <xliff:g id="ok">%2$s</xliff:g>, սարքավորումը կվերամեկնարկվի վերականգնման ռեժիմով որպեսզի տեղադրվեն թարմացումները։\n\nԴիտարկում․ Այս հնարավորությունը պահանջում է համապատասխան \"Վերականգնում կամ թարմացումներ\" նստեցված լինելը։</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
     <string name="cancel_installation_dialog_message">Չեղարկե՞լ տեղակայումը:</string>
+    <string name="installing_update">Installing update package</string>
     <string name="installing_update_error">Տեղակայման սխալ</string>
+    <string name="installing_update_finished">Update installed</string>
+    <string name="finalizing_package">Finalizing package installation</string>
+    <string name="preparing_ota_first_boot">Preparing for first boot</string>
+    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
     <string name="dialog_battery_low_title">Մարտկոցի լիցքը քիչ է</string>
+    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporting update to internal storage</string>
+    <string name="notification_export_success">Update exported to internal storage</string>
+    <string name="notification_export_fail">Failed to export update to internal storage</string>
+    <string name="toast_already_exporting">Already exporting an update</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 hour left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Զգուշացում</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
     <!-- Info section -->
+    <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Աջակցել</string>
     <string name="donate_info_summary">Աջակցել մշակմանը</string>
     <string name="website_info_title">Վեբկայք</string>
     <string name="website_info_summary">Այցելեք մեր վեբ կայքը</string>
     <string name="news_info_title">Նորություններ</string>
+    <string name="news_info_summary">Stay informed about updates and other news</string>
     <string name="forum_info_title">Ֆորում</string>
+    <string name="forum_info_summary">View forum posts</string>
+    <string name="error_open_url">Failed to open URL in browser</string>
 </resources>

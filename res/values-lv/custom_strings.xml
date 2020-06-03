@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">Eksportēšana pabeigta</string>
     <string name="new_updates_channel_title">Jauni atjauninājumi</string>
@@ -30,6 +31,7 @@
     <string name="download_starting_notification">Sāk lejupielādi</string>
     <string name="update_failed_notification">Atjaunināšana Neizdevās</string>
     <string name="installation_suspended_notification">Instalācija apturēta</string>
+    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Dzēst</string>
     <string name="menu_copy_url">Nokopēt URL</string>
@@ -39,13 +41,18 @@
     <string name="label_download_url">Lejupielādēt URL</string>
     <string name="toast_download_url_copied">URL Nokopēts</string>
     <!-- General -->
+    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">Nav atrasti jauni atjauninājumi</string>
     <string name="snack_updates_check_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
     <string name="snack_download_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
     <string name="snack_download_verification_failed">Atjaunināšanas pārbaude neizdevās.</string>
     <string name="snack_download_verified">Lejupielāde pabeigta.</string>
     <string name="snack_update_not_installable">Šo atjauninājumu nevar instalēt virs pašreizējās versijas.</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Pārbauda atjauninājumu</string>
+    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Atjauninājums ir bloķēts</string>
     <!-- Actions -->
     <string name="action_download">Lejuplādēt</string>
@@ -63,6 +70,8 @@
     <string name="details_button">Skatīt informāciju</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Uzstādīt atjauninājumu</string>
+    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
     <string name="cancel_installation_dialog_message">Vai atcelt instalēšanu?</string>
     <string name="installing_update">Instalē atjauninājuma pakotni</string>
     <string name="installing_update_error">Instalēšanas kļūda</string>
@@ -73,12 +82,39 @@
     <string name="dialog_battery_low_title">Zems akumulatora līmenis</string>
     <string name="dialog_battery_low_message_pct">Akumulatora uzlādes līmenis ir pārāk zems, nepieciešams vismaz <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatora, lai varētu turpināt, <xliff:g id="percent_charging">%2$d</xliff:g>%% Ja šobrīd notiek uzlāde.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Exporting update to internal storage</string>
+    <string name="notification_export_success">Update exported to internal storage</string>
+    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">Jau eksportē atjauninājumu</string>
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="zero"><xliff:g id="count">%d</xliff:g> seconds left</item>
+        <item quantity="one">1 second left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> seconds left</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="zero"><xliff:g id="count">%d</xliff:g> minutes left</item>
+        <item quantity="one">1 minute left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes left</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="zero"><xliff:g id="count">%d</xliff:g> hours left</item>
+        <item quantity="one">1 hour left</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours left</item>
+    </plurals>
     <!-- Mobile data warning -->
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
     <!-- Info section -->
+    <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Ziedot</string>
+    <string name="donate_info_summary">Support the development</string>
     <string name="website_info_title">Tīmekļa vietne</string>
+    <string name="website_info_summary">Visit our website</string>
     <string name="news_info_title">Jaunumi</string>
+    <string name="news_info_summary">Stay informed about updates and other news</string>
     <string name="forum_info_title">Forums</string>
+    <string name="forum_info_summary">View forum posts</string>
+    <string name="error_open_url">Failed to open URL in browser</string>
 </resources>
