@@ -19,7 +19,7 @@
     <string name="app_name">نوێکردنەوەی سیستەم</string>
     <!-- Notifications -->
     <string name="export_channel_title">پاشەکەوتکردنی یەسەرچوون</string>
-    <string name="new_updates_channel_title">وەشانی نوێ</string>
+    <string name="new_updates_channel_title">نوێکردنەوەکان</string>
     <string name="ongoing_channel_title">داگرتنە چالاکەکان</string>
     <string name="update_failed_channel_title">نوێکردنەوە شکستی هێنا</string>
     <string name="verification_failed_notification">دڵنیاکردنەوە شکستی هێنا</string>
