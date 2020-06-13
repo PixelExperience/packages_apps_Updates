@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">དྲངས་ཕྱུང་ལེགས་གྲུབ་ཟིན་པ།</string>
     <string name="new_updates_channel_title">གསར་བསྒྱུར་གསར་ཤོས།</string>
@@ -31,7 +30,6 @@
     <string name="download_starting_notification">ཕབ་ལེན་མགོ་རྩོམ་བཞིན་པ།</string>
     <string name="update_failed_notification">གསར་བསྒྱུར་བྱེད་མ་ཐུབ། </string>
     <string name="installation_suspended_notification">ནང་འཇུག་སྐབས་སྡོད་བྱས་ཟིན། </string>
-    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">བསུབ་པ།</string>
     <string name="menu_copy_url">དྲ་ཚིགས་ཀྱི་ས་གནས་བསྐྱར་བཤུ།</string>
@@ -41,7 +39,6 @@
     <string name="label_download_url">ཕབ་ལེན་ས་གནས།</string>
     <string name="toast_download_url_copied">ས་གནས་བསྐྱར་བཤུས་བྱས་ཟིན།</string>
     <!-- General -->
-    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">ཐོན་རིམ་གསར་བ་མི་འདུག</string>
     <string name="snack_updates_check_failed">ཐོན་རིམ་གསར་བར་ཞིབ་བཤེར་བྱེད་མ་ཐུབ།   ཉིད་ཀྱི་དྲ་རྒྱའི་སྦྲེལ་མཐུད་ཀྱི་གནས་ཚུལ་ལ་གཟིགས་རོགས། </string>
     <string name="snack_download_failed">ཕབ་ལེན་བྱེད་མ་ཐུབ།  ཉིད་ཀྱིས་དྲ་རྒྱར་ཞིབ་བཤེར་བྱ་རོགས།</string>
@@ -52,7 +49,6 @@
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ཡི <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ཡི <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">གསར་བསྒྱུར་ལ་ཞིབ་བཤེར་བྱེད་བཞིན་ཡོད།</string>
-    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">གསར་བསྒྱུར་བཀག་འགོག་བྱས་ཟིན།</string>
     <!-- Actions -->
     <string name="action_download">ཕབ་ལེན།</string>
@@ -82,9 +78,6 @@
     <string name="dialog_battery_low_title">གློག་ཚད་དམའ་བ། </string>
     <string name="dialog_battery_low_message_pct">གློག་ཚད་དམའ་དྲགས་པ།   མ་མཐའ་ཡང་གློག <xliff:g id="percent_discharging">%1$d</xliff:g>%% ཡོད་ན་ད་གཟོད་མཐུད་དུ་ནང་འཇུག་བྱེད་ཐུབ། གལ་ཏེ་གློག་གསོག་བཞིན་ཡོད་ན་གློག་ཚད <xliff:g id="percent_charging">%2$d</xliff:g>%% ཡོད་ན་ད་གཟོད་མུ་མཐུད་དུ་ནང་འཇུག་བྱེད་ཐུབ།</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Exporting update to internal storage</string>
-    <string name="notification_export_success">Update exported to internal storage</string>
-    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">གསར་བསྒྱུར་དྲངས་ཕྱུངས་བྱས་ཟིན།</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">ပြင်ပသို့ ဖိုင်ထုတ်ကူးယူခြင်း ပြီးဆုံးသည်</string>
     <string name="new_updates_channel_title">စနစ်တိုးမြှင့်မှု အသစ်များ</string>
@@ -31,7 +30,6 @@
     <string name="download_starting_notification">ဒေါင်းလုဒ်ဆွဲခြင်း စတင်နေသည်</string>
     <string name="update_failed_notification">အဆင့်မြင့်တင်ခြင်း မအောင်မြင်ပါ</string>
     <string name="installation_suspended_notification">ထည့်သွင်းခြင်း ခေတ္တရပ်ဆိုင်းသွားသည်</string>
-    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">ဖျက်ရန်</string>
     <string name="menu_copy_url">URL ကို ကူးရန်</string>
@@ -41,7 +39,6 @@
     <string name="label_download_url">URL ကို ‌ဒေါင်းလုဒ်ဆွဲရန်</string>
     <string name="toast_download_url_copied">URL ကို ကူးယူပြီးပါပြီ</string>
     <!-- General -->
-    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">အဆင့်မြှင့်တင်မှုအသစ်များအား မတွေ့ရှိပါ</string>
     <string name="snack_updates_check_failed">အဆင့်မြှင့်တင်မှု စစ်ဆေးခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး နောက်တခေါက် ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
     <string name="snack_download_failed">‌ဒေါင်းလုဒ်ဆွဲခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
@@ -52,7 +49,6 @@
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ၏ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ၏ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">အဆင့်မြှင့်တင်မှုအတွက် မှန်ကန်ကြောင်း စစ်ဆေးခြင်း</string>
-    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">အဆင့်မြှင့်တင်မှု ပိတ်ဆို့ထားပါသည်။</string>
     <!-- Actions -->
     <string name="action_download">ဒေါင်းလုဒ်</string>
@@ -70,22 +66,10 @@
     <string name="details_button">အသေးစိတ်ကြည့်ရန်</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">အဆင့်မြှင့်တင်မှု ပြုလုပ်ရန်</string>
-    <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
-    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background.\n\nOnce completed, you will be prompted to reboot.</string>
     <string name="cancel_installation_dialog_message">သွင်းခြင်းကို ပယ်ဖျက်မလား?</string>
-    <string name="installing_update">Installing update package</string>
-    <string name="installing_update_error">Install error</string>
-    <string name="installing_update_finished">Update installed</string>
-    <string name="finalizing_package">Finalizing package installation</string>
     <string name="preparing_ota_first_boot">ကနဦး စနစ်စတင်မှုအတွက် ပြင်ဆင်နေပါသည် . . .</string>
-    <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
     <string name="dialog_battery_low_title">ဖုန်းအား နည်းနေပါပြီ။</string>
-    <string name="dialog_battery_low_message_pct">The battery level is too low, you need at least <xliff:g id="percent_discharging">%1$d</xliff:g>%% of the battery to continue, <xliff:g id="percent_charging">%2$d</xliff:g>%% if charging.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Exporting update to internal storage</string>
-    <string name="notification_export_success">Update exported to internal storage</string>
-    <string name="notification_export_fail">Failed to export update to internal storage</string>
-    <string name="toast_already_exporting">Already exporting an update</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">၁ စက္ကန့်သာ ကျန်ပါသည်။
@@ -101,7 +85,6 @@
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">သတိပြုရန်</string>
-    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
     <string name="checkbox_mobile_data_warning">ထပ်မပြပါနှင့်</string>
     <!-- Info section -->
     <string name="maintainer_info_title">ပြုပြင်ပေးသူ</string>
@@ -110,8 +93,5 @@
     <string name="website_info_title">ဝဘ်ဆိုက်</string>
     <string name="website_info_summary">ကျွန်ုပ်တို့၏ ၀ဘ်ဆိုဒ်ကို ကြည့်ရှူရန်</string>
     <string name="news_info_title">သတင်းများ</string>
-    <string name="news_info_summary">Stay informed about updates and other news</string>
     <string name="forum_info_title">ဖိုရမ်</string>
-    <string name="forum_info_summary">View forum posts</string>
-    <string name="error_open_url">Failed to open URL in browser</string>
 </resources>

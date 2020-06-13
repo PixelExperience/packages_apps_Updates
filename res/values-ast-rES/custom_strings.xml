@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">Completáu de la esportación</string>
     <string name="new_updates_channel_title">Anovamientos nuevos</string>
@@ -30,29 +29,22 @@
     <string name="download_completed_notification">Completóse la descarga</string>
     <string name="download_starting_notification">Aniciando descarga</string>
     <string name="update_failed_notification">Falló l\'anovamientu</string>
-    <string name="installation_suspended_notification">Installation suspended</string>
-    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Desaniciar</string>
     <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Esportar anovamientu</string>
-    <string name="menu_show_changelog">Changes in current version</string>
-    <string name="changelog_loading">Loading…</string>
     <string name="label_download_url">URL de descarga</string>
     <string name="toast_download_url_copied">Copióse la URL</string>
     <!-- General -->
-    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">Nun s\'alcontraron anovamientos</string>
     <string name="snack_updates_check_failed">Falló la comprobación d\'anovamientos. Comprueba la to conexón a Internet y volvi tentalo, por favor.</string>
     <string name="snack_download_failed">Falló la descarga. Comprueba la to conexón a Internet y volvi tentalo, por favor.</string>
     <string name="snack_download_verification_failed">Falló la verificación del anovamientu.</string>
     <string name="snack_download_verified">Descarga completada.</string>
     <string name="snack_update_not_installable">Esti anovamientu nun pue instalase enriba de la compilación actual.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verificando anovamientu</string>
-    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Bloquióse l\'anovamientu</string>
     <!-- Actions -->
     <string name="action_download">Baxar</string>
@@ -65,9 +57,7 @@
     <string name="confirm_delete_dialog_message">¿Desaniciar l\'anovamientu esbilláu?</string>
     <string name="pause_button">Posar</string>
     <string name="resume_button">Siguir</string>
-    <string name="suspend_button">Suspend</string>
     <string name="reboot">Reaniciar</string>
-    <string name="details_button">View details</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar anovamientu</string>
     <string name="apply_update_dialog_message">Tas a piques d\'anovar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi primes <xliff:g id="ok">%2$s</xliff:g>, el preséu va reaniciase solu al recovery pa instalar l\'anovamientu.\n\nNota: Esta carauterística rique un recovery compatible o los anovamientos van precisar instalase a mano.</string>
@@ -82,9 +72,6 @@
     <string name="dialog_battery_low_title">Batería baxa</string>
     <string name="dialog_battery_low_message_pct">El nivel de batería ta perbaxu, precises polo menos<xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería pa siguir, <xliff:g id="percent_charging">%2$d</xliff:g>%% si ta en carga.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Exporting update to internal storage</string>
-    <string name="notification_export_success">Update exported to internal storage</string>
-    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">Yá ta esportándose un anovamientu</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
@@ -104,14 +91,4 @@
     <string name="update_on_mobile_data_message">Tas a piques de baxar un paquete d\'anovamientu usando los datos móviles que pue causar un usu altu de datos. ¿Prestaríate siguir?</string>
     <string name="checkbox_mobile_data_warning">Nun amosar más</string>
     <!-- Info section -->
-    <string name="maintainer_info_title">Maintainer</string>
-    <string name="donate_info_title">Donate</string>
-    <string name="donate_info_summary">Support the development</string>
-    <string name="website_info_title">Website</string>
-    <string name="website_info_summary">Visit our website</string>
-    <string name="news_info_title">News</string>
-    <string name="news_info_summary">Stay informed about updates and other news</string>
-    <string name="forum_info_title">Forum</string>
-    <string name="forum_info_summary">View forum posts</string>
-    <string name="error_open_url">Failed to open URL in browser</string>
 </resources>

@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">System update</string>
     <!-- Notifications -->
     <string name="export_channel_title">Exporteren voltooid</string>
     <string name="new_updates_channel_title">Nieuwe updates</string>
@@ -31,7 +30,6 @@
     <string name="download_starting_notification">Download starten</string>
     <string name="update_failed_notification">Update mislukt</string>
     <string name="installation_suspended_notification">Installatie onderbroken</string>
-    <string name="check_for_update">Check for update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Verwijderen</string>
     <string name="menu_copy_url">URL kopiëren</string>
@@ -41,18 +39,15 @@
     <string name="label_download_url">Download-URL</string>
     <string name="toast_download_url_copied">URL Gekopieerd</string>
     <!-- General -->
-    <string name="update_found_notification">System update available</string>
     <string name="snack_no_updates_found">Geen nieuwe updates gevonden</string>
     <string name="snack_updates_check_failed">Kan niet controleren op updates. Controleer uw internetverbinding en probeer het later opnieuw.</string>
     <string name="snack_download_failed">Downloaden mislukt. Controleer uw internetverbinding en probeer het later opnieuw.</string>
     <string name="snack_download_verification_failed">Verificatie van de update mislukt.</string>
     <string name="snack_download_verified">Downloaden voltooid.</string>
     <string name="snack_update_not_installable">Deze update kan niet worden geïnstalleerd bovenop de huidige versie.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> van <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> van <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> resterend) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Update verifiëren</string>
-    <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Update geblokkeerd</string>
     <!-- Actions -->
     <string name="action_download">Downloaden</string>
@@ -82,9 +77,6 @@
     <string name="dialog_battery_low_title">Batterij bijna leeg</string>
     <string name="dialog_battery_low_message_pct">Uw batterijniveau is te laag, u moet op zijn minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% batterijcapaciteit hebben om door te gaan of <xliff:g id="percent_charging">%2$d</xliff:g>%% tijdens het opladen.</string>
     <!-- Export update -->
-    <string name="dialog_export_title">Exporting update to internal storage</string>
-    <string name="notification_export_success">Update exported to internal storage</string>
-    <string name="notification_export_fail">Failed to export update to internal storage</string>
     <string name="toast_already_exporting">Er wordt al een update geëxporteerd</string>
     <!-- ETA -->
     <plurals name="eta_seconds">
@@ -104,14 +96,11 @@
     <string name="update_on_mobile_data_message">U staat op het punt om een update-pakket te downloaden via mobiele gegevens, wat een hoog gegevensgebruik tot gevolg kan hebben. Wilt u verder gaan?</string>
     <string name="checkbox_mobile_data_warning">Niet opnieuw tonen</string>
     <!-- Info section -->
-    <string name="maintainer_info_title">Maintainer</string>
     <string name="donate_info_title">Doneer</string>
     <string name="donate_info_summary">Steun de ontwikkeling</string>
-    <string name="website_info_title">Website</string>
     <string name="website_info_summary">Bezoek onze website</string>
     <string name="news_info_title">Nieuws</string>
     <string name="news_info_summary">Blijf op de hoogte over updates en ander nieuws</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Bekijk forumberichten</string>
     <string name="error_open_url">Fout bij het openen van URL in browser</string>
 </resources>

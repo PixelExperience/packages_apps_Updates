@@ -87,24 +87,6 @@
     <string name="notification_export_fail">Ma rnexxiex jesporta l-update għall-ħażna interna</string>
     <string name="toast_already_exporting">Diġà qed tesporta aġġornament</string>
     <!-- ETA -->
-    <plurals name="eta_seconds">
-        <item quantity="one">Fadal sekonda</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> seconds left</item>
-        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> sekondi</item>
-    </plurals>
-    <plurals name="eta_minutes">
-        <item quantity="one">Fadal minuta</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> minutes left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> minutes left</item>
-        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> minuti</item>
-    </plurals>
-    <plurals name="eta_hours">
-        <item quantity="one">Fadal siegħa</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> hours left</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> hours left</item>
-        <item quantity="other">Fadal <xliff:g id="count">%d</xliff:g> siegħat</item>
-    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Twissija</string>
     <string name="update_on_mobile_data_message">Qed tniżżel pakkett ta \'aġġornament bl-użu tad-data tal-mowbajl li x\'aktarx se tikkawża użu għoli tad-data. Tixtieq tipproċedi?</string>
