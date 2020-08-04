@@ -506,6 +506,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         menu.findItem(R.id.menu_copy_url).setVisible(update.getAvailableOnline());
         menu.findItem(R.id.menu_export_update).setVisible(
                 update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED);
+        menu.findItem(R.id.menu_download_full_package).setVisible(Utils.shouldUseIncremental(mActivity));
+        menu.findItem(R.id.menu_download_incremental_package).setVisible(!Utils.shouldUseIncremental(mActivity));
 
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
@@ -520,6 +522,12 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                     return true;
                 case R.id.menu_export_update:
                     exportUpdate();
+                    return true;
+                case R.id.menu_download_full_package:
+                    mUpdaterController.setShouldUseIncremental(false);
+                    return true;
+                case R.id.menu_download_incremental_package:
+                    mUpdaterController.setShouldUseIncremental(true);
                     return true;
             }
             return false;

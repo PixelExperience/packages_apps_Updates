@@ -55,6 +55,7 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
+    buildToolsVersion '30.0.1'
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {

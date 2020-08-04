@@ -201,7 +201,12 @@ class ABUpdateInstaller {
         }
 
         if (!mBound) {
-            mBound = mUpdateEngine.bind(mUpdateEngineCallback);
+            try{
+                mBound = mUpdateEngine.bind(mUpdateEngineCallback);
+            }catch (NullPointerException e){
+                Log.e(TAG, "Failed to bind", e);
+                mBound = false;
+            }
             if (!mBound) {
                 Log.e(TAG, "Could not bind");
                 mUpdaterController.getActualUpdate(downloadId)

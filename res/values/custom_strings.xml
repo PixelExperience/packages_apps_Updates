@@ -41,6 +41,8 @@
     <string name="changelog_loading">Loading…</string>
     <string name="label_download_url">Download URL</string>
     <string name="toast_download_url_copied">URL Copied</string>
+    <string name="menu_download_full_package">Download full package</string>
+    <string name="menu_download_incremental_package">Download incremental package</string>
 
     <!-- General -->
     <string name="update_found_notification">System update available</string>
@@ -79,6 +81,7 @@
     <string name="cancel_installation_dialog_message">Cancel the installation?</string>
     <string name="installing_update">Installing update package</string>
     <string name="installing_update_error">Install error</string>
+    <string name="installing_update_ab_disable_incremental_summary">It seems that the installation failed, this was because you downloaded an incremental update and your system has been modified previously. Do you want to download a full package and try again?\n\nYou can change this later in the settings.</string>
     <string name="installing_update_finished">Update installed</string>
     <string name="finalizing_package">Finalizing package installation</string>
     <string name="preparing_ota_first_boot">Preparing for first boot</string>
