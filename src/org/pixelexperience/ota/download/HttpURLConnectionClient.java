@@ -45,17 +45,19 @@ public class HttpURLConnectionClient implements DownloadClient {
     private final boolean mUseDuplicateLinks;
     private HttpURLConnection mClient;
     private DownloadThread mDownloadThread;
+    private boolean mUseIncremental;
 
     HttpURLConnectionClient(String url, File destination,
                             DownloadClient.ProgressListener progressListener,
                             DownloadClient.DownloadCallback callback,
-                            boolean useDuplicateLinks) throws IOException {
+                            boolean useDuplicateLinks, boolean useIncremental) throws IOException {
         mClient = (HttpURLConnection) new URL(url).openConnection();
         setExtraHeaders();
         mDestination = destination;
         mProgressListener = progressListener;
         mCallback = callback;
         mUseDuplicateLinks = useDuplicateLinks;
+        mUseIncremental = useIncremental;
     }
 
     private static boolean isSuccessCode(int statusCode) {
@@ -72,7 +74,9 @@ public class HttpURLConnectionClient implements DownloadClient {
 
     private void setExtraHeaders() {
         mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
-        mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
+        if (mUseIncremental){
+            mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
+        }
     }
 
     @Override

@@ -16,12 +16,14 @@
  */
 package org.pixelexperience.ota;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -33,6 +35,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
@@ -44,6 +47,7 @@ import org.json.JSONException;
 import org.pixelexperience.ota.controller.UpdaterController;
 import org.pixelexperience.ota.controller.UpdaterService;
 import org.pixelexperience.ota.download.DownloadClient;
+import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 
@@ -124,6 +128,11 @@ public class UpdatesActivity extends UpdatesListActivity {
                 }else if (ExportUpdateService.ACTION_EXPORT_STATUS.equals(intent.getAction())){
                     int status = intent.getIntExtra(ExportUpdateService.EXTRA_EXPORT_STATUS, -1);
                     handleExportStatusChanged(status);
+                }else if (UpdaterController.ACTION_INCREMENTAL_PREF_CHANGING.equals(intent.getAction())) {
+                    hideUpdates();
+                    refreshAnimationStart();
+                }else if (UpdaterController.ACTION_INCREMENTAL_PREF_CHANGED.equals(intent.getAction())) {
+                    cleanupUpdates();
                 }
             }
         };
@@ -184,6 +193,8 @@ public class UpdatesActivity extends UpdatesListActivity {
         intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         intentFilter.addAction(UpdaterController.ACTION_NETWORK_UNAVAILABLE);
+        intentFilter.addAction(UpdaterController.ACTION_INCREMENTAL_PREF_CHANGING);
+        intentFilter.addAction(UpdaterController.ACTION_INCREMENTAL_PREF_CHANGED);
         intentFilter.addAction(ExportUpdateService.ACTION_EXPORT_STATUS);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
     }
@@ -330,6 +341,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                     .setUrl(url)
                     .setDestination(jsonFileTmp)
                     .setDownloadCallback(callback)
+                    .setUseIncremental(Utils.shouldUseIncremental(this))
                     .build();
         } catch (IOException exception) {
             Log.e(TAG, "Could not build download client");
@@ -368,6 +380,13 @@ public class UpdatesActivity extends UpdatesListActivity {
             case VERIFIED:
                 showSnackbar(R.string.snack_download_verified, Snackbar.LENGTH_LONG);
                 break;
+            case INSTALLATION_FAILED:
+                if (Utils.isABDevice()){
+                    handleABInstallationFailed();
+                }else{
+                    showSnackbar(R.string.installing_update_error, Snackbar.LENGTH_LONG);
+                }
+                break;
         }
     }
 
@@ -377,5 +396,27 @@ public class UpdatesActivity extends UpdatesListActivity {
         TextView tv = snack.getView().findViewById(com.google.android.material.R.id.snackbar_text);
         tv.setTextColor(getColor(R.color.text_primary));
         snack.show();
+    }
+
+    private void handleABInstallationFailed(){
+        if (Utils.shouldUseIncremental(this)){
+            new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
+                    .setTitle(R.string.installing_update_error)
+                    .setMessage(R.string.installing_update_ab_disable_incremental_summary)
+                    .setPositiveButton(R.string.action_download,
+                            (dialog, which) -> {
+                                UpdaterController controller = mUpdaterService.getUpdaterController();
+                                controller.setShouldUseIncremental(false);
+                            })
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .show();
+        }else{
+            showSnackbar(R.string.installing_update_error, Snackbar.LENGTH_LONG);
+        }
+    }
+    private void cleanupUpdates(){
+        mAdapter.setData(new ArrayList<>());
+        mAdapter.notifyDataSetChanged();
+        downloadUpdatesList(false);
     }
 }

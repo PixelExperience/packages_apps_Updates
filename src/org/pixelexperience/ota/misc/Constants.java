@@ -30,6 +30,7 @@ public final class Constants {
     public static final String PREF_INSTALL_PACKAGE_PATH = "install_package_path";
     public static final String PREF_INSTALL_AGAIN = "install_again";
     public static final String PREF_INSTALL_NOTIFIED = "install_notified";
+    public static final String PREF_USE_INCREMENTAL = "use_incremental";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";
     static final String PROP_AB_DEVICE = "ro.build.ab_update";
     static final String PROP_DEVICE = "org.pixelexperience.device";

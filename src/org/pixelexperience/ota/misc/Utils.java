@@ -396,4 +396,14 @@ public class Utils {
         }
         return String.format("%01.2f %s", result, unit);
     }
+
+    public static boolean shouldUseIncremental(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(Constants.PREF_USE_INCREMENTAL, true);
+    }
+
+    public static void setShouldUseIncremental(Context context, boolean shouldUse){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).apply();
+    }
 }

@@ -170,6 +170,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
                     .setUrl(url)
                     .setDestination(jsonNew)
                     .setDownloadCallback(callback)
+                    .setUseIncremental(Utils.shouldUseIncremental(context))
                     .build();
             downloadClient.start();
         } catch (IOException e) {
