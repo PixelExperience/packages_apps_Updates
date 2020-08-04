@@ -23,6 +23,7 @@ public final class Constants {
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String UNCRYPT_FILE_EXT = ".uncrypt";
     public static final String PROP_BUILD_DATE = "org.pixelexperience.build_date_utc";
+    public static final String PROP_BUILD_TYPE = "org.pixelexperience.build_type";
     public static final String PROP_RECOVERY_UPDATE = "persist.sys.recovery_update";
     public static final String PREF_INSTALL_OLD_TIMESTAMP = "install_old_timestamp";
     public static final String PREF_INSTALL_NEW_TIMESTAMP = "install_new_timestamp";
@@ -36,6 +37,7 @@ public final class Constants {
     static final String PROP_DEVICE = "org.pixelexperience.device";
     static final String PROP_BUILD_VERSION = "org.pixelexperience.version";
     static final String OTA_URL = "https://download.pixelexperience.org/ota_v4/%s/%s";
+    static final String OTA_CI_URL = "https://download.pixelexperience.org/ota_ci/%s/%s";
     static final String MAINTAINER_URL = "https://download.pixelexperience.org/team/%s";
     static final String DOWNLOAD_WEBPAGE_URL = "https://download.pixelexperience.org/changelog/%s/%s";
     static final String EXPORT_PATH = "PixelExperience-Updates/";
