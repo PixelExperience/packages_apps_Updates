@@ -200,6 +200,10 @@ class ABUpdateInstaller {
             return;
         }
 
+        if (mUpdateEngine == null){
+            mUpdateEngine = new UpdateEngine();
+        }
+
         if (!mBound) {
             try{
                 mBound = mUpdateEngine.bind(mUpdateEngineCallback);
@@ -238,6 +242,10 @@ class ABUpdateInstaller {
 
         if (mBound) {
             return;
+        }
+
+        if (mUpdateEngine == null){
+            mUpdateEngine = new UpdateEngine();
         }
 
         mDownloadId = PreferenceManager.getDefaultSharedPreferences(mContext)
