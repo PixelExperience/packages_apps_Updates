@@ -200,6 +200,10 @@ class ABUpdateInstaller {
             return;
         }
 
+        if (mUpdateEngine == null){
+            mUpdateEngine = new UpdateEngine();
+        }
+
         if (!mBound) {
             try{
                 mBound = mUpdateEngine.bind(mUpdateEngineCallback);
