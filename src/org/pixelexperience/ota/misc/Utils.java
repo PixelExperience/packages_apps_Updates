@@ -36,7 +36,6 @@ import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.pixelexperience.ota.UpdatesDbHelper;
 import org.pixelexperience.ota.controller.UpdaterService;
 import org.pixelexperience.ota.model.MaintainerInfo;
 import org.pixelexperience.ota.model.Update;
@@ -103,6 +102,7 @@ public class Utils {
         update.setDownloadUrl(object.getString("url"));
         update.setVersion(object.getString("version"));
         update.setHash(object.getString("filehash"));
+        update.setIsIncremental(object.getBoolean("is_incremental"));
         update.setMaintainers(maintainers);
         update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
         update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
@@ -278,20 +278,8 @@ public class Utils {
         if (files == null) {
             return;
         }
-
-        // Ideally the database is empty when we get here
-        UpdatesDbHelper dbHelper = new UpdatesDbHelper(context);
-        List<String> knownPaths = new ArrayList<>();
-        for (UpdateInfo update : dbHelper.getUpdates()) {
-            if (isCompatible(update)) {
-                knownPaths.add(update.getFile().getAbsolutePath());
-            }
-        }
         for (File file : files) {
-            if (!knownPaths.contains(file.getAbsolutePath())) {
-                Log.d(TAG, "Deleting " + file.getAbsolutePath());
-                file.delete();
-            }
+            Log.d(TAG, "Deleting " + file.getAbsolutePath());
         }
     }
 

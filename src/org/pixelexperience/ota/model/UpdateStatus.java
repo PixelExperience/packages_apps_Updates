@@ -22,7 +22,7 @@ public enum UpdateStatus {
     DOWNLOADING,
     DOWNLOADED,
     PAUSED,
-    PAUSED_ERROR,
+    DOWNLOAD_ERROR,
     DELETED,
     VERIFYING,
     VERIFIED,

@@ -58,6 +58,7 @@ public class HttpURLConnectionClient implements DownloadClient {
         mCallback = callback;
         mUseDuplicateLinks = useDuplicateLinks;
         mUseIncremental = useIncremental;
+        setExtraHeaders();
     }
 
     private static boolean isSuccessCode(int statusCode) {
@@ -75,7 +76,10 @@ public class HttpURLConnectionClient implements DownloadClient {
     private void setExtraHeaders() {
         mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
         if (mUseIncremental){
-            mClient.setRequestProperty("Current-Build-Timestamp", SystemProperties.get(Constants.PROP_BUILD_DATE, "0"));
+            String timestamp = SystemProperties.get(Constants.PROP_BUILD_DATE, "0");
+            Log.d(TAG, "Using incremental");
+            Log.d(TAG, "Current-Build-Timestamp is: " + timestamp);
+            mClient.setRequestProperty("Current-Build-Timestamp", timestamp);
         }
     }
 

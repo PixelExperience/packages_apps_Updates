@@ -195,7 +195,7 @@ public class UpdaterService extends Service {
                 Log.e(TAG, "Could not install update", e);
                 mUpdaterController.getActualUpdate(downloadId)
                         .setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(downloadId);
+                mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
             }
         } else if (ACTION_INSTALL_STOP.equals(intent.getAction())) {
             if (UpdateInstaller.isInstalling()) {
@@ -296,7 +296,7 @@ public class UpdaterService extends Service {
                 tryStopSelf();
                 break;
             }
-            case PAUSED_ERROR: {
+            case DOWNLOAD_ERROR: {
                 stopForeground(STOP_FOREGROUND_DETACH);
                 int progress = update.getProgress();
                 // In case we pause before the first progress update
@@ -306,9 +306,6 @@ public class UpdaterService extends Service {
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_warning);
-                mNotificationBuilder.addAction(R.drawable.ic_updateui_resume,
-                        getString(R.string.resume_button),
-                        getResumePendingIntent(update.getDownloadId()));
                 mNotificationBuilder.setTicker(text);
                 mNotificationBuilder.setOngoing(false);
                 mNotificationBuilder.setAutoCancel(false);

@@ -104,7 +104,7 @@ class UpdateInstaller {
             Log.e(TAG, "Could not install update", e);
             mUpdaterController.getActualUpdate(downloadId)
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(downloadId);
+            mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
         }
     }
 
@@ -130,11 +130,13 @@ class UpdateInstaller {
 
             @Override
             public void run() {
+                UpdateStatus status = UpdateStatus.INSTALLING;
                 try {
                     mCanCancel = true;
                     FileUtils.copyFile(update.getFile(), uncryptFile, mProgressCallBack);
                     mCanCancel = false;
                     if (mPrepareUpdateThread.isInterrupted()) {
+                        status = UpdateStatus.INSTALLATION_CANCELLED;
                         mUpdaterController.getActualUpdate(update.getDownloadId())
                                 .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
                         mUpdaterController.getActualUpdate(update.getDownloadId())
@@ -146,6 +148,7 @@ class UpdateInstaller {
                 } catch (IOException e) {
                     Log.e(TAG, "Could not copy update", e);
                     uncryptFile.delete();
+                    status = UpdateStatus.INSTALLATION_FAILED;
                     mUpdaterController.getActualUpdate(update.getDownloadId())
                             .setStatus(UpdateStatus.INSTALLATION_FAILED);
                 } finally {
@@ -154,7 +157,7 @@ class UpdateInstaller {
                         mPrepareUpdateThread = null;
                         sInstallingUpdate = null;
                     }
-                    mUpdaterController.notifyUpdateChange(update.getDownloadId());
+                    mUpdaterController.notifyUpdateChange(update.getDownloadId(), status);
                 }
             }
         };
@@ -166,7 +169,7 @@ class UpdateInstaller {
 
         mUpdaterController.getActualUpdate(update.getDownloadId())
                 .setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(update.getDownloadId());
+        mUpdaterController.notifyUpdateChange(update.getDownloadId(), UpdateStatus.INSTALLING);
     }
 
     public synchronized void cancel() {

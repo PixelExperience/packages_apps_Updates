@@ -19,14 +19,12 @@ package org.pixelexperience.ota.controller;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import org.pixelexperience.ota.UpdatesDbHelper;
 import org.pixelexperience.ota.download.DownloadClient;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.Update;
@@ -49,16 +47,16 @@ public class UpdaterController {
     public static final String ACTION_UPDATE_REMOVED = "action_update_removed";
     public static final String ACTION_UPDATE_STATUS = "action_update_status_change";
     public static final String ACTION_NETWORK_UNAVAILABLE = "action_network_unavailable";
-    public static final String ACTION_INCREMENTAL_PREF_CHANGING = "action_incremental_pref_changing";
-    public static final String ACTION_INCREMENTAL_PREF_CHANGED = "action_incremental_pref_changed";
+    public static final String ACTION_UPDATE_CLEANUP_IN_PROGRESS = "action_incremental_pref_changing";
+    public static final String ACTION_UPDATE_CLEANUP_DONE = "action_incremental_pref_changed";
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
+    public static final String EXTRA_STATUS = "extra_status";
     private static final int MAX_REPORT_INTERVAL_MS = 1000;
     @SuppressLint("StaticFieldLeak")
     private static UpdaterController sUpdaterController;
     private final String TAG = "UpdaterController";
     private final Context mContext;
     private final LocalBroadcastManager mBroadcastManager;
-    private final UpdatesDbHelper mUpdatesDbHelper;
 
     private final PowerManager.WakeLock mWakeLock;
 
@@ -70,7 +68,6 @@ public class UpdaterController {
 
     private UpdaterController(Context context) {
         mBroadcastManager = LocalBroadcastManager.getInstance(context);
-        mUpdatesDbHelper = new UpdatesDbHelper(context);
         mDownloadRoot = Utils.getDownloadPath();
         PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         mWakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Updates:UpdaterController");
@@ -78,10 +75,6 @@ public class UpdaterController {
         mContext = context.getApplicationContext();
 
         Utils.cleanupDownloadsDir(context);
-
-        for (Update update : mUpdatesDbHelper.getUpdates()) {
-            addUpdate(update, false);
-        }
     }
 
     static synchronized UpdaterController getInstance(Context context) {
@@ -91,7 +84,7 @@ public class UpdaterController {
         return sUpdaterController;
     }
 
-    void notifyUpdateChange(String downloadId) {
+    void notifyUpdateChange(String downloadId, UpdateStatus status) {
         new Thread(() -> {
             try {
                 Thread.sleep(500);
@@ -101,6 +94,7 @@ public class UpdaterController {
             Intent intent = new Intent();
             intent.setAction(ACTION_UPDATE_STATUS);
             intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
+            intent.putExtra(EXTRA_STATUS, status);
             mBroadcastManager.sendBroadcast(intent);
         }).start();
     }
@@ -180,9 +174,7 @@ public class UpdaterController {
                 }
                 update.setStatus(UpdateStatus.DOWNLOADING);
                 update.setPersistentStatus(UpdateStatus.Persistent.INCOMPLETE);
-                new Thread(() -> mUpdatesDbHelper.addUpdateWithOnConflict(update,
-                        SQLiteDatabase.CONFLICT_REPLACE)).start();
-                notifyUpdateChange(downloadId);
+                notifyUpdateChange(downloadId, UpdateStatus.DOWNLOADING);
             }
 
             @Override
@@ -192,7 +184,7 @@ public class UpdaterController {
                 update.setStatus(UpdateStatus.VERIFYING);
                 removeDownloadClient(mDownloads.get(downloadId));
                 verifyUpdateAsync(downloadId);
-                notifyUpdateChange(downloadId);
+                notifyUpdateChange(downloadId, UpdateStatus.VERIFYING);
                 tryReleaseWakelock();
             }
 
@@ -205,8 +197,9 @@ public class UpdaterController {
                 } else {
                     Log.e(TAG, "Download failed");
                     removeDownloadClient(mDownloads.get(downloadId));
-                    update.setStatus(UpdateStatus.PAUSED_ERROR);
-                    notifyUpdateChange(downloadId);
+                    update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
+                    notifyUpdateChange(downloadId, UpdateStatus.DOWNLOAD_ERROR);
+                    cleanupUpdates();
                 }
                 tryReleaseWakelock();
             }
@@ -252,19 +245,19 @@ public class UpdaterController {
         new Thread(() -> {
             Update update = mDownloads.get(downloadId).mUpdate;
             File file = update.getFile();
+            UpdateStatus status = null;
             if (file.exists() && verifyPackage(file, update.getHash())) {
                 file.setReadable(true, false);
                 update.setPersistentStatus(UpdateStatus.Persistent.VERIFIED);
-                mUpdatesDbHelper.changeUpdateStatus(update);
-                update.setStatus(UpdateStatus.VERIFIED);
+                status = UpdateStatus.VERIFIED;
             } else {
                 update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
-                mUpdatesDbHelper.removeUpdate(downloadId);
                 update.setProgress(0);
-                update.setStatus(UpdateStatus.VERIFICATION_FAILED);
+                status = UpdateStatus.VERIFICATION_FAILED;
             }
+            update.setStatus(status);
             mVerifyingUpdates.remove(downloadId);
-            notifyUpdateChange(downloadId);
+            notifyUpdateChange(downloadId, status);
         }).start();
     }
 
@@ -355,13 +348,14 @@ public class UpdaterController {
                     .build();
         } catch (IOException exception) {
             Log.e(TAG, "Could not build download client");
-            update.setStatus(UpdateStatus.PAUSED_ERROR);
-            notifyUpdateChange(downloadId);
+            update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
+            notifyUpdateChange(downloadId, UpdateStatus.DOWNLOAD_ERROR);
+            cleanupUpdates();
             return;
         }
         addDownloadClient(mDownloads.get(downloadId), downloadClient);
         update.setStatus(UpdateStatus.STARTING);
-        notifyUpdateChange(downloadId);
+        notifyUpdateChange(downloadId, UpdateStatus.STARTING);
         downloadClient.start();
         mWakeLock.acquire();
     }
@@ -375,15 +369,16 @@ public class UpdaterController {
         File file = update.getFile();
         if (file == null || !file.exists()) {
             Log.e(TAG, "The destination file of " + downloadId + " doesn't exist, can't resume");
-            update.setStatus(UpdateStatus.PAUSED_ERROR);
-            notifyUpdateChange(downloadId);
+            update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
+            notifyUpdateChange(downloadId, UpdateStatus.DOWNLOAD_ERROR);
+            cleanupUpdates();
             return;
         }
         if (file.exists() && update.getFileSize() > 0 && file.length() >= update.getFileSize()) {
             Log.d(TAG, "File already downloaded, starting verification");
             update.setStatus(UpdateStatus.VERIFYING);
             verifyUpdateAsync(downloadId);
-            notifyUpdateChange(downloadId);
+            notifyUpdateChange(downloadId, UpdateStatus.VERIFYING);
         } else {
             DownloadClient downloadClient;
             try {
@@ -396,13 +391,14 @@ public class UpdaterController {
                         .build();
             } catch (IOException exception) {
                 Log.e(TAG, "Could not build download client");
-                update.setStatus(UpdateStatus.PAUSED_ERROR);
-                notifyUpdateChange(downloadId);
+                update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
+                notifyUpdateChange(downloadId, UpdateStatus.DOWNLOAD_ERROR);
+                cleanupUpdates();
                 return;
             }
             addDownloadClient(mDownloads.get(downloadId), downloadClient);
             update.setStatus(UpdateStatus.STARTING);
-            notifyUpdateChange(downloadId);
+            notifyUpdateChange(downloadId, UpdateStatus.STARTING);
             downloadClient.resume();
             mWakeLock.acquire();
         }
@@ -420,7 +416,7 @@ public class UpdaterController {
         entry.mUpdate.setStatus(UpdateStatus.PAUSED);
         entry.mUpdate.setEta(0);
         entry.mUpdate.setSpeed(0);
-        notifyUpdateChange(downloadId);
+        notifyUpdateChange(downloadId, UpdateStatus.PAUSED);
         return true;
     }
 
@@ -430,7 +426,6 @@ public class UpdaterController {
             if (file != null && file.exists() && !file.delete()) {
                 Log.e(TAG, "Could not delete " + file.getAbsolutePath());
             }
-            mUpdatesDbHelper.removeUpdate(update.getDownloadId());
         }).start();
     }
 
@@ -439,7 +434,6 @@ public class UpdaterController {
         if (file != null && file.exists() && !file.delete()) {
             Log.e(TAG, "Could not delete " + file.getAbsolutePath());
         }
-        mUpdatesDbHelper.removeUpdate(update.getDownloadId());
     }
 
     public void deleteUpdate(String downloadId) {
@@ -458,14 +452,14 @@ public class UpdaterController {
             mDownloads.remove(downloadId);
             notifyUpdateDelete(downloadId);
         } else {
-            notifyUpdateChange(downloadId);
+            notifyUpdateChange(downloadId, UpdateStatus.DELETED);
         }
 
     }
 
     public void setShouldUseIncremental(boolean shouldUse) {
         Intent intent = new Intent();
-        intent.setAction(ACTION_INCREMENTAL_PREF_CHANGING);
+        intent.setAction(ACTION_UPDATE_CLEANUP_IN_PROGRESS);
         mBroadcastManager.sendBroadcast(intent);
         Utils.setShouldUseIncremental(mContext, shouldUse);
         new Thread(() -> {
@@ -483,9 +477,13 @@ public class UpdaterController {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
-            intent.setAction(ACTION_INCREMENTAL_PREF_CHANGED);
+            intent.setAction(ACTION_UPDATE_CLEANUP_DONE);
             mBroadcastManager.sendBroadcast(intent);
         }).start();
+    }
+
+    public void cleanupUpdates() {
+        setShouldUseIncremental(Utils.shouldUseIncremental(mContext));
     }
 
     public List<UpdateInfo> getUpdates() {

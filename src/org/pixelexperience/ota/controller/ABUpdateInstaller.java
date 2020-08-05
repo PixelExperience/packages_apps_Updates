@@ -74,7 +74,7 @@ class ABUpdateInstaller {
                 case UpdateEngine.UpdateStatusConstants.FINALIZING: {
                     if (update.getStatus() != UpdateStatus.INSTALLING) {
                         update.setStatus(UpdateStatus.INSTALLING);
-                        mUpdaterController.notifyUpdateChange(mDownloadId);
+                        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
                     }
                     mProgress = Math.round(percent * 100);
                     mUpdaterController.getActualUpdate(mDownloadId).setInstallProgress(mProgress);
@@ -88,7 +88,7 @@ class ABUpdateInstaller {
                     installationDone(true);
                     update.setInstallProgress(0);
                     update.setStatus(UpdateStatus.INSTALLED);
-                    mUpdaterController.notifyUpdateChange(mDownloadId);
+                    mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLED);
                     mUpdaterController.deleteUpdate(mDownloadId);
                 }
                 break;
@@ -109,7 +109,7 @@ class ABUpdateInstaller {
                 Update update = mUpdaterController.getActualUpdate(mDownloadId);
                 update.setInstallProgress(0);
                 update.setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(mDownloadId);
+                mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
             }
         }
     };
@@ -171,7 +171,7 @@ class ABUpdateInstaller {
             Log.e(TAG, "The given update doesn't exist");
             mUpdaterController.getActualUpdate(downloadId)
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(downloadId);
+            mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
             return;
         }
 
@@ -196,7 +196,7 @@ class ABUpdateInstaller {
             Log.e(TAG, "Could not prepare " + file, e);
             mUpdaterController.getActualUpdate(mDownloadId)
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(mDownloadId);
+            mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
             return;
         }
 
@@ -211,7 +211,7 @@ class ABUpdateInstaller {
                 Log.e(TAG, "Could not bind");
                 mUpdaterController.getActualUpdate(downloadId)
                         .setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(downloadId);
+                mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
                 return;
             }
         }
@@ -222,7 +222,7 @@ class ABUpdateInstaller {
         mUpdateEngine.applyPayload(zipFileUri, offset, 0, headerKeyValuePairs);
 
         mUpdaterController.getActualUpdate(mDownloadId).setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(mDownloadId);
+        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
                 .putString(PREF_INSTALLING_AB_ID, mDownloadId)
@@ -276,7 +276,7 @@ class ABUpdateInstaller {
 
         mUpdaterController.getActualUpdate(mDownloadId)
                 .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
-        mUpdaterController.notifyUpdateChange(mDownloadId);
+        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_CANCELLED);
 
         return true;
     }
@@ -296,7 +296,7 @@ class ABUpdateInstaller {
 
         mUpdaterController.getActualUpdate(mDownloadId)
                 .setStatus(UpdateStatus.INSTALLATION_SUSPENDED);
-        mUpdaterController.notifyUpdateChange(mDownloadId);
+        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_SUSPENDED);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
                 .putString(PREF_INSTALLING_SUSPENDED_AB_ID, mDownloadId)
@@ -319,7 +319,7 @@ class ABUpdateInstaller {
         mUpdateEngine.resume();
 
         mUpdaterController.getActualUpdate(mDownloadId).setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(mDownloadId);
+        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
         mUpdaterController.getActualUpdate(mDownloadId).setInstallProgress(mProgress);
         mUpdaterController.getActualUpdate(mDownloadId).setFinalizing(mFinalizing);
         mUpdaterController.notifyInstallProgress(mDownloadId);
