@@ -34,6 +34,9 @@ public final class Constants {
     public static final String PREF_USE_INCREMENTAL = "use_incremental";
     public static final String PREF_CURRENT_UPDATE_HAS_INCREMENTAL = "current_update_has_incremental";
     public static final String PREF_CURRENT_UPDATE_IS_INCREMENTAL = "current_update_is_incremental";
+    public static final String PREF_CURRENT_PERSISTENT_STATUS = "current_persistent_status";
+    public static final String PREF_INSTALLING_AB_ID = "installing_ab_id";
+    public static final String PREF_INSTALLING_SUSPENDED_AB_ID = "installing_suspended_ab_id";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";
     static final String PROP_AB_DEVICE = "ro.build.ab_update";
     static final String PROP_DEVICE = "org.pixelexperience.device";

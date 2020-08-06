@@ -63,10 +63,6 @@ class UpdateInstaller {
         return sInstallingUpdate != null;
     }
 
-    static synchronized boolean isInstalling(String downloadId) {
-        return sInstallingUpdate != null && sInstallingUpdate.equals(downloadId);
-    }
-
     void install(String downloadId) {
         if (isInstalling()) {
             Log.e(TAG, "Already installing an update");

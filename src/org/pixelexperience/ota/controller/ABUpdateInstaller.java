@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
-import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
@@ -45,9 +44,6 @@ class ABUpdateInstaller {
 
     private static final String TAG = "ABUpdateInstaller";
 
-    private static final String PREF_INSTALLING_AB_ID = "installing_ab_id";
-    private static final String PREF_INSTALLING_SUSPENDED_AB_ID = "installing_suspended_ab_id";
-
     @SuppressLint("StaticFieldLeak")
     private static ABUpdateInstaller sInstance = null;
 
@@ -57,13 +53,17 @@ class ABUpdateInstaller {
 
     private boolean mFinalizing;
     private int mProgress;
+    private boolean mCanceling = false;
 
     private final UpdateEngineCallback mUpdateEngineCallback = new UpdateEngineCallback() {
 
         @Override
         public void onStatusUpdate(int status, float percent) {
+            Log.d(TAG, "onStatusUpdate, status=" + status);
+            boolean isOperationOnProgress = status != UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT &&
+                    status != UpdateEngine.UpdateStatusConstants.IDLE;
             Update update = mUpdaterController.getActualUpdate(mDownloadId);
-            if (update == null) {
+            if (update == null && !isOperationOnProgress) {
                 // We read the id from a preference, the update could no longer exist
                 installationDone(status == UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT);
                 return;
@@ -105,11 +105,14 @@ class ABUpdateInstaller {
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             if (errorCode != UpdateEngine.ErrorCodeConstants.SUCCESS) {
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                 installationDone(false);
                 Update update = mUpdaterController.getActualUpdate(mDownloadId);
                 update.setInstallProgress(0);
-                update.setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
+                if (!mCanceling){
+                    update.setStatus(UpdateStatus.INSTALLATION_FAILED);
+                    mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
+                }
             }
         }
     };
@@ -124,30 +127,19 @@ class ABUpdateInstaller {
 
     static synchronized boolean isInstallingUpdate(Context context) {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return pref.getString(ABUpdateInstaller.PREF_INSTALLING_AB_ID, null) != null ||
+        return pref.getString(Constants.PREF_INSTALLING_AB_ID, null) != null ||
                 pref.getString(Constants.PREF_NEEDS_REBOOT_ID, null) != null;
-    }
-
-    static synchronized boolean isInstallingUpdate(Context context, String downloadId) {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return downloadId.equals(pref.getString(ABUpdateInstaller.PREF_INSTALLING_AB_ID, null)) ||
-                TextUtils.equals(pref.getString(Constants.PREF_NEEDS_REBOOT_ID, null), downloadId);
     }
 
     static synchronized boolean isInstallingUpdateSuspended(Context context) {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return pref.getString(ABUpdateInstaller.PREF_INSTALLING_SUSPENDED_AB_ID, null) != null;
+        return pref.getString(Constants.PREF_INSTALLING_SUSPENDED_AB_ID, null) != null;
     }
 
-    static synchronized boolean isInstallingUpdateSuspended(Context context, String downloadId) {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return downloadId.equals(pref.getString(ABUpdateInstaller.PREF_INSTALLING_SUSPENDED_AB_ID, null));
-    }
-
-    static synchronized boolean isWaitingForReboot(Context context, String downloadId) {
+    static synchronized boolean isWaitingForReboot(Context context) {
         String waitingId = PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(Constants.PREF_NEEDS_REBOOT_ID, null);
-        return TextUtils.equals(waitingId, downloadId);
+        return waitingId != null;
     }
 
     static synchronized ABUpdateInstaller getInstance(Context context,
@@ -163,6 +155,8 @@ class ABUpdateInstaller {
             Log.e(TAG, "Already installing an update");
             return;
         }
+
+        mCanceling = false;
 
         mDownloadId = downloadId;
 
@@ -216,18 +210,30 @@ class ABUpdateInstaller {
             }
         }
 
-        mUpdateEngine.setPerformanceMode(true);
-
-        String zipFileUri = "file://" + file.getAbsolutePath();
-        mUpdateEngine.applyPayload(zipFileUri, offset, 0, headerKeyValuePairs);
-
         mUpdaterController.getActualUpdate(mDownloadId).setStatus(UpdateStatus.INSTALLING);
         mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(PREF_INSTALLING_AB_ID, mDownloadId)
+                .putString(Constants.PREF_INSTALLING_AB_ID, mDownloadId)
                 .apply();
 
+        String[] finalHeaderKeyValuePairs = headerKeyValuePairs;
+        new Thread(() -> {
+            try{
+                mUpdateEngine.setPerformanceMode(true);
+            }catch (NoSuchMethodError ignored){
+
+            }
+            try{
+                String zipFileUri = "file://" + file.getAbsolutePath();
+                mUpdateEngine.applyPayload(zipFileUri, offset, 0, finalHeaderKeyValuePairs);
+            }catch (Exception e){
+                Log.e(TAG, "Failed to apply payload", e);
+                mUpdaterController.getActualUpdate(downloadId)
+                        .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
+            }
+        }).start();
     }
 
     void reconnect() {
@@ -241,7 +247,7 @@ class ABUpdateInstaller {
         }
 
         mDownloadId = PreferenceManager.getDefaultSharedPreferences(mContext)
-                .getString(PREF_INSTALLING_AB_ID, null);
+                .getString(Constants.PREF_INSTALLING_AB_ID, null);
 
         // We will get a status notification as soon as we are connected
         mBound = mUpdateEngine.bind(mUpdateEngineCallback);
@@ -253,10 +259,10 @@ class ABUpdateInstaller {
 
     private void installationDone(boolean needsReboot) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        String id = needsReboot ? prefs.getString(PREF_INSTALLING_AB_ID, null) : null;
+        String id = needsReboot ? prefs.getString(Constants.PREF_INSTALLING_AB_ID, null) : null;
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
                 .putString(Constants.PREF_NEEDS_REBOOT_ID, id)
-                .remove(PREF_INSTALLING_AB_ID)
+                .remove(Constants.PREF_INSTALLING_AB_ID)
                 .apply();
     }
 
@@ -271,12 +277,15 @@ class ABUpdateInstaller {
             return false;
         }
 
-        mUpdateEngine.cancel();
-        installationDone(false);
+        mCanceling = true;
 
-        mUpdaterController.getActualUpdate(mDownloadId)
-                .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
-        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_CANCELLED);
+        new Thread(() -> {
+            mUpdateEngine.cancel();
+            installationDone(false);
+            mUpdaterController.getActualUpdate(mDownloadId)
+                    .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
+            mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_CANCELLED);
+        }).start();
 
         return true;
     }
@@ -299,7 +308,7 @@ class ABUpdateInstaller {
         mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_SUSPENDED);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(PREF_INSTALLING_SUSPENDED_AB_ID, mDownloadId)
+                .putString(Constants.PREF_INSTALLING_SUSPENDED_AB_ID, mDownloadId)
                 .apply();
 
         return true;
@@ -325,7 +334,7 @@ class ABUpdateInstaller {
         mUpdaterController.notifyInstallProgress(mDownloadId);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .remove(PREF_INSTALLING_SUSPENDED_AB_ID)
+                .remove(Constants.PREF_INSTALLING_SUSPENDED_AB_ID)
                 .apply();
 
         return true;

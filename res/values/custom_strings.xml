@@ -39,8 +39,6 @@
     <string name="menu_export_update">Export update</string>
     <string name="menu_show_changelog">Changes in current version</string>
     <string name="changelog_loading">Loading…</string>
-    <string name="label_download_url">Download URL</string>
-    <string name="toast_download_url_copied">URL Copied</string>
     <string name="menu_download_full_package">Download full package</string>
     <string name="menu_download_incremental_package">Download incremental package</string>
 
