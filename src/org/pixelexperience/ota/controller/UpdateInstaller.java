@@ -18,12 +18,9 @@ package org.pixelexperience.ota.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
-
-import androidx.preference.PreferenceManager;
 
 import org.pixelexperience.ota.misc.Constants;
 import org.pixelexperience.ota.misc.FileUtils;
@@ -63,48 +60,30 @@ class UpdateInstaller {
         return sInstallingUpdate != null;
     }
 
-    static synchronized boolean isInstalling(String downloadId) {
-        return sInstallingUpdate != null && sInstallingUpdate.equals(downloadId);
-    }
-
-    void install(String downloadId) {
+    void install() {
         if (isInstalling()) {
             Log.e(TAG, "Already installing an update");
             return;
         }
 
-        UpdateInfo update = mUpdaterController.getUpdate(downloadId);
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
-        long lastBuildTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP,
-                buildTimestamp);
-        boolean isReinstalling = buildTimestamp == lastBuildTimestamp;
-        preferences.edit()
-                .putLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, buildTimestamp)
-                .putLong(Constants.PREF_INSTALL_NEW_TIMESTAMP, update.getTimestamp())
-                .putString(Constants.PREF_INSTALL_NEW_FILE_NAME, update.getName())
-                .putString(Constants.PREF_INSTALL_PACKAGE_PATH, update.getFile().getAbsolutePath())
-                .putBoolean(Constants.PREF_INSTALL_AGAIN, isReinstalling)
-                .putBoolean(Constants.PREF_INSTALL_NOTIFIED, false)
-                .apply();
-
+        UpdateInfo update = mUpdaterController.getCurrentUpdate();
         if (SystemProperties.get(Constants.PROP_RECOVERY_UPDATE, "").equals("true") && Utils.isEncrypted(mContext, update.getFile())) {
             // uncrypt rewrites the file so that it can be read without mounting
             // the filesystem, so create a copy of it.
             prepareForUncryptAndInstall(update);
         } else {
-            installPackage(update.getFile(), downloadId);
+            installPackage(update.getFile());
         }
     }
 
-    private void installPackage(File update, String downloadId) {
+    private void installPackage(File update) {
         try {
             android.os.RecoverySystem.installPackage(mContext, update);
         } catch (IOException e) {
             Log.e(TAG, "Could not install update", e);
-            mUpdaterController.getActualUpdate(downloadId)
+            mUpdaterController.getCurrentUpdate()
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
         }
     }
 
@@ -120,9 +99,9 @@ class UpdateInstaller {
                 public void update(int progress) {
                     long now = SystemClock.elapsedRealtime();
                     if (mLastUpdate < 0 || now - mLastUpdate > 500) {
-                        mUpdaterController.getActualUpdate(update.getDownloadId())
+                        mUpdaterController.getCurrentUpdate()
                                 .setInstallProgress(progress);
-                        mUpdaterController.notifyInstallProgress(update.getDownloadId());
+                        mUpdaterController.notifyInstallProgress();
                         mLastUpdate = now;
                     }
                 }
@@ -136,20 +115,20 @@ class UpdateInstaller {
                     FileUtils.copyFile(update.getFile(), uncryptFile, mProgressCallBack);
                     mCanCancel = false;
                     if (mPrepareUpdateThread.isInterrupted()) {
-                        status = UpdateStatus.INSTALLATION_CANCELLED;
-                        mUpdaterController.getActualUpdate(update.getDownloadId())
-                                .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
-                        mUpdaterController.getActualUpdate(update.getDownloadId())
+                        status = UpdateStatus.INSTALLATION_FAILED;
+                        mUpdaterController.getCurrentUpdate()
+                                .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                        mUpdaterController.getCurrentUpdate()
                                 .setInstallProgress(0);
                         uncryptFile.delete();
                     } else {
-                        installPackage(uncryptFile, update.getDownloadId());
+                        installPackage(uncryptFile);
                     }
                 } catch (IOException e) {
                     Log.e(TAG, "Could not copy update", e);
                     uncryptFile.delete();
                     status = UpdateStatus.INSTALLATION_FAILED;
-                    mUpdaterController.getActualUpdate(update.getDownloadId())
+                    mUpdaterController.getCurrentUpdate()
                             .setStatus(UpdateStatus.INSTALLATION_FAILED);
                 } finally {
                     synchronized (UpdateInstaller.this) {
@@ -157,7 +136,7 @@ class UpdateInstaller {
                         mPrepareUpdateThread = null;
                         sInstallingUpdate = null;
                     }
-                    mUpdaterController.notifyUpdateChange(update.getDownloadId(), status);
+                    mUpdaterController.notifyUpdateChange(status);
                 }
             }
         };
@@ -167,9 +146,9 @@ class UpdateInstaller {
         sInstallingUpdate = update.getDownloadId();
         mCanCancel = false;
 
-        mUpdaterController.getActualUpdate(update.getDownloadId())
+        mUpdaterController.getCurrentUpdate()
                 .setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(update.getDownloadId(), UpdateStatus.INSTALLING);
+        mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
     }
 
     public synchronized void cancel() {

@@ -18,12 +18,13 @@ package org.pixelexperience.ota.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
-import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 
 import org.pixelexperience.ota.misc.Constants;
@@ -41,12 +42,10 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-class ABUpdateInstaller {
+public class ABUpdateInstaller {
 
     private static final String TAG = "ABUpdateInstaller";
-
-    private static final String PREF_INSTALLING_AB_ID = "installing_ab_id";
-    private static final String PREF_INSTALLING_SUSPENDED_AB_ID = "installing_suspended_ab_id";
+    public static final String ACTION_RESTART_PENDING = "action_restart_pending";
 
     @SuppressLint("StaticFieldLeak")
     private static ABUpdateInstaller sInstance = null;
@@ -55,17 +54,38 @@ class ABUpdateInstaller {
     private final Context mContext;
     private String mDownloadId;
 
-    private boolean mFinalizing;
-    private int mProgress;
-
+    private final LocalBroadcastManager mBroadcastManager;
     private final UpdateEngineCallback mUpdateEngineCallback = new UpdateEngineCallback() {
 
         @Override
         public void onStatusUpdate(int status, float percent) {
-            Update update = mUpdaterController.getActualUpdate(mDownloadId);
+            boolean isOperationOnProgress = status != UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT &&
+                    status != UpdateEngine.UpdateStatusConstants.IDLE;
+            Update update = mUpdaterController.getCurrentUpdate();
+            if (isOperationOnProgress && update == null) {
+                Log.d(TAG, "There's a installation running, waiting before getting info");
+                for (int i = 0; i <= 10; i++) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                    }
+                    update = mUpdaterController.getCurrentUpdate();
+                    if (update != null) {
+                        Log.d(TAG, "Update found!");
+                        break;
+                    }
+                }
+            }
+
+            if (update == null && status == UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT) {
+                Log.d(TAG, "Pending reboot found");
+                installationDone(true);
+                return;
+            }
+
             if (update == null) {
                 // We read the id from a preference, the update could no longer exist
-                installationDone(status == UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT);
+                installationDone(false);
                 return;
             }
 
@@ -74,22 +94,20 @@ class ABUpdateInstaller {
                 case UpdateEngine.UpdateStatusConstants.FINALIZING: {
                     if (update.getStatus() != UpdateStatus.INSTALLING) {
                         update.setStatus(UpdateStatus.INSTALLING);
-                        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
+                        mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
                     }
-                    mProgress = Math.round(percent * 100);
-                    mUpdaterController.getActualUpdate(mDownloadId).setInstallProgress(mProgress);
-                    mFinalizing = status == UpdateEngine.UpdateStatusConstants.FINALIZING;
-                    mUpdaterController.getActualUpdate(mDownloadId).setFinalizing(mFinalizing);
-                    mUpdaterController.notifyInstallProgress(mDownloadId);
+                    int progress = Math.round(percent * 100);
+                    mUpdaterController.getCurrentUpdate().setInstallProgress(progress);
+                    boolean finalizing = status == UpdateEngine.UpdateStatusConstants.FINALIZING;
+                    mUpdaterController.getCurrentUpdate().setFinalizing(finalizing);
+                    mUpdaterController.notifyInstallProgress();
                 }
                 break;
 
                 case UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT: {
                     installationDone(true);
                     update.setInstallProgress(0);
-                    update.setStatus(UpdateStatus.INSTALLED);
-                    mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLED);
-                    mUpdaterController.deleteUpdate(mDownloadId);
+                    mUpdaterController.removeUpdate();
                 }
                 break;
 
@@ -105,11 +123,12 @@ class ABUpdateInstaller {
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             if (errorCode != UpdateEngine.ErrorCodeConstants.SUCCESS) {
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                 installationDone(false);
-                Update update = mUpdaterController.getActualUpdate(mDownloadId);
+                Update update = mUpdaterController.getCurrentUpdate();
                 update.setInstallProgress(0);
                 update.setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             }
         }
     };
@@ -117,6 +136,7 @@ class ABUpdateInstaller {
     private boolean mBound;
 
     private ABUpdateInstaller(Context context, UpdaterController updaterController) {
+        mBroadcastManager = LocalBroadcastManager.getInstance(context);
         mUpdaterController = updaterController;
         mContext = context.getApplicationContext();
         mUpdateEngine = new UpdateEngine();
@@ -124,30 +144,7 @@ class ABUpdateInstaller {
 
     static synchronized boolean isInstallingUpdate(Context context) {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return pref.getString(ABUpdateInstaller.PREF_INSTALLING_AB_ID, null) != null ||
-                pref.getString(Constants.PREF_NEEDS_REBOOT_ID, null) != null;
-    }
-
-    static synchronized boolean isInstallingUpdate(Context context, String downloadId) {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return downloadId.equals(pref.getString(ABUpdateInstaller.PREF_INSTALLING_AB_ID, null)) ||
-                TextUtils.equals(pref.getString(Constants.PREF_NEEDS_REBOOT_ID, null), downloadId);
-    }
-
-    static synchronized boolean isInstallingUpdateSuspended(Context context) {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return pref.getString(ABUpdateInstaller.PREF_INSTALLING_SUSPENDED_AB_ID, null) != null;
-    }
-
-    static synchronized boolean isInstallingUpdateSuspended(Context context, String downloadId) {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        return downloadId.equals(pref.getString(ABUpdateInstaller.PREF_INSTALLING_SUSPENDED_AB_ID, null));
-    }
-
-    static synchronized boolean isWaitingForReboot(Context context, String downloadId) {
-        String waitingId = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(Constants.PREF_NEEDS_REBOOT_ID, null);
-        return TextUtils.equals(waitingId, downloadId);
+        return pref.getString(Constants.PREF_INSTALLING_AB_ID, null) != null;
     }
 
     static synchronized ABUpdateInstaller getInstance(Context context,
@@ -158,20 +155,20 @@ class ABUpdateInstaller {
         return sInstance;
     }
 
-    void install(String downloadId) {
+    void install() {
         if (isInstallingUpdate(mContext)) {
             Log.e(TAG, "Already installing an update");
             return;
         }
 
-        mDownloadId = downloadId;
+        mDownloadId = mUpdaterController.getCurrentUpdate().getDownloadId();
 
-        File file = mUpdaterController.getActualUpdate(mDownloadId).getFile();
+        File file = mUpdaterController.getCurrentUpdate().getFile();
         if (!file.exists()) {
             Log.e(TAG, "The given update doesn't exist");
-            mUpdaterController.getActualUpdate(downloadId)
+            mUpdaterController.getCurrentUpdate()
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             return;
         }
 
@@ -194,9 +191,9 @@ class ABUpdateInstaller {
             zipFile.close();
         } catch (IOException | IllegalArgumentException e) {
             Log.e(TAG, "Could not prepare " + file, e);
-            mUpdaterController.getActualUpdate(mDownloadId)
+            mUpdaterController.getCurrentUpdate()
                     .setStatus(UpdateStatus.INSTALLATION_FAILED);
-            mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             return;
         }
 
@@ -209,125 +206,63 @@ class ABUpdateInstaller {
             }
             if (!mBound) {
                 Log.e(TAG, "Could not bind");
-                mUpdaterController.getActualUpdate(downloadId)
+                mUpdaterController.getCurrentUpdate()
                         .setStatus(UpdateStatus.INSTALLATION_FAILED);
-                mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
                 return;
             }
         }
 
-        mUpdateEngine.setPerformanceMode(true);
-
-        String zipFileUri = "file://" + file.getAbsolutePath();
-        mUpdateEngine.applyPayload(zipFileUri, offset, 0, headerKeyValuePairs);
-
-        mUpdaterController.getActualUpdate(mDownloadId).setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
+        mUpdaterController.getCurrentUpdate().setStatus(UpdateStatus.INSTALLING);
+        mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(PREF_INSTALLING_AB_ID, mDownloadId)
+                .putString(Constants.PREF_INSTALLING_AB_ID, mDownloadId)
                 .apply();
 
+        String[] finalHeaderKeyValuePairs = headerKeyValuePairs;
+        new Thread(() -> {
+            try {
+                mUpdateEngine.setPerformanceMode(true);
+            } catch (NoSuchMethodError ignored) {
+
+            }
+            try {
+                String zipFileUri = "file://" + file.getAbsolutePath();
+                mUpdateEngine.applyPayload(zipFileUri, offset, 0, finalHeaderKeyValuePairs);
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to apply payload", e);
+                installationDone(false);
+                mUpdaterController.getCurrentUpdate()
+                        .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
+            }
+        }).start();
     }
 
     void reconnect() {
-        if (!isInstallingUpdate(mContext)) {
-            Log.e(TAG, "reconnect: Not installing any update");
-            return;
-        }
-
         if (mBound) {
             return;
         }
 
         mDownloadId = PreferenceManager.getDefaultSharedPreferences(mContext)
-                .getString(PREF_INSTALLING_AB_ID, null);
+                .getString(Constants.PREF_INSTALLING_AB_ID, null);
 
         // We will get a status notification as soon as we are connected
         mBound = mUpdateEngine.bind(mUpdateEngineCallback);
         if (!mBound) {
             Log.e(TAG, "Could not bind");
         }
-
     }
 
     private void installationDone(boolean needsReboot) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        String id = needsReboot ? prefs.getString(PREF_INSTALLING_AB_ID, null) : null;
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(Constants.PREF_NEEDS_REBOOT_ID, id)
-                .remove(PREF_INSTALLING_AB_ID)
+                .remove(Constants.PREF_INSTALLING_AB_ID)
                 .apply();
-    }
-
-    public boolean cancel() {
-        if (!isInstallingUpdate(mContext)) {
-            Log.e(TAG, "cancel: Not installing any update");
-            return false;
+        if (needsReboot) {
+            Intent intent = new Intent();
+            intent.setAction(ACTION_RESTART_PENDING);
+            mBroadcastManager.sendBroadcast(intent);
         }
-
-        if (!mBound) {
-            Log.e(TAG, "Not connected to update engine");
-            return false;
-        }
-
-        mUpdateEngine.cancel();
-        installationDone(false);
-
-        mUpdaterController.getActualUpdate(mDownloadId)
-                .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
-        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_CANCELLED);
-
-        return true;
-    }
-
-    public boolean suspend() {
-        if (!isInstallingUpdate(mContext)) {
-            Log.e(TAG, "cancel: Not installing any update");
-            return false;
-        }
-
-        if (!mBound) {
-            Log.e(TAG, "Not connected to update engine");
-            return false;
-        }
-
-        mUpdateEngine.suspend();
-
-        mUpdaterController.getActualUpdate(mDownloadId)
-                .setStatus(UpdateStatus.INSTALLATION_SUSPENDED);
-        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_SUSPENDED);
-
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(PREF_INSTALLING_SUSPENDED_AB_ID, mDownloadId)
-                .apply();
-
-        return true;
-    }
-
-    public boolean resume() {
-        if (!isInstallingUpdateSuspended(mContext)) {
-            Log.e(TAG, "cancel: No update is suspended");
-            return false;
-        }
-
-        if (!mBound) {
-            Log.e(TAG, "Not connected to update engine");
-            return false;
-        }
-
-        mUpdateEngine.resume();
-
-        mUpdaterController.getActualUpdate(mDownloadId).setStatus(UpdateStatus.INSTALLING);
-        mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLING);
-        mUpdaterController.getActualUpdate(mDownloadId).setInstallProgress(mProgress);
-        mUpdaterController.getActualUpdate(mDownloadId).setFinalizing(mFinalizing);
-        mUpdaterController.notifyInstallProgress(mDownloadId);
-
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .remove(PREF_INSTALLING_SUSPENDED_AB_ID)
-                .apply();
-
-        return true;
     }
 }
