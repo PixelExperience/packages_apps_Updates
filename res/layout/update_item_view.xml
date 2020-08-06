@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@string/defaultFontFamilyMedium"
                 android:padding="20dp"
-                android:text=" System update available "
+                android:text="@string/update_found_notification"
                 android:textAlignment="center"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="22sp" />
