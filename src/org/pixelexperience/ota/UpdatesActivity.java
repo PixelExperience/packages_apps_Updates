@@ -20,7 +20,6 @@ import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
@@ -400,23 +399,19 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void handleABInstallationFailed(){
-        UpdaterController controller = mUpdaterService.getUpdaterController();
         if (Utils.shouldUseIncremental(this)){
             new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
                     .setTitle(R.string.installing_update_error)
                     .setMessage(R.string.installing_update_ab_disable_incremental_summary)
                     .setPositiveButton(R.string.action_download,
-                            (dialog, which) -> controller.setShouldUseIncremental(false))
-                    .setNegativeButton(android.R.string.cancel, (dialog, which) -> controller.cleanupUpdates())
-                    .setCancelable(false)
+                            (dialog, which) -> {
+                                UpdaterController controller = mUpdaterService.getUpdaterController();
+                                controller.setShouldUseIncremental(false);
+                            })
+                    .setNegativeButton(android.R.string.cancel, null)
                     .show();
         }else{
-            new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
-                    .setTitle(R.string.installing_update_error_title)
-                    .setMessage(R.string.installing_update_error_summary)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setOnDismissListener(dialog -> controller.cleanupUpdates())
-                    .show();
+            showSnackbar(R.string.installing_update_error, Snackbar.LENGTH_LONG);
         }
     }
 
