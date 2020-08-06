@@ -18,14 +18,13 @@ package org.pixelexperience.ota.misc;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
+import android.os.PowerManager;
 import android.os.SystemProperties;
 import android.os.storage.StorageManager;
 import android.preference.PreferenceManager;
@@ -41,6 +40,7 @@ import org.pixelexperience.ota.model.MaintainerInfo;
 import org.pixelexperience.ota.model.Update;
 import org.pixelexperience.ota.model.UpdateBaseInfo;
 import org.pixelexperience.ota.model.UpdateInfo;
+import org.pixelexperience.ota.model.UpdateStatus;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -54,7 +54,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -80,12 +79,12 @@ public class Utils {
     }
 
     public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates_v4.json");
+        return new File(context.getCacheDir(), "updates_v5.json");
     }
 
     // This should really return an UpdateBaseInfo object, but currently this only
     // used to initialize UpdateInfo objects
-    private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
+    private static UpdateInfo parseJsonUpdate(JSONObject object, Context context) throws JSONException {
         ArrayList<MaintainerInfo> maintainers;
         try {
             maintainers = new Gson().fromJson(object.getJSONArray("maintainers").toString(),
@@ -103,21 +102,24 @@ public class Utils {
         update.setVersion(object.getString("version"));
         update.setHash(object.getString("filehash"));
         update.setIsIncremental(object.getBoolean("is_incremental"));
+        update.setHasIncremental(object.getBoolean("has_incremental"));
         update.setMaintainers(maintainers);
         update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
         update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
         update.setWebsiteUrl(object.isNull("website_url") ? "" : object.getString("website_url"));
         update.setNewsUrl(object.isNull("news_url") ? "" : object.getString("news_url"));
+        Utils.setCurrentUpdateHasIncremental(context, update.getHasIncremental());
+        Utils.setCurrentUpdateIsIncremental(context, update.getIsIncremental());
         return update;
     }
 
     public static boolean isCompatible(UpdateBaseInfo update) {
         if (update.getVersion().compareTo(SystemProperties.get(Constants.PROP_BUILD_VERSION)) < 0) {
-            Log.d(TAG, update.getName() + " is older than current Android version");
+            Log.d(TAG, update.getName() + " with version " + update.getVersion() + " is older than current Android version " + SystemProperties.get(Constants.PROP_BUILD_VERSION));
             return false;
         }
         if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
-            Log.d(TAG, update.getName() + " is older than/equal to the current build");
+            Log.d(TAG, update.getName() + " with timestamp " + update.getTimestamp() + " is older than/equal to the current build " + SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0));
             return false;
         }
         return true;
@@ -129,7 +131,7 @@ public class Utils {
                         SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
-    public static UpdateInfo parseJson(File file, boolean compatibleOnly)
+    public static UpdateInfo parseJson(File file, boolean compatibleOnly, Context context)
             throws IOException, JSONException {
 
         StringBuilder json = new StringBuilder();
@@ -141,7 +143,7 @@ public class Utils {
 
         JSONObject obj = new JSONObject(json.toString());
         try {
-            UpdateInfo update = parseJsonUpdate(obj);
+            UpdateInfo update = parseJsonUpdate(obj, context);
             if (!compatibleOnly || isCompatible(update)) {
                 return update;
             } else {
@@ -176,11 +178,16 @@ public class Utils {
         return String.format(Constants.DOWNLOAD_WEBPAGE_URL, SystemProperties.get(Constants.PROP_DEVICE), fileName);
     }
 
-    public static void triggerUpdate(Context context, String downloadId) {
+    public static void triggerUpdate(Context context) {
         final Intent intent = new Intent(context, UpdaterService.class);
         intent.setAction(UpdaterService.ACTION_INSTALL_UPDATE);
-        intent.putExtra(UpdaterService.EXTRA_DOWNLOAD_ID, downloadId);
         context.startService(intent);
+    }
+
+    public static void rebootDevice(Context mContext) {
+        PowerManager pm =
+                (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+        pm.reboot(null);
     }
 
     public static boolean isNetworkAvailable(Context context) {
@@ -204,13 +211,13 @@ public class Utils {
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
     }
 
-    public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot)
+    public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot, Context context)
             throws IOException, JSONException {
         if (!oldJson.exists() || fromBoot) {
-            return parseJson(newJson, true) != null;
+            return parseJson(newJson, true, context) != null;
         }
-        UpdateInfo oldUpdate = parseJson(oldJson, true);
-        UpdateInfo newUpdate = parseJson(newJson, true);
+        UpdateInfo oldUpdate = parseJson(oldJson, true, context);
+        UpdateInfo newUpdate = parseJson(newJson, true, context);
         if (oldUpdate == null || newUpdate == null) {
             return false;
         }
@@ -253,23 +260,8 @@ public class Utils {
     public static void cleanupDownloadsDir(Context context) {
         File downloadPath = getDownloadPath();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-
+        preferences.edit().remove(Constants.PREF_INSTALL_PACKAGE_PATH).apply();
         removeUncryptFiles(downloadPath);
-
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
-        long prevTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, 0);
-        String lastUpdatePath = preferences.getString(Constants.PREF_INSTALL_PACKAGE_PATH, null);
-        boolean reinstalling = preferences.getBoolean(Constants.PREF_INSTALL_AGAIN, false);
-        if ((buildTimestamp != prevTimestamp || reinstalling) &&
-                lastUpdatePath != null) {
-            File lastUpdate = new File(lastUpdatePath);
-            if (lastUpdate.exists()) {
-                lastUpdate.delete();
-                // Remove the pref not to delete the file if re-downloaded
-                preferences.edit().remove(Constants.PREF_INSTALL_PACKAGE_PATH).apply();
-            }
-        }
-
         Log.d(TAG, "Cleaning " + downloadPath);
         if (!downloadPath.isDirectory()) {
             return;
@@ -280,28 +272,12 @@ public class Utils {
         }
         for (File file : files) {
             Log.d(TAG, "Deleting " + file.getAbsolutePath());
-        }
-    }
-
-    public static File appendSequentialNumber(final File file) {
-        String name;
-        String extension;
-        int extensionPosition = file.getName().lastIndexOf(".");
-        if (extensionPosition > 0) {
-            name = file.getName().substring(0, extensionPosition);
-            extension = file.getName().substring(extensionPosition);
-        } else {
-            name = file.getName();
-            extension = "";
-        }
-        final File parent = file.getParentFile();
-        for (int i = 1; i < Integer.MAX_VALUE; i++) {
-            File newFile = new File(parent, name + "-" + i + extension);
-            if (!newFile.exists()) {
-                return newFile;
+            try{
+                file.delete();
+            }catch (Exception e){
+                Log.e(TAG, "Failed to delete " + file.getAbsolutePath(), e);
             }
         }
-        throw new IllegalStateException();
     }
 
     public static boolean isABDevice() {
@@ -318,15 +294,6 @@ public class Utils {
         boolean isAB = isABUpdate(zipFile);
         zipFile.close();
         return isAB;
-    }
-
-    public static void addToClipboard(Context context, String label, String text) {
-        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(
-                Context.CLIPBOARD_SERVICE);
-        if (clipboard != null) {
-            ClipData clip = ClipData.newPlainText(label, text);
-            clipboard.setPrimaryClip(clip);
-        }
     }
 
     public static boolean isEncrypted(Context context, File file) {
@@ -400,8 +367,42 @@ public class Utils {
         return preferences.getBoolean(Constants.PREF_USE_INCREMENTAL, true);
     }
 
+    @SuppressLint("ApplySharedPref")
     public static void setShouldUseIncremental(Context context, boolean shouldUse){
         SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).apply();
+        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).commit();
+    }
+
+    public static boolean getCurrentUpdateHasIncremental(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, false);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setCurrentUpdateHasIncremental(Context context, boolean hasIncremental){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, hasIncremental).commit();
+    }
+
+    public static boolean getCurrentUpdateIsIncremental(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, false);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setCurrentUpdateIsIncremental(Context context, boolean isIncremental){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, isIncremental).commit();
+    }
+
+    public static int getPersistentStatus(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getInt(Constants.PREF_CURRENT_PERSISTENT_STATUS, UpdateStatus.Persistent.UNKNOWN);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setPersistentStatus(Context context, int status){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putInt(Constants.PREF_CURRENT_PERSISTENT_STATUS, status).commit();
     }
 }

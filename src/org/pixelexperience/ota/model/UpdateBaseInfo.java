@@ -44,4 +44,6 @@ public interface UpdateBaseInfo {
     String getHash();
 
     boolean getIsIncremental();
+
+    boolean getHasIncremental();
 }
