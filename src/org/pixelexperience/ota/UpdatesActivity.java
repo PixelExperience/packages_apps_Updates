@@ -58,6 +58,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import static org.pixelexperience.ota.model.UpdateStatus.DOWNLOADED;
+import static org.pixelexperience.ota.model.UpdateStatus.DOWNLOAD_ERROR;
+import static org.pixelexperience.ota.model.UpdateStatus.INSTALLED;
+
 public class UpdatesActivity extends UpdatesListActivity {
 
     private static final String TAG = "UpdatesActivity";
@@ -115,6 +119,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                     UpdateStatus status = (UpdateStatus) intent.getSerializableExtra(UpdaterController.EXTRA_STATUS);
                     handleDownloadStatusChange(status);
                     mAdapter.notifyDataSetChanged();
+                    handleRefreshButtonState(status);
                 } else if (UpdaterController.ACTION_NETWORK_UNAVAILABLE.equals(intent.getAction())) {
                     showSnackbar(R.string.snack_download_failed, Snackbar.LENGTH_LONG);
                 } else if (UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction()) ||
@@ -149,6 +154,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                 .commit();
 
         setupRefreshComponents();
+        refreshAnimationStart();
     }
 
     private void handleExportStatusChanged(int status){
@@ -283,6 +289,7 @@ public class UpdatesActivity extends UpdatesListActivity {
             } catch (IOException | JSONException e) {
                 Log.e(TAG, "Error while parsing json list", e);
             }
+            refreshAnimationStop();
         } else {
             downloadUpdatesList(false);
         }
@@ -357,16 +364,18 @@ public class UpdatesActivity extends UpdatesListActivity {
         if (mRefreshButton == null || mSwipeRefresh == null) {
             setupRefreshComponents();
         }
-        mSwipeRefresh.setRefreshing(true);
         mRefreshButton.setEnabled(false);
+        mSwipeRefresh.setRefreshing(true);
+        hideUpdates();
     }
 
     private void refreshAnimationStop() {
         if (mRefreshButton == null || mSwipeRefresh == null) {
             setupRefreshComponents();
         }
-        mSwipeRefresh.setRefreshing(false);
         mRefreshButton.setEnabled(true);
+        mSwipeRefresh.setRefreshing(false);
+        showUpdates();
     }
 
     private void handleDownloadStatusChange(UpdateStatus status) {
@@ -387,6 +396,25 @@ public class UpdatesActivity extends UpdatesListActivity {
                     showSnackbar(R.string.installing_update_error, Snackbar.LENGTH_LONG);
                 }
                 break;
+        }
+    }
+
+    private void handleRefreshButtonState(UpdateStatus status) {
+        switch (status) {
+            case UNKNOWN:
+            case DOWNLOAD_ERROR:
+            case DELETED:
+            case VERIFICATION_FAILED:
+            case INSTALLED:
+            case INSTALLATION_FAILED:
+            case INSTALLATION_CANCELLED:
+            case INSTALLATION_SUSPENDED:
+                Log.d(TAG, "handleRefreshButtonState, status is: " + status + ", enabling button");
+                mRefreshButton.setEnabled(true);
+                break;
+            default:
+                Log.d(TAG, "handleRefreshButtonState, status is: " + status + ", disabling button");
+                mRefreshButton.setEnabled(false);
         }
     }
 

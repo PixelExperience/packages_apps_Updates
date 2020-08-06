@@ -41,6 +41,7 @@ import org.pixelexperience.ota.model.MaintainerInfo;
 import org.pixelexperience.ota.model.Update;
 import org.pixelexperience.ota.model.UpdateBaseInfo;
 import org.pixelexperience.ota.model.UpdateInfo;
+import org.pixelexperience.ota.model.UpdateStatus;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -256,23 +257,8 @@ public class Utils {
     public static void cleanupDownloadsDir(Context context) {
         File downloadPath = getDownloadPath();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-
+        preferences.edit().remove(Constants.PREF_INSTALL_PACKAGE_PATH).apply();
         removeUncryptFiles(downloadPath);
-
-        long buildTimestamp = SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
-        long prevTimestamp = preferences.getLong(Constants.PREF_INSTALL_OLD_TIMESTAMP, 0);
-        String lastUpdatePath = preferences.getString(Constants.PREF_INSTALL_PACKAGE_PATH, null);
-        boolean reinstalling = preferences.getBoolean(Constants.PREF_INSTALL_AGAIN, false);
-        if ((buildTimestamp != prevTimestamp || reinstalling) &&
-                lastUpdatePath != null) {
-            File lastUpdate = new File(lastUpdatePath);
-            if (lastUpdate.exists()) {
-                lastUpdate.delete();
-                // Remove the pref not to delete the file if re-downloaded
-                preferences.edit().remove(Constants.PREF_INSTALL_PACKAGE_PATH).apply();
-            }
-        }
-
         Log.d(TAG, "Cleaning " + downloadPath);
         if (!downloadPath.isDirectory()) {
             return;
@@ -283,6 +269,11 @@ public class Utils {
         }
         for (File file : files) {
             Log.d(TAG, "Deleting " + file.getAbsolutePath());
+            try{
+                file.delete();
+            }catch (Exception e){
+                Log.e(TAG, "Failed to delete " + file.getAbsolutePath(), e);
+            }
         }
     }
 
@@ -429,5 +420,16 @@ public class Utils {
     public static void setCurrentUpdateIsIncremental(Context context, boolean isIncremental){
         SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
         preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, isIncremental).commit();
+    }
+
+    public static int getPersistentStatus(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getInt(Constants.PREF_CURRENT_PERSISTENT_STATUS, UpdateStatus.Persistent.UNKNOWN);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setPersistentStatus(Context context, int status){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putInt(Constants.PREF_CURRENT_PERSISTENT_STATUS, status).commit();
     }
 }

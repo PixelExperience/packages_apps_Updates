@@ -73,8 +73,6 @@ public class UpdaterController {
         mWakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Updates:UpdaterController");
         mWakeLock.setReferenceCounted(false);
         mContext = context.getApplicationContext();
-
-        Utils.cleanupDownloadsDir(context);
     }
 
     static synchronized UpdaterController getInstance(Context context) {
@@ -173,7 +171,7 @@ public class UpdaterController {
                     }
                 }
                 update.setStatus(UpdateStatus.DOWNLOADING);
-                update.setPersistentStatus(UpdateStatus.Persistent.INCOMPLETE);
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.DOWNLOADING);
                 notifyUpdateChange(downloadId, UpdateStatus.DOWNLOADING);
             }
 
@@ -248,10 +246,10 @@ public class UpdaterController {
             UpdateStatus status = null;
             if (file.exists() && verifyPackage(file, update.getHash())) {
                 file.setReadable(true, false);
-                update.setPersistentStatus(UpdateStatus.Persistent.VERIFIED);
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.VERIFIED);
                 status = UpdateStatus.VERIFIED;
             } else {
-                update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                 update.setProgress(0);
                 status = UpdateStatus.VERIFICATION_FAILED;
             }
@@ -264,7 +262,7 @@ public class UpdaterController {
     private boolean verifyPackage(File file, String hash) {
         try {
             if (Utils.calculateMD5(file).equals(hash)) {
-                Log.e(TAG, "Verification successful");
+                Log.d(TAG, "Verification successful");
                 return true;
             } else {
                 throw new Exception("MD5 mismatch");
@@ -281,47 +279,34 @@ public class UpdaterController {
         }
     }
 
-    private boolean fixUpdateStatus(Update update) {
-        switch (update.getPersistentStatus()) {
-            case UpdateStatus.Persistent.VERIFIED:
-            case UpdateStatus.Persistent.INCOMPLETE:
-                if (update.getFile() == null || !update.getFile().exists()) {
-                    update.setStatus(UpdateStatus.UNKNOWN);
-                    return false;
-                } else if (update.getFileSize() > 0) {
-                    update.setStatus(UpdateStatus.PAUSED);
-                    int progress = Math.round(
-                            update.getFile().length() * 100 / update.getFileSize());
-                    update.setProgress(progress);
-                }
-                break;
-        }
-        return true;
-    }
-
-    public boolean addUpdate(UpdateInfo update) {
-        return addUpdate(update, true);
-    }
-
-    private boolean addUpdate(final UpdateInfo updateInfo, boolean availableOnline) {
+    public boolean addUpdate(final UpdateInfo updateInfo) {
         if (mDownloads.containsKey(updateInfo.getDownloadId())) {
             Log.d(TAG, "Download (" + updateInfo.getDownloadId() + ") already added");
             Update updateAdded = mDownloads.get(updateInfo.getDownloadId()).mUpdate;
-            updateAdded.setAvailableOnline(availableOnline && updateAdded.getAvailableOnline());
             updateAdded.setDownloadUrl(updateInfo.getDownloadUrl());
             return false;
         }
         Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         Update update = new Update(updateInfo);
-        if (!fixUpdateStatus(update) && !availableOnline) {
-            update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
-            deleteUpdateAsync(update);
-            Log.d(TAG, update.getDownloadId() + " had an invalid status and is not online");
-            return false;
+        if (Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.VERIFIED) {
+            update.setStatus(UpdateStatus.VERIFIED);
+            File destination = new File(mDownloadRoot, update.getName());
+            update.setFile(destination);
+            notifyUpdateChange(update.getDownloadId(), UpdateStatus.VERIFIED);
+        }else if (Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.INSTALLING_UPDATE) {
+            update.setStatus(UpdateStatus.INSTALLING);
+            File destination = new File(mDownloadRoot, update.getName());
+            update.setFile(destination);
+        }else{
+            update.setStatus(UpdateStatus.UNKNOWN);
+            Utils.cleanupDownloadsDir(mContext);
+            Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
         }
-        update.setAvailableOnline(availableOnline);
         mDownloads.clear();
         mDownloads.put(update.getDownloadId(), new DownloadEntry(update));
+        if (update.getStatus() != UpdateStatus.UNKNOWN) {
+            notifyUpdateChange(update.getDownloadId(), update.getStatus());
+        }
         return true;
     }
 
@@ -330,12 +315,9 @@ public class UpdaterController {
         if (!mDownloads.containsKey(downloadId) || isDownloading(downloadId)) {
             return;
         }
+        Utils.cleanupDownloadsDir(mContext);
         Update update = mDownloads.get(downloadId).mUpdate;
         File destination = new File(mDownloadRoot, update.getName());
-        if (destination.exists()) {
-            destination = Utils.appendSequentialNumber(destination);
-            Log.d(TAG, "Changing name with " + destination.getName());
-        }
         update.setFile(destination);
         DownloadClient downloadClient;
         try {
@@ -444,17 +426,12 @@ public class UpdaterController {
         Update update = mDownloads.get(downloadId).mUpdate;
         update.setStatus(UpdateStatus.DELETED);
         update.setProgress(0);
-        update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
+        Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
         deleteUpdateAsync(update);
-
-        if (!update.getAvailableOnline()) {
-            Log.d(TAG, "Download no longer available online, removing");
-            mDownloads.remove(downloadId);
-            notifyUpdateDelete(downloadId);
-        } else {
-            notifyUpdateChange(downloadId, UpdateStatus.DELETED);
-        }
-
+        Log.d(TAG, "Download no longer available online, removing");
+        mDownloads.remove(downloadId);
+        notifyUpdateChange(downloadId, UpdateStatus.DELETED);
+        notifyUpdateDelete(downloadId);
     }
 
     public void setShouldUseIncremental(boolean shouldUse) {
@@ -468,7 +445,7 @@ public class UpdaterController {
                     Update update = mDownloads.get(id).mUpdate;
                     update.setStatus(UpdateStatus.DELETED);
                     update.setProgress(0);
-                    update.setPersistentStatus(UpdateStatus.Persistent.UNKNOWN);
+                    Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                     deleteUpdate(update);
                 } catch (Exception ignored) {
                 }
@@ -525,12 +502,8 @@ public class UpdaterController {
 
     public boolean isInstallingUpdate() {
         return UpdateInstaller.isInstalling() ||
-                ABUpdateInstaller.isInstallingUpdate(mContext);
-    }
-
-    public boolean isInstallingUpdate(String downloadId) {
-        return UpdateInstaller.isInstalling(downloadId) ||
-                ABUpdateInstaller.isInstallingUpdate(mContext, downloadId);
+                ABUpdateInstaller.isInstallingUpdate(mContext) ||
+                Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.INSTALLING_UPDATE;
     }
 
     public boolean isInstallingABUpdate() {

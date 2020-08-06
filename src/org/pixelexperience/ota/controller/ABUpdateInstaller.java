@@ -57,6 +57,7 @@ class ABUpdateInstaller {
 
     private boolean mFinalizing;
     private int mProgress;
+    private boolean mCanceling = false;
 
     private final UpdateEngineCallback mUpdateEngineCallback = new UpdateEngineCallback() {
 
@@ -105,10 +106,13 @@ class ABUpdateInstaller {
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             if (errorCode != UpdateEngine.ErrorCodeConstants.SUCCESS) {
+                Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                 installationDone(false);
                 Update update = mUpdaterController.getActualUpdate(mDownloadId);
                 update.setInstallProgress(0);
-                update.setStatus(UpdateStatus.INSTALLATION_FAILED);
+                if (!mCanceling){
+                    update.setStatus(UpdateStatus.INSTALLATION_FAILED);
+                }
                 mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_FAILED);
             }
         }
@@ -216,7 +220,11 @@ class ABUpdateInstaller {
             }
         }
 
-        mUpdateEngine.setPerformanceMode(true);
+        try{
+            mUpdateEngine.setPerformanceMode(true);
+        }catch (NoSuchMethodError ignored){
+
+        }
 
         String zipFileUri = "file://" + file.getAbsolutePath();
         mUpdateEngine.applyPayload(zipFileUri, offset, 0, headerKeyValuePairs);
@@ -228,6 +236,7 @@ class ABUpdateInstaller {
                 .putString(PREF_INSTALLING_AB_ID, mDownloadId)
                 .apply();
 
+        Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.INSTALLING_UPDATE);
     }
 
     void reconnect() {
@@ -271,12 +280,16 @@ class ABUpdateInstaller {
             return false;
         }
 
+        mCanceling = true;
+
         mUpdateEngine.cancel();
         installationDone(false);
 
         mUpdaterController.getActualUpdate(mDownloadId)
                 .setStatus(UpdateStatus.INSTALLATION_CANCELLED);
         mUpdaterController.notifyUpdateChange(mDownloadId, UpdateStatus.INSTALLATION_CANCELLED);
+
+        mCanceling = false;
 
         return true;
     }

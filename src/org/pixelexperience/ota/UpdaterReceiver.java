@@ -88,13 +88,10 @@ public class UpdaterReceiver extends BroadcastReceiver {
         } else if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
             pref.edit().remove(Constants.PREF_NEEDS_REBOOT_ID).apply();
-
             if (shouldShowUpdateFailedNotification(context)) {
                 pref.edit().putBoolean(Constants.PREF_INSTALL_NOTIFIED, true).apply();
                 showUpdateFailedNotification(context);
             }
-
-            Utils.cleanupDownloadsDir(context);
         }
     }
 }

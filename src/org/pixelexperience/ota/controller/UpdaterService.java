@@ -112,15 +112,8 @@ public class UpdaterService extends Service {
                     UpdateInfo update = mUpdaterController.getUpdate(downloadId);
                     handleInstallProgress(update);
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
-                    Bundle extras = mNotificationBuilder.getExtras();
-                    if (extras != null && downloadId.equals(
-                            extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
-                        mNotificationBuilder.setExtras(null);
-                        UpdateInfo update = mUpdaterController.getUpdate(downloadId);
-                        if (update.getStatus() != UpdateStatus.INSTALLED) {
-                            mNotificationManager.cancel(NOTIFICATION_ID);
-                        }
-                    }
+                    mNotificationBuilder.setExtras(null);
+                    mNotificationManager.cancel(NOTIFICATION_ID);
                 }
             }
         };
@@ -176,10 +169,11 @@ public class UpdaterService extends Service {
         } else if (ACTION_INSTALL_UPDATE.equals(intent.getAction())) {
             String downloadId = intent.getStringExtra(EXTRA_DOWNLOAD_ID);
             UpdateInfo update = mUpdaterController.getUpdate(downloadId);
-            if (update.getPersistentStatus() != UpdateStatus.Persistent.VERIFIED) {
+            if (Utils.getPersistentStatus(this) != UpdateStatus.Persistent.VERIFIED) {
                 throw new IllegalArgumentException(update.getDownloadId() + " is not verified");
             }
             try {
+                Utils.setPersistentStatus(this, UpdateStatus.Persistent.INSTALLING_UPDATE);
                 if (Utils.isABUpdate(update.getFile())) {
                     ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this,
                             mUpdaterController);
@@ -194,6 +188,7 @@ public class UpdaterService extends Service {
                 mUpdaterController.getActualUpdate(downloadId)
                         .setStatus(UpdateStatus.INSTALLATION_FAILED);
                 mUpdaterController.notifyUpdateChange(downloadId, UpdateStatus.INSTALLATION_FAILED);
+                Utils.setPersistentStatus(this, UpdateStatus.Persistent.UNKNOWN);
             }
         } else if (ACTION_INSTALL_STOP.equals(intent.getAction())) {
             if (UpdateInstaller.isInstalling()) {
@@ -432,14 +427,10 @@ public class UpdaterService extends Service {
     private void handleDownloadProgressChange(UpdateInfo update) {
         int progress = update.getProgress();
         mNotificationBuilder.setProgress(100, progress, false);
-
-        String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
-        String speed = Utils.readableFileSize(update.getSpeed());
-
-        CharSequence eta = StringGenerator.formatETA(this, update.getEta() * 1000);
-        setNotificationTitle(
-                getString(R.string.text_download_speed, eta, speed));
-
+        String percentage = NumberFormat.getPercentInstance().format(
+                progress / 100.f);
+        setNotificationTitle(getString(R.string.downloading_notification) );
+        mNotificationStyle.setSummaryText(percentage);
         mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
     }
 

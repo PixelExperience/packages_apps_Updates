@@ -64,6 +64,15 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.List;
 
+import static org.pixelexperience.ota.model.UpdateStatus.DELETED;
+import static org.pixelexperience.ota.model.UpdateStatus.DOWNLOAD_ERROR;
+import static org.pixelexperience.ota.model.UpdateStatus.INSTALLATION_CANCELLED;
+import static org.pixelexperience.ota.model.UpdateStatus.INSTALLATION_FAILED;
+import static org.pixelexperience.ota.model.UpdateStatus.INSTALLATION_SUSPENDED;
+import static org.pixelexperience.ota.model.UpdateStatus.INSTALLED;
+import static org.pixelexperience.ota.model.UpdateStatus.UNKNOWN;
+import static org.pixelexperience.ota.model.UpdateStatus.VERIFICATION_FAILED;
+
 public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.ViewHolder> {
 
     private static final String TAG = "UpdateListAdapter";
@@ -118,7 +127,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         final String downloadId = update.getDownloadId();
         if (mUpdaterController.isDownloading(downloadId)) {
             canDelete = true;
-            String downloaded = Utils.readableFileSize(update.getFile().length());
+            String downloaded = Utils.readableFileSize(update.getFile() != null && update.getStatus() != UpdateStatus.STARTING ? update.getFile().length() : 0);
             String total = Utils.readableFileSize(update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
                     update.getProgress() / 100.f);
@@ -137,7 +146,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             viewHolder.mProgressBar.setIndeterminate(update.getStatus() == UpdateStatus.STARTING);
             viewHolder.mProgressBar.setProgress(update.getProgress());
             viewHolder.mBuildName.setSelected(false);
-        } else if (mUpdaterController.isInstallingUpdate(downloadId)) {
+        } else if (mUpdaterController.isInstallingUpdate()) {
             viewHolder.mDetails.setVisibility(View.GONE);
             setButtonAction(viewHolder.mAction, Action.CANCEL_INSTALLATION, downloadId, true);
             boolean notAB = !mUpdaterController.isInstallingABUpdate();
@@ -158,7 +167,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             canDelete = true;
             viewHolder.mDetails.setVisibility(View.GONE);
             setButtonAction(viewHolder.mAction, Action.RESUME, downloadId, !isBusy());
-            String downloaded = Utils.readableFileSize(update.getFile().length());
+            String downloaded = Utils.readableFileSize(update.getFile() != null && update.getStatus() != UpdateStatus.STARTING ? update.getFile().length() : 0);
             String total = Utils.readableFileSize(update.getFileSize());
             String percentage = NumberFormat.getPercentInstance().format(
                     update.getProgress() / 100.f);
@@ -181,7 +190,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             setupOptionMenuListeners(update, false, viewHolder);
             setButtonAction(viewHolder.mAction, Action.REBOOT, downloadId, true);
             viewHolder.mDetails.setVisibility(View.GONE);
-        } else if (update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED) {
+        } else if (Utils.getPersistentStatus(mActivity) == UpdateStatus.Persistent.VERIFIED) {
             setupOptionMenuListeners(update, true, viewHolder);
             setButtonAction(viewHolder.mAction,
                     Utils.canInstall(update) ? Action.INSTALL : Action.DELETE,
@@ -224,14 +233,15 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         viewHolder.itemView.setSelected(downloadId.equals(mSelectedDownload));
 
         boolean activeLayout;
-        switch (update.getPersistentStatus()) {
+        switch (Utils.getPersistentStatus(mActivity)) {
             case UpdateStatus.Persistent.UNKNOWN:
                 activeLayout = update.getStatus() == UpdateStatus.STARTING;
                 break;
             case UpdateStatus.Persistent.VERIFIED:
                 activeLayout = update.getStatus() == UpdateStatus.INSTALLING;
                 break;
-            case UpdateStatus.Persistent.INCOMPLETE:
+            case UpdateStatus.Persistent.DOWNLOADING:
+            case UpdateStatus.Persistent.INSTALLING_UPDATE:
                 activeLayout = true;
                 break;
             default:
@@ -503,13 +513,27 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
         MenuBuilder menu = (MenuBuilder) popupMenu.getMenu();
         menu.findItem(R.id.menu_delete_action).setVisible(canDelete);
-        menu.findItem(R.id.menu_copy_url).setVisible(update.getAvailableOnline());
         menu.findItem(R.id.menu_export_update).setVisible(
-                update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED);
+                Utils.getPersistentStatus(mActivity) == UpdateStatus.Persistent.VERIFIED);
         boolean shouldUseIncremental = Utils.shouldUseIncremental(mActivity);
-        if (update.getHasIncremental()){
-            menu.findItem(R.id.menu_download_full_package).setVisible(!canDelete && shouldUseIncremental);
-            menu.findItem(R.id.menu_download_incremental_package).setVisible(!canDelete && !shouldUseIncremental);
+        boolean canToggleIncremental;
+        switch (update.getStatus()) {
+            case UNKNOWN:
+            case DOWNLOAD_ERROR:
+            case DELETED:
+            case VERIFICATION_FAILED:
+            case INSTALLED:
+            case INSTALLATION_FAILED:
+            case INSTALLATION_CANCELLED:
+            case INSTALLATION_SUSPENDED:
+                canToggleIncremental = true;
+                break;
+            default:
+                canToggleIncremental = false;
+        }
+        if (canToggleIncremental && update.getHasIncremental()){
+            menu.findItem(R.id.menu_download_full_package).setVisible(shouldUseIncremental);
+            menu.findItem(R.id.menu_download_incremental_package).setVisible(!shouldUseIncremental);
         }else{
             menu.findItem(R.id.menu_download_full_package).setVisible(false);
             menu.findItem(R.id.menu_download_incremental_package).setVisible(false);
@@ -519,12 +543,6 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
             switch (item.getItemId()) {
                 case R.id.menu_delete_action:
                     getDeleteDialog(update.getDownloadId()).show();
-                    return true;
-                case R.id.menu_copy_url:
-                    Utils.addToClipboard(mActivity,
-                            mActivity.getString(R.string.label_download_url),
-                            Utils.getDownloadWebpageUrl(update.getName()));
-                    mActivity.showSnackbar(R.string.toast_download_url_copied, Snackbar.LENGTH_SHORT);
                     return true;
                 case R.id.menu_export_update:
                     exportUpdate();
