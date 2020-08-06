@@ -21,16 +21,15 @@ import java.io.File;
 public class Update extends UpdateBase implements UpdateInfo {
 
     private UpdateStatus mStatus = UpdateStatus.UNKNOWN;
-    private int mPersistentStatus = UpdateStatus.Persistent.UNKNOWN;
     private File mFile;
     private int mProgress;
     private long mEta;
     private long mSpeed;
     private int mInstallProgress;
-    private boolean mAvailableOnline;
     private boolean mIsFinalizing;
     private String mHash;
     private boolean mIsIncremental;
+    private boolean mHasIncremental;
 
     public Update() {
     }
@@ -38,16 +37,15 @@ public class Update extends UpdateBase implements UpdateInfo {
     public Update(UpdateInfo update) {
         super(update);
         mStatus = update.getStatus();
-        mPersistentStatus = update.getPersistentStatus();
         mFile = update.getFile();
         mProgress = update.getProgress();
         mEta = update.getEta();
         mSpeed = update.getSpeed();
         mInstallProgress = update.getInstallProgress();
-        mAvailableOnline = update.getAvailableOnline();
         mIsFinalizing = update.getFinalizing();
         mHash = update.getHash();
         mIsIncremental = update.getIsIncremental();
+        mHasIncremental = update.getHasIncremental();
     }
 
     @Override
@@ -57,15 +55,6 @@ public class Update extends UpdateBase implements UpdateInfo {
 
     public void setStatus(UpdateStatus status) {
         mStatus = status;
-    }
-
-    @Override
-    public int getPersistentStatus() {
-        return mPersistentStatus;
-    }
-
-    public void setPersistentStatus(int status) {
-        mPersistentStatus = status;
     }
 
     @Override
@@ -114,15 +103,6 @@ public class Update extends UpdateBase implements UpdateInfo {
     }
 
     @Override
-    public boolean getAvailableOnline() {
-        return mAvailableOnline;
-    }
-
-    public void setAvailableOnline(boolean availableOnline) {
-        mAvailableOnline = availableOnline;
-    }
-
-    @Override
     public boolean getFinalizing() {
         return mIsFinalizing;
     }
@@ -147,5 +127,14 @@ public class Update extends UpdateBase implements UpdateInfo {
 
     public void setIsIncremental(boolean isIncremental) {
         mIsIncremental = isIncremental;
+    }
+
+    @Override
+    public boolean getHasIncremental() {
+        return mHasIncremental;
+    }
+
+    public void setHasIncremental(boolean hasIncremental) {
+        mHasIncremental = hasIncremental;
     }
 }
