@@ -21,8 +21,6 @@ import java.io.File;
 public interface UpdateInfo extends UpdateBaseInfo {
     UpdateStatus getStatus();
 
-    int getPersistentStatus();
-
     File getFile();
 
     long getFileSize();
@@ -34,8 +32,6 @@ public interface UpdateInfo extends UpdateBaseInfo {
     long getSpeed();
 
     int getInstallProgress();
-
-    boolean getAvailableOnline();
 
     boolean getFinalizing();
 }

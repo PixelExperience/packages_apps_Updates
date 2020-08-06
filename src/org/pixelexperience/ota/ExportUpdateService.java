@@ -147,7 +147,7 @@ public class ExportUpdateService extends Service {
                 if (mLastUpdate < 0 || now - mLastUpdate > 500) {
                     String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
                     notificationStyle.setSummaryText(percent);
-                    notificationBuilder.setProgress(100, progress, false);
+                    notificationBuilder.setProgress(100, progress, progress == 0);
                     notificationManager.notify(NOTIFICATION_ID,
                             notificationBuilder.build());
                     mLastUpdate = now;
@@ -218,6 +218,7 @@ public class ExportUpdateService extends Service {
         @Override
         public void run() {
             try {
+                cleanUp();
                 FileUtils.copyFile(mSource, mDestination, mProgressCallBack);
                 mIsExporting = false;
                 if (!mExportThread.isInterrupted()) {
@@ -236,7 +237,9 @@ public class ExportUpdateService extends Service {
         }
 
         private void cleanUp() {
-            mDestination.delete();
+            if (mDestination.exists()){
+                mDestination.delete();
+            }
         }
     }
 }

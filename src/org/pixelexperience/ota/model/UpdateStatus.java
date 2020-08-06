@@ -28,14 +28,11 @@ public enum UpdateStatus {
     VERIFIED,
     VERIFICATION_FAILED,
     INSTALLING,
-    INSTALLED,
-    INSTALLATION_FAILED,
-    INSTALLATION_CANCELLED,
-    INSTALLATION_SUSPENDED;
+    INSTALLATION_FAILED;
 
     public static final class Persistent {
         public static final int UNKNOWN = 0;
-        public static final int INCOMPLETE = 1;
+        public static final int DOWNLOADING = 1;
         public static final int VERIFIED = 2;
     }
 }
