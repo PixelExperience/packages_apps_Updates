@@ -218,6 +218,7 @@ public class ExportUpdateService extends Service {
         @Override
         public void run() {
             try {
+                cleanUp();
                 FileUtils.copyFile(mSource, mDestination, mProgressCallBack);
                 mIsExporting = false;
                 if (!mExportThread.isInterrupted()) {
@@ -236,7 +237,9 @@ public class ExportUpdateService extends Service {
         }
 
         private void cleanUp() {
-            mDestination.delete();
+            if (mDestination.exists()){
+                mDestination.delete();
+            }
         }
     }
 }
