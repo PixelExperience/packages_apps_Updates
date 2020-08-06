@@ -132,7 +132,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 viewHolder.mProgressText.setText(mActivity.getString(
                         R.string.list_download_progress_new, downloaded, total, percentage));
             }
-            setButtonAction(viewHolder.mAction, Action.PAUSE, downloadId, true);
+            setButtonAction(viewHolder.mAction, Action.PAUSE, downloadId, update.getStatus() != UpdateStatus.STARTING);
             viewHolder.mDetails.setVisibility(View.GONE);
             viewHolder.mProgressBar.setIndeterminate(update.getStatus() == UpdateStatus.STARTING);
             viewHolder.mProgressBar.setProgress(update.getProgress());
