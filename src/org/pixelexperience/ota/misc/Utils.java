@@ -80,12 +80,12 @@ public class Utils {
     }
 
     public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates_v4.json");
+        return new File(context.getCacheDir(), "updates_v5.json");
     }
 
     // This should really return an UpdateBaseInfo object, but currently this only
     // used to initialize UpdateInfo objects
-    private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
+    private static UpdateInfo parseJsonUpdate(JSONObject object, Context context) throws JSONException {
         ArrayList<MaintainerInfo> maintainers;
         try {
             maintainers = new Gson().fromJson(object.getJSONArray("maintainers").toString(),
@@ -103,11 +103,14 @@ public class Utils {
         update.setVersion(object.getString("version"));
         update.setHash(object.getString("filehash"));
         update.setIsIncremental(object.getBoolean("is_incremental"));
+        update.setHasIncremental(object.getBoolean("has_incremental"));
         update.setMaintainers(maintainers);
         update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
         update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
         update.setWebsiteUrl(object.isNull("website_url") ? "" : object.getString("website_url"));
         update.setNewsUrl(object.isNull("news_url") ? "" : object.getString("news_url"));
+        Utils.setCurrentUpdateHasIncremental(context, update.getHasIncremental());
+        Utils.setCurrentUpdateIsIncremental(context, update.getIsIncremental());
         return update;
     }
 
@@ -129,7 +132,7 @@ public class Utils {
                         SystemProperties.get(Constants.PROP_BUILD_VERSION));
     }
 
-    public static UpdateInfo parseJson(File file, boolean compatibleOnly)
+    public static UpdateInfo parseJson(File file, boolean compatibleOnly, Context context)
             throws IOException, JSONException {
 
         StringBuilder json = new StringBuilder();
@@ -141,7 +144,7 @@ public class Utils {
 
         JSONObject obj = new JSONObject(json.toString());
         try {
-            UpdateInfo update = parseJsonUpdate(obj);
+            UpdateInfo update = parseJsonUpdate(obj, context);
             if (!compatibleOnly || isCompatible(update)) {
                 return update;
             } else {
@@ -204,13 +207,13 @@ public class Utils {
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
     }
 
-    public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot)
+    public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot, Context context)
             throws IOException, JSONException {
         if (!oldJson.exists() || fromBoot) {
-            return parseJson(newJson, true) != null;
+            return parseJson(newJson, true, context) != null;
         }
-        UpdateInfo oldUpdate = parseJson(oldJson, true);
-        UpdateInfo newUpdate = parseJson(newJson, true);
+        UpdateInfo oldUpdate = parseJson(oldJson, true, context);
+        UpdateInfo newUpdate = parseJson(newJson, true, context);
         if (oldUpdate == null || newUpdate == null) {
             return false;
         }
@@ -400,8 +403,31 @@ public class Utils {
         return preferences.getBoolean(Constants.PREF_USE_INCREMENTAL, true);
     }
 
+    @SuppressLint("ApplySharedPref")
     public static void setShouldUseIncremental(Context context, boolean shouldUse){
         SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).apply();
+        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).commit();
+    }
+
+    public static boolean getCurrentUpdateHasIncremental(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, false);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setCurrentUpdateHasIncremental(Context context, boolean hasIncremental){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, hasIncremental).commit();
+    }
+
+    public static boolean getCurrentUpdateIsIncremental(Context context){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, false);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void setCurrentUpdateIsIncremental(Context context, boolean isIncremental){
+        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, isIncremental).commit();
     }
 }
