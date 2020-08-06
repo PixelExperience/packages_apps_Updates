@@ -507,8 +507,13 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         menu.findItem(R.id.menu_export_update).setVisible(
                 update.getPersistentStatus() == UpdateStatus.Persistent.VERIFIED);
         boolean shouldUseIncremental = Utils.shouldUseIncremental(mActivity);
-        menu.findItem(R.id.menu_download_full_package).setVisible(!canDelete && shouldUseIncremental);
-        menu.findItem(R.id.menu_download_incremental_package).setVisible(!canDelete && !shouldUseIncremental);
+        if (update.getHasIncremental()){
+            menu.findItem(R.id.menu_download_full_package).setVisible(!canDelete && shouldUseIncremental);
+            menu.findItem(R.id.menu_download_incremental_package).setVisible(!canDelete && !shouldUseIncremental);
+        }else{
+            menu.findItem(R.id.menu_download_full_package).setVisible(false);
+            menu.findItem(R.id.menu_download_incremental_package).setVisible(false);
+        }
 
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {

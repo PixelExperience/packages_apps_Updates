@@ -244,11 +244,11 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     private void loadUpdatesList(File jsonFile, boolean manualRefresh)
             throws IOException, JSONException {
-        mExtrasFragment.updatePrefs(Utils.parseJson(jsonFile, false));
+        mExtrasFragment.updatePrefs(Utils.parseJson(jsonFile, false, this));
         Log.d(TAG, "Adding remote updates");
         UpdaterController controller = mUpdaterService.getUpdaterController();
 
-        UpdateInfo newUpdate = Utils.parseJson(jsonFile, true);
+        UpdateInfo newUpdate = Utils.parseJson(jsonFile, true, this);
         boolean updateAvailable = newUpdate != null && controller.addUpdate(newUpdate);
 
         if (manualRefresh) {
@@ -291,7 +291,7 @@ public class UpdatesActivity extends UpdatesListActivity {
     private void processNewJson(File json, File jsonNew, boolean manualRefresh) {
         try {
             loadUpdatesList(jsonNew, manualRefresh);
-            if (json.exists() && Utils.checkForNewUpdates(json, jsonNew, false)) {
+            if (json.exists() && Utils.checkForNewUpdates(json, jsonNew, false, this)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(this);
             }
             // In case we set a one-shot check because of a previous failure
@@ -399,7 +399,7 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void handleABInstallationFailed(){
-        if (Utils.shouldUseIncremental(this)){
+        if (Utils.getCurrentUpdateIsIncremental(this) && Utils.shouldUseIncremental(this)){
             new AlertDialog.Builder(this, R.style.AppTheme_AlertDialogStyle)
                     .setTitle(R.string.installing_update_error)
                     .setMessage(R.string.installing_update_ab_disable_incremental_summary)
