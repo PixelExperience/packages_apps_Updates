@@ -122,7 +122,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            Utils.cleanupDownloadsDir(context);
             // Set a repeating alarm on boot to check for new updates once per day
             scheduleRepeatingUpdatesCheck(context);
         }
@@ -151,7 +150,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
             @Override
             public void onSuccess(File destination) {
                 try {
-                    if (Utils.checkForNewUpdates(json, jsonNew, true)) {
+                    if (Utils.checkForNewUpdates(json, jsonNew, true, context)) {
                         showNotification(context);
                         updateRepeatingUpdatesCheck(context);
                     }
