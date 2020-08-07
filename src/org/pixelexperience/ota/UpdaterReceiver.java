@@ -23,7 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.PowerManager;
 import android.os.SystemProperties;
 
 import androidx.core.app.NotificationCompat;
@@ -83,18 +82,14 @@ public class UpdaterReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (ACTION_INSTALL_REBOOT.equals(intent.getAction())) {
-            PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-            pm.reboot(null);
+            Utils.rebootDevice(context);
         } else if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-            pref.edit().remove(Constants.PREF_NEEDS_REBOOT_ID).apply();
-
+            pref.edit().remove(Constants.PREF_INSTALLING_AB_ID).apply();
             if (shouldShowUpdateFailedNotification(context)) {
                 pref.edit().putBoolean(Constants.PREF_INSTALL_NOTIFIED, true).apply();
                 showUpdateFailedNotification(context);
             }
-
-            Utils.cleanupDownloadsDir(context);
         }
     }
 }

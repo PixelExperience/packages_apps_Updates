@@ -19,7 +19,6 @@ package org.pixelexperience.ota.misc;
 public final class Constants {
     public static final String AB_PAYLOAD_BIN_PATH = "payload.bin";
     public static final String AB_PAYLOAD_PROPERTIES_PATH = "payload_properties.txt";
-    public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String UNCRYPT_FILE_EXT = ".uncrypt";
     public static final String PROP_BUILD_DATE = "org.pixelexperience.build_date_utc";
@@ -34,6 +33,8 @@ public final class Constants {
     public static final String PREF_USE_INCREMENTAL = "use_incremental";
     public static final String PREF_CURRENT_UPDATE_HAS_INCREMENTAL = "current_update_has_incremental";
     public static final String PREF_CURRENT_UPDATE_IS_INCREMENTAL = "current_update_is_incremental";
+    public static final String PREF_CURRENT_PERSISTENT_STATUS = "current_persistent_status";
+    public static final String PREF_INSTALLING_AB_ID = "installing_ab_id";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";
     static final String PROP_AB_DEVICE = "ro.build.ab_update";
     static final String PROP_DEVICE = "org.pixelexperience.device";
