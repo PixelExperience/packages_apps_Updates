@@ -29,15 +29,11 @@
     <string name="download_completed_notification">Endirmə başa çatdı</string>
     <string name="download_starting_notification">Endirmə başladılır</string>
     <string name="update_failed_notification">Yeniləmə uğursuz oldu</string>
-    <string name="installation_suspended_notification">Quraşdırma təxirə salındı</string>
     <!-- Menu -->
     <string name="menu_delete_update">Sil</string>
-    <string name="menu_copy_url">URL-ni Kopyala</string>
     <string name="menu_export_update">Yeniləməni ixrac et</string>
     <string name="menu_show_changelog">Hazırki versiyadakı dəyişikliklər</string>
     <string name="changelog_loading">Yüklənir…</string>
-    <string name="label_download_url">Endirmə Linki</string>
-    <string name="toast_download_url_copied">Link kopyalandı</string>
     <!-- General -->
     <string name="snack_no_updates_found">Yeni yeniləmə tapılmadı</string>
     <string name="snack_updates_check_failed">Yeniləmə yoxlanışı uğursuz oldu. Lütfən internet bağlantınızı yoxlayın və təkrar cəhd edin.</string>
@@ -55,24 +51,20 @@
     <string name="action_resume">Davam et</string>
     <string name="action_install">Quraşdır</string>
     <string name="action_delete">Sil</string>
-    <string name="action_cancel">Ləğv et</string>
     <string name="confirm_delete_dialog_title">Faylı sil</string>
     <string name="confirm_delete_dialog_message">Seçilmiş yeniləmə faylı silinsin?</string>
     <string name="pause_button">Saxla</string>
     <string name="resume_button">Davam et</string>
-    <string name="suspend_button">Təxirə sal</string>
     <string name="reboot">Yenidən başlat</string>
     <string name="details_button">Detallara bax</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Yeniləməni tətbiq et</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> versiyaysına yeniləmək üzrəsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> düyməsinə basdığınız zaman, yeniləməni yükləmək üçün telefonunuz bərpa rejimində yenidən başladılacaq.\n\nQeyd: Bu xüsusiyyət üçün uyğun bir Bərpa bölməsi tələb olunur ya da yeniləmə əli ilə yüklənməlidir.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> versiyaya yeniləmək üzrəsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> düyməsinə bassanız, cihaz arxa planda quraşdırmağa başlayacaqdır.\n\nƏməliyyat bitdikdən sonra, cihazı yenidən başlatmalısınız.</string>
-    <string name="cancel_installation_dialog_message">Quraşdırma ləğv edilsin?</string>
     <string name="installing_update">Yeniləmə paketi quraşdırılır</string>
     <string name="installing_update_error">Quraşdırma xətası</string>
     <string name="installing_update_finished">Yeniləmə quraşdırıldı</string>
     <string name="finalizing_package">Paket quraşdırılması tamamlanır</string>
-    <string name="preparing_ota_first_boot">İlk başlatma üçün hazırlanır</string>
     <string name="dialog_prepare_zip_message">Yeniləmə ilkin hazırlığı</string>
     <string name="dialog_battery_low_title">Batareya zəifdir</string>
     <string name="dialog_battery_low_message_pct">Batareya səviyyəsi çox aşağıdır, davam etmək üçün ən az <xliff:g id="percent_discharging">%1$d</xliff:g>%% enerji tələb olunur. gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>

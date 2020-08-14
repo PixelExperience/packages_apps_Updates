@@ -30,16 +30,14 @@
     <string name="download_completed_notification">Transferência concluída</string>
     <string name="download_starting_notification">A iniciar a transferência</string>
     <string name="update_failed_notification">A atualização falhou</string>
-    <string name="installation_suspended_notification">Instalação suspensa</string>
     <string name="check_for_update">Verificação de atualizações</string>
     <!-- Menu -->
     <string name="menu_delete_update">Apagar</string>
-    <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar atualização</string>
     <string name="menu_show_changelog">Mudanças na versão atual</string>
     <string name="changelog_loading">A carregar…</string>
-    <string name="label_download_url">URL de transferência</string>
-    <string name="toast_download_url_copied">URL copiado</string>
+    <string name="menu_download_full_package">Transferir pacote completo</string>
+    <string name="menu_download_incremental_package">Descarrega um pacote incremental</string>
     <!-- General -->
     <string name="update_found_notification">Atualização de sistema disponível</string>
     <string name="snack_no_updates_found">Não foram encontradas novas atualizações</string>
@@ -48,7 +46,6 @@
     <string name="snack_download_verification_failed">A verificação da atualização falhou.</string>
     <string name="snack_download_verified">Transferência concluída.</string>
     <string name="snack_update_not_installable">Esta atualização não pode ser instalada por cima da versão atual.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">A verificar atualização</string>
@@ -60,24 +57,23 @@
     <string name="action_resume">Retomar</string>
     <string name="action_install">Instalar</string>
     <string name="action_delete">Eliminar</string>
-    <string name="action_cancel">Cancelar</string>
     <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
     <string name="confirm_delete_dialog_message">Deseja eliminar o ficheiro de atualizações selecionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Continuar</string>
-    <string name="suspend_button">Suspender</string>
     <string name="reboot">Reiniciar</string>
+    <string name="reboot_needed_dialog_title">Reinicialização necessária.</string>
+    <string name="reboot_needed_dialog_summary">Para completar a instalação da atualização, é necessário reiniciar o dispositivo. Pretende reiniciar agora?</string>
     <string name="details_button">Ver detalhes</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar atualização</string>
     <string name="apply_update_dialog_message">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\n se carregar em<xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá reiniciar no modo de recuperação para instalar a atualização.\n\nNota: É necessária uma Recuperação compatível, caso contrário as atualizações terão de ser instaladas manualmente.</string>
     <string name="apply_update_dialog_message_ab">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe selecionar <xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá iniciar a instalação em plano de fundo.\n\nUma vez concluída, ser-lhe-á pedido que reinicie o dispositivo.</string>
-    <string name="cancel_installation_dialog_message">Cancelar a instalação?</string>
     <string name="installing_update">A instalar o pacote de atualização</string>
     <string name="installing_update_error">Erro de instalação</string>
     <string name="installing_update_finished">Atualização instalada</string>
+    <string name="installing_update_ab_disable_incremental_summary">A instalação incremental falhou porque a partição foi modificada por alguma customização ou kernel customizado. Quer descarregar a atualização completa?</string>
     <string name="finalizing_package">A finalizar a instalação do pacote</string>
-    <string name="preparing_ota_first_boot">A preparar para a primeira inicialização</string>
     <string name="dialog_prepare_zip_message">Preparação preliminar de atualização</string>
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="dialog_battery_low_message_pct">O nível da bateria está demasiado baixo. Precisa de, pelo menos, <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver a carregar.</string>

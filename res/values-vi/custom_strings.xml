@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Tải xuống hoàn tất</string>
     <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
     <string name="update_failed_notification">Cập nhật thất bại</string>
-    <string name="installation_suspended_notification">Tạm hoãn cài đặt</string>
     <string name="check_for_update">Kiểm tra cập nhật</string>
     <!-- Menu -->
     <string name="menu_delete_update">Xóa</string>
-    <string name="menu_copy_url">Sao chép URL</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
     <string name="menu_show_changelog">Thay đổi trong phiên bản hiện tại</string>
     <string name="changelog_loading">Đang tải…</string>
-    <string name="label_download_url">Tải xuống URL</string>
-    <string name="toast_download_url_copied">Đã sao chép URL</string>
     <!-- General -->
     <string name="update_found_notification">Bản cập nhật hệ thống đã có</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Xác thực bản cập nhật thất bại.</string>
     <string name="snack_download_verified">Tải xuống hoàn tất.</string>
     <string name="snack_update_not_installable">Bản cập nhật này không thể được cài đặt lên trên bản hiện tại</string>
-    <string name="text_download_speed">%1$s, %2$s/giây</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> của <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Đang xác thực bản cập nhật</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Tiếp tục</string>
     <string name="action_install">Cài đặt</string>
     <string name="action_delete">Xóa</string>
-    <string name="action_cancel">Hủy</string>
     <string name="confirm_delete_dialog_title">Xóa tập tin</string>
     <string name="confirm_delete_dialog_message">Xóa các tập tin cập nhật được chọn?</string>
     <string name="pause_button">Tạm dừng</string>
     <string name="resume_button">Tiếp tục</string>
-    <string name="suspend_button">Tạm hoãn</string>
     <string name="reboot">Khởi động lại</string>
     <string name="details_button">Xem chi tiết</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Áp dụng cập nhật</string>
     <string name="apply_update_dialog_message">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>.\n\nNếu bạn chạm <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ tự động khởi động lại trong chế độ phục hồi để cài đặt bản cập nhật.\n\nLưu ý: Tính năng này yêu cầu một chế độ phục hồi tương thích hoặc các bản cập nhật sẽ cần phải được cài đặt thủ công.</string>
     <string name="apply_update_dialog_message_ab">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>.\n\nNếu bạn chạm <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ bắt đầu cài đặt ở chế độ nền.\n\nSau khi hoàn tất, bạn sẽ được nhắc khởi động lại.</string>
-    <string name="cancel_installation_dialog_message">Huỷ cài đặt?</string>
     <string name="installing_update">Đang cài đặt gói cập nhật</string>
     <string name="installing_update_error">Lỗi cài đặt</string>
     <string name="installing_update_finished">Đã cài đặt bản cập nhật</string>
     <string name="finalizing_package">Đang hoàn tất gói cài đặt</string>
-    <string name="preparing_ota_first_boot">Đang chuẩn bị cho lần khởi động đầu tiên</string>
     <string name="dialog_prepare_zip_message">Chuẩn bị cập nhật sơ bộ</string>
     <string name="dialog_battery_low_title">Pin yếu</string>
     <string name="dialog_battery_low_message_pct">Mức pin quá thấp, bạn cần tối thiểu <xliff:g id="percent_discharging">%1$d</xliff:g>%% pin để tiếp tục, <xliff:g id="percent_charging">%2$d</xliff:g>%% nếu đang sạc.</string>

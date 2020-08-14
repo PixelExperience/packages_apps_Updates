@@ -31,10 +31,7 @@
     <string name="update_failed_notification">Falló l\'anovamientu</string>
     <!-- Menu -->
     <string name="menu_delete_update">Desaniciar</string>
-    <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Esportar anovamientu</string>
-    <string name="label_download_url">URL de descarga</string>
-    <string name="toast_download_url_copied">Copióse la URL</string>
     <!-- General -->
     <string name="snack_no_updates_found">Nun s\'alcontraron anovamientos</string>
     <string name="snack_updates_check_failed">Falló la comprobación d\'anovamientos. Comprueba la to conexón a Internet y volvi tentalo, por favor.</string>
@@ -52,7 +49,6 @@
     <string name="action_resume">Siguir</string>
     <string name="action_install">Instalar</string>
     <string name="action_delete">Desaniciar</string>
-    <string name="action_cancel">Encaboxar</string>
     <string name="confirm_delete_dialog_title">Desaniciar ficheru</string>
     <string name="confirm_delete_dialog_message">¿Desaniciar l\'anovamientu esbilláu?</string>
     <string name="pause_button">Posar</string>
@@ -62,12 +58,10 @@
     <string name="apply_update_dialog_title">Aplicar anovamientu</string>
     <string name="apply_update_dialog_message">Tas a piques d\'anovar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi primes <xliff:g id="ok">%2$s</xliff:g>, el preséu va reaniciase solu al recovery pa instalar l\'anovamientu.\n\nNota: Esta carauterística rique un recovery compatible o los anovamientos van precisar instalase a mano.</string>
     <string name="apply_update_dialog_message_ab">Tas a piques d\'anovar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi primes <xliff:g id="ok">%2$s</xliff:g>, el preséu va entamar la instalación de fondu.\n\nNamái acabar, va suxerísete reaniciar.</string>
-    <string name="cancel_installation_dialog_message">¿Encaboxar la instalación?</string>
     <string name="installing_update">Instalando\'l paquete d\'anovamientu</string>
     <string name="installing_update_error">Fallu d\'instalación</string>
     <string name="installing_update_finished">Instalóse l\'anovamientu</string>
     <string name="finalizing_package">Finando la instalación del paquete</string>
-    <string name="preparing_ota_first_boot">Tresnando\'l primer arranque</string>
     <string name="dialog_prepare_zip_message">Tresnáu preliminar del anovamientu</string>
     <string name="dialog_battery_low_title">Batería baxa</string>
     <string name="dialog_battery_low_message_pct">El nivel de batería ta perbaxu, precises polo menos<xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería pa siguir, <xliff:g id="percent_charging">%2$d</xliff:g>%% si ta en carga.</string>

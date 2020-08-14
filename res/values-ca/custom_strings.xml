@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Baixada completada</string>
     <string name="download_starting_notification">S\'està iniciant la baixada</string>
     <string name="update_failed_notification">Actualització fallida</string>
-    <string name="installation_suspended_notification">Instal·lació suspesa</string>
     <string name="check_for_update">Cercar actualitzacions</string>
     <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
-    <string name="menu_copy_url">Copia l\'URL</string>
     <string name="menu_export_update">Exporta l\'actualització</string>
     <string name="menu_show_changelog">Canvis en la versió actual</string>
     <string name="changelog_loading">Carregant…</string>
-    <string name="label_download_url">URL de baixada</string>
-    <string name="toast_download_url_copied">URL copiada</string>
     <!-- General -->
     <string name="update_found_notification">Actualització del sistema disponible</string>
     <string name="snack_no_updates_found">No s\'han trobat noves actualitzacions</string>
@@ -59,24 +55,20 @@
     <string name="action_resume">Reprèn</string>
     <string name="action_install">Instal·la</string>
     <string name="action_delete">Suprimeix</string>
-    <string name="action_cancel">Cancel·la</string>
     <string name="confirm_delete_dialog_title">Suprimir el fitxer</string>
     <string name="confirm_delete_dialog_message">Voleu esborrar el fitxer d\'actualització seleccionat?</string>
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Reprèn</string>
-    <string name="suspend_button">Suspèn</string>
     <string name="reboot">Reinicia</string>
     <string name="details_button">Mostrar els detalls</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplica l\'actualització</string>
     <string name="apply_update_dialog_message">Estàs a punt d\'actualitzar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi prems <xliff:g id="ok">%2$s</xliff:g>, el dispositiu es reiniciarà en mode recuperació per instal·lar l\'actualització.\n\nNota: Aquesta funció requereix un «Recovery» compatible o les actualitzacions s\'hauran d\'instal·lar manualment.</string>
     <string name="apply_update_dialog_message_ab">Estàs a punt d\'actualitzar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi prems <xliff:g id="ok">%2$s</xliff:g>, el dispositiu començarà a instal·lar en segon pla.\n\nUn cop completat, se\'t demanarà reiniciar.</string>
-    <string name="cancel_installation_dialog_message">Voleu cancel·lar la instal·lació?</string>
     <string name="installing_update">S\'està instal·lant el paquet d\'actualització</string>
     <string name="installing_update_error">Instal·lació fallida</string>
     <string name="installing_update_finished">Actualització instal·lada</string>
     <string name="finalizing_package">S\'està finalitzant la instal·lació del paquet</string>
-    <string name="preparing_ota_first_boot">S\'està preparant el primer inici</string>
     <string name="dialog_prepare_zip_message">Preparació preliminar de l\'actualització</string>
     <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">El nivell de la bateria és massa baix, necessiteu com a mínim <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria per continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositiu s\'està carregant.</string>

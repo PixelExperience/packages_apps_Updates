@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Descărcare terminată</string>
     <string name="download_starting_notification">Pornire descărcare</string>
     <string name="update_failed_notification">Actualizare eșuată</string>
-    <string name="installation_suspended_notification">Instalarea a fost suspendată</string>
     <string name="check_for_update">Verificare actualizări</string>
     <!-- Menu -->
     <string name="menu_delete_update">Șterge</string>
-    <string name="menu_copy_url">Copiază URL</string>
     <string name="menu_export_update">Exportează actualizarea</string>
     <string name="menu_show_changelog">Modificări în versiunea curentă</string>
     <string name="changelog_loading">Se încarcă…</string>
-    <string name="label_download_url">Descărcați URL-ul</string>
-    <string name="toast_download_url_copied">URL copiat</string>
     <!-- General -->
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Verificarea actualizării a eșuat.</string>
     <string name="snack_download_verified">Descărcare terminată.</string>
     <string name="snack_update_not_installable">Această actualizare nu poate fi instalată pe build-ul curent.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> din <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> din <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verificare actualizare</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Reluaţi</string>
     <string name="action_install">Instalați</string>
     <string name="action_delete">Ștergeți</string>
-    <string name="action_cancel">Anulare</string>
     <string name="confirm_delete_dialog_title">Şterge fişier</string>
     <string name="confirm_delete_dialog_message">Șterge fișierul de actualizare selectat?</string>
     <string name="pause_button">Pauză</string>
     <string name="resume_button">Reluaţi</string>
-    <string name="suspend_button">Suspendare</string>
     <string name="reboot">Repornire</string>
     <string name="details_button">Vizualizare detalii</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicaţi actualizarea</string>
     <string name="apply_update_dialog_message">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul se va restarta în modul de recuperare pentru a instala actualizarea.\n\nNotă: Această caracteristică necesită o Recuperare compatibilă sau actualizările vor trebui să fie instalate manual.</string>
     <string name="apply_update_dialog_message_ab">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va începe instalarea în fundal.\n\nOdată finalizată, veți fi anunțat(ă) să reporniți telefonul.</string>
-    <string name="cancel_installation_dialog_message">Revocaţi instalarea?</string>
     <string name="installing_update">Se instalează pachetul de actualizare</string>
     <string name="installing_update_error">Eroare la instalare</string>
     <string name="installing_update_finished">Actualizare instalată</string>
     <string name="finalizing_package">Se finalizează instalarea pachetului</string>
-    <string name="preparing_ota_first_boot">Se pregătește pentru prima pornire</string>
     <string name="dialog_prepare_zip_message">Pregătire preliminară pentru actualizare</string>
     <string name="dialog_battery_low_title">Baterie slabă</string>
     <string name="dialog_battery_low_message_pct">Nivelul bateriei este prea scăzut. Aveți nevoie de cel puțin<xliff:g id="percent_discharging">%1$d</xliff:g>%% pentru a continua, <xliff:g id="percent_charging">%2$d</xliff:g>%% dacă telefonul este la încărcat.</string>

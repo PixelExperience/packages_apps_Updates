@@ -29,8 +29,6 @@
     <string name="download_starting_notification">Nagsimula ng mag download</string>
     <!-- Menu -->
     <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
-    <string name="label_download_url">I-download ang URL</string>
-    <string name="toast_download_url_copied">Nakopya ang URL</string>
     <!-- General -->
     <string name="snack_download_failed">Nabigo sa pag download. Pakiusap na tignan ang iyong internet koneksyon at subukan muli mamaya.</string>
     <string name="snack_download_verification_failed">Ang update verification ay nabigo.</string>
@@ -39,7 +37,6 @@
     <string name="confirm_delete_dialog_title">Burahin ang file</string>
     <!-- Installation -->
     <string name="finalizing_package">Pagtatapos ng pag-install ng package</string>
-    <string name="preparing_ota_first_boot">Paghahanda para sa unang boot</string>
     <string name="dialog_prepare_zip_message">Paunang paghahanda sa pag-update</string>
     <string name="dialog_battery_low_message_pct">Ang level ng baterya ay mababa na, kailangan mo kahit <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya para makapag patuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagkakarga.</string>
     <!-- Export update -->

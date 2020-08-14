@@ -31,12 +31,9 @@
     <string name="update_failed_notification">Något gick fel! Uppdateringen Misslyckades</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ta bort</string>
-    <string name="menu_copy_url">Kopiera webbadress</string>
     <string name="menu_export_update">Exportera uppdateringen</string>
     <string name="menu_show_changelog">Ändringar i denna version</string>
     <string name="changelog_loading">Laddar…</string>
-    <string name="label_download_url">Nedladdningsadress</string>
-    <string name="toast_download_url_copied">Webbadressen har kopierats</string>
     <!-- General -->
     <string name="snack_no_updates_found">Inga nya uppdateringar hittades</string>
     <string name="snack_updates_check_failed">Sökningen efter uppdateringar misslyckades. Var god kontrollera din internetanslutning och försök igen senare.</string>
@@ -54,7 +51,6 @@
     <string name="action_resume">Fortsätt</string>
     <string name="action_install">Installera</string>
     <string name="action_delete">Radera</string>
-    <string name="action_cancel">Avbryt</string>
     <string name="confirm_delete_dialog_title">Radera fil</string>
     <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
     <string name="pause_button">Pausa</string>
@@ -65,12 +61,10 @@
     <string name="apply_update_dialog_title">Installera uppdateringen</string>
     <string name="apply_update_dialog_message">Du är på väg att uppdatera till <xliff:g id="update_name">%1$s</xliff:g>.\n\nOm du trycker på <xliff:g id="ok">%2$s</xliff:g> så kommer enheten att starta om i säkerhetsläget och påbörja uppdateringen.\n\nOBS! Den här funktionen kräver en kompatibel Recovery-programvara annars måste uppdateringen installeras manuellt.</string>
     <string name="apply_update_dialog_message_ab">Du är på väg att uppdatera till <xliff:g id="update_name">%1$s</xliff:g>.\n\nOm du trycker på <xliff:g id="ok">%2$s</xliff:g> så kommer enheten att påbörja installationen i bakgrunden.\n\nNär den är slutförd kommer du bli ombedd att starta om enheten.</string>
-    <string name="cancel_installation_dialog_message">Avbryt installationen?</string>
     <string name="installing_update">Installerar uppdateringspaketet</string>
     <string name="installing_update_error">Installationsfel</string>
     <string name="installing_update_finished">Uppdateringen har installerats</string>
     <string name="finalizing_package">Slutför paketinstallationen</string>
-    <string name="preparing_ota_first_boot">Förbereder för första uppstart</string>
     <string name="dialog_prepare_zip_message">Preliminär förberedelse för uppdatering</string>
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <string name="dialog_battery_low_message_pct">Batterinivån är för låg, du beöver minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% av batterikapaciteten för att fortsätta, <xliff:g id="percent_charging">%2$d</xliff:g>%% om du laddar.</string>

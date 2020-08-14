@@ -29,15 +29,11 @@
     <string name="download_completed_notification">Deskarga osatuta</string>
     <string name="download_starting_notification">Deskarga hasten</string>
     <string name="update_failed_notification">Eguneraketak huts egin du</string>
-    <string name="installation_suspended_notification">Instalazioa eten da</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ezabatu</string>
-    <string name="menu_copy_url">Kopiatu URL-a</string>
     <string name="menu_export_update">Esportatu eguneraketa</string>
     <string name="menu_show_changelog">Aldaketak oraingo bertsioan</string>
     <string name="changelog_loading">Kargatzen…</string>
-    <string name="label_download_url">Deskargaren URL-s</string>
-    <string name="toast_download_url_copied">URL-a kopiatuta</string>
     <!-- General -->
     <string name="snack_no_updates_found">Ez da eguneraketa berririk aurkitu</string>
     <string name="snack_updates_check_failed">Eguneraketa bilaketak huts egin du. Interneterako konexioa egiaztatu eta berriro saiatu, mesedez.</string>
@@ -55,24 +51,20 @@
     <string name="action_resume">Berrekin</string>
     <string name="action_install">Instalatu</string>
     <string name="action_delete">Ezabatu</string>
-    <string name="action_cancel">Utzi</string>
     <string name="confirm_delete_dialog_title">Fitxategia ezabatu</string>
     <string name="confirm_delete_dialog_message">Ezabatu hautatutako eguneraketa fitxategia?</string>
     <string name="pause_button">Pausatu</string>
     <string name="resume_button">Berrekin</string>
-    <string name="suspend_button">Eten</string>
     <string name="reboot">Berrabiarazi</string>
     <string name="details_button">Ikusi xehetasunak</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplikatu eguneraketa</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>. bertsioa instalatzera zoaz.\n\n <xliff:g id="ok">%2$s</xliff:g> sakatzean, gailua berreskuratze moduan berrabiaraziko da eguneraketa instalatzeko.\n\nOharra: Berreskuratze aplikazio bateragarri bat behar du ezaugarri honek, bestela eguneraketak eskuz instalatu beharko dira.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> bertsioa instalatzera zoaz.\n\n<xliff:g id="ok">%2$s</xliff:g> sakatzean, gailua atzeko planoan hasiko da eguneratzen.\n\nBehin bukatuta berrabiaraztea eskatuko zaizu.</string>
-    <string name="cancel_installation_dialog_message">Ezeztatu instalazioa?</string>
     <string name="installing_update">Eguneraketa-paketea instalatzen</string>
     <string name="installing_update_error">Instalazio-errorea</string>
     <string name="installing_update_finished">Eguneraketa instalatuta</string>
     <string name="finalizing_package">Paketearen instalazioarekin bukatzen</string>
-    <string name="preparing_ota_first_boot">Lehen abiorako prestatzen</string>
     <string name="dialog_prepare_zip_message">Aldez aurreko eguneraketaren prestaketa</string>
     <string name="dialog_battery_low_title">Bateria gutxi</string>
     <string name="dialog_battery_low_message_pct">Bateria maila baxuegia da, gutxienez bateriaren %% <xliff:g id="percent_discharging">%1$d</xliff:g> behar da jarraitzeko, %% <xliff:g id="percent_charging">%2$d</xliff:g> kargatzen badago.</string>

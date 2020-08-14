@@ -24,15 +24,12 @@
     <!-- Menu -->
     <string name="menu_delete_update">حذف کریں</string>
     <string name="changelog_loading">لوڈ ہو رہا ہے…</string>
-    <string name="label_download_url">ڈاؤن لوڈ یو آر ایل</string>
-    <string name="toast_download_url_copied">یو آر ایل نقل کر لیا ہے</string>
     <!-- General -->
     <string name="snack_no_updates_found">کوئی نئی اپ ڈیٹ نہیں ملی</string>
     <string name="snack_updates_check_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
     <string name="snack_download_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
     <string name="snack_download_verification_failed">اپ ڈیٹ کی تصدیق ناکام ہوگئی.</string>
     <string name="snack_download_verified">ڈاؤن لوڈ مکمل.</string>
-    <string name="text_download_speed">%1$s، %2$s فی سیکنڈ</string>
     <string name="list_verifying_update">اپ ڈیٹ توثیق کر رہا ہے</string>
     <!-- Actions -->
     <string name="action_download">ڈاؤن لوڈ</string>
@@ -40,7 +37,6 @@
     <string name="action_resume">دوبارہ</string>
     <string name="action_install">انسٹال کریں</string>
     <string name="action_delete">خارج کر دیں</string>
-    <string name="action_cancel">منسوخ کریں</string>
     <string name="pause_button">روک دیں</string>
     <string name="resume_button">دوبارہ</string>
     <string name="reboot">ری بوٹ کریں</string>

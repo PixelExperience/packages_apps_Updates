@@ -30,16 +30,12 @@
     <string name="download_completed_notification">ডাউনলোড সম্পূর্ণ হয়েছে</string>
     <string name="download_starting_notification">ডাউনলোড শুরু হচ্ছে</string>
     <string name="update_failed_notification">আধুনিকরণ ব্যর্থ হয়েছে</string>
-    <string name="installation_suspended_notification">ইনস্টল স্থগিত</string>
     <string name="check_for_update">নতুন আধুনিকরণের জন্যে চেক করুন</string>
     <!-- Menu -->
     <string name="menu_delete_update">মুছুন</string>
-    <string name="menu_copy_url">ঠিকানাটি কপি করুন</string>
     <string name="menu_export_update">আধুনিকরন এক্সপোর্ট করুন</string>
     <string name="menu_show_changelog">বর্তমান সংস্করণে যেসব পরিবর্তন হয়েছে</string>
     <string name="changelog_loading">লোড হচ্ছে…</string>
-    <string name="label_download_url">ঠিকানাটি ডাউনলোড করুন</string>
-    <string name="toast_download_url_copied">ঠিকানাটি কপি হয়েছে</string>
     <!-- General -->
     <string name="update_found_notification">সিস্টেম আধুনিকরণ পাওয়া গেছে</string>
     <string name="snack_no_updates_found">নতুন কোনো আধুনিকরণ পাওয়া যায়নি</string>
@@ -53,7 +49,6 @@
     <string name="action_resume">পুনরারম্ভ</string>
     <string name="action_install">সংস্থাপন</string>
     <string name="action_delete">মুছুন</string>
-    <string name="action_cancel">বাতিল</string>
     <string name="confirm_delete_dialog_title">ফাইল মুছুন</string>
     <string name="confirm_delete_dialog_message">নির্বাচিত আধুনিকীকরণ ফাইল গুলি মুছে দিতে চান?</string>
     <string name="pause_button">বিরাম</string>
@@ -62,7 +57,6 @@
     <string name="details_button">বিস্তারিত দেখুন</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
-    <string name="cancel_installation_dialog_message">বর্তমান ইনস্টলেশন বাতিল করতে চান?</string>
     <!-- Export update -->
     <!-- ETA -->
     <plurals name="eta_hours">

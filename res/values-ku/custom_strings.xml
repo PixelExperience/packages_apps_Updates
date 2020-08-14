@@ -30,16 +30,12 @@
     <string name="download_completed_notification">داگرتن تەواو بوو</string>
     <string name="download_starting_notification">دەستپێکردنی داگرتن</string>
     <string name="update_failed_notification">نوێکردنەوە شکستی هێنا</string>
-    <string name="installation_suspended_notification">دامەزراندن هەڵواسرا</string>
     <string name="check_for_update">پشکنین بۆ نوێکردنەوە</string>
     <!-- Menu -->
     <string name="menu_delete_update">سڕینەوە</string>
-    <string name="menu_copy_url">لەبەرگرتنەوەی بەستەر</string>
     <string name="menu_export_update">پاشەکەوتکردنی نوێکردنەوە</string>
     <string name="menu_show_changelog">گۆڕانکارییەکان لە وەشانی ئێستادا</string>
     <string name="changelog_loading">باردەکرێت...</string>
-    <string name="label_download_url">داگرتنی بەستەر</string>
-    <string name="toast_download_url_copied">بەستەر لەبەرگیرایەوە</string>
     <!-- General -->
     <string name="update_found_notification">نوێکاری سیستەم بەردەستە</string>
     <string name="snack_no_updates_found">هیچ نوێکارییەک نەدۆزرایەوە</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">دڵنیاکردنەوەی نوێکاری شکستی هێنا.</string>
     <string name="snack_download_verified">داگرتن تەواو بوو.</string>
     <string name="snack_update_not_installable">ئەم نوێکارییە ناتوانرێ دابمەزرێت لەسەر پێکهاتەی ئێستا.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">دڵنیاکردنەوەی نوێکردنەوە</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">خستنەوەکار</string>
     <string name="action_install">دامەزراندن</string>
     <string name="action_delete">سڕینەوە</string>
-    <string name="action_cancel">پاشگەزبونەوە</string>
     <string name="confirm_delete_dialog_title">سڕینەوەی پەڕگە</string>
     <string name="confirm_delete_dialog_message">پەڕگەی دیاریکراوی نوێکردنەوە بسڕدرێتەوە؟</string>
     <string name="pause_button">ڕاگرتن</string>
     <string name="resume_button">خستنەوەکار</string>
-    <string name="suspend_button">هەڵواسین</string>
     <string name="reboot">داگیرساندنه‌وه‌</string>
     <string name="details_button">بینینی وردەکارییەکان</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">جێبەجێکردنی نوێکردنەوە</string>
     <string name="apply_update_dialog_message">تۆ خەریکی بەرزکردنەوەی بۆ <xliff:g id="update_name">%1$s</xliff:g>. .\n\n گەر گرتەبکەی لەسەر <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت هەڵدەبێتەوە و دەچێتە دۆخی ڕیکەڤریەوە بۆ دامەزراندانی وەشانەکە. \n\n تێبینی : ئەم تایبەتمەندییە پێویستی بە دۆخی ڕیکەڤرییەکی تەواو هەیە یاخوود پێویستە خۆت دایبمەزرێنیت.</string>
     <string name="apply_update_dialog_message_ab">تۆ خەریکی بەرزکردنەوەیت بۆ <xliff:g id="update_name">%1$s</xliff:g>. \n\n گەر کرتەبکەیت لە <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت لە پاشبنەمادا وەشانەکە دادەمەزرێنێت. \n\nکاتێ کە تەواو دەبێت پرسیارت لێدەکرێ بۆ هەڵبوونەوەی ئامێرەکەت.</string>
-    <string name="cancel_installation_dialog_message">هەڵوەشاندەنەوەی دامەزراندن؟</string>
     <string name="installing_update">دامەزراندنی بوخچەی نوێکردنەوە</string>
     <string name="installing_update_error">هەڵە ڕوویدا لە دامەزراندن</string>
     <string name="installing_update_finished">نوێکردنەوە دامەزرا</string>
     <string name="finalizing_package">تەواوکردنی بوخچەی دامەزراندن</string>
-    <string name="preparing_ota_first_boot">ئامادکردن بۆ یەکەم کارکردن</string>
     <string name="dialog_prepare_zip_message">ئامادەکردنی سەرەتایی نوێکاری</string>
     <string name="dialog_battery_low_title">کەمی ووزە</string>
     <string name="dialog_battery_low_message_pct">ڕێژەی ووزە زۆر کەمە، پێویستە لانی کەم ڕێژەی ووزەکەت <xliff:g id="percent_discharging">%1$d</xliff:g>%%  بێت بۆ بەردەوامبوون، <xliff:g id="percent_charging">%2$d</xliff:g>%% گەر لەسەر بارگاویکردن بێت.</string>

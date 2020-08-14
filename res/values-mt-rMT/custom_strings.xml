@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Tniżżil lest</string>
     <string name="download_starting_notification">Bidu tat-tniżżil</string>
     <string name="update_failed_notification">L-aġġornament falla</string>
-    <string name="installation_suspended_notification">Installazzjoni sospiża</string>
     <string name="check_for_update">Iċċekkja għal update</string>
     <!-- Menu -->
     <string name="menu_delete_update">Ħassar</string>
-    <string name="menu_copy_url">Ikkopja l-URL</string>
     <string name="menu_export_update">L-esportazzjoni tal-aġġornament</string>
     <string name="menu_show_changelog">Bidliet fil-verżjoni kurrenti</string>
     <string name="changelog_loading">Tagħbija…</string>
-    <string name="label_download_url">Niżżel il-URL</string>
-    <string name="toast_download_url_copied">URL Ikkupjat</string>
     <!-- General -->
     <string name="update_found_notification">Update tas-sistema huwa disponibbli</string>
     <string name="snack_no_updates_found">Ma nstab l-ebda aġġornament ġdid</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Il-verifika tal-aġġornament falliet.</string>
     <string name="snack_download_verified">Tniżżil lest.</string>
     <string name="snack_update_not_installable">Dan l-aġġornament ma jistax jiġi installat fuq il-binja kurrenti.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> minn <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifika tal-aġġornament</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Kompli</string>
     <string name="action_install">Installa</string>
     <string name="action_delete">Ħassar</string>
-    <string name="action_cancel">Ikkanċella</string>
     <string name="confirm_delete_dialog_title">Ħassar il-fajl</string>
     <string name="confirm_delete_dialog_message">Ħassar il-fajl tal-aġġornament magħżul?</string>
     <string name="pause_button">Pawsa</string>
     <string name="resume_button">Kompli</string>
-    <string name="suspend_button">Sospendi</string>
     <string name="reboot">Irristartja</string>
     <string name="details_button">Ara d-dettalji</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Applika aġġornament</string>
     <string name="apply_update_dialog_message">Int sejjer taġġorna għal <xliff:g id="update_name">%1$s</xliff:g>.\n\nJekk tagħfas <xliff:g id="ok">%2$s</xliff:g>, l-apparat se jirristartja fl-irkupru sabiex jinstalla l-aġġornament.\n\nNota: Din il-karatteristika jirrikjedi irkupru kompatibbli jew inkella l-aġġornament iridu jiġu installati manwali.</string>
     <string name="apply_update_dialog_message_ab">Int sejjer taġġorna għal <xliff:g id="update_name">%1$s</xliff:g>.\n\nJekk tagħfas <xliff:g id="ok">%2$s</xliff:g>, l-apparat se jibda jinstalla fl-isfond.\n\nLadarba titlesta, tkun imħeġġeġ biex isegwi reboot.</string>
-    <string name="cancel_installation_dialog_message">Ikkanċella l-installazzjoni?</string>
     <string name="installing_update">Installazzjoni tal-pakkett għall-aġġornament</string>
     <string name="installing_update_error">Żball fl-installazzjoni</string>
     <string name="installing_update_finished">Aġġornament installat</string>
     <string name="finalizing_package">Finalizzazzjoni tal-pakkett għall-installazzjoni</string>
-    <string name="preparing_ota_first_boot">Tħejjija għall-ewwel xgħela</string>
     <string name="dialog_prepare_zip_message">Preparazzjoni ta\' aġġornament preliminari</string>
     <string name="dialog_battery_low_title">Batterija baxxa</string>
     <string name="dialog_battery_low_message_pct">Il-livell tal-batterija hija baxxa wisq, għalinqas irid ikollok <xliff:g id="percent_discharging">%1$d</xliff:g>%% tal-batterija sabiex tkompli, <xliff:g id="percent_charging">%2$d</xliff:g>%% jekk qed tiċċarġja.</string>

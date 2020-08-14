@@ -29,15 +29,11 @@
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_starting_notification">Comezando a descarga</string>
     <string name="update_failed_notification">Erro ao actualizar</string>
-    <string name="installation_suspended_notification">Instalación suspensa</string>
     <!-- Menu -->
     <string name="menu_delete_update">Eliminar</string>
-    <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
     <string name="menu_show_changelog">Cambios na version Actual</string>
     <string name="changelog_loading">A cargar…</string>
-    <string name="label_download_url">URL da descarga</string>
-    <string name="toast_download_url_copied">URL copiado</string>
     <!-- General -->
     <string name="snack_no_updates_found">Non se atoparon novas actualizacións</string>
     <string name="snack_updates_check_failed">A verificación da descarga fallou. Comproba a túa conexión a internet e téntao de novo.</string>
@@ -55,24 +51,20 @@
     <string name="action_resume">Continuar</string>
     <string name="action_install">Instalar</string>
     <string name="action_delete">Borrar</string>
-    <string name="action_cancel">Anular</string>
     <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
     <string name="confirm_delete_dialog_message">¿Eliminar o ficheiro de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Continuar</string>
-    <string name="suspend_button">Suspender</string>
     <string name="reboot">Reiniciar</string>
     <string name="details_button">Ver detalles</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar a actualización</string>
     <string name="apply_update_dialog_message">Procederase a actualizar <xliff:g id="update_name">%1$s</xliff:g>.\n\nAo premer en <xliff:g id="ok">%2$s</xliff:g>, reiniciarase no modo recuperación para instalar a actualización.\n\nAviso: Esta función require dunha recuperación compatible ou as actualizacións precisarán de se instalar manualmente.</string>
     <string name="apply_update_dialog_message_ab">Actualizaráse a <xliff:g id="update_name">%1$s</xliff:g>.\n\n Se pulsase <xliff:g id="ok">%2$s</xliff:g>, o dispositivo comezará a instalar en segundo plano.\n\nUnha vez terminado o proceso, pediráselle que reinicie.</string>
-    <string name="cancel_installation_dialog_message">Cancelar a instalación?</string>
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Erro de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
     <string name="finalizing_package">Rematando a instalación do paquete</string>
-    <string name="preparing_ota_first_boot">Preparando o primeiro arranque</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar da actualización</string>
     <string name="dialog_battery_low_title">Batería baixa</string>
     <string name="dialog_battery_low_message_pct">O nivel da batería é demasiado baixo, necesita ao menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se o dispositivo estase a cargar.</string>

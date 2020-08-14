@@ -30,16 +30,14 @@
     <string name="download_completed_notification">Lataus suoritettu</string>
     <string name="download_starting_notification">Aloitetaan latausta</string>
     <string name="update_failed_notification">Päivitys epäonnistui</string>
-    <string name="installation_suspended_notification">Asennus keskeytetty</string>
     <string name="check_for_update">Tarkista päivitykset</string>
     <!-- Menu -->
     <string name="menu_delete_update">Poista</string>
-    <string name="menu_copy_url">Kopioi URL-osoite</string>
     <string name="menu_export_update">Vie päivitys</string>
     <string name="menu_show_changelog">Muutokset nykyiseen versioon</string>
     <string name="changelog_loading">Ladataan…</string>
-    <string name="label_download_url">Lataussivun URL-osoite</string>
-    <string name="toast_download_url_copied">URL-osoite kopioitu</string>
+    <string name="menu_download_full_package">Lataa täys paketti</string>
+    <string name="menu_download_incremental_package">Lataa lisä paketti</string>
     <!-- General -->
     <string name="update_found_notification">Päivitys on saatavilla</string>
     <string name="snack_no_updates_found">Uusia päivityksiä ei löytynyt</string>
@@ -48,7 +46,6 @@
     <string name="snack_download_verification_failed">Päivityksen vahvistaminen epäonnistui.</string>
     <string name="snack_download_verified">Lataus suoritettu.</string>
     <string name="snack_update_not_installable">Tätä päivitystä ei voida asentaa nykyisen version päälle.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Todentaa päivitystä</string>
@@ -60,24 +57,22 @@
     <string name="action_resume">Jatka</string>
     <string name="action_install">Asenna</string>
     <string name="action_delete">Poista</string>
-    <string name="action_cancel">Peruuta</string>
     <string name="confirm_delete_dialog_title">Poista tiedosto</string>
     <string name="confirm_delete_dialog_message">Poista valittu päivitystiedosto?</string>
     <string name="pause_button">Tauko</string>
     <string name="resume_button">Jatka</string>
-    <string name="suspend_button">Keskeytä</string>
     <string name="reboot">Käynnistä uudelleen</string>
+    <string name="reboot_needed_dialog_title">Uudelleen käynnistys tarvitaan</string>
+    <string name="reboot_needed_dialog_summary">Päivityksen asentamisen loppuun saattamiseen tarvitaan uudelleen käynnistys. Haluatko uudelleen käynnistyksen nyt?</string>
     <string name="details_button">Näytä tiedot</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Asenna päivitys</string>
     <string name="apply_update_dialog_message">Olet päivittämässä versioon <xliff:g id="update_name">%1$s</xliff:g>.\n\nJos painat <xliff:g id="ok">%2$s</xliff:g>, laite käynnistyy Recovery-tilaan. \n\nHuomautus: Tämä toiminto vaatii yhteensopivan Recoveryn tai päivitys pitää asentaa manuaalisesti.</string>
     <string name="apply_update_dialog_message_ab">Olet päivittämässä versioon <xliff:g id="update_name">%1$s</xliff:g>.\n\nJos painat <xliff:g id="ok">%2$s</xliff:g>, asennus alkaa taustalla.\n\nKun asennus on valmis, sinua pyydetään käynnistämään laite uudelleen.</string>
-    <string name="cancel_installation_dialog_message">Peruuta asennus?</string>
     <string name="installing_update">Asennetaan päivitystä</string>
     <string name="installing_update_error">Asennusvirhe</string>
     <string name="installing_update_finished">Päivitys asennettu</string>
     <string name="finalizing_package">Viimeistellään päivityksen asennusta</string>
-    <string name="preparing_ota_first_boot">Valmistellaan ensimmäistä käynnistystä</string>
     <string name="dialog_prepare_zip_message">Alustava päivityksen valmistelu</string>
     <string name="dialog_battery_low_title">Akku vähissä</string>
     <string name="dialog_battery_low_message_pct">Akun varaus on liian matala, tarvitset vähintään <xliff:g id="percent_discharging">%1$d</xliff:g>%% jatkaaksesi, <xliff:g id="percent_charging">%2$d</xliff:g>%% jos laite on latauksessa.</string>

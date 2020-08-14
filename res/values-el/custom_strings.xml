@@ -30,16 +30,14 @@
     <string name="download_completed_notification">Επιτυχής λήψη</string>
     <string name="download_starting_notification">Έναρξη λήψης</string>
     <string name="update_failed_notification">Η ενημέρωση απέτυχε</string>
-    <string name="installation_suspended_notification">Η εγκατάσταση έχει διακοπεί</string>
     <string name="check_for_update">Έλεγχος για ενημερώσεις</string>
     <!-- Menu -->
     <string name="menu_delete_update">Διαγραφή</string>
-    <string name="menu_copy_url">Αντιγραφή URL</string>
     <string name="menu_export_update">Εξαγωγή ενημέρωσης</string>
     <string name="menu_show_changelog">Αλλαγές στην τρέχουσα έκδοση</string>
     <string name="changelog_loading">Φόρτωση…</string>
-    <string name="label_download_url">Λήψη συνδέσμου</string>
-    <string name="toast_download_url_copied">Ο σύνδεσμος αντιγράφηκε</string>
+    <string name="menu_download_full_package">Λήψη πλήρους πακέτου</string>
+    <string name="menu_download_incremental_package">Λήψη μερικού πακέτου</string>
     <!-- General -->
     <string name="update_found_notification">Διαθέσιμη ενημέρωση συστήματος</string>
     <string name="snack_no_updates_found">Δεν βρέθηκαν νέες ενημερώσεις</string>
@@ -48,7 +46,6 @@
     <string name="snack_download_verification_failed">Αποτυχία επαλήθευσης της ενημέρωσης.</string>
     <string name="snack_download_verified">Η λήψη ολοκληρώθηκε.</string>
     <string name="snack_update_not_installable">Αυτή η ενημέρωση δεν μπορεί να εγκατασταθεί πάνω από την τρέχουσα έκδοση.</string>
-    <string name="text_download_speed">%1$s, %2$s/δ</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> από <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> από <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Επαλήθευση ενημέρωσης</string>
@@ -60,24 +57,23 @@
     <string name="action_resume">Συνέχιση</string>
     <string name="action_install">Εγκατάσταση</string>
     <string name="action_delete">Διαγραφή</string>
-    <string name="action_cancel">Ακύρωση</string>
     <string name="confirm_delete_dialog_title">Διαγραφή αρχείου</string>
     <string name="confirm_delete_dialog_message">Διαγραφή του επιλεγμένου αρχείου ενημέρωσης;</string>
     <string name="pause_button">Παύση</string>
     <string name="resume_button">Συνέχιση</string>
-    <string name="suspend_button">Διακοπή</string>
     <string name="reboot">Επανεκκίνηση</string>
+    <string name="reboot_needed_dialog_title">Απαιτείται επανεκκίνηση</string>
+    <string name="reboot_needed_dialog_summary">Για να ολοκληρωθεί η εγκατάσταση της ενημέρωσης, απαιτείται επανεκκίνηση της συσκευής. Θέλετε να κάνετε επανεκκίνηση τώρα;</string>
     <string name="details_button">Προβολή λεπτομερειών</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Εφαρμογή ενημέρωσης</string>
     <string name="apply_update_dialog_message">Πρόκειται να αναβαθμίσετε σε <xliff:g id="update_name">%1$s</xliff:g>.\n\nΑν πατήσετε <xliff:g id="ok">%2$s</xliff:g>, η συσκευή θα κάνει επανεκκίνηση σε λειτουργία recovery για να εγκατασταθεί η ενημέρωση.\n\nΣημείωση: Αυτή η λειτουργία απαιτεί μια συμβατή recovery αλλιώς η ενημέρωση θα πρέπει να εγκατασταθεί χειροκίνητα.</string>
     <string name="apply_update_dialog_message_ab">Πρόκειται να αναβαθμίσετε σε <xliff:g id="update_name">%1$s</xliff:g>.\n\nΕάν πατήσετε <xliff:g id="ok">%2$s</xliff:g>, η συσκευή θα ξεκινήσει την εγκατάσταση στο παρασκήνιο.\n\nΌταν ολοκληρωθεί, θα σας ζητηθεί να κάνετε επανεκκίνηση.</string>
-    <string name="cancel_installation_dialog_message">Ακύρωση της εγκατάστασης;</string>
     <string name="installing_update">Εγκατάσταση πακέτου ενημέρωσης</string>
     <string name="installing_update_error">Σφάλμα εγκατάστασης</string>
     <string name="installing_update_finished">Η ενημέρωση εγκαταστάθηκε</string>
+    <string name="installing_update_ab_disable_incremental_summary">Η μερική εγκατάσταση απέτυχε, γιατί τα αρχεία συστήματος έχουν τροποποιηθεί από κάποιο πρόσθετο ή τροποποιημένο kernel. Θέλετε να κατεβάσετε το πλήρες πακέτο εγκατάστασης και να προσπαθήσετε ξανά;</string>
     <string name="finalizing_package">Ολοκλήρωση της εγκατάστασης του πακέτου</string>
-    <string name="preparing_ota_first_boot">Προετοιμασία για την πρώτη εκκίνηση</string>
     <string name="dialog_prepare_zip_message">Προκαταρκτική προετοιμασία ενημέρωσης</string>
     <string name="dialog_battery_low_title">Χαμηλή μπαταρία</string>
     <string name="dialog_battery_low_message_pct">Η στάθμη της μπαταρίας είναι πολύ χαμηλή, χρειάζεστε τουλάχιστον <xliff:g id="percent_discharging">%1$d</xliff:g>%% της μπαταρίας για να συνεχίσετε ή <xliff:g id="percent_charging">%2$d</xliff:g>%% κατά την φόρτιση.</string>

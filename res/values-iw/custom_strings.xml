@@ -30,16 +30,12 @@
     <string name="download_completed_notification">ההורדה הושלמה</string>
     <string name="download_starting_notification">מתחיל להוריד</string>
     <string name="update_failed_notification">העדכון נכשל</string>
-    <string name="installation_suspended_notification">ההתקנה הושהתה</string>
     <string name="check_for_update">בדוק עדכונים</string>
     <!-- Menu -->
     <string name="menu_delete_update">מחק</string>
-    <string name="menu_copy_url">העתק כתובת אינטרנט</string>
     <string name="menu_export_update">יצא עדכון</string>
     <string name="menu_show_changelog">שינויים בגרסה הנוכחית</string>
     <string name="changelog_loading">טוען...</string>
-    <string name="label_download_url">כתובת ההורדה</string>
-    <string name="toast_download_url_copied">הכתובת הועתקה</string>
     <!-- General -->
     <string name="update_found_notification">עדכון מערכת זמין</string>
     <string name="snack_no_updates_found">לא נמצאו עדכונים חדשים</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">אימות העדכון נכשל.</string>
     <string name="snack_download_verified">ההורדה הושלמה.</string>
     <string name="snack_update_not_installable">אין אפשרות להתקין עדכון זה מהגרסה הקיימת.</string>
-    <string name="text_download_speed">%2$s,%1$s לשניה</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> מתוך <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">מאמת עדכון</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">המשך</string>
     <string name="action_install">התקן</string>
     <string name="action_delete">מחיקה</string>
-    <string name="action_cancel">ביטול</string>
     <string name="confirm_delete_dialog_title">מחק קובץ</string>
     <string name="confirm_delete_dialog_message">אתה עומד למחוק את הקובץ העדכון שנבחר, לחץ על \"כן\" להמשך.</string>
     <string name="pause_button">השהה</string>
     <string name="resume_button">המשך</string>
-    <string name="suspend_button">השהיה</string>
     <string name="reboot">הפעלה מחדש</string>
     <string name="details_button">הצגת פרטים</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">החל עדכון</string>
     <string name="apply_update_dialog_message">אתה עומד לשדרג אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תבחר <xliff:g id="ok">%2$s</xliff:g>, המכשיר יופעל מחדש למצב שחזור (Recovery) להתקנת העדכון.\n\nשים לב: תכונה זו דורשת ריקוברי תואם או שהעדכון לא יותקן אוטומטית.</string>
     <string name="apply_update_dialog_message_ab">אתה עומד לעדכן אל <xliff:g id="update_name">%1$s</xliff:g>.\n\nאם תלחץ על <xliff:g id="ok">%2$s</xliff:g>, המכשיר יתחיל בהתקנה ברקע.\n\nלאחר שההתקנה תסתיים, תתבקש להפעיל את המכשיר מחדש.</string>
-    <string name="cancel_installation_dialog_message">לבטל את ההתקנה?</string>
     <string name="installing_update">מתקין חבילת עדכון</string>
     <string name="installing_update_error">ההתקנה נכשלה</string>
     <string name="installing_update_finished">העדכון הותקן</string>
     <string name="finalizing_package">משלים את התקנת החבילה</string>
-    <string name="preparing_ota_first_boot">מתכונן להפעלה ראשונה</string>
     <string name="dialog_prepare_zip_message">מתכונן להתקנת העדכון</string>
     <string name="dialog_battery_low_title">סוללה חלשה</string>
     <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>

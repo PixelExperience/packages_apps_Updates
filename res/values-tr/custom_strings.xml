@@ -30,16 +30,14 @@
     <string name="download_completed_notification">İndirme tamamlandı</string>
     <string name="download_starting_notification">İndirme başlatılıyor</string>
     <string name="update_failed_notification">Güncelleme başarısız</string>
-    <string name="installation_suspended_notification">Kurulum askıya alındı</string>
     <string name="check_for_update">Güncellemeleri Denetle</string>
     <!-- Menu -->
     <string name="menu_delete_update">Sil</string>
-    <string name="menu_copy_url">Bağlantıyı kopyala</string>
     <string name="menu_export_update">Güncellemeyi dışa aktar</string>
     <string name="menu_show_changelog">Mevcut sürümdeki değişiklikler</string>
     <string name="changelog_loading">Yükleniyor…</string>
-    <string name="label_download_url">İndirme bağlantısı</string>
-    <string name="toast_download_url_copied">Bağlantı kopyalandı</string>
+    <string name="menu_download_full_package">Tam paketi indir</string>
+    <string name="menu_download_incremental_package">Ek paketi indir</string>
     <!-- General -->
     <string name="update_found_notification">Sistem güncellemesi mevcut</string>
     <string name="snack_no_updates_found">Yeni güncelleme bulunamadı</string>
@@ -48,7 +46,6 @@
     <string name="snack_download_verification_failed">Güncelleme doğrulaması başarısız oldu.</string>
     <string name="snack_download_verified">İndirme tamamlandı.</string>
     <string name="snack_update_not_installable">Bu güncelleme mevcut yapı üstüne kurulamaz.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Güncelleme doğrulanıyor</string>
@@ -60,24 +57,23 @@
     <string name="action_resume">Devam et</string>
     <string name="action_install">Yükle</string>
     <string name="action_delete">Sil</string>
-    <string name="action_cancel">İptal</string>
     <string name="confirm_delete_dialog_title">Dosyayı sil</string>
     <string name="confirm_delete_dialog_message">Seçilen güncelleme dosyası silinsin mi?</string>
     <string name="pause_button">Duraklat</string>
     <string name="resume_button">Sürdür</string>
-    <string name="suspend_button">Askıya al</string>
     <string name="reboot">Yeniden başlat</string>
+    <string name="reboot_needed_dialog_title">Yeniden başlatma gerekli</string>
+    <string name="reboot_needed_dialog_summary">Güncellemenin kurulumunu tamamlamak için cihazınızın yeniden başlatılması gerekiyor. Şimdi yeniden başlatmak istiyor musunuz?</string>
     <string name="details_button">Ayrıntıları göster</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modunda yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> tuşuna basarsanız, cihaz arka planda yüklemeye başlayacaktır.\n\nİşlem tamamlandığında, yeniden başlatmanız istenir.</string>
-    <string name="cancel_installation_dialog_message">Yükleme iptal edilsin mi?</string>
     <string name="installing_update">Güncelleme paketi yükleniyor</string>
     <string name="installing_update_error">Yükleme hatası</string>
     <string name="installing_update_finished">Güncelleme yüklendi</string>
+    <string name="installing_update_ab_disable_incremental_summary">Eklenti veya özel çekirdek yüklenerek sistem bölümünüz değiştirildiği için ek yükleme başarısız oldu. Tam paketi indirip tekrar denemek ister misiniz?</string>
     <string name="finalizing_package">Paket kurulumu tamamlandı</string>
-    <string name="preparing_ota_first_boot">Ön yükleme için hazırlanıyor</string>
     <string name="dialog_prepare_zip_message">Güncelleme ön hazırlığı</string>
     <string name="dialog_battery_low_title">Düşük pil</string>
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>

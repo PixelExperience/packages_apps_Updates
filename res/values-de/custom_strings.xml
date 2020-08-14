@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Herunterladen abgeschlossen</string>
     <string name="download_starting_notification">Herunterladen wird gestartet</string>
     <string name="update_failed_notification">Update fehlgeschlagen</string>
-    <string name="installation_suspended_notification">Installation aufgeschoben</string>
     <string name="check_for_update">Nach Update suchen</string>
     <!-- Menu -->
     <string name="menu_delete_update">Löschen</string>
-    <string name="menu_copy_url">URL in Zwischenablage kopieren</string>
     <string name="menu_export_update">Update exportieren</string>
     <string name="menu_show_changelog">Änderungen in der aktuellen Version</string>
     <string name="changelog_loading">Wird geladen…</string>
-    <string name="label_download_url">URL herunterladen</string>
-    <string name="toast_download_url_copied">URL wurde kopiert</string>
     <!-- General -->
     <string name="update_found_notification">Systemaktualisierung verfügbar</string>
     <string name="snack_no_updates_found">Keine neuen Updates gefunden</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Die Update-Überprüfung ist fehlgeschlagen.</string>
     <string name="snack_download_verified">Herunterladen abgeschlossen.</string>
     <string name="snack_update_not_installable">Dieses Update kann nicht auf die bestehende Installation angewendet werden.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> von <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> von <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Update wird geprüft</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Fortsetzen</string>
     <string name="action_install">Installieren</string>
     <string name="action_delete">Löschen</string>
-    <string name="action_cancel">Abbrechen</string>
     <string name="confirm_delete_dialog_title">Datei löschen</string>
     <string name="confirm_delete_dialog_message">Soll die ausgewählte Update-Datei gelöscht werden?</string>
     <string name="pause_button">Anhalten</string>
     <string name="resume_button">Fortsetzen</string>
-    <string name="suspend_button">Aussetzen</string>
     <string name="reboot">Neustart</string>
     <string name="details_button">Details anzeigen</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Update installieren</string>
     <string name="apply_update_dialog_message">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s</xliff:g> drücken, wird das Gerät im Recovery-Modus gestartet, um das Update durchzuführen.\n\nHinweis: Diese Funktion erfordert ein kompatibles Recovery-System, anderenfalls muss das Update manuell installiert werden.</string>
     <string name="apply_update_dialog_message_ab">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s drücken</xliff:g>, beginnt das Gerät im Hintergrund mit der Installation\n\nSobald diese abgeschlossen ist, werden Sie zum Neustart aufgefordert.</string>
-    <string name="cancel_installation_dialog_message">Die Installation abbrechen?</string>
     <string name="installing_update">Update-Paket wird installiert</string>
     <string name="installing_update_error">Installationsfehler</string>
     <string name="installing_update_finished">Update installiert</string>
     <string name="finalizing_package">Die Paketinstallation wird abgeschlossen</string>
-    <string name="preparing_ota_first_boot">Erster Start wird vorbereitet</string>
     <string name="dialog_prepare_zip_message">Update wird vorbereitet</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="dialog_battery_low_message_pct">Der Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>

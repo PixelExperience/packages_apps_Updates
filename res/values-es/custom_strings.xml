@@ -30,25 +30,22 @@
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_starting_notification">Iniciando descarga</string>
     <string name="update_failed_notification">Actualización fallida</string>
-    <string name="installation_suspended_notification">Instalación suspendida</string>
     <string name="check_for_update">Verificar si existe nueva actualización</string>
     <!-- Menu -->
     <string name="menu_delete_update">Borrar</string>
-    <string name="menu_copy_url">Copiar URL</string>
     <string name="menu_export_update">Exportar actualización</string>
     <string name="menu_show_changelog">Cambios en la última versión</string>
     <string name="changelog_loading">Cargando…</string>
-    <string name="label_download_url">URL de descarga</string>
-    <string name="toast_download_url_copied">URL copiada</string>
+    <string name="menu_download_full_package">Descargar paquete completo</string>
+    <string name="menu_download_incremental_package">Descargar paquete incremental</string>
     <!-- General -->
     <string name="update_found_notification">Actualización disponible</string>
     <string name="snack_no_updates_found">No se encontraron nuevas actualizaciones</string>
-    <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor, verifique la conexión a Internet e inténtalo nuevamente.</string>
-    <string name="snack_download_failed">Descarga fallida. Compruebe la conexión a Internet e inténtelo nuevamente.</string>
+    <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor verifique la conexión a internet e intente nuevamente.</string>
+    <string name="snack_download_failed">Descarga fallida. Compruebe la conexión a Internet e intente nuevamente.</string>
     <string name="snack_download_verification_failed">La verificación de la actualización falló.</string>
     <string name="snack_download_verified">Descarga completada.</string>
-    <string name="snack_update_not_installable">Esta actualización no puede instalarse encima de la versión actual.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
+    <string name="snack_update_not_installable">Esta actualización no puede instalarse sobre de la versión actual.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> restantes) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verificando actualización</string>
@@ -60,24 +57,23 @@
     <string name="action_resume">Reanudar</string>
     <string name="action_install">Instalar</string>
     <string name="action_delete">Eliminar</string>
-    <string name="action_cancel">Cancelar</string>
     <string name="confirm_delete_dialog_title">Borrar archivo</string>
     <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Reanudar</string>
-    <string name="suspend_button">Suspender</string>
     <string name="reboot">Reiniciar</string>
+    <string name="reboot_needed_dialog_title">Es necesario reiniciar</string>
+    <string name="reboot_needed_dialog_summary">Para completar la instalación de la actualización, su dispositivo necesita ser reiniciado. Quiere reiniciarlo ahora? </string>
     <string name="details_button">Ver detalles</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar actualización</string>
     <string name="apply_update_dialog_message">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>.\n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, se reiniciará el dispositivo en modo «Recovery» para instalar la actualización.\n\nNota: Esta función requiere un «Recovery» compatible o las actualizaciones deberán instalarse manualmente.</string>
     <string name="apply_update_dialog_message_ab">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>. \n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, el dispositivo comenzará a instalar en segundo plano.\n\nUna vez terminado el proceso, se le pedirá que reinicie.</string>
-    <string name="cancel_installation_dialog_message">¿Cancelar la instalación?</string>
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Error de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
+    <string name="installing_update_ab_disable_incremental_summary">La instalación incremental ha fallado debido a que la partición de su sistema ha sido modificada instalando algún add-on o kernel personalizado. Quiere descargar el paquete completo e intentar nuevamente? </string>
     <string name="finalizing_package">Finalizando instalación del paquete</string>
-    <string name="preparing_ota_first_boot">Preparando para el primer arranque</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar de la actualización</string>
     <string name="dialog_battery_low_title">Batería baja</string>
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>

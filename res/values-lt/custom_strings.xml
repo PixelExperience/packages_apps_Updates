@@ -30,16 +30,14 @@
     <string name="download_completed_notification">Atsisiuntimas baigtas</string>
     <string name="download_starting_notification">Pradedamas atsiuntimas</string>
     <string name="update_failed_notification">Atnaujinti nepavyko</string>
-    <string name="installation_suspended_notification">Diegimas sustabdytas</string>
     <string name="check_for_update">Tikrinti atnaujinimus</string>
     <!-- Menu -->
     <string name="menu_delete_update">Pašalinti</string>
-    <string name="menu_copy_url">Kopijuoti URL</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
     <string name="menu_show_changelog">Dabartinės versijos pakeitimai</string>
     <string name="changelog_loading">Kraunama…</string>
-    <string name="label_download_url">Atsisiųsti URL</string>
-    <string name="toast_download_url_copied">URL nukopijuotas</string>
+    <string name="menu_download_full_package">Atsisiųskite visą paketą</string>
+    <string name="menu_download_incremental_package">Atsisiųsti papildomą paketą</string>
     <!-- General -->
     <string name="update_found_notification">Pasiekiami nauji atnaujinimai</string>
     <string name="snack_no_updates_found">Naujų atnaujinimų nerasta</string>
@@ -48,7 +46,6 @@
     <string name="snack_download_verification_failed">Atnaujinimo tikrinimas nepavyko.</string>
     <string name="snack_download_verified">Atsisiuntimas baigtas.</string>
     <string name="snack_update_not_installable">Šis atnaujinimas negali būti įdiegtas ant esamos versijos.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> z <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> iš <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> liko) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Tikrinamas atnaujinimas</string>
@@ -60,24 +57,23 @@
     <string name="action_resume">Tęsti</string>
     <string name="action_install">Įdiegti</string>
     <string name="action_delete">Ištrinti</string>
-    <string name="action_cancel">Atšaukti</string>
     <string name="confirm_delete_dialog_title">Ištrinti failą</string>
     <string name="confirm_delete_dialog_message">Ištrinti pasirinktą atnaujinimo failą?</string>
     <string name="pause_button">Pristabdyti</string>
     <string name="resume_button">Tęsti</string>
-    <string name="suspend_button">Sustabdyta</string>
     <string name="reboot">Perkrauti</string>
+    <string name="reboot_needed_dialog_title">Reikia paleisti iš naujo</string>
+    <string name="reboot_needed_dialog_summary">Norėdami baigti diegti naujinimą, jūsų įrenginys turi būti paleistas iš naujo. Ar norite paleisti iš naujo dabar?</string>
     <string name="details_button">Peržiūrėti informaciją</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Patvirtinti atnaujinimą</string>
     <string name="apply_update_dialog_message">Jūs ketinate atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf Jei paspausite <xliff:g id="ok">%2$s </xliff:g>, įrenginys bus paleistas iš naujo atkūrimo režimu, kad įdiegtų naujinimą: \n\n Pastaba: Ši funkcija reikalauja suderinamo atkūrimo arba atnaujinimo.</string>
     <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nKai atnaujins, prietaisas persikraus automatiškai.</string>
-    <string name="cancel_installation_dialog_message">Atšaukti diegimą?</string>
     <string name="installing_update">Diegiamas atnaujinimo paketas</string>
     <string name="installing_update_error">Įdiegimo klaida</string>
     <string name="installing_update_finished">Įdiegtas naujinimas</string>
+    <string name="installing_update_ab_disable_incremental_summary">Diegti nepavyko, nes jūsų sistemos skaidinys buvo modifikuotas įdiegiant kažkokį priedą arba pasirinktinį branduolį. Ar norite atsisiųsti visą paketą ir bandyti dar kartą?</string>
     <string name="finalizing_package">Baigiamas paketo diegimas</string>
-    <string name="preparing_ota_first_boot">Pasiruošiama pirmam įkrovimui</string>
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas, jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos, kad tęstumėte, <xliff:g id="procentu_krovimas">%2$d</xliff:g>%%, jei įkraunama.</string>

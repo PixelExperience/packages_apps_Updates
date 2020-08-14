@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Pobieranie zakończone</string>
     <string name="download_starting_notification">Rozpoczęcie pobierania</string>
     <string name="update_failed_notification">Aktualizacja nie powiodła się</string>
-    <string name="installation_suspended_notification">Instalacja zawieszona</string>
     <string name="check_for_update">Sprawdź czy są dostępne nowe aktualizacje</string>
     <!-- Menu -->
     <string name="menu_delete_update">Usuń</string>
-    <string name="menu_copy_url">Kopiuj adres URL</string>
     <string name="menu_export_update">Wyślij aktualizację</string>
     <string name="menu_show_changelog">Zmiany w obecnej wersji</string>
     <string name="changelog_loading">Ładowanie…</string>
-    <string name="label_download_url">Pobierz adres URL</string>
-    <string name="toast_download_url_copied">Skopiowano adres URL</string>
     <!-- General -->
     <string name="update_found_notification">Aktualizacja systemu jest dostępna</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Weryfikacja aktualizacji nie powiodła się. </string>
     <string name="snack_download_verified">Pobieranie zakończone.</string>
     <string name="snack_update_not_installable">Ta aktualizacja nie może zostać zainstalowana na bieżącej wersji systemu.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Sprawdzanie aktualizacji</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Wznów</string>
     <string name="action_install">Instaluj</string>
     <string name="action_delete">Usuń</string>
-    <string name="action_cancel">Anuluj</string>
     <string name="confirm_delete_dialog_title">Usuń plik</string>
     <string name="confirm_delete_dialog_message">Usunąć wybrany plik?</string>
     <string name="pause_button">Wstrzymaj</string>
     <string name="resume_button">Wznów</string>
-    <string name="suspend_button">Zawieś</string>
     <string name="reboot">Uruchom ponownie</string>
     <string name="details_button">Pokaż szczegóły</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Zastosuj aktualizację</string>
     <string name="apply_update_dialog_message">Masz zamiar zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>.\n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie uruchomi się ponownie w trybie recovery, aby zainstalować aktualizację.\n\nUwaga: Ta funkcja wymaga kompatybilnego recovery, w innym przypadku aktualizację należy zainstalować ręcznie.</string>
     <string name="apply_update_dialog_message_ab">Masz zamiar zaktualizować do <xliff:g id="filename">%1$s</xliff:g>. \n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie zacznie instalować w tle.\n\nPo zakończeniu wyświetli komunikat, aby urządzenie uruchomić ponownie.</string>
-    <string name="cancel_installation_dialog_message">Anulować instalację?</string>
     <string name="installing_update">Instalowanie pakietu aktualizacji</string>
     <string name="installing_update_error">Błąd instalacji</string>
     <string name="installing_update_finished">Zainstalowano aktualizację</string>
     <string name="finalizing_package">Kończenie instalacji pakietu</string>
-    <string name="preparing_ota_first_boot">Przygotowanie do pierwszego uruchomienia</string>
     <string name="dialog_prepare_zip_message">Przygotowanie wstępne aktualizacji</string>
     <string name="dialog_battery_low_title">Niskim poziom baterii</string>
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>

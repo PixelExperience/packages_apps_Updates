@@ -30,16 +30,12 @@
     <string name="download_completed_notification">Sťahovanie dokončené</string>
     <string name="download_starting_notification">Spúšťam sťahovanie</string>
     <string name="update_failed_notification">Aktualizácia zlyhala</string>
-    <string name="installation_suspended_notification">Inštalácia bola odložená</string>
     <string name="check_for_update">Vyhľadať aktualizáciu</string>
     <!-- Menu -->
     <string name="menu_delete_update">Vymazať</string>
-    <string name="menu_copy_url">Kopírovať URL</string>
     <string name="menu_export_update">Export aktualizácie</string>
     <string name="menu_show_changelog">Zmeny v aktuálnej verzii</string>
     <string name="changelog_loading">Načítavanie...</string>
-    <string name="label_download_url">URL adresa</string>
-    <string name="toast_download_url_copied">URL skopírované</string>
     <!-- General -->
     <string name="update_found_notification">Aktualizácia systému je k dispozícii</string>
     <string name="snack_no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
@@ -48,7 +44,6 @@
     <string name="snack_download_verification_failed">Overovanie aktualizácie zlyhalo.</string>
     <string name="snack_download_verified">Sťahovanie dokončené.</string>
     <string name="snack_update_not_installable">Táto aktualizácia sa nedá nainštalovať na aktuálnu zostavu.</string>
-    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Overujem aktualizáciu</string>
@@ -60,24 +55,20 @@
     <string name="action_resume">Pokračovať</string>
     <string name="action_install">Nainštalovať</string>
     <string name="action_delete">Odstrániť</string>
-    <string name="action_cancel">Zrušiť</string>
     <string name="confirm_delete_dialog_title">Vymazať súbor</string>
     <string name="confirm_delete_dialog_message">Vymazať vybraný súbor aktualizácie?</string>
     <string name="pause_button">Pozastaviť</string>
     <string name="resume_button">Obnoviť</string>
-    <string name="suspend_button">Pozastavené</string>
     <string name="reboot">Reštartovať</string>
     <string name="details_button">Podrobnosti</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
     <string name="apply_update_dialog_message">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>
     <string name="apply_update_dialog_message_ab">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie začne inštaláciu v pozadí.\n\nPo ukončení budete vyzvaný na reštart.</string>
-    <string name="cancel_installation_dialog_message">Zrušiť inštaláciu?</string>
     <string name="installing_update">Inštalácia balíka aktualizácií</string>
     <string name="installing_update_error">Chyba pri inštalácii</string>
     <string name="installing_update_finished">Aktualizácia nainštalovaná</string>
     <string name="finalizing_package">Dokončuje sa inštalácia balíka</string>
-    <string name="preparing_ota_first_boot">Príprava na prvé spustenie</string>
     <string name="dialog_prepare_zip_message">Predbežná príprava aktualizácie</string>
     <string name="dialog_battery_low_title">Vybitá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
