@@ -76,7 +76,7 @@
     <string name="installing_update">Installing update package</string>
     <string name="installing_update_error">Install error</string>
     <string name="installing_update_finished">Update installed</string>
-    <string name="installing_update_ab_disable_incremental_summary">It seems that the installation failed, this was because you downloaded an incremental update and your system has been modified previously. Do you want to download a full package and try again?\n\nYou can change this later in the settings.</string>
+    <string name="installing_update_ab_disable_incremental_summary">Incremental installation failed because your system partition was modified by installing some add-on or custom kernel. Do you want to download the full package and try again?</string>
     <string name="finalizing_package">Finalizing package installation</string>
     <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
     <string name="dialog_battery_low_title">Low battery</string>
