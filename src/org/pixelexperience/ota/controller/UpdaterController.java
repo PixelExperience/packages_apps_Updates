@@ -183,7 +183,7 @@ public class UpdaterController {
                     removeDownloadClient(mDownloadEntry);
                     update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
                     notifyUpdateChange(UpdateStatus.DOWNLOAD_ERROR);
-                    removeUpdate();
+                    removeUpdate(true);
                 }
                 tryReleaseWakelock();
             }
@@ -319,7 +319,7 @@ public class UpdaterController {
             Log.e(TAG, "Could not build download client");
             update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
             notifyUpdateChange(UpdateStatus.DOWNLOAD_ERROR);
-            removeUpdate();
+            removeUpdate(true);
             return;
         }
         addDownloadClient(mDownloadEntry, downloadClient);
@@ -341,7 +341,7 @@ public class UpdaterController {
             Log.e(TAG, "The destination file doesn't exist, can't resume");
             update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
             notifyUpdateChange(UpdateStatus.DOWNLOAD_ERROR);
-            removeUpdate();
+            removeUpdate(true);
             return;
         }
         if (file.exists() && update.getFileSize() > 0 && file.length() >= update.getFileSize()) {
@@ -363,7 +363,7 @@ public class UpdaterController {
                 Log.e(TAG, "Could not build download client");
                 update.setStatus(UpdateStatus.DOWNLOAD_ERROR);
                 notifyUpdateChange(UpdateStatus.DOWNLOAD_ERROR);
-                removeUpdate();
+                removeUpdate(true);
                 return;
             }
             addDownloadClient(mDownloadEntry, downloadClient);
@@ -389,18 +389,18 @@ public class UpdaterController {
         return true;
     }
 
-    public void removeUpdate() {
-        removeUpdate(false);
+    public void removeUpdate(boolean cleanupLocalOnly) {
+        Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
+        Utils.cleanupDownloadsDir(mContext);
+        if (!cleanupLocalOnly){
+            mDownloadEntry.mUpdate = null;
+        }
     }
 
-    public void removeUpdate(boolean notify) {
-        Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
-        mDownloadEntry.mUpdate = null;
-        Utils.cleanupDownloadsDir(mContext);
-        if (notify) {
-            notifyUpdateDelete();
-            notifyUpdateChange(UpdateStatus.UNKNOWN);
-        }
+    public void removeUpdateAndNotify() {
+        removeUpdate(false);
+        notifyUpdateDelete();
+        notifyUpdateChange(UpdateStatus.UNKNOWN);
     }
 
     public void setShouldUseIncremental(boolean shouldUse) {
@@ -409,7 +409,7 @@ public class UpdaterController {
         mBroadcastManager.sendBroadcast(intent);
         Utils.setShouldUseIncremental(mContext, shouldUse);
         new Thread(() -> {
-            removeUpdate();
+            removeUpdate(false);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
