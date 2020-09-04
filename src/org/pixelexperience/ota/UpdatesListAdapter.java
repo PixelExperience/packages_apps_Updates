@@ -396,7 +396,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 .setPositiveButton(android.R.string.ok,
                         (dialog, which) -> {
                             mUpdaterController.pauseDownload();
-                            mUpdaterController.removeUpdate(true);
+                            mUpdaterController.removeUpdateAndNotify();
                         })
                 .setNegativeButton(android.R.string.cancel, null);
     }

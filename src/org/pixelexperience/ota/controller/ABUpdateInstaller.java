@@ -107,7 +107,7 @@ public class ABUpdateInstaller {
                 case UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT: {
                     installationDone(true);
                     update.setInstallProgress(0);
-                    mUpdaterController.removeUpdate();
+                    mUpdaterController.removeUpdate(false);
                 }
                 break;
 
