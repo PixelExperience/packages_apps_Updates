@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
+    <string name="app_name">Actualización do sistema</string>
     <!-- Notifications -->
     <string name="export_channel_title">Exportación completada</string>
     <string name="new_updates_channel_title">Novas actualizacións</string>
@@ -29,12 +30,16 @@
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_starting_notification">Comezando a descarga</string>
     <string name="update_failed_notification">Erro ao actualizar</string>
+    <string name="check_for_update">Comprobar se hai actualizacións</string>
     <!-- Menu -->
     <string name="menu_delete_update">Eliminar</string>
     <string name="menu_export_update">Exportar actualización</string>
     <string name="menu_show_changelog">Cambios na version Actual</string>
     <string name="changelog_loading">A cargar…</string>
+    <string name="menu_download_full_package">Descarga o paquete completo</string>
+    <string name="menu_download_incremental_package">Descargar paquete incremental</string>
     <!-- General -->
+    <string name="update_found_notification">Actualización do sistema dispoñíbel</string>
     <string name="snack_no_updates_found">Non se atoparon novas actualizacións</string>
     <string name="snack_updates_check_failed">A verificación da descarga fallou. Comproba a túa conexión a internet e téntao de novo.</string>
     <string name="snack_download_failed">Produciuse un erro na descarga. Comproba a túa conexión a internet e téntao de novo.</string>
@@ -44,6 +49,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new">restan <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Comprobando actualización</string>
+    <string name="list_no_updates">Non se atopou unha nova actualización.</string>
     <string name="blocked_update_dialog_title">Actualización bloqueada</string>
     <!-- Actions -->
     <string name="action_download">Descarga</string>
@@ -56,6 +62,8 @@
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Continuar</string>
     <string name="reboot">Reiniciar</string>
+    <string name="reboot_needed_dialog_title">Reinicio necesario</string>
+    <string name="reboot_needed_dialog_summary">Para completar a instalación da actualización, cómpre reiniciar o dispositivo.  ¿Queres reiniciar agora?</string>
     <string name="details_button">Ver detalles</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar a actualización</string>
@@ -64,11 +72,15 @@
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Erro de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
+    <string name="installing_update_ab_disable_incremental_summary">Fallou a instalación incremental porque se modificou a partición do sistema instalando algún complemento ou núcleo personalizado.  ¿Queres descargar o paquete completo e tentalo de novo?</string>
     <string name="finalizing_package">Rematando a instalación do paquete</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar da actualización</string>
     <string name="dialog_battery_low_title">Batería baixa</string>
     <string name="dialog_battery_low_message_pct">O nivel da batería é demasiado baixo, necesita ao menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se o dispositivo estase a cargar.</string>
     <!-- Export update -->
+    <string name="dialog_export_title">Enviada a actualización ao almacenamento interno</string>
+    <string name="notification_export_success">Enviada a actualización ao almacenamento interno</string>
+    <string name="notification_export_fail">Fallou o envío da actualización ao almacenamento interno</string>
     <string name="toast_already_exporting">Xa se está a exportar unha actualización</string>
     <!-- ETA -->
     <plurals name="eta_seconds">

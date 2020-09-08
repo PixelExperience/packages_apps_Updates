@@ -18,14 +18,14 @@
     <!-- App name -->
     <string name="app_name">系统更新</string>
     <!-- Notifications -->
-    <string name="export_channel_title">导出完成</string>
+    <string name="export_channel_title">导出已完成</string>
     <string name="new_updates_channel_title">新的更新</string>
-    <string name="ongoing_channel_title">正在开始下载</string>
+    <string name="ongoing_channel_title">当前下载</string>
     <string name="update_failed_channel_title">更新失败</string>
     <string name="verification_failed_notification">验证失败</string>
     <string name="verifying_download_notification">正在验证更新</string>
     <string name="downloading_notification">正在下载</string>
-    <string name="download_paused_notification">已暂停下载</string>
+    <string name="download_paused_notification">下载已暂停</string>
     <string name="download_paused_error_notification">下载错误</string>
     <string name="download_completed_notification">下载完成</string>
     <string name="download_starting_notification">正在开始下载</string>
@@ -72,8 +72,9 @@
     <string name="installing_update">正在安装更新包</string>
     <string name="installing_update_error">安装错误</string>
     <string name="installing_update_finished">更新已安装</string>
-    <string name="finalizing_package">正在完成包安装</string>
-    <string name="dialog_prepare_zip_message">预备更新准备</string>
+    <string name="installing_update_ab_disable_incremental_summary">增量更新失败，这是由于你安装的第三方内核或模块篡改了您的系统分区。您想要下载全量包并重试吗？</string>
+    <string name="finalizing_package">正在完成更新包安装</string>
+    <string name="dialog_prepare_zip_message">正在准备更新</string>
     <string name="dialog_battery_low_title">低电量</string>
     <string name="dialog_battery_low_message_pct">电池电量过低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的电量才能继续；如果正在充电，则需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的电量才能继续。</string>
     <!-- Export update -->
@@ -94,7 +95,7 @@
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">移动数据使用警告</string>
     <string name="update_on_mobile_data_message">您将通过移动数据网络下载更新包，这可能会导致较大的数据用量，是否继续？</string>
-    <string name="checkbox_mobile_data_warning">不再询问</string>
+    <string name="checkbox_mobile_data_warning">以后不要再显示</string>
     <!-- Info section -->
     <string name="maintainer_info_title">维护者</string>
     <string name="donate_info_title">捐赠</string>

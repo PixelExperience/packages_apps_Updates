@@ -36,6 +36,8 @@
     <string name="menu_export_update">Xuất bản cập nhật</string>
     <string name="menu_show_changelog">Thay đổi trong phiên bản hiện tại</string>
     <string name="changelog_loading">Đang tải…</string>
+    <string name="menu_download_full_package">Tải xuống gói đầy đủ</string>
+    <string name="menu_download_incremental_package">Tải xuống gói gia tăng</string>
     <!-- General -->
     <string name="update_found_notification">Bản cập nhật hệ thống đã có</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Tạm dừng</string>
     <string name="resume_button">Tiếp tục</string>
     <string name="reboot">Khởi động lại</string>
+    <string name="reboot_needed_dialog_title">Cần phải khởi động lại.</string>
+    <string name="reboot_needed_dialog_summary">Để hoàn tất quá trình cài đặt bản cập nhật, thiết bị của bạn cần được khởi động lại. Bạn có muốn khởi động lại bây giờ không?</string>
     <string name="details_button">Xem chi tiết</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Áp dụng cập nhật</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Đang cài đặt gói cập nhật</string>
     <string name="installing_update_error">Lỗi cài đặt</string>
     <string name="installing_update_finished">Đã cài đặt bản cập nhật</string>
+    <string name="installing_update_ab_disable_incremental_summary">Cài đặt tăng dần không thành công vì phân vùng hệ thống của bạn đã bị sửa đổi bằng cách cài đặt một số tiện ích bổ sung hoặc nhân tùy chỉnh. Bạn có muốn tải xuống gói đầy đủ và thử lại không?</string>
     <string name="finalizing_package">Đang hoàn tất gói cài đặt</string>
     <string name="dialog_prepare_zip_message">Chuẩn bị cập nhật sơ bộ</string>
     <string name="dialog_battery_low_title">Pin yếu</string>

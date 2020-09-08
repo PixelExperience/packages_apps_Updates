@@ -36,6 +36,8 @@
     <string name="menu_export_update">Eksporter oppdatering</string>
     <string name="menu_show_changelog">Endringer i nåværende versjon</string>
     <string name="changelog_loading">Laster inn…</string>
+    <string name="menu_download_full_package">Last ned hele oppdateringen</string>
+    <string name="menu_download_incremental_package">Last ned inkrementell oppdatering</string>
     <!-- General -->
     <string name="update_found_notification">Systemoppdatering tilgjengelig</string>
     <string name="snack_no_updates_found">Ingen nye oppdateringer funnet</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pause</string>
     <string name="resume_button">Gjenoppta</string>
     <string name="reboot">Start på nytt</string>
+    <string name="reboot_needed_dialog_title">Omstart nødvendig</string>
+    <string name="reboot_needed_dialog_summary">For å fullføre installasjonen av oppdateringen må enheten startes på nytt. Ønsker du å starte på nytt nå?</string>
     <string name="details_button">Vis detaljer</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Installer oppdatering</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Installerer oppdateringspakke</string>
     <string name="installing_update_error">Installasjonsfeil</string>
     <string name="installing_update_finished">Oppdatering installert</string>
+    <string name="installing_update_ab_disable_incremental_summary">Installasjon av inkrementell oppdatering mislyktes fordi systempartisjonen har blitt modifisert gjennom installasjon av tillegg eller kjerne. Ønsker du å laste ned hele oppdateringen og prøve på nytt?</string>
     <string name="finalizing_package">Fullfører pakkeinstallsjon</string>
     <string name="dialog_prepare_zip_message">Forhåndsregler tas før oppdatering</string>
     <string name="dialog_battery_low_title">Lavt batterinivå</string>

@@ -36,6 +36,8 @@
     <string name="menu_export_update">Exporter la mise à jour</string>
     <string name="menu_show_changelog">Changements dans la version actuelle</string>
     <string name="changelog_loading">Chargement…</string>
+    <string name="menu_download_full_package">Télécharger le paquet entier </string>
+    <string name="menu_download_incremental_package">Télécharger une partie du paquet</string>
     <!-- General -->
     <string name="update_found_notification">Une mise à jour système est disponible</string>
     <string name="snack_no_updates_found">Aucune nouvelle mise à jour disponible</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pause </string>
     <string name="resume_button">Reprendre</string>
     <string name="reboot">Redémarrer</string>
+    <string name="reboot_needed_dialog_title">Redémarrage nécessaire</string>
+    <string name="reboot_needed_dialog_summary">Pour terminer la mise à jour, votre appareil à besoin de redémarrer. Voulez vous redémarrer maintenant ?</string>
     <string name="details_button">Voir les détails</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Appliquer la mise à jour</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Installation du paquet de mise à jour en cours</string>
     <string name="installing_update_error">Erreur d\'installation</string>
     <string name="installing_update_finished">Mise à jour installée</string>
+    <string name="installing_update_ab_disable_incremental_summary">L\'installation partielle à échouée car la partition de votre système à été modifiée en installant des add-ons ou un noyau custom. Voulez vous télécharger la mise à jour complète et réessayer ?</string>
     <string name="finalizing_package">Finalisation de l’installation du paquet</string>
     <string name="dialog_prepare_zip_message">Préparation de la mise à jour préliminaire</string>
     <string name="dialog_battery_low_title">Batterie faible</string>

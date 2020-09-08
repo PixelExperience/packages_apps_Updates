@@ -36,6 +36,8 @@
     <string name="menu_export_update">Wyślij aktualizację</string>
     <string name="menu_show_changelog">Zmiany w obecnej wersji</string>
     <string name="changelog_loading">Ładowanie…</string>
+    <string name="menu_download_full_package">Pobierz pełny pakiet</string>
+    <string name="menu_download_incremental_package">Pobierz pakiet przyrostowy</string>
     <!-- General -->
     <string name="update_found_notification">Aktualizacja systemu jest dostępna</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Wstrzymaj</string>
     <string name="resume_button">Wznów</string>
     <string name="reboot">Uruchom ponownie</string>
+    <string name="reboot_needed_dialog_title">Restart needed</string>
+    <string name="reboot_needed_dialog_summary">Aby zakończyć instalację aktualizacji, należy ponownie uruchomić urządzenie. Czy chcesz teraz ponownie uruchomić?</string>
     <string name="details_button">Pokaż szczegóły</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Zastosuj aktualizację</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Instalowanie pakietu aktualizacji</string>
     <string name="installing_update_error">Błąd instalacji</string>
     <string name="installing_update_finished">Zainstalowano aktualizację</string>
+    <string name="installing_update_ab_disable_incremental_summary">Instalacja przyrostowa nie powiodła się, ponieważ partycja systemowa została zmodyfikowana przez zainstalowanie dodatkowego lub niestandardowego jądra. Czy chcesz pobrać pełny pakiet i spróbować ponownie?</string>
     <string name="finalizing_package">Kończenie instalacji pakietu</string>
     <string name="dialog_prepare_zip_message">Przygotowanie wstępne aktualizacji</string>
     <string name="dialog_battery_low_title">Niskim poziom baterii</string>

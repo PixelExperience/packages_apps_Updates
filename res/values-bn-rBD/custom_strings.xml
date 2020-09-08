@@ -59,6 +59,14 @@
     <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
     <!-- Export update -->
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">১ সেকেন্ড বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> সেকেন্ড বাকি</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">১ মিনিট বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> মিনিট বাকি</item>
+    </plurals>
     <plurals name="eta_hours">
         <item quantity="one">১ ঘণ্টা বাকি</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ঘণ্টা বাকি</item>

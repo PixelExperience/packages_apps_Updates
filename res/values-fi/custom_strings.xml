@@ -36,8 +36,8 @@
     <string name="menu_export_update">Vie päivitys</string>
     <string name="menu_show_changelog">Muutokset nykyiseen versioon</string>
     <string name="changelog_loading">Ladataan…</string>
-    <string name="menu_download_full_package">Lataa täys paketti</string>
-    <string name="menu_download_incremental_package">Lataa lisä paketti</string>
+    <string name="menu_download_full_package">Lataa täysipaketti</string>
+    <string name="menu_download_incremental_package">Lataa lisäpaketti</string>
     <!-- General -->
     <string name="update_found_notification">Päivitys on saatavilla</string>
     <string name="snack_no_updates_found">Uusia päivityksiä ei löytynyt</string>
@@ -62,8 +62,8 @@
     <string name="pause_button">Tauko</string>
     <string name="resume_button">Jatka</string>
     <string name="reboot">Käynnistä uudelleen</string>
-    <string name="reboot_needed_dialog_title">Uudelleen käynnistys tarvitaan</string>
-    <string name="reboot_needed_dialog_summary">Päivityksen asentamisen loppuun saattamiseen tarvitaan uudelleen käynnistys. Haluatko uudelleen käynnistyksen nyt?</string>
+    <string name="reboot_needed_dialog_title">Uudelleenkäynnistys tarvitaan</string>
+    <string name="reboot_needed_dialog_summary">Päivityksen asentamisen loppuunsaattamiseksi tarvitaan uudelleenkäynnistys. Haluatko käynnistää uudelleen nyt?</string>
     <string name="details_button">Näytä tiedot</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Asenna päivitys</string>

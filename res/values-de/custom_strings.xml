@@ -36,6 +36,8 @@
     <string name="menu_export_update">Update exportieren</string>
     <string name="menu_show_changelog">Änderungen in der aktuellen Version</string>
     <string name="changelog_loading">Wird geladen…</string>
+    <string name="menu_download_full_package">Vollständiges Paket herunterladen</string>
+    <string name="menu_download_incremental_package">Inkrementelles Paket herunterladen</string>
     <!-- General -->
     <string name="update_found_notification">Systemaktualisierung verfügbar</string>
     <string name="snack_no_updates_found">Keine neuen Updates gefunden</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Anhalten</string>
     <string name="resume_button">Fortsetzen</string>
     <string name="reboot">Neustart</string>
+    <string name="reboot_needed_dialog_title">Neustart erforderlich</string>
+    <string name="reboot_needed_dialog_summary">Um die Installation des Updates abzuschließen, muss Ihr Gerät neu gestartet werden. Möchtest du es jetzt neu starten?</string>
     <string name="details_button">Details anzeigen</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Update installieren</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Update-Paket wird installiert</string>
     <string name="installing_update_error">Installationsfehler</string>
     <string name="installing_update_finished">Update installiert</string>
+    <string name="installing_update_ab_disable_incremental_summary">Die inkrementelle Installation ist fehlgeschlagen, da Ihre Systempartition durch die Installation eines Add-Ons oder eines benutzerdefinierten Kernels geändert wurde. Möchten Sie das vollständige Paket herunterladen und erneut versuchen?</string>
     <string name="finalizing_package">Die Paketinstallation wird abgeschlossen</string>
     <string name="dialog_prepare_zip_message">Update wird vorbereitet</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>

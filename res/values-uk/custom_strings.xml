@@ -36,6 +36,8 @@
     <string name="menu_export_update">Експорт оновлення</string>
     <string name="menu_show_changelog">Зміни поточної версії</string>
     <string name="changelog_loading">Завантаження…</string>
+    <string name="menu_download_full_package">Завантажити повний пакет</string>
+    <string name="menu_download_incremental_package">Завантажте додатковий пакет</string>
     <!-- General -->
     <string name="update_found_notification">Доступне оновлення системи</string>
     <string name="snack_no_updates_found">Оновлень не знайдено</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Продовжити</string>
     <string name="reboot">Перезавантаження</string>
+    <string name="reboot_needed_dialog_title">Необхідне перезавантаження</string>
+    <string name="reboot_needed_dialog_summary">Щоб завершити встановлення оновлення, необхідно перезавантажити пристрій. Ви бажаєте перезавантажити зараз?</string>
     <string name="details_button">Детальніше</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Застосувати оновлення</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Пакунок оновлення встановлюється</string>
     <string name="installing_update_error">Помилка встановлення</string>
     <string name="installing_update_finished">Оновлення встановлено</string>
+    <string name="installing_update_ab_disable_incremental_summary">Інкрементальне встановлення не вдалось, оскільки ваш системний розділ було змінено, встановлено якусь надбудову або користувацьке ядро. Ви хочете завантажити повний пакет і спробувати ще раз?</string>
     <string name="finalizing_package">Завершення встановлення</string>
     <string name="dialog_prepare_zip_message">Підготовка оновлення</string>
     <string name="dialog_battery_low_title">Низький заряд батареї</string>

@@ -36,6 +36,8 @@
     <string name="menu_export_update">Извези ажурирања</string>
     <string name="menu_show_changelog">Промене у тренутној верзији</string>
     <string name="changelog_loading">Учитавање…</string>
+    <string name="menu_download_full_package">Преузми цео пакет</string>
+    <string name="menu_download_incremental_package">Преузми инкрементални пакет</string>
     <!-- General -->
     <string name="update_found_notification">Ажурирање система је доступно.</string>
     <string name="snack_no_updates_found">Нису пронађена нова ажурирања</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Настави</string>
     <string name="reboot">Покрени поново</string>
+    <string name="reboot_needed_dialog_title">Потребно је поновно покретање</string>
+    <string name="reboot_needed_dialog_summary">Да би се завршило ажурирање, уређај мора да се рестартује. Да ли желите да рестартујете сада?</string>
     <string name="details_button">Прикажи детаље</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Примени ажурирање</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Инсталирање ажурирања</string>
     <string name="installing_update_error">Грешка у инсталацији</string>
     <string name="installing_update_finished">Инсталиране исправке</string>
+    <string name="installing_update_ab_disable_incremental_summary">Инкрементално ажурирање није успело јер је ваша системска партиција модификована инсталацијом неког додатка или неког другог кернела. Да ли желите да преузмете цео пакет и покушате поново?</string>
     <string name="finalizing_package">Довршавање инсталације пакета</string>
     <string name="dialog_prepare_zip_message">Припрема прелиминарних ажурирања</string>
     <string name="dialog_battery_low_title">Слаба батерија</string>

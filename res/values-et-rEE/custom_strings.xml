@@ -36,6 +36,8 @@
     <string name="menu_export_update">Ekspordi värskendus</string>
     <string name="menu_show_changelog">Muudatused praeguses versioonis</string>
     <string name="changelog_loading">Laadimine…</string>
+    <string name="menu_download_full_package">Laadige alla täielik pakett</string>
+    <string name="menu_download_incremental_package">Laadige juurde lisapakett</string>
     <!-- General -->
     <string name="update_found_notification">Süsteemivärskendus on saadaval</string>
     <string name="snack_no_updates_found">Uusi värskendusi ei ole</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Paus</string>
     <string name="resume_button">Jätka</string>
     <string name="reboot">Taaskäivita</string>
+    <string name="reboot_needed_dialog_title">Taaskäivitamine vajalik</string>
+    <string name="reboot_needed_dialog_summary">Uuenduse installimise lõpuleviimiseks tuleb seade taaskäivitada. Kas soovite kohe taaskäivitada?</string>
     <string name="details_button">Vaata detaile</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Rakenda värskendus</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Värskenduspaketi installimine</string>
     <string name="installing_update_error">Installimisviga</string>
     <string name="installing_update_finished">Värskendus installitud</string>
+    <string name="installing_update_ab_disable_incremental_summary">Lisanduv installimine nurjus, kuna teie süsteemi sektsiooni muudeti mõne lisandmooduli või kohandatud kerneli installimisega. Kas soovite alla laadida kogu paketi ja proovida uuesti?</string>
     <string name="finalizing_package">Paketi installimise lõpetamine</string>
     <string name="dialog_prepare_zip_message">Esmane värskendamise ettevalmistamine</string>
     <string name="dialog_battery_low_title">Madal akutase</string>

@@ -36,6 +36,8 @@
     <string name="menu_export_update">Экспорт обновления</string>
     <string name="menu_show_changelog">Изменения в текущей версии</string>
     <string name="changelog_loading">Загрузка…</string>
+    <string name="menu_download_full_package">Загрузить полную версию</string>
+    <string name="menu_download_incremental_package">Загрузить OTA-пакет (минимальный)</string>
     <!-- General -->
     <string name="update_found_notification">Доступно обновление системы</string>
     <string name="snack_no_updates_found">Обновлений не найдено</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Продолжить</string>
     <string name="reboot">Перезапуск</string>
+    <string name="reboot_needed_dialog_title">Требуется перезагрузка</string>
+    <string name="reboot_needed_dialog_summary">Чтобы завершить установку обновления, необходимо перезагрузить устройство. Вы хотите перезапустить сейчас?</string>
     <string name="details_button">Подробнее</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Применить обновление</string>

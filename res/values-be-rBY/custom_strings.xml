@@ -36,6 +36,8 @@
     <string name="menu_export_update">Экспарт абнаўлення</string>
     <string name="menu_show_changelog">Змены ў бягучай версіі</string>
     <string name="changelog_loading">Загрузка…</string>
+    <string name="menu_download_full_package">Спампаваць поўны пакет</string>
+    <string name="menu_download_incremental_package">Спампаваць дадатковы пакет</string>
     <!-- General -->
     <string name="update_found_notification">Даступна абнаўленне сістэмы</string>
     <string name="snack_no_updates_found">Абнаўленні не знойдзены</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Прыпыніць</string>
     <string name="resume_button">Працягнуць</string>
     <string name="reboot">Перазапуск</string>
+    <string name="reboot_needed_dialog_title">Патрабуецца перазагрузка</string>
+    <string name="reboot_needed_dialog_summary">Для завяршэння ўсталёўкі абнаўлення неабходна перазагрузіць прыладу.  Вы хочаце перазагрузіць зараз?</string>
     <string name="details_button">Паказаць падрабязнасці</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Прымяніць абнаўленне</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Усталёўка абнаўлення</string>
     <string name="installing_update_error">Памылка ўсталёўкі</string>
     <string name="installing_update_finished">Абнаўленне ўсталявана</string>
+    <string name="installing_update_ab_disable_incremental_summary">Паэтапная ўсталёўка перапынілася з-за таго, што ваш сістэмны падзел быў зменены усталёўкай якога-небудзь дапаўнення або кастамнага ядра.  Хочаце спампаваць поўны пакет і паспрабаваць яшчэ раз?</string>
     <string name="finalizing_package">Завяршэнне ўсталёўкі</string>
     <string name="dialog_prepare_zip_message">Падрыхтоўка абнаўлення</string>
     <string name="dialog_battery_low_title">Нізкі узровень батарэі</string>

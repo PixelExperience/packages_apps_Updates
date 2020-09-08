@@ -36,6 +36,8 @@
     <string name="menu_export_update">Esporta aggiornamento</string>
     <string name="menu_show_changelog">Cronologia versioni</string>
     <string name="changelog_loading">Caricamento…</string>
+    <string name="menu_download_full_package">Scaricare pacchetto completo</string>
+    <string name="menu_download_incremental_package">Scaricare pacchetto incrementale</string>
     <!-- General -->
     <string name="update_found_notification">Aggiornamento di sistema disponibile</string>
     <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pausa</string>
     <string name="resume_button">Riprendi</string>
     <string name="reboot">Riavvia</string>
+    <string name="reboot_needed_dialog_title">Riavvio necessario</string>
+    <string name="reboot_needed_dialog_summary">Per completare l\'installazione dell\'aggiornamento, il dispositivo dev\'essere riavviato. Riavviare ora?</string>
     <string name="details_button">Vedi dettagli</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Installa aggiornamento</string>
@@ -68,6 +72,8 @@
     <string name="installing_update">Installazione dell\'aggiornamento</string>
     <string name="installing_update_error">Errore di installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
+    <string name="installing_update_ab_disable_incremental_summary">L\'installazione incrementale è fallita perché la partizione di sistema è stata modificata dall\'installazione di un add-on o di un kernel personalizzato.
+Scaricare il pacchetto completo e riprovare?</string>
     <string name="finalizing_package">Completamento dell\'installazione in corso</string>
     <string name="dialog_prepare_zip_message">Preparazione dell\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>

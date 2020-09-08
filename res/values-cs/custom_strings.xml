@@ -36,6 +36,8 @@
     <string name="menu_export_update">Export aktualizace</string>
     <string name="menu_show_changelog">Změny v aktuální verzi</string>
     <string name="changelog_loading">Načítání…</string>
+    <string name="menu_download_full_package">Stáhnout celý balíček</string>
+    <string name="menu_download_incremental_package">Stáhnout přírůstkový balíček</string>
     <!-- General -->
     <string name="update_found_notification">Je dostupná aktualizace systému</string>
     <string name="snack_no_updates_found">Nové aktualizace nenalezeny</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pozastavit</string>
     <string name="resume_button">Pokračovat</string>
     <string name="reboot">Restartovat</string>
+    <string name="reboot_needed_dialog_title">Je třeba restartovat</string>
+    <string name="reboot_needed_dialog_summary">K dokončení instalace aktualizace je třeba zařízení restartovat. Chcete nyní restartovat?</string>
     <string name="details_button">Zobrazit podrobnosti</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Použít aktualizaci</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Instalace balíčku aktualizace</string>
     <string name="installing_update_error">Chyba instalace</string>
     <string name="installing_update_finished">Aktualizace byla nainstalována</string>
+    <string name="installing_update_ab_disable_incremental_summary">Přírůstková instalace se nezdařila, protože váš systémový oddíl byl změněn instalací nějakého doplňku nebo vlastního jádra. Chcete stáhnout celý balíček a zkusit to znovu?</string>
     <string name="finalizing_package">Dokončování instalace balíčku</string>
     <string name="dialog_prepare_zip_message">Příprava předběžné aktualizace</string>
     <string name="dialog_battery_low_title">Nízký stav baterie</string>
