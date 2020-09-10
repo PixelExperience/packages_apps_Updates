@@ -36,6 +36,8 @@
     <string name="menu_export_update">Exportează actualizarea</string>
     <string name="menu_show_changelog">Modificări în versiunea curentă</string>
     <string name="changelog_loading">Se încarcă…</string>
+    <string name="menu_download_full_package">Descărcați pachetul complet</string>
+    <string name="menu_download_incremental_package">Descărcați pachetul incremental</string>
     <!-- General -->
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pauză</string>
     <string name="resume_button">Reluaţi</string>
     <string name="reboot">Repornire</string>
+    <string name="reboot_needed_dialog_title">Repornire necesară</string>
+    <string name="reboot_needed_dialog_summary">Pentru a finaliza instalarea actualizării, dispozitivul dvs. trebuie repornit. Doriți să reporniți acum?</string>
     <string name="details_button">Vizualizare detalii</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicaţi actualizarea</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Se instalează pachetul de actualizare</string>
     <string name="installing_update_error">Eroare la instalare</string>
     <string name="installing_update_finished">Actualizare instalată</string>
+    <string name="installing_update_ab_disable_incremental_summary">Instalarea incrementală a eșuat, deoarece partiția de sistem a fost modificată prin instalarea unui nucleu suplimentar sau personalizat. Doriți să descărcați pachetul complet și să încercați din nou?</string>
     <string name="finalizing_package">Se finalizează instalarea pachetului</string>
     <string name="dialog_prepare_zip_message">Pregătire preliminară pentru actualizare</string>
     <string name="dialog_battery_low_title">Baterie slabă</string>

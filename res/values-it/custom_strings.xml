@@ -34,7 +34,7 @@
     <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
-    <string name="menu_show_changelog">Cronologia versioni</string>
+    <string name="menu_show_changelog">Cambiamenti nella versione corrente</string>
     <string name="changelog_loading">Caricamento…</string>
     <string name="menu_download_full_package">Scaricare pacchetto completo</string>
     <string name="menu_download_incremental_package">Scaricare pacchetto incrementale</string>

@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App name -->
-    <string name="app_name">Системні оновлення</string>
+    <string name="app_name">Оновлення системи</string>
     <!-- Notifications -->
     <string name="export_channel_title">Експорт завершено</string>
-    <string name="new_updates_channel_title">Нові оновлення</string>
+    <string name="new_updates_channel_title">Свіжі оновлення</string>
     <string name="ongoing_channel_title">Поточні завантаження</string>
     <string name="update_failed_channel_title">Помилка оновлення</string>
     <string name="verification_failed_notification">Не вдалося виконати перевірку</string>
@@ -41,7 +41,7 @@
     <!-- General -->
     <string name="update_found_notification">Доступне оновлення системи</string>
     <string name="snack_no_updates_found">Оновлень не знайдено</string>
-    <string name="snack_updates_check_failed">Перевірка оновлення не вдалася. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>
+    <string name="snack_updates_check_failed">Не вдалося перевірити оновлення. Будь ласка, перевірте з\'єднання з мережею і спробуйте ще раз.</string>
     <string name="snack_download_failed">Завантаження оновлення не вдалось. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>
     <string name="snack_download_verification_failed">Не пройшла перевірка оновлення.</string>
     <string name="snack_download_verified">Завантаження завершено.</string>
