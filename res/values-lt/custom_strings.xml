@@ -116,4 +116,6 @@
     <string name="forum_info_title">Forumas</string>
     <string name="forum_info_summary">Peržiūrėti forumo pranešimus</string>
     <string name="error_open_url">Nepavyko atidaryti URL naršyklės</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Saugos naujinys</string>
 </resources>

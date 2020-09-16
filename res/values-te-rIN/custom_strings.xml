@@ -35,4 +35,6 @@
     <string name="forum_info_title">ఫోరం</string>
     <string name="forum_info_summary">ఫోరమ్ పోస్ట్లను వీక్షించండి</string>
     <string name="error_open_url">బ్రౌజర్లో URL ను తెరవడంలో విఫలమైంది</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">భద్రతా అప్‌డేట్</string>
 </resources>

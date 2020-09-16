@@ -110,4 +110,6 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forum mesajlarını görüntüle</string>
     <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Güvenlik güncellemesi</string>
 </resources>

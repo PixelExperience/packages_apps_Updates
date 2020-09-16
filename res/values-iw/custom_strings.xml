@@ -111,4 +111,6 @@
     <string name="forum_info_title">פורום</string>
     <string name="forum_info_summary">ראה הודעות בפורום</string>
     <string name="error_open_url">פתיחת URL בדפדפן נכשלה</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">עדכון אבטחה</string>
 </resources>

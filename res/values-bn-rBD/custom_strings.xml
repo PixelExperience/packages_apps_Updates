@@ -86,4 +86,5 @@
     <string name="forum_info_title">ফোরাম</string>
     <string name="forum_info_summary">ফোরামে পোস্ট দেখুন</string>
     <string name="error_open_url">ব্রাউজারে URL খুলতে ব্যর্থ</string>
+    <!-- Security patch -->
 </resources>

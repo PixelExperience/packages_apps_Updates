@@ -42,7 +42,7 @@
     <string name="update_found_notification">Rendszerfrissítés érhető el</string>
     <string name="snack_no_updates_found">Nem található új frissítés</string>
     <string name="snack_updates_check_failed">Nem sikerült a frissítéskeresés. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
-    <string name="snack_download_failed">Nem sikerült a frissítések letöltése. Ellenőrizze internetkapcsolatát, majd próbálja újra.</string>
+    <string name="snack_download_failed">Nem sikerült a frissítés letöltése. Ellenőrizze internetkapcsolatát, majd próbálja újra.</string>
     <string name="snack_download_verification_failed">A frissítés ellenőrzése meghiúsult.</string>
     <string name="snack_download_verified">A letöltés befejeződött.</string>
     <string name="snack_update_not_installable">Ez a frissítés nem telepíthető a jelenlegi verzióra.</string>
@@ -57,8 +57,8 @@
     <string name="action_resume">Folytatás</string>
     <string name="action_install">Telepítés</string>
     <string name="action_delete">Törlés</string>
-    <string name="confirm_delete_dialog_title">Fájl törlése</string>
-    <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a kijelölt frissítő fájlt?</string>
+    <string name="confirm_delete_dialog_title">Fájltörlés</string>
+    <string name="confirm_delete_dialog_message">Biztosan törölni szeretné a kijelölt frissítőfájlt?</string>
     <string name="pause_button">Szüneteltetés</string>
     <string name="resume_button">Folytatás</string>
     <string name="reboot">Újraindítás</string>
@@ -67,8 +67,8 @@
     <string name="details_button">Részletek megjelenítése</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Frissítés telepítése</string>
-    <string name="apply_update_dialog_message">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.</string>
-    <string name="apply_update_dialog_message_ab">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék elkezdi a telepítést a háttérben.\n\nAmint kész, újraindításra lesz szükség.</string>
+    <string name="apply_update_dialog_message">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja az  <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.</string>
+    <string name="apply_update_dialog_message_ab">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja az : <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék elkezdi a telepítést a háttérben.\n\nAmint kész, újraindításra lesz szükség.</string>
     <string name="installing_update">Frissítőcsomag-telepítés</string>
     <string name="installing_update_error">Telepítési hiba</string>
     <string name="installing_update_finished">A frissítés telepítve</string>
@@ -98,17 +98,18 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Figyelmeztetés</string>
-    <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ez magas adathasználatot eredményezhetet. Szeretné folytatni?</string>
+    <string name="update_on_mobile_data_message">A frissítés mobiladat-forgalom használatával fog letöltődni, ami magas mobiladat-használatot eredményezhet. Szeretné folytatni?</string>
     <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
     <!-- Info section -->
-    <string name="maintainer_info_title">Karbantartó</string>
+    <string name="maintainer_info_title">Felelős</string>
     <string name="donate_info_title">Támogatás</string>
     <string name="donate_info_summary">A fejlesztés támogatása</string>
-    <string name="website_info_title">Honlap</string>
-    <string name="website_info_summary">Honlap meglátogatása</string>
+    <string name="website_info_title">Weboldal</string>
+    <string name="website_info_summary">Keresse fel weboldalunkat</string>
     <string name="news_info_title">Hírek</string>
     <string name="news_info_summary">Tájékozódjon a frissítésekről és egyéb hírekről</string>
     <string name="forum_info_title">Fórum</string>
-    <string name="forum_info_summary">Fórumhozzászólások</string>
+    <string name="forum_info_summary">Tekintse meg a fórumbejegyzéseket</string>
     <string name="error_open_url">Nem sikerült megnyitni a linket a böngészőben</string>
+    <!-- Security patch -->
 </resources>

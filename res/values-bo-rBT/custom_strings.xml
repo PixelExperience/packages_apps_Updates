@@ -95,4 +95,5 @@
     <string name="forum_info_title">གླེང་སྟེགས།</string>
     <string name="forum_info_summary">གླེང་སྟེགས་ཀྱི་རྩོམ་ལ་གཟིགས་པ།</string>
     <string name="error_open_url">སྦེལ་མཐུད་ཀྱི་ཁ་འབྱེད་མ་ཐུབ།</string>
+    <!-- Security patch -->
 </resources>

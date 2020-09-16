@@ -32,4 +32,6 @@
     <string name="website_info_title">वेबसाइट</string>
     <string name="website_info_summary">वेबसाइटला भेट द्या</string>
     <string name="news_info_title">बातम्या</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">सुरक्षितता अपडेट</string>
 </resources>

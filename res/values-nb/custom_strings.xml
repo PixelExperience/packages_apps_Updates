@@ -110,4 +110,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vis foruminnlegg</string>
     <string name="error_open_url">Åpning av URL i nettleser mislyktes</string>
+    <!-- Security patch -->
 </resources>

@@ -105,4 +105,6 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Преглед на публикации във форума</string>
     <string name="error_open_url">Неуспешно отваряне на URL в браузъра</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Актуализация за сигурност</string>
 </resources>

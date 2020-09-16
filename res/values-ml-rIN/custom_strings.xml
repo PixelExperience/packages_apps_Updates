@@ -25,4 +25,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">സുരക്ഷാ അപ്‌ഡേറ്റ്</string>
 </resources>

@@ -107,4 +107,5 @@
     <string name="forum_info_title">フォーラム</string>
     <string name="forum_info_summary">フォーラムの記事を表示する</string>
     <string name="error_open_url">ブラウザで URL を開くのに失敗しました</string>
+    <!-- Security patch -->
 </resources>

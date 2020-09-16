@@ -105,4 +105,5 @@
     <string name="forum_info_title">انجمن</string>
     <string name="forum_info_summary">نمایش پست‌های انجمن</string>
     <string name="error_open_url">باز کردن آدرس در مرورگر ناموفق بود</string>
+    <!-- Security patch -->
 </resources>

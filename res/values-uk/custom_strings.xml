@@ -116,4 +116,6 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Останні дописи форуму</string>
     <string name="error_open_url">Не вдалося відкрити посилання у браузері</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Оновлення безпеки</string>
 </resources>

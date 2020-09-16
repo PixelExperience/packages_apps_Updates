@@ -105,4 +105,5 @@
     <string name="forum_info_title">کۆڕبەند</string>
     <string name="forum_info_summary">بینینی بابەتەکانی کۆڕبەند</string>
     <string name="error_open_url"> کردنەوەی بەستەر لە وێبگەردا شکستی هێنا</string>
+    <!-- Security patch -->
 </resources>

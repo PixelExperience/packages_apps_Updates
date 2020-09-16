@@ -107,4 +107,6 @@
     <string name="forum_info_title">Diễn đàn</string>
     <string name="forum_info_summary">Xem các bài đăng diễn đàn</string>
     <string name="error_open_url">Không thể mở URL trong trình duyệt</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Bản cập nhật bảo mật</string>
 </resources>

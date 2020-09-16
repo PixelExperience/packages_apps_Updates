@@ -116,4 +116,6 @@
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Zobrazit příspěvky ve fóru</string>
     <string name="error_open_url">Nepodařilo se otevřít adresu URL v prohlížeči</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Aktualizace zabezpečení</string>
 </resources>

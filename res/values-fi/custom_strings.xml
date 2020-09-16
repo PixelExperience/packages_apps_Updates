@@ -109,4 +109,6 @@
     <string name="forum_info_title">Foorumi</string>
     <string name="forum_info_summary">Näytä foorumin postaukset</string>
     <string name="error_open_url">URL avaaminen selaimessa epäonnistui</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Tietoturvapäivitys</string>
 </resources>

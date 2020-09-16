@@ -95,4 +95,6 @@
     <string name="news_info_summary">Blijf op de hoogte over updates en ander nieuws</string>
     <string name="forum_info_summary">Bekijk forumberichten</string>
     <string name="error_open_url">Fout bij het openen van URL in browser</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Beveiligingsupdate</string>
 </resources>

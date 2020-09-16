@@ -116,4 +116,6 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Паглядзець паведамленні на форуме</string>
     <string name="error_open_url">Не атрымалася адкрыць спасылку</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Абнаўленне бяспекі</string>
 </resources>

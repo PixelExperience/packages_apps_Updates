@@ -117,4 +117,5 @@
     <string name="forum_info_title">المنتدى</string>
     <string name="forum_info_summary">عرض مشاركات المنتدى</string>
     <string name="error_open_url">فشل فتح الـ URL عبر المتصفح</string>
+    <!-- Security patch -->
 </resources>

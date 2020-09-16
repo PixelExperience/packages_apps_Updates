@@ -40,4 +40,5 @@
     <string name="forum_info_title">Anmager</string>
     <string name="forum_info_summary">Ẓar iznan deg anmagar</string>
     <string name="error_open_url">Tuccḍa n tulya n URL deg iminig</string>
+    <!-- Security patch -->
 </resources>

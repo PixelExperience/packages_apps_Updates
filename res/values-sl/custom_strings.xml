@@ -111,4 +111,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Poglejte objave na forumu</string>
     <string name="error_open_url">Odpiranje URL-ja v brskalniku je spodletelo</string>
+    <!-- Security patch -->
 </resources>

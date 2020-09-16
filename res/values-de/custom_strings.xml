@@ -110,4 +110,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forenbeiträge ansehen</string>
     <string name="error_open_url">Öffnen der URL im Browser fehlgeschlagen</string>
+    <!-- Security patch -->
 </resources>

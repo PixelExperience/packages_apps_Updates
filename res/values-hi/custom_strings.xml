@@ -42,4 +42,5 @@
     <string name="forum_info_title">मंच</string>
     <string name="forum_info_summary">संगोष्ठी पोस्ट देखें</string>
     <string name="error_open_url">ब्राउज़र में URL खोलने में विफल</string>
+    <!-- Security patch -->
 </resources>

@@ -85,4 +85,6 @@
     <string name="website_info_summary">ကျွန်ုပ်တို့၏ ၀ဘ်ဆိုဒ်ကို ကြည့်ရှူရန်</string>
     <string name="news_info_title">သတင်းများ</string>
     <string name="forum_info_title">ဖိုရမ်</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">လုံခြုံရေးအပ်ဒိတ်</string>
 </resources>

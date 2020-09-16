@@ -36,6 +36,8 @@
     <string name="menu_export_update">ส่งออกการอัปเดต</string>
     <string name="menu_show_changelog">การเปลี่ยนแปลงในเวอร์ชั่นปัจจุบัน</string>
     <string name="changelog_loading">กำลังโหลด…</string>
+    <string name="menu_download_full_package">ดาวน์โหลดแพคเกจทั้งหมด</string>
+    <string name="menu_download_incremental_package">ดาวน์โหลดแพคเกจส่วนต่อขยาย</string>
     <!-- General -->
     <string name="update_found_notification">มีการอัปเดตใหม่ในขณะนี้</string>
     <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">หยุดชั่วคราว</string>
     <string name="resume_button">ดำเนินการต่อ</string>
     <string name="reboot">เริ่มระบบใหม่</string>
+    <string name="reboot_needed_dialog_title">ต้องการการรีสตาร์ท</string>
+    <string name="reboot_needed_dialog_summary">เพื่อที่จะทำให้การอัพเดทสมบูรณ์ อุปกรณ์ของคุณต้องรีสตาร์ท คุณต้องการรีสตาร์ทตอนนี้ไหม?</string>
     <string name="details_button">แสดงรายละเอียด</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">ใช้งานอัปเดต</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">ติดตั้งแพคเกจการอัพเดต</string>
     <string name="installing_update_error">มีข้อผิดพลาดในการติดตั้ง</string>
     <string name="installing_update_finished">อัปเดตแล้ว</string>
+    <string name="installing_update_ab_disable_incremental_summary">การติดตั้งส่วนต่อขยายล้มเหลวเพราะพาร์ทิชั่นระบบของคุณถูกดัดแปลง หรือติดตั้งเคอร์เนลเฉพาะ คุณต้องการที่จะดาวน์โหลดแพคเกจเต็มแล้วลองใหม่ไหม?</string>
     <string name="finalizing_package">ติดตั้งแพ็กเกจเสร็จสิ้น</string>
     <string name="dialog_prepare_zip_message">เตรียมการปรับปรุงเบื้องต้น</string>
     <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
@@ -102,4 +107,5 @@
     <string name="forum_info_title">กระทู้</string>
     <string name="forum_info_summary">เปิดอ่านกระทู้</string>
     <string name="error_open_url">เปิด URL ในเบราว์เซอร์ไม่ได้</string>
+    <!-- Security patch -->
 </resources>

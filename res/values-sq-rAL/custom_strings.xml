@@ -28,4 +28,6 @@
     <!-- ETA -->
     <!-- Mobile data warning -->
     <!-- Info section -->
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Përditësim sigurie</string>
 </resources>

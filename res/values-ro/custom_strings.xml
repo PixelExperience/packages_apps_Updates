@@ -113,4 +113,6 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vizualizaţi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Actualizare de securitate</string>
 </resources>

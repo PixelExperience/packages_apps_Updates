@@ -89,4 +89,5 @@
     <string name="news_info_summary">Håll dig informerad om uppdateringar och andra nyheter</string>
     <string name="forum_info_summary">Visa inlägg i forumet</string>
     <string name="error_open_url">Det gick inte att öppna URL i webbläsaren</string>
+    <!-- Security patch -->
 </resources>

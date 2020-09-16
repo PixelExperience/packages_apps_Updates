@@ -97,4 +97,6 @@
     <string name="news_info_summary">Yeniləmələr və digər xəbərlər haqqında məlumat alın</string>
     <string name="forum_info_summary">Forum mesajlarına bax</string>
     <string name="error_open_url">URL-ni veb səyyahda açmaq olmadı</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Təhlükəsizlik yeniləməsi</string>
 </resources>

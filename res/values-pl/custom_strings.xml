@@ -116,4 +116,6 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Zobacz posty na forum</string>
     <string name="error_open_url">Nie można otworzyć adresu URL w przeglądarce</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Aktualizacja zabezpieczeń</string>
 </resources>

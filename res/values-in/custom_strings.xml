@@ -107,4 +107,6 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Lihat kiriman forum</string>
     <string name="error_open_url">Gagal membuka URL di peramban</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Update keamanan</string>
 </resources>

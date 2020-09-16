@@ -53,4 +53,5 @@
     <string name="website_info_title">ویب سائٹ</string>
     <string name="news_info_title">خبریں</string>
     <string name="forum_info_title">فورم</string>
+    <!-- Security patch -->
 </resources>

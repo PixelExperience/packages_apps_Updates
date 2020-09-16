@@ -110,4 +110,6 @@
     <string name="forum_info_title">Κοινότητα</string>
     <string name="forum_info_summary">Δείτε της δημοσιεύσεις της κοινότητας</string>
     <string name="error_open_url">Απέτυχε το άνοιγμα της διεύθυνσης URL στο πρόγραμμα περιήγησης</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Ενημέρωση ασφαλείας</string>
 </resources>

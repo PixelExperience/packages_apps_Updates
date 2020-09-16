@@ -98,4 +98,5 @@
     <string name="forum_info_title">Foroa</string>
     <string name="forum_info_summary">Ikusi foroetako mezuak</string>
     <string name="error_open_url">Ezin izan da URL helbidea nabigatzailean ireki</string>
+    <!-- Security patch -->
 </resources>

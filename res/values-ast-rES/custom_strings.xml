@@ -85,4 +85,5 @@
     <string name="update_on_mobile_data_message">Tas a piques de baxar un paquete d\'anovamientu usando los datos móviles que pue causar un usu altu de datos. ¿Prestaríate siguir?</string>
     <string name="checkbox_mobile_data_warning">Nun amosar más</string>
     <!-- Info section -->
+    <!-- Security patch -->
 </resources>

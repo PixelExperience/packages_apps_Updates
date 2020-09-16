@@ -110,4 +110,6 @@
     <string name="forum_info_title">Foorum</string>
     <string name="forum_info_summary">Vaata foorumi postitusi</string>
     <string name="error_open_url">Brauseris URL-i avamine ebaõnnestus</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Turvavärskendus</string>
 </resources>

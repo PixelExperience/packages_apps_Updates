@@ -110,4 +110,6 @@
     <string name="forum_info_title">Foro</string>
     <string name="forum_info_summary">Ver publicaciones del foro</string>
     <string name="error_open_url">Falló al abrir la URL en el navegador</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Actualización de seguridad</string>
 </resources>

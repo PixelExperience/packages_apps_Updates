@@ -76,4 +76,6 @@
     <string name="website_info_summary">Այցելեք մեր վեբ կայքը</string>
     <string name="news_info_title">Նորություններ</string>
     <string name="forum_info_title">Ֆորում</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Անվտանգության թարմացում</string>
 </resources>

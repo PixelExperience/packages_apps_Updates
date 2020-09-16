@@ -113,4 +113,6 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Погледајте објаве на форуму</string>
     <string name="error_open_url">Неуспело учитавање линка у претраживачу</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Безбедносно ажурирање</string>
 </resources>

@@ -59,4 +59,6 @@
     <string name="forum_info_title">ફોરમ</string>
     <string name="forum_info_summary">ફોરમ પોસ્ટ્સ જુઓ</string>
     <string name="error_open_url">બ્રાઉઝરમાં URL ખોલવામાં નિષ્ફળ</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">સુરક્ષા અપડેટ</string>
 </resources>

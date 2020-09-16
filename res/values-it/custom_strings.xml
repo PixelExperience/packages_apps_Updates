@@ -111,4 +111,6 @@ Scaricare il pacchetto completo e riprovare?</string>
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Visualizza i post del forum</string>
     <string name="error_open_url">Apertura del link non riuscita</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Aggiornamento di sicurezza</string>
 </resources>

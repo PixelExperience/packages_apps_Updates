@@ -54,4 +54,5 @@
     <string name="donate_info_summary">Suportahan ang pag-develop</string>
     <string name="website_info_summary">Bisitahin ang website</string>
     <string name="news_info_title">Mga balita</string>
+    <!-- Security patch -->
 </resources>

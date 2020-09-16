@@ -108,4 +108,6 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Pogledaj poruke na forumu</string>
     <string name="error_open_url">Ne mogu otvoriti URL u Pretraživaču</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Sigurnosno ažuriranje</string>
 </resources>

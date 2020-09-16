@@ -73,4 +73,6 @@
     <string name="website_info_title">Tīmekļa vietne</string>
     <string name="news_info_title">Jaunumi</string>
     <string name="forum_info_title">Forums</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Drošības atjauninājums</string>
 </resources>

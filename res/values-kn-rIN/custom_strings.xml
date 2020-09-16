@@ -59,4 +59,6 @@
     <string name="forum_info_title">ವೇದಿಕೆಗಳು</string>
     <string name="forum_info_summary">ವೇದಿಕೆಯ ಪೋಸ್ಟ್ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
     <string name="error_open_url">ಬ್ರೌಸರ್ನಲ್ಲಿ URL ಅನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">ಭದ್ರತಾ ಅಪ್‌ಡೇಟ್</string>
 </resources>

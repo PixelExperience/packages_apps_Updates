@@ -106,4 +106,6 @@
     <string name="forum_info_title">포럼</string>
     <string name="forum_info_summary">포럼 게시물 보기</string>
     <string name="error_open_url">브라우저에서 URL을 열지 못했습니다</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">보안 업데이트</string>
 </resources>

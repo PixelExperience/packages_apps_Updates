@@ -105,4 +105,6 @@
     <string name="forum_info_title">Fòrum</string>
     <string name="forum_info_summary">Veure les publicacions del fòrum</string>
     <string name="error_open_url">No s\'ha pogut obrir la URL al navegador</string>
+    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Actualització de seguretat</string>
 </resources>
