@@ -37,7 +37,7 @@
     <string name="menu_show_changelog">現バージョンにおける変更点</string>
     <string name="changelog_loading">読み込み中…</string>
     <string name="menu_download_full_package">フルパッケージをダウンロード</string>
-    <string name="menu_download_incremental_package">増分パッケージをダウンロード</string>
+    <string name="menu_download_incremental_package">差分パッケージをダウンロード</string>
     <!-- General -->
     <string name="update_found_notification">システムアップデートが利用可能です</string>
     <string name="snack_no_updates_found">新しいアップデートはありません</string>
@@ -108,4 +108,5 @@
     <string name="forum_info_summary">フォーラムの記事を表示する</string>
     <string name="error_open_url">ブラウザで URL を開くのに失敗しました</string>
     <!-- Security patch -->
+    <string name="setting_security_patch_level_title">セキュリティアップデート</string>
 </resources>

@@ -72,6 +72,7 @@
     <string name="installing_update">업데이트 패키지 설치 중</string>
     <string name="installing_update_error">설치 오류</string>
     <string name="installing_update_finished">업데이트 설치됨</string>
+    <string name="installing_update_ab_disable_incremental_summary">일부 추가 기능 또는 사용자 지정 커널을 설치하여 시스템 파티션을 수정했기 때문에 증분 설치에 실패했습니다. 전체 패키지를 다운로드하고 다시 시도 하시겠습니까?</string>
     <string name="finalizing_package">패키지 설치 마무리 중</string>
     <string name="dialog_prepare_zip_message">예비 업데이트 준비</string>
     <string name="dialog_battery_low_title">배터리 부족</string>

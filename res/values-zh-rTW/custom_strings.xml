@@ -108,4 +108,5 @@
     <string name="forum_info_summary">檢視討論區文章</string>
     <string name="error_open_url">在瀏覽器中打開 URL 失敗</string>
     <!-- Security patch -->
+    <string name="setting_security_patch_level_title">安全性更新</string>
 </resources>

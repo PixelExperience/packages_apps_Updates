@@ -36,6 +36,8 @@
     <string name="menu_export_update">Izvezi ažuriranje</string>
     <string name="menu_show_changelog">Promjene u aktuelnoj verziji</string>
     <string name="changelog_loading">Učitavanje u toku…</string>
+    <string name="menu_download_full_package">Preuzmi cijeli paket</string>
+    <string name="menu_download_incremental_package">Preuzmi inkrementalni paket</string>
     <!-- General -->
     <string name="update_found_notification">Novo ažuriranje je dostupno</string>
     <string name="snack_no_updates_found">Nema novih ažuriranja</string>
@@ -60,6 +62,8 @@
     <string name="pause_button">Pauza</string>
     <string name="resume_button">Nastavi</string>
     <string name="reboot">Ponovno pokretanje</string>
+    <string name="reboot_needed_dialog_title">Treba ponovno pokretanje</string>
+    <string name="reboot_needed_dialog_summary">Da biste dovršili instalaciju ažuriranja, vaš uređaj treba ponovo pokrenuti. Želite li ponovo pokrenuti?</string>
     <string name="details_button">Pogledaj detalje</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">Primjeni ažuriranje</string>
@@ -68,6 +72,7 @@
     <string name="installing_update">Instalacija izabranog ažuriranja</string>
     <string name="installing_update_error">Greška u instalaciji</string>
     <string name="installing_update_finished">Ažuriranje je završeno</string>
+    <string name="installing_update_ab_disable_incremental_summary">Inkrementalna instalacija nije uspjela jer je particija vašeg sustava izmijenjena instaliranjem nekog dodatka ili prilagođenog kernela. Želite li preuzeti cijeli paket i pokušati ponovo?</string>
     <string name="finalizing_package">Finalizacija ažuriranja</string>
     <string name="dialog_prepare_zip_message">Priprema za ažuriranje</string>
     <string name="dialog_battery_low_title">Slaba baterija</string>

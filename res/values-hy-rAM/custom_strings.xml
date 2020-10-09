@@ -67,15 +67,30 @@
     <string name="dialog_battery_low_title">Մարտկոցի լիցքը քիչ է</string>
     <!-- Export update -->
     <!-- ETA -->
+    <plurals name="eta_seconds">
+        <item quantity="one">Մնաց 1 վայրկյան</item>
+        <item quantity="other">Մնաց <xliff:g id="count">%d</xliff:g> վայրկյան</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">Մնաց 1 րոպե</item>
+        <item quantity="other">Մնաց <xliff:g id="count">%d</xliff:g> րոպե</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">Մնաց 1 ժամ</item>
+        <item quantity="other">Մնաց <xliff:g id="count">%d</xliff:g> ժամ</item>
+    </plurals>
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Զգուշացում</string>
+    <string name="checkbox_mobile_data_warning">Այլևս չցուցադրել</string>
     <!-- Info section -->
+    <string name="maintainer_info_title">Սպասարկում</string>
     <string name="donate_info_title">Աջակցել</string>
     <string name="donate_info_summary">Աջակցել մշակմանը</string>
     <string name="website_info_title">Վեբկայք</string>
     <string name="website_info_summary">Այցելեք մեր վեբ կայքը</string>
     <string name="news_info_title">Նորություններ</string>
     <string name="forum_info_title">Ֆորում</string>
+    <string name="forum_info_summary">Դիտել ֆորումի գրառումները</string>
     <!-- Security patch -->
     <string name="setting_security_patch_level_title">Անվտանգության թարմացում</string>
 </resources>

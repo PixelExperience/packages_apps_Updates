@@ -112,4 +112,5 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="forum_info_summary">Tekintse meg a fórumbejegyzéseket</string>
     <string name="error_open_url">Nem sikerült megnyitni a linket a böngészőben</string>
     <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Biztonsági frissítés</string>
 </resources>
