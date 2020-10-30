@@ -108,6 +108,10 @@ public class UpdatesActivity extends UpdatesListActivity {
             ((SimpleItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
+        if (ABUpdateInstaller.needsReboot()) {
+            return;
+        }
+
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -134,13 +138,7 @@ public class UpdatesActivity extends UpdatesListActivity {
                     cleanupUpdates();
                 } else if (ABUpdateInstaller.ACTION_RESTART_PENDING.equals(intent.getAction())) {
                     hideUpdates();
-                    new AlertDialog.Builder(UpdatesActivity.this, R.style.AppTheme_AlertDialogStyle)
-                            .setTitle(R.string.reboot_needed_dialog_title)
-                            .setMessage(R.string.reboot_needed_dialog_summary)
-                            .setPositiveButton(R.string.reboot, (dialog, which) -> Utils.rebootDevice(UpdatesActivity.this))
-                            .setNegativeButton(android.R.string.cancel, null)
-                            .setCancelable(false)
-                            .setOnDismissListener(dialog -> android.os.Process.killProcess(android.os.Process.myPid())).show();
+                    showRestartPendingDialog();
                 }
             }
         };
@@ -159,8 +157,18 @@ public class UpdatesActivity extends UpdatesListActivity {
         refreshAnimationStart();
     }
 
-    private void handleExportStatusChanged(int status){
-        switch(status){
+    private void showRestartPendingDialog() {
+        new AlertDialog.Builder(UpdatesActivity.this, R.style.AppTheme_AlertDialogStyle)
+                .setTitle(R.string.reboot_needed_dialog_title)
+                .setMessage(R.string.reboot_needed_dialog_summary)
+                .setPositiveButton(R.string.reboot, (dialog, which) -> Utils.rebootDevice(UpdatesActivity.this))
+                .setNegativeButton(android.R.string.cancel, null)
+                .setCancelable(false)
+                .setOnDismissListener(dialog -> finish()).show();
+    }
+
+    private void handleExportStatusChanged(int status) {
+        switch (status) {
             case ExportUpdateService.EXPORT_STATUS_RUNNING:
                 showSnackbar(R.string.dialog_export_title, Snackbar.LENGTH_SHORT);
                 break;
@@ -192,11 +200,13 @@ public class UpdatesActivity extends UpdatesListActivity {
         try {
             Intent intent = new Intent(this, UpdaterService.class);
             startService(intent);
+            if (ABUpdateInstaller.needsReboot()) {
+                showRestartPendingDialog();
+                return;
+            }
             bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
         } catch (IllegalStateException ignored) {
-
         }
-
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
         intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
@@ -248,6 +258,9 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void showUpdates() {
+        if (ABUpdateInstaller.needsReboot()){
+            return;
+        }
         findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
         findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
     }
