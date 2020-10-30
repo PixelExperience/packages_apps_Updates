@@ -34,6 +34,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import org.pixelexperience.ota.R;
 import org.pixelexperience.ota.UpdaterReceiver;
 import org.pixelexperience.ota.UpdatesActivity;
+import org.pixelexperience.ota.UpdatesCheckReceiver;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.Update;
 import org.pixelexperience.ota.model.UpdateInfo;
@@ -208,7 +209,8 @@ public class UpdaterService extends Service {
     }
 
     private void handleUpdateStatusChange(UpdateStatus status) {
-        if (ABUpdateInstaller.needsReboot()){
+        mNotificationManager.cancel(UpdatesCheckReceiver.NOTIFICATION_ID);
+        if (ABUpdateInstaller.needsReboot()) {
             return;
         }
         Update update = mUpdaterController.getCurrentUpdate();
@@ -221,6 +223,7 @@ public class UpdaterService extends Service {
                 break;
             }
             case STARTING: {
+                mNotificationManager.cancel(NOTIFICATION_ID);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setProgress(0, 0, true);
                 String text = getString(R.string.download_starting_notification);
