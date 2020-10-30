@@ -50,6 +50,8 @@ public class ABUpdateInstaller {
     @SuppressLint("StaticFieldLeak")
     private static ABUpdateInstaller sInstance = null;
 
+    public static boolean sNeedsReboot = false;
+
     private final UpdaterController mUpdaterController;
     private final Context mContext;
     private String mDownloadId;
@@ -143,8 +145,15 @@ public class ABUpdateInstaller {
     }
 
     static synchronized boolean isInstallingUpdate(Context context) {
+        if (needsReboot()) {
+            return true;
+        }
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         return pref.getString(Constants.PREF_INSTALLING_AB_ID, null) != null;
+    }
+
+    public static synchronized boolean needsReboot() {
+        return sNeedsReboot;
     }
 
     static synchronized ABUpdateInstaller getInstance(Context context,
@@ -260,6 +269,7 @@ public class ABUpdateInstaller {
                 .remove(Constants.PREF_INSTALLING_AB_ID)
                 .apply();
         if (needsReboot) {
+            sNeedsReboot = true;
             Intent intent = new Intent();
             intent.setAction(ACTION_RESTART_PENDING);
             mBroadcastManager.sendBroadcast(intent);

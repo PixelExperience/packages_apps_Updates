@@ -31,7 +31,7 @@ import org.pixelexperience.ota.model.UpdateStatus;
 import java.io.File;
 import java.io.IOException;
 
-class UpdateInstaller {
+public class UpdateInstaller {
 
     private static final String TAG = "UpdateInstaller";
 
@@ -56,7 +56,7 @@ class UpdateInstaller {
         return sInstance;
     }
 
-    static synchronized boolean isInstalling() {
+    public static synchronized boolean isInstalling() {
         return sInstallingUpdate != null;
     }
 

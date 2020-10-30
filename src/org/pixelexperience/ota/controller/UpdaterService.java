@@ -128,7 +128,6 @@ public class UpdaterService extends Service {
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         intentFilter.addAction(ABUpdateInstaller.ACTION_RESTART_PENDING);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
-
     }
 
     @Override
@@ -209,6 +208,9 @@ public class UpdaterService extends Service {
     }
 
     private void handleUpdateStatusChange(UpdateStatus status) {
+        if (ABUpdateInstaller.needsReboot()){
+            return;
+        }
         Update update = mUpdaterController.getCurrentUpdate();
         switch (status) {
             case DELETED: {
