@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">システムアップデート</string>
-    <!-- Notifications -->
     <string name="export_channel_title">エクスポート完了</string>
     <string name="new_updates_channel_title">新しいアップデート</string>
     <string name="ongoing_channel_title">ダウンロード中</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">ダウンロードを開始中</string>
     <string name="update_failed_notification">アップデートに失敗しました</string>
     <string name="check_for_update">アップデートを確認</string>
-    <!-- Menu -->
     <string name="menu_delete_update">削除</string>
     <string name="menu_export_update">アップデートのエクスポート</string>
     <string name="menu_show_changelog">現バージョンにおける変更点</string>
     <string name="changelog_loading">読み込み中…</string>
     <string name="menu_download_full_package">フルパッケージをダウンロード</string>
     <string name="menu_download_incremental_package">差分パッケージをダウンロード</string>
-    <!-- General -->
     <string name="update_found_notification">システムアップデートが利用可能です</string>
     <string name="snack_no_updates_found">新しいアップデートはありません</string>
     <string name="snack_updates_check_failed">アップデートを確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">アップデートを確認</string>
     <string name="list_no_updates">新しいアップデートはありません</string>
     <string name="blocked_update_dialog_title">アップデートをブロックしました</string>
-    <!-- Actions -->
     <string name="action_download">ダウンロード</string>
     <string name="action_pause">一時停止</string>
     <string name="action_resume">再開</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">再起動する必要があります</string>
     <string name="reboot_needed_dialog_summary">アップデートのインストールを完了するには、端末の再起動が必要です。今すぐ再起動しますか?</string>
     <string name="details_button">詳細を表示</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">アップデートを適用</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、アップデートをインストールするために端末をリカバリーモードでに再起動します。\n\n注意: この機能には対応したリカバリーが必要です。なければ手動でインストールする必要があります。</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> にアップデートしようとしています。\n\n<xliff:g id="ok">%2$s</xliff:g>を押すと、バックグラウンドでインストールを開始します。\n\nインストールが完了したら、再起動を促すプロンプトが表示されます。</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">予備のアップデート準備</string>
     <string name="dialog_battery_low_title">バッテリー残量低下</string>
     <string name="dialog_battery_low_message_pct">バッテリー残量が不足しています。続行するには<xliff:g id="percent_discharging">%1$d</xliff:g>%%、充電時は<xliff:g id="percent_charging">%2$d</xliff:g>%%のバッテリー残量が必要です。</string>
-    <!-- Export update -->
     <string name="dialog_export_title">更新ファイルを内部ストレージに保存</string>
     <string name="notification_export_success">更新ファイルを内部ストレージに保存しました</string>
     <string name="notification_export_fail">更新ファイルの内部ストレージへの保存に失敗しました</string>
     <string name="toast_already_exporting">既にアップデートをエクスポートしています</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">残り<xliff:g id="count">%d</xliff:g>秒</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other">残り<xliff:g id="count">%d</xliff:g>時間</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">モバイルデータ通信でアップデートプログラムをダウンロードするとデータ使用量が増加する可能性があります。続行しますか?</string>
     <string name="checkbox_mobile_data_warning">再び表示しない</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">メンテナ</string>
     <string name="donate_info_title">寄付</string>
     <string name="donate_info_summary">開発を支援する</string>
@@ -107,6 +97,5 @@
     <string name="forum_info_title">フォーラム</string>
     <string name="forum_info_summary">フォーラムの記事を表示する</string>
     <string name="error_open_url">ブラウザで URL を開くのに失敗しました</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">セキュリティアップデート</string>
 </resources>

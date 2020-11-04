@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Actualització del sistema</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Exportació completada</string>
     <string name="new_updates_channel_title">Noves actualitzacions</string>
     <string name="ongoing_channel_title">Baixades en curs</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">S\'està iniciant la baixada</string>
     <string name="update_failed_notification">Actualització fallida</string>
     <string name="check_for_update">Cercar actualitzacions</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_export_update">Exporta l\'actualització</string>
     <string name="menu_show_changelog">Canvis en la versió actual</string>
     <string name="changelog_loading">Carregant…</string>
-    <!-- General -->
     <string name="update_found_notification">Actualització del sistema disponible</string>
     <string name="snack_no_updates_found">No s\'han trobat noves actualitzacions</string>
     <string name="snack_updates_check_failed">Ha fallat la comprovació d\'actualització. Verifiqueu la connexió a Internet i tomeu-ho a provar més tard.</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">S\'està verificant l\'actualització</string>
     <string name="list_no_updates">No s\'han trobat noves actualitzacions.</string>
     <string name="blocked_update_dialog_title">Actualització bloquejada</string>
-    <!-- Actions -->
     <string name="action_download">Baixa</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Reprèn</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">Reprèn</string>
     <string name="reboot">Reinicia</string>
     <string name="details_button">Mostrar els detalls</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Aplica l\'actualització</string>
     <string name="apply_update_dialog_message">Estàs a punt d\'actualitzar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi prems <xliff:g id="ok">%2$s</xliff:g>, el dispositiu es reiniciarà en mode recuperació per instal·lar l\'actualització.\n\nNota: Aquesta funció requereix un «Recovery» compatible o les actualitzacions s\'hauran d\'instal·lar manualment.</string>
     <string name="apply_update_dialog_message_ab">Estàs a punt d\'actualitzar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi prems <xliff:g id="ok">%2$s</xliff:g>, el dispositiu començarà a instal·lar en segon pla.\n\nUn cop completat, se\'t demanarà reiniciar.</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">Preparació preliminar de l\'actualització</string>
     <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">El nivell de la bateria és massa baix, necessiteu com a mínim <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria per continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositiu s\'està carregant.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Exportant actualització a l\'emmagatzematge intern</string>
     <string name="notification_export_success">Actualització exportada a l\'emmagatzematge intern</string>
     <string name="notification_export_fail">Exportar actualització a l\'emmagatzematge intern ha fallat</string>
     <string name="toast_already_exporting">Ja s\'està exportant una actualització</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Falta 1 segon</item>
         <item quantity="other">Falten <xliff:g id="count">%d</xliff:g> segons</item>
@@ -90,11 +82,9 @@
         <item quantity="one">Falta 1 hora</item>
         <item quantity="other">Falten <xliff:g id="count">%d</xliff:g> hores</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Atenció</string>
     <string name="update_on_mobile_data_message">Esteu a punt de baixar un paquet d\'actualització amb dades mòbils que probablement generarà un alt ús de dades. Voleu continuar?</string>
     <string name="checkbox_mobile_data_warning">No mostrar de nou</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Mantenidor</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Recolzar el desenvolupament</string>
@@ -105,6 +95,5 @@
     <string name="forum_info_title">Fòrum</string>
     <string name="forum_info_summary">Veure les publicacions del fòrum</string>
     <string name="error_open_url">No s\'ha pogut obrir la URL al navegador</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Actualització de seguretat</string>
 </resources>

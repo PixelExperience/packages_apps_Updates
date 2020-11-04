@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Sistem güncellemesi</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Dışa aktarma tamamlandı</string>
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
     <string name="ongoing_channel_title">Devam eden indirmeler</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">İndirme başlatılıyor</string>
     <string name="update_failed_notification">Güncelleme başarısız</string>
     <string name="check_for_update">Güncellemeleri Denetle</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Sil</string>
     <string name="menu_export_update">Güncellemeyi dışa aktar</string>
     <string name="menu_show_changelog">Mevcut sürümdeki değişiklikler</string>
     <string name="changelog_loading">Yükleniyor…</string>
     <string name="menu_download_full_package">Tam paketi indir</string>
     <string name="menu_download_incremental_package">Ek paketi indir</string>
-    <!-- General -->
     <string name="update_found_notification">Sistem güncellemesi mevcut</string>
     <string name="snack_no_updates_found">Yeni güncelleme bulunamadı</string>
     <string name="snack_updates_check_failed">Güncelleme kontrolü başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Güncelleme doğrulanıyor</string>
     <string name="list_no_updates">Yeni güncelleme bulunamadı.</string>
     <string name="blocked_update_dialog_title">Güncelleme engellendi</string>
-    <!-- Actions -->
     <string name="action_download">İndir</string>
     <string name="action_pause">Duraklat</string>
     <string name="action_resume">Devam et</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Yeniden başlatma gerekli</string>
     <string name="reboot_needed_dialog_summary">Güncellemenin kurulumunu tamamlamak için cihazınızın yeniden başlatılması gerekiyor. Şimdi yeniden başlatmak istiyor musunuz?</string>
     <string name="details_button">Ayrıntıları göster</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modunda yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> tuşuna basarsanız, cihaz arka planda yüklemeye başlayacaktır.\n\nİşlem tamamlandığında, yeniden başlatmanız istenir.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Güncelleme ön hazırlığı</string>
     <string name="dialog_battery_low_title">Düşük pil</string>
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Güncelleme dahili depolamaya aktarılıyor</string>
     <string name="notification_export_success">Güncelleme dahili depolamaya aktarıldı</string>
     <string name="notification_export_fail">Güncelleme dahili depolamaya çıkartılırken hata</string>
     <string name="toast_already_exporting">Zaten bir güncelleme dışa aktarılıyor</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 saniye kaldı</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saniye kaldı</item>
@@ -95,11 +87,9 @@
         <item quantity="one">1 saat kaldı</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saat kaldı</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Uyarı</string>
     <string name="update_on_mobile_data_message">Büyük bir olasılıkla yüksek veri kullanımına neden olacak mobil veri kullanarak bir güncelleme paketi indirmek üzeresiniz. Devam etmek ister misiniz?</string>
     <string name="checkbox_mobile_data_warning">Tekrar gösterme</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Cihaz sorumlusu</string>
     <string name="donate_info_title">Bağış yapın</string>
     <string name="donate_info_summary">Geliştirmeyi destekle</string>
@@ -110,6 +100,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forum mesajlarını görüntüle</string>
     <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Güvenlik güncellemesi</string>
 </resources>

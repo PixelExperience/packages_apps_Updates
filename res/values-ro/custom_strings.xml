@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Actualizare sistem</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Completare export</string>
     <string name="new_updates_channel_title">Actualizări noi</string>
     <string name="ongoing_channel_title">Descărcări în desfășurare</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Pornire descărcare</string>
     <string name="update_failed_notification">Actualizare eșuată</string>
     <string name="check_for_update">Verificare actualizări</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Șterge</string>
     <string name="menu_export_update">Exportează actualizarea</string>
     <string name="menu_show_changelog">Modificări în versiunea curentă</string>
     <string name="changelog_loading">Se încarcă…</string>
     <string name="menu_download_full_package">Descărcați pachetul complet</string>
     <string name="menu_download_incremental_package">Descărcați pachetul incremental</string>
-    <!-- General -->
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="snack_updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Verificare actualizare</string>
     <string name="list_no_updates">Nu s-au găsit actualizări noi.</string>
     <string name="blocked_update_dialog_title">Actualizare blocată</string>
-    <!-- Actions -->
     <string name="action_download">Descărcați</string>
     <string name="action_pause">Pauză</string>
     <string name="action_resume">Reluaţi</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Repornire necesară</string>
     <string name="reboot_needed_dialog_summary">Pentru a finaliza instalarea actualizării, dispozitivul dvs. trebuie repornit. Doriți să reporniți acum?</string>
     <string name="details_button">Vizualizare detalii</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicaţi actualizarea</string>
     <string name="apply_update_dialog_message">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul se va restarta în modul de recuperare pentru a instala actualizarea.\n\nNotă: Această caracteristică necesită o Recuperare compatibilă sau actualizările vor trebui să fie instalate manual.</string>
     <string name="apply_update_dialog_message_ab">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va începe instalarea în fundal.\n\nOdată finalizată, veți fi anunțat(ă) să reporniți telefonul.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Pregătire preliminară pentru actualizare</string>
     <string name="dialog_battery_low_title">Baterie slabă</string>
     <string name="dialog_battery_low_message_pct">Nivelul bateriei este prea scăzut. Aveți nevoie de cel puțin<xliff:g id="percent_discharging">%1$d</xliff:g>%% pentru a continua, <xliff:g id="percent_charging">%2$d</xliff:g>%% dacă telefonul este la încărcat.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Exportarea actualizării în spațiul de stocare intern</string>
     <string name="notification_export_success">Actualizare exportată în stocare internă</string>
     <string name="notification_export_fail">Exportarea actualizării nu a reușit</string>
     <string name="toast_already_exporting">Se exportează deja o actualizare</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 secundă rămasă</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> (de) secunde rămase</item>
@@ -98,11 +90,9 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Avertisment</string>
     <string name="update_on_mobile_data_message">Sunteți pe cale de a descărca un pachet de actualizare folosind datele mobile care, probabil, vor provoca o utilizare mare de date. Doriţi să continuaţi?</string>
     <string name="checkbox_mobile_data_warning">Nu se mai afișează</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Dezvoltator</string>
     <string name="donate_info_title">Donează</string>
     <string name="donate_info_summary">Susțineți dezvoltarea</string>
@@ -113,6 +103,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vizualizaţi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Actualizare de securitate</string>
 </resources>

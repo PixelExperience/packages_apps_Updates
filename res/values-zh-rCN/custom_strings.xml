@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">系统更新</string>
-    <!-- Notifications -->
     <string name="export_channel_title">导出已完成</string>
     <string name="new_updates_channel_title">新的更新</string>
     <string name="ongoing_channel_title">当前下载</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">正在开始下载</string>
     <string name="update_failed_notification">更新失败</string>
     <string name="check_for_update">检查更新</string>
-    <!-- Menu -->
     <string name="menu_delete_update">删除</string>
     <string name="menu_export_update">导出更新</string>
     <string name="menu_show_changelog">新版特性</string>
     <string name="changelog_loading">正在加载……</string>
     <string name="menu_download_full_package">下载完整包</string>
     <string name="menu_download_incremental_package">下载增量更新包</string>
-    <!-- General -->
     <string name="update_found_notification">有可用的系统更新</string>
     <string name="snack_no_updates_found">未发现新的更新</string>
     <string name="snack_updates_check_failed">检查更新失败。 请您检查您的网络连接并稍后重试。</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">正在验证更新</string>
     <string name="list_no_updates">未发现新的更新</string>
     <string name="blocked_update_dialog_title">更新已被阻止</string>
-    <!-- Actions -->
     <string name="action_download">下载</string>
     <string name="action_pause">暂停</string>
     <string name="action_resume">继续</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">需要重新启动</string>
     <string name="reboot_needed_dialog_summary">您的设备需要重新启动才能完成安装更新，您想现在就重启吗？</string>
     <string name="details_button">查看详情</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">应用更新</string>
     <string name="apply_update_dialog_message">您将要更新到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下<xliff:g id="ok">%2$s</xliff:g>，您的设备将会重启到恢复模式并安装更新。\n\n注意：此功能需要一个兼容的恢复程序，否则您将需要手动安装更新。</string>
     <string name="apply_update_dialog_message_ab">您将要升级到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下<xliff:g id="ok">%2$s</xliff:g>，设备将会在后台进行安装。\n\n当安装完毕后，将会提示您重新启动。</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">正在准备更新</string>
     <string name="dialog_battery_low_title">低电量</string>
     <string name="dialog_battery_low_message_pct">电池电量过低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的电量才能继续；如果正在充电，则需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的电量才能继续。</string>
-    <!-- Export update -->
     <string name="dialog_export_title">导出更新至内部存储</string>
     <string name="notification_export_success">已导出更新至内部存储</string>
     <string name="notification_export_fail">导出更新至内部存储失败</string>
     <string name="toast_already_exporting">已导出更新</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">剩余 <xliff:g id="count">%d</xliff:g> 秒</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other">剩余 <xliff:g id="count">%d</xliff:g> 时</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">移动数据使用警告</string>
     <string name="update_on_mobile_data_message">您将通过移动数据网络下载更新包，这可能会导致较大的数据用量，是否继续？</string>
     <string name="checkbox_mobile_data_warning">以后不要再显示</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">维护者</string>
     <string name="donate_info_title">捐赠</string>
     <string name="donate_info_summary">支持开发</string>
@@ -107,6 +97,5 @@
     <string name="forum_info_title">论坛</string>
     <string name="forum_info_summary">查看论坛帖子</string>
     <string name="error_open_url">打开链接失败</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">安全更新</string>
 </resources>

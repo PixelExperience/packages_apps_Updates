@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Ажурирања система</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Извоз завршен</string>
     <string name="new_updates_channel_title">Нова ажурирања</string>
     <string name="ongoing_channel_title">Преузимања у току</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Покретање преузимања</string>
     <string name="update_failed_notification">Неуспешно ажурирање</string>
     <string name="check_for_update">Провери да ли постоје ажурирања</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Обриши</string>
     <string name="menu_export_update">Извези ажурирања</string>
     <string name="menu_show_changelog">Промене у тренутној верзији</string>
     <string name="changelog_loading">Учитавање…</string>
     <string name="menu_download_full_package">Преузми цео пакет</string>
     <string name="menu_download_incremental_package">Преузми инкрементални пакет</string>
-    <!-- General -->
     <string name="update_found_notification">Ажурирање система је доступно.</string>
     <string name="snack_no_updates_found">Нису пронађена нова ажурирања</string>
     <string name="snack_updates_check_failed">Провера за ажурирања није успела. Провери своју интернет везу и покушај поново касније.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Верификација анжурирања</string>
     <string name="list_no_updates">Нису пронађена нова ажурирања.</string>
     <string name="blocked_update_dialog_title">Ажурирање је блокирано</string>
-    <!-- Actions -->
     <string name="action_download">Преузми</string>
     <string name="action_pause">Паузирај</string>
     <string name="action_resume">Настави</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Потребно је поновно покретање</string>
     <string name="reboot_needed_dialog_summary">Да би се завршило ажурирање, уређај мора да се рестартује. Да ли желите да рестартујете сада?</string>
     <string name="details_button">Прикажи детаље</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Примени ажурирање</string>
     <string name="apply_update_dialog_message">Биће инсталирано <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко додирнете <xliff:g id="ok">%2$s</xliff:g>, уређај ће се поново покренути у режим опоравка ради инсталације ажурирања.\n\nНапомена: За ову функцију је неопходан одговарајући режим опоравка или ћете морати да инсталирате ручно.</string>
     <string name="apply_update_dialog_message_ab">Биће инсталирано <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко додирнете <xliff:g id="ok">%2$s</xliff:g>, уређај ће почети инсталацијуу позадини.\n\nКада буде завршено биће понуђено рестартовање.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Припрема прелиминарних ажурирања</string>
     <string name="dialog_battery_low_title">Слаба батерија</string>
     <string name="dialog_battery_low_message_pct">Ниво батерије је пренизак, треба вам барем <xliff:g id="percent_discharging">%1$d</xliff:g>%% батерије да наставите, <xliff:g id="percent_charging">%2$d</xliff:g>%% аке се пуни.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Извозим ажурирање у интерну меморију</string>
     <string name="notification_export_success">Ажурирање извезено у интерну меморију</string>
     <string name="notification_export_fail">Неуспело извожење ажурирања у интерну меморију</string>
     <string name="toast_already_exporting">Већ извозим ажурирање</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">преостала <xliff:g id="count">%d</xliff:g> секунда</item>
         <item quantity="few">преостало <xliff:g id="count">%d</xliff:g> секунди</item>
@@ -98,11 +90,9 @@
         <item quantity="few">преостало <xliff:g id="count">%d</xliff:g> сата</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> сати</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Упозорење</string>
     <string name="update_on_mobile_data_message">Преузимање надоградњи преко мобилне мреже троши доста саобраћаја и може довести до непредвиђених трошкова. Да ли желите да наставите?</string>
     <string name="checkbox_mobile_data_warning">Не приказуј поново</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Програмер</string>
     <string name="donate_info_title">Донирај</string>
     <string name="donate_info_summary">Подржите развој</string>
@@ -113,6 +103,5 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Погледајте објаве на форуму</string>
     <string name="error_open_url">Неуспело учитавање линка у претраживачу</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Безбедносно ажурирање</string>
 </resources>

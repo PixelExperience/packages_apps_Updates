@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="export_channel_title">Eksportēšana pabeigta</string>
     <string name="new_updates_channel_title">Jauni atjauninājumi</string>
     <string name="ongoing_channel_title">Aktīvas lejupielādes</string>
@@ -29,12 +27,10 @@
     <string name="download_completed_notification">Lejupielāde pabeigta</string>
     <string name="download_starting_notification">Sāk lejupielādi</string>
     <string name="update_failed_notification">Atjaunināšana Neizdevās</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Dzēst</string>
     <string name="menu_export_update">Eksportēt atjauninājumu</string>
     <string name="menu_show_changelog">Izmaiņas pašreizējā versijā</string>
     <string name="changelog_loading">Notiek ielāde…</string>
-    <!-- General -->
     <string name="snack_no_updates_found">Nav atrasti jauni atjauninājumi</string>
     <string name="snack_updates_check_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
     <string name="snack_download_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
@@ -43,7 +39,6 @@
     <string name="snack_update_not_installable">Šo atjauninājumu nevar instalēt virs pašreizējās versijas.</string>
     <string name="list_verifying_update">Pārbauda atjauninājumu</string>
     <string name="blocked_update_dialog_title">Atjauninājums ir bloķēts</string>
-    <!-- Actions -->
     <string name="action_download">Lejuplādēt</string>
     <string name="action_pause">Pārtraukt</string>
     <string name="action_resume">Atsākt</string>
@@ -55,7 +50,6 @@
     <string name="resume_button">Atsākt</string>
     <string name="reboot">Pārstartēt</string>
     <string name="details_button">Skatīt informāciju</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Uzstādīt atjauninājumu</string>
     <string name="installing_update">Instalē atjauninājuma pakotni</string>
     <string name="installing_update_error">Instalēšanas kļūda</string>
@@ -64,15 +58,10 @@
     <string name="dialog_prepare_zip_message">Iepriekšējā atjauninājuma sagatavošana</string>
     <string name="dialog_battery_low_title">Zems akumulatora līmenis</string>
     <string name="dialog_battery_low_message_pct">Akumulatora uzlādes līmenis ir pārāk zems, nepieciešams vismaz <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatora, lai varētu turpināt, <xliff:g id="percent_charging">%2$d</xliff:g>%% Ja šobrīd notiek uzlāde.</string>
-    <!-- Export update -->
     <string name="toast_already_exporting">Jau eksportē atjauninājumu</string>
-    <!-- ETA -->
-    <!-- Mobile data warning -->
-    <!-- Info section -->
     <string name="donate_info_title">Ziedot</string>
     <string name="website_info_title">Tīmekļa vietne</string>
     <string name="news_info_title">Jaunumi</string>
     <string name="forum_info_title">Forums</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Drošības atjauninājums</string>
 </resources>

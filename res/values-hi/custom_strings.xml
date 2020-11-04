@@ -15,23 +15,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="new_updates_channel_title">नए अपडेट</string>
     <string name="verifying_download_notification">अपडेट की पुष्टि हो रही है</string>
-    <!-- Menu -->
-    <!-- General -->
-    <!-- Actions -->
+    <string name="list_verifying_update">अपडेट की पुष्टि हो रही है</string>
     <string name="confirm_delete_dialog_title">फ़ाइल को हटाएं</string>
     <string name="confirm_delete_dialog_message">चयनित अद्यतन फ़ाइल हटाएं?</string>
-    <!-- Installation -->
-    <!-- Export update -->
-    <!-- ETA -->
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">चेतावनी</string>
     <string name="update_on_mobile_data_message">आप मोबाइल डेटा का उपयोग कर एक अपडेट पैकेज डाउनलोड करने वाले हैं, जो संभवत: उच्च डेटा उपयोग का कारण होने जा रहा है। क्या तुम कार्यवाही को जारी रखना चाहते हैं?</string>
     <string name="checkbox_mobile_data_warning">फिर से मत दिखाना</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">कायम रखना</string>
     <string name="donate_info_title">दान करना</string>
     <string name="donate_info_summary">विकास का समर्थन करें</string>
@@ -42,5 +33,4 @@
     <string name="forum_info_title">मंच</string>
     <string name="forum_info_summary">संगोष्ठी पोस्ट देखें</string>
     <string name="error_open_url">ब्राउज़र में URL खोलने में विफल</string>
-    <!-- Security patch -->
 </resources>

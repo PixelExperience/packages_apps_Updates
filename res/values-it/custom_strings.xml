@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Aggiornamento di sistema</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Completamento dell\'esportazione</string>
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="ongoing_channel_title">Download in corso</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Avvio download</string>
     <string name="update_failed_notification">Aggiornamento non riuscito</string>
     <string name="check_for_update">Verifica la presenza di aggiornamenti</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
     <string name="menu_show_changelog">Cambiamenti nella versione corrente</string>
     <string name="changelog_loading">Caricamento…</string>
     <string name="menu_download_full_package">Scaricare pacchetto completo</string>
     <string name="menu_download_incremental_package">Scaricare pacchetto incrementale</string>
-    <!-- General -->
     <string name="update_found_notification">Aggiornamento di sistema disponibile</string>
     <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
     <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Verifica aggiornamento</string>
     <string name="list_no_updates">Nessun aggiornamento disponibile.</string>
     <string name="blocked_update_dialog_title">Aggiornamento bloccato</string>
-    <!-- Actions -->
     <string name="action_download">Scarica</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Riavvio necessario</string>
     <string name="reboot_needed_dialog_summary">Per completare l\'installazione dell\'aggiornamento, il dispositivo dev\'essere riavviato. Riavviare ora?</string>
     <string name="details_button">Vedi dettagli</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Installa aggiornamento</string>
     <string name="apply_update_dialog_message">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo verrà riavviato in modalità Recovery per installare l\'aggiornamento.\n\nNota: Questa funzione richiede una Recovery compatibile. In caso contrario dovrai procedere con l\'installazione manuale.</string>
     <string name="apply_update_dialog_message_ab">Stai per aggiornare a <xliff:g id="update_name">%1$s</xliff:g>.\n\nPremendo <xliff:g id="ok">%2$s</xliff:g>, il dispositivo inizierà l\'installazione in background.\n\nUna volta terminata, ti verrà richiesto di riavviare il dispositivo.</string>
@@ -78,12 +72,10 @@ Scaricare il pacchetto completo e riprovare?</string>
     <string name="dialog_prepare_zip_message">Preparazione dell\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Esportazione dell\'aggiornamento nella memoria interna in corso</string>
     <string name="notification_export_success">Aggiornamento esportato nella memoria interna</string>
     <string name="notification_export_fail">Non è stato possibile esportare l\'aggiornamento nella memoria interna</string>
     <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 secondo rimanente</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> secondi rimanenti</item>
@@ -96,11 +88,9 @@ Scaricare il pacchetto completo e riprovare?</string>
         <item quantity="one">1 ora rimanente</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ore rimanenti</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attenzione</string>
     <string name="update_on_mobile_data_message">Stai per scaricare un aggiornamento utilizzando i dati mobili. Ciò potrebbe comportare un utilizzo elevato dei dati. Vuoi continuare?</string>
     <string name="checkbox_mobile_data_warning">Non mostrare più</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Manutentore</string>
     <string name="donate_info_title">Fai una donazione</string>
     <string name="donate_info_summary">Sostieni lo sviluppo</string>
@@ -111,6 +101,5 @@ Scaricare il pacchetto completo e riprovare?</string>
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Visualizza i post del forum</string>
     <string name="error_open_url">Apertura del link non riuscita</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Aggiornamento di sicurezza</string>
 </resources>

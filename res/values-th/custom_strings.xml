@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">อัพเดตระบบ</string>
-    <!-- Notifications -->
     <string name="export_channel_title">การส่งออกเสร็จสมบูรณ์</string>
     <string name="new_updates_channel_title">มีอัพเดตใหม่!</string>
     <string name="ongoing_channel_title">กำลังดาวน์โหลดอย่างต่อเนื่อง</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">เริ่มต้นดาวน์โหลด</string>
     <string name="update_failed_notification">การปรับปรุงล้มเหลว</string>
     <string name="check_for_update">ตรวจสอบการอัพเดต</string>
-    <!-- Menu -->
     <string name="menu_delete_update">ลบ</string>
     <string name="menu_export_update">ส่งออกการอัปเดต</string>
     <string name="menu_show_changelog">การเปลี่ยนแปลงในเวอร์ชั่นปัจจุบัน</string>
     <string name="changelog_loading">กำลังโหลด…</string>
     <string name="menu_download_full_package">ดาวน์โหลดแพคเกจทั้งหมด</string>
     <string name="menu_download_incremental_package">ดาวน์โหลดแพคเกจส่วนต่อขยาย</string>
-    <!-- General -->
     <string name="update_found_notification">มีการอัปเดตใหม่ในขณะนี้</string>
     <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
     <string name="snack_updates_check_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">ตรวจสอบการปรับปรุง</string>
     <string name="list_no_updates">ไม่พบการอัพเดตใหม่.</string>
     <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
-    <!-- Actions -->
     <string name="action_download">ดาวน์โหลด</string>
     <string name="action_pause">หยุดชั่วคราว</string>
     <string name="action_resume">ดำเนินการต่อ</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">ต้องการการรีสตาร์ท</string>
     <string name="reboot_needed_dialog_summary">เพื่อที่จะทำให้การอัพเดทสมบูรณ์ อุปกรณ์ของคุณต้องรีสตาร์ท คุณต้องการรีสตาร์ทตอนนี้ไหม?</string>
     <string name="details_button">แสดงรายละเอียด</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">ใช้งานอัปเดต</string>
     <string name="apply_update_dialog_message">คุณกำลังจะอัปเกรดเป็น <xliff:g id="update_name">%1$s</xliff:g>.\n\nถ้าคุณกด <xliff:g id="ok">%2$s</xliff:g>, อุปกรณ์จะรีสตาร์ทเองในโหมดการกู้คืนเพื่อติดตั้งการอัพเดต\n\nหมายเหตุ: คุณลักษณะนี้ต้องการการกู้คืนที่เข้ากันได้ หรือการอัพเดตจะต้องติดตั้งด้วยตนเอง</string>
     <string name="apply_update_dialog_message_ab">คุณกำลังจะอัพเกรดเป็น <xliff:g id="update_name">%1$s</xliff:g>.\n\nถ้าคุณกด <xliff:g id="ok">%2$s</xliff:g>, อุปกรณ์จะเริ่มติดตั้งอยู่ในบื้องหลัง\n\nเมื่อการติดตั้งเสร็จสิ้นคุณจะได้รับแจ้งให้รีบูต</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">เตรียมการปรับปรุงเบื้องต้น</string>
     <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
     <string name="dialog_battery_low_message_pct">ระดับแบตเตอรี่ต่ำเกินไป คุณจะต้องมีระดับแบตเตอรี่อย่างน้อย <xliff:g id="percent_discharging">%1$d</xliff:g>%% เพื่อดำเนินต่อ <xliff:g id="percent_charging">%2$d</xliff:g>%% หากกำลังชาร์จ</string>
-    <!-- Export update -->
     <string name="dialog_export_title">ส่งออกการอัพเดตไปยังที่เก็บข้อมูลภายใน</string>
     <string name="notification_export_success">อัพเดตที่ส่งออกไปยังที่เก็บข้อมูลภายใน</string>
     <string name="notification_export_fail">ไม่สามารถส่งออกการอัพเดตไปยังที่จัดเก็บข้อมูลภายใน</string>
     <string name="toast_already_exporting">ดำเนินการส่งออกอัพเดตเรียบร้อยแล้ว</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> วินาที</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> ชั่วโมง</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">คำเตือน</string>
     <string name="update_on_mobile_data_message">คุณกำลังจะดาวน์โหลดไฟล์ขนาดใหญ่เพื่อใช้ปรับปรุงระบบ ผ่านทางครือข่ายมือถือซึ่งใช้ข้อมูลปริมาณมาก คุณต้องการทำหรือไม่?</string>
     <string name="checkbox_mobile_data_warning">ไม่ต้องแสดงอีก</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">ผู้ดูแล</string>
     <string name="donate_info_title">ร่วมสนับสนุน</string>
     <string name="donate_info_summary">สนับสนุนการพัฒนา</string>
@@ -107,5 +97,4 @@
     <string name="forum_info_title">กระทู้</string>
     <string name="forum_info_summary">เปิดอ่านกระทู้</string>
     <string name="error_open_url">เปิด URL ในเบราว์เซอร์ไม่ได้</string>
-    <!-- Security patch -->
 </resources>

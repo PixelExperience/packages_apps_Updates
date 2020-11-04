@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Sistemos atnaujinimai</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Eksportas baigtas</string>
     <string name="new_updates_channel_title">Nauji atnaujinimai</string>
     <string name="ongoing_channel_title">Vykstantys atsisiuntimai</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Pradedamas atsiuntimas</string>
     <string name="update_failed_notification">Atnaujinti nepavyko</string>
     <string name="check_for_update">Tikrinti atnaujinimus</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Pašalinti</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
     <string name="menu_show_changelog">Dabartinės versijos pakeitimai</string>
     <string name="changelog_loading">Kraunama…</string>
     <string name="menu_download_full_package">Atsisiųskite visą paketą</string>
     <string name="menu_download_incremental_package">Atsisiųsti papildomą paketą</string>
-    <!-- General -->
     <string name="update_found_notification">Pasiekiami nauji atnaujinimai</string>
     <string name="snack_no_updates_found">Naujų atnaujinimų nerasta</string>
     <string name="snack_updates_check_failed">Atnaujinimo patikra nepavyko. Prašome patikrinti savo interneto ryšį ir pabandyti dar kartą vėliau.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Tikrinamas atnaujinimas</string>
     <string name="list_no_updates">Nerasta naujų atnaujinimų.</string>
     <string name="blocked_update_dialog_title">Atnaujinimas užblokuotas</string>
-    <!-- Actions -->
     <string name="action_download">Atsisiųsti</string>
     <string name="action_pause">Pristabdyti</string>
     <string name="action_resume">Tęsti</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Reikia paleisti iš naujo</string>
     <string name="reboot_needed_dialog_summary">Norėdami baigti diegti naujinimą, jūsų įrenginys turi būti paleistas iš naujo. Ar norite paleisti iš naujo dabar?</string>
     <string name="details_button">Peržiūrėti informaciją</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Patvirtinti atnaujinimą</string>
     <string name="apply_update_dialog_message">Jūs ketinate atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf Jei paspausite <xliff:g id="ok">%2$s </xliff:g>, įrenginys bus paleistas iš naujo atkūrimo režimu, kad įdiegtų naujinimą: \n\n Pastaba: Ši funkcija reikalauja suderinamo atkūrimo arba atnaujinimo.</string>
     <string name="apply_update_dialog_message_ab">Ruošiatės atnaujinti į <xliff:g id="update_name">%1$s</xliff:g>.\n\nJei spausite <xliff:g id="ok">%2$s</xliff:g>, įrenginys bus paleistas iš naujo ir pats įdiegs atnaujinimą.\n\nKai atnaujins, prietaisas persikraus automatiškai.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas, jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos, kad tęstumėte, <xliff:g id="procentu_krovimas">%2$d</xliff:g>%%, jei įkraunama.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Eksportuojamas naujinimas į vidinę saugyklą</string>
     <string name="notification_export_success">Atnaujinta eksportuota į vidinę saugyklą</string>
     <string name="notification_export_fail">Nepavyko eksportuoti atnaujinimo į vidinę saugyklą</string>
     <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Liko 1sekundė</item>
         <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
@@ -101,11 +93,9 @@
         <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> val</item>
         <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> val</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Dėmesio</string>
     <string name="update_on_mobile_data_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
     <string name="checkbox_mobile_data_warning">Daugiau nerodyti</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Kūrėjas/Prižiūrėtojas</string>
     <string name="donate_info_title">Paaukoti</string>
     <string name="donate_info_summary">Paremti programos vystymą</string>
@@ -116,6 +106,5 @@
     <string name="forum_info_title">Forumas</string>
     <string name="forum_info_summary">Peržiūrėti forumo pranešimus</string>
     <string name="error_open_url">Nepavyko atidaryti URL naršyklės</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Saugos naujinys</string>
 </resources>

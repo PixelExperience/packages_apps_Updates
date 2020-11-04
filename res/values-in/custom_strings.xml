@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Pembaruan sistem</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Penyelesaian ekspor</string>
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="ongoing_channel_title">Unduhan sedang berlangsung</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Memulai unduhan</string>
     <string name="update_failed_notification">Pembaruan gagal</string>
     <string name="check_for_update">Periksa pembaruan</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Hapus</string>
     <string name="menu_export_update">Ekspor pembaruan</string>
     <string name="menu_show_changelog">Perubahan di versi ini</string>
     <string name="changelog_loading">Memuat…</string>
     <string name="menu_download_full_package">Unduh paket lengkap</string>
     <string name="menu_download_incremental_package">Unduh paket inkremental</string>
-    <!-- General -->
     <string name="update_found_notification">Pembaruan sistem tersedia</string>
     <string name="snack_no_updates_found">Tidak ada pembaruan baru ditemukan</string>
     <string name="snack_updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi Internet Anda dan coba lagi nanti.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Memverifikasi pembaruan</string>
     <string name="list_no_updates">Tidak ada pembaruan baru ditemukan.</string>
     <string name="blocked_update_dialog_title">Pembaruan diblokir</string>
-    <!-- Actions -->
     <string name="action_download">Unduh</string>
     <string name="action_pause">Jeda</string>
     <string name="action_resume">Lanjutkan</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Mulai ulang diperlukan</string>
     <string name="reboot_needed_dialog_summary">Untuk menyelesaikan pemasangan pembaruan, perangkat Anda perlu dimulai ulang. Apakah Anda ingin memulai ulang sekarang?</string>
     <string name="details_button">Lihat detail</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Terapkan pembaruan</string>
     <string name="apply_update_dialog_message">Anda akan meningkatkan ke <xliff:g id="update_name">%1$s</xliff:g>.\n\nJika Anda menekan <xliff:g id="ok">%2$s</xliff:g>, perangkat akan menyalakan ulang sendiri dalam mode recovery untuk memasang pembaruan.\n\nPerhatian: Fitur ini memerlukan Recovery yang kompatibel atau pembaruan perlu dipasang secara manual.</string>
     <string name="apply_update_dialog_message_ab">Anda akan meningkatkan ke <xliff:g id="update_name">%1$s</xliff:g>.\n\nJika Anda menekan <xliff:g id="ok">%2$s</xliff:g>, perangkat akan mulai memasang di latar belakang.\n\nSetelah selesai, Anda akan diminta untuk menyalakan ulang perangkat.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Persiapan awal pembaruan</string>
     <string name="dialog_battery_low_title">Baterai lemah</string>
     <string name="dialog_battery_low_message_pct">Tingkat baterai terlalu rendah, Anda memerlukan setidaknya <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterai untuk melanjutkan, <xliff:g id="percent_charging">%2$d</xliff:g>%% jika saat pengisian.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Mengekspor pembaruan ke penyimpanan internal</string>
     <string name="notification_export_success">Pembaruan diekspor ke penyimpanan internal</string>
     <string name="notification_export_fail">Gagal mengekspor pembaruan ke penyimpanan internal</string>
     <string name="toast_already_exporting">Sudah mengekspor pembaruan</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other"><xliff:g id="count">%d</xliff:g> detik tersisa</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other"><xliff:g id="count">%d</xliff:g> jam tersisa</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan megunduh paket pembaruan menggunakan data seluler yang mungkin akan menyebabkan penggunaan data yang tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Pemelihara</string>
     <string name="donate_info_title">Donasi</string>
     <string name="donate_info_summary">Dukung pengembangan</string>
@@ -107,6 +97,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Lihat kiriman forum</string>
     <string name="error_open_url">Gagal membuka URL di peramban</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Update keamanan</string>
 </resources>

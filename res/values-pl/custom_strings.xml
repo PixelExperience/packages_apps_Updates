@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Aktualizacja systemu</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Eksport zakończony</string>
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
     <string name="ongoing_channel_title">Trwające pobierania</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Rozpoczęcie pobierania</string>
     <string name="update_failed_notification">Aktualizacja nie powiodła się</string>
     <string name="check_for_update">Sprawdź czy są dostępne nowe aktualizacje</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Usuń</string>
     <string name="menu_export_update">Wyślij aktualizację</string>
     <string name="menu_show_changelog">Zmiany w obecnej wersji</string>
     <string name="changelog_loading">Ładowanie…</string>
     <string name="menu_download_full_package">Pobierz pełny pakiet</string>
     <string name="menu_download_incremental_package">Pobierz pakiet przyrostowy</string>
-    <!-- General -->
     <string name="update_found_notification">Aktualizacja systemu jest dostępna</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
     <string name="snack_updates_check_failed">Sprawdzanie aktualizacji nie powiodło się. Sprawdź swoje połączenie z Internetem i spróbuj ponownie.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Sprawdzanie aktualizacji</string>
     <string name="list_no_updates">Nie znaleziono nowych aktualizacji.</string>
     <string name="blocked_update_dialog_title">Aktualizacja zablokowana</string>
-    <!-- Actions -->
     <string name="action_download">Pobierz</string>
     <string name="action_pause">Wstrzymaj</string>
     <string name="action_resume">Wznów</string>
@@ -62,10 +57,9 @@
     <string name="pause_button">Wstrzymaj</string>
     <string name="resume_button">Wznów</string>
     <string name="reboot">Uruchom ponownie</string>
-    <string name="reboot_needed_dialog_title">Restart needed</string>
+    <string name="reboot_needed_dialog_title">Wymagane jest ponowne uruchomienie</string>
     <string name="reboot_needed_dialog_summary">Aby zakończyć instalację aktualizacji, należy ponownie uruchomić urządzenie. Czy chcesz teraz ponownie uruchomić?</string>
     <string name="details_button">Pokaż szczegóły</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Zastosuj aktualizację</string>
     <string name="apply_update_dialog_message">Masz zamiar zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>.\n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie uruchomi się ponownie w trybie recovery, aby zainstalować aktualizację.\n\nUwaga: Ta funkcja wymaga kompatybilnego recovery, w innym przypadku aktualizację należy zainstalować ręcznie.</string>
     <string name="apply_update_dialog_message_ab">Masz zamiar zaktualizować do <xliff:g id="filename">%1$s</xliff:g>. \n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie zacznie instalować w tle.\n\nPo zakończeniu wyświetli komunikat, aby urządzenie uruchomić ponownie.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Przygotowanie wstępne aktualizacji</string>
     <string name="dialog_battery_low_title">Niskim poziom baterii</string>
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Eksportowanie aktualizacji do pamięci wewnętrznej</string>
     <string name="notification_export_success">Aktualizacja wyeksportowana do pamięci wewnętrznej</string>
     <string name="notification_export_fail">Nieudane eksportowanie aktualizacji do pamięci wewnętrznej</string>
     <string name="toast_already_exporting">Aktualizacja jest już wysyłana</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Pozostała 1 sekunda</item>
         <item quantity="few">Pozostały <xliff:g id="count">%d</xliff:g> sekundy</item>
@@ -101,11 +93,9 @@
         <item quantity="many">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
         <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Uwaga</string>
     <string name="update_on_mobile_data_message">Za chwilę pobierzesz pakiet aktualizacji przy użyciu danych mobilnych, co prawdopodobnie spowoduje wysokie zużycie danych. Czy chcesz kontynuować?</string>
     <string name="checkbox_mobile_data_warning">Nie pokazuj ponownie</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Opiekun</string>
     <string name="donate_info_title">Dotacja</string>
     <string name="donate_info_summary">Wesprzyj rozwój programu</string>
@@ -116,6 +106,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Zobacz posty na forum</string>
     <string name="error_open_url">Nie można otworzyć adresu URL w przeglądarce</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Aktualizacja zabezpieczeń</string>
 </resources>

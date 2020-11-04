@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">시스템 업데이트</string>
-    <!-- Notifications -->
     <string name="export_channel_title">내보내기 완료</string>
     <string name="new_updates_channel_title">새 업데이트</string>
     <string name="ongoing_channel_title">진행 중인 다운로드</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">다운로드 시작 중</string>
     <string name="update_failed_notification">업데이트 실패</string>
     <string name="check_for_update">업데이트 확인</string>
-    <!-- Menu -->
     <string name="menu_delete_update">삭제</string>
     <string name="menu_export_update">업데이트 내보내기</string>
     <string name="menu_show_changelog">현재 버전의 변경 사항</string>
     <string name="changelog_loading">로드 중…</string>
     <string name="menu_download_full_package">전체 패키지 다운로드</string>
     <string name="menu_download_incremental_package">증분 패키지 다운로드</string>
-    <!-- General -->
     <string name="update_found_notification">시스템 업데이트 사용 가능</string>
     <string name="snack_no_updates_found">새 업데이트 없음</string>
     <string name="snack_updates_check_failed">업데이트 확인에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">업데이트 검증 중</string>
     <string name="list_no_updates">새 업데이트 없음.</string>
     <string name="blocked_update_dialog_title">업데이트 차단됨</string>
-    <!-- Actions -->
     <string name="action_download">다운로드</string>
     <string name="action_pause">일시 중지</string>
     <string name="action_resume">이어 받기</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">재시작 필요</string>
     <string name="reboot_needed_dialog_summary">업데이트 설치를 완료하려면 장치를 다시 시작해야합니다.  지금 다시 시작 하시겠습니까?</string>
     <string name="details_button">자세히 보기</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">업데이트 적용</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g>(으)로 업그레이드하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면, 업데이트를 설치하기 위해 기기가 복구 모드로 다시 시작합니다.\n\n주의: 이 기능은 호환되는 리커버리가 필요하며, 없을 경우 업데이트를 수동으로 설치해야 합니다.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g>(으)로 업그레이드하려 합니다.\n\n<xliff:g id="ok">%2$s</xliff:g>을 누르면, 백그라운드에서 설치를 시작합니다.\n\n설치가 완료되면, 기기를 다시 시작할지 묻는 대화 상자가 나타납니다.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">예비 업데이트 준비</string>
     <string name="dialog_battery_low_title">배터리 부족</string>
     <string name="dialog_battery_low_message_pct">배터리 수준이 너무 낮습니다, 계속하려면 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 이상, 충전 중일 경우 <xliff:g id="percent_charging">%2$d</xliff:g>%% 이상이어야 합니다.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">내부 저장소로 업데이트를 내보내는 중</string>
     <string name="notification_export_success">내부 저장소로 업데이트를 내보냄</string>
     <string name="notification_export_fail">내부 저장소로 업데이트를 내보내지 못함</string>
     <string name="toast_already_exporting">이미 업데이트를 내보내는 중입니다</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other"><xliff:g id="count">%d</xliff:g>초 남음</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other"><xliff:g id="count">%d</xliff:g>시간 남음</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">경고</string>
     <string name="update_on_mobile_data_message">모바일 데이터를 사용하여 업데이트 패키지를 다운로드하는 것은 많은 데이터 사용량을 야기할 수 있습니다. 계속하시겠습니까?</string>
     <string name="checkbox_mobile_data_warning">다시 보지 않기</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">관리자</string>
     <string name="donate_info_title">기부</string>
     <string name="donate_info_summary">개발 지원하기</string>
@@ -107,6 +97,5 @@
     <string name="forum_info_title">포럼</string>
     <string name="forum_info_summary">포럼 게시물 보기</string>
     <string name="error_open_url">브라우저에서 URL을 열지 못했습니다</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">보안 업데이트</string>
 </resources>

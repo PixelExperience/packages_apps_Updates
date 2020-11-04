@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Ažuriranje sustava</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Završetak izvoza</string>
     <string name="new_updates_channel_title">Nova ažuriranja</string>
     <string name="ongoing_channel_title">Preuzimanja u tijeku</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Početak preuzimanja</string>
     <string name="update_failed_notification">Ažuriranje neuspjelo</string>
     <string name="check_for_update">Potraži ažuriranja</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
     <string name="menu_show_changelog">Promjene u trenutnoj verziji</string>
     <string name="changelog_loading">Učitavanje…</string>
     <string name="menu_download_full_package">Preuzmi cijeli paket</string>
     <string name="menu_download_incremental_package">Preuzmi inkrementalni paket</string>
-    <!-- General -->
     <string name="update_found_notification">Dostupno je ažuriranje sustava</string>
     <string name="snack_no_updates_found">Nema pronađenih novih ažuriranja</string>
     <string name="snack_updates_check_failed">Traženje ažuriranja nije uspjelo. Provjerite mrežnu vezu i pokušajte ponovno kasnije.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Provjera ažuriranja</string>
     <string name="list_no_updates">Nema pronađenih novih ažuriranja.</string>
     <string name="blocked_update_dialog_title">Ažuriranje je blokirano</string>
-    <!-- Actions -->
     <string name="action_download">Preuzmi</string>
     <string name="action_pause">Pauziraj</string>
     <string name="action_resume">Nastavi</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Treba ponovno pokretanje</string>
     <string name="reboot_needed_dialog_summary">Da biste dovršili instalaciju ažuriranja, vaš uređaj treba ponovo pokrenuti. Želite li ponovo pokrenuti?</string>
     <string name="details_button">Pogledaj detalje</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Primjeni ažuriranje</string>
     <string name="apply_update_dialog_message">Ažurirat ćete svoj sustav na <xliff:g id="filename">%1$s</xliff:g>.\n\nAko pritisnete <xliff:g id="ok">%2$s</xliff:g>, uređaj će se sam ponovno pokrenuti u recovery kako bi instalirao ažuriranje.\n\nNapomena: ova značajka zahtijeva kompatibilan recovery. U suprotnome će se ažuriranja morati instalirati ručno.</string>
     <string name="apply_update_dialog_message_ab">Spremate se ažurirati na <xliff:g id="filename">%1$s </xliff:g>.\n\nAko dodirnete <xliff:g id="ok">%2$s</xliff:g>, uređaj će započeti instalaciju u pozadini.\n\nKad se završi, trebati ćete ponovno pokrenuti uređaj.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Preliminarna priprema ažuriranja</string>
     <string name="dialog_battery_low_title">Slaba baterija</string>
     <string name="dialog_battery_low_message_pct">Razina baterije je preniska, treba vam barem <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nastavak, <xliff:g id="percent_charging">%2$d</xliff:g>%% ako se puni.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Izvoz ažuriranja u internu memoriju</string>
     <string name="notification_export_success">Ažuriranje je izveženo u internu memoriju</string>
     <string name="notification_export_fail">Izvoz ažuriranja u unutarnju memoriju nije uspio</string>
     <string name="toast_already_exporting">Ažuriranje se već izvozi</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 sekunda preostala</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> sek preostalo</item>
@@ -98,11 +90,9 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> sati preostalo</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sati preostalo</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="update_on_mobile_data_message">Upravo ćete preuzeti paket ažuriranja pomoću mobilnih podataka koji će vjerojatno uzrokovati visoku upotrebu podataka. Želite li nastaviti?</string>
     <string name="checkbox_mobile_data_warning">Ne prikazuj ponovno</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Održavatelj</string>
     <string name="donate_info_title">Doniraj</string>
     <string name="donate_info_summary">Podrži razvoj</string>
@@ -113,6 +103,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vidi objave na forumu</string>
     <string name="error_open_url">Neuspješno otvaranje poveznice u pregledniku</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Sigurnosno ažuriranje</string>
 </resources>

@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Ενημέρωση συστήματος</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Ολοκλήρωση εξαγωγής</string>
     <string name="new_updates_channel_title">Νέες ενημερώσεις</string>
     <string name="ongoing_channel_title">Λήψεις σε εξέλιξη</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Έναρξη λήψης</string>
     <string name="update_failed_notification">Η ενημέρωση απέτυχε</string>
     <string name="check_for_update">Έλεγχος για ενημερώσεις</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Διαγραφή</string>
     <string name="menu_export_update">Εξαγωγή ενημέρωσης</string>
     <string name="menu_show_changelog">Αλλαγές στην τρέχουσα έκδοση</string>
     <string name="changelog_loading">Φόρτωση…</string>
     <string name="menu_download_full_package">Λήψη πλήρους πακέτου</string>
     <string name="menu_download_incremental_package">Λήψη μερικού πακέτου</string>
-    <!-- General -->
     <string name="update_found_notification">Διαθέσιμη ενημέρωση συστήματος</string>
     <string name="snack_no_updates_found">Δεν βρέθηκαν νέες ενημερώσεις</string>
     <string name="snack_updates_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Επαλήθευση ενημέρωσης</string>
     <string name="list_no_updates">Δεν βρέθηκαν νέες ενημερώσεις.</string>
     <string name="blocked_update_dialog_title">Η ενημέρωση μπλοκαρίστηκε</string>
-    <!-- Actions -->
     <string name="action_download">Λήψη</string>
     <string name="action_pause">Παύση</string>
     <string name="action_resume">Συνέχιση</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Απαιτείται επανεκκίνηση</string>
     <string name="reboot_needed_dialog_summary">Για να ολοκληρωθεί η εγκατάσταση της ενημέρωσης, απαιτείται επανεκκίνηση της συσκευής. Θέλετε να κάνετε επανεκκίνηση τώρα;</string>
     <string name="details_button">Προβολή λεπτομερειών</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Εφαρμογή ενημέρωσης</string>
     <string name="apply_update_dialog_message">Πρόκειται να αναβαθμίσετε σε <xliff:g id="update_name">%1$s</xliff:g>.\n\nΑν πατήσετε <xliff:g id="ok">%2$s</xliff:g>, η συσκευή θα κάνει επανεκκίνηση σε λειτουργία recovery για να εγκατασταθεί η ενημέρωση.\n\nΣημείωση: Αυτή η λειτουργία απαιτεί μια συμβατή recovery αλλιώς η ενημέρωση θα πρέπει να εγκατασταθεί χειροκίνητα.</string>
     <string name="apply_update_dialog_message_ab">Πρόκειται να αναβαθμίσετε σε <xliff:g id="update_name">%1$s</xliff:g>.\n\nΕάν πατήσετε <xliff:g id="ok">%2$s</xliff:g>, η συσκευή θα ξεκινήσει την εγκατάσταση στο παρασκήνιο.\n\nΌταν ολοκληρωθεί, θα σας ζητηθεί να κάνετε επανεκκίνηση.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Προκαταρκτική προετοιμασία ενημέρωσης</string>
     <string name="dialog_battery_low_title">Χαμηλή μπαταρία</string>
     <string name="dialog_battery_low_message_pct">Η στάθμη της μπαταρίας είναι πολύ χαμηλή, χρειάζεστε τουλάχιστον <xliff:g id="percent_discharging">%1$d</xliff:g>%% της μπαταρίας για να συνεχίσετε ή <xliff:g id="percent_charging">%2$d</xliff:g>%% κατά την φόρτιση.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Εξαγωγή ενημέρωσης στον εσωτερικό χώρο</string>
     <string name="notification_export_success">Η ενημέρωση εξήχθη στον εσωτερικό χώρο</string>
     <string name="notification_export_fail">Αδυναμία εξαγωγής ενημέρωσης στον εσωτερικό χώρο</string>
     <string name="toast_already_exporting">Εξάγεται ήδη μία ενημέρωση</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">απομένει 1 δευτερόλεπτο</item>
         <item quantity="other">απομένουν <xliff:g id="count">%d</xliff:g> δευτερόλεπτα</item>
@@ -95,11 +87,9 @@
         <item quantity="one">απομένει 1 ώρα</item>
         <item quantity="other">απομένουν <xliff:g id="count">%d</xliff:g> ώρες</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="update_on_mobile_data_message">Είστε έτοιμος να κατεβάσετε ένα πακέτο ενημέρωσης χρησιμοποιώντας δεδομένα κινητής τηλεφωνίας, το οποίο είναι πιθανό να προκαλέσει υψηλή χρήση δεδομένων. Θα θέλατε να συνεχίσετε;</string>
     <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Συντηρητής</string>
     <string name="donate_info_title">Δωρεές</string>
     <string name="donate_info_summary">Υποστηρίξτε την ανάπτυξη εφαρμογών</string>
@@ -110,6 +100,5 @@
     <string name="forum_info_title">Κοινότητα</string>
     <string name="forum_info_summary">Δείτε της δημοσιεύσεις της κοινότητας</string>
     <string name="error_open_url">Απέτυχε το άνοιγμα της διεύθυνσης URL στο πρόγραμμα περιήγησης</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Ενημέρωση ασφαλείας</string>
 </resources>

@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Järjestelmäpäivitys</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Vienti valmis</string>
     <string name="new_updates_channel_title">Uudet päivitykset</string>
     <string name="ongoing_channel_title">Käynnissä olevat lataukset</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Aloitetaan latausta</string>
     <string name="update_failed_notification">Päivitys epäonnistui</string>
     <string name="check_for_update">Tarkista päivitykset</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Poista</string>
     <string name="menu_export_update">Vie päivitys</string>
     <string name="menu_show_changelog">Muutokset nykyiseen versioon</string>
     <string name="changelog_loading">Ladataan…</string>
     <string name="menu_download_full_package">Lataa täysipaketti</string>
     <string name="menu_download_incremental_package">Lataa lisäpaketti</string>
-    <!-- General -->
     <string name="update_found_notification">Päivitys on saatavilla</string>
     <string name="snack_no_updates_found">Uusia päivityksiä ei löytynyt</string>
     <string name="snack_updates_check_failed">Päivitysten tarkistaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Todentaa päivitystä</string>
     <string name="list_no_updates">Uutta päivitystä ei löytynyt.</string>
     <string name="blocked_update_dialog_title">Päivitys estetty</string>
-    <!-- Actions -->
     <string name="action_download">Lataa</string>
     <string name="action_pause">Tauko</string>
     <string name="action_resume">Jatka</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Uudelleenkäynnistys tarvitaan</string>
     <string name="reboot_needed_dialog_summary">Päivityksen asentamisen loppuunsaattamiseksi tarvitaan uudelleenkäynnistys. Haluatko käynnistää uudelleen nyt?</string>
     <string name="details_button">Näytä tiedot</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Asenna päivitys</string>
     <string name="apply_update_dialog_message">Olet päivittämässä versioon <xliff:g id="update_name">%1$s</xliff:g>.\n\nJos painat <xliff:g id="ok">%2$s</xliff:g>, laite käynnistyy Recovery-tilaan. \n\nHuomautus: Tämä toiminto vaatii yhteensopivan Recoveryn tai päivitys pitää asentaa manuaalisesti.</string>
     <string name="apply_update_dialog_message_ab">Olet päivittämässä versioon <xliff:g id="update_name">%1$s</xliff:g>.\n\nJos painat <xliff:g id="ok">%2$s</xliff:g>, asennus alkaa taustalla.\n\nKun asennus on valmis, sinua pyydetään käynnistämään laite uudelleen.</string>
@@ -76,12 +70,10 @@
     <string name="dialog_prepare_zip_message">Alustava päivityksen valmistelu</string>
     <string name="dialog_battery_low_title">Akku vähissä</string>
     <string name="dialog_battery_low_message_pct">Akun varaus on liian matala, tarvitset vähintään <xliff:g id="percent_discharging">%1$d</xliff:g>%% jatkaaksesi, <xliff:g id="percent_charging">%2$d</xliff:g>%% jos laite on latauksessa.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Viedään päivitystä sisäiseen tallennustilaan</string>
     <string name="notification_export_success">Päivitys viety sisäiseen tallennustilaan</string>
     <string name="notification_export_fail">Päivityksen vienti sisäiseen tallennustilaan epäonnistui</string>
     <string name="toast_already_exporting">Päivityksen vieminen jo käynnissä</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 sekunti jäljellä</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekuntia jäljellä</item>
@@ -94,11 +86,9 @@
         <item quantity="one">1 tunti jäljellä</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> tuntia jäljellä</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varoitus</string>
     <string name="update_on_mobile_data_message">Olet lataamassa päivityspakettia käyttämällä mobiilidataa, joka voi todennäköisesti aiheuttaa tiedonsiirtokuluja. Haluatko jatkaa?</string>
     <string name="checkbox_mobile_data_warning">Älä näytä uudestaan</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Ylläpitäjä</string>
     <string name="donate_info_title">Lahjoita</string>
     <string name="donate_info_summary">Tue kehitystä</string>
@@ -109,6 +99,5 @@
     <string name="forum_info_title">Foorumi</string>
     <string name="forum_info_summary">Näytä foorumin postaukset</string>
     <string name="error_open_url">URL avaaminen selaimessa epäonnistui</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Tietoturvapäivitys</string>
 </resources>

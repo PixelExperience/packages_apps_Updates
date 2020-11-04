@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Ažuriranje sistema</string>
+    <string name="export_channel_title">Izvoz završen</string>
+    <string name="new_updates_channel_title">Nova ažuriranja</string>
+    <string name="ongoing_channel_title">Preuzimanja u toku</string>
+    <string name="update_failed_channel_title">Ažuriranje nije uspjelo</string>
+    <string name="verification_failed_notification">Neuspela provjera</string>
+    <string name="verifying_download_notification">Provjera ažuriranja</string>
+    <string name="downloading_notification">Preuzimanje</string>
+    <string name="download_paused_notification">Preuzimanje pauzirano</string>
+    <string name="download_paused_error_notification">Greška pri preuzimanju</string>
+    <string name="download_completed_notification">Preuzimanje je završeno</string>
+    <string name="download_starting_notification">Pokretanje preuzimanja</string>
+    <string name="update_failed_notification">Ažuriranje nije uspjelo</string>
+    <string name="check_for_update">Proveri ima li ažuriranja</string>
+    <string name="menu_delete_update">Obriši</string>
+    <string name="menu_export_update">Izvezi ažuriranje</string>
+    <string name="menu_show_changelog">Promjene u aktuelnoj verziji</string>
+    <string name="changelog_loading">Učitavanje u toku…</string>
+    <string name="menu_download_full_package">Preuzmi cijeli paket</string>
+    <string name="menu_download_incremental_package">Preuzmi inkrementalni paket</string>
+    <string name="update_found_notification">Novo ažuriranje je dostupno</string>
+    <string name="snack_no_updates_found">Nema novih ažuriranja</string>
+    <string name="snack_updates_check_failed">Provjera dostupnosti novih ažuriranja nije uspela. Provjeri internet vezu ili pokušaj kasnije.</string>
+    <string name="snack_download_failed">Preuzimanje novih ažuriranja nije uspelo. Provjeri internet vezu ili pokušaj kasnije.</string>
+    <string name="snack_download_verification_failed">Provjera ažuriranja nije uspela.</string>
+    <string name="snack_download_verified">Preuzimanje je završeno.</string>
+    <string name="snack_update_not_installable">Nemoguće instalirati ažuriranje na postojeću verziju.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Provjera ažuriranja</string>
+    <string name="list_no_updates">Nema novih ažuriranja.</string>
+    <string name="blocked_update_dialog_title">Osvežavanje je blokirano</string>
+    <string name="action_download">Preuzimanje</string>
+    <string name="action_pause">Pauza</string>
+    <string name="action_resume">Nastavi</string>
+    <string name="action_install">Instaliraj</string>
+    <string name="action_delete">Obriši</string>
+    <string name="confirm_delete_dialog_title">Izbriši dokument</string>
+    <string name="confirm_delete_dialog_message">Izbrisati izabrano ažuriranje?</string>
+    <string name="pause_button">Pauza</string>
+    <string name="resume_button">Nastavi</string>
+    <string name="reboot">Ponovno pokretanje</string>
+    <string name="reboot_needed_dialog_title">Treba ponovno pokretanje</string>
+    <string name="reboot_needed_dialog_summary">Da biste dovršili instalaciju ažuriranja, vaš uređaj treba ponovo pokrenuti. Želite li ponovo pokrenuti?</string>
+    <string name="details_button">Pogledaj detalje</string>
+    <string name="apply_update_dialog_title">Primjeni ažuriranje</string>
+    <string name="apply_update_dialog_message">Spremni ste za nadogradnju <xliff:g id="update_name">%1$s</xliff:g>.\n\nIf you press <xliff:g id="ok">%2$s</xliff:g>, uređaj će se prebaciti u mod za opravak da bi uradio ažuriranje.\n\nNapomena: Za ovu operaciju uređaj mora imati prikladanu aplikaciju za ažuriranje sistema u suprotnom to morate uraditi ručno.</string>
+    <string name="apply_update_dialog_message_ab">Spremni ste za nadogradnju <xliff:g id="update_name">%1$s</xliff:g>.\n\nAko izaberete <xliff:g id="ok">%2$s</xliff:g>, uređaj će se ažurirati u pozadini.\n\nKada završi obavestiće vas za ponovno pokretanje.</string>
+    <string name="installing_update">Instalacija izabranog ažuriranja</string>
+    <string name="installing_update_error">Greška u instalaciji</string>
+    <string name="installing_update_finished">Ažuriranje je završeno</string>
+    <string name="installing_update_ab_disable_incremental_summary">Inkrementalna instalacija nije uspjela jer je particija vašeg sustava izmijenjena instaliranjem nekog dodatka ili prilagođenog kernela. Želite li preuzeti cijeli paket i pokušati ponovo?</string>
+    <string name="finalizing_package">Finalizacija ažuriranja</string>
+    <string name="dialog_prepare_zip_message">Priprema za ažuriranje</string>
+    <string name="dialog_battery_low_title">Slaba baterija</string>
+    <string name="dialog_battery_low_message_pct">Baterija je slaba, potrebno je barem <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nastavak, <xliff:g id="percent_charging">%2$d</xliff:g>%% ukoliko se puni.</string>
+    <string name="dialog_export_title">Izvoz ažuriranja u internu memoriju</string>
+    <string name="notification_export_success">Ažuriranje je izveženo u internu memoriju</string>
+    <string name="notification_export_fail">Izvoz ažuriranja u unutarnju memoriju nije uspio</string>
+    <string name="toast_already_exporting">Već je urađen izvoz ažuriranja</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">1 sekunda preostala</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> sekunde preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sekundi preostalo</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minuta preostala</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> minuta preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minuta preostalo</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 sat preostao</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> sata preostalo</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sati preostalo</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Upozoranje</string>
+    <string name="update_on_mobile_data_message">Pokušavate da preuzmete ažuriranje preko mobilnih podataka što može da vas skupo košta. Želite da nastavite?</string>
+    <string name="checkbox_mobile_data_warning">Ne prikazuj ponovo</string>
+    <string name="maintainer_info_title">Osoba koja održava</string>
+    <string name="donate_info_title">Doniraj</string>
+    <string name="donate_info_summary">Pomozi razvoj ove aplikacije</string>
+    <string name="website_info_title">Web sajt</string>
+    <string name="website_info_summary">Posjetite našu web stranicu</string>
+    <string name="news_info_title">Vijesti</string>
+    <string name="news_info_summary">Budi obavešten o ažuriranjima i drugim vijestima</string>
+    <string name="forum_info_title">Forum</string>
+    <string name="forum_info_summary">Pogledaj poruke na forumu</string>
+    <string name="error_open_url">Ne mogu otvoriti URL u Pretraživaču</string>
+    <string name="setting_security_patch_level_title">Sigurnosno ažuriranje</string>
+</resources>

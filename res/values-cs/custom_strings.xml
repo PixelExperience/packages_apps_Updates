@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Aktualizace systému</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Dokončení exportu</string>
     <string name="new_updates_channel_title">Nové aktualizace</string>
     <string name="ongoing_channel_title">Probíhající stahování</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Spouštění stahování</string>
     <string name="update_failed_notification">Aktualizace selhala</string>
     <string name="check_for_update">Zkontrolovat aktualizace</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Smazat</string>
     <string name="menu_export_update">Export aktualizace</string>
     <string name="menu_show_changelog">Změny v aktuální verzi</string>
     <string name="changelog_loading">Načítání…</string>
     <string name="menu_download_full_package">Stáhnout celý balíček</string>
     <string name="menu_download_incremental_package">Stáhnout přírůstkový balíček</string>
-    <!-- General -->
     <string name="update_found_notification">Je dostupná aktualizace systému</string>
     <string name="snack_no_updates_found">Nové aktualizace nenalezeny</string>
     <string name="snack_updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Ověření aktualizace</string>
     <string name="list_no_updates">Nebyla nalezena žádná nová aktualizace.</string>
     <string name="blocked_update_dialog_title">Aktualizace zablokována</string>
-    <!-- Actions -->
     <string name="action_download">Stáhnout</string>
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Je třeba restartovat</string>
     <string name="reboot_needed_dialog_summary">K dokončení instalace aktualizace je třeba zařízení restartovat. Chcete nyní restartovat?</string>
     <string name="details_button">Zobrazit podrobnosti</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Použít aktualizaci</string>
     <string name="apply_update_dialog_message">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>.\n\nPokud stisknete <xliff:g id="ok">%2$s</xliff:g>, telefon se restartuje do režimu Recovery, kde budete pokračovat v instalaci aktualizace.\n\nPoznámka: tato funkce vyžaduje nainstalovaný kompatibilní režim Recovery nebo je nutné instalaci provést ručně.</string>
     <string name="apply_update_dialog_message_ab">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>.\n\nPokud stisknete <xliff:g id="ok">%2$s</xliff:g>, spustí se instalace na pozadí.\n\nPo dokončení budete vyzváni k restartu.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Příprava předběžné aktualizace</string>
     <string name="dialog_battery_low_title">Nízký stav baterie</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabití baterie je příliš nízká, potřebujete alespoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterie pro pokračování, <xliff:g id="percent_charging">%2$d</xliff:g>%% při nabíjení.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Export aktualizace do interního úložiště</string>
     <string name="notification_export_success">Aktualizace exportována do interního úložiště</string>
     <string name="notification_export_fail">Export aktualizace do interního úložiště selhal</string>
     <string name="toast_already_exporting">Aktualizace se již exportuje</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Zbývá 1 sekunda</item>
         <item quantity="few">Zbývají <xliff:g id="count">%d</xliff:g> sekundy</item>
@@ -101,11 +93,9 @@
         <item quantity="many">Zbývá <xliff:g id="count">%d</xliff:g> hodin</item>
         <item quantity="other">Zbývá <xliff:g id="count">%d</xliff:g> hodin</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varování</string>
     <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
     <string name="checkbox_mobile_data_warning">Znovu nezobrazovat</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Správce</string>
     <string name="donate_info_title">Přispět</string>
     <string name="donate_info_summary">Podpořte vývoj</string>
@@ -116,6 +106,5 @@
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Zobrazit příspěvky ve fóru</string>
     <string name="error_open_url">Nepodařilo se otevřít adresu URL v prohlížeči</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Aktualizace zabezpečení</string>
 </resources>
