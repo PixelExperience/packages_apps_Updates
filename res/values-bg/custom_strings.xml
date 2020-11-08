@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Системен актуализатор</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Експортирането приключи</string>
     <string name="new_updates_channel_title">Нови актуализации</string>
     <string name="ongoing_channel_title">Текущи изтегляния</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">Започни сваляне</string>
     <string name="update_failed_notification">Актуализацията прекратена</string>
     <string name="check_for_update">Проверка за актуализации</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_export_update">Експортиране на актуализация</string>
     <string name="menu_show_changelog">Изменения в текущата версия</string>
     <string name="changelog_loading">Зареждане…</string>
-    <!-- General -->
     <string name="update_found_notification">Има нова актуализация</string>
     <string name="snack_no_updates_found">Няма нови актуализации</string>
     <string name="snack_updates_check_failed">Проверката за актуализации се провали. Моля проверете връзката с интернет и опитайте отново по-късно.</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">Проверка на актуализацията</string>
     <string name="list_no_updates">Няма нови актуализации.</string>
     <string name="blocked_update_dialog_title">Актуализацията е блокирана</string>
-    <!-- Actions -->
     <string name="action_download">Изтегли</string>
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Възобнови</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">Възобнови</string>
     <string name="reboot">Рестартиране</string>
     <string name="details_button">Виж детайли</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Приложи актуализацията</string>
     <string name="apply_update_dialog_message">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nако натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще се рестартира в режим на възстановяване, за да инсталира актуализацията. \ n \ nЗабележка: Тази функция изисква съвместимо Recovery или актуализации трябва да бъдат инсталирани ръчно.</string>
     <string name="apply_update_dialog_message_ab">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще започне инсталирането във фонов режим.\n\nКогато завърши, ще бъдете подканени да рестартирате.</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">Предварителна подготовка на актуализацията</string>
     <string name="dialog_battery_low_title">Изтощена батерия</string>
     <string name="dialog_battery_low_message_pct">Нивото на батерията е прекалено ниско, необходимо е най-малко <xliff:g id="percent_discharging">%1$d</xliff:g>%% за да продължите, <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Експортиране на актуализация към вътрешно хранилище</string>
     <string name="notification_export_success">Актуализацията е експортирана към вътрешно хранилище</string>
     <string name="notification_export_fail">Не успя да експортира актуализаиция във вътрешно хранилище</string>
     <string name="toast_already_exporting">Вече изнася актуализация</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">остава 1 секунда</item>
         <item quantity="other">остават <xliff:g id="count">%d</xliff:g> секунди</item>
@@ -90,11 +82,9 @@
         <item quantity="one">остава 1 час</item>
         <item quantity="other">остават <xliff:g id="count">%d</xliff:g> часа</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Внимание</string>
     <string name="update_on_mobile_data_message">На път сте да изтеглите пакет за актуализиране, използвайки мобилни данни, което вероятно ще доведе до високо използване на данните. Искате ли да продължите?</string>
     <string name="checkbox_mobile_data_warning">Не показвай отново</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Отговорник</string>
     <string name="donate_info_title">Даряване</string>
     <string name="donate_info_summary">Подкрепете разработката</string>
@@ -105,6 +95,5 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Преглед на публикации във форума</string>
     <string name="error_open_url">Неуспешно отваряне на URL в браузъра</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Актуализация за сигурност</string>
 </resources>

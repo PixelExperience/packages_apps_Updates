@@ -15,15 +15,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
-    <!-- Menu -->
-    <!-- General -->
-    <!-- Actions -->
-    <!-- Installation -->
-    <!-- Export update -->
-    <!-- ETA -->
-    <!-- Mobile data warning -->
-    <!-- Info section -->
-    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Xavfsizlik yangilanishi</string>
 </resources>

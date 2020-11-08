@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="new_updates_channel_title">புதிய மேம்பாடு</string>
+    <string name="update_failed_channel_title">மேம்பாடு தோல்வியடைந்தது</string>
+    <string name="verification_failed_notification">சரிபார்த்தல் தோல்வியடைந்தது</string>
+    <string name="verifying_download_notification">புதுப்பித்தலை சரிபார்க்கிறது</string>
+    <string name="downloading_notification">பதிவிறக்கப்படுகிறது</string>
+    <string name="download_paused_notification">பதிவிறக்கம் இடைநிறுத்தப்பட்டுள்ளது</string>
+    <string name="download_paused_error_notification">பதிவிறக்க பிழை</string>
+    <string name="download_completed_notification">பதிவிறக்கம் முடிந்தது</string>
+    <string name="download_starting_notification">பதிவிறக்கத் தொடங்குகிறது</string>
+    <string name="update_failed_notification">மேம்பாடு தோல்வியடைந்தது</string>
+    <string name="menu_delete_update">நீக்கு</string>
+    <string name="menu_export_update">மேம்படுத்தல் ஏற்றுமதி</string>
+    <string name="changelog_loading">ஏற்றுகிறது...</string>
+    <string name="menu_download_full_package">தொகுப்பை முழுமையாக பதிவிறக்கம் செய்யவும்</string>
+    <string name="snack_no_updates_found">புதிய புதுப்பித்தல்கள் எதுவும் கண்டுபிடிக்கப்படவில்லை.</string>
+    <string name="snack_updates_check_failed">புதுப்பித்தல் சரிபார்ப்பு தோல்வியுற்றது. தயவுசெய்து உங்கள் இணைய இணைப்பை சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="snack_download_failed">பதிவிறக்கம் தோல்வியடைந்தது. உங்கள் இணைய இணைப்பைச் சரிபார்த்து பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="snack_download_verification_failed">புதுப்பித்தல் சரிபார்ப்பு தோல்வியடைந்தது.</string>
+    <string name="snack_download_verified">பதிவிறக்கம் முடிந்தது.</string>
+    <string name="snack_update_not_installable">தற்போதைய மேம்பாட்டின் மேல் இந்த மேம்படுத்தல் நிறுவப்படவில்லை.</string>
+    <string name="list_verifying_update">புதுப்பித்தலை சரிபார்க்கிறது</string>
+    <string name="blocked_update_dialog_title">புதுப்பிப்பு தடுக்கப்பட்டது</string>
+    <string name="action_download">பதிவிறக்கு</string>
+    <string name="action_pause">இடைநிறுத்து</string>
+    <string name="action_resume">தொடரவும்</string>
+    <string name="action_install">நிறுவு</string>
+    <string name="action_delete">நீக்கு</string>
+    <string name="confirm_delete_dialog_title">கோப்புகளை அழி</string>
+    <string name="confirm_delete_dialog_message">தேர்ந்தெடுக்கப்பட்ட புதுப்பித்தல் கோப்பை நீக்கவா?</string>
+    <string name="pause_button">இடைநிறுத்து</string>
+    <string name="resume_button">தொடரவும்</string>
+    <string name="maintainer_info_title">பராமரிப்பாளர்</string>
+    <string name="donate_info_title">நங்கொடை</string>
+    <string name="donate_info_summary">ஆதரவு வளர்ச்சி</string>
+    <string name="website_info_title">இணையதளம்</string>
+    <string name="website_info_summary">எங்கள் வலைத்தளத்தில் செல்க</string>
+    <string name="news_info_title">செய்தி</string>
+    <string name="news_info_summary">மேம்படுத்தல்கள் மற்றும் பிற செய்திகளைப் பற்றி தெரிந்து கொள்ளுங்கள்</string>
+    <string name="forum_info_title">மன்றம்</string>
+    <string name="forum_info_summary">சமீபத்திய மன்ற பதிவுகள்</string>
+    <string name="error_open_url">உலாவியில் URL ஐ திறக்க முடியவில்லை</string>
+    <string name="setting_security_patch_level_title">பாதுகாப்புப் புதுப்பிப்பு</string>
+</resources>

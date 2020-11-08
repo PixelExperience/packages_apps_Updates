@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="export_channel_title">Completáu de la esportación</string>
     <string name="new_updates_channel_title">Anovamientos nuevos</string>
     <string name="ongoing_channel_title">Descargues en cursu</string>
@@ -29,10 +27,8 @@
     <string name="download_completed_notification">Completóse la descarga</string>
     <string name="download_starting_notification">Aniciando descarga</string>
     <string name="update_failed_notification">Falló l\'anovamientu</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Desaniciar</string>
     <string name="menu_export_update">Esportar anovamientu</string>
-    <!-- General -->
     <string name="snack_no_updates_found">Nun s\'alcontraron anovamientos</string>
     <string name="snack_updates_check_failed">Falló la comprobación d\'anovamientos. Comprueba la to conexón a Internet y volvi tentalo, por favor.</string>
     <string name="snack_download_failed">Falló la descarga. Comprueba la to conexón a Internet y volvi tentalo, por favor.</string>
@@ -43,7 +39,6 @@
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verificando anovamientu</string>
     <string name="blocked_update_dialog_title">Bloquióse l\'anovamientu</string>
-    <!-- Actions -->
     <string name="action_download">Baxar</string>
     <string name="action_pause">Posar</string>
     <string name="action_resume">Siguir</string>
@@ -54,7 +49,6 @@
     <string name="pause_button">Posar</string>
     <string name="resume_button">Siguir</string>
     <string name="reboot">Reaniciar</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar anovamientu</string>
     <string name="apply_update_dialog_message">Tas a piques d\'anovar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi primes <xliff:g id="ok">%2$s</xliff:g>, el preséu va reaniciase solu al recovery pa instalar l\'anovamientu.\n\nNota: Esta carauterística rique un recovery compatible o los anovamientos van precisar instalase a mano.</string>
     <string name="apply_update_dialog_message_ab">Tas a piques d\'anovar a <xliff:g id="update_name">%1$s</xliff:g>.\n\nSi primes <xliff:g id="ok">%2$s</xliff:g>, el preséu va entamar la instalación de fondu.\n\nNamái acabar, va suxerísete reaniciar.</string>
@@ -65,9 +59,7 @@
     <string name="dialog_prepare_zip_message">Tresnáu preliminar del anovamientu</string>
     <string name="dialog_battery_low_title">Batería baxa</string>
     <string name="dialog_battery_low_message_pct">El nivel de batería ta perbaxu, precises polo menos<xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería pa siguir, <xliff:g id="percent_charging">%2$d</xliff:g>%% si ta en carga.</string>
-    <!-- Export update -->
     <string name="toast_already_exporting">Yá ta esportándose un anovamientu</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Queda 1 segundu</item>
         <item quantity="other">Queden <xliff:g id="count">%d</xliff:g> segundos</item>
@@ -80,10 +72,7 @@
         <item quantity="one">Queda 1 hora</item>
         <item quantity="other">Queden <xliff:g id="count">%d</xliff:g> hores</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Alvertencia</string>
     <string name="update_on_mobile_data_message">Tas a piques de baxar un paquete d\'anovamientu usando los datos móviles que pue causar un usu altu de datos. ¿Prestaríate siguir?</string>
     <string name="checkbox_mobile_data_warning">Nun amosar más</string>
-    <!-- Info section -->
-    <!-- Security patch -->
 </resources>

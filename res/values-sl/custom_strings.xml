@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Posodobitev sistema</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Zaključek izvoza</string>
     <string name="new_updates_channel_title">Nove posodobitve</string>
     <string name="ongoing_channel_title">Prenosi v teku</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">Začetek prenosa</string>
     <string name="update_failed_notification">Posodobitev je spodletela</string>
     <string name="check_for_update">Preveri za posodobitev</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_export_update">Izvozi posodobitev</string>
     <string name="menu_show_changelog">Spremembe v trenutni različici</string>
     <string name="changelog_loading">Nalaganje …</string>
-    <!-- General -->
     <string name="update_found_notification">Na voljo je posodobitev sistema</string>
     <string name="snack_no_updates_found">Ni najdenih novih posodobitev</string>
     <string name="snack_updates_check_failed">Preverjanje za posodobitve je spodletelo. Preverite svojo internetno povezavo in poskusite znova kasneje.</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">Preverjanje posodobitve</string>
     <string name="list_no_updates">Ni najdene nove posodobitve</string>
     <string name="blocked_update_dialog_title">Posodobitev blokirana</string>
-    <!-- Actions -->
     <string name="action_download">Prenesi</string>
     <string name="action_pause">Premor</string>
     <string name="action_resume">Nadaljuj</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">Nadaljuj</string>
     <string name="reboot">Vnovično zaženi</string>
     <string name="details_button">Poglej podrobnosti</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Uveljavi posodobitev</string>
     <string name="apply_update_dialog_message">Ste pred nadgradnjo na <xliff:g id="update_name">%1$s</xliff:g>.\n\nČe pritisnete <xliff:g id="ok">%2$s</xliff:g>, se bo naprava vnovično zagnala v obnovitvenem načinu, da se namesti posodobitev.\n\nOpomba: Ta značilnost zahteva združljivo Obnovitev ali pa boste morali posodobitve namestiti ročno.</string>
     <string name="apply_update_dialog_message_ab">Ste pred nadgradnjo na <xliff:g id="update_name">%1$s</xliff:g>.\n\nČe pritisnete na <xliff:g id="ok">%2$s</xliff:g>, bo naprava začela nameščanje v ozadju.\n\nOb zaključku boste pozvani k vnovičnemu zagonu.</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">Predhodna priprava posodobitve</string>
     <string name="dialog_battery_low_title">Nizko stanje akumulatorja</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, <xliff:g id="percent_charging">%2$d</xliff:g>%% med polnjenjem.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Izvažanje posodobitve na notranji pomnilnik</string>
     <string name="notification_export_success">Posodobitev izvožena na notranji pomnilnik</string>
     <string name="notification_export_fail">Izvoz posodobitve na notranji pomnilnik je spodletel</string>
     <string name="toast_already_exporting">Posodobitev se že izvaža</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> sekunda preostala</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> sekundi preostali</item>
@@ -96,11 +88,9 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> ure preostale</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ur preostalo</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Vzdrževalec</string>
     <string name="donate_info_title">Prispevaj</string>
     <string name="donate_info_summary">Podprite razvoj</string>
@@ -111,5 +101,4 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Poglejte objave na forumu</string>
     <string name="error_open_url">Odpiranje URL-ja v brskalniku je spodletelo</string>
-    <!-- Security patch -->
 </resources>

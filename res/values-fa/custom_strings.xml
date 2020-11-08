@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">به‌روزرسانی سیستم</string>
-    <!-- Notifications -->
     <string name="export_channel_title">تکمیل برون‌ریزی</string>
     <string name="new_updates_channel_title">به‌روز رسانی‌های جدید</string>
     <string name="ongoing_channel_title">بارگیری‌های جاری</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">در حال آغاز بارگیری</string>
     <string name="update_failed_notification">به‌روز رسانی موفق نبود</string>
     <string name="check_for_update">بررسی بروزرسانی ها</string>
-    <!-- Menu -->
     <string name="menu_delete_update">حذف</string>
     <string name="menu_export_update">صادر کردن نسخه به‌روز</string>
     <string name="menu_show_changelog">تغییرات نسبت به نسخه فعلی</string>
     <string name="changelog_loading">در حال بارگذاری…</string>
-    <!-- General -->
     <string name="update_found_notification">به‌روزرسانی جدیدی موجود است</string>
     <string name="snack_no_updates_found">به‌روز رسانی جدیدی یافت نشد</string>
     <string name="snack_updates_check_failed">بررسی برای به‌روزرسانی ناموفق بود. لطفاً اتصال اینترنت خود را بررسی و دوباره سعی کنید.</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">در حال اعتبارسنجی به‌روز رسانی</string>
     <string name="list_no_updates">بروزرسانی جدیدی یافت نشد.</string>
     <string name="blocked_update_dialog_title">به‌روز رسانی مسدود شده است</string>
-    <!-- Actions -->
     <string name="action_download">بارگیری</string>
     <string name="action_pause">مکث</string>
     <string name="action_resume">ادامه</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">ادامه</string>
     <string name="reboot">راه‌اندازی مجدد</string>
     <string name="details_button">مشاهده جزئیات</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">انجام به‌روز رسانی</string>
     <string name="apply_update_dialog_message">شما در حال ارتقا به <xliff:g id="update_name">%1$s</xliff:g> هستید.\n\nاگر دکمه<xliff:g id="ok">%2$s</xliff:g> را فشار دهید، دستگاه به صورت خودکار به حالت ریکاوری می‌رود تا به‌روز رسانی را نصب کند.\n\nتوجه: این قابلیت نیاز به یک ریکاوری سازگار دارد در غیر این صورت به‌روز رسانی‌ها باید به صورت دستی نصب شوند.</string>
     <string name="apply_update_dialog_message_ab">شما در حال ارتقا به <xliff:g id="update_name">%1$s</xliff:g> هستید.\n\nاگر دکمه <xliff:g id="ok">%2$s</xliff:g> را فشار دهید، دستگاه فرآیند نصب را در پس‌زمینه آغاز خواهد کرد.\n\nزمانی که نصب کامل شد، شما پیامی برای راه‌اندازی مجدد دستگاه دریافت خواهید کرد.</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">آماده‌سازی مقدماتی به‌روز رسانی</string>
     <string name="dialog_battery_low_title">باتری ضعیف است</string>
     <string name="dialog_battery_low_message_pct">سطح باتری بسیار کم است، برای ادامه کار شما به <xliff:g id="percent_discharging">%1$d</xliff:g>%% از ظرفیت باتری یا <xliff:g id="percent_charging">%2$d</xliff:g>%% اگر در حال شارژ هستید،‌ نیاز دارید.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">صادر کردن به روزرسانی به حافظه داخلی</string>
     <string name="notification_export_success">بروزرسانی در حافظه داخلی ذخیره شد</string>
     <string name="notification_export_fail">صادر کردن به روزرسانی به حافظه داخلی انجام نشد</string>
     <string name="toast_already_exporting">نسخه به‌روز قبلاً صادر شده است</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">یک ثانیه باقی مانده</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ثانیه باقی مانده</item>
@@ -90,11 +82,9 @@
         <item quantity="one">یک ساعت باقی مانده</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ساعت باقی مانده</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">هشدار</string>
     <string name="update_on_mobile_data_message">شما در حال بارگیری بسته به‌روزرسانی با داده سیم‌کارت هستید که احتمالاً حجم داده زیادی مصرف می‌کند. آیا می‌خواهید ادامه دهید؟</string>
     <string name="checkbox_mobile_data_warning">دوباره نمایش نده</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">برقرار نگه‌دارنده</string>
     <string name="donate_info_title">کمک مالی</string>
     <string name="donate_info_summary">از توسعه رام حمایت کنید</string>
@@ -105,5 +95,4 @@
     <string name="forum_info_title">انجمن</string>
     <string name="forum_info_summary">نمایش پست‌های انجمن</string>
     <string name="error_open_url">باز کردن آدرس در مرورگر ناموفق بود</string>
-    <!-- Security patch -->
 </resources>

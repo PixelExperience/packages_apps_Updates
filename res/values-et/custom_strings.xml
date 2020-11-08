@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Süsteemivärskendused</string>
+    <string name="export_channel_title">Ekspordi lõpuleviimine</string>
+    <string name="new_updates_channel_title">Uued värkendused</string>
+    <string name="ongoing_channel_title">Käimasolevad allalaadimised</string>
+    <string name="update_failed_channel_title">Värskendamine nurjus</string>
+    <string name="verification_failed_notification">Kinnitamine ebaõnnestus</string>
+    <string name="verifying_download_notification">Värskenduse kontrollimine</string>
+    <string name="downloading_notification">Allalaadimine</string>
+    <string name="download_paused_notification">Allalaadimine peatatud</string>
+    <string name="download_paused_error_notification">Allalaadimise viga</string>
+    <string name="download_completed_notification">Allalaadimine lõpetatud</string>
+    <string name="download_starting_notification">Alustan allalaadimist</string>
+    <string name="update_failed_notification">Värskendamine nurjus</string>
+    <string name="check_for_update">Kontrolli värskendusi</string>
+    <string name="menu_delete_update">Kustuta</string>
+    <string name="menu_export_update">Ekspordi värskendus</string>
+    <string name="menu_show_changelog">Muudatused praeguses versioonis</string>
+    <string name="changelog_loading">Laadimine…</string>
+    <string name="menu_download_full_package">Laadige alla täielik pakett</string>
+    <string name="menu_download_incremental_package">Laadige juurde lisapakett</string>
+    <string name="update_found_notification">Süsteemivärskendus on saadaval</string>
+    <string name="snack_no_updates_found">Uusi värskendusi ei ole</string>
+    <string name="snack_updates_check_failed">Värskenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="snack_download_failed">Värskenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
+    <string name="snack_download_verification_failed">Värskenduse kontroll ebaõnnestus.</string>
+    <string name="snack_download_verified">Allalaadimine lõpetatud.</string>
+    <string name="snack_update_not_installable">Seda värskendust ei saa installida praeguse püsivara peale.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Värskenduse kinnitamine</string>
+    <string name="list_no_updates">Uut  värskendust ei ole.</string>
+    <string name="blocked_update_dialog_title">Varskendamine blokeeritud</string>
+    <string name="action_download">Lae alla</string>
+    <string name="action_pause">Paus</string>
+    <string name="action_resume">Jätka</string>
+    <string name="action_install">Installi</string>
+    <string name="action_delete">Kustuta</string>
+    <string name="confirm_delete_dialog_title">Kustuta fail</string>
+    <string name="confirm_delete_dialog_message">Kustuta valitud värskendusfail?</string>
+    <string name="pause_button">Paus</string>
+    <string name="resume_button">Jätka</string>
+    <string name="reboot">Taaskäivita</string>
+    <string name="reboot_needed_dialog_title">Taaskäivitamine vajalik</string>
+    <string name="reboot_needed_dialog_summary">Uuenduse installimise lõpuleviimiseks tuleb seade taaskäivitada. Kas soovite kohe taaskäivitada?</string>
+    <string name="details_button">Vaata detaile</string>
+    <string name="apply_update_dialog_title">Rakenda värskendus</string>
+    <string name="apply_update_dialog_message">Värskendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, käivitub seade värskenduste installimiseks taaskasutamis režiimis.\n\nMärkus: See funktsioon nõuab ühilduvat taastamist või värskendusi tuleb installida käsitsi.</string>
+    <string name="apply_update_dialog_message_ab">Värskendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, hakkab seade installima taustal.\n\nKui olete lõpetanud, palutakse teil taaskäivitada.</string>
+    <string name="installing_update">Värskenduspaketi installimine</string>
+    <string name="installing_update_error">Installimisviga</string>
+    <string name="installing_update_finished">Värskendus installitud</string>
+    <string name="installing_update_ab_disable_incremental_summary">Lisanduv installimine nurjus, kuna teie süsteemi sektsiooni muudeti mõne lisandmooduli või kohandatud kerneli installimisega. Kas soovite alla laadida kogu paketi ja proovida uuesti?</string>
+    <string name="finalizing_package">Paketi installimise lõpetamine</string>
+    <string name="dialog_prepare_zip_message">Esmane värskendamise ettevalmistamine</string>
+    <string name="dialog_battery_low_title">Madal akutase</string>
+    <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
+    <string name="dialog_export_title">Värskenduse eksportimine sisemisse salvestusruumi</string>
+    <string name="notification_export_success">Värskendus eksporditi sisemisse salvestusruumi</string>
+    <string name="notification_export_fail">Värskenduse eksportimine sisemisse salvestusse ei õnnestunud</string>
+    <string name="toast_already_exporting">Ekspordite juba värskendust</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">1 sekund jäänud</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> sekundit jäänud</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">1 minut jäänud</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutit jäänud</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">1 tund jäänud</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> tundi jäänud</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Hoiatus</string>
+    <string name="update_on_mobile_data_message">Olete alla laadimas värskendust mobiilse andmesideühendusega, mis võib tekitada suurt andmemahu kasutust. Kas soovite jätkata?</string>
+    <string name="checkbox_mobile_data_warning">Ära enam näita</string>
+    <string name="maintainer_info_title">Hooldaja</string>
+    <string name="donate_info_title">Anneta</string>
+    <string name="donate_info_summary">Toeta arengut</string>
+    <string name="website_info_title">Koduleht</string>
+    <string name="website_info_summary">Külasta meie kodulehte</string>
+    <string name="news_info_title">Uudised</string>
+    <string name="news_info_summary">Ole kursis värskenduste ja muude uudistega</string>
+    <string name="forum_info_title">Foorum</string>
+    <string name="forum_info_summary">Vaata foorumi postitusi</string>
+    <string name="error_open_url">Brauseris URL-i avamine ebaõnnestus</string>
+    <string name="setting_security_patch_level_title">Turvavärskendus</string>
+</resources>

@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="export_channel_title">Cwblhawyd allforio</string>
     <string name="new_updates_channel_title">Diweddariadau newydd</string>
     <string name="ongoing_channel_title">Llwythi sy\'n parhau</string>
@@ -29,10 +27,8 @@
     <string name="download_completed_notification">Lawrlwytho wedi cwblhau</string>
     <string name="download_starting_notification">Yn dechrau lawrlwytho</string>
     <string name="update_failed_notification">Methodd y diweddariad</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Dileu</string>
     <string name="menu_export_update">Allforio\'r diweddariad</string>
-    <!-- General -->
     <string name="snack_no_updates_found">Ni chanfuwyd diweddariadau newydd</string>
     <string name="snack_updates_check_failed">Methodd gwiriad y diweddariad. Gwiria dy gysylltiad â\'r rhwydwaith a rhoi cynnig arall arni.</string>
     <string name="snack_download_failed">Methodd y lawrlwytho. Gwiria dy gysylltiad â\'r rhwydwaith a rhoi cynnig arall arni.</string>
@@ -43,7 +39,6 @@
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> o <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Yn dilysu\'r diweddariad</string>
     <string name="blocked_update_dialog_title">Rhwystrwyd y diweddariad</string>
-    <!-- Actions -->
     <string name="action_download">Lawrlwytho</string>
     <string name="action_pause">Seibio</string>
     <string name="action_resume">Parhau</string>
@@ -54,7 +49,6 @@
     <string name="pause_button">Seibio</string>
     <string name="resume_button">Parhau</string>
     <string name="reboot">Ailgychwyn</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Gosod diweddariad</string>
     <string name="apply_update_dialog_message">Rwyt ar fin uwchraddio i <xliff:g id="update_name">%1$s</xliff:g>.\n\nOs wyt yn gwasgu <xliff:g id="ok">%2$s</xliff:g>, bydd y ddyfais yn ail-ddechrau ei hun i\'r modd adfer er mwyn gosod y diweddariad.\n\nNodyn: Mae ar y nodwedd hon angen Modd Adfer (Recovery) cydnaws er mwyn gosod diweddariadau yn awtomatig.</string>
     <string name="apply_update_dialog_message_ab">Rwyt ar fin uwchraddio i <xliff:g id="update_name">%1$s</xliff:g>.\n\nOs wyt yn gwasgu <xliff:g id="ok">%2$s</xliff:g>, bydd y ddyfais yn dechrau\'r gosod yn y cefndir.\n\nPan fydd wedi\'i gwblhau, cei dy hysbysu i ailddechrau\'r system.</string>
@@ -65,9 +59,7 @@
     <string name="dialog_prepare_zip_message">Paratoi diweddaru rhagbaratoawl</string>
     <string name="dialog_battery_low_title">Batri isel</string>
     <string name="dialog_battery_low_message_pct">Does dim digon o bŵer yn y batri. Rhaid cael o leiaf <xliff:g id="percent_discharging">%1$d</xliff:g>%% o fatri er mwyn parhau, <xliff:g id="percent_charging">%2$d</xliff:g>%% os yn gwefru.</string>
-    <!-- Export update -->
     <string name="toast_already_exporting">Eisoes yn allforio diweddariad</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="zero"><xliff:g id="count">%d</xliff:g> eiliadau yn weddill</item>
         <item quantity="one"><xliff:g id="count">%d</xliff:g> eiliad yn weddill</item>
@@ -92,10 +84,7 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> awr yn weddill</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> awr yn weddill</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Rhybudd</string>
     <string name="update_on_mobile_data_message">Rwyt ar fin lawrlwytho pecyn diweddaru gyda llawer o ddata dros gysylltiad data symudol. Wyt ti am barhau?</string>
     <string name="checkbox_mobile_data_warning">Peidio â dangos eto</string>
-    <!-- Info section -->
-    <!-- Security patch -->
 </resources>

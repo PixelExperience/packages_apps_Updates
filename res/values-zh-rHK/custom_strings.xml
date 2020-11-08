@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">系統更新</string>
-    <!-- Notifications -->
     <string name="export_channel_title">匯出完成</string>
     <string name="new_updates_channel_title">新的更新</string>
     <string name="ongoing_channel_title">目前下載</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">開始下載</string>
     <string name="update_failed_notification">更新失敗</string>
     <string name="check_for_update">檢查更新</string>
-    <!-- Menu -->
     <string name="menu_delete_update">刪除</string>
     <string name="menu_export_update">匯出更新</string>
     <string name="menu_show_changelog">這次更新的内容</string>
     <string name="changelog_loading">載入中...</string>
-    <!-- General -->
     <string name="update_found_notification">系統有更新套件可用！</string>
     <string name="snack_no_updates_found">沒有找到更新</string>
     <string name="snack_updates_check_failed">檢查更新失敗。請檢查您的互聯網連接並稍後再試。</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">正在驗證更新</string>
     <string name="list_no_updates">沒有找到新的更新</string>
     <string name="blocked_update_dialog_title">更新已被鎖定</string>
-    <!-- Actions -->
     <string name="action_download">下載</string>
     <string name="action_pause">暫停</string>
     <string name="action_resume">繼續</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">繼續</string>
     <string name="reboot">重新啟動</string>
     <string name="details_button">查看詳細資訊</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">套用更新</string>
     <string name="apply_update_dialog_message">您將更新至 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下 「<xliff:g id="ok">%2$s</xliff:g>」，裝置將重新啟動進入 Recovery 模式並安裝更新。\n\n注意：這項功能需要相容的 Recovery，否則將需要手動安裝更新。</string>
     <string name="apply_update_dialog_message_ab">您將要升級到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下「<xliff:g id="ok">%2$s</xliff:g>」，裝置將在背景進行安裝。\n\n如安裝完成，將會提示重新啟動</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">正在準備更新</string>
     <string name="dialog_battery_low_title">電量不足</string>
     <string name="dialog_battery_low_message_pct">電池電量過低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的電量才能繼續；如果正在充電，則需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的電量才能繼續。</string>
-    <!-- Export update -->
     <string name="dialog_export_title">將更新滙出至内部存儲</string>
     <string name="notification_export_success">更新已滙出至内部存儲</string>
     <string name="notification_export_fail">未能將更新匯出到內部存儲</string>
     <string name="toast_already_exporting">已匯出更新</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">還剩 <xliff:g id="count">%d</xliff:g> 秒鐘</item>
     </plurals>
@@ -87,11 +79,9 @@
     <plurals name="eta_hours">
         <item quantity="other">還剩 <xliff:g id="count">%d</xliff:g> 小時</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">下載的更新檔案有可能會使用較多的行動數據，您要繼續嗎？</string>
     <string name="checkbox_mobile_data_warning">不再顯示</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">維護者</string>
     <string name="donate_info_title">捐贈</string>
     <string name="donate_info_summary">支持開發作業</string>
@@ -102,6 +92,5 @@
     <string name="forum_info_title">論壇</string>
     <string name="forum_info_summary">查看論壇文章</string>
     <string name="error_open_url">在瀏覽器中打開 URL 失敗</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">安全性更新</string>
 </resources>

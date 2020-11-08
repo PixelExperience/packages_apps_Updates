@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Абнаўленні сiстэмы</string>
+    <string name="export_channel_title">Экспарт завершаны</string>
+    <string name="new_updates_channel_title">Новыя абнаўленні</string>
+    <string name="ongoing_channel_title">Бягучыя спампоўкі</string>
+    <string name="update_failed_channel_title">Памылка абнаўлення</string>
+    <string name="verification_failed_notification">Не атрымалася выканаць праверку</string>
+    <string name="verifying_download_notification">Праверка абнаўленняў</string>
+    <string name="downloading_notification">Спампоўваецца</string>
+    <string name="download_paused_notification">Спампоўка прыпынена</string>
+    <string name="download_paused_error_notification">Памылка спампоўвання</string>
+    <string name="download_completed_notification">Спампоўка завершана</string>
+    <string name="download_starting_notification">Запуск спампоўкі</string>
+    <string name="update_failed_notification">Памылка абнаўлення</string>
+    <string name="check_for_update">Праверка абнаўленняў</string>
+    <string name="menu_delete_update">Выдаліць</string>
+    <string name="menu_export_update">Экспарт абнаўлення</string>
+    <string name="menu_show_changelog">Змены ў бягучай версіі</string>
+    <string name="changelog_loading">Загрузка…</string>
+    <string name="menu_download_full_package">Спампаваць поўны пакет</string>
+    <string name="menu_download_incremental_package">Спампаваць дадатковы пакет</string>
+    <string name="update_found_notification">Даступна абнаўленне сістэмы</string>
+    <string name="snack_no_updates_found">Абнаўленні не знойдзены</string>
+    <string name="snack_updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
+    <string name="snack_download_failed">Спампоўка не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў.</string>
+    <string name="snack_download_verification_failed">Памылка праверкі абнаўлення.</string>
+    <string name="snack_download_verified">Спампоўка завершана.</string>
+    <string name="snack_update_not_installable">Гэта абнаўленне не можа быць ўстаноўлена па-над бягучай зборкай.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Праверка абнаўленняў</string>
+    <string name="list_no_updates">Новыя абнаўленнi не знойдзены.</string>
+    <string name="blocked_update_dialog_title">Абнаўленне заблакавана</string>
+    <string name="action_download">Спампаваць</string>
+    <string name="action_pause">Паўза</string>
+    <string name="action_resume">Працягнуць</string>
+    <string name="action_install">Усталяваць</string>
+    <string name="action_delete">Выдаліць</string>
+    <string name="confirm_delete_dialog_title">Выдаліць файл</string>
+    <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
+    <string name="pause_button">Прыпыніць</string>
+    <string name="resume_button">Працягнуць</string>
+    <string name="reboot">Перазапуск</string>
+    <string name="reboot_needed_dialog_title">Патрабуецца перазагрузка</string>
+    <string name="reboot_needed_dialog_summary">Для завяршэння ўсталёўкі абнаўлення неабходна перазагрузіць прыладу.  Вы хочаце перазагрузіць зараз?</string>
+    <string name="details_button">Паказаць падрабязнасці</string>
+    <string name="apply_update_dialog_title">Прымяніць абнаўленне</string>
+    <string name="apply_update_dialog_message">Будзе выканана абнаўленне да версіі <xliff:g id="update_name">%1$s</xliff:g>.\n\nПры націсканні кнопкі \"<xliff:g id="ok">%2$s</xliff:g>\" прыладу перазагрузіцца ў рэжым аднаўлення для ўсталёўкі гэтага абнаўлення. \n\nЗаўвага: гэта функцыя патрабуе сумяшчальнага Recovery. У адваротным выпадку абнаўленне трэба будзе ўсталяваць уручную.</string>
+    <string name="apply_update_dialog_message_ab">Вы збіраецеся абнавіцца на <xliff:g id="update_name">%1$s</xliff:g>.\n\nКалі вы націсніце на <xliff:g id="ok">%2$s</xliff:g>, прылада пачне ўсталёўку ў фонавым рэжыме.\n\nПасля ўсталёўкі вам будзе прапанавана перазагрузіць прыладу.</string>
+    <string name="installing_update">Усталёўка абнаўлення</string>
+    <string name="installing_update_error">Памылка ўсталёўкі</string>
+    <string name="installing_update_finished">Абнаўленне ўсталявана</string>
+    <string name="installing_update_ab_disable_incremental_summary">Паэтапная ўсталёўка перапынілася з-за таго, што ваш сістэмны падзел быў зменены усталёўкай якога-небудзь дапаўнення або кастамнага ядра.  Хочаце спампаваць поўны пакет і паспрабаваць яшчэ раз?</string>
+    <string name="finalizing_package">Завяршэнне ўсталёўкі</string>
+    <string name="dialog_prepare_zip_message">Падрыхтоўка абнаўлення</string>
+    <string name="dialog_battery_low_title">Нізкі узровень батарэі</string>
+    <string name="dialog_battery_low_message_pct">Узровень зарада батарэі занадта нізкі, для працягу неабходна хаця б <xliff:g id="percent_discharging">%1$d</xliff:g>%% зараду або <xliff:g id="percent_charging">%2$d</xliff:g>%% падчас зарадкі.</string>
+    <string name="dialog_export_title">Абнаўленне экспартуецца на ўнутраную памяць</string>
+    <string name="notification_export_success">Абнаўленне экспартавана ва ўнутраную памяць</string>
+    <string name="notification_export_fail">Памылка пры экспарце абнаўлення на ўнутраную памяць</string>
+    <string name="toast_already_exporting">Экспарт ужо выконваецца</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">засталася адна секунда</item>
+        <item quantity="few">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
+        <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> секунд</item>
+        <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> секунд</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">засталася адна хвіліна</item>
+        <item quantity="few">засталося <xliff:g id="Count">%d</xliff:g> хвіліны</item>
+        <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> хвілін</item>
+        <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> хвілін</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">засталася адна гадзіна</item>
+        <item quantity="few">засталося <xliff:g id="count">%d</xliff:g> гадзіны</item>
+        <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
+        <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Папярэджанне</string>
+    <string name="update_on_mobile_data_message">Вы збіраецеся спампаваць пакет абнаўлення, выкарыстоўваючы мабільную перадачу дадзеных, за якую, верагодна, спаганяецца дадатковая плата. Вы хочаце працягнуць?</string>
+    <string name="checkbox_mobile_data_warning">Больш не паказваць</string>
+    <string name="maintainer_info_title">Суправаджальнік</string>
+    <string name="donate_info_title">Ахвяраваць</string>
+    <string name="donate_info_summary">Падтрымаць распрацоўку</string>
+    <string name="website_info_title">Вэб-сайт</string>
+    <string name="website_info_summary">Наведайце наш сайт</string>
+    <string name="news_info_title">Навіны</string>
+    <string name="news_info_summary">Сачыце за абнаўленнямі і іншымі навінамі</string>
+    <string name="forum_info_title">Форум</string>
+    <string name="forum_info_summary">Паглядзець паведамленні на форуме</string>
+    <string name="error_open_url">Не атрымалася адкрыць спасылку</string>
+    <string name="setting_security_patch_level_title">Абнаўленне бяспекі</string>
+</resources>

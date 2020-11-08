@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Actualización do sistema</string>
+    <string name="export_channel_title">Exportación completada</string>
+    <string name="new_updates_channel_title">Novas actualizacións</string>
+    <string name="ongoing_channel_title">Descargas en curso</string>
+    <string name="update_failed_channel_title">Erro ao actualizar</string>
+    <string name="verification_failed_notification">Fallou a comprobación</string>
+    <string name="verifying_download_notification">Comprobando actualización</string>
+    <string name="downloading_notification">Descargando</string>
+    <string name="download_paused_notification">Descarga en pausa</string>
+    <string name="download_paused_error_notification">Erro na descarga</string>
+    <string name="download_completed_notification">Descarga completada</string>
+    <string name="download_starting_notification">Comezando a descarga</string>
+    <string name="update_failed_notification">Erro ao actualizar</string>
+    <string name="check_for_update">Comprobar se hai actualizacións</string>
+    <string name="menu_delete_update">Eliminar</string>
+    <string name="menu_export_update">Exportar actualización</string>
+    <string name="menu_show_changelog">Cambios na version Actual</string>
+    <string name="changelog_loading">A cargar…</string>
+    <string name="menu_download_full_package">Descarga o paquete completo</string>
+    <string name="menu_download_incremental_package">Descargar paquete incremental</string>
+    <string name="update_found_notification">Actualización do sistema dispoñíbel</string>
+    <string name="snack_no_updates_found">Non se atoparon novas actualizacións</string>
+    <string name="snack_updates_check_failed">A verificación da descarga fallou. Comproba a túa conexión a internet e téntao de novo.</string>
+    <string name="snack_download_failed">Produciuse un erro na descarga. Comproba a túa conexión a internet e téntao de novo.</string>
+    <string name="snack_download_verification_failed">Fallou a verificación da actualización.</string>
+    <string name="snack_download_verified">Descarga completada.</string>
+    <string name="snack_update_not_installable">Non é posíbel instalar esta actualización sobre a compilación actual.</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new">restan <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Comprobando actualización</string>
+    <string name="list_no_updates">Non se atopou unha nova actualización.</string>
+    <string name="blocked_update_dialog_title">Actualización bloqueada</string>
+    <string name="action_download">Descarga</string>
+    <string name="action_pause">Pausar</string>
+    <string name="action_resume">Continuar</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_delete">Borrar</string>
+    <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
+    <string name="confirm_delete_dialog_message">¿Eliminar o ficheiro de actualización seleccionado?</string>
+    <string name="pause_button">Pausar</string>
+    <string name="resume_button">Continuar</string>
+    <string name="reboot">Reiniciar</string>
+    <string name="reboot_needed_dialog_title">Reinicio necesario</string>
+    <string name="reboot_needed_dialog_summary">Para completar a instalación da actualización, cómpre reiniciar o dispositivo.  ¿Queres reiniciar agora?</string>
+    <string name="details_button">Ver detalles</string>
+    <string name="apply_update_dialog_title">Aplicar a actualización</string>
+    <string name="apply_update_dialog_message">Procederase a actualizar <xliff:g id="update_name">%1$s</xliff:g>.\n\nAo premer en <xliff:g id="ok">%2$s</xliff:g>, reiniciarase no modo recuperación para instalar a actualización.\n\nAviso: Esta función require dunha recuperación compatible ou as actualizacións precisarán de se instalar manualmente.</string>
+    <string name="apply_update_dialog_message_ab">Actualizaráse a <xliff:g id="update_name">%1$s</xliff:g>.\n\n Se pulsase <xliff:g id="ok">%2$s</xliff:g>, o dispositivo comezará a instalar en segundo plano.\n\nUnha vez terminado o proceso, pediráselle que reinicie.</string>
+    <string name="installing_update">Instalando paquete de actualización</string>
+    <string name="installing_update_error">Erro de instalación</string>
+    <string name="installing_update_finished">Actualización instalada</string>
+    <string name="installing_update_ab_disable_incremental_summary">Fallou a instalación incremental porque se modificou a partición do sistema instalando algún complemento ou núcleo personalizado.  ¿Queres descargar o paquete completo e tentalo de novo?</string>
+    <string name="finalizing_package">Rematando a instalación do paquete</string>
+    <string name="dialog_prepare_zip_message">Preparación preliminar da actualización</string>
+    <string name="dialog_battery_low_title">Batería baixa</string>
+    <string name="dialog_battery_low_message_pct">O nivel da batería é demasiado baixo, necesita ao menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se o dispositivo estase a cargar.</string>
+    <string name="dialog_export_title">Enviada a actualización ao almacenamento interno</string>
+    <string name="notification_export_success">Enviada a actualización ao almacenamento interno</string>
+    <string name="notification_export_fail">Fallou o envío da actualización ao almacenamento interno</string>
+    <string name="toast_already_exporting">Xa se está a exportar unha actualización</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">resta 1 segundo</item>
+        <item quantity="other">restan <xliff:g id="count">%d</xliff:g> segundos</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">resta 1 minuto</item>
+        <item quantity="other">restan <xliff:g id="count">%d</xliff:g> minutos</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">resta 1 hora</item>
+        <item quantity="other">restan <xliff:g id="count">%d</xliff:g> horas</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">Aviso</string>
+    <string name="update_on_mobile_data_message">Estás a punto de descargar un paquete de actualización a través da conexión de datos móbeis o que xerará un maior consumo de datos. Tes a certeza de querer continuar?</string>
+    <string name="checkbox_mobile_data_warning">Non volver a amosar</string>
+    <string name="maintainer_info_title">Mantedor</string>
+    <string name="donate_info_title">Doazón</string>
+    <string name="donate_info_summary">Apoie o desarollador</string>
+    <string name="website_info_title">Sitio web</string>
+    <string name="website_info_summary">Visita o noso sitio web</string>
+    <string name="news_info_title">Novas</string>
+    <string name="news_info_summary">Permanecer informado sobre actualizaciones e outras noticias</string>
+    <string name="forum_info_title">Foro</string>
+    <string name="forum_info_summary">Ver publicaciones do foro</string>
+    <string name="error_open_url">Falló ao abrir a URL no navegador</string>
+    <string name="setting_security_patch_level_title">Actualización de seguranza</string>
+</resources>

@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">نوێکردنەوەی سیستەم</string>
-    <!-- Notifications -->
     <string name="export_channel_title">پاشەکەوتکردنی یەسەرچوون</string>
     <string name="new_updates_channel_title">نوێکردنەوەکان</string>
     <string name="ongoing_channel_title">داگرتنە چالاکەکان</string>
@@ -31,12 +29,10 @@
     <string name="download_starting_notification">دەستپێکردنی داگرتن</string>
     <string name="update_failed_notification">نوێکردنەوە شکستی هێنا</string>
     <string name="check_for_update">پشکنین بۆ نوێکردنەوە</string>
-    <!-- Menu -->
     <string name="menu_delete_update">سڕینەوە</string>
     <string name="menu_export_update">پاشەکەوتکردنی نوێکردنەوە</string>
     <string name="menu_show_changelog">گۆڕانکارییەکان لە وەشانی ئێستادا</string>
     <string name="changelog_loading">باردەکرێت...</string>
-    <!-- General -->
     <string name="update_found_notification">نوێکاری سیستەم بەردەستە</string>
     <string name="snack_no_updates_found">هیچ نوێکارییەک نەدۆزرایەوە</string>
     <string name="snack_updates_check_failed">پشکنین بۆ نوێکردنەوە شکستی هێنا. تکایە هێڵی ئینتەرنێتەکەت بپشکنە پاشان هەوڵ بدەرەوە.</string>
@@ -49,7 +45,6 @@
     <string name="list_verifying_update">دڵنیاکردنەوەی نوێکردنەوە</string>
     <string name="list_no_updates">هیچ نوێکردنه‌وه‌یه‌ک نه‌دۆزرایه‌وه‌</string>
     <string name="blocked_update_dialog_title">نوێکردنەوە سڕکراوە</string>
-    <!-- Actions -->
     <string name="action_download">داگرتن</string>
     <string name="action_pause">ڕاگرتن</string>
     <string name="action_resume">خستنەوەکار</string>
@@ -61,7 +56,6 @@
     <string name="resume_button">خستنەوەکار</string>
     <string name="reboot">داگیرساندنه‌وه‌</string>
     <string name="details_button">بینینی وردەکارییەکان</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">جێبەجێکردنی نوێکردنەوە</string>
     <string name="apply_update_dialog_message">تۆ خەریکی بەرزکردنەوەی بۆ <xliff:g id="update_name">%1$s</xliff:g>. .\n\n گەر گرتەبکەی لەسەر <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت هەڵدەبێتەوە و دەچێتە دۆخی ڕیکەڤریەوە بۆ دامەزراندانی وەشانەکە. \n\n تێبینی : ئەم تایبەتمەندییە پێویستی بە دۆخی ڕیکەڤرییەکی تەواو هەیە یاخوود پێویستە خۆت دایبمەزرێنیت.</string>
     <string name="apply_update_dialog_message_ab">تۆ خەریکی بەرزکردنەوەیت بۆ <xliff:g id="update_name">%1$s</xliff:g>. \n\n گەر کرتەبکەیت لە <xliff:g id="ok">%2$s</xliff:g> ، ئەوا ئامێرەکەت لە پاشبنەمادا وەشانەکە دادەمەزرێنێت. \n\nکاتێ کە تەواو دەبێت پرسیارت لێدەکرێ بۆ هەڵبوونەوەی ئامێرەکەت.</string>
@@ -72,12 +66,10 @@
     <string name="dialog_prepare_zip_message">ئامادەکردنی سەرەتایی نوێکاری</string>
     <string name="dialog_battery_low_title">کەمی ووزە</string>
     <string name="dialog_battery_low_message_pct">ڕێژەی ووزە زۆر کەمە، پێویستە لانی کەم ڕێژەی ووزەکەت <xliff:g id="percent_discharging">%1$d</xliff:g>%%  بێت بۆ بەردەوامبوون، <xliff:g id="percent_charging">%2$d</xliff:g>%% گەر لەسەر بارگاویکردن بێت.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">پاشەکەوتکردنی نوێکاری بۆ بیرگەی ناوەکی</string>
     <string name="notification_export_success">نوێکاری پاشەکەوتکرا بۆ بیرگەی ناوەکی</string>
     <string name="notification_export_fail">پاشەکەوتی نوێکاری بۆ بیرگەی ناوەکی شکستی هێنا</string>
     <string name="toast_already_exporting">لە ئێستادا نوێکارییەک پاشەکەوت دەکرێت</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">١ چرکە ماوە</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> چرکە ماوە</item>
@@ -90,11 +82,9 @@
         <item quantity="one">١ کاتژمێر ماوە</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> کاتژمێر ماوە</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">ئاگاداربە</string>
     <string name="update_on_mobile_data_message">تۆ خەریکیت بوخچەی نوێکارییەک دادەگریت لەڕێگای داتای مۆبایلەکەتەوە کە ئەمەش دەبێتە هۆی بەکارهێنانی داتایەکی زۆر. دەتەوێ بەردەوام بیت؟</string>
     <string name="checkbox_mobile_data_warning">پیشان نەدرێتەوە</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">پەرەپێدەر</string>
     <string name="donate_info_title">کۆمەککردن</string>
     <string name="donate_info_summary">پاڵپشتیکردنی پەرەپێدەران</string>
@@ -105,5 +95,4 @@
     <string name="forum_info_title">کۆڕبەند</string>
     <string name="forum_info_summary">بینینی بابەتەکانی کۆڕبەند</string>
     <string name="error_open_url"> کردنەوەی بەستەر لە وێبگەردا شکستی هێنا</string>
-    <!-- Security patch -->
 </resources>

@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Pag-update ng system</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Pagkumpleto ng pag-export</string>
     <string name="new_updates_channel_title">Mga bagong update</string>
     <string name="ongoing_channel_title">Patuloy na pag-download</string>
@@ -27,32 +25,25 @@
     <string name="downloading_notification">Pag-download</string>
     <string name="download_paused_notification">Naka-pause ang pag-download</string>
     <string name="download_starting_notification">Nagsimula ng mag download</string>
-    <!-- Menu -->
+    <string name="update_failed_notification">Nabigo ang pag-update</string>
     <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
-    <!-- General -->
     <string name="snack_download_failed">Nabigo sa pag download. Pakiusap na tignan ang iyong internet koneksyon at subukan muli mamaya.</string>
     <string name="snack_download_verification_failed">Ang update verification ay nabigo.</string>
     <string name="snack_update_not_installable">Itong update ay hindi maaring ma install sa kasalukuyang build.</string>
-    <!-- Actions -->
+    <string name="list_verifying_update">Pag-verify ng pag-update</string>
     <string name="confirm_delete_dialog_title">Burahin ang file</string>
-    <!-- Installation -->
     <string name="finalizing_package">Pagtatapos ng pag-install ng package</string>
     <string name="dialog_prepare_zip_message">Paunang paghahanda sa pag-update</string>
     <string name="dialog_battery_low_message_pct">Ang level ng baterya ay mababa na, kailangan mo kahit <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya para makapag patuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagkakarga.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Pag-export ng pag-update sa panloob na imbakan</string>
     <string name="notification_export_success">I-update ang nai-export sa panloob na imbakan</string>
     <string name="notification_export_fail">Nabigong i-export ang pag-update sa panloob na imbakan</string>
-    <!-- ETA -->
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Babala</string>
     <string name="update_on_mobile_data_message">Ikaw ay magda-download ng update package gamit ang mobile data na maaaring magdulot ng mataas na paggamit ng data. Gusto mo bang magpatuloy?</string>
     <string name="checkbox_mobile_data_warning">Huwag ulit ipakita</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Taga-maintain</string>
     <string name="donate_info_title">Mag-donate</string>
     <string name="donate_info_summary">Suportahan ang pag-develop</string>
     <string name="website_info_summary">Bisitahin ang website</string>
     <string name="news_info_title">Mga balita</string>
-    <!-- Security patch -->
 </resources>

@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Cập nhật hệ thống</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Hoàn thành xuất</string>
     <string name="new_updates_channel_title">Bản cập nhật mới</string>
     <string name="ongoing_channel_title">Đang tải xuống</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
     <string name="update_failed_notification">Cập nhật thất bại</string>
     <string name="check_for_update">Kiểm tra cập nhật</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Xóa</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
     <string name="menu_show_changelog">Thay đổi trong phiên bản hiện tại</string>
     <string name="changelog_loading">Đang tải…</string>
     <string name="menu_download_full_package">Tải xuống gói đầy đủ</string>
     <string name="menu_download_incremental_package">Tải xuống gói gia tăng</string>
-    <!-- General -->
     <string name="update_found_notification">Bản cập nhật hệ thống đã có</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="snack_updates_check_failed">Kiểm tra bản cập nhật không thành công. Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Đang xác thực bản cập nhật</string>
     <string name="list_no_updates">Không tìm thấy bản cập nhật mới.</string>
     <string name="blocked_update_dialog_title">Cập nhật bị chặn</string>
-    <!-- Actions -->
     <string name="action_download">Tải xuống</string>
     <string name="action_pause">Tạm dừng</string>
     <string name="action_resume">Tiếp tục</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Cần phải khởi động lại.</string>
     <string name="reboot_needed_dialog_summary">Để hoàn tất quá trình cài đặt bản cập nhật, thiết bị của bạn cần được khởi động lại. Bạn có muốn khởi động lại bây giờ không?</string>
     <string name="details_button">Xem chi tiết</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Áp dụng cập nhật</string>
     <string name="apply_update_dialog_message">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>.\n\nNếu bạn chạm <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ tự động khởi động lại trong chế độ phục hồi để cài đặt bản cập nhật.\n\nLưu ý: Tính năng này yêu cầu một chế độ phục hồi tương thích hoặc các bản cập nhật sẽ cần phải được cài đặt thủ công.</string>
     <string name="apply_update_dialog_message_ab">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>.\n\nNếu bạn chạm <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ bắt đầu cài đặt ở chế độ nền.\n\nSau khi hoàn tất, bạn sẽ được nhắc khởi động lại.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Chuẩn bị cập nhật sơ bộ</string>
     <string name="dialog_battery_low_title">Pin yếu</string>
     <string name="dialog_battery_low_message_pct">Mức pin quá thấp, bạn cần tối thiểu <xliff:g id="percent_discharging">%1$d</xliff:g>%% pin để tiếp tục, <xliff:g id="percent_charging">%2$d</xliff:g>%% nếu đang sạc.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Xuất bản cập nhật vào bộ nhớ trong</string>
     <string name="notification_export_success">Bản cập nhật đã xuất vào bộ nhớ trong</string>
     <string name="notification_export_fail">Không thể xuất bản cập nhật vào bộ nhớ trong</string>
     <string name="toast_already_exporting">Đã xuất một bản cập nhật</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">Còn lại <xliff:g id="count">%d</xliff:g> giây</item>
     </plurals>
@@ -92,11 +84,9 @@
     <plurals name="eta_hours">
         <item quantity="other">Còn lại <xliff:g id="count">%d</xliff:g> giờ</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Cảnh báo</string>
     <string name="update_on_mobile_data_message">Bạn sắp tải xuống một gói cập nhật sử dụng dữ liệu di động có khả năng gây ra việc sử dụng dữ liệu cao. Bạn có muốn tiến hành không?</string>
     <string name="checkbox_mobile_data_warning">Không hiện lại</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Người duy trì</string>
     <string name="donate_info_title">Ủng hộ</string>
     <string name="donate_info_summary">Hỗ trợ việc phát triển</string>
@@ -107,6 +97,5 @@
     <string name="forum_info_title">Diễn đàn</string>
     <string name="forum_info_summary">Xem các bài đăng diễn đàn</string>
     <string name="error_open_url">Không thể mở URL trong trình duyệt</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Bản cập nhật bảo mật</string>
 </resources>

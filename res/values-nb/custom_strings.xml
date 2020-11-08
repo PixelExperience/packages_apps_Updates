@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Systemoppdatering</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Fullføring av eksportering</string>
     <string name="new_updates_channel_title">Nye oppdateringer</string>
     <string name="ongoing_channel_title">Pågående nedlastinger</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Starter nedlasting</string>
     <string name="update_failed_notification">Oppdatering mislyktes</string>
     <string name="check_for_update">Se etter oppdatering</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Slett</string>
     <string name="menu_export_update">Eksporter oppdatering</string>
     <string name="menu_show_changelog">Endringer i nåværende versjon</string>
     <string name="changelog_loading">Laster inn…</string>
     <string name="menu_download_full_package">Last ned hele oppdateringen</string>
     <string name="menu_download_incremental_package">Last ned inkrementell oppdatering</string>
-    <!-- General -->
     <string name="update_found_notification">Systemoppdatering tilgjengelig</string>
     <string name="snack_no_updates_found">Ingen nye oppdateringer funnet</string>
     <string name="snack_updates_check_failed">Oppdateringssjekken mislyktes. Sjekk din internettilkobling og prøv igjen senere.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Bekrefter oppdatering</string>
     <string name="list_no_updates">Ingen nye oppdateringer funnet.</string>
     <string name="blocked_update_dialog_title">Oppdatering blokkert</string>
-    <!-- Actions -->
     <string name="action_download">Last ned</string>
     <string name="action_pause">Sett på pause</string>
     <string name="action_resume">Fortsett</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Omstart nødvendig</string>
     <string name="reboot_needed_dialog_summary">For å fullføre installasjonen av oppdateringen må enheten startes på nytt. Ønsker du å starte på nytt nå?</string>
     <string name="details_button">Vis detaljer</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Installer oppdatering</string>
     <string name="apply_update_dialog_message">Du er i ferd med å oppdatere til <xliff:g id="update_name">%1$s</xliff:g>.\n\nHvis du trykker <xliff:g id="ok">%2$s</xliff:g> vil enheten starte på nytt i gjenopprettingsmodus for å installere oppdateringen.\n\nMerk: Denne funksjonen krever en kompatibel gjenopprettingsprogramvare, ellers må oppdateringer installeres manuelt.</string>
     <string name="apply_update_dialog_message_ab">Du er i ferd med å oppdatere til <xliff:g id="update_name">%1$s</xliff:g>.\n\nHvis du trykker <xliff:g id="ok">%2$s</xliff:g> vil enheten begynne å installere i bakgrunnen.\n\nNår den er ferdig, vil du bli spurt om å starte på nytt.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Forhåndsregler tas før oppdatering</string>
     <string name="dialog_battery_low_title">Lavt batterinivå</string>
     <string name="dialog_battery_low_message_pct">Batterinivået er for lavt. Du trenger minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% batterinivå for å fortsette, eller <xliff:g id="percent_charging">%2$d</xliff:g>%% under lading.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Eksporter oppdatering til intern lagring</string>
     <string name="notification_export_success">Oppdatering eksportert til intern lagring</string>
     <string name="notification_export_fail">Eksportering av oppdatering til intern lagring mislyktes</string>
     <string name="toast_already_exporting">Eksporterer allerede en oppdatering</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund igjen</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekunder igjen</item>
@@ -95,11 +87,9 @@
         <item quantity="one">1 time igjen</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> timer igjen</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Advarsel</string>
     <string name="update_on_mobile_data_message">Du er i ferd med å laste ned en oppdateringspakke ved bruk av mobildata, noe som antagelig vil forårsake høy databruk. Ønsker du å fortsette?</string>
     <string name="checkbox_mobile_data_warning">Ikke vis igjen</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Vedlikeholder</string>
     <string name="donate_info_title">Doner</string>
     <string name="donate_info_summary">Støtt utviklingen</string>
@@ -110,5 +100,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vis foruminnlegg</string>
     <string name="error_open_url">Åpning av URL i nettleser mislyktes</string>
-    <!-- Security patch -->
+    <string name="setting_security_patch_level_title">Sikkerhetsoppdatering</string>
 </resources>

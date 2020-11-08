@@ -15,21 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
-    <!-- Menu -->
-    <!-- General -->
-    <!-- Actions -->
     <string name="confirm_delete_dialog_title">Kkes afaylu</string>
     <string name="confirm_delete_dialog_message">Kkes afaylu n lqem ittwafernen?</string>
-    <!-- Installation -->
-    <!-- Export update -->
-    <!-- ETA -->
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Alɣu</string>
     <string name="update_on_mobile_data_message">Aql ak-id ad sidreḍ yiwen n lqem s useqdec n isefka izirazen ad waṭas n isefka ara yettwasqedcen.tebɣiḍ attkemmleḍ?</string>
     <string name="checkbox_mobile_data_warning">Ur d-skan ara tikelt nniḍen</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Adiwinni</string>
     <string name="donate_info_title">Tikci</string>
     <string name="donate_info_summary">Fked tallalt i unegmu</string>
@@ -40,5 +30,4 @@
     <string name="forum_info_title">Anmager</string>
     <string name="forum_info_summary">Ẓar iznan deg anmagar</string>
     <string name="error_open_url">Tuccḍa n tulya n URL deg iminig</string>
-    <!-- Security patch -->
 </resources>

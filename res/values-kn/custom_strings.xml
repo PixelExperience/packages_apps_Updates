@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ವ್ಯವಸ್ತೆಯ ನವೀಕರಣೆ</string>
+    <string name="export_channel_title">ನಿರ್ಯಾತ ಪೂರ್ಣತೆ</string>
+    <string name="new_updates_channel_title">ನವ ನವೀಕರಣೆಗಳು</string>
+    <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಕೆಳಭರಿತಗಳು</string>
+    <string name="update_failed_channel_title">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="verification_failed_notification">ಧೃಢಿಕರಣ ವಿಫಲವಾಯಿತು</string>
+    <string name="verifying_download_notification">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="update_failed_notification">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="changelog_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_verifying_update">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="confirm_delete_dialog_title">ಫೈಲ್ ಅಳಿಸಿ</string>
+    <string name="confirm_delete_dialog_message">ಆಯ್ಕೆಮಾಡಿದ ನವೀಕರಣೆ ಕಡತ ಅಳಿಸುವುದೇ?</string>
+    <string name="dialog_battery_low_title">ಕ್ಷೀಣಿಸಿದೆ</string>
+    <string name="dialog_battery_low_message_pct">ಮಿಂತಿಣಿ ಮಟ್ಟ ತೀರಾ ಕಡಿಮೆಯಿದೆ. ಮುಂದುವರಿಸಲು ನಿಮಗೆ ಕನಿಷ್ಟ <xliff:g id="percent_discharging">%1$d</xliff:g>%% ಚಾರ್ಜ್ ಅಥವಾ ಚಾರ್ಜಿಂಗ್ನಲ್ಲಿ <xliff:g id="percent_charging">%2$d</xliff:g>%% ಬೇಕು.</string>
+    <plurals name="eta_minutes">
+        <item quantity="one">೧ ನಿಮಿಷ ಬಾಕಿ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷಗಳು ಬಾಕಿ</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">೧ ಗಂಟೆ ಬಾಕಿ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆಗಳು ಬಾಕಿ</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
+    <string name="update_on_mobile_data_message">ನೀವೀಗ ನವೀಕರಣೆಯ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
+    <string name="checkbox_mobile_data_warning">ಪುನಃ ತೋರಿಸಬೇಡ</string>
+    <string name="maintainer_info_title">ಮೆಂಟೈನರ್</string>
+    <string name="donate_info_title">ದಾನ</string>
+    <string name="donate_info_summary">ಅಭಿವೃದ್ಧಿಯನ್ನು ಬೆಂಬಲಿಸಿ</string>
+    <string name="website_info_title">ವೆಬ್‌ಸೈಟ್‌</string>
+    <string name="website_info_summary">ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ ಅನ್ನು ಭೇಟಿಮಾಡಿ</string>
+    <string name="news_info_title">ಸುದ್ದಿ</string>
+    <string name="news_info_summary">ನವೀಕರಣೆ ಮತ್ತು ಇತರ ಸುದ್ದಿಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ</string>
+    <string name="forum_info_title">ವೇದಿಕೆಗಳು</string>
+    <string name="forum_info_summary">ವೇದಿಕೆಯ ಪೋಸ್ಟ್ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
+    <string name="error_open_url">ಬ್ರೌಸರ್ನಲ್ಲಿ URL ಅನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="setting_security_patch_level_title">ಭದ್ರತಾ ಅಪ್‌ಡೇಟ್</string>
+</resources>

@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="export_channel_title">Exporteren voltooid</string>
     <string name="new_updates_channel_title">Nieuwe updates</string>
     <string name="ongoing_channel_title">Huidige downloads</string>
@@ -29,12 +27,10 @@
     <string name="download_completed_notification">Downloaden voltooid</string>
     <string name="download_starting_notification">Download starten</string>
     <string name="update_failed_notification">Update mislukt</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Verwijderen</string>
     <string name="menu_export_update">Update exporteren</string>
     <string name="menu_show_changelog">Wijzigingen in huidige versie</string>
     <string name="changelog_loading">Bezig met laden…</string>
-    <!-- General -->
     <string name="snack_no_updates_found">Geen nieuwe updates gevonden</string>
     <string name="snack_updates_check_failed">Kan niet controleren op updates. Controleer uw internetverbinding en probeer het later opnieuw.</string>
     <string name="snack_download_failed">Downloaden mislukt. Controleer uw internetverbinding en probeer het later opnieuw.</string>
@@ -45,7 +41,6 @@
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> van <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="duration" example="3 minutes">%3$s</xliff:g> resterend) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Update verifiëren</string>
     <string name="blocked_update_dialog_title">Update geblokkeerd</string>
-    <!-- Actions -->
     <string name="action_download">Downloaden</string>
     <string name="action_pause">Pauzeren</string>
     <string name="action_resume">Hervatten</string>
@@ -57,7 +52,6 @@
     <string name="resume_button">Hervatten</string>
     <string name="reboot">Herstarten</string>
     <string name="details_button">Details weergeven</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Update toepassen</string>
     <string name="apply_update_dialog_message">Uw systeem wordt bijgewerkt naar <xliff:g id="update_name">%1$s</xliff:g>.\n\nWanneer u op <xliff:g id="ok">%2$s</xliff:g> tikt, zal het apparaat herstarten naar de herstelmodus om de update te installeren.\n\nLet op: een compatibele Recovery is vereist, anders moet de update handmatig worden geïnstalleerd.</string>
     <string name="apply_update_dialog_message_ab">Uw systeem wordt bijgewerkt naar <xliff:g id="update_name">%1$s</xliff:g>.\n\nWanneer u op <xliff:g id="ok">%2$s</xliff:g> tikt, zal het apparaat de update op de achtergrond uitvoeren.\n\nWanneer de installatie voltooid is zal gevraagd worden het toestel te herstarten.</string>
@@ -68,9 +62,7 @@
     <string name="dialog_prepare_zip_message">Update voorbereiden</string>
     <string name="dialog_battery_low_title">Batterij bijna leeg</string>
     <string name="dialog_battery_low_message_pct">Uw batterijniveau is te laag, u moet op zijn minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% batterijcapaciteit hebben om door te gaan of <xliff:g id="percent_charging">%2$d</xliff:g>%% tijdens het opladen.</string>
-    <!-- Export update -->
     <string name="toast_already_exporting">Er wordt al een update geëxporteerd</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 seconde resterend</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> seconden resterend</item>
@@ -83,11 +75,9 @@
         <item quantity="one">1 uur resterend</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> uur resterend</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Waarschuwing</string>
     <string name="update_on_mobile_data_message">U staat op het punt om een update-pakket te downloaden via mobiele gegevens, wat een hoog gegevensgebruik tot gevolg kan hebben. Wilt u verder gaan?</string>
     <string name="checkbox_mobile_data_warning">Niet opnieuw tonen</string>
-    <!-- Info section -->
     <string name="donate_info_title">Doneer</string>
     <string name="donate_info_summary">Steun de ontwikkeling</string>
     <string name="website_info_summary">Bezoek onze website</string>
@@ -95,6 +85,5 @@
     <string name="news_info_summary">Blijf op de hoogte over updates en ander nieuws</string>
     <string name="forum_info_summary">Bekijk forumberichten</string>
     <string name="error_open_url">Fout bij het openen van URL in browser</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Beveiligingsupdate</string>
 </resources>

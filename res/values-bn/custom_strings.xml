@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">সিস্টেম আধুনিকীকরণ</string>
+    <string name="export_channel_title">এক্সপোর্ট সম্পূর্ণকরণ</string>
+    <string name="new_updates_channel_title">নতুন আধুনিকরণ গুলো</string>
+    <string name="ongoing_channel_title">চলমান ডাউনলোড</string>
+    <string name="update_failed_channel_title">আধুনিকরণ ব্যর্থ হয়েছে</string>
+    <string name="verification_failed_notification">যাচাইকরণ ব্যর্থ হয়েছে</string>
+    <string name="verifying_download_notification">আধুনিকরণ যাচাই করা হচ্ছে</string>
+    <string name="downloading_notification">ডাউনলোড হচ্ছে</string>
+    <string name="download_paused_notification">ডাউনলোড থামানো হয়েছে</string>
+    <string name="download_paused_error_notification">ডাউনলোডে ত্রুটি হয়েছে</string>
+    <string name="download_completed_notification">ডাউনলোড সম্পূর্ণ হয়েছে</string>
+    <string name="download_starting_notification">ডাউনলোড শুরু হচ্ছে</string>
+    <string name="update_failed_notification">আধুনিকরণ ব্যর্থ হয়েছে</string>
+    <string name="check_for_update">নতুন আধুনিকরণের জন্যে চেক করুন</string>
+    <string name="menu_delete_update">মুছুন</string>
+    <string name="menu_export_update">আধুনিকরন এক্সপোর্ট করুন</string>
+    <string name="menu_show_changelog">বর্তমান সংস্করণে যেসব পরিবর্তন হয়েছে</string>
+    <string name="changelog_loading">লোড হচ্ছে…</string>
+    <string name="update_found_notification">সিস্টেম আধুনিকরণ পাওয়া গেছে</string>
+    <string name="snack_no_updates_found">নতুন কোনো আধুনিকরণ পাওয়া যায়নি</string>
+    <string name="snack_updates_check_failed">আধুনিকরণ পরীক্ষা ব্যর্থ হয়েছে। অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন এবং আবার চেষ্টা করুন।</string>
+    <string name="snack_download_failed">আধুনিকরণ ডাউনলোড ব্যর্থ হয়েছে। আপনার ইন্টারনেট সংযোগ চেক করে আবার চেষ্টা করুন।</string>
+    <string name="snack_download_verification_failed">আধুনিকীকরণটি যাচাইকরণ ব্যার্থ হয়েছে।</string>
+    <string name="snack_download_verified">ডাউনলোড সম্পূর্ণ হয়েছে।</string>
+    <string name="list_verifying_update">আধুনিকরণ যাচাই করা হচ্ছে</string>
+    <string name="action_download">ডাউনলোড</string>
+    <string name="action_pause">বিরাম</string>
+    <string name="action_resume">পুনরারম্ভ</string>
+    <string name="action_install">সংস্থাপন</string>
+    <string name="action_delete">মুছুন</string>
+    <string name="confirm_delete_dialog_title">ফাইল মুছুন</string>
+    <string name="confirm_delete_dialog_message">নির্বাচিত আধুনিকীকরণ ফাইল গুলি মুছে দিতে চান?</string>
+    <string name="pause_button">বিরাম</string>
+    <string name="resume_button">পুনরারম্ভ</string>
+    <string name="reboot">রিবুট</string>
+    <string name="details_button">বিস্তারিত দেখুন</string>
+    <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">১ সেকেন্ড বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> সেকেন্ড বাকি</item>
+    </plurals>
+    <plurals name="eta_minutes">
+        <item quantity="one">১ মিনিট বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> মিনিট বাকি</item>
+    </plurals>
+    <plurals name="eta_hours">
+        <item quantity="one">১ ঘণ্টা বাকি</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ঘণ্টা বাকি</item>
+    </plurals>
+    <string name="update_on_mobile_data_title">সাবধানবাণী</string>
+    <string name="update_on_mobile_data_message">আপনি মোবাইল ডাটা ব্যবহার করে আধুনিকীকরণের তথ্য ডাউনলোড করতে চলেছেন, যেটি সম্ভবত অনেক ডাটা ব্যবহার করতে পারে। আপনি কি অগ্রসর হতে চান?</string>
+    <string name="checkbox_mobile_data_warning">আবার দেখাবেন না</string>
+    <string name="maintainer_info_title">রক্ষণাবেক্ষণকারী</string>
+    <string name="donate_info_title">দান করুন</string>
+    <string name="donate_info_summary">উন্নয়ন সহায়তা করুন</string>
+    <string name="website_info_title">ওয়েবসাইট</string>
+    <string name="website_info_summary">আমাদের ওয়েবসাইট দেখুন</string>
+    <string name="news_info_title">সংবাদ</string>
+    <string name="news_info_summary">আপডেট এবং অন্যান্য খবর সম্পর্কে অবগত থাকুন</string>
+    <string name="forum_info_title">ফোরাম</string>
+    <string name="forum_info_summary">ফোরামে পোস্ট দেখুন</string>
+    <string name="error_open_url">ব্রাউজারে URL খুলতে ব্যর্থ</string>
+</resources>

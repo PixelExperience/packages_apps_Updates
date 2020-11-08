@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Mise à jour du système</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Fin de l\'exportation</string>
     <string name="new_updates_channel_title">Nouvelles mises à jour</string>
     <string name="ongoing_channel_title">Téléchargements en cours</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Début du téléchargement</string>
     <string name="update_failed_notification">Échec de la mise à jour</string>
     <string name="check_for_update">Vérifier les mises à jour</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_export_update">Exporter la mise à jour</string>
     <string name="menu_show_changelog">Changements dans la version actuelle</string>
     <string name="changelog_loading">Chargement…</string>
     <string name="menu_download_full_package">Télécharger le paquet entier </string>
     <string name="menu_download_incremental_package">Télécharger une partie du paquet</string>
-    <!-- General -->
     <string name="update_found_notification">Une mise à jour système est disponible</string>
     <string name="snack_no_updates_found">Aucune nouvelle mise à jour disponible</string>
     <string name="snack_updates_check_failed">La vérification de nouvelles mises à jour a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Vérification de la mise à jour en cours</string>
     <string name="list_no_updates">Aucune nouvelle mise à jour disponible.</string>
     <string name="blocked_update_dialog_title">Mise à jour bloquée</string>
-    <!-- Actions -->
     <string name="action_download">Télécharger</string>
     <string name="action_pause">Mettre en pause</string>
     <string name="action_resume">Reprendre</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Redémarrage nécessaire</string>
     <string name="reboot_needed_dialog_summary">Pour terminer la mise à jour, votre appareil à besoin de redémarrer. Voulez vous redémarrer maintenant ?</string>
     <string name="details_button">Voir les détails</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Appliquer la mise à jour</string>
     <string name="apply_update_dialog_message">Vous êtes sur le point d\'installer <xliff:g id="update_name">%1$s</xliff:g>.\n\nLorsque vous appuierez sur <xliff:g id="ok">%2$s</xliff:g>, votre appareil redémarrera automatiquement en mode recovery pour installer la mise à jour.\n\nRemarque : Cette opération nécessite un recovery compatible, sinon les mises à jour devront être installées manuellement.</string>
     <string name="apply_update_dialog_message_ab">Vous êtes sur le point de faire la mise à jour vers <xliff:g id="update_name">%1$s</xliff:g>.\n\nLorsque vous appuierez sur <xliff:g id="ok">%2$s</xliff:g>, l’appareil commencera l\'installation en tâche de fond.\n\nUne fois celle-ci terminée, il vous sera demandé de redémarrer.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Préparation de la mise à jour préliminaire</string>
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Exporter la mise à jour vers le stockage interne</string>
     <string name="notification_export_success">Mise à jour exportée vers le stockage interne</string>
     <string name="notification_export_fail">Echec lors de l\'export de la mise à jour vers le stockage interne</string>
     <string name="toast_already_exporting">Une mise à jour est déjà en cours d\'export</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">temps restant : 1 seconde</item>
         <item quantity="other">temps restant : <xliff:g id="count">%d</xliff:g> secondes</item>
@@ -95,11 +87,9 @@
         <item quantity="one">temps restant : 1 heure</item>
         <item quantity="other">temps restant : <xliff:g id="count">%d</xliff:g> heures</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Attention</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
     <string name="checkbox_mobile_data_warning">Ne plus afficher ce message</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Mainteneur</string>
     <string name="donate_info_title">Faire un don</string>
     <string name="donate_info_summary">Soutenez le développement</string>
@@ -110,6 +100,5 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Voir les messages du forum</string>
     <string name="error_open_url">Échec de l\'ouverture de l’URL dans le navigateur</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Mise à jour de sécurité</string>
 </resources>

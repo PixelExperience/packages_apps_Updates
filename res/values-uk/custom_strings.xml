@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Оновлення системи</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Експорт завершено</string>
     <string name="new_updates_channel_title">Свіжі оновлення</string>
     <string name="ongoing_channel_title">Поточні завантаження</string>
@@ -31,27 +29,24 @@
     <string name="download_starting_notification">Початок завантаження</string>
     <string name="update_failed_notification">Помилка оновлення</string>
     <string name="check_for_update">Перевірити оновлення</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_export_update">Експорт оновлення</string>
     <string name="menu_show_changelog">Зміни поточної версії</string>
     <string name="changelog_loading">Завантаження…</string>
     <string name="menu_download_full_package">Завантажити повний пакет</string>
-    <string name="menu_download_incremental_package">Завантажте додатковий пакет</string>
-    <!-- General -->
+    <string name="menu_download_incremental_package">Завантажити пакет зі змінами</string>
     <string name="update_found_notification">Доступне оновлення системи</string>
-    <string name="snack_no_updates_found">Оновлень не знайдено</string>
+    <string name="snack_no_updates_found">Свіжих оновлень не знайдено</string>
     <string name="snack_updates_check_failed">Не вдалося перевірити оновлення. Будь ласка, перевірте з\'єднання з мережею і спробуйте ще раз.</string>
-    <string name="snack_download_failed">Завантаження оновлення не вдалось. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>
-    <string name="snack_download_verification_failed">Не пройшла перевірка оновлення.</string>
+    <string name="snack_download_failed">Помилка завантаження. Будь ласка, перевірте з\'єднання з мережею або спробуйте пізніше.</string>
+    <string name="snack_download_verification_failed">Оновлення не пройшло перевірку.</string>
     <string name="snack_download_verified">Завантаження завершено.</string>
-    <string name="snack_update_not_installable">Це оновлення не можна інсталювати на поточну збірку.</string>
+    <string name="snack_update_not_installable">Це оновлення не можна встановити на поточну збірку.</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> з <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Перевірка оновлення</string>
     <string name="list_no_updates">Оновлень не знайдено.</string>
     <string name="blocked_update_dialog_title">Оновлення заблоковане</string>
-    <!-- Actions -->
     <string name="action_download">Завантажити</string>
     <string name="action_pause">Призупинити</string>
     <string name="action_resume">Відновити</string>
@@ -61,11 +56,10 @@
     <string name="confirm_delete_dialog_message">Видалити обраний файл оновлення?</string>
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Продовжити</string>
-    <string name="reboot">Перезавантаження</string>
+    <string name="reboot">Перезавантажити</string>
     <string name="reboot_needed_dialog_title">Необхідне перезавантаження</string>
     <string name="reboot_needed_dialog_summary">Щоб завершити встановлення оновлення, необхідно перезавантажити пристрій. Ви бажаєте перезавантажити зараз?</string>
     <string name="details_button">Детальніше</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Застосувати оновлення</string>
     <string name="apply_update_dialog_message">Ви збираєтесь оновитись на <xliff:g id="update_name">%1$s</xliff:g>.\n\nЯкщо Ви натиснете <xliff:g id="ok">%2$s</xliff:g>, пристрій перезавантажиться у Recovery для встановлення.\n\nПримітка: ця функція потребує сумісне Recovery, в іншому випадку оновлення необхідно встановити вручну.</string>
     <string name="apply_update_dialog_message_ab">Ви збираєтесь оновитись на <xliff:g id="update_name">%1$s</xliff:g>.\n\nЯкщо ви натиснети на <xliff:g id="ok">%2$s</xliff:g>, пристрій почне встановлення у фоновому режимі.\n\nПісля встановлення вам буде запропоновано перезавантажити пристрій.</string>
@@ -76,46 +70,41 @@
     <string name="finalizing_package">Завершення встановлення</string>
     <string name="dialog_prepare_zip_message">Підготовка оновлення</string>
     <string name="dialog_battery_low_title">Низький заряд батареї</string>
-    <string name="dialog_battery_low_message_pct">Рівень заряду батареї занизький, для продовження необхідно принаймні <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряду або <xliff:g id="percent_charging">%2$d</xliff:g>%% під час зарядки.</string>
-    <!-- Export update -->
+    <string name="dialog_battery_low_message_pct">Рівень заряду батареї надто низький, для продовження необхідно хоча б <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряду або <xliff:g id="percent_charging">%2$d</xliff:g>%% під час зарядки.</string>
     <string name="dialog_export_title">Експорт оновлення до внутрішнього сховища</string>
-    <string name="notification_export_success">Оновлення, що експортується до внутрішнього сховища</string>
+    <string name="notification_export_success">Оновлення експортовано до внутрішнього сховища</string>
     <string name="notification_export_fail">Не вдалося експортувати оновлення до внутрішнього сховища</string>
     <string name="toast_already_exporting">Оновлення вже експортується</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
-        <item quantity="one">залишилась одна секунда</item>
-        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> секунд(и)</item>
-        <item quantity="many">залишилось <xliff:g id="count">%d</xliff:g> секунд(и)</item>
-        <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> секунд(и)</item>
+        <item quantity="one">ще 1 секунда</item>
+        <item quantity="few">ще <xliff:g id="count">%d</xliff:g> секунди</item>
+        <item quantity="many">ще <xliff:g id="count">%d</xliff:g> секунд</item>
+        <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> секунд</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">Залишилась одна хвилина</item>
-        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> хвилини</item>
-        <item quantity="many">Залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
-        <item quantity="other">Залишилось <xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="one">ще хвилину</item>
+        <item quantity="few">ще <xliff:g id="count">%d</xliff:g> хвилини</item>
+        <item quantity="many">ще <xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="other">ще <xliff:g id="count">%d</xliff:g> хвилин</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">Залишилась одна година</item>
-        <item quantity="few">залишилось <xliff:g id="count">%d</xliff:g> години</item>
-        <item quantity="many">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
-        <item quantity="other">Залишилось <xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="one">ще годину</item>
+        <item quantity="few">ще <xliff:g id="count">%d</xliff:g> години</item>
+        <item quantity="many">ще <xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="other">ще <xliff:g id="count">%d</xliff:g> годин</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Попередження</string>
-    <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що, ймовірно, призведе до високого використання даних. Ви хочете продовжити?</string>
+    <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що може призвести до надмірної витрати тарифного пакету даних. Дійсно хочете продовжити?</string>
     <string name="checkbox_mobile_data_warning">Більше не показувати</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Розробники</string>
     <string name="donate_info_title">Підтримати проект</string>
     <string name="donate_info_summary">Підтримати розробку</string>
     <string name="website_info_title">Веб-сайт</string>
-    <string name="website_info_summary">Відвідати наш веб-сайт</string>
+    <string name="website_info_summary">Відвідати сайт</string>
     <string name="news_info_title">Новини</string>
-    <string name="news_info_summary">Стежте за оновленнями та іншими новинами</string>
+    <string name="news_info_summary">Стежити за оновленнями та іншими новинами</string>
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Останні дописи форуму</string>
     <string name="error_open_url">Не вдалося відкрити посилання у браузері</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Оновлення безпеки</string>
 </resources>

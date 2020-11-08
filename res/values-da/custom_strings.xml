@@ -15,21 +15,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
-    <!-- Notifications -->
     <string name="new_updates_channel_title">Ny Opdatering</string>
     <string name="ongoing_channel_title">Igangværende Downloads</string>
     <string name="update_failed_channel_title">Opdatering mislykkedes</string>
     <string name="downloading_notification">Henter</string>
     <string name="download_paused_notification">Download sat på pause</string>
-    <!-- Menu -->
-    <!-- General -->
-    <!-- Actions -->
-    <!-- Installation -->
-    <!-- Export update -->
-    <!-- ETA -->
-    <!-- Mobile data warning -->
-    <!-- Info section -->
+    <string name="update_failed_notification">Opdatering mislykkedes</string>
     <string name="maintainer_info_title">Vedligeholder</string>
     <string name="donate_info_title">Donér</string>
     <string name="donate_info_summary">Støt udviklingen</string>
@@ -39,6 +30,5 @@
     <string name="news_info_summary">Bliv informeret om opdateringer og andre nyheder</string>
     <string name="forum_info_summary">Se forumindlæg</string>
     <string name="error_open_url">Kunne ikke åbne URL i browser</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Sikkerhedsopdatering</string>
 </resources>

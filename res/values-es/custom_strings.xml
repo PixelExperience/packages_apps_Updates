@@ -15,9 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App name -->
     <string name="app_name">Actualización del sistema</string>
-    <!-- Notifications -->
     <string name="export_channel_title">Exportación finalizada</string>
     <string name="new_updates_channel_title">Nuevas actualizaciones</string>
     <string name="ongoing_channel_title">Descargas en curso</string>
@@ -31,14 +29,12 @@
     <string name="download_starting_notification">Iniciando descarga</string>
     <string name="update_failed_notification">Actualización fallida</string>
     <string name="check_for_update">Verificar si existe nueva actualización</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_export_update">Exportar actualización</string>
     <string name="menu_show_changelog">Cambios en la última versión</string>
     <string name="changelog_loading">Cargando…</string>
     <string name="menu_download_full_package">Descargar paquete completo</string>
     <string name="menu_download_incremental_package">Descargar paquete incremental</string>
-    <!-- General -->
     <string name="update_found_notification">Actualización disponible</string>
     <string name="snack_no_updates_found">No se encontraron nuevas actualizaciones</string>
     <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor verifique la conexión a internet e intente nuevamente.</string>
@@ -51,7 +47,6 @@
     <string name="list_verifying_update">Verificando actualización</string>
     <string name="list_no_updates">No se encontraron nuevas actualizaciones.</string>
     <string name="blocked_update_dialog_title">Actualización bloqueada</string>
-    <!-- Actions -->
     <string name="action_download">Descargar</string>
     <string name="action_pause">Pausar</string>
     <string name="action_resume">Reanudar</string>
@@ -65,7 +60,6 @@
     <string name="reboot_needed_dialog_title">Es necesario reiniciar</string>
     <string name="reboot_needed_dialog_summary">Para completar la instalación de la actualización, su dispositivo necesita ser reiniciado. Quiere reiniciarlo ahora? </string>
     <string name="details_button">Ver detalles</string>
-    <!-- Installation -->
     <string name="apply_update_dialog_title">Aplicar actualización</string>
     <string name="apply_update_dialog_message">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>.\n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, se reiniciará el dispositivo en modo «Recovery» para instalar la actualización.\n\nNota: Esta función requiere un «Recovery» compatible o las actualizaciones deberán instalarse manualmente.</string>
     <string name="apply_update_dialog_message_ab">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>. \n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, el dispositivo comenzará a instalar en segundo plano.\n\nUna vez terminado el proceso, se le pedirá que reinicie.</string>
@@ -77,12 +71,10 @@
     <string name="dialog_prepare_zip_message">Preparación preliminar de la actualización</string>
     <string name="dialog_battery_low_title">Batería baja</string>
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
-    <!-- Export update -->
     <string name="dialog_export_title">Exportando actualización al almacenamiento interno</string>
     <string name="notification_export_success">Actualización exportada al almacenamiento interno</string>
     <string name="notification_export_fail">Fallo al exportar la actualización al almacenamiento interno</string>
     <string name="toast_already_exporting">Ya se está exportando una actualización</string>
-    <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 segundo restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> segundos restantes</item>
@@ -95,11 +87,9 @@
         <item quantity="one">1 hora restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
     </plurals>
-    <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">¡Advertencia!</string>
     <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Deseas continuar?</string>
     <string name="checkbox_mobile_data_warning">No volver a mostrar</string>
-    <!-- Info section -->
     <string name="maintainer_info_title">Mantenedor</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Apoyar el desarrollo</string>
@@ -110,6 +100,5 @@
     <string name="forum_info_title">Foro</string>
     <string name="forum_info_summary">Ver publicaciones del foro</string>
     <string name="error_open_url">Falló al abrir la URL en el navegador</string>
-    <!-- Security patch -->
     <string name="setting_security_patch_level_title">Actualización de seguridad</string>
 </resources>
