@@ -20,4 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class UpdatesListActivity extends AppCompatActivity {
     public abstract void showSnackbar(int stringId, int duration);
+
+    public abstract void showSnackbar(String text, int duration);
 }

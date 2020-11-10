@@ -287,7 +287,11 @@ public class UpdaterController {
             File destination = new File(mDownloadRoot, update.getName());
             update.setFile(destination);
             update.setStatus(UpdateStatus.DOWNLOADING);
-        }else{
+        } else if (Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.STARTING_DOWNLOAD && isDownloading()) {
+            File destination = new File(mDownloadRoot, update.getName());
+            update.setFile(destination);
+            update.setStatus(UpdateStatus.STARTING);
+        } else {
             update.setStatus(UpdateStatus.UNKNOWN);
             Utils.cleanupDownloadsDir(mContext);
             Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
@@ -323,6 +327,7 @@ public class UpdaterController {
             return;
         }
         addDownloadClient(mDownloadEntry, downloadClient);
+        Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.STARTING_DOWNLOAD);
         update.setStatus(UpdateStatus.STARTING);
         notifyUpdateChange(UpdateStatus.STARTING);
         downloadClient.start();
