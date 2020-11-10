@@ -372,6 +372,7 @@ public class UpdaterController {
                 return;
             }
             addDownloadClient(mDownloadEntry, downloadClient);
+            Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.STARTING_DOWNLOAD);
             update.setStatus(UpdateStatus.STARTING);
             notifyUpdateChange(UpdateStatus.STARTING);
             downloadClient.resume();
