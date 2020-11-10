@@ -32,7 +32,8 @@ public enum UpdateStatus {
 
     public static final class Persistent {
         public static final int UNKNOWN = 0;
-        public static final int DOWNLOADING = 1;
-        public static final int VERIFIED = 2;
+        public static final int STARTING_DOWNLOAD = 1;
+        public static final int DOWNLOADING = 2;
+        public static final int VERIFIED = 3;
     }
 }
