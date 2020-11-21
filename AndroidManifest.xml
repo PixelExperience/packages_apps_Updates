@@ -30,45 +30,19 @@
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true">
-            <intent-filter>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:priority="1">
                 <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter android:priority="-101">
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="com.android.settings.SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.security" />
-            <meta-data
-                android:name="com.android.settings.keyhint"
-                android:value="security_status_security_patch_level" />
-            <meta-data
-                android:name="com.android.settings.title"
-                android:resource="@string/setting_security_patch_level_title" />
-            <meta-data
-                android:name="com.android.settings.icon_tintable"
-                android:value="false" />
-            <meta-data
-                android:name="com.android.settings.summary_uri"
-                android:value="content://org.pixelexperience.ota.provider/getText/SecurityPatchLevelSummary" />
-            <meta-data
-                android:name="com.android.settings.icon_uri"
-                android:value="content://org.pixelexperience.ota.provider/getIcon/SecurityPatchLevelIcon" />
         </activity>
-        <provider
-            android:name="org.pixelexperience.ota.provider.SecurityProvider"
-            android:authorities="org.pixelexperience.ota.provider"
-            android:enabled="true"
-            android:exported="true" />
         <activity
             android:name=".LocalChangelogActivity"
             android:excludeFromRecents="true"
