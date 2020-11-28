@@ -479,14 +479,13 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
     }
 
     private void showInfoDialog() {
-        String messageString = mContext.getString(R.string.snack_update_not_installable);
         if (infoDialog != null) {
             infoDialog.dismiss();
         }
         infoDialog = new AlertDialog.Builder(mContext, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.blocked_update_dialog_title)
                 .setPositiveButton(android.R.string.ok, null)
-                .setMessage(messageString)
+                .setMessage(R.string.blocked_update_dialog_summary)
                 .show();
         TextView textView = infoDialog.findViewById(android.R.id.message);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
