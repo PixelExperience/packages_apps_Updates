@@ -15,9 +15,29 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">सिस्टम अपडेट</string>
+    <string name="export_channel_title">निर्यात पूर्ण</string>
     <string name="new_updates_channel_title">नए अपडेट</string>
+    <string name="ongoing_channel_title">डाउनलोड जारी है</string>
+    <string name="update_failed_channel_title">अपडेट विफल</string>
+    <string name="verification_failed_notification">पुष्टिकरण असफल</string>
     <string name="verifying_download_notification">अपडेट की पुष्टि हो रही है</string>
+    <string name="downloading_notification">डाउनलोड कर रहा है ...</string>
+    <string name="download_paused_notification">डाउनलोड रुक गया</string>
+    <string name="download_paused_error_notification">डाउनलोड त्रुटि</string>
+    <string name="download_completed_notification">डाउनलोड समाप्त हुआ</string>
+    <string name="download_starting_notification">डाउनलोड प्रारम्भ हो रहा है</string>
+    <string name="update_failed_notification">अपडेट विफल</string>
+    <string name="check_for_update">अपडेट के लिए देखें</string>
+    <string name="menu_delete_update">मिटाएं</string>
+    <string name="menu_export_update">अपडेट निर्यात करें</string>
+    <string name="changelog_loading">लोड हो रहा है…</string>
+    <string name="menu_download_full_package">पूरा पैकेज डाउनलोड करें</string>
+    <string name="menu_download_incremental_package">वृद्धिशील पैकेज डाउनलोड करें</string>
+    <string name="update_found_notification">नया अपडेट उपलब्ध है</string>
+    <string name="snack_no_updates_found">कोई नई अपडेट नहीं पाई गयी</string>
     <string name="list_verifying_update">अपडेट की पुष्टि हो रही है</string>
+    <string name="action_delete">मिटाएं</string>
     <string name="confirm_delete_dialog_title">फ़ाइल को हटाएं</string>
     <string name="confirm_delete_dialog_message">चयनित अद्यतन फ़ाइल हटाएं?</string>
     <string name="update_on_mobile_data_title">चेतावनी</string>

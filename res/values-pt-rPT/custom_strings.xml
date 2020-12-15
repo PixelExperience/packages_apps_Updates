@@ -18,87 +18,87 @@
     <string name="app_name">Atualização de sistema</string>
     <string name="export_channel_title">Exportação concluída</string>
     <string name="new_updates_channel_title">Novas atualizações</string>
-    <string name="ongoing_channel_title">Transferências em curso</string>
-    <string name="update_failed_channel_title">A atualização falhou</string>
-    <string name="verification_failed_notification">A verificação falhou</string>
+    <string name="ongoing_channel_title">Descargas em curso</string>
+    <string name="update_failed_channel_title">Falha ao atualizar</string>
+    <string name="verification_failed_notification">Falha ao verificar</string>
     <string name="verifying_download_notification">A verificar atualização</string>
-    <string name="downloading_notification">A transferir</string>
-    <string name="download_paused_notification">Transferência em pausa</string>
-    <string name="download_paused_error_notification">Erro na transferência</string>
-    <string name="download_completed_notification">Transferência concluída</string>
-    <string name="download_starting_notification">A iniciar a transferência</string>
+    <string name="downloading_notification">A descarregar</string>
+    <string name="download_paused_notification">Descarga em pausa</string>
+    <string name="download_paused_error_notification">Erro na descarga</string>
+    <string name="download_completed_notification">Descarga concluída</string>
+    <string name="download_starting_notification">A iniciar descarga</string>
     <string name="update_failed_notification">A atualização falhou</string>
-    <string name="check_for_update">Verificação de atualizações</string>
+    <string name="check_for_update">Procurar atualizações</string>
     <string name="menu_delete_update">Apagar</string>
     <string name="menu_export_update">Exportar atualização</string>
-    <string name="menu_show_changelog">Mudanças na versão atual</string>
+    <string name="menu_show_changelog">Alterações na versão atual</string>
     <string name="changelog_loading">A carregar…</string>
-    <string name="menu_download_full_package">Transferir pacote completo</string>
-    <string name="menu_download_incremental_package">Descarrega um pacote incremental</string>
-    <string name="update_found_notification">Atualização de sistema disponível</string>
-    <string name="snack_no_updates_found">Não foram encontradas novas atualizações</string>
-    <string name="snack_updates_check_failed">A verificação de atualizações falhou. Por favor, verifique a sua ligação à internet e tente novamente.</string>
-    <string name="snack_download_failed">A transferência falhou. Por favor, verifique a sua ligação à internet e tente novamente.</string>
+    <string name="menu_download_full_package">Descarregar pacote completo</string>
+    <string name="menu_download_incremental_package">Descarregar pacote incremental</string>
+    <string name="update_found_notification">Atualização disponível</string>
+    <string name="snack_no_updates_found">Não foram encontradas atualizações</string>
+    <string name="snack_updates_check_failed">A verificação de atualizações falhou. Por favor, verifique a sua ligação à Internet e tente novamente.</string>
+    <string name="snack_download_failed">A descarga falhou. Por favor, verifique a sua ligação à Internet e tente novamente.</string>
     <string name="snack_download_verification_failed">A verificação da atualização falhou.</string>
-    <string name="snack_download_verified">Transferência concluída.</string>
+    <string name="snack_download_verified">Descarga concluída.</string>
     <string name="snack_update_not_installable">Esta atualização não pode ser instalada por cima da versão atual.</string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> de <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> de <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">A verificar atualização</string>
-    <string name="list_no_updates">Não foram encontradas novas atualizações.</string>
+    <string name="list_no_updates">Não foram encontradas atualizações.</string>
     <string name="blocked_update_dialog_title">Atualização bloqueada</string>
-    <string name="action_download">Transferir</string>
-    <string name="action_pause">Pausar</string>
+    <string name="action_download">Descarregar</string>
+    <string name="action_pause">Pausa</string>
     <string name="action_resume">Retomar</string>
     <string name="action_install">Instalar</string>
     <string name="action_delete">Eliminar</string>
-    <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
-    <string name="confirm_delete_dialog_message">Deseja eliminar o ficheiro de atualizações selecionado?</string>
+    <string name="confirm_delete_dialog_title">Apagar ficheiro</string>
+    <string name="confirm_delete_dialog_message">Deseja apagar o ficheiro de atualizações selecionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Continuar</string>
     <string name="reboot">Reiniciar</string>
-    <string name="reboot_needed_dialog_title">Reinicialização necessária.</string>
-    <string name="reboot_needed_dialog_summary">Para completar a instalação da atualização, é necessário reiniciar o dispositivo. Pretende reiniciar agora?</string>
+    <string name="reboot_needed_dialog_title">Tem que reiniciar</string>
+    <string name="reboot_needed_dialog_summary">Para completar a instalação da atualização tem que reiniciar o dispositivo. Reiniciar agora?</string>
     <string name="details_button">Ver detalhes</string>
     <string name="apply_update_dialog_title">Aplicar atualização</string>
-    <string name="apply_update_dialog_message">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\n se carregar em<xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá reiniciar no modo de recuperação para instalar a atualização.\n\nNota: É necessária uma Recuperação compatível, caso contrário as atualizações terão de ser instaladas manualmente.</string>
-    <string name="apply_update_dialog_message_ab">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe selecionar <xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá iniciar a instalação em plano de fundo.\n\nUma vez concluída, ser-lhe-á pedido que reinicie o dispositivo.</string>
-    <string name="installing_update">A instalar o pacote de atualização</string>
+    <string name="apply_update_dialog_message">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe carregar em <xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá reiniciar no modo de recuperação para instalar a atualização.\n\nNota: tem que tem uma \'recovery\' compatível, caso contrário as atualizações terão de ser instaladas manualmente.</string>
+    <string name="apply_update_dialog_message_ab">Está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>.\n\nSe premir <xliff:g id="ok">%2$s</xliff:g>, o dispositivo irá iniciar a instalação em segundo plano.\n\nAssim que a atualização estiver terminada, terá que reiniciar o dispositivo.</string>
+    <string name="installing_update">A instalar pacote de atualização</string>
     <string name="installing_update_error">Erro de instalação</string>
     <string name="installing_update_finished">Atualização instalada</string>
-    <string name="installing_update_ab_disable_incremental_summary">A instalação incremental falhou porque a partição foi modificada por alguma customização ou kernel customizado. Quer descarregar a atualização completa?</string>
-    <string name="finalizing_package">A finalizar a instalação do pacote</string>
-    <string name="dialog_prepare_zip_message">Preparação preliminar de atualização</string>
+    <string name="installing_update_ab_disable_incremental_summary">A instalação incremental falhou porque a partição foi modificada por algum add-on ou kernel personalizado. Deseja descarregar a atualização completa?</string>
+    <string name="finalizing_package">A finalizar instalação do pacote</string>
+    <string name="dialog_prepare_zip_message">Preparação preliminar da atualização</string>
     <string name="dialog_battery_low_title">Bateria fraca</string>
-    <string name="dialog_battery_low_message_pct">O nível da bateria está demasiado baixo. Precisa de, pelo menos, <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver a carregar.</string>
-    <string name="dialog_export_title">A exportar a atualização para o armazenamento interno</string>
-    <string name="notification_export_success">Aualização exportada para o armazenamento interno.</string>
+    <string name="dialog_battery_low_message_pct">O nível de bateria está muito baixo. Precisa de, pelo menos, <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar ou <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver a carregar.</string>
+    <string name="dialog_export_title">A exportar atualização para o armazenamento interno</string>
+    <string name="notification_export_success">Atualização exportada para o armazenamento interno.</string>
     <string name="notification_export_fail">Erro ao exportar a atualização para o armazenamento interno</string>
     <string name="toast_already_exporting">Já está a exportar uma atualização</string>
     <plurals name="eta_seconds">
         <item quantity="one">Falta 1 segundo</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> segundos restantes</item>
+        <item quantity="other">Faltam <xliff:g id="count">%d</xliff:g> segundos</item>
     </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">Falta 1 minuto</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutos restantes</item>
+        <item quantity="other">Faltam <xliff:g id="count">%d</xliff:g> minutos</item>
     </plurals>
     <plurals name="eta_hours">
         <item quantity="one">Falta 1 hora</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
+        <item quantity="other">Faltam <xliff:g id="count">%d</xliff:g> horas</item>
     </plurals>
     <string name="update_on_mobile_data_title">Aviso</string>
-    <string name="update_on_mobile_data_message">Está prestes a fazer o download de um pacote de atualização usando dados móveis, que provavelmente causará alto uso de dados. Gostaria de continuar?</string>
+    <string name="update_on_mobile_data_message">Está prestes a descarregar um pacote de atualização através de dados móveis que, provavelmente, causará alto uso de dados. Tem a certeza de que deseja continuar?</string>
     <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
     <string name="maintainer_info_title">Mantido por</string>
     <string name="donate_info_title">Doar</string>
     <string name="donate_info_summary">Apoiar o desenvolvimento</string>
-    <string name="website_info_title">Website</string>
+    <string name="website_info_title">Site</string>
     <string name="website_info_summary">Visite o nosso site</string>
     <string name="news_info_title">Notícias</string>
     <string name="news_info_summary">Mantenha-se informado sobre atualizações e outras novidades</string>
     <string name="forum_info_title">Fórum</string>
-    <string name="forum_info_summary">Ver publicações no Fórum</string>
+    <string name="forum_info_summary">Ver publicações no fórum</string>
     <string name="error_open_url">Falha ao abrir o URL no navegador</string>
     <string name="setting_security_patch_level_title">Atualização de segurança</string>
 </resources>
