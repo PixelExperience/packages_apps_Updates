@@ -24,7 +24,6 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.BatteryManager;
-import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -375,38 +374,10 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         MenuBuilder menu = (MenuBuilder) popupMenu.getMenu();
         MenuItem deleteAction = menu.findItem(R.id.menu_delete_action);
         MenuItem exportAction = menu.findItem(R.id.menu_export_update);
-        MenuItem incrementalPackageAction = menu.findItem(R.id.menu_download_incremental_package);
-        MenuItem fullPackageAction = menu.findItem(R.id.menu_download_full_package);
 
         deleteAction.setVisible(canDelete);
         exportAction.setVisible(
                 Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.VERIFIED);
-        boolean shouldUseIncremental = Utils.shouldUseIncremental(mContext);
-        boolean canToggleIncremental;
-        switch (mUpdate.getStatus()) {
-            case UNKNOWN:
-            case DOWNLOAD_ERROR:
-            case DELETED:
-            case VERIFICATION_FAILED:
-            case INSTALLATION_FAILED:
-            case DOWNLOADED:
-            case VERIFIED:
-                canToggleIncremental = true;
-                break;
-            default:
-                canToggleIncremental = false;
-        }
-        if (canToggleIncremental && !mUpdate.getHasIncremental()) {
-            incrementalPackageAction.setEnabled(false);
-            incrementalPackageAction.setVisible(true);
-            fullPackageAction.setVisible(false);
-        }else if (canToggleIncremental && mUpdate.getHasIncremental()){
-            fullPackageAction.setVisible(shouldUseIncremental);
-            incrementalPackageAction.setVisible(!shouldUseIncremental);
-        }else{
-            fullPackageAction.setVisible(false);
-            incrementalPackageAction.setVisible(false);
-        }
 
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
@@ -415,12 +386,6 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                     return true;
                 case R.id.menu_export_update:
                     exportUpdate();
-                    return true;
-                case R.id.menu_download_full_package:
-                    mUpdaterController.setShouldUseIncremental(false);
-                    return true;
-                case R.id.menu_download_incremental_package:
-                    mUpdaterController.setShouldUseIncremental(true);
                     return true;
             }
             return false;
@@ -431,8 +396,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         });
         viewHolder.mOptionsButton.setOnClickListener(v -> new MenuPopupHelper(wrapper, menu, viewHolder.mOptionsButton).show());
 
-        boolean isOneMenuItemVisible = deleteAction.isVisible() || exportAction.isVisible() ||
-                incrementalPackageAction.isVisible() || fullPackageAction.isVisible();
+        boolean isOneMenuItemVisible = deleteAction.isVisible() || exportAction.isVisible();
         viewHolder.mOptionsButton.setVisibility(isOneMenuItemVisible ? View.VISIBLE : View.GONE);
     }
 

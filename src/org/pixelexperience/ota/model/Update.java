@@ -28,8 +28,6 @@ public class Update extends UpdateBase implements UpdateInfo {
     private int mInstallProgress;
     private boolean mIsFinalizing;
     private String mHash;
-    private boolean mIsIncremental;
-    private boolean mHasIncremental;
 
     public Update() {
     }
@@ -44,8 +42,6 @@ public class Update extends UpdateBase implements UpdateInfo {
         mInstallProgress = update.getInstallProgress();
         mIsFinalizing = update.getFinalizing();
         mHash = update.getHash();
-        mIsIncremental = update.getIsIncremental();
-        mHasIncremental = update.getHasIncremental();
     }
 
     @Override
@@ -118,23 +114,5 @@ public class Update extends UpdateBase implements UpdateInfo {
 
     public void setHash(String hash) {
         mHash = hash;
-    }
-
-    @Override
-    public boolean getIsIncremental() {
-        return mIsIncremental;
-    }
-
-    public void setIsIncremental(boolean isIncremental) {
-        mIsIncremental = isIncremental;
-    }
-
-    @Override
-    public boolean getHasIncremental() {
-        return mHasIncremental;
-    }
-
-    public void setHasIncremental(boolean hasIncremental) {
-        mHasIncremental = hasIncremental;
     }
 }

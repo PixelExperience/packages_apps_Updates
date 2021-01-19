@@ -17,10 +17,7 @@
 package org.pixelexperience.ota.download;
 
 import android.os.SystemClock;
-import android.os.SystemProperties;
 import android.util.Log;
-
-import org.pixelexperience.ota.misc.Constants;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,19 +42,17 @@ public class HttpURLConnectionClient implements DownloadClient {
     private final boolean mUseDuplicateLinks;
     private HttpURLConnection mClient;
     private DownloadThread mDownloadThread;
-    private boolean mUseIncremental;
 
     HttpURLConnectionClient(String url, File destination,
                             DownloadClient.ProgressListener progressListener,
                             DownloadClient.DownloadCallback callback,
-                            boolean useDuplicateLinks, boolean useIncremental) throws IOException {
+                            boolean useDuplicateLinks) throws IOException {
         mClient = (HttpURLConnection) new URL(url).openConnection();
         setExtraHeaders();
         mDestination = destination;
         mProgressListener = progressListener;
         mCallback = callback;
         mUseDuplicateLinks = useDuplicateLinks;
-        mUseIncremental = useIncremental;
         setExtraHeaders();
     }
 
@@ -75,12 +70,6 @@ public class HttpURLConnectionClient implements DownloadClient {
 
     private void setExtraHeaders() {
         mClient.setRequestProperty("User-Agent", "org.pixelexperience.ota");
-        if (mUseIncremental){
-            String timestamp = SystemProperties.get(Constants.PROP_BUILD_DATE, "0");
-            Log.d(TAG, "Using incremental");
-            Log.d(TAG, "Current-Build-Timestamp is: " + timestamp);
-            mClient.setRequestProperty("Current-Build-Timestamp", timestamp);
-        }
     }
 
     @Override

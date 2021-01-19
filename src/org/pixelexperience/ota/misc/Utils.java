@@ -100,15 +100,11 @@ public class Utils {
         update.setDownloadUrl(object.getString("url"));
         update.setVersion(object.getString("version"));
         update.setHash(object.getString("filehash"));
-        update.setIsIncremental(object.getBoolean("is_incremental"));
-        update.setHasIncremental(object.getBoolean("has_incremental"));
         update.setMaintainers(maintainers);
         update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
         update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
         update.setWebsiteUrl(object.isNull("website_url") ? "" : object.getString("website_url"));
         update.setNewsUrl(object.isNull("news_url") ? "" : object.getString("news_url"));
-        Utils.setCurrentUpdateHasIncremental(context, update.getHasIncremental());
-        Utils.setCurrentUpdateIsIncremental(context, update.getIsIncremental());
         return update;
     }
 
@@ -362,39 +358,6 @@ public class Utils {
             return String.format("%d %s", (int) result, unit);
         }
         return String.format("%01.2f %s", result, unit);
-    }
-
-    public static boolean shouldUseIncremental(Context context){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getBoolean(Constants.PREF_USE_INCREMENTAL, true);
-    }
-
-    @SuppressLint("ApplySharedPref")
-    public static void setShouldUseIncremental(Context context, boolean shouldUse){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit().putBoolean(Constants.PREF_USE_INCREMENTAL, shouldUse).commit();
-    }
-
-    public static boolean getCurrentUpdateHasIncremental(Context context){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, false);
-    }
-
-    @SuppressLint("ApplySharedPref")
-    public static void setCurrentUpdateHasIncremental(Context context, boolean hasIncremental){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_HAS_INCREMENTAL, hasIncremental).commit();
-    }
-
-    public static boolean getCurrentUpdateIsIncremental(Context context){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, false);
-    }
-
-    @SuppressLint("ApplySharedPref")
-    public static void setCurrentUpdateIsIncremental(Context context, boolean isIncremental){
-        SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        preferences.edit().putBoolean(Constants.PREF_CURRENT_UPDATE_IS_INCREMENTAL, isIncremental).commit();
     }
 
     public static int getPersistentStatus(Context context){

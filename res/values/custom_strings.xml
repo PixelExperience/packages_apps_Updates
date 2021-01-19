@@ -37,8 +37,6 @@
     <string name="menu_export_update">Export update</string>
     <string name="menu_show_changelog">Changes in current version</string>
     <string name="changelog_loading">Loading…</string>
-    <string name="menu_download_full_package">Download full package</string>
-    <string name="menu_download_incremental_package">Download incremental package</string>
 
     <!-- General -->
     <string name="update_found_notification">System update available</string>
@@ -77,7 +75,6 @@
     <string name="installing_update">Installing update package</string>
     <string name="installing_update_error">Install error</string>
     <string name="installing_update_finished">Update installed</string>
-    <string name="installing_update_ab_disable_incremental_summary">Incremental installation failed because your system partition was modified by installing some add-on or custom kernel. Do you want to download the full package and try again?</string>
     <string name="finalizing_package">Finalizing package installation</string>
     <string name="dialog_prepare_zip_message">Preliminary update preparation</string>
     <string name="dialog_battery_low_title">Low battery</string>

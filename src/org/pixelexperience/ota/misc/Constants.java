@@ -24,9 +24,6 @@ public final class Constants {
     public static final String PROP_BUILD_DATE = "org.pixelexperience.build_date_utc";
     public static final String PROP_BUILD_TYPE = "org.pixelexperience.build_type";
     public static final String PROP_RECOVERY_UPDATE = "persist.sys.recovery_update";
-    public static final String PREF_USE_INCREMENTAL = "use_incremental";
-    public static final String PREF_CURRENT_UPDATE_HAS_INCREMENTAL = "current_update_has_incremental";
-    public static final String PREF_CURRENT_UPDATE_IS_INCREMENTAL = "current_update_is_incremental";
     public static final String PREF_CURRENT_PERSISTENT_STATUS = "current_persistent_status";
     public static final String PREF_INSTALLING_AB_ID = "installing_ab_id";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";

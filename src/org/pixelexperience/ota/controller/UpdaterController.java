@@ -41,8 +41,6 @@ public class UpdaterController {
     public static final String ACTION_UPDATE_REMOVED = "action_update_removed";
     public static final String ACTION_UPDATE_STATUS = "action_update_status_change";
     public static final String ACTION_NETWORK_UNAVAILABLE = "action_network_unavailable";
-    public static final String ACTION_UPDATE_CLEANUP_IN_PROGRESS = "action_incremental_pref_changing";
-    public static final String ACTION_UPDATE_CLEANUP_DONE = "action_incremental_pref_changed";
     public static final String EXTRA_STATUS = "extra_status";
     private static final int MAX_REPORT_INTERVAL_MS = 1000;
     @SuppressLint("StaticFieldLeak")
@@ -407,23 +405,6 @@ public class UpdaterController {
         removeUpdate(false);
         notifyUpdateDelete();
         notifyUpdateChange(UpdateStatus.UNKNOWN);
-    }
-
-    public void setShouldUseIncremental(boolean shouldUse) {
-        Intent intent = new Intent();
-        intent.setAction(ACTION_UPDATE_CLEANUP_IN_PROGRESS);
-        mBroadcastManager.sendBroadcast(intent);
-        Utils.setShouldUseIncremental(mContext, shouldUse);
-        new Thread(() -> {
-            removeUpdate(false);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
-            intent.setAction(ACTION_UPDATE_CLEANUP_DONE);
-            mBroadcastManager.sendBroadcast(intent);
-            notifyUpdateChange(UpdateStatus.UNKNOWN);
-        }).start();
     }
 
     public Update getCurrentUpdate() {
