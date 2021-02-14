@@ -24,7 +24,6 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.BatteryManager;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -49,7 +48,6 @@ import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 import org.pixelexperience.ota.model.UpdateStatus;
 
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 
@@ -414,16 +412,11 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
         UpdateInfo update = mUpdaterController.getCurrentUpdate();
         int resId;
         String extraMessage = "";
-        try {
-            if (Utils.isABUpdate(update.getFile())) {
-                resId = R.string.apply_update_dialog_message_ab;
-            } else {
-                resId = R.string.apply_update_dialog_message;
-                extraMessage = " (" + Constants.DOWNLOAD_PATH + ")";
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Could not determine the type of the update");
-            return null;
+        if (Utils.isABDevice()) {
+            resId = R.string.apply_update_dialog_message_ab;
+        } else {
+            resId = R.string.apply_update_dialog_message;
+            extraMessage = " (" + Constants.DOWNLOAD_PATH + ")";
         }
 
         return new AlertDialog.Builder(mContext, R.style.AppTheme_AlertDialogStyle)
