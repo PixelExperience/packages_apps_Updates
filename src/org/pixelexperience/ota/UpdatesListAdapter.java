@@ -24,7 +24,6 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.BatteryManager;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -49,7 +48,6 @@ import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 import org.pixelexperience.ota.model.UpdateStatus;
 
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 
@@ -291,9 +289,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 button.setText(R.string.action_resume);
                 button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_resume, 0, 0, 0);
                 button.setEnabled(enabled);
-                UpdateInfo update = mUpdaterController.getCurrentUpdate();
-                final boolean canInstall = Utils.canInstall(update) ||
-                        update.getFile().length() == update.getFileSize();
+                final boolean canInstall = Utils.canInstall(mUpdate) ||
+                        mUpdate.getFile().length() == mUpdate.getFileSize();
                 clickListener = enabled ? view -> {
                     if (canInstall) {
                         mUpdaterController.resumeDownload();
@@ -307,8 +304,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 button.setText(R.string.action_install);
                 button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_updateui_install, 0, 0, 0);
                 button.setEnabled(enabled);
-                UpdateInfo update = mUpdaterController.getCurrentUpdate();
-                final boolean canInstall = Utils.canInstall(update);
+                final boolean canInstall = Utils.canInstall(mUpdate);
                 clickListener = enabled ? view -> {
                     if (canInstall) {
                         getInstallDialog().show();
@@ -411,24 +407,18 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                     .setMessage(message)
                     .setPositiveButton(android.R.string.ok, null);
         }
-        UpdateInfo update = mUpdaterController.getCurrentUpdate();
         int resId;
         String extraMessage = "";
-        try {
-            if (Utils.isABUpdate(update.getFile())) {
-                resId = R.string.apply_update_dialog_message_ab;
-            } else {
-                resId = R.string.apply_update_dialog_message;
-                extraMessage = " (" + Constants.DOWNLOAD_PATH + ")";
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Could not determine the type of the update");
-            return null;
+        if (Utils.isABDevice()) {
+            resId = R.string.apply_update_dialog_message_ab;
+        } else {
+            resId = R.string.apply_update_dialog_message;
+            extraMessage = " (" + Constants.DOWNLOAD_PATH + ")";
         }
 
         return new AlertDialog.Builder(mContext, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.apply_update_dialog_title)
-                .setMessage(mContext.getString(resId, update.getName(),
+                .setMessage(mContext.getString(resId, mUpdate.getName(),
                         mContext.getString(android.R.string.ok)) + extraMessage)
                 .setPositiveButton(android.R.string.ok,
                         (dialog, which) -> Utils.triggerUpdate(mContext))
