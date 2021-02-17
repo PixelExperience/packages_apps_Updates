@@ -265,12 +265,6 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_show_changelog: {
-                startActivity(new Intent(this, LocalChangelogActivity.class));
-                return true;
-            }
-        }
         return super.onOptionsItemSelected(item);
     }
 

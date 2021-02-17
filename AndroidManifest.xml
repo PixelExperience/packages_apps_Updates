@@ -43,12 +43,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LocalChangelogActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/menu_show_changelog"
-            android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".controller.UpdaterService" />
         <service android:name=".ExportUpdateService" />
