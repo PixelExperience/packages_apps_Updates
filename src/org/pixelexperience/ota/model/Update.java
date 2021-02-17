@@ -36,11 +36,6 @@ public class Update extends UpdateBase implements UpdateInfo {
         super(update);
         mStatus = update.getStatus();
         mFile = update.getFile();
-        mProgress = update.getProgress();
-        mEta = update.getEta();
-        mSpeed = update.getSpeed();
-        mInstallProgress = update.getInstallProgress();
-        mIsFinalizing = update.getFinalizing();
         mHash = update.getHash();
     }
 
@@ -60,51 +55,6 @@ public class Update extends UpdateBase implements UpdateInfo {
 
     public void setFile(File file) {
         mFile = file;
-    }
-
-    @Override
-    public int getProgress() {
-        return mProgress;
-    }
-
-    public void setProgress(int progress) {
-        mProgress = progress;
-    }
-
-    @Override
-    public long getEta() {
-        return mEta;
-    }
-
-    public void setEta(long eta) {
-        mEta = eta;
-    }
-
-    @Override
-    public long getSpeed() {
-        return mSpeed;
-    }
-
-    public void setSpeed(long speed) {
-        mSpeed = speed;
-    }
-
-    @Override
-    public int getInstallProgress() {
-        return mInstallProgress;
-    }
-
-    public void setInstallProgress(int progress) {
-        mInstallProgress = progress;
-    }
-
-    @Override
-    public boolean getFinalizing() {
-        return mIsFinalizing;
-    }
-
-    public void setFinalizing(boolean finalizing) {
-        mIsFinalizing = finalizing;
     }
 
     @Override

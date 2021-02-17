@@ -290,7 +290,7 @@ public class Utils {
         return sm.isEncrypted(file);
     }
 
-    public static long getUpdateCheckInterval(Context context) {
+    public static long getUpdateCheckInterval() {
         return AlarmManager.INTERVAL_DAY;
     }
 

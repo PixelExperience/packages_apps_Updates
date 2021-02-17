@@ -81,8 +81,7 @@ class UpdateInstaller {
             android.os.RecoverySystem.installPackage(mContext, update);
         } catch (IOException e) {
             Log.e(TAG, "Could not install update", e);
-            mUpdaterController.getCurrentUpdate()
-                    .setStatus(UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
             mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
         }
     }
@@ -99,8 +98,7 @@ class UpdateInstaller {
                 public void update(int progress) {
                     long now = SystemClock.elapsedRealtime();
                     if (mLastUpdate < 0 || now - mLastUpdate > 500) {
-                        mUpdaterController.getCurrentUpdate()
-                                .setInstallProgress(progress);
+                        mUpdaterController.getInstallInfo().setProgress(progress);
                         mUpdaterController.notifyInstallProgress();
                         mLastUpdate = now;
                     }
@@ -116,10 +114,8 @@ class UpdateInstaller {
                     mCanCancel = false;
                     if (mPrepareUpdateThread.isInterrupted()) {
                         status = UpdateStatus.INSTALLATION_FAILED;
-                        mUpdaterController.getCurrentUpdate()
-                                .setStatus(UpdateStatus.INSTALLATION_FAILED);
-                        mUpdaterController.getCurrentUpdate()
-                                .setInstallProgress(0);
+                        mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
+                        mUpdaterController.getInstallInfo().setProgress(0);
                         uncryptFile.delete();
                     } else {
                         installPackage(uncryptFile);
@@ -128,8 +124,7 @@ class UpdateInstaller {
                     Log.e(TAG, "Could not copy update", e);
                     uncryptFile.delete();
                     status = UpdateStatus.INSTALLATION_FAILED;
-                    mUpdaterController.getCurrentUpdate()
-                            .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                    mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
                 } finally {
                     synchronized (UpdateInstaller.this) {
                         mCanCancel = false;
@@ -146,8 +141,7 @@ class UpdateInstaller {
         sInstallingUpdate = update.getDownloadId();
         mCanCancel = false;
 
-        mUpdaterController.getCurrentUpdate()
-                .setStatus(UpdateStatus.INSTALLING);
+        mUpdaterController.setStatus(UpdateStatus.INSTALLING);
         mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
     }
 
