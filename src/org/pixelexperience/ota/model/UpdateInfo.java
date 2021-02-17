@@ -24,14 +24,4 @@ public interface UpdateInfo extends UpdateBaseInfo {
     File getFile();
 
     long getFileSize();
-
-    int getProgress();
-
-    long getEta();
-
-    long getSpeed();
-
-    int getInstallProgress();
-
-    boolean getFinalizing();
 }
