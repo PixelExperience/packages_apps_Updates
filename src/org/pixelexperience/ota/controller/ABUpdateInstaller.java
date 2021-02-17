@@ -95,20 +95,20 @@ public class ABUpdateInstaller {
                 case UpdateEngine.UpdateStatusConstants.DOWNLOADING:
                 case UpdateEngine.UpdateStatusConstants.FINALIZING: {
                     if (update.getStatus() != UpdateStatus.INSTALLING) {
-                        update.setStatus(UpdateStatus.INSTALLING);
+                        mUpdaterController.setStatus(UpdateStatus.INSTALLING);
                         mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
                     }
                     int progress = Math.round(percent * 100);
-                    mUpdaterController.getCurrentUpdate().setInstallProgress(progress);
+                    mUpdaterController.getInstallInfo().setProgress(progress);
                     boolean finalizing = status == UpdateEngine.UpdateStatusConstants.FINALIZING;
-                    mUpdaterController.getCurrentUpdate().setFinalizing(finalizing);
+                    mUpdaterController.getInstallInfo().setFinalizing(finalizing);
                     mUpdaterController.notifyInstallProgress();
                 }
                 break;
 
                 case UpdateEngine.UpdateStatusConstants.UPDATED_NEED_REBOOT: {
                     installationDone(true);
-                    update.setInstallProgress(0);
+                    mUpdaterController.getInstallInfo().setProgress(0);
                     mUpdaterController.removeUpdate(false);
                 }
                 break;
@@ -127,9 +127,8 @@ public class ABUpdateInstaller {
             if (errorCode != UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
                 installationDone(false);
-                Update update = mUpdaterController.getCurrentUpdate();
-                update.setInstallProgress(0);
-                update.setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.getInstallInfo().setProgress(0);
+                mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
                 mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             }
         }
@@ -175,8 +174,7 @@ public class ABUpdateInstaller {
         File file = mUpdaterController.getCurrentUpdate().getFile();
         if (!file.exists()) {
             Log.e(TAG, "The given update doesn't exist");
-            mUpdaterController.getCurrentUpdate()
-                    .setStatus(UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
             mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             return;
         }
@@ -200,8 +198,7 @@ public class ABUpdateInstaller {
             zipFile.close();
         } catch (IOException | IllegalArgumentException e) {
             Log.e(TAG, "Could not prepare " + file, e);
-            mUpdaterController.getCurrentUpdate()
-                    .setStatus(UpdateStatus.INSTALLATION_FAILED);
+            mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
             mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             return;
         }
@@ -215,14 +212,13 @@ public class ABUpdateInstaller {
             }
             if (!mBound) {
                 Log.e(TAG, "Could not bind");
-                mUpdaterController.getCurrentUpdate()
-                        .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
                 mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
                 return;
             }
         }
 
-        mUpdaterController.getCurrentUpdate().setStatus(UpdateStatus.INSTALLING);
+        mUpdaterController.setStatus(UpdateStatus.INSTALLING);
         mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
 
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
@@ -242,8 +238,7 @@ public class ABUpdateInstaller {
             } catch (Exception e) {
                 Log.e(TAG, "Failed to apply payload", e);
                 installationDone(false);
-                mUpdaterController.getCurrentUpdate()
-                        .setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
                 mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             }
         }).start();

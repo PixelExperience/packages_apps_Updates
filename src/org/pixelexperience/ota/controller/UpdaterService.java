@@ -96,11 +96,9 @@ public class UpdaterService extends Service {
                     UpdateStatus status = (UpdateStatus) intent.getSerializableExtra(UpdaterController.EXTRA_STATUS);
                     handleUpdateStatusChange(status);
                 } else if (UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction())) {
-                    UpdateInfo update = mUpdaterController.getCurrentUpdate();
-                    handleDownloadProgressChange(update);
+                    handleDownloadProgressChange();
                 } else if (UpdaterController.ACTION_INSTALL_PROGRESS.equals(intent.getAction())) {
-                    UpdateInfo update = mUpdaterController.getCurrentUpdate();
-                    handleInstallProgress(update);
+                    handleInstallProgress();
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
                     mNotificationBuilder.setExtras(null);
                     mNotificationManager.cancel(NOTIFICATION_ID);
@@ -206,6 +204,7 @@ public class UpdaterService extends Service {
             return;
         }
         Update update = mUpdaterController.getCurrentUpdate();
+        UpdaterController.DownloadInfo downloadInfo = mUpdaterController.getDownloadInfo();
         switch (status) {
             case DELETED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
@@ -244,7 +243,7 @@ public class UpdaterService extends Service {
             }
             case PAUSED: {
                 stopForeground(STOP_FOREGROUND_DETACH);
-                int progress = update != null ? update.getProgress() : 0;
+                int progress = update != null ? downloadInfo.getProgress() : 0;
                 // In case we pause before the first progress update
                 mNotificationBuilder.setProgress(100, progress, progress == 0);
                 mNotificationBuilder.mActions.clear();
@@ -353,23 +352,25 @@ public class UpdaterService extends Service {
         }
     }
 
-    private void handleDownloadProgressChange(UpdateInfo update) {
-        int progress = update.getProgress();
+    private void handleDownloadProgressChange() {
+        UpdaterController.DownloadInfo downloadInfo = mUpdaterController.getDownloadInfo();
+        int progress = downloadInfo.getProgress();
         mNotificationBuilder.setProgress(100, progress, progress == 0);
         String percentage = NumberFormat.getPercentInstance().format(
                 progress / 100.f);
-        setNotificationTitle(getString(R.string.downloading_notification) );
+        setNotificationTitle(getString(R.string.downloading_notification));
         mNotificationStyle.setSummaryText(percentage);
         mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
     }
 
-    private void handleInstallProgress(UpdateInfo update) {
-        int progress = update.getInstallProgress();
+    private void handleInstallProgress() {
+        UpdaterController.InstallInfo installInfo = mUpdaterController.getInstallInfo();
+        int progress = installInfo.getProgress();
         mNotificationBuilder.setProgress(100, progress, progress == 0);
         String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
         boolean notAB = UpdateInstaller.isInstalling();
         setNotificationTitle(notAB ? getString(R.string.dialog_prepare_zip_message) :
-                update.getFinalizing() ?
+                installInfo.isFinalizing() ?
                         getString(R.string.finalizing_package) :
                         getString(R.string.installing_update));
         mNotificationStyle.setSummaryText(percent);

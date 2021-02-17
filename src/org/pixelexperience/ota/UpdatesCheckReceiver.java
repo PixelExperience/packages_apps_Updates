@@ -88,11 +88,11 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         PendingIntent updateCheckIntent = getRepeatingUpdatesCheckIntent(context);
         AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr.setRepeating(AlarmManager.RTC, System.currentTimeMillis() +
-                        Utils.getUpdateCheckInterval(context), Utils.getUpdateCheckInterval(context),
+                        Utils.getUpdateCheckInterval(), Utils.getUpdateCheckInterval(),
                 updateCheckIntent);
 
         Date nextCheckDate = new Date(System.currentTimeMillis() +
-                Utils.getUpdateCheckInterval(context));
+                Utils.getUpdateCheckInterval());
         Log.d(TAG, "Setting automatic updates check: " + nextCheckDate);
     }
 
