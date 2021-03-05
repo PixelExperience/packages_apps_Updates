@@ -188,7 +188,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         new AlertDialog.Builder(UpdatesActivity.this, R.style.AppTheme_AlertDialogStyle)
                 .setTitle(R.string.reboot_needed_dialog_title)
                 .setMessage(R.string.reboot_needed_dialog_summary)
-                .setPositiveButton(R.string.reboot, (dialog, which) -> Utils.rebootDeviceForInstallUpdate(UpdatesActivity.this))
+                .setPositiveButton(R.string.reboot, (dialog, which) -> Utils.rebootDevice(UpdatesActivity.this))
                 .setNegativeButton(android.R.string.cancel, null)
                 .setCancelable(false)
                 .setOnDismissListener(dialog -> finish()).show();

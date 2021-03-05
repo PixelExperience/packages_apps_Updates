@@ -179,10 +179,10 @@ public class Utils {
         context.startService(intent);
     }
 
-    public static void rebootDeviceForInstallUpdate(Context mContext) {
+    public static void rebootDevice(Context mContext) {
         PowerManager pm =
                 (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-        pm.reboot(PowerManager.REBOOT_RECOVERY_UPDATE);
+        pm.reboot(null);
     }
 
     public static boolean isNetworkAvailable(Context context) {

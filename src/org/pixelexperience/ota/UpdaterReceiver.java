@@ -34,7 +34,7 @@ public class UpdaterReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (ACTION_INSTALL_REBOOT.equals(intent.getAction())) {
-            Utils.rebootDeviceForInstallUpdate(context);
+            Utils.rebootDevice(context);
         } else if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
             pref.edit().remove(Constants.PREF_INSTALLING_AB_ID).apply();
