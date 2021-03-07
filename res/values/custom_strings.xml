@@ -49,7 +49,7 @@
     <string name="list_verifying_update">Verifying update</string>
     <string name="list_no_updates">No new update found.</string>
     <string name="blocked_update_dialog_title">Update blocked</string>
-    <string name="blocked_update_dialog_summary">This update requires a manual clean install procedure (Wiping/Formatting the Data partition before installing the update). Please download the build from our website, reboot to recovery mode and follow the procedures to do so.</string>
+    <string name="blocked_update_dialog_summary">This update requires a manual clean install procedure (Wiping/Formatting the Data partition before installing the update). Please download the update from our website, reboot to recovery mode and follow the procedures to do so.</string>
 
     <!-- Actions -->
     <string name="action_download">Download</string>
