@@ -27,8 +27,6 @@
     <string name="update_failed_notification">மேம்பாடு தோல்வியடைந்தது</string>
     <string name="menu_delete_update">நீக்கு</string>
     <string name="menu_export_update">மேம்படுத்தல் ஏற்றுமதி</string>
-    <string name="changelog_loading">ஏற்றுகிறது...</string>
-    <string name="menu_download_full_package">தொகுப்பை முழுமையாக பதிவிறக்கம் செய்யவும்</string>
     <string name="snack_no_updates_found">புதிய புதுப்பித்தல்கள் எதுவும் கண்டுபிடிக்கப்படவில்லை.</string>
     <string name="snack_updates_check_failed">புதுப்பித்தல் சரிபார்ப்பு தோல்வியுற்றது. தயவுசெய்து உங்கள் இணைய இணைப்பை சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="snack_download_failed">பதிவிறக்கம் தோல்வியடைந்தது. உங்கள் இணைய இணைப்பைச் சரிபார்த்து பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
@@ -56,5 +54,4 @@
     <string name="forum_info_title">மன்றம்</string>
     <string name="forum_info_summary">சமீபத்திய மன்ற பதிவுகள்</string>
     <string name="error_open_url">உலாவியில் URL ஐ திறக்க முடியவில்லை</string>
-    <string name="setting_security_patch_level_title">பாதுகாப்புப் புதுப்பிப்பு</string>
 </resources>

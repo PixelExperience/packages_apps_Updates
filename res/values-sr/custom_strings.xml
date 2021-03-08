@@ -31,10 +31,6 @@
     <string name="check_for_update">Провери да ли постоје ажурирања</string>
     <string name="menu_delete_update">Обриши</string>
     <string name="menu_export_update">Извези ажурирања</string>
-    <string name="menu_show_changelog">Промене у тренутној верзији</string>
-    <string name="changelog_loading">Учитавање…</string>
-    <string name="menu_download_full_package">Преузми цео пакет</string>
-    <string name="menu_download_incremental_package">Преузми инкрементални пакет</string>
     <string name="update_found_notification">Ажурирање система је доступно.</string>
     <string name="snack_no_updates_found">Нису пронађена нова ажурирања</string>
     <string name="snack_updates_check_failed">Провера за ажурирања није успела. Провери своју интернет везу и покушај поново касније.</string>
@@ -54,7 +50,7 @@
     <string name="action_delete">Обриши</string>
     <string name="confirm_delete_dialog_title">Избриши датотеку</string>
     <string name="confirm_delete_dialog_message">Избрисати изабрану датотеку за ажурирање?</string>
-    <string name="pause_button">Пауза</string>
+    <string name="pause_button">Паузирај</string>
     <string name="resume_button">Настави</string>
     <string name="reboot">Покрени поново</string>
     <string name="reboot_needed_dialog_title">Потребно је поновно покретање</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Инсталирање ажурирања</string>
     <string name="installing_update_error">Грешка у инсталацији</string>
     <string name="installing_update_finished">Инсталиране исправке</string>
-    <string name="installing_update_ab_disable_incremental_summary">Инкрементално ажурирање није успело јер је ваша системска партиција модификована инсталацијом неког додатка или неког другог кернела. Да ли желите да преузмете цео пакет и покушате поново?</string>
     <string name="finalizing_package">Довршавање инсталације пакета</string>
     <string name="dialog_prepare_zip_message">Припрема прелиминарних ажурирања</string>
     <string name="dialog_battery_low_title">Слаба батерија</string>
@@ -103,5 +98,4 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Погледајте објаве на форуму</string>
     <string name="error_open_url">Неуспело учитавање линка у претраживачу</string>
-    <string name="setting_security_patch_level_title">Безбедносно ажурирање</string>
 </resources>

@@ -31,10 +31,6 @@
     <string name="check_for_update">Comprobar se hai actualizacións</string>
     <string name="menu_delete_update">Eliminar</string>
     <string name="menu_export_update">Exportar actualización</string>
-    <string name="menu_show_changelog">Cambios na version Actual</string>
-    <string name="changelog_loading">A cargar…</string>
-    <string name="menu_download_full_package">Descarga o paquete completo</string>
-    <string name="menu_download_incremental_package">Descargar paquete incremental</string>
     <string name="update_found_notification">Actualización do sistema dispoñíbel</string>
     <string name="snack_no_updates_found">Non se atoparon novas actualizacións</string>
     <string name="snack_updates_check_failed">A verificación da descarga fallou. Comproba a túa conexión a internet e téntao de novo.</string>
@@ -51,7 +47,7 @@
     <string name="action_pause">Pausar</string>
     <string name="action_resume">Continuar</string>
     <string name="action_install">Instalar</string>
-    <string name="action_delete">Borrar</string>
+    <string name="action_delete">Eliminar</string>
     <string name="confirm_delete_dialog_title">Eliminar ficheiro</string>
     <string name="confirm_delete_dialog_message">¿Eliminar o ficheiro de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Erro de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
-    <string name="installing_update_ab_disable_incremental_summary">Fallou a instalación incremental porque se modificou a partición do sistema instalando algún complemento ou núcleo personalizado.  ¿Queres descargar o paquete completo e tentalo de novo?</string>
     <string name="finalizing_package">Rematando a instalación do paquete</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar da actualización</string>
     <string name="dialog_battery_low_title">Batería baixa</string>
@@ -100,5 +95,4 @@
     <string name="forum_info_title">Foro</string>
     <string name="forum_info_summary">Ver publicaciones do foro</string>
     <string name="error_open_url">Falló ao abrir a URL no navegador</string>
-    <string name="setting_security_patch_level_title">Actualización de seguranza</string>
 </resources>

@@ -31,8 +31,6 @@
     <string name="check_for_update">بررسی بروزرسانی ها</string>
     <string name="menu_delete_update">حذف</string>
     <string name="menu_export_update">صادر کردن نسخه به‌روز</string>
-    <string name="menu_show_changelog">تغییرات نسبت به نسخه فعلی</string>
-    <string name="changelog_loading">در حال بارگذاری…</string>
     <string name="update_found_notification">به‌روزرسانی جدیدی موجود است</string>
     <string name="snack_no_updates_found">به‌روز رسانی جدیدی یافت نشد</string>
     <string name="snack_updates_check_failed">بررسی برای به‌روزرسانی ناموفق بود. لطفاً اتصال اینترنت خود را بررسی و دوباره سعی کنید.</string>
@@ -42,7 +40,7 @@
     <string name="snack_update_not_installable">نمی‌توان این به‌روز رسانی را روی نسخه فعلی نصب کرد.</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> از <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g>.<xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> از <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>). <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
-    <string name="list_verifying_update">در حال اعتبارسنجی به‌روز رسانی</string>
+    <string name="list_verifying_update">تایید به‌روز رسانی</string>
     <string name="list_no_updates">بروزرسانی جدیدی یافت نشد.</string>
     <string name="blocked_update_dialog_title">به‌روز رسانی مسدود شده است</string>
     <string name="action_download">بارگیری</string>

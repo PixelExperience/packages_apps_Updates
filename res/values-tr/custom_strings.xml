@@ -31,10 +31,6 @@
     <string name="check_for_update">Güncellemeleri Denetle</string>
     <string name="menu_delete_update">Sil</string>
     <string name="menu_export_update">Güncellemeyi dışa aktar</string>
-    <string name="menu_show_changelog">Mevcut sürümdeki değişiklikler</string>
-    <string name="changelog_loading">Yükleniyor…</string>
-    <string name="menu_download_full_package">Tam paketi indir</string>
-    <string name="menu_download_incremental_package">Ek paketi indir</string>
     <string name="update_found_notification">Sistem güncellemesi mevcut</string>
     <string name="snack_no_updates_found">Yeni güncelleme bulunamadı</string>
     <string name="snack_updates_check_failed">Güncelleme kontrolü başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</string>
@@ -55,7 +51,7 @@
     <string name="confirm_delete_dialog_title">Dosyayı sil</string>
     <string name="confirm_delete_dialog_message">Seçilen güncelleme dosyası silinsin mi?</string>
     <string name="pause_button">Duraklat</string>
-    <string name="resume_button">Sürdür</string>
+    <string name="resume_button">Devam et</string>
     <string name="reboot">Yeniden başlat</string>
     <string name="reboot_needed_dialog_title">Yeniden başlatma gerekli</string>
     <string name="reboot_needed_dialog_summary">Güncellemenin kurulumunu tamamlamak için cihazınızın yeniden başlatılması gerekiyor. Şimdi yeniden başlatmak istiyor musunuz?</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Güncelleme paketi yükleniyor</string>
     <string name="installing_update_error">Yükleme hatası</string>
     <string name="installing_update_finished">Güncelleme yüklendi</string>
-    <string name="installing_update_ab_disable_incremental_summary">Eklenti veya özel çekirdek yüklenerek sistem bölümünüz değiştirildiği için ek yükleme başarısız oldu. Tam paketi indirip tekrar denemek ister misiniz?</string>
     <string name="finalizing_package">Paket kurulumu tamamlandı</string>
     <string name="dialog_prepare_zip_message">Güncelleme ön hazırlığı</string>
     <string name="dialog_battery_low_title">Düşük pil</string>
@@ -97,8 +92,6 @@
     <string name="website_info_summary">İnternet sitemizi ziyaret edin</string>
     <string name="news_info_title">Haberler</string>
     <string name="news_info_summary">Güncellemeler ve diğer haberler hakkında bilgi sahibi olun</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forum mesajlarını görüntüle</string>
     <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
-    <string name="setting_security_patch_level_title">Güvenlik güncellemesi</string>
 </resources>

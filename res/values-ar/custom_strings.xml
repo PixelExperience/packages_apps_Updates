@@ -31,8 +31,6 @@
     <string name="check_for_update">التحقق من وجود التحديث</string>
     <string name="menu_delete_update">حذف</string>
     <string name="menu_export_update">تصدير التحديث</string>
-    <string name="menu_show_changelog">التغييرات في الاصدار الحالي</string>
-    <string name="changelog_loading">تحميل…</string>
     <string name="update_found_notification">يتوفر تحديث للنظام</string>
     <string name="snack_no_updates_found">لا توجد تحديثات جديدة</string>
     <string name="snack_updates_check_failed">فشل التحقق من وجود تحديث. برجاء التحقق من اتصالك بالإنترنت وإعادة المحاولة لاحقًا.</string>
@@ -42,7 +40,7 @@
     <string name="snack_update_not_installable">لا يمكن تثبيت هذا التحديث على الاصدار الحالي.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> من <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">جارٍ التحقق من التحديث</string>
+    <string name="list_verifying_update">التحقق من التحديث</string>
     <string name="list_no_updates">لم يتم العثور على تحديثات جديدة.</string>
     <string name="blocked_update_dialog_title">التحديث محظور</string>
     <string name="action_download">تنزيل</string>
@@ -55,6 +53,8 @@
     <string name="pause_button">إيقاف مؤقت</string>
     <string name="resume_button">استئناف</string>
     <string name="reboot">إعادة التشغيل</string>
+    <string name="reboot_needed_dialog_title">إعادة التشغيل مطلوبة</string>
+    <string name="reboot_needed_dialog_summary">لإتمام تثبيت التحديث، يحتاج جهازك لأن يعاد تشغيله. هل تريد إعادة التشغيل الآن؟</string>
     <string name="details_button">عرض التفاصيل</string>
     <string name="apply_update_dialog_title">تطبيق التحديث</string>
     <string name="apply_update_dialog_message">أنت على وشك الترقية إلى <xliff:g id="update_name">%1$s</xliff:g>.\n\nإذا قمت بالضغط على <xliff:g id="ok">%2$s</xliff:g>، سيقوم الجهاز بإعادة تشغيل نفسه في وضع الاستعادة لتثبيت التحديث.\n\nملاحظة: هذه الميزة تتطلب مسترد متوافق أو سيلزم تثبيت التحديثات يدويًا.</string>

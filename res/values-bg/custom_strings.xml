@@ -31,8 +31,6 @@
     <string name="check_for_update">Проверка за актуализации</string>
     <string name="menu_delete_update">Изтриване</string>
     <string name="menu_export_update">Експортиране на актуализация</string>
-    <string name="menu_show_changelog">Изменения в текущата версия</string>
-    <string name="changelog_loading">Зареждане…</string>
     <string name="update_found_notification">Има нова актуализация</string>
     <string name="snack_no_updates_found">Няма нови актуализации</string>
     <string name="snack_updates_check_failed">Проверката за актуализации се провали. Моля проверете връзката с интернет и опитайте отново по-късно.</string>
@@ -42,7 +40,7 @@
     <string name="snack_update_not_installable">Тази актуализация не може да бъде инсталирана на текущата версия.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> от <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Проверка на актуализацията</string>
+    <string name="list_verifying_update">Проверено обновяване</string>
     <string name="list_no_updates">Няма нови актуализации.</string>
     <string name="blocked_update_dialog_title">Актуализацията е блокирана</string>
     <string name="action_download">Изтегли</string>
@@ -95,5 +93,4 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Преглед на публикации във форума</string>
     <string name="error_open_url">Неуспешно отваряне на URL в браузъра</string>
-    <string name="setting_security_patch_level_title">Актуализация за сигурност</string>
 </resources>

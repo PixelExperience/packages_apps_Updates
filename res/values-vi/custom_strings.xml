@@ -31,10 +31,6 @@
     <string name="check_for_update">Kiểm tra cập nhật</string>
     <string name="menu_delete_update">Xóa</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
-    <string name="menu_show_changelog">Thay đổi trong phiên bản hiện tại</string>
-    <string name="changelog_loading">Đang tải…</string>
-    <string name="menu_download_full_package">Tải xuống gói đầy đủ</string>
-    <string name="menu_download_incremental_package">Tải xuống gói gia tăng</string>
     <string name="update_found_notification">Bản cập nhật hệ thống đã có</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="snack_updates_check_failed">Kiểm tra bản cập nhật không thành công. Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Đang cài đặt gói cập nhật</string>
     <string name="installing_update_error">Lỗi cài đặt</string>
     <string name="installing_update_finished">Đã cài đặt bản cập nhật</string>
-    <string name="installing_update_ab_disable_incremental_summary">Cài đặt tăng dần không thành công vì phân vùng hệ thống của bạn đã bị sửa đổi bằng cách cài đặt một số tiện ích bổ sung hoặc nhân tùy chỉnh. Bạn có muốn tải xuống gói đầy đủ và thử lại không?</string>
     <string name="finalizing_package">Đang hoàn tất gói cài đặt</string>
     <string name="dialog_prepare_zip_message">Chuẩn bị cập nhật sơ bộ</string>
     <string name="dialog_battery_low_title">Pin yếu</string>
@@ -97,5 +92,4 @@
     <string name="forum_info_title">Diễn đàn</string>
     <string name="forum_info_summary">Xem các bài đăng diễn đàn</string>
     <string name="error_open_url">Không thể mở URL trong trình duyệt</string>
-    <string name="setting_security_patch_level_title">Bản cập nhật bảo mật</string>
 </resources>

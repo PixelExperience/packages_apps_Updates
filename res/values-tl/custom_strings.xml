@@ -26,7 +26,6 @@
     <string name="download_paused_notification">Naka-pause ang pag-download</string>
     <string name="download_starting_notification">Nagsimula ng mag download</string>
     <string name="update_failed_notification">Nabigo ang pag-update</string>
-    <string name="menu_show_changelog">Pagbabago sa kasalukuyang bersyon</string>
     <string name="snack_download_failed">Nabigo sa pag download. Pakiusap na tignan ang iyong internet koneksyon at subukan muli mamaya.</string>
     <string name="snack_download_verification_failed">Ang update verification ay nabigo.</string>
     <string name="snack_update_not_installable">Itong update ay hindi maaring ma install sa kasalukuyang build.</string>

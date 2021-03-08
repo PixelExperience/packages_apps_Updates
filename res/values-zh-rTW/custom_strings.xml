@@ -31,10 +31,6 @@
     <string name="check_for_update">檢查更新</string>
     <string name="menu_delete_update">刪除</string>
     <string name="menu_export_update">匯出更新</string>
-    <string name="menu_show_changelog">目前版本變更</string>
-    <string name="changelog_loading">載入中...</string>
-    <string name="menu_download_full_package">下載完整軟體包</string>
-    <string name="menu_download_incremental_package">下載增量軟體包</string>
     <string name="update_found_notification">系統有更新套件可用！</string>
     <string name="snack_no_updates_found">沒有找到新的更新</string>
     <string name="snack_updates_check_failed">更新檢查失敗。請檢查您的網路連線並稍後重試。</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">正在安裝更新套件</string>
     <string name="installing_update_error">安裝錯誤</string>
     <string name="installing_update_finished">更新已安裝</string>
-    <string name="installing_update_ab_disable_incremental_summary">增量安裝失敗，因為您的系統分割區是透過安裝某些附加元件或自訂核心來修改的。您想要下載完整軟體包並再試一次嗎？</string>
     <string name="finalizing_package">正在完成套件安裝</string>
     <string name="dialog_prepare_zip_message">正在準備更新</string>
     <string name="dialog_battery_low_title">電量不足</string>
@@ -97,5 +92,4 @@
     <string name="forum_info_title">論壇</string>
     <string name="forum_info_summary">檢視討論區文章</string>
     <string name="error_open_url">在瀏覽器中打開 URL 失敗</string>
-    <string name="setting_security_patch_level_title">安全性更新</string>
 </resources>

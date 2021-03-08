@@ -31,10 +31,6 @@
     <string name="check_for_update">Verificar si existe nueva actualización</string>
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_export_update">Exportar actualización</string>
-    <string name="menu_show_changelog">Cambios en la última versión</string>
-    <string name="changelog_loading">Cargando…</string>
-    <string name="menu_download_full_package">Descargar paquete completo</string>
-    <string name="menu_download_incremental_package">Descargar paquete incremental</string>
     <string name="update_found_notification">Actualización disponible</string>
     <string name="snack_no_updates_found">No se encontraron nuevas actualizaciones</string>
     <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor verifique la conexión a internet e intente nuevamente.</string>
@@ -47,11 +43,12 @@
     <string name="list_verifying_update">Verificando actualización</string>
     <string name="list_no_updates">No se encontraron nuevas actualizaciones.</string>
     <string name="blocked_update_dialog_title">Actualización bloqueada</string>
+    <string name="blocked_update_dialog_summary">Esta actualización requiere una instalación limpia manual (Borrar/Formatear la partición de datos antes de instalar la actualización). Descargue la versión desde nuestro sitio web, reinicie en modo de recuperación y siga los procedimientos para hacerlo.</string>
     <string name="action_download">Descargar</string>
     <string name="action_pause">Pausar</string>
     <string name="action_resume">Reanudar</string>
     <string name="action_install">Instalar</string>
-    <string name="action_delete">Eliminar</string>
+    <string name="action_delete">Borrar</string>
     <string name="confirm_delete_dialog_title">Borrar archivo</string>
     <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
@@ -66,7 +63,6 @@
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Error de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
-    <string name="installing_update_ab_disable_incremental_summary">La instalación incremental ha fallado debido a que la partición de su sistema ha sido modificada instalando algún add-on o kernel personalizado. Quiere descargar el paquete completo e intentar nuevamente? </string>
     <string name="finalizing_package">Finalizando instalación del paquete</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar de la actualización</string>
     <string name="dialog_battery_low_title">Batería baja</string>
@@ -100,5 +96,4 @@
     <string name="forum_info_title">Foro</string>
     <string name="forum_info_summary">Ver publicaciones del foro</string>
     <string name="error_open_url">Falló al abrir la URL en el navegador</string>
-    <string name="setting_security_patch_level_title">Actualización de seguridad</string>
 </resources>

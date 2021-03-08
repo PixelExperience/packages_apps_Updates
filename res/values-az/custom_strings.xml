@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Sistem yeniləməsi</string>
     <string name="export_channel_title">İxrac etmə tamamlandı</string>
     <string name="new_updates_channel_title">Yeni yeniləmələr</string>
     <string name="ongoing_channel_title">Davam edən endirmələr</string>
@@ -27,10 +28,10 @@
     <string name="download_completed_notification">Endirmə başa çatdı</string>
     <string name="download_starting_notification">Endirmə başladılır</string>
     <string name="update_failed_notification">Yeniləmə uğursuz oldu</string>
+    <string name="check_for_update">Yeniləmələri yoxla</string>
     <string name="menu_delete_update">Sil</string>
     <string name="menu_export_update">Yeniləməni ixrac et</string>
-    <string name="menu_show_changelog">Hazırki versiyadakı dəyişikliklər</string>
-    <string name="changelog_loading">Yüklənir…</string>
+    <string name="update_found_notification">Sistem yeniləməsi mövcuddur</string>
     <string name="snack_no_updates_found">Yeni yeniləmə tapılmadı</string>
     <string name="snack_updates_check_failed">Yeniləmə yoxlanışı uğursuz oldu. Lütfən internet bağlantınızı yoxlayın və təkrar cəhd edin.</string>
     <string name="snack_download_failed">Endirmə uğursuz oldu. Lütfən internet bağlantınızı yoxlayın və təkrar cəhd edin.</string>
@@ -40,6 +41,7 @@
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Yeniləmə təsdiqlənir</string>
+    <string name="list_no_updates">Yeniləmə tapılmadı.</string>
     <string name="blocked_update_dialog_title">Yeniləmə blok edilib</string>
     <string name="action_download">Endir</string>
     <string name="action_pause">Saxla</string>
@@ -51,6 +53,8 @@
     <string name="pause_button">Saxla</string>
     <string name="resume_button">Davam et</string>
     <string name="reboot">Yenidən başlat</string>
+    <string name="reboot_needed_dialog_title">Yenidən başlatmaq lazımdır</string>
+    <string name="reboot_needed_dialog_summary">Yeniləmənin quraşdırılmasını tamamlamaq üçün cihazınız yenidən başladılmalıdır. İndi yenidən başladılsın?</string>
     <string name="details_button">Detallara bax</string>
     <string name="apply_update_dialog_title">Yeniləməni tətbiq et</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> versiyaysına yeniləmək üzrəsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> düyməsinə basdığınız zaman, yeniləməni yükləmək üçün telefonunuz bərpa rejimində yenidən başladılacaq.\n\nQeyd: Bu xüsusiyyət üçün uyğun bir Bərpa bölməsi tələb olunur ya da yeniləmə əli ilə yüklənməlidir.</string>
@@ -62,6 +66,9 @@
     <string name="dialog_prepare_zip_message">Yeniləmə ilkin hazırlığı</string>
     <string name="dialog_battery_low_title">Batareya zəifdir</string>
     <string name="dialog_battery_low_message_pct">Batareya səviyyəsi çox aşağıdır, davam etmək üçün ən az <xliff:g id="percent_discharging">%1$d</xliff:g>%% enerji tələb olunur. gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
+    <string name="dialog_export_title">Yeniləmə daxili anbara ixrac edilir</string>
+    <string name="notification_export_success">Yeniləmə daxili anbara ixrac edildi</string>
+    <string name="notification_export_fail">Yeniləməni daxili anbara ixrac etmə uğursuz oldu</string>
     <string name="toast_already_exporting">Artıq başqa bir yeniləmə ixrac edilir</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 saniyə qalıb</item>
@@ -87,5 +94,4 @@
     <string name="news_info_summary">Yeniləmələr və digər xəbərlər haqqında məlumat alın</string>
     <string name="forum_info_summary">Forum mesajlarına bax</string>
     <string name="error_open_url">URL-ni veb səyyahda açmaq olmadı</string>
-    <string name="setting_security_patch_level_title">Təhlükəsizlik yeniləməsi</string>
 </resources>

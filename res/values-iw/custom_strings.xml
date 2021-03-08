@@ -31,8 +31,6 @@
     <string name="check_for_update">בדוק עדכונים</string>
     <string name="menu_delete_update">מחק</string>
     <string name="menu_export_update">יצא עדכון</string>
-    <string name="menu_show_changelog">שינויים בגרסה הנוכחית</string>
-    <string name="changelog_loading">טוען...</string>
     <string name="update_found_notification">עדכון מערכת זמין</string>
     <string name="snack_no_updates_found">לא נמצאו עדכונים חדשים</string>
     <string name="snack_updates_check_failed">בדיקת העדכונים נכשלה. בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
@@ -49,7 +47,7 @@
     <string name="action_pause">השהה</string>
     <string name="action_resume">המשך</string>
     <string name="action_install">התקן</string>
-    <string name="action_delete">מחיקה</string>
+    <string name="action_delete">מחק</string>
     <string name="confirm_delete_dialog_title">מחק קובץ</string>
     <string name="confirm_delete_dialog_message">אתה עומד למחוק את הקובץ העדכון שנבחר, לחץ על \"כן\" להמשך.</string>
     <string name="pause_button">השהה</string>
@@ -101,5 +99,4 @@
     <string name="forum_info_title">פורום</string>
     <string name="forum_info_summary">ראה הודעות בפורום</string>
     <string name="error_open_url">פתיחת URL בדפדפן נכשלה</string>
-    <string name="setting_security_patch_level_title">עדכון אבטחה</string>
 </resources>

@@ -31,10 +31,6 @@
     <string name="check_for_update">ตรวจสอบการอัพเดต</string>
     <string name="menu_delete_update">ลบ</string>
     <string name="menu_export_update">ส่งออกการอัปเดต</string>
-    <string name="menu_show_changelog">การเปลี่ยนแปลงในเวอร์ชั่นปัจจุบัน</string>
-    <string name="changelog_loading">กำลังโหลด…</string>
-    <string name="menu_download_full_package">ดาวน์โหลดแพคเกจทั้งหมด</string>
-    <string name="menu_download_incremental_package">ดาวน์โหลดแพคเกจส่วนต่อขยาย</string>
     <string name="update_found_notification">มีการอัปเดตใหม่ในขณะนี้</string>
     <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
     <string name="snack_updates_check_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
@@ -44,7 +40,7 @@
     <string name="snack_update_not_installable">การปรับปรุงนี้ไม่สามารถติดตั้งบนโครงสร้างปัจจุบัน</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
-    <string name="list_verifying_update">ตรวจสอบการปรับปรุง</string>
+    <string name="list_verifying_update">กำลังตรวจสอบการอัปเดต</string>
     <string name="list_no_updates">ไม่พบการอัพเดตใหม่.</string>
     <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
     <string name="action_download">ดาวน์โหลด</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">ติดตั้งแพคเกจการอัพเดต</string>
     <string name="installing_update_error">มีข้อผิดพลาดในการติดตั้ง</string>
     <string name="installing_update_finished">อัปเดตแล้ว</string>
-    <string name="installing_update_ab_disable_incremental_summary">การติดตั้งส่วนต่อขยายล้มเหลวเพราะพาร์ทิชั่นระบบของคุณถูกดัดแปลง หรือติดตั้งเคอร์เนลเฉพาะ คุณต้องการที่จะดาวน์โหลดแพคเกจเต็มแล้วลองใหม่ไหม?</string>
     <string name="finalizing_package">ติดตั้งแพ็กเกจเสร็จสิ้น</string>
     <string name="dialog_prepare_zip_message">เตรียมการปรับปรุงเบื้องต้น</string>
     <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
