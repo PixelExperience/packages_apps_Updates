@@ -31,10 +31,6 @@
     <string name="check_for_update">Potraži ažuriranja</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
-    <string name="menu_show_changelog">Promjene u trenutnoj verziji</string>
-    <string name="changelog_loading">Učitavanje…</string>
-    <string name="menu_download_full_package">Preuzmi cijeli paket</string>
-    <string name="menu_download_incremental_package">Preuzmi inkrementalni paket</string>
     <string name="update_found_notification">Dostupno je ažuriranje sustava</string>
     <string name="snack_no_updates_found">Nema pronađenih novih ažuriranja</string>
     <string name="snack_updates_check_failed">Traženje ažuriranja nije uspjelo. Provjerite mrežnu vezu i pokušajte ponovno kasnije.</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Instaliranje paketa ažuriranja</string>
     <string name="installing_update_error">Pogreška instalacije</string>
     <string name="installing_update_finished">Ažuriranje instalirano</string>
-    <string name="installing_update_ab_disable_incremental_summary">Inkrementalna instalacija nije uspjela jer je particija vašeg sustava izmijenjena instaliranjem nekog dodatka ili prilagođenog kernela. Želite li preuzeti cijeli paket i pokušati ponovo?</string>
     <string name="finalizing_package">Finaliziranje paketa instaliranja</string>
     <string name="dialog_prepare_zip_message">Preliminarna priprema ažuriranja</string>
     <string name="dialog_battery_low_title">Slaba baterija</string>
@@ -100,8 +95,6 @@
     <string name="website_info_summary">Posjeti našu web stranicu</string>
     <string name="news_info_title">Vijesti</string>
     <string name="news_info_summary">Ostani u toku s ažuriranjima i ostalim vijestima</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vidi objave na forumu</string>
     <string name="error_open_url">Neuspješno otvaranje poveznice u pregledniku</string>
-    <string name="setting_security_patch_level_title">Sigurnosno ažuriranje</string>
 </resources>

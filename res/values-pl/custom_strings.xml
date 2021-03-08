@@ -31,10 +31,6 @@
     <string name="check_for_update">Sprawdź czy są dostępne nowe aktualizacje</string>
     <string name="menu_delete_update">Usuń</string>
     <string name="menu_export_update">Wyślij aktualizację</string>
-    <string name="menu_show_changelog">Zmiany w obecnej wersji</string>
-    <string name="changelog_loading">Ładowanie…</string>
-    <string name="menu_download_full_package">Pobierz pełny pakiet</string>
-    <string name="menu_download_incremental_package">Pobierz pakiet przyrostowy</string>
     <string name="update_found_notification">Aktualizacja systemu jest dostępna</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
     <string name="snack_updates_check_failed">Sprawdzanie aktualizacji nie powiodło się. Sprawdź swoje połączenie z Internetem i spróbuj ponownie.</string>
@@ -44,7 +40,7 @@
     <string name="snack_update_not_installable">Ta aktualizacja nie może zostać zainstalowana na bieżącej wersji systemu.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Sprawdzanie aktualizacji</string>
+    <string name="list_verifying_update">Weryfikacja aktualizacji</string>
     <string name="list_no_updates">Nie znaleziono nowych aktualizacji.</string>
     <string name="blocked_update_dialog_title">Aktualizacja zablokowana</string>
     <string name="action_download">Pobierz</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Instalowanie pakietu aktualizacji</string>
     <string name="installing_update_error">Błąd instalacji</string>
     <string name="installing_update_finished">Zainstalowano aktualizację</string>
-    <string name="installing_update_ab_disable_incremental_summary">Instalacja przyrostowa nie powiodła się, ponieważ partycja systemowa została zmodyfikowana przez zainstalowanie dodatkowego lub niestandardowego jądra. Czy chcesz pobrać pełny pakiet i spróbować ponownie?</string>
     <string name="finalizing_package">Kończenie instalacji pakietu</string>
     <string name="dialog_prepare_zip_message">Przygotowanie wstępne aktualizacji</string>
     <string name="dialog_battery_low_title">Niskim poziom baterii</string>
@@ -103,8 +98,6 @@
     <string name="website_info_summary">Odwiedź naszą stronę</string>
     <string name="news_info_title">Nowości</string>
     <string name="news_info_summary">Bądź informowany o nowych aktualizacjach i innych nowościach</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Zobacz posty na forum</string>
     <string name="error_open_url">Nie można otworzyć adresu URL w przeglądarce</string>
-    <string name="setting_security_patch_level_title">Aktualizacja zabezpieczeń</string>
 </resources>

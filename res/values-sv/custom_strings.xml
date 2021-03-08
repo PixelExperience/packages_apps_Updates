@@ -29,8 +29,6 @@
     <string name="update_failed_notification">Något gick fel! Uppdateringen Misslyckades</string>
     <string name="menu_delete_update">Ta bort</string>
     <string name="menu_export_update">Exportera uppdateringen</string>
-    <string name="menu_show_changelog">Ändringar i denna version</string>
-    <string name="changelog_loading">Laddar…</string>
     <string name="snack_no_updates_found">Inga nya uppdateringar hittades</string>
     <string name="snack_updates_check_failed">Sökningen efter uppdateringar misslyckades. Var god kontrollera din internetanslutning och försök igen senare.</string>
     <string name="snack_download_failed">Nedladdningen misslyckades. Kontrollera din internetanslutning och försök igen senare.</string>
@@ -45,11 +43,11 @@
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Fortsätt</string>
     <string name="action_install">Installera</string>
-    <string name="action_delete">Radera</string>
+    <string name="action_delete">Ta bort</string>
     <string name="confirm_delete_dialog_title">Radera fil</string>
     <string name="confirm_delete_dialog_message">Radera markerad uppdateringsfil?</string>
     <string name="pause_button">Pausa</string>
-    <string name="resume_button">Återuppta</string>
+    <string name="resume_button">Fortsätt</string>
     <string name="reboot">Starta om</string>
     <string name="details_button">Visa detaljer</string>
     <string name="apply_update_dialog_title">Installera uppdateringen</string>

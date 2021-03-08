@@ -31,10 +31,6 @@
     <string name="check_for_update">Праверка абнаўленняў</string>
     <string name="menu_delete_update">Выдаліць</string>
     <string name="menu_export_update">Экспарт абнаўлення</string>
-    <string name="menu_show_changelog">Змены ў бягучай версіі</string>
-    <string name="changelog_loading">Загрузка…</string>
-    <string name="menu_download_full_package">Спампаваць поўны пакет</string>
-    <string name="menu_download_incremental_package">Спампаваць дадатковы пакет</string>
     <string name="update_found_notification">Даступна абнаўленне сістэмы</string>
     <string name="snack_no_updates_found">Абнаўленні не знойдзены</string>
     <string name="snack_updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
@@ -54,7 +50,7 @@
     <string name="action_delete">Выдаліць</string>
     <string name="confirm_delete_dialog_title">Выдаліць файл</string>
     <string name="confirm_delete_dialog_message">Ці выдаліць абраны файл абнаўлення?</string>
-    <string name="pause_button">Прыпыніць</string>
+    <string name="pause_button">Паўза</string>
     <string name="resume_button">Працягнуць</string>
     <string name="reboot">Перазапуск</string>
     <string name="reboot_needed_dialog_title">Патрабуецца перазагрузка</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Усталёўка абнаўлення</string>
     <string name="installing_update_error">Памылка ўсталёўкі</string>
     <string name="installing_update_finished">Абнаўленне ўсталявана</string>
-    <string name="installing_update_ab_disable_incremental_summary">Паэтапная ўсталёўка перапынілася з-за таго, што ваш сістэмны падзел быў зменены усталёўкай якога-небудзь дапаўнення або кастамнага ядра.  Хочаце спампаваць поўны пакет і паспрабаваць яшчэ раз?</string>
     <string name="finalizing_package">Завяршэнне ўсталёўкі</string>
     <string name="dialog_prepare_zip_message">Падрыхтоўка абнаўлення</string>
     <string name="dialog_battery_low_title">Нізкі узровень батарэі</string>
@@ -106,5 +101,4 @@
     <string name="forum_info_title">Форум</string>
     <string name="forum_info_summary">Паглядзець паведамленні на форуме</string>
     <string name="error_open_url">Не атрымалася адкрыць спасылку</string>
-    <string name="setting_security_patch_level_title">Абнаўленне бяспекі</string>
 </resources>

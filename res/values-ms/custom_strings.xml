@@ -29,8 +29,6 @@
     <string name="update_failed_notification">Kemas kini gagal</string>
     <string name="menu_delete_update">Padam</string>
     <string name="menu_export_update">Eksport kemas kini</string>
-    <string name="menu_show_changelog">Perubahan dalam versi ini</string>
-    <string name="changelog_loading">Memuatkan…</string>
     <string name="snack_no_updates_found">Tiada kemas kini baru dijumpai</string>
     <string name="snack_updates_check_failed">Semakan kemas kini gagal. Sila periksa sambungan internet anda dan cuba lagi kemudian.</string>
     <string name="snack_download_failed">Muat turun gagal. Sila periksa sambungan internet anda dan cuba lagi kemudian.</string>

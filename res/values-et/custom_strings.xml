@@ -31,10 +31,6 @@
     <string name="check_for_update">Kontrolli värskendusi</string>
     <string name="menu_delete_update">Kustuta</string>
     <string name="menu_export_update">Ekspordi värskendus</string>
-    <string name="menu_show_changelog">Muudatused praeguses versioonis</string>
-    <string name="changelog_loading">Laadimine…</string>
-    <string name="menu_download_full_package">Laadige alla täielik pakett</string>
-    <string name="menu_download_incremental_package">Laadige juurde lisapakett</string>
     <string name="update_found_notification">Süsteemivärskendus on saadaval</string>
     <string name="snack_no_updates_found">Uusi värskendusi ei ole</string>
     <string name="snack_updates_check_failed">Värskenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
@@ -44,7 +40,7 @@
     <string name="snack_update_not_installable">Seda värskendust ei saa installida praeguse püsivara peale.</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Värskenduse kinnitamine</string>
+    <string name="list_verifying_update">Värskenduse kontrollimine</string>
     <string name="list_no_updates">Uut  värskendust ei ole.</string>
     <string name="blocked_update_dialog_title">Varskendamine blokeeritud</string>
     <string name="action_download">Lae alla</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Värskenduspaketi installimine</string>
     <string name="installing_update_error">Installimisviga</string>
     <string name="installing_update_finished">Värskendus installitud</string>
-    <string name="installing_update_ab_disable_incremental_summary">Lisanduv installimine nurjus, kuna teie süsteemi sektsiooni muudeti mõne lisandmooduli või kohandatud kerneli installimisega. Kas soovite alla laadida kogu paketi ja proovida uuesti?</string>
     <string name="finalizing_package">Paketi installimise lõpetamine</string>
     <string name="dialog_prepare_zip_message">Esmane värskendamise ettevalmistamine</string>
     <string name="dialog_battery_low_title">Madal akutase</string>
@@ -100,5 +95,4 @@
     <string name="forum_info_title">Foorum</string>
     <string name="forum_info_summary">Vaata foorumi postitusi</string>
     <string name="error_open_url">Brauseris URL-i avamine ebaõnnestus</string>
-    <string name="setting_security_patch_level_title">Turvavärskendus</string>
 </resources>

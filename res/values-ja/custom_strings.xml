@@ -31,10 +31,6 @@
     <string name="check_for_update">アップデートを確認</string>
     <string name="menu_delete_update">削除</string>
     <string name="menu_export_update">アップデートのエクスポート</string>
-    <string name="menu_show_changelog">現バージョンにおける変更点</string>
-    <string name="changelog_loading">読み込み中…</string>
-    <string name="menu_download_full_package">フルパッケージをダウンロード</string>
-    <string name="menu_download_incremental_package">差分パッケージをダウンロード</string>
     <string name="update_found_notification">システムアップデートが利用可能です</string>
     <string name="snack_no_updates_found">新しいアップデートはありません</string>
     <string name="snack_updates_check_failed">アップデートを確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>
@@ -44,7 +40,7 @@
     <string name="snack_update_not_installable">このアップデートは現在のビルドに上書きインストールできません</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">アップデートを確認</string>
+    <string name="list_verifying_update">アップデートを検証中</string>
     <string name="list_no_updates">新しいアップデートはありません</string>
     <string name="blocked_update_dialog_title">アップデートをブロックしました</string>
     <string name="action_download">ダウンロード</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">アップデートパッケージをインストール中</string>
     <string name="installing_update_error">インストールエラー</string>
     <string name="installing_update_finished">アップデートのインストール完了</string>
-    <string name="installing_update_ab_disable_incremental_summary">インストールされたアドオンやカスタムカーネルによってシステムパーティションが変更されたため増分のインストールに失敗しました。フルパッケージをダウンロードして再試行しますか?</string>
     <string name="finalizing_package">パッケージのインストールを完了中</string>
     <string name="dialog_prepare_zip_message">予備のアップデート準備</string>
     <string name="dialog_battery_low_title">バッテリー残量低下</string>
@@ -97,5 +92,4 @@
     <string name="forum_info_title">フォーラム</string>
     <string name="forum_info_summary">フォーラムの記事を表示する</string>
     <string name="error_open_url">ブラウザで URL を開くのに失敗しました</string>
-    <string name="setting_security_patch_level_title">セキュリティアップデート</string>
 </resources>

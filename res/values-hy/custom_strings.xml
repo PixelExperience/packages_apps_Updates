@@ -31,8 +31,6 @@
     <string name="check_for_update">Կատարել թարմացումների ստուգում</string>
     <string name="menu_delete_update">Ջնջել</string>
     <string name="menu_export_update">Արտահանել թարմացումը</string>
-    <string name="menu_show_changelog">Տվյալ թողարկման փոփոխությունները</string>
-    <string name="changelog_loading">Բեռնում…</string>
     <string name="update_found_notification">Հասանելի է համակարգի թարմացում</string>
     <string name="snack_no_updates_found">Նոր թարմացում չկա</string>
     <string name="snack_updates_check_failed">Թարմացման ստուգումը ձախողվել է։ Խնդրում ենք ստուգել ձեր ինտերնետ կապը և կրկին փորձել</string>
@@ -40,7 +38,6 @@
     <string name="snack_download_verification_failed">Թարմացման ստուգումը ձախողվել է։</string>
     <string name="snack_download_verified">Ներբեռնումն ավարտվեց:</string>
     <string name="snack_update_not_installable">Թարմացումը չի կարող տեղադրվել եղած թողարկման վրա։</string>
-    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g>-ը <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>)-ից • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Ստուգվում է թարմացումը</string>
     <string name="list_no_updates">Նոր թարմացում չի հայտնաբերվել</string>
@@ -51,7 +48,7 @@
     <string name="action_delete">Ջնջել</string>
     <string name="confirm_delete_dialog_title">Ջնջել ֆայլը</string>
     <string name="confirm_delete_dialog_message">Ջնջե՞լ ընտրված թարմացման ֆայլը։</string>
-    <string name="pause_button">Կանգնեցնել</string>
+    <string name="pause_button">Դադար</string>
     <string name="resume_button">Վերսկսել</string>
     <string name="reboot">Վերամեկնարկել</string>
     <string name="details_button">Դիտել մանրամասները</string>
@@ -81,5 +78,4 @@
     <string name="news_info_title">Նորություններ</string>
     <string name="forum_info_title">Ֆորում</string>
     <string name="forum_info_summary">Դիտել ֆորումի գրառումները</string>
-    <string name="setting_security_patch_level_title">Անվտանգության թարմացում</string>
 </resources>

@@ -31,8 +31,6 @@
     <string name="check_for_update">Preveri za posodobitev</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="menu_export_update">Izvozi posodobitev</string>
-    <string name="menu_show_changelog">Spremembe v trenutni različici</string>
-    <string name="changelog_loading">Nalaganje …</string>
     <string name="update_found_notification">Na voljo je posodobitev sistema</string>
     <string name="snack_no_updates_found">Ni najdenih novih posodobitev</string>
     <string name="snack_updates_check_failed">Preverjanje za posodobitve je spodletelo. Preverite svojo internetno povezavo in poskusite znova kasneje.</string>
@@ -98,7 +96,6 @@
     <string name="website_info_summary">Obiščite našo spletno stran</string>
     <string name="news_info_title">Novice</string>
     <string name="news_info_summary">Ostanite obveščeni o zadnjih posodobitvah in drugih novicah</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Poglejte objave na forumu</string>
     <string name="error_open_url">Odpiranje URL-ja v brskalniku je spodletelo</string>
 </resources>

@@ -31,10 +31,6 @@
     <string name="check_for_update">Verificare actualizări</string>
     <string name="menu_delete_update">Șterge</string>
     <string name="menu_export_update">Exportează actualizarea</string>
-    <string name="menu_show_changelog">Modificări în versiunea curentă</string>
-    <string name="changelog_loading">Se încarcă…</string>
-    <string name="menu_download_full_package">Descărcați pachetul complet</string>
-    <string name="menu_download_incremental_package">Descărcați pachetul incremental</string>
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="snack_updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
@@ -51,7 +47,7 @@
     <string name="action_pause">Pauză</string>
     <string name="action_resume">Reluaţi</string>
     <string name="action_install">Instalați</string>
-    <string name="action_delete">Ștergeți</string>
+    <string name="action_delete">Șterge</string>
     <string name="confirm_delete_dialog_title">Şterge fişier</string>
     <string name="confirm_delete_dialog_message">Șterge fișierul de actualizare selectat?</string>
     <string name="pause_button">Pauză</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Se instalează pachetul de actualizare</string>
     <string name="installing_update_error">Eroare la instalare</string>
     <string name="installing_update_finished">Actualizare instalată</string>
-    <string name="installing_update_ab_disable_incremental_summary">Instalarea incrementală a eșuat, deoarece partiția de sistem a fost modificată prin instalarea unui nucleu suplimentar sau personalizat. Doriți să descărcați pachetul complet și să încercați din nou?</string>
     <string name="finalizing_package">Se finalizează instalarea pachetului</string>
     <string name="dialog_prepare_zip_message">Pregătire preliminară pentru actualizare</string>
     <string name="dialog_battery_low_title">Baterie slabă</string>
@@ -100,8 +95,6 @@
     <string name="website_info_summary">Vizitați pagina noastră web</string>
     <string name="news_info_title">Noutăți</string>
     <string name="news_info_summary">Rămâneți informat despre actualizări şi alte noutăți</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vizualizaţi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
-    <string name="setting_security_patch_level_title">Actualizare de securitate</string>
 </resources>

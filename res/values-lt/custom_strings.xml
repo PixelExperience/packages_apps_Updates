@@ -27,14 +27,10 @@
     <string name="download_paused_error_notification">Atsisiuntimo klaida</string>
     <string name="download_completed_notification">Atsisiuntimas baigtas</string>
     <string name="download_starting_notification">Pradedamas atsiuntimas</string>
-    <string name="update_failed_notification">Atnaujinti nepavyko</string>
+    <string name="update_failed_notification">Atnaujinimas nepavyko</string>
     <string name="check_for_update">Tikrinti atnaujinimus</string>
     <string name="menu_delete_update">Pašalinti</string>
     <string name="menu_export_update">Eksportuoti naujinimą</string>
-    <string name="menu_show_changelog">Dabartinės versijos pakeitimai</string>
-    <string name="changelog_loading">Kraunama…</string>
-    <string name="menu_download_full_package">Atsisiųskite visą paketą</string>
-    <string name="menu_download_incremental_package">Atsisiųsti papildomą paketą</string>
     <string name="update_found_notification">Pasiekiami nauji atnaujinimai</string>
     <string name="snack_no_updates_found">Naujų atnaujinimų nerasta</string>
     <string name="snack_updates_check_failed">Atnaujinimo patikra nepavyko. Prašome patikrinti savo interneto ryšį ir pabandyti dar kartą vėliau.</string>
@@ -51,7 +47,7 @@
     <string name="action_pause">Pristabdyti</string>
     <string name="action_resume">Tęsti</string>
     <string name="action_install">Įdiegti</string>
-    <string name="action_delete">Ištrinti</string>
+    <string name="action_delete">Pašalinti</string>
     <string name="confirm_delete_dialog_title">Ištrinti failą</string>
     <string name="confirm_delete_dialog_message">Ištrinti pasirinktą atnaujinimo failą?</string>
     <string name="pause_button">Pristabdyti</string>
@@ -66,7 +62,6 @@
     <string name="installing_update">Diegiamas atnaujinimo paketas</string>
     <string name="installing_update_error">Įdiegimo klaida</string>
     <string name="installing_update_finished">Įdiegtas naujinimas</string>
-    <string name="installing_update_ab_disable_incremental_summary">Diegti nepavyko, nes jūsų sistemos skaidinys buvo modifikuotas įdiegiant kažkokį priedą arba pasirinktinį branduolį. Ar norite atsisiųsti visą paketą ir bandyti dar kartą?</string>
     <string name="finalizing_package">Baigiamas paketo diegimas</string>
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
@@ -106,5 +101,4 @@
     <string name="forum_info_title">Forumas</string>
     <string name="forum_info_summary">Peržiūrėti forumo pranešimus</string>
     <string name="error_open_url">Nepavyko atidaryti URL naršyklės</string>
-    <string name="setting_security_patch_level_title">Saugos naujinys</string>
 </resources>

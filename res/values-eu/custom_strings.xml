@@ -29,8 +29,6 @@
     <string name="update_failed_notification">Eguneraketak huts egin du</string>
     <string name="menu_delete_update">Ezabatu</string>
     <string name="menu_export_update">Esportatu eguneraketa</string>
-    <string name="menu_show_changelog">Aldaketak oraingo bertsioan</string>
-    <string name="changelog_loading">Kargatzen…</string>
     <string name="snack_no_updates_found">Ez da eguneraketa berririk aurkitu</string>
     <string name="snack_updates_check_failed">Eguneraketa bilaketak huts egin du. Interneterako konexioa egiaztatu eta berriro saiatu, mesedez.</string>
     <string name="snack_download_failed">Deskargak huts egin du. Interneterako konexioa egiaztatu eta berriro saiatu, mesedez.</string>

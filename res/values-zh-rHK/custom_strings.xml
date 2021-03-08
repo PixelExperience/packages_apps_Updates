@@ -31,8 +31,6 @@
     <string name="check_for_update">檢查更新</string>
     <string name="menu_delete_update">刪除</string>
     <string name="menu_export_update">匯出更新</string>
-    <string name="menu_show_changelog">這次更新的内容</string>
-    <string name="changelog_loading">載入中...</string>
     <string name="update_found_notification">系統有更新套件可用！</string>
     <string name="snack_no_updates_found">沒有找到更新</string>
     <string name="snack_updates_check_failed">檢查更新失敗。請檢查您的互聯網連接並稍後再試。</string>
@@ -92,5 +90,4 @@
     <string name="forum_info_title">論壇</string>
     <string name="forum_info_summary">查看論壇文章</string>
     <string name="error_open_url">在瀏覽器中打開 URL 失敗</string>
-    <string name="setting_security_patch_level_title">安全性更新</string>
 </resources>

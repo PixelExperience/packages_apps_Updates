@@ -31,8 +31,6 @@
     <string name="check_for_update">Vyhľadať aktualizáciu</string>
     <string name="menu_delete_update">Vymazať</string>
     <string name="menu_export_update">Export aktualizácie</string>
-    <string name="menu_show_changelog">Zmeny v aktuálnej verzii</string>
-    <string name="changelog_loading">Načítavanie...</string>
     <string name="update_found_notification">Aktualizácia systému je k dispozícii</string>
     <string name="snack_no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
     <string name="snack_updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím vaše internetové pripojenie a skúste to znova neskôr.</string>
@@ -42,18 +40,18 @@
     <string name="snack_update_not_installable">Táto aktualizácia sa nedá nainštalovať na aktuálnu zostavu.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> из <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Overujem aktualizáciu</string>
+    <string name="list_verifying_update">Overovanie aktualizácie</string>
     <string name="list_no_updates">Nenašli sa žiadne nové aktualizácie.</string>
     <string name="blocked_update_dialog_title">Aktualizácia bola zablokovaná</string>
     <string name="action_download">Stiahnuť</string>
     <string name="action_pause">Pauza</string>
     <string name="action_resume">Pokračovať</string>
     <string name="action_install">Nainštalovať</string>
-    <string name="action_delete">Odstrániť</string>
+    <string name="action_delete">Vymazať</string>
     <string name="confirm_delete_dialog_title">Vymazať súbor</string>
     <string name="confirm_delete_dialog_message">Vymazať vybraný súbor aktualizácie?</string>
-    <string name="pause_button">Pozastaviť</string>
-    <string name="resume_button">Obnoviť</string>
+    <string name="pause_button">Pauza</string>
+    <string name="resume_button">Pokračovať</string>
     <string name="reboot">Reštartovať</string>
     <string name="details_button">Podrobnosti</string>
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
@@ -101,5 +99,4 @@
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Zobraziť príspevky na fóre</string>
     <string name="error_open_url">Nepodarilo sa otvoriť adresu URL v prehliadači</string>
-    <string name="setting_security_patch_level_title">Bezpečnostná aktualizácia</string>
 </resources>

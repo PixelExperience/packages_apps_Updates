@@ -31,10 +31,6 @@
     <string name="check_for_update">Procurar atualizações</string>
     <string name="menu_delete_update">Excluir</string>
     <string name="menu_export_update">Exportar atualização</string>
-    <string name="menu_show_changelog">Mudanças na versão atual</string>
-    <string name="changelog_loading">Carregando…</string>
-    <string name="menu_download_full_package">Baixar pacote completo</string>
-    <string name="menu_download_incremental_package">Baixar pacote incremental</string>
     <string name="update_found_notification">Atualização do sistema disponível</string>
     <string name="snack_no_updates_found">Não foram encontradas novas atualizações</string>
     <string name="snack_updates_check_failed">Falha ao procurar por atualizações. Verifique sua conexão com a internet e tente novamente.</string>
@@ -47,6 +43,7 @@
     <string name="list_verifying_update">Verificando atualização</string>
     <string name="list_no_updates">Nenhuma atualização encontrada.</string>
     <string name="blocked_update_dialog_title">Atualização bloqueada</string>
+    <string name="blocked_update_dialog_summary">Esta atualização requer um procedimento de instalação limpa manual (limpeza/formatação da partição de dados antes de instalar a atualização). Faça o download da atualização em nosso site, reinicie para o modo de recuperação e siga os procedimentos para fazer isso.</string>
     <string name="action_download">Baixar</string>
     <string name="action_pause">Pausar</string>
     <string name="action_resume">Continuar</string>
@@ -66,7 +63,6 @@
     <string name="installing_update">Instalando o pacote de atualização</string>
     <string name="installing_update_error">Erro de instalação</string>
     <string name="installing_update_finished">Atualização instalada</string>
-    <string name="installing_update_ab_disable_incremental_summary">A instalação incremental falhou porque a partição do sistema foi modificada pela instalação de algum complemento ou kernel personalizado. Você quer baixar o pacote completo e tentar novamente?</string>
     <string name="finalizing_package">Finalizando a instalação do pacote</string>
     <string name="dialog_prepare_zip_message">Preparação preliminar de atualização</string>
     <string name="dialog_battery_low_title">Bateria fraca</string>
@@ -100,5 +96,4 @@
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Ver posts do fórum</string>
     <string name="error_open_url">Falha ao abrir a URL no navegador</string>
-    <string name="setting_security_patch_level_title">Atualização de segurança</string>
 </resources>

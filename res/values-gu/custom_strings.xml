@@ -28,7 +28,6 @@
     <string name="download_starting_notification">ડાઉનલોડ શરુ થઇ રહ્યું છે</string>
     <string name="update_failed_notification">અપડેટ નિષ્ફળ થયું</string>
     <string name="menu_delete_update">કાઢી નાખો</string>
-    <string name="changelog_loading">લોડ કરી રહ્યું છે…</string>
     <string name="snack_no_updates_found">કોઇ નવા અપડેટો મળ્યા નહીં</string>
     <string name="snack_updates_check_failed">અપડેટ ચકાસણી નિષ્ફળ. કૃપા કરી તમારું ઇન્ટરનેટ જોડાણ ચકાસો અને ફરી પ્રયાસ કરો.</string>
     <string name="snack_download_failed">અપડેટ ચકાસણી નિષ્ફળ. કૃપા કરી તમારું ઇન્ટરનેટ જોડાણ ચકાસી અને ફરી પ્રયાસ કરો.</string>
@@ -50,5 +49,4 @@
     <string name="forum_info_title">ફોરમ</string>
     <string name="forum_info_summary">ફોરમ પોસ્ટ્સ જુઓ</string>
     <string name="error_open_url">બ્રાઉઝરમાં URL ખોલવામાં નિષ્ફળ</string>
-    <string name="setting_security_patch_level_title">સુરક્ષા અપડેટ</string>
 </resources>
