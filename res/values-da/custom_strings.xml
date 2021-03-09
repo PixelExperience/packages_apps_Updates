@@ -30,5 +30,4 @@
     <string name="news_info_summary">Bliv informeret om opdateringer og andre nyheder</string>
     <string name="forum_info_summary">Se forumindlæg</string>
     <string name="error_open_url">Kunne ikke åbne URL i browser</string>
-    <string name="setting_security_patch_level_title">Sikkerhedsopdatering</string>
 </resources>

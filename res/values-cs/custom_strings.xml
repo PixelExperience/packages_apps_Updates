@@ -31,10 +31,6 @@
     <string name="check_for_update">Zkontrolovat aktualizace</string>
     <string name="menu_delete_update">Smazat</string>
     <string name="menu_export_update">Export aktualizace</string>
-    <string name="menu_show_changelog">Změny v aktuální verzi</string>
-    <string name="changelog_loading">Načítání…</string>
-    <string name="menu_download_full_package">Stáhnout celý balíček</string>
-    <string name="menu_download_incremental_package">Stáhnout přírůstkový balíček</string>
     <string name="update_found_notification">Je dostupná aktualizace systému</string>
     <string name="snack_no_updates_found">Nové aktualizace nenalezeny</string>
     <string name="snack_updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
@@ -42,11 +38,12 @@
     <string name="snack_download_verification_failed">Ověření aktualizace selhalo.</string>
     <string name="snack_download_verified">Stahování bylo dokončeno.</string>
     <string name="snack_update_not_installable">Tuto aktualizaci nelze nainstalovat přes aktuální sestavení.</string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> z <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> z <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Ověření aktualizace</string>
     <string name="list_no_updates">Nebyla nalezena žádná nová aktualizace.</string>
     <string name="blocked_update_dialog_title">Aktualizace zablokována</string>
+    <string name="blocked_update_dialog_summary">Tato aktualizace vyžaduje manuální čistou instalaci (formátování oddílu /data). Stáhněte si prosím aktualizaci z našich webových stránek, restartujte do režimu recovery a postupujte podle instrukcí pro čistou instalaci.</string>
     <string name="action_download">Stáhnout</string>
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
@@ -66,7 +63,6 @@
     <string name="installing_update">Instalace balíčku aktualizace</string>
     <string name="installing_update_error">Chyba instalace</string>
     <string name="installing_update_finished">Aktualizace byla nainstalována</string>
-    <string name="installing_update_ab_disable_incremental_summary">Přírůstková instalace se nezdařila, protože váš systémový oddíl byl změněn instalací nějakého doplňku nebo vlastního jádra. Chcete stáhnout celý balíček a zkusit to znovu?</string>
     <string name="finalizing_package">Dokončování instalace balíčku</string>
     <string name="dialog_prepare_zip_message">Příprava předběžné aktualizace</string>
     <string name="dialog_battery_low_title">Nízký stav baterie</string>
@@ -106,5 +102,4 @@
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Zobrazit příspěvky ve fóru</string>
     <string name="error_open_url">Nepodařilo se otevřít adresu URL v prohlížeči</string>
-    <string name="setting_security_patch_level_title">Aktualizace zabezpečení</string>
 </resources>

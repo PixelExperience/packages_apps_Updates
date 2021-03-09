@@ -31,8 +31,6 @@
     <string name="check_for_update">پشکنین بۆ نوێکردنەوە</string>
     <string name="menu_delete_update">سڕینەوە</string>
     <string name="menu_export_update">پاشەکەوتکردنی نوێکردنەوە</string>
-    <string name="menu_show_changelog">گۆڕانکارییەکان لە وەشانی ئێستادا</string>
-    <string name="changelog_loading">باردەکرێت...</string>
     <string name="update_found_notification">نوێکاری سیستەم بەردەستە</string>
     <string name="snack_no_updates_found">هیچ نوێکارییەک نەدۆزرایەوە</string>
     <string name="snack_updates_check_failed">پشکنین بۆ نوێکردنەوە شکستی هێنا. تکایە هێڵی ئینتەرنێتەکەت بپشکنە پاشان هەوڵ بدەرەوە.</string>
@@ -40,8 +38,6 @@
     <string name="snack_download_verification_failed">دڵنیاکردنەوەی نوێکاری شکستی هێنا.</string>
     <string name="snack_download_verified">داگرتن تەواو بوو.</string>
     <string name="snack_update_not_installable">ئەم نوێکارییە ناتوانرێ دابمەزرێت لەسەر پێکهاتەی ئێستا.</string>
-    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">دڵنیاکردنەوەی نوێکردنەوە</string>
     <string name="list_no_updates">هیچ نوێکردنه‌وه‌یه‌ک نه‌دۆزرایه‌وه‌</string>
     <string name="blocked_update_dialog_title">نوێکردنەوە سڕکراوە</string>

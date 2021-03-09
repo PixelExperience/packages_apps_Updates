@@ -31,10 +31,6 @@
     <string name="check_for_update">Proveri ima li ažuriranja</string>
     <string name="menu_delete_update">Obriši</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
-    <string name="menu_show_changelog">Promjene u aktuelnoj verziji</string>
-    <string name="changelog_loading">Učitavanje u toku…</string>
-    <string name="menu_download_full_package">Preuzmi cijeli paket</string>
-    <string name="menu_download_incremental_package">Preuzmi inkrementalni paket</string>
     <string name="update_found_notification">Novo ažuriranje je dostupno</string>
     <string name="snack_no_updates_found">Nema novih ažuriranja</string>
     <string name="snack_updates_check_failed">Provjera dostupnosti novih ažuriranja nije uspela. Provjeri internet vezu ili pokušaj kasnije.</string>
@@ -42,8 +38,6 @@
     <string name="snack_download_verification_failed">Provjera ažuriranja nije uspela.</string>
     <string name="snack_download_verified">Preuzimanje je završeno.</string>
     <string name="snack_update_not_installable">Nemoguće instalirati ažuriranje na postojeću verziju.</string>
-    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
-    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">Provjera ažuriranja</string>
     <string name="list_no_updates">Nema novih ažuriranja.</string>
     <string name="blocked_update_dialog_title">Osvežavanje je blokirano</string>
@@ -66,7 +60,6 @@
     <string name="installing_update">Instalacija izabranog ažuriranja</string>
     <string name="installing_update_error">Greška u instalaciji</string>
     <string name="installing_update_finished">Ažuriranje je završeno</string>
-    <string name="installing_update_ab_disable_incremental_summary">Inkrementalna instalacija nije uspjela jer je particija vašeg sustava izmijenjena instaliranjem nekog dodatka ili prilagođenog kernela. Želite li preuzeti cijeli paket i pokušati ponovo?</string>
     <string name="finalizing_package">Finalizacija ažuriranja</string>
     <string name="dialog_prepare_zip_message">Priprema za ažuriranje</string>
     <string name="dialog_battery_low_title">Slaba baterija</string>
@@ -100,8 +93,6 @@
     <string name="website_info_summary">Posjetite našu web stranicu</string>
     <string name="news_info_title">Vijesti</string>
     <string name="news_info_summary">Budi obavešten o ažuriranjima i drugim vijestima</string>
-    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Pogledaj poruke na forumu</string>
     <string name="error_open_url">Ne mogu otvoriti URL u Pretraživaču</string>
-    <string name="setting_security_patch_level_title">Sigurnosno ažuriranje</string>
 </resources>

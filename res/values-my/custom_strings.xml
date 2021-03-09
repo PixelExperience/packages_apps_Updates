@@ -29,8 +29,6 @@
     <string name="update_failed_notification">အဆင့်မြင့်တင်ခြင်း မအောင်မြင်ပါ</string>
     <string name="menu_delete_update">ဖျက်ရန်</string>
     <string name="menu_export_update">အဆင့်မြင့်တင်မှုဖိုင်အား ပြင်ပသို့ ဖိုင်ထုတ်မည်</string>
-    <string name="menu_show_changelog">ယခုဗားရှင်းတွင် ပြောင်းလဲမှုများ</string>
-    <string name="changelog_loading">တင်နေပါသည်…</string>
     <string name="snack_no_updates_found">အဆင့်မြှင့်တင်မှုအသစ်များအား မတွေ့ရှိပါ</string>
     <string name="snack_updates_check_failed">အဆင့်မြှင့်တင်မှု စစ်ဆေးခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး နောက်တခေါက် ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
     <string name="snack_download_failed">‌ဒေါင်းလုဒ်ဆွဲခြင်း မအောင်မြင်ပါ။ ဖုန်းအင်တာနက်ကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။</string>
@@ -48,7 +46,7 @@
     <string name="action_delete">ဖျက်ရန်</string>
     <string name="confirm_delete_dialog_title">ဖိုင်ကို ဖျက်မလား</string>
     <string name="confirm_delete_dialog_message">ရွေးချယ်ထားသည့် အဆင့်မြှင့်တင်မှုဖိုင်ကို ဖျက်မလား</string>
-    <string name="pause_button">ရပ်တန့်ပါ</string>
+    <string name="pause_button">ခေတ္တရပ်</string>
     <string name="resume_button">ပြန်လည်စတင်မည်</string>
     <string name="reboot">ပြန်လည်စတင်မည်</string>
     <string name="details_button">အသေးစိတ်ကြည့်ရန်</string>
@@ -75,5 +73,4 @@
     <string name="website_info_summary">ကျွန်ုပ်တို့၏ ၀ဘ်ဆိုဒ်ကို ကြည့်ရှူရန်</string>
     <string name="news_info_title">သတင်းများ</string>
     <string name="forum_info_title">ဖိုရမ်</string>
-    <string name="setting_security_patch_level_title">လုံခြုံရေးအပ်ဒိတ်</string>
 </resources>

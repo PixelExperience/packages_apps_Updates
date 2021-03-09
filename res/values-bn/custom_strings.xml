@@ -31,8 +31,6 @@
     <string name="check_for_update">নতুন আধুনিকরণের জন্যে চেক করুন</string>
     <string name="menu_delete_update">মুছুন</string>
     <string name="menu_export_update">আধুনিকরন এক্সপোর্ট করুন</string>
-    <string name="menu_show_changelog">বর্তমান সংস্করণে যেসব পরিবর্তন হয়েছে</string>
-    <string name="changelog_loading">লোড হচ্ছে…</string>
     <string name="update_found_notification">সিস্টেম আধুনিকরণ পাওয়া গেছে</string>
     <string name="snack_no_updates_found">নতুন কোনো আধুনিকরণ পাওয়া যায়নি</string>
     <string name="snack_updates_check_failed">আধুনিকরণ পরীক্ষা ব্যর্থ হয়েছে। অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন এবং আবার চেষ্টা করুন।</string>

@@ -31,10 +31,6 @@
     <string name="check_for_update">Frissítéskeresés</string>
     <string name="menu_delete_update">Törlés</string>
     <string name="menu_export_update">Frissítés-exportálás</string>
-    <string name="menu_show_changelog">Változások a jelenlegi verzióban</string>
-    <string name="changelog_loading">Betöltés…</string>
-    <string name="menu_download_full_package">Teljes csomag letöltése</string>
-    <string name="menu_download_incremental_package">Növekményes csomag letöltése</string>
     <string name="update_found_notification">Rendszerfrissítés érhető el</string>
     <string name="snack_no_updates_found">Nem található új frissítés</string>
     <string name="snack_updates_check_failed">Nem sikerült a frissítéskeresés. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
@@ -47,6 +43,7 @@
     <string name="list_verifying_update">Frissítésellenőrzés</string>
     <string name="list_no_updates">Nem található új frissítés.</string>
     <string name="blocked_update_dialog_title">A frissítés blokkolva</string>
+    <string name="blocked_update_dialog_summary">Ezt a frissítést csak manuálisan, tiszta telepítéssel lehet végrehajtani (Format Data is kötelező telepítés előtt). Töltse le weboldalunkról a frissítést, indítsa a készüléket \'recovery\' módban és kövesse a telepítési utasításokat.</string>
     <string name="action_download">Letöltés</string>
     <string name="action_pause">Szüneteltetés</string>
     <string name="action_resume">Folytatás</string>
@@ -60,13 +57,12 @@
     <string name="reboot_needed_dialog_title">Újraindítás szükséges</string>
     <string name="reboot_needed_dialog_summary">A frissítés befejezéséhez szükséges újraindítani a készüléket. Újrainditja most?</string>
     <string name="details_button">Részletek megjelenítése</string>
-    <string name="apply_update_dialog_title">Frissítés telepítése</string>
+    <string name="apply_update_dialog_title">Frissítés-telepítés</string>
     <string name="apply_update_dialog_message">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja az  <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.</string>
     <string name="apply_update_dialog_message_ab">A következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>.\n\nHa megnyomja az : <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék elkezdi a telepítést a háttérben.\n\nAmint kész, újraindításra lesz szükség.</string>
     <string name="installing_update">Frissítőcsomag-telepítés</string>
     <string name="installing_update_error">Telepítési hiba</string>
     <string name="installing_update_finished">A frissítés telepítve</string>
-    <string name="installing_update_ab_disable_incremental_summary">A növekményes frissítés telepitése meghiúsult, mert az Ön rendszere külső alkalmazás által vagy egyedi kernellel módosítva lett. Letölti a teljes telepítőcsomagot és megpróbálja azzal újra?</string>
     <string name="finalizing_package">A csomagtelepítés véglegesítése</string>
     <string name="dialog_prepare_zip_message">A frissítés előzetes előkészítése</string>
     <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
@@ -101,5 +97,4 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Tekintse meg a fórumbejegyzéseket</string>
     <string name="error_open_url">Nem sikerült megnyitni a linket a böngészőben</string>
-    <string name="setting_security_patch_level_title">Biztonsági frissítés</string>
 </resources>

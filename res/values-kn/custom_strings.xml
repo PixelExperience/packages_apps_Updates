@@ -23,7 +23,6 @@
     <string name="verification_failed_notification">ಧೃಢಿಕರಣ ವಿಫಲವಾಯಿತು</string>
     <string name="verifying_download_notification">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="update_failed_notification">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
-    <string name="changelog_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="confirm_delete_dialog_title">ಫೈಲ್ ಅಳಿಸಿ</string>
@@ -51,5 +50,4 @@
     <string name="forum_info_title">ವೇದಿಕೆಗಳು</string>
     <string name="forum_info_summary">ವೇದಿಕೆಯ ಪೋಸ್ಟ್ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
     <string name="error_open_url">ಬ್ರೌಸರ್ನಲ್ಲಿ URL ಅನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="setting_security_patch_level_title">ಭದ್ರತಾ ಅಪ್‌ಡೇಟ್</string>
 </resources>

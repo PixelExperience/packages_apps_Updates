@@ -29,8 +29,6 @@
     <string name="update_failed_notification">Atjaunināšana Neizdevās</string>
     <string name="menu_delete_update">Dzēst</string>
     <string name="menu_export_update">Eksportēt atjauninājumu</string>
-    <string name="menu_show_changelog">Izmaiņas pašreizējā versijā</string>
-    <string name="changelog_loading">Notiek ielāde…</string>
     <string name="snack_no_updates_found">Nav atrasti jauni atjauninājumi</string>
     <string name="snack_updates_check_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
     <string name="snack_download_failed">Atjaunojuma pārbaude neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz vēlāk.</string>
@@ -63,5 +61,4 @@
     <string name="website_info_title">Tīmekļa vietne</string>
     <string name="news_info_title">Jaunumi</string>
     <string name="forum_info_title">Forums</string>
-    <string name="setting_security_patch_level_title">Drošības atjauninājums</string>
 </resources>

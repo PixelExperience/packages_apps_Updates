@@ -21,7 +21,6 @@
     <string name="update_failed_notification">اپ ڈیٹ ناکام ہو گئی</string>
     <string name="check_for_update">اپ ڈیٹ کی پڑتال کریں</string>
     <string name="menu_delete_update">حذف کریں</string>
-    <string name="changelog_loading">لوڈ ہو رہا ہے…</string>
     <string name="snack_no_updates_found">کوئی نئی اپ ڈیٹ نہیں ملی</string>
     <string name="snack_updates_check_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
     <string name="snack_download_failed">اپ ڈیٹ کی جانچ ناکام ہوگئی. براہ مہربانی اپنا انٹرنیٹ کنکشن چیک کریں اور بعد میں دوبارہ کوشش کریں.</string>
@@ -32,7 +31,7 @@
     <string name="action_pause">روک دیں</string>
     <string name="action_resume">دوبارہ</string>
     <string name="action_install">انسٹال کریں</string>
-    <string name="action_delete">خارج کر دیں</string>
+    <string name="action_delete">حذف کریں</string>
     <string name="pause_button">روک دیں</string>
     <string name="resume_button">دوبارہ</string>
     <string name="reboot">ری بوٹ کریں</string>

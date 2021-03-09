@@ -31,10 +31,6 @@
     <string name="check_for_update">Tarkista päivitykset</string>
     <string name="menu_delete_update">Poista</string>
     <string name="menu_export_update">Vie päivitys</string>
-    <string name="menu_show_changelog">Muutokset nykyiseen versioon</string>
-    <string name="changelog_loading">Ladataan…</string>
-    <string name="menu_download_full_package">Lataa täysipaketti</string>
-    <string name="menu_download_incremental_package">Lataa lisäpaketti</string>
     <string name="update_found_notification">Päivitys on saatavilla</string>
     <string name="snack_no_updates_found">Uusia päivityksiä ei löytynyt</string>
     <string name="snack_updates_check_failed">Päivitysten tarkistaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
@@ -47,6 +43,7 @@
     <string name="list_verifying_update">Todentaa päivitystä</string>
     <string name="list_no_updates">Uutta päivitystä ei löytynyt.</string>
     <string name="blocked_update_dialog_title">Päivitys estetty</string>
+    <string name="blocked_update_dialog_summary">Tämä päivitys vaatii manuaalisen puhdistus asennuksen (Wipe/Format Data partition ennen päivityksen asennusta)  Lataa päivitys sivuiltamme, uudelleen käynnistä recovery tilaan ja seuraa tehtävää tehdäksesi näin.</string>
     <string name="action_download">Lataa</string>
     <string name="action_pause">Tauko</string>
     <string name="action_resume">Jatka</string>
@@ -99,5 +96,4 @@
     <string name="forum_info_title">Foorumi</string>
     <string name="forum_info_summary">Näytä foorumin postaukset</string>
     <string name="error_open_url">URL avaaminen selaimessa epäonnistui</string>
-    <string name="setting_security_patch_level_title">Tietoturvapäivitys</string>
 </resources>

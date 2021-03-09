@@ -31,10 +31,6 @@
     <string name="check_for_update">Έλεγχος για ενημερώσεις</string>
     <string name="menu_delete_update">Διαγραφή</string>
     <string name="menu_export_update">Εξαγωγή ενημέρωσης</string>
-    <string name="menu_show_changelog">Αλλαγές στην τρέχουσα έκδοση</string>
-    <string name="changelog_loading">Φόρτωση…</string>
-    <string name="menu_download_full_package">Λήψη πλήρους πακέτου</string>
-    <string name="menu_download_incremental_package">Λήψη μερικού πακέτου</string>
     <string name="update_found_notification">Διαθέσιμη ενημέρωση συστήματος</string>
     <string name="snack_no_updates_found">Δεν βρέθηκαν νέες ενημερώσεις</string>
     <string name="snack_updates_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
@@ -47,6 +43,7 @@
     <string name="list_verifying_update">Επαλήθευση ενημέρωσης</string>
     <string name="list_no_updates">Δεν βρέθηκαν νέες ενημερώσεις.</string>
     <string name="blocked_update_dialog_title">Η ενημέρωση μπλοκαρίστηκε</string>
+    <string name="blocked_update_dialog_summary">Αυτή η ενημέρωση απαιτεί μια χειροκίνητη διαδικασία καθαρής εγκατάστασης (Wiping / Formating το Data partition πριν από την εγκατάσταση της ενημέρωσης). Πραγματοποιήστε λήψη του build από τον ιστοτόπο μας, επανεκκινήστε σε λειτουργία ανάκτησης και ακολουθήστε τις διαδικασίες για να το κάνετε.</string>
     <string name="action_download">Λήψη</string>
     <string name="action_pause">Παύση</string>
     <string name="action_resume">Συνέχιση</string>
@@ -66,7 +63,6 @@
     <string name="installing_update">Εγκατάσταση πακέτου ενημέρωσης</string>
     <string name="installing_update_error">Σφάλμα εγκατάστασης</string>
     <string name="installing_update_finished">Η ενημέρωση εγκαταστάθηκε</string>
-    <string name="installing_update_ab_disable_incremental_summary">Η μερική εγκατάσταση απέτυχε, γιατί τα αρχεία συστήματος έχουν τροποποιηθεί από κάποιο πρόσθετο ή τροποποιημένο kernel. Θέλετε να κατεβάσετε το πλήρες πακέτο εγκατάστασης και να προσπαθήσετε ξανά;</string>
     <string name="finalizing_package">Ολοκλήρωση της εγκατάστασης του πακέτου</string>
     <string name="dialog_prepare_zip_message">Προκαταρκτική προετοιμασία ενημέρωσης</string>
     <string name="dialog_battery_low_title">Χαμηλή μπαταρία</string>
@@ -100,5 +96,4 @@
     <string name="forum_info_title">Κοινότητα</string>
     <string name="forum_info_summary">Δείτε της δημοσιεύσεις της κοινότητας</string>
     <string name="error_open_url">Απέτυχε το άνοιγμα της διεύθυνσης URL στο πρόγραμμα περιήγησης</string>
-    <string name="setting_security_patch_level_title">Ενημέρωση ασφαλείας</string>
 </resources>
