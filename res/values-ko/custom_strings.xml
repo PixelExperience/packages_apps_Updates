@@ -43,6 +43,7 @@
     <string name="list_verifying_update">업데이트 검증 중</string>
     <string name="list_no_updates">새 업데이트 없음.</string>
     <string name="blocked_update_dialog_title">업데이트 차단됨</string>
+    <string name="blocked_update_dialog_summary">이 업데이트는 수동 초기화 설치 작업이 필요합니다(이 업데이트를 설치하기 전에 Data 파티션을 Wipe 또는 포맷해야 합니다). 빌드를 저희 웹사이트에서 다운로드하고, 복구(리커버리) 모드로 다시 시작 후 순서에 따라 설치 작업을 진행하세요.</string>
     <string name="action_download">다운로드</string>
     <string name="action_pause">일시 중지</string>
     <string name="action_resume">이어 받기</string>

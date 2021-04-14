@@ -43,6 +43,7 @@
     <string name="list_verifying_update">正在驗證更新</string>
     <string name="list_no_updates">沒有新更新。</string>
     <string name="blocked_update_dialog_title">更新已被封鎖</string>
+    <string name="blocked_update_dialog_summary">此更新需要手動重新安裝過程（在安裝更新之前抹除/格式化數據分區）。 請從我們的網站下載更新，重新啟動到恢復模式，然後按照以下步驟進行操作。 </string>
     <string name="action_download">下載</string>
     <string name="action_pause">暫停</string>
     <string name="action_resume">恢復</string>

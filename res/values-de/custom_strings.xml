@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Update wird geprüft</string>
     <string name="list_no_updates">Kein neues Update gefunden.</string>
     <string name="blocked_update_dialog_title">Update blockiert</string>
+    <string name="blocked_update_dialog_summary">Dieses Update erfordert eine manuelle Neuinstallation (Löschen / Formatieren der Datenpartition vor der Installation des Updates). Laden Sie das Update von unserer Website herunter, starten Sie es im Wiederherstellungsmodus neu und befolgen Sie die entsprechenden Anweisungen.</string>
     <string name="action_download">Herunterladen</string>
     <string name="action_pause">Anhalten</string>
     <string name="action_resume">Fortsetzen</string>
@@ -92,6 +93,7 @@
     <string name="website_info_summary">Besuchen Sie unsere Webseite</string>
     <string name="news_info_title">Neuigkeiten</string>
     <string name="news_info_summary">Bleiben Sie informiert über Updates und andere Neuigkeiten</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forenbeiträge ansehen</string>
     <string name="error_open_url">Öffnen der URL im Browser fehlgeschlagen</string>
 </resources>

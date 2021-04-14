@@ -43,6 +43,7 @@
     <string name="list_verifying_update">التحقق من التحديث</string>
     <string name="list_no_updates">لم يتم العثور على تحديثات جديدة.</string>
     <string name="blocked_update_dialog_title">التحديث محظور</string>
+    <string name="blocked_update_dialog_summary">يتطلب هذا التحديث إجراء تثبيت نظيف يدويًا \"Clean install\" (Wipe / Formatting Data partition قبل تثبيت التحديث). يرجى تنزيل التحديث من موقعنا الإلكتروني ، وإعادة التشغيل إلى وضع Recovery، واتباع الإجراءات للقيام بذلك.</string>
     <string name="action_download">تنزيل</string>
     <string name="action_pause">إيقاف مؤقت</string>
     <string name="action_resume">استئناف</string>

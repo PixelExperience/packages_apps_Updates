@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Verifiserer oppdatering</string>
     <string name="list_no_updates">Ingen nye oppdateringer funnet.</string>
     <string name="blocked_update_dialog_title">Oppdatering blokkert</string>
+    <string name="blocked_update_dialog_summary">Oppdateringen krever en manuell, ren installasjon (sletting/formatering av datapartisjonen før installasjon av oppdateringen). Vennligst last ned oppdateringen fra nettstedet vårt, start enheten på nytt i gjenopprettingsmodus og følg de gitte instruksjonene.</string>
     <string name="action_download">Last ned</string>
     <string name="action_pause">Sett på pause</string>
     <string name="action_resume">Fortsett</string>
@@ -92,6 +93,7 @@
     <string name="website_info_summary">Besøk nettsiden vår</string>
     <string name="news_info_title">Nyheter</string>
     <string name="news_info_summary">Få med deg oppdateringer og andre nyheter</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vis foruminnlegg</string>
     <string name="error_open_url">Åpning av URL i nettleser mislyktes</string>
 </resources>

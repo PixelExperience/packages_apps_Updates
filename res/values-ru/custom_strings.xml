@@ -28,7 +28,7 @@
     <string name="download_completed_notification">Загрузка завершена</string>
     <string name="download_starting_notification">Загрузка началась</string>
     <string name="update_failed_notification">Не удалось обновить</string>
-    <string name="check_for_update">Проверить обновления</string>
+    <string name="check_for_update">Проверить наличие обновлений</string>
     <string name="menu_delete_update">Удалить</string>
     <string name="menu_export_update">Экспорт обновления</string>
     <string name="update_found_notification">Доступно обновление системы</string>
@@ -55,7 +55,7 @@
     <string name="resume_button">Продолжить</string>
     <string name="reboot">Перезагрузка</string>
     <string name="reboot_needed_dialog_title">Требуется перезагрузка</string>
-    <string name="reboot_needed_dialog_summary">Чтобы завершить установку обновления, необходимо перезагрузить устройство. Вы хотите перезапустить сейчас?</string>
+    <string name="reboot_needed_dialog_summary">Чтобы завершить установку обновления, необходимо перезагрузить устройство. Вы хотите перезагрузить сейчас?</string>
     <string name="details_button">Подробнее</string>
     <string name="apply_update_dialog_title">Применить обновление</string>
     <string name="apply_update_dialog_message">Будет выполнено обновление до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nПри нажатии кнопки <xliff:g id="ok">%2$s</xliff:g> устройство будет перезапущено и переведено в режим восстановления для установки новой версии.\n\nПримечание: для этой функции необходим совместимый режим восстановления. При возникновении ошибки потребуется установить обновление вручную.</string>

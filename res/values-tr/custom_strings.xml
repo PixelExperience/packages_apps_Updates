@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Güncelleme doğrulanıyor</string>
     <string name="list_no_updates">Yeni güncelleme bulunamadı.</string>
     <string name="blocked_update_dialog_title">Güncelleme engellendi</string>
+    <string name="blocked_update_dialog_summary">Bu güncelleme manuel olarak temiz bir kurulum prosedürü gerektirir. Güncellemeyi yüklemeden önce, Veri bölümünü silin ve biçimlendirin (Sil / Biçimlendir). Lütfen güncellemeyi web sitemizden indirin, cihazı kurtarma modunda yeniden başlatın ve prosedürleri izleyin. </string>
     <string name="action_download">İndir</string>
     <string name="action_pause">Duraklat</string>
     <string name="action_resume">Devam et</string>
@@ -92,6 +93,7 @@
     <string name="website_info_summary">İnternet sitemizi ziyaret edin</string>
     <string name="news_info_title">Haberler</string>
     <string name="news_info_summary">Güncellemeler ve diğer haberler hakkında bilgi sahibi olun</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forum mesajlarını görüntüle</string>
     <string name="error_open_url">URL\'yi tarayıcıda açılamadı</string>
 </resources>

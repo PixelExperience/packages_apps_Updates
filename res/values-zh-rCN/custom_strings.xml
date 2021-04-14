@@ -43,6 +43,7 @@
     <string name="list_verifying_update">正在验证更新</string>
     <string name="list_no_updates">未发现新的更新</string>
     <string name="blocked_update_dialog_title">更新已被阻止</string>
+    <string name="blocked_update_dialog_summary">此更新需要手动清理安装程序 (在安装更新前安装/格式化数据分区)。请从我们的网站下载构建，重启到恢复模式，并按照程序这样做。</string>
     <string name="action_download">下载</string>
     <string name="action_pause">暂停</string>
     <string name="action_resume">继续</string>

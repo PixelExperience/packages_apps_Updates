@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Overovanie aktualizácie</string>
     <string name="list_no_updates">Nenašli sa žiadne nové aktualizácie.</string>
     <string name="blocked_update_dialog_title">Aktualizácia bola zablokovaná</string>
+    <string name="blocked_update_dialog_summary">Táto aktualizácia vyžaduje manuálnu čistú inštaláciu (frmátovanie  Dáta partície). Stiahnite si prosím aktualizáciu z našich webových stránok, reštartujte do režimu recovery a postupujte podľa inštrukcií pre čistú inštaláciu.</string>
     <string name="action_download">Stiahnuť</string>
     <string name="action_pause">Pauza</string>
     <string name="action_resume">Pokračovať</string>
@@ -53,7 +54,9 @@
     <string name="pause_button">Pauza</string>
     <string name="resume_button">Pokračovať</string>
     <string name="reboot">Reštartovať</string>
-    <string name="details_button">Podrobnosti</string>
+    <string name="reboot_needed_dialog_title">Je potrebné reštartovať</string>
+    <string name="reboot_needed_dialog_summary">Na dokončenie inštalácie aktualizácie je potrebné zariadenie reštartovať. Chcete teraz reštartovať?</string>
+    <string name="details_button">Zobraziť podrobnosti</string>
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
     <string name="apply_update_dialog_message">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>
     <string name="apply_update_dialog_message_ab">Idete aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie začne inštaláciu v pozadí.\n\nPo ukončení budete vyzvaný na reštart.</string>
@@ -62,11 +65,11 @@
     <string name="installing_update_finished">Aktualizácia nainštalovaná</string>
     <string name="finalizing_package">Dokončuje sa inštalácia balíka</string>
     <string name="dialog_prepare_zip_message">Predbežná príprava aktualizácie</string>
-    <string name="dialog_battery_low_title">Vybitá batéria</string>
+    <string name="dialog_battery_low_title">Slabá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
-    <string name="dialog_export_title">Export aktualizácie do interného úložiska</string>
-    <string name="notification_export_success">Aktualizácia bola exportovaná do interného úložiska.</string>
-    <string name="notification_export_fail">Exportovanie aktualizácie do interného úložiska zlyhalo</string>
+    <string name="dialog_export_title">Export aktualizácie na interné úložisko</string>
+    <string name="notification_export_success">Aktualizácia bola exportovaná na interné úložisko.</string>
+    <string name="notification_export_fail">Exportovanie aktualizácie na interné úložisko zlyhalo</string>
     <string name="toast_already_exporting">Aktualizácia sa už exportuje</string>
     <plurals name="eta_seconds">
         <item quantity="one">Zostáva 1 sekunda</item>
@@ -95,7 +98,7 @@
     <string name="website_info_title">Web stránka</string>
     <string name="website_info_summary">Navštívte našu webstránku</string>
     <string name="news_info_title">Novinky</string>
-    <string name="news_info_summary">Byť informovaný o aktualizáciách a iných novinkách</string>
+    <string name="news_info_summary">Buďte informovaný o aktualizáciách a iných novinkách</string>
     <string name="forum_info_title">Fórum</string>
     <string name="forum_info_summary">Zobraziť príspevky na fóre</string>
     <string name="error_open_url">Nepodarilo sa otvoriť adresu URL v prehliadači</string>

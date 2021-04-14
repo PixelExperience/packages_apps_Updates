@@ -43,6 +43,7 @@
     <string name="list_verifying_update">アップデートを検証中</string>
     <string name="list_no_updates">新しいアップデートはありません</string>
     <string name="blocked_update_dialog_title">アップデートをブロックしました</string>
+    <string name="blocked_update_dialog_summary">このアップデートでは、手動クリーンインストールの作業 (アップデートをインストールする前にデータパーティションのワイプ/フォーマット) が必要です。 アップデートを私達のウェブサイトからダウンロードしてリカバリーモードへ再起動し、手順に従って下さい。</string>
     <string name="action_download">ダウンロード</string>
     <string name="action_pause">一時停止</string>
     <string name="action_resume">再開</string>

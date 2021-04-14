@@ -28,12 +28,12 @@
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_starting_notification">Iniciando descarga</string>
     <string name="update_failed_notification">Actualización fallida</string>
-    <string name="check_for_update">Verificar si existe nueva actualización</string>
+    <string name="check_for_update">Comprobando actualizaciones</string>
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_export_update">Exportar actualización</string>
     <string name="update_found_notification">Actualización disponible</string>
-    <string name="snack_no_updates_found">No se encontraron nuevas actualizaciones</string>
-    <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor verifique la conexión a internet e intente nuevamente.</string>
+    <string name="snack_no_updates_found">No hay nuevas actualizaciones</string>
+    <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor, verifique la conexión a internet e intente nuevamente.</string>
     <string name="snack_download_failed">Descarga fallida. Compruebe la conexión a Internet e intente nuevamente.</string>
     <string name="snack_download_verification_failed">La verificación de la actualización falló.</string>
     <string name="snack_download_verified">Descarga completada.</string>
@@ -55,7 +55,7 @@
     <string name="resume_button">Reanudar</string>
     <string name="reboot">Reiniciar</string>
     <string name="reboot_needed_dialog_title">Es necesario reiniciar</string>
-    <string name="reboot_needed_dialog_summary">Para completar la instalación de la actualización, su dispositivo necesita ser reiniciado. Quiere reiniciarlo ahora? </string>
+    <string name="reboot_needed_dialog_summary">Para completar la instalación de la actualización, se debe reiniciar el dispositivo. ¿Quiere reiniciarlo ahora? </string>
     <string name="details_button">Ver detalles</string>
     <string name="apply_update_dialog_title">Aplicar actualización</string>
     <string name="apply_update_dialog_message">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>.\n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, se reiniciará el dispositivo en modo «Recovery» para instalar la actualización.\n\nNota: Esta función requiere un «Recovery» compatible o las actualizaciones deberán instalarse manualmente.</string>
@@ -83,8 +83,8 @@
         <item quantity="one">1 hora restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
     </plurals>
-    <string name="update_on_mobile_data_title">¡Advertencia!</string>
-    <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Deseas continuar?</string>
+    <string name="update_on_mobile_data_title">Advertencia</string>
+    <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Desea continuar?</string>
     <string name="checkbox_mobile_data_warning">No volver a mostrar</string>
     <string name="maintainer_info_title">Mantenedor</string>
     <string name="donate_info_title">Donar</string>

@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Проверено обновяване</string>
     <string name="list_no_updates">Няма нови актуализации.</string>
     <string name="blocked_update_dialog_title">Актуализацията е блокирана</string>
+    <string name="blocked_update_dialog_summary">Тази актуализация изисква ръчна процедура за чисто инсталиране (изтриване/форматиране на дяла с данни преди инсталиране на актуализацията). Моля, изтеглете актуализацията от нашия уебсайт, рестартирайте в режим на възстановяване и следвайте процедурите за това.</string>
     <string name="action_download">Изтегли</string>
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Възобнови</string>
@@ -53,6 +54,8 @@
     <string name="pause_button">Пауза</string>
     <string name="resume_button">Възобнови</string>
     <string name="reboot">Рестартиране</string>
+    <string name="reboot_needed_dialog_title">Необходимо е рестартиране</string>
+    <string name="reboot_needed_dialog_summary">За да завършите инсталирането на актуализацията, вашето устройство трябва да бъде рестартирано. Искате ли да рестартирате сега?</string>
     <string name="details_button">Виж детайли</string>
     <string name="apply_update_dialog_title">Приложи актуализацията</string>
     <string name="apply_update_dialog_message">На път сте да актуализирате до версия <xliff:g id="update_name">%1$s</xliff:g>.\n\nако натиснете <xliff:g id="ok">%2$s</xliff:g>, устройството ще се рестартира в режим на възстановяване, за да инсталира актуализацията. \ n \ nЗабележка: Тази функция изисква съвместимо Recovery или актуализации трябва да бъдат инсталирани ръчно.</string>

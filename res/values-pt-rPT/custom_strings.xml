@@ -33,8 +33,8 @@
     <string name="menu_export_update">Exportar atualização</string>
     <string name="update_found_notification">Atualização disponível</string>
     <string name="snack_no_updates_found">Não foram encontradas atualizações</string>
-    <string name="snack_updates_check_failed">A verificação de atualizações falhou. Por favor, verifique a sua ligação à Internet e tente novamente.</string>
-    <string name="snack_download_failed">A descarga falhou. Por favor, verifique a sua ligação à Internet e tente novamente.</string>
+    <string name="snack_updates_check_failed">A verificação de atualizações falhou. Verifique a ligação à Internet e tente novamente.</string>
+    <string name="snack_download_failed">A descarga falhou. Verifique a ligação à Internet e tente novamente.</string>
     <string name="snack_download_verification_failed">A verificação da atualização falhou.</string>
     <string name="snack_download_verified">Descarga concluída.</string>
     <string name="snack_update_not_installable">Esta atualização não pode ser instalada por cima da versão atual.</string>
@@ -43,6 +43,7 @@
     <string name="list_verifying_update">A verificar atualização</string>
     <string name="list_no_updates">Não foram encontradas atualizações.</string>
     <string name="blocked_update_dialog_title">Atualização bloqueada</string>
+    <string name="blocked_update_dialog_summary">Esta atualização requer uma instalação manual de raiz (com limpeza/formatação da partição /Data antes de efetuar a instalação). Descarregue a atualização no nosso site, reinicie no modo Recovery e siga os procedimentos necessários.</string>
     <string name="action_download">Descarregar</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Retomar</string>
@@ -67,7 +68,7 @@
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="dialog_battery_low_message_pct">O nível de bateria está muito baixo. Precisa de, pelo menos, <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar ou <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver a carregar.</string>
     <string name="dialog_export_title">A exportar atualização para o armazenamento interno</string>
-    <string name="notification_export_success">Atualização exportada para o armazenamento interno.</string>
+    <string name="notification_export_success">Atualização exportada para o armazenamento interno</string>
     <string name="notification_export_fail">Erro ao exportar a atualização para o armazenamento interno</string>
     <string name="toast_already_exporting">Já está a exportar uma atualização</string>
     <plurals name="eta_seconds">

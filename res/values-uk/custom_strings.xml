@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Перевірка оновлення</string>
     <string name="list_no_updates">Оновлень не знайдено.</string>
     <string name="blocked_update_dialog_title">Оновлення заблоковане</string>
+    <string name="blocked_update_dialog_summary">Це оновлення вимагає процедури чистої інсталяції вручну (Видалення/Форматування розділу даних перед встановленням оновлення). Будь ласка, завантажте оновлення з нашого веб-сайту, перезавантажте пристрій у режим Recovery та дотримуйтесь процедур, щоб зробити це.</string>
     <string name="action_download">Завантажити</string>
     <string name="action_pause">Призупинити</string>
     <string name="action_resume">Відновити</string>
