@@ -521,7 +521,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         if (!hasPermission) {
             return;
         }
-        File dest = new File(Utils.getExportPath(), mExportUpdateName);
+        File dest = new File(Utils.getExportPath(this), mExportUpdateName);
         Intent intent = new Intent(this, ExportUpdateService.class);
         intent.setAction(ExportUpdateService.ACTION_START_EXPORTING);
         intent.putExtra(ExportUpdateService.EXTRA_SOURCE_FILE, mExportUpdateFile);

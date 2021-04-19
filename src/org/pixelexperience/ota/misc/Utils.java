@@ -67,8 +67,8 @@ public class Utils {
         return new File(Constants.DOWNLOAD_PATH);
     }
 
-    public static File getExportPath() {
-        File dir = new File(Environment.getExternalStorageDirectory(), Constants.EXPORT_PATH);
+    public static File getExportPath(Context context) {
+        File dir = new File(context.getExternalFilesDir(null), Constants.EXPORT_PATH);
         if (!dir.isDirectory()) {
             if (dir.exists() || !dir.mkdirs()) {
                 throw new RuntimeException("Could not create directory");
