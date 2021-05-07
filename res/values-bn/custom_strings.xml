@@ -37,7 +37,13 @@
     <string name="snack_download_failed">আধুনিকরণ ডাউনলোড ব্যর্থ হয়েছে। আপনার ইন্টারনেট সংযোগ চেক করে আবার চেষ্টা করুন।</string>
     <string name="snack_download_verification_failed">আধুনিকীকরণটি যাচাইকরণ ব্যার্থ হয়েছে।</string>
     <string name="snack_download_verified">ডাউনলোড সম্পূর্ণ হয়েছে।</string>
+    <string name="snack_update_not_installable">বর্তমান বিল্ডের ওপর এই আপডেটটি ইনস্টল করা যাবে না।</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> এর <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> এর <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">আধুনিকরণ যাচাই করা হচ্ছে</string>
+    <string name="list_no_updates">নতুন কোনো আপডেট পাওয়া যায়নি।</string>
+    <string name="blocked_update_dialog_title">আপডেট ব্লক করা আছে</string>
+    <string name="blocked_update_dialog_summary">এই আপডেটের জন্য একটি ম্যানুয়াল ক্লিন ইনস্টল প্রক্রিয়া প্রয়োজন (আপডেট ইনস্টল করার আগে ডেটা পার্টিশনটি মোছা / ফর্ম্যাট করার জন্য)। দয়া করে আমাদের ওয়েবসাইট থেকে আপডেটটি ডাউনলোড করুন, রিকভারি মোডে রিবুট করুন এবং প্রসিডিওর ফলো করুন।</string>
     <string name="action_download">ডাউনলোড</string>
     <string name="action_pause">বিরাম</string>
     <string name="action_resume">পুনরারম্ভ</string>
@@ -48,8 +54,23 @@
     <string name="pause_button">বিরাম</string>
     <string name="resume_button">পুনরারম্ভ</string>
     <string name="reboot">রিবুট</string>
+    <string name="reboot_needed_dialog_title">রিস্টার্ট প্রয়োজন</string>
+    <string name="reboot_needed_dialog_summary">আপডেটটি ইনস্টল করার জন্য, আপনার ডিভাইসটি রিস্টার্ট করা দরকার। আপনি কি এখনই রিস্টার্ট করতে চান?</string>
     <string name="details_button">বিস্তারিত দেখুন</string>
     <string name="apply_update_dialog_title">আপডেট প্রয়োগ করা হচ্ছে</string>
+    <string name="apply_update_dialog_message">আপনি আপডেট করতে চলেছেন <xliff:g id="update_name">%1$s</xliff:g>।\n\nআপনি যদি <xliff:g id="ok">%2$s</xliff:g> প্রেস করেন, আপডেটটি ইনস্টল করতে ডিভাইসটি নিজে থেকেই রিকভারি মোডে চালু হবে।\n\nদ্রষ্টব্যঃ এই বৈশিষ্ট্যটির জন্য একটি উপযুক্ত রিকভারির প্রয়োজন অথবা আপনাকে ম্যানুয়ালি আপডেট করতে হবে।</string>
+    <string name="apply_update_dialog_message_ab">আপনি আপডেট করতে চলেছেন <xliff:g id="update_name">%1$s</xliff:g>।\n\nআপনি যদি <xliff:g id="ok">%2$s</xliff:g> প্রেস করেন, ডিভাইসটি ব্যাকগ্রাউন্ডে আপডেট ইনস্টল করা শুরু করবে।\n\nসম্পূর্ণ হয়ে গেলে, আপনাকে রিবুট করতে অনুরোধ জানানো হবে।</string>
+    <string name="installing_update">আপডেট প্যাকেজ ইনস্টল করা হচ্ছে</string>
+    <string name="installing_update_error">ইন্সটলে ত্রুটি হয়েছে</string>
+    <string name="installing_update_finished">আপডেট ইনস্টল করা হয়েছে</string>
+    <string name="finalizing_package">প্যাকেজ ইনস্টলেশন ফাইনালাইজ করা হচ্ছে</string>
+    <string name="dialog_prepare_zip_message">প্রারম্ভিক আপডেটের প্রস্তুতি</string>
+    <string name="dialog_battery_low_title">ব্যাটারি কম</string>
+    <string name="dialog_battery_low_message_pct">ব্যাটারি খুবই কম, চালু রাখার জন্য অন্তত <xliff:g id="percent_discharging">%1$d</xliff:g>%% শতাংশ, এবং চার্জিং হতে থাকলে <xliff:g id="percent_charging">%2$d</xliff:g>%% শতাংশ চার্জ প্রয়োজন.</string>
+    <string name="dialog_export_title">ইন্টারনাল স্টোরেজে আপডেট এক্সপোর্ট করা হচ্ছে</string>
+    <string name="notification_export_success">আপডেটটি ইন্টারনাল স্টোরেজে এক্সপোর্ট করা হয়ে গেছে</string>
+    <string name="notification_export_fail">আপডেটটি ইন্টারনাল স্টোরেজে এক্সপোর্ট করা যায়নি</string>
+    <string name="toast_already_exporting">এখনও একটি আপডেট এক্সপোর্ট করা হচ্ছে</string>
     <plurals name="eta_seconds">
         <item quantity="one">১ সেকেন্ড বাকি</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> সেকেন্ড বাকি</item>

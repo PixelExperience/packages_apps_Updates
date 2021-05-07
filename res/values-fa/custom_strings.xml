@@ -43,6 +43,7 @@
     <string name="list_verifying_update">تایید به‌روز رسانی</string>
     <string name="list_no_updates">بروزرسانی جدیدی یافت نشد.</string>
     <string name="blocked_update_dialog_title">به‌روز رسانی مسدود شده است</string>
+    <string name="blocked_update_dialog_summary">این بروزرسانی نیاز به یک روش نصب دستی و تمیز(پاک کردن داده ها)دارد. برای این کار لطفاً بروزرسانی را از سایت ما دانلود کرده و به حالت ریکاوری رفته و رویه نصب را دنبال کنید.</string>
     <string name="action_download">بارگیری</string>
     <string name="action_pause">مکث</string>
     <string name="action_resume">ادامه</string>
@@ -53,6 +54,7 @@
     <string name="pause_button">مکث</string>
     <string name="resume_button">ادامه</string>
     <string name="reboot">راه‌اندازی مجدد</string>
+    <string name="reboot_needed_dialog_summary">برای تکمیل نصب کردن این بروزرسانی، دستگاه شما نیاز به راه‌انداری مجدد دارد. هم اکنون راه‌اندازی مجدد میکنید؟</string>
     <string name="details_button">مشاهده جزئیات</string>
     <string name="apply_update_dialog_title">انجام به‌روز رسانی</string>
     <string name="apply_update_dialog_message">شما در حال ارتقا به <xliff:g id="update_name">%1$s</xliff:g> هستید.\n\nاگر دکمه<xliff:g id="ok">%2$s</xliff:g> را فشار دهید، دستگاه به صورت خودکار به حالت ریکاوری می‌رود تا به‌روز رسانی را نصب کند.\n\nتوجه: این قابلیت نیاز به یک ریکاوری سازگار دارد در غیر این صورت به‌روز رسانی‌ها باید به صورت دستی نصب شوند.</string>

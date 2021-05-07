@@ -95,6 +95,7 @@
     <string name="website_info_summary">Vizitați pagina noastră web</string>
     <string name="news_info_title">Noutăți</string>
     <string name="news_info_summary">Rămâneți informat despre actualizări şi alte noutăți</string>
+    <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Vizualizaţi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
 </resources>
