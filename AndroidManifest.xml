@@ -22,7 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:allowClearUserData="false"
-        android:requestLegacyExternalStorage="true"
         tools:ignore="GoogleAppIndexingWarning"
         android:usesCleartextTraffic="false">
 
