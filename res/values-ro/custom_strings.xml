@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Verificare actualizare</string>
     <string name="list_no_updates">Nu s-au găsit actualizări noi.</string>
     <string name="blocked_update_dialog_title">Actualizare blocată</string>
+    <string name="blocked_update_dialog_summary">Această actualizare necesită o procedură manuală de instalare curată (Wiping/Formatting pentru Data partition înaintea instalării actualizării). Descărcați actualizarea de pe site-ul nostru web, reporniți în modul de recuperare și urmați procedurile pentru actualizare.</string>
     <string name="action_download">Descărcați</string>
     <string name="action_pause">Pauză</string>
     <string name="action_resume">Reluaţi</string>
