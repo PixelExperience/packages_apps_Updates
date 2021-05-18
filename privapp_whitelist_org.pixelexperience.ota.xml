@@ -20,5 +20,6 @@
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
         <permission name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
     </privapp-permissions>
 </permissions>
