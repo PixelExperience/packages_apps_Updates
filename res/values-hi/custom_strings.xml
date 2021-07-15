@@ -33,6 +33,9 @@
     <string name="menu_export_update">अपडेट निर्यात करें</string>
     <string name="update_found_notification">नया अपडेट उपलब्ध है</string>
     <string name="snack_no_updates_found">कोई नई अपडेट नहीं पाई गयी</string>
+    <string name="snack_updates_check_failed">अद्यतन जाँच विफल रही। कृपया अपने इंटरनेट कनेक्शन की जांच करें और बाद में पुन: प्रयास करें।</string>
+    <string name="snack_download_failed">डाउनलोड विफल रहा। कृपया अपने इंटरनेट कनेक्शन की जांच करें और बाद में पुन: प्रयास करें।</string>
+    <string name="snack_download_verification_failed">अद्यतन सत्यापन विफल रहा।</string>
     <string name="list_verifying_update">अपडेट की पुष्टि हो रही है</string>
     <string name="action_delete">मिटाएं</string>
     <string name="confirm_delete_dialog_title">फ़ाइल को हटाएं</string>

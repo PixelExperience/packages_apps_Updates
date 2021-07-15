@@ -63,7 +63,7 @@
     <string name="installing_update">Instalando paquete de actualización</string>
     <string name="installing_update_error">Error de instalación</string>
     <string name="installing_update_finished">Actualización instalada</string>
-    <string name="finalizing_package">Finalizando instalación del paquete</string>
+    <string name="finalizing_package">Finalizando la instalación del paquete</string>
     <string name="dialog_prepare_zip_message">Preparación preliminar de la actualización</string>
     <string name="dialog_battery_low_title">Batería baja</string>
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesitas al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
@@ -85,7 +85,7 @@
     </plurals>
     <string name="update_on_mobile_data_title">Advertencia</string>
     <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Desea continuar?</string>
-    <string name="checkbox_mobile_data_warning">No volver a mostrar</string>
+    <string name="checkbox_mobile_data_warning">No mostrar de nuevo</string>
     <string name="maintainer_info_title">Desarrollador</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Apoyar el desarrollo</string>
