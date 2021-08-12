@@ -36,10 +36,39 @@
     <string name="snack_updates_check_failed">अद्यतन जाँच विफल रही। कृपया अपने इंटरनेट कनेक्शन की जांच करें और बाद में पुन: प्रयास करें।</string>
     <string name="snack_download_failed">डाउनलोड विफल रहा। कृपया अपने इंटरनेट कनेक्शन की जांच करें और बाद में पुन: प्रयास करें।</string>
     <string name="snack_download_verification_failed">अद्यतन सत्यापन विफल रहा।</string>
+    <string name="snack_download_verified">डाउनलोड समाप्त हुआ.</string>
+    <string name="snack_update_not_installable">यह अपडेट वर्तमान संस्करण पर इंस्टॉल नहीं किया जा सकता है।</string>
     <string name="list_verifying_update">अपडेट की पुष्टि हो रही है</string>
+    <string name="list_no_updates">कोई नई अपडेट नहीं पाई गयी</string>
+    <string name="blocked_update_dialog_title">अपडेट अवरुद्ध</string>
+    <string name="blocked_update_dialog_summary">इस अद्यतन के लिए एक मैनुअल क्लीन इंस्टाल प्रक्रिया की आवश्यकता होती है (अपडेट को स्थापित करने से पहले डेटा विभाजन को पोंछना/स्वरूपित करना)। कृपया हमारी वेबसाइट से अपडेट डाउनलोड करें, पुनर्प्राप्ति मोड में रीबूट करें और ऐसा करने के लिए प्रक्रियाओं का पालन करें।</string>
+    <string name="action_download">डाउनलोड</string>
+    <string name="action_pause">ठहराव</string>
+    <string name="action_resume">फिर शुरू करना</string>
+    <string name="action_install">इंस्टॉल</string>
     <string name="action_delete">मिटाएं</string>
     <string name="confirm_delete_dialog_title">फ़ाइल को हटाएं</string>
     <string name="confirm_delete_dialog_message">चयनित अद्यतन फ़ाइल हटाएं?</string>
+    <string name="pause_button">ठहराव</string>
+    <string name="resume_button">फिर शुरू करना</string>
+    <string name="reboot">रीबूट</string>
+    <string name="reboot_needed_dialog_title">पुनः आरंभ करने की आवश्यकता</string>
+    <string name="reboot_needed_dialog_summary">अद्यतन की स्थापना को पूरा करने के लिए, आपके डिवाइस को पुनरारंभ करने की आवश्यकता है। क्या आप अभी पुनः आरंभ करना चाहते हैं?</string>
+    <string name="details_button">विवरण देखें</string>
+    <string name="apply_update_dialog_title">अद्यतन को लागू करें</string>
+    <string name="apply_update_dialog_message">आप <xliff:g id="update_name">%1$s</xliff:g>.\n\n में अपडेट करने जा रहे हैं।\n\nयदि आप <xliff:g id="ok">%2$s</xliff:g>, को दबाएँगे, तो फोन अपडेट इंस्टॉल करने के लिए रिकवरी मोड में जाएगा।\n\nटिप्पणी: इस फीचर के लिए संगत रिकवरी की आवश्यकता है, अन्यथा आपको स्वयं अपडेट को इंस्टॉल करना पड़ेगा।</string>
+    <string name="apply_update_dialog_message_ab">आप<xliff:g id="update_name">%1$s</xliff:g>.\n\nIमें अपडेट करने जा रहे हैं।\n\nयदि आप <xliff:g id="ok">%2$s</xliff:g> को दबाएँगे, तो फोन अपडेट को बैकग्राउंड में इंस्टॉल करने लगेगा। यह प्रक्रिया संपुर्ण होने पर आपको रिबूट करने के लिए पूछा जाएगा।</string>
+    <string name="installing_update">पैकेज इंस्टॉल हो रहा है</string>
+    <string name="installing_update_error">इंस्टॉल करने में त्रुटि </string>
+    <string name="installing_update_finished">अपडेट इंस्टॉल हो गया</string>
+    <string name="finalizing_package">अपडेट इंस्टॉल को अंतिम रूप दिया जा रहा है</string>
+    <string name="dialog_prepare_zip_message">प्रारंभिक अपडेट की तैयारी</string>
+    <string name="dialog_battery_low_title">कम बैटरी</string>
+    <string name="dialog_battery_low_message_pct">बैटरी कम है, आपको आगे बढ़ने के लिए कम से कम <xliff:g id="percent_discharging">%1$d</xliff:g>%% बैटरी चाहिए, <xliff:g id="percent_charging">%2$d</xliff:g>%% बैटरी अगर आप चार्ज कर रहे हैं।</string>
+    <string name="dialog_export_title">अपडेट को फ़ोन के स्टोरेज में निर्यात किया जा रहा है</string>
+    <string name="notification_export_success">अपडेट फ़ोन के स्टोरेज में सफलतापूर्वक निर्यात किया गया</string>
+    <string name="notification_export_fail">अपडेट फ़ोन के स्टोरेज में निर्यात नही हुआ</string>
+    <string name="toast_already_exporting">पहले से ही एक अपडेट निर्यात किया जा रहा है</string>
     <string name="update_on_mobile_data_title">चेतावनी</string>
     <string name="update_on_mobile_data_message">आप मोबाइल डेटा का उपयोग कर एक अपडेट पैकेज डाउनलोड करने वाले हैं, जो संभवत: उच्च डेटा उपयोग का कारण होने जा रहा है। क्या तुम कार्यवाही को जारी रखना चाहते हैं?</string>
     <string name="checkbox_mobile_data_warning">फिर से मत दिखाना</string>

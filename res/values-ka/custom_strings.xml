@@ -38,9 +38,12 @@
     <string name="snack_download_verification_failed">განახლების გადამოწმება ვერ მოხერხდა.</string>
     <string name="snack_download_verified">ჩამოტვირთვა დასრულებულია.</string>
     <string name="snack_update_not_installable">განახლების დაყენება ვერ მოხერხდება ამჟამინდელი სისტემის ვერსიაზე.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">მიმდინარეობს განახლების ვერიფიკაცია</string>
     <string name="list_no_updates">განახლებები ვერ მოიძებნა.</string>
     <string name="blocked_update_dialog_title">განახლება შეიზღუდა</string>
+    <string name="blocked_update_dialog_summary">ეს განახლება საჭიროებს ხელით წმინდა ინსტალაციის პროცედურას (გასუფთავება/დაფორმატება Data დანაყოფის სანამ დააინსტალირებთ განახლებას). გთხოვთ გადმოწეროთ განახლება ჩვენი ვებსაიტიდან, გადაღვიდეთ აღდგენის რეჟიმში და მიჰყვეთ პროცედურებს.</string>
     <string name="action_download">ჩამოტვირთვა</string>
     <string name="action_pause">შეჩერება</string>
     <string name="action_resume">გაგრძელება</string>
@@ -56,6 +59,7 @@
     <string name="details_button">დეტალების ხილვა</string>
     <string name="apply_update_dialog_title">განახლების დაყენება</string>
     <string name="apply_update_dialog_message">თქვენ აპირებთ განაახლოთ <xliff:g id="update_name">%1$s</xliff:g> ვერსიაზე.\n\nთუ დააჭერთ ღილაკზე <xliff:g id="ok">%2$s</xliff:g>, მოწყობილობა ხელახლა ჩაირთვება აღმდგენ რეჟიმში განახლების დასაყენებლად.\n\nშენიშვნა: საჭიროებს თავსებად აღმდგენს, თუ არადა განახლებები ხელით იქნება დასაყენებელი.</string>
+    <string name="apply_update_dialog_message_ab">თქვენ აპირებთ განაახლოთ <xliff:g id="update_name">%1$s</xliff:g> ვერსიაზე.\n\nთუ დააჭერთ ღილაკზე <xliff:g id="ok">%2$s</xliff:g>, მოწყობილობა ხელახლა ჩაირთვება აღმდგენ რეჟიმში განახლების დასაყენებლად.\n\nშენიშვნა: საჭიროებს თავსებად აღმდგენს, თუ არადა განახლებები ხელით იქნება დასაყენებელი.</string>
     <string name="installing_update">მიმდინარეობს განახლების პაკეტის დაყენება</string>
     <string name="installing_update_error">დაყენების შეცდომა</string>
     <string name="installing_update_finished">განახლება დაყენებულია</string>
@@ -64,6 +68,7 @@
     <string name="dialog_battery_low_title">ელემენტი ჯდება</string>
     <string name="dialog_battery_low_message_pct">ელემენტის დამუხტვის დონე მეტად მცირეა, გასაგრძელებლად საჭიროა დამუხტული იყოს სულ მცირე <xliff:g id="percent_discharging">%1$d</xliff:g>%% ან <xliff:g id="percent_charging">%2$d</xliff:g>%% თუ იმუხტება.</string>
     <string name="dialog_export_title">განახლება გადადის მთავარ მეხსიერებაში</string>
+    <string name="notification_export_success">განახლება გადატანილია მთავარ მეხსიერებაში</string>
     <string name="notification_export_fail">განახლება ვერ გადავიდა მთავარ მეხსიერებაში</string>
     <string name="toast_already_exporting">განახლება უკვე გადასვლის პროცესშია</string>
     <plurals name="eta_seconds">
