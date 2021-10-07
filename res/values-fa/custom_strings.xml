@@ -54,6 +54,7 @@
     <string name="pause_button">مکث</string>
     <string name="resume_button">ادامه</string>
     <string name="reboot">راه‌اندازی مجدد</string>
+    <string name="reboot_needed_dialog_title">راه اندازی مجدد مورد نیاز است</string>
     <string name="reboot_needed_dialog_summary">برای تکمیل نصب کردن این بروزرسانی، دستگاه شما نیاز به راه‌انداری مجدد دارد. هم اکنون راه‌اندازی مجدد میکنید؟</string>
     <string name="details_button">مشاهده جزئیات</string>
     <string name="apply_update_dialog_title">انجام به‌روز رسانی</string>

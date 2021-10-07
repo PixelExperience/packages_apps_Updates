@@ -63,7 +63,7 @@
     <string name="installing_update">Installazione dell\'aggiornamento</string>
     <string name="installing_update_error">Errore di installazione</string>
     <string name="installing_update_finished">Aggiornamento installato</string>
-    <string name="finalizing_package">Completamento dell\'installazione in corso</string>
+    <string name="finalizing_package">Finalizzazione del pacchetto d\'installazione in corso</string>
     <string name="dialog_prepare_zip_message">Preparazione dell\'aggiornamento</string>
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
