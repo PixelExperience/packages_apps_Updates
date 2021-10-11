@@ -30,7 +30,8 @@
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
 
@@ -53,7 +54,9 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".UpdatesCheckReceiver">
+        <receiver
+            android:name=".UpdatesCheckReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
