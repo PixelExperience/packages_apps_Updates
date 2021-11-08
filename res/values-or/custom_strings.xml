@@ -23,4 +23,8 @@
         <item quantity="one">ଏକ ଘଣ୍ଟା ବାକି ଅଛି</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ଘଣ୍ଟା ବାକି ଅଛି</item>
     </plurals>
+    <string name="donate_info_title">ଦାନ କରନ୍ତୁ</string>
+    <string name="donate_info_summary">ବିକାଶକୁ ସମର୍ଥନ କରନ୍ତୁ</string>
+    <string name="website_info_title">ୱେବସାଇଟ୍</string>
+    <string name="website_info_summary">ଆମର ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ</string>
 </resources>
