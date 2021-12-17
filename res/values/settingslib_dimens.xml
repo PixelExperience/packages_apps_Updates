@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="expanded_title_margin_start">24dp</dimen>
+    <dimen name="expanded_title_margin_end">24dp</dimen>
+    <dimen name="settingslib_scrim_visible_height_trigger">137dp</dimen>
+</resources>
