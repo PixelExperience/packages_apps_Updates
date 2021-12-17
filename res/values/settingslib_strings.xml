@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Name of a font family to use for headlines in SettingsLib. -->
+    <string name="settingslib_config_headlineFontFamily" translatable="false">
+        google-sans
+    </string>
+
+    <!-- Name of a font family to use for headlines-medium in SettingsLib. -->
+    <string name="settingslib_config_headlineFontFamilyMedium" translatable="false">
+        google-sans-medium
+    </string>
+</resources>
