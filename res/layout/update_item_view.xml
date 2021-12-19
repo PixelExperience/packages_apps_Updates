@@ -126,7 +126,7 @@
                 android:drawableStart="@drawable/ic_pause"
                 android:drawablePadding="5dp"
                 android:drawableTint="?android:textColorPrimaryInverse"
-                android:fontFamily="@string/defaultFontFamilyMedium"
+                android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
                 android:textAllCaps="false"
                 android:textColor="?android:textColorPrimaryInverse"
                 tools:text="Pause" />
@@ -140,7 +140,7 @@
                 android:drawableStart="@drawable/ic_updateui_information"
                 android:drawablePadding="5dp"
                 android:drawableTint="?android:textColorPrimaryInverse"
-                android:fontFamily="@string/defaultFontFamilyMedium"
+                android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
                 android:text="@string/details_button"
                 android:textAllCaps="false"
                 android:textColor="?android:textColorPrimaryInverse" />

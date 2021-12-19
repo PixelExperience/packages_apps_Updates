@@ -31,7 +31,7 @@
     </style>
 
     <style name="ToolbarTitle" parent="android:TextAppearance.Material.Title">
-        <item name="android:fontFamily">@string/defaultFontFamilyMedium</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
         <item name="android:textColor">@color/theme_accent</item>
     </style>
 

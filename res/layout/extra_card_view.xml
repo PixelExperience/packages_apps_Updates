@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
-            android:fontFamily="@string/defaultFontFamilyMedium"
+            android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="?android:attr/textColorPrimary" />
