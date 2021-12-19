@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="theme_primary">#fff8f9fa</color>
-    <color name="theme_primary_dark">#ffe8eaed</color>
+    <color name="theme_primary">@*android:color/system_neutral1_50</color>
     <color name="theme_accent">#000000</color>
-    <color name="theme_bottom_appbar">#EEFFFFFF</color>
-    <color name="google_blue">#ff1a73e8</color>
+    <color name="theme_accent_2">@*android:color/accent_device_default_light</color>
     <color name="cardview_background">#fff</color>
     <color name="text_primary">#DE000000</color>
     <color name="raised_button_color_disabled">#ff616161</color>
-    <color name="theme_accent_extra_section">#ff616161</color>
-    <color name="design_snackbar_background_color" tools:override="true">@color/theme_primary
+    <color name="theme_accent_extra_section">@color/theme_accent_2</color>
+    <color name="design_snackbar_background_color" tools:override="true">
+        @*android:color/system_neutral1_100
     </color>
+    <color name="toolbar_collapsed">@color/theme_primary</color>
 </resources>

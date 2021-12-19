@@ -13,9 +13,9 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/maintainers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/maintainers"
             android:orientation="vertical"></LinearLayout>
 
         <org.pixelexperience.ota.ExtraCardView

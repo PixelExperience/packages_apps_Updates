@@ -45,6 +45,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
@@ -86,8 +88,8 @@ public class UpdatesActivity extends UpdatesListActivity {
 
     private ExtrasFragment mExtrasFragment;
     private SwipeRefreshLayout mSwipeRefresh;
-    private Button mRefreshButton;
     private UpdateStatus mUpdateStatus;
+    private boolean mRefreshButtonEnabled;
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
@@ -114,6 +116,11 @@ public class UpdatesActivity extends UpdatesListActivity {
                 requestCode == ExportUpdateService.EXPORT_STATUS_PERMISSION_REQUEST_CODE) {
             exportUpdate();
         }
+    }
+
+    private void updateRefreshButtonState(boolean enabled){
+        mRefreshButtonEnabled = enabled;
+        invalidateOptionsMenu();
     }
 
     @Override
@@ -170,9 +177,29 @@ public class UpdatesActivity extends UpdatesListActivity {
         };
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Switch between header title and appbar title minimizing overlaps
+        final CollapsingToolbarLayout collapsingToolbar =
+                findViewById(R.id.collapsing_toolbar);
+        final AppBarLayout appBar = findViewById(R.id.app_bar);
+        appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            boolean mIsShown = false;
+
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                int scrollRange = appBarLayout.getTotalScrollRange();
+                if (!mIsShown && scrollRange + verticalOffset < 10) {
+                    collapsingToolbar.setTitle(getString(R.string.app_name));
+                    mIsShown = true;
+                } else if (mIsShown && scrollRange + verticalOffset > 100) {
+                    collapsingToolbar.setTitle(null);
+                    mIsShown = false;
+                }
+            }
+        });
 
         mExtrasFragment = new ExtrasFragment();
         getSupportFragmentManager().beginTransaction()
@@ -213,11 +240,9 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void setupRefreshComponents() {
-        mRefreshButton = findViewById(R.id.check);
-        mRefreshButton.setOnClickListener(view -> downloadUpdatesList(true));
         mSwipeRefresh = findViewById(R.id.swiperefresh);
         mSwipeRefresh.setEnabled(false);
-        mRefreshButton.setEnabled(false);
+        updateRefreshButtonState(false);
     }
 
     @Override
@@ -259,11 +284,20 @@ public class UpdatesActivity extends UpdatesListActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        MenuItem refreshButton = menu.findItem(R.id.menu_refresh);
+        refreshButton.getIcon().mutate().setAlpha(mRefreshButtonEnabled ? 255 : 130);
+        refreshButton.setEnabled(mRefreshButtonEnabled);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_refresh: {
+                downloadUpdatesList(true);
+                return true;
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -391,20 +425,20 @@ public class UpdatesActivity extends UpdatesListActivity {
     }
 
     private void refreshAnimationStart() {
-        if (mRefreshButton == null || mSwipeRefresh == null) {
+        if (mSwipeRefresh == null) {
             setupRefreshComponents();
         }
-        mRefreshButton.setEnabled(false);
+        updateRefreshButtonState(false);
         mSwipeRefresh.setRefreshing(true);
         findViewById(R.id.recycler_view).setVisibility(View.GONE);
     }
 
     private void refreshAnimationStop() {
-        if (mRefreshButton == null || mSwipeRefresh == null) {
+        if (mSwipeRefresh == null) {
             setupRefreshComponents();
         }
         new Handler().postDelayed(() -> {
-            if (mRefreshButton == null || mSwipeRefresh == null) {
+            if (mSwipeRefresh == null) {
                 return;
             }
             mSwipeRefresh.setRefreshing(false);
@@ -451,11 +485,11 @@ public class UpdatesActivity extends UpdatesListActivity {
             case DELETED:
             case VERIFICATION_FAILED:
                 Log.d(TAG, "handleRefreshButtonState, status is: " + mUpdateStatus + ", enabling button");
-                mRefreshButton.setEnabled(true);
+                updateRefreshButtonState(true);
                 break;
             default:
                 Log.d(TAG, "handleRefreshButtonState, status is: " + mUpdateStatus + ", disabling button");
-                mRefreshButton.setEnabled(false);
+                updateRefreshButtonState(false);
         }
     }
 
