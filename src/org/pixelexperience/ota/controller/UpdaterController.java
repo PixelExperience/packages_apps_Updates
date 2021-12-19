@@ -268,11 +268,9 @@ public class UpdaterController {
         }
     }
 
-    public boolean addUpdate(final UpdateInfo updateInfo) {
-        boolean alreadyExists = false;
+    public void addUpdate(final UpdateInfo updateInfo) {
         if (mDownloadEntry.isValid()) {
             Log.d(TAG, "Download (" + updateInfo.getDownloadId() + ") already added");
-            alreadyExists = true;
         } else {
             Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         }
@@ -309,7 +307,6 @@ public class UpdaterController {
             Utils.setPersistentStatus(mContext, UpdateStatus.Persistent.UNKNOWN);
         }
         notifyUpdateChange(update.getStatus());
-        return !alreadyExists;
     }
 
     private void resetDownloadInfo() {

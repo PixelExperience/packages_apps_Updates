@@ -327,7 +327,10 @@ public class UpdatesActivity extends UpdatesListActivity {
         UpdaterController controller = mUpdaterService.getUpdaterController();
 
         UpdateInfo newUpdate = Utils.parseJson(jsonFile, true, this);
-        boolean updateAvailable = newUpdate != null && controller.addUpdate(newUpdate);
+        boolean updateAvailable = newUpdate != null;
+        if(updateAvailable){
+            controller.addUpdate(newUpdate);
+        }
 
         if (manualRefresh) {
             showSnackbar(
