@@ -53,7 +53,7 @@
     <string name="installing_update_finished">Uppdateringen har installerats</string>
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <!-- Export update -->
-    <string name="notification_export_fail">Exporteringsfel</string>
+
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Varning</string>

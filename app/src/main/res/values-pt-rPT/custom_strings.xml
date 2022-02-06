@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="dialog_battery_low_message_pct">O nível de bateria está muito baixo. Precisa de, pelo menos, <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar ou <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver a carregar.</string>
     <string name="dialog_export_title">A exportar atualização para o armazenamento interno</string>
-    <string name="notification_export_success">Atualização exportada para o armazenamento interno</string>
-    <string name="notification_export_fail">Erro ao exportar a atualização para o armazenamento interno</string>
-    <string name="toast_already_exporting">Já está a exportar uma atualização</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">Falta 1 segundo</item>
         <item quantity="other">Faltam <xliff:g id="count">%d</xliff:g> segundos</item>

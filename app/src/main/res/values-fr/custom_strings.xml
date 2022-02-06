@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
     <string name="dialog_export_title">Exporter la mise à jour vers le stockage interne</string>
-    <string name="notification_export_success">Mise à jour exportée vers le stockage interne</string>
-    <string name="notification_export_fail">Echec lors de l\'export de la mise à jour vers le stockage interne</string>
-    <string name="toast_already_exporting">Une mise à jour est déjà en cours d\'export</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">temps restant : 1 seconde</item>
         <item quantity="other">temps restant : <xliff:g id="count">%d</xliff:g> secondes</item>

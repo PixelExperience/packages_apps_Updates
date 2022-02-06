@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Export aktualizácie</string>
-    <string name="notification_export_success">Aktualizácia exportovaná</string>
-    <string name="notification_export_fail">Chyba exportu</string>
-    <string name="toast_already_exporting">Aktualizácia sa už exportuje</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Zostáva 1 sekunda</item>

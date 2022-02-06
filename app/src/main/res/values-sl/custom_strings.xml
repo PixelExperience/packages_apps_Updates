@@ -65,9 +65,9 @@
     <string name="dialog_battery_low_title">Nizko stanje akumulatorja</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, <xliff:g id="percent_charging">%2$d</xliff:g>%% med polnjenjem.</string>
     <string name="dialog_export_title">Izvažanje posodobitve na notranji pomnilnik</string>
-    <string name="notification_export_success">Posodobitev izvožena na notranji pomnilnik</string>
-    <string name="notification_export_fail">Izvoz posodobitve na notranji pomnilnik je spodletel</string>
-    <string name="toast_already_exporting">Posodobitev se že izvaža</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> sekunda preostala</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> sekundi preostali</item>

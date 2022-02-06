@@ -69,7 +69,7 @@
     <string name="dialog_battery_low_title">Batareya zəifdir</string>
     <string name="dialog_battery_low_message_pct">Batareya səviyyəsi çox aşağıdır, davam etmək üçün ən az <xliff:g id="percent_discharging">%1$d</xliff:g>%% enerji tələb olunur. gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
     <!-- Export update -->
-    <string name="toast_already_exporting">Artıq başqa bir yeniləmə ixrac edilir</string>
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">1 saniyə qalıb</item>

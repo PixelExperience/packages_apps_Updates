@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Batereya zəifdir</string>
     <string name="dialog_battery_low_message_pct">Batereya səviyyəsi çox aşağıdır, davam etmək üçün ən az batereya səviyyəsi <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
     <string name="dialog_export_title">Güncəlləmə daxili anbara köçürülür</string>
-    <string name="notification_export_success">Güncəlləmə daxili anbara köçürüldü</string>
-    <string name="notification_export_fail">Güncəlləmə daxili anbara köçürülmədi</string>
-    <string name="toast_already_exporting">Artıq bir güncəlləmə xaricə köçürülür</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 saniyə qalıb</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saniyə qalıb</item>

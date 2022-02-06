@@ -19,9 +19,10 @@ package org.pixelexperience.ota;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
@@ -44,12 +45,9 @@ public class ExportUpdateService extends Service {
     public static final int EXPORT_STATUS_SUCCESS = 2;
     public static final int EXPORT_STATUS_FAILED = 3;
 
-    public static final int EXPORT_STATUS_PERMISSION_REQUEST_CODE = 869821;
-
     public static final String ACTION_START_EXPORTING = "start_exporting";
-    public static final String ACTION_STOP_EXPORTING = "stop_exporting";
     public static final String EXTRA_SOURCE_FILE = "source_file";
-    public static final String EXTRA_DEST_FILE = "dest_file";
+    public static final String EXTRA_DEST_URI = "dest_uri";
     private static final String TAG = "ExportUpdateService";
     private static final int NOTIFICATION_ID = 16;
     private static final String EXPORT_NOTIFICATION_CHANNEL =
@@ -59,7 +57,6 @@ public class ExportUpdateService extends Service {
 
     private Thread mExportThread;
     private LocalBroadcastManager mBroadcastManager;
-    private ExportRunnable mExportRunnable;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -77,20 +74,8 @@ public class ExportUpdateService extends Service {
             }
             mIsExporting = true;
             File source = (File) intent.getSerializableExtra(EXTRA_SOURCE_FILE);
-            File destination = (File) intent.getSerializableExtra(EXTRA_DEST_FILE);
+            Uri destination = intent.getParcelableExtra(EXTRA_DEST_URI);
             startExporting(source, destination);
-        } else if (ACTION_STOP_EXPORTING.equals(intent.getAction())) {
-            if (mIsExporting) {
-                mExportThread.interrupt();
-                stopForeground(true);
-                try {
-                    mExportThread.join();
-                } catch (InterruptedException e) {
-                    Log.e(TAG, "Error while waiting for thread");
-                }
-                mExportRunnable.cleanUp();
-                mIsExporting = false;
-            }
         } else {
             Log.e(TAG, "No action specified");
         }
@@ -116,7 +101,8 @@ public class ExportUpdateService extends Service {
         }).start();
     }
 
-    private void startExporting(File source, File destination) {
+    private void startExporting(File source, Uri destination) {
+        final String fileName = FileUtils.queryName(getContentResolver(), destination);
         notifyExportStatusChanged(EXPORT_STATUS_RUNNING);
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -129,14 +115,11 @@ public class ExportUpdateService extends Service {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this,
                 EXPORT_NOTIFICATION_CHANNEL);
         NotificationCompat.BigTextStyle notificationStyle = new NotificationCompat.BigTextStyle();
-        notificationBuilder.setContentTitle(getString(R.string.dialog_export_title));
-        notificationStyle.setBigContentTitle(getString(R.string.dialog_export_title));
-        notificationStyle.bigText(destination.getName());
+        notificationBuilder.setContentTitle(getString(R.string.update_export_started));
+        notificationStyle.setBigContentTitle(getString(R.string.update_export_started));
+        notificationStyle.bigText(fileName);
         notificationBuilder.setStyle(notificationStyle);
         notificationBuilder.setSmallIcon(R.drawable.ic_system_update);
-        notificationBuilder.addAction(R.drawable.ic_pause,
-                getString(android.R.string.cancel),
-                getStopPendingIntent());
 
         FileUtils.ProgressCallBack progressCallBack = new FileUtils.ProgressCallBack() {
             private long mLastUpdate = -1;
@@ -162,12 +145,11 @@ public class ExportUpdateService extends Service {
             notifyExportStatusChanged(EXPORT_STATUS_SUCCESS);
             notificationStyle.setSummaryText(null);
             notificationStyle.setBigContentTitle(
-                    getString(R.string.notification_export_success));
+                    getString(R.string.update_export_success));
             notificationBuilder.setContentTitle(
-                    getString(R.string.notification_export_success));
+                    getString(R.string.update_export_success));
             notificationBuilder.setProgress(0, 0, false);
-            notificationBuilder.setContentText(destination.getName());
-            notificationBuilder.mActions.clear();
+            notificationBuilder.setContentText(fileName);
             notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
             stopForeground(STOP_FOREGROUND_DETACH);
         };
@@ -176,39 +158,33 @@ public class ExportUpdateService extends Service {
             notifyExportStatusChanged(EXPORT_STATUS_FAILED);
             notificationStyle.setSummaryText(null);
             notificationStyle.setBigContentTitle(
-                    getString(R.string.notification_export_fail));
+                    getString(R.string.update_export_failed));
             notificationBuilder.setContentTitle(
-                    getString(R.string.notification_export_fail));
+                    getString(R.string.update_export_failed));
             notificationBuilder.setProgress(0, 0, false);
             notificationBuilder.setContentText(null);
-            notificationBuilder.mActions.clear();
             notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
             stopForeground(STOP_FOREGROUND_DETACH);
         };
 
-        mExportRunnable = new ExportRunnable(source, destination, progressCallBack,
-                runnableComplete, runnableFailed);
-        mExportThread = new Thread(mExportRunnable);
+        ExportRunnable exportRunnable = new ExportRunnable(getContentResolver(), source,
+                destination, progressCallBack, runnableComplete, runnableFailed);
+        mExportThread = new Thread(exportRunnable);
         mExportThread.start();
     }
 
-    private PendingIntent getStopPendingIntent() {
-        final Intent intent = new Intent(this, ExportUpdateService.class);
-        intent.setAction(ACTION_STOP_EXPORTING);
-        return PendingIntent.getService(this, 0, intent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-    }
-
     private class ExportRunnable implements Runnable {
+        private final ContentResolver mContentResolver;
         private File mSource;
-        private File mDestination;
+        private final Uri mDestination;
         private FileUtils.ProgressCallBack mProgressCallBack;
         private Runnable mRunnableComplete;
         private Runnable mRunnableFailed;
 
-        private ExportRunnable(File source, File destination,
+        private ExportRunnable(ContentResolver cr, File source, Uri destination,
                                FileUtils.ProgressCallBack progressCallBack,
                                Runnable runnableComplete, Runnable runnableFailed) {
+            mContentResolver = cr;
             mSource = source;
             mDestination = destination;
             mProgressCallBack = progressCallBack;
@@ -219,8 +195,7 @@ public class ExportUpdateService extends Service {
         @Override
         public void run() {
             try {
-                cleanUp();
-                FileUtils.copyFile(mSource, mDestination, mProgressCallBack);
+                FileUtils.copyFile(mContentResolver, mSource, mDestination, mProgressCallBack);
                 mIsExporting = false;
                 if (!mExportThread.isInterrupted()) {
                     Log.d(TAG, "Completed");
@@ -234,12 +209,6 @@ public class ExportUpdateService extends Service {
                 mRunnableFailed.run();
             } finally {
                 stopSelf();
-            }
-        }
-
-        private void cleanUp() {
-            if (mDestination.exists()){
-                mDestination.delete();
             }
         }
     }

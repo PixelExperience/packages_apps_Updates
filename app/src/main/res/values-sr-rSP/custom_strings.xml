@@ -68,9 +68,9 @@
     <string name="dialog_prepare_zip_message">Припрема прелиминарних ажурирања</string>
     <!-- Export update -->
     <string name="dialog_export_title">Извези ажурирања</string>
-    <string name="notification_export_success">Ажурирање извезено</string>
-    <string name="notification_export_fail">Грешка при извозу</string>
-    <string name="toast_already_exporting">Већ извозим ажурирање</string>
+
+
+
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Упозорење</string>

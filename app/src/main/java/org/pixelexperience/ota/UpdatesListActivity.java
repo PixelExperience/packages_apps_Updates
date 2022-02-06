@@ -18,8 +18,11 @@ package org.pixelexperience.ota;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class UpdatesListActivity extends AppCompatActivity {
-    public abstract void showSnackbar(int stringId, int duration);
+import org.pixelexperience.ota.model.UpdateInfo;
 
+public abstract class UpdatesListActivity extends AppCompatActivity {
+    public abstract void exportUpdate(UpdateInfo update);
+
+    public abstract void showSnackbar(int stringId, int duration);
     public abstract void showSnackbar(String text, int duration);
 }

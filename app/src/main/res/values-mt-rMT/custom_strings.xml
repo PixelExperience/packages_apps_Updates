@@ -74,9 +74,9 @@
     <string name="dialog_battery_low_message_pct">Il-livell tal-batterija hija baxxa wisq, għalinqas irid ikollok <xliff:g id="percent_discharging">%1$d</xliff:g>%% tal-batterija sabiex tkompli, <xliff:g id="percent_charging">%2$d</xliff:g>%% jekk qed tiċċarġja.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Esportazzjoni tal-update għall-ħażna interna</string>
-    <string name="notification_export_success">Update kienet esportata għall-ħażna interna</string>
-    <string name="notification_export_fail">Ma rnexxiex jesporta l-update għall-ħażna interna</string>
-    <string name="toast_already_exporting">Diġà qed tesporta aġġornament</string>
+
+
+
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Twissija</string>

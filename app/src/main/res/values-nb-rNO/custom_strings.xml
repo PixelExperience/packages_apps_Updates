@@ -71,9 +71,9 @@
     <string name="dialog_prepare_zip_message">Forhåndsregler tas før oppdatering</string>
     <!-- Export update -->
     <string name="dialog_export_title">Eksporterer oppdatering</string>
-    <string name="notification_export_success">Oppdatering eksportert</string>
-    <string name="notification_export_fail">Eksporteringsfeil</string>
-    <string name="toast_already_exporting">Eksporterer allerede en oppdatering</string>
+
+
+
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Advarsel</string>

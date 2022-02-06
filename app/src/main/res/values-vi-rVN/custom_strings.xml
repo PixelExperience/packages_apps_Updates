@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">Mức pin quá thấp, bạn cần tối thiểu <xliff:g id="percent_discharging">%1$d</xliff:g>%% pin để tiếp tục, <xliff:g id="percent_charging">%2$d</xliff:g>%% nếu đang sạc.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Đang xuất bản cập nhật</string>
-    <string name="notification_export_success">Đã xuất bản cập nhật</string>
-    <string name="notification_export_fail">Lỗi xuất</string>
-    <string name="toast_already_exporting">Đã xuất một bản cập nhật</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">Còn lại <xliff:g id="count">%d</xliff:g> giây</item>

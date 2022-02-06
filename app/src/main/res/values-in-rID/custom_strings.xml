@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">Tingkat baterai terlalu rendah, Anda memerlukan setidaknya <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterai untuk melanjutkan, <xliff:g id="percent_charging">%2$d</xliff:g>%% jika saat pengisian.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Mengekspor pembaruan</string>
-    <string name="notification_export_success">Pembaruan diekspor</string>
-    <string name="notification_export_fail">Kesalahan saat mengekspor</string>
-    <string name="toast_already_exporting">Sudah mengekspor pembaruan</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other"><xliff:g id="count">%d</xliff:g> detik tersisa</item>

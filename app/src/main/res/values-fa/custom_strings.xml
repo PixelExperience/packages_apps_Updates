@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">باتری ضعیف است</string>
     <string name="dialog_battery_low_message_pct">سطح باتری بسیار کم است، برای ادامه کار شما به <xliff:g id="percent_discharging">%1$d</xliff:g>%% از ظرفیت باتری یا <xliff:g id="percent_charging">%2$d</xliff:g>%% اگر در حال شارژ هستید،‌ نیاز دارید.</string>
     <string name="dialog_export_title">صادر کردن به روزرسانی به حافظه داخلی</string>
-    <string name="notification_export_success">بروزرسانی در حافظه داخلی ذخیره شد</string>
-    <string name="notification_export_fail">صادر کردن به روزرسانی به حافظه داخلی انجام نشد</string>
-    <string name="toast_already_exporting">نسخه به‌روز قبلاً صادر شده است</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">یک ثانیه باقی مانده</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ثانیه باقی مانده</item>

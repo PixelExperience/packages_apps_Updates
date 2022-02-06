@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">バッテリー残量低下</string>
     <string name="dialog_battery_low_message_pct">バッテリー残量が不足しています。続行するには<xliff:g id="percent_discharging">%1$d</xliff:g>%%、充電時は<xliff:g id="percent_charging">%2$d</xliff:g>%%のバッテリー残量が必要です。</string>
     <string name="dialog_export_title">更新ファイルを内部ストレージに保存</string>
-    <string name="notification_export_success">更新ファイルを内部ストレージに保存しました</string>
-    <string name="notification_export_fail">更新ファイルの内部ストレージへの保存に失敗しました</string>
-    <string name="toast_already_exporting">既にアップデートをエクスポートしています</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="other">残り<xliff:g id="count">%d</xliff:g>秒</item>
     </plurals>

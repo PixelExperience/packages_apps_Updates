@@ -65,8 +65,8 @@
     <string name="dialog_prepare_zip_message">Підготовка оновлення</string>
     <!-- Export update -->
     <string name="dialog_export_title">Експорт оновлення</string>
-    <string name="notification_export_success">Оновлення експортовано</string>
-    <string name="notification_export_fail">Помилка експорту</string>
+
+
     <!-- ETA -->
     <!-- Mobile data warning -->
     <string name="update_on_mobile_data_title">Попередження</string>

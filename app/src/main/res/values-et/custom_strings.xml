@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Madal akutase</string>
     <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="dialog_export_title">Värskenduse eksportimine sisemisse salvestusruumi</string>
-    <string name="notification_export_success">Värskendus eksporditi sisemisse salvestusruumi</string>
-    <string name="notification_export_fail">Värskenduse eksportimine sisemisse salvestusse ei õnnestunud</string>
-    <string name="toast_already_exporting">Ekspordite juba värskendust</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund jäänud</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekundit jäänud</item>

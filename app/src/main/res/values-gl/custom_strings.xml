@@ -67,9 +67,9 @@
     <string name="dialog_battery_low_title">Batería baixa</string>
     <string name="dialog_battery_low_message_pct">O nivel da batería é demasiado baixo, necesita ao menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se o dispositivo estase a cargar.</string>
     <string name="dialog_export_title">Enviada a actualización ao almacenamento interno</string>
-    <string name="notification_export_success">Enviada a actualización ao almacenamento interno</string>
-    <string name="notification_export_fail">Fallou o envío da actualización ao almacenamento interno</string>
-    <string name="toast_already_exporting">Xa se está a exportar unha actualización</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">resta 1 segundo</item>
         <item quantity="other">restan <xliff:g id="count">%d</xliff:g> segundos</item>

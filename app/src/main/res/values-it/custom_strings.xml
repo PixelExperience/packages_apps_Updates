@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello di carica della batteria è troppo basso. Per continuare, è necessario almeno il <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria, oppure il <xliff:g id="percent_charging">%2$d</xliff:g>%% se il dispositivo è in carica.</string>
     <string name="dialog_export_title">Esportazione dell\'aggiornamento nella memoria interna in corso</string>
-    <string name="notification_export_success">Aggiornamento esportato nella memoria interna</string>
-    <string name="notification_export_fail">Non è stato possibile esportare l\'aggiornamento nella memoria interna</string>
-    <string name="toast_already_exporting">È già in corso l\'esportazione di un aggiornamento</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 secondo rimanente</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> secondi rimanenti</item>

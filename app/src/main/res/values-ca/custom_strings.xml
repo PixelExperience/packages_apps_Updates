@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Bateria baixa</string>
     <string name="dialog_battery_low_message_pct">El nivell de la bateria és massa baix, necessiteu com a mínim <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria per continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositiu s\'està carregant.</string>
     <string name="dialog_export_title">Exportant actualització a l\'emmagatzematge intern</string>
-    <string name="notification_export_success">Actualització exportada a l\'emmagatzematge intern</string>
-    <string name="notification_export_fail">Exportar actualització a l\'emmagatzematge intern ha fallat</string>
-    <string name="toast_already_exporting">Ja s\'està exportant una actualització</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">Falta 1 segon</item>
         <item quantity="other">Falten <xliff:g id="count">%d</xliff:g> segons</item>

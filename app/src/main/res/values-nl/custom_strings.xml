@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Batterij bijna leeg</string>
     <string name="dialog_battery_low_message_pct">Uw batterijniveau is te laag, u moet op zijn minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% batterijcapaciteit hebben om door te gaan of <xliff:g id="percent_charging">%2$d</xliff:g>%% tijdens het opladen.</string>
     <string name="dialog_export_title">Update exporteren naar interne opslag</string>
-    <string name="notification_export_success">Update geëxporteerd naar interne opslag</string>
-    <string name="notification_export_fail">Update exporteren naar interne opslag mislukt</string>
-    <string name="toast_already_exporting">Er wordt al een update geëxporteerd</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 seconde resterend</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> seconden resterend</item>

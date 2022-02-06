@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Слаба батерија</string>
     <string name="dialog_battery_low_message_pct">Ниво батерије је пренизак, треба вам барем <xliff:g id="percent_discharging">%1$d</xliff:g>%% батерије да наставите, <xliff:g id="percent_charging">%2$d</xliff:g>%% аке се пуни.</string>
     <string name="dialog_export_title">Извозим ажурирање у интерну меморију</string>
-    <string name="notification_export_success">Ажурирање извезено у интерну меморију</string>
-    <string name="notification_export_fail">Неуспело извожење ажурирања у интерну меморију</string>
-    <string name="toast_already_exporting">Већ извозим ажурирање</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">преостала <xliff:g id="count">%d</xliff:g> секунда</item>
         <item quantity="few">преостало <xliff:g id="count">%d</xliff:g> секунди</item>

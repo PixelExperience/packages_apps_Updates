@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">バッテリー残量が不足しています。続行するには<xliff:g id="percent_discharging">%1$d</xliff:g>%%、充電時は<xliff:g id="percent_charging">%2$d</xliff:g>%%のバッテリー残量が必要です。</string>
     <!-- Export update -->
     <string name="dialog_export_title">アップデートのエクスポート中</string>
-    <string name="notification_export_success">アップデートのエクスポート</string>
-    <string name="notification_export_fail">エラー出力</string>
-    <string name="toast_already_exporting">すでにアップデートをエクスポートしています。</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="other">残り<xliff:g id="count">%d</xliff:g>秒</item>

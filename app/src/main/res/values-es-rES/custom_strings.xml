@@ -80,9 +80,9 @@
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Exportando actualización</string>
-    <string name="notification_export_success">Actualización exportada</string>
-    <string name="notification_export_fail">Error de exportación</string>
-    <string name="toast_already_exporting">Ya se está exportando una actualización</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_minutes">
         <item quantity="one">1 minuto restante</item>

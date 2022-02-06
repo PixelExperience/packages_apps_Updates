@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, <xliff:g id="percent_charging">%2$d</xliff:g>%% med polnjenjem.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Izvažanje posodobitve</string>
-    <string name="notification_export_success">Posodobitev izvožena</string>
-    <string name="notification_export_fail">Napaka pri izvozu</string>
-    <string name="toast_already_exporting">Posodobitev se že izvaža</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> sekunda preostala</item>

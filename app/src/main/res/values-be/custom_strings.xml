@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Нізкі узровень батарэі</string>
     <string name="dialog_battery_low_message_pct">Узровень зарада батарэі занадта нізкі, для працягу неабходна хаця б <xliff:g id="percent_discharging">%1$d</xliff:g>%% зараду або <xliff:g id="percent_charging">%2$d</xliff:g>%% падчас зарадкі.</string>
     <string name="dialog_export_title">Абнаўленне экспартуецца на ўнутраную памяць</string>
-    <string name="notification_export_success">Абнаўленне экспартавана ва ўнутраную памяць</string>
-    <string name="notification_export_fail">Памылка пры экспарце абнаўлення на ўнутраную памяць</string>
-    <string name="toast_already_exporting">Экспарт ужо выконваецца</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">засталася адна секунда</item>
         <item quantity="few">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>

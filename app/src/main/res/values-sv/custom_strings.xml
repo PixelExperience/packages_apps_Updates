@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <string name="dialog_battery_low_message_pct">Batterinivån är för låg, du beöver minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% av batterikapaciteten för att fortsätta, <xliff:g id="percent_charging">%2$d</xliff:g>%% om du laddar.</string>
     <string name="dialog_export_title">Exporterar uppdateringen till det interna lagringsutrymmet</string>
-    <string name="notification_export_success">Uppdatering exporterad till det interna lagringsutrymmet</string>
-    <string name="notification_export_fail">Misslyckades att exportera uppdateringen till det interna lagringsutrymmet</string>
-    <string name="toast_already_exporting">Exporterar redan en uppdatering</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund kvar</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekunder kvar</item>

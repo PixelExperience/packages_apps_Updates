@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">แบตเตอรี่ต่ำ</string>
     <string name="dialog_battery_low_message_pct">ระดับแบตเตอรี่ต่ำเกินไป คุณจะต้องมีระดับแบตเตอรี่อย่างน้อย <xliff:g id="percent_discharging">%1$d</xliff:g>%% เพื่อดำเนินต่อ <xliff:g id="percent_charging">%2$d</xliff:g>%% หากกำลังชาร์จ</string>
     <string name="dialog_export_title">ส่งออกการอัพเดตไปยังที่เก็บข้อมูลภายใน</string>
-    <string name="notification_export_success">อัพเดตที่ส่งออกไปยังที่เก็บข้อมูลภายใน</string>
-    <string name="notification_export_fail">ไม่สามารถส่งออกการอัพเดตไปยังที่จัดเก็บข้อมูลภายใน</string>
-    <string name="toast_already_exporting">ดำเนินการส่งออกอัพเดตเรียบร้อยแล้ว</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="other">เหลือ <xliff:g id="count">%d</xliff:g> วินาที</item>
     </plurals>

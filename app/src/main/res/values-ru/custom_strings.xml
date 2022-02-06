@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Низкий заряд батареи</string>
     <string name="dialog_battery_low_message_pct">Уровень заряда батареи слишком низкий, для продолжения необходимо хотя бы <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряда или <xliff:g id="percent_charging">%2$d</xliff:g>%% во время зарядки.</string>
     <string name="dialog_export_title">Обновление экспортируется на внутреннюю память</string>
-    <string name="notification_export_success">Обновление экспортировано на внутреннюю память</string>
-    <string name="notification_export_fail">Ошибка при экспорте обновления на внутреннюю память</string>
-    <string name="toast_already_exporting">Экспорт уже выполняется</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">осталась <xliff:g id="count">%d</xliff:g> секунда</item>
         <item quantity="few">осталось <xliff:g id="count">%d</xliff:g> секунды</item>

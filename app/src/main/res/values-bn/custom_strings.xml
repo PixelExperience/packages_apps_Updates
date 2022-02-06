@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">ব্যাটারি কম</string>
     <string name="dialog_battery_low_message_pct">ব্যাটারি খুবই কম, চালু রাখার জন্য অন্তত <xliff:g id="percent_discharging">%1$d</xliff:g>%% শতাংশ, এবং চার্জিং হতে থাকলে <xliff:g id="percent_charging">%2$d</xliff:g>%% শতাংশ চার্জ প্রয়োজন.</string>
     <string name="dialog_export_title">ইন্টারনাল স্টোরেজে আপডেট এক্সপোর্ট করা হচ্ছে</string>
-    <string name="notification_export_success">আপডেটটি ইন্টারনাল স্টোরেজে এক্সপোর্ট করা হয়ে গেছে</string>
-    <string name="notification_export_fail">আপডেটটি ইন্টারনাল স্টোরেজে এক্সপোর্ট করা যায়নি</string>
-    <string name="toast_already_exporting">এখনও একটি আপডেট এক্সপোর্ট করা হচ্ছে</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">১ সেকেন্ড বাকি</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> সেকেন্ড বাকি</item>

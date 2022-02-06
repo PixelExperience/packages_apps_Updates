@@ -79,9 +79,9 @@
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
     <!-- Export update -->
     <string name="dialog_export_title">Wysyłanie aktualizacji</string>
-    <string name="notification_export_success">Aktualizacja wysłana</string>
-    <string name="notification_export_fail">Błąd wysyłania</string>
-    <string name="toast_already_exporting">Aktualizacja jest już wysyłana</string>
+
+
+
     <!-- ETA -->
     <plurals name="eta_seconds">
         <item quantity="one">Pozostała 1 sekunda</item>

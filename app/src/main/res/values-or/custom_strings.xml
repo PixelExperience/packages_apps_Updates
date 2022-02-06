@@ -64,9 +64,9 @@
     <string name="dialog_battery_low_title">କମ୍ ବ୍ୟାଟେରୀ</string>
     <string name="dialog_battery_low_message_pct">ବ୍ୟାଟେରୀ ର ମାତ୍ରା ବହୁତ କମ୍ ଅଛି, ଜାରି ରଖିବା ପାଇଁ ଆପଣଙ୍କୁ ଅତି କମରେ <xliff:g id="percent_discharging">%1$d</xliff:g>%% ବ୍ୟାଟେରୀ ଦରକାର, ଆଉ ଯଦି ଚାର୍ଜ କରୁଛନ୍ତି ତେବେ <xliff:g id="percent_charging">%2$d</xliff:g>%% ଦରକାର।</string>
     <string name="dialog_export_title">ଆଭ୍ୟନ୍ତରୀଣ ଭଣ୍ଡାରକୁ ଅଦ୍ୟତନ ରପ୍ତାନି କରୁଛି |</string>
-    <string name="notification_export_success">ଆଭ୍ୟନ୍ତରୀଣ ସଂରକ୍ଷଣ ସ୍ଥାନକୁ ରପ୍ତାନି ହୋଇଥିବା ଅଦ୍ୟତନ |</string>
-    <string name="notification_export_fail">ଆଭ୍ୟନ୍ତରୀଣ ସଂରକ୍ଷଣ ସ୍ଥାନକୁ ଅଦ୍ୟତନ ରପ୍ତାନି କରିବାରେ ବିଫଳ |</string>
-    <string name="toast_already_exporting">ପୂର୍ବରୁ ଏକ ଅଦ୍ୟତନ ରପ୍ତାନି କରୁଛି |</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 ସେକେଣ୍ଡ ବାକି</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ସେକେଣ୍ଡ ବାକି</item>

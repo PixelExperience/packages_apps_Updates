@@ -63,9 +63,9 @@
     <string name="dialog_battery_low_title">کەمی ووزە</string>
     <string name="dialog_battery_low_message_pct">ڕێژەی ووزە زۆر کەمە، پێویستە لانی کەم ڕێژەی ووزەکەت <xliff:g id="percent_discharging">%1$d</xliff:g>%%  بێت بۆ بەردەوامبوون، <xliff:g id="percent_charging">%2$d</xliff:g>%% گەر لەسەر بارگاویکردن بێت.</string>
     <string name="dialog_export_title">پاشەکەوتکردنی نوێکاری بۆ بیرگەی ناوەکی</string>
-    <string name="notification_export_success">نوێکاری پاشەکەوتکرا بۆ بیرگەی ناوەکی</string>
-    <string name="notification_export_fail">پاشەکەوتی نوێکاری بۆ بیرگەی ناوەکی شکستی هێنا</string>
-    <string name="toast_already_exporting">لە ئێستادا نوێکارییەک پاشەکەوت دەکرێت</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">١ چرکە ماوە</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> چرکە ماوە</item>

@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Mababang baterya</string>
     <string name="dialog_battery_low_message_pct">Ang level ng baterya ay mababa na, kailangan mo kahit <xliff:g id="percent_discharging">%1$d</xliff:g>%% ng baterya para makapag patuloy, <xliff:g id="percent_charging">%2$d</xliff:g>%% kung nagkakarga.</string>
     <string name="dialog_export_title">Pag-export ng pag-update sa panloob na imbakan</string>
-    <string name="notification_export_success">I-update ang nai-export sa panloob na imbakan</string>
-    <string name="notification_export_fail">Nabigong i-export ang pag-update sa panloob na imbakan</string>
-    <string name="toast_already_exporting">Nag-e-export na ang update</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">1 segundo ang natitira</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> segundo ang natitira</item>

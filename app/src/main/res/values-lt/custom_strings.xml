@@ -68,9 +68,9 @@
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas, jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos, kad tęstumėte, <xliff:g id="procentu_krovimas">%2$d</xliff:g>%%, jei įkraunama.</string>
     <string name="dialog_export_title">Eksportuojamas naujinimas į vidinę saugyklą</string>
-    <string name="notification_export_success">Atnaujinta eksportuota į vidinę saugyklą</string>
-    <string name="notification_export_fail">Nepavyko eksportuoti atnaujinimo į vidinę saugyklą</string>
-    <string name="toast_already_exporting">Atnaujinimas jau eksportuojamas</string>
+
+
+
     <plurals name="eta_seconds">
         <item quantity="one">Liko 1sekundė</item>
         <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
