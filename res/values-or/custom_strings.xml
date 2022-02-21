@@ -15,16 +15,85 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ସିଷ୍ଟମ୍ ଅପଡେଟ୍ |</string>
+    <string name="export_channel_title">ରପ୍ତାନି ସମାପ୍ତି |</string>
+    <string name="new_updates_channel_title">ନୂତନ ଅଦ୍ୟତନଗୁଡିକ |</string>
+    <string name="ongoing_channel_title">ଚାଲୁଥିବା ଡାଉନଲୋଡ୍ |</string>
+    <string name="update_failed_channel_title">ଅଦ୍ୟତନ ବିଫଳ ହେଲା |</string>
+    <string name="verification_failed_notification">ଯାଞ୍ଚ ବିଫଳ ହେଲା |</string>
+    <string name="verifying_download_notification">ଅଦ୍ୟତନ ଯାଞ୍ଚ କରୁଛି |</string>
+    <string name="downloading_notification">ଡାଉନଲୋଡ୍ କରୁଛି |</string>
+    <string name="download_paused_notification">ବିରତ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+    <string name="download_paused_error_notification">ତ୍ରୁଟି ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+    <string name="download_completed_notification">ଡାଉନଲୋଡ୍ ସମାପ୍ତ ହୋଇଛି |</string>
+    <string name="download_starting_notification">ଡାଉନଲୋଡ୍ ଆରମ୍ଭ କରିବା |</string>
+    <string name="update_failed_notification">ଅଦ୍ୟତନ ବିଫଳ ହେଲା |</string>
+    <string name="check_for_update">ଅଦ୍ୟତନ ପାଇଁ ଯାଞ୍ଚ କରନ୍ତୁ |</string>
+    <string name="menu_delete_update">ଡିଲିଟ୍ କରନ୍ତୁ |</string>
+    <string name="menu_export_update">ରପ୍ତାନି ଅଦ୍ୟତନ |</string>
+    <string name="update_found_notification">ସିଷ୍ଟମ୍ ଅପଡେଟ୍ ଉପଲବ୍ଧ |</string>
+    <string name="snack_no_updates_found">କଣସି ନୂତନ ଅଦ୍ୟତନ ମିଳିଲା ନାହିଁ |</string>
+    <string name="snack_updates_check_failed">ଅଦ୍ୟତନ ଯାଞ୍ଚ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |</string>
+    <string name="snack_download_failed">ଡାଉନଲୋଡ୍ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |</string>
+    <string name="snack_download_verification_failed">ଅଦ୍ୟତନ ଯାଞ୍ଚ ବିଫଳ ହେଲା |</string>
+    <string name="snack_download_verified">ଡାଉନଲୋଡ୍ ସମାପ୍ତ ହୋଇଛି |</string>
+    <string name="snack_update_not_installable">ସାମ୍ପ୍ରତିକ ବିଲ୍ଡର ଉପରେ ଏହି ଅଦ୍ୟତନ ସଂସ୍ଥାପିତ ହୋଇପାରିବ ନାହିଁ |</string>
+    <string name="list_download_progress_new">ଅଗ୍ରଗତି ନୂତନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+    <string name="list_download_progress_eta_new">ପ୍ରଗତି ଇଟା ନୂଆ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+    <string name="list_verifying_update">ଅଦ୍ୟତନ ଯାଞ୍ଚ କରୁଛି |</string>
+    <string name="list_no_updates">କଣସି ନୂତନ ଅଦ୍ୟତନ ମିଳିଲା ନାହିଁ |</string>
+    <string name="blocked_update_dialog_title">ଅଦ୍ୟତନ ଅବରୋଧିତ |</string>
+    <string name="blocked_update_dialog_summary">ଏହି ଅପଡେଟ୍ ପାଇଁ ଏକ ମାନୁଆଲ୍ କ୍ଲିନ୍ ଇନଷ୍ଟଲ୍ ପ୍ରଣାଳୀ ଆବଶ୍ୟକ (ଅପଡେଟ୍ ଇନଷ୍ଟଲ୍ କରିବା ପୂର୍ବରୁ ଡାଟା ବିଭାଜନକୁ ୱିପିଂ / ଫର୍ମାଟିଂ) | ଦୟାକରି ଆମର ୱେବସାଇଟ୍ ରୁ ଅପଡେଟ୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ, ପୁନରୁଦ୍ଧାର ମୋଡ୍ କୁ ପୁନ bo ବୁଟ୍ କରନ୍ତୁ ଏବଂ ଏହା କରିବା ପାଇଁ ପଦ୍ଧତିଗୁଡିକ ଅନୁସରଣ କରନ୍ତୁ |</string>
+    <string name="action_download">ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+    <string name="action_pause">ବିରାମ</string>
+    <string name="action_resume">ପୁଣି ଆରମ୍ଭ କରିବା</string>
+    <string name="action_install">ସଂସ୍ଥାପନ କରନ୍ତୁ |</string>
+    <string name="action_delete">ଡିଲିଟ୍ କରନ୍ତୁ |</string>
+    <string name="confirm_delete_dialog_title">ଫାଇଲ୍ ଡିଲିଟ୍ କରନ୍ତୁ |</string>
+    <string name="confirm_delete_dialog_message">ମନୋନୀତ ଅଦ୍ୟତନ ଫାଇଲ୍ ବିଲୋପ କରିବେ କି?</string>
+    <string name="pause_button">ବିରତି</string>
+    <string name="resume_button">ପୁଣି ଆରମ୍ଭ କରିବା</string>
+    <string name="reboot">ପୁନଃଆରମ୍ଭ</string>
+    <string name="reboot_needed_dialog_title">ପୁନଃଆରମ୍ଭ ଆବଶ୍ୟକ</string>
+    <string name="reboot_needed_dialog_summary">ଅଦ୍ୟତନର ସଂସ୍ଥାପନ ସଂପୂର୍ଣ୍ଣ କରିବାକୁ, ଆପଣଙ୍କର ଡିଭାଇସ୍ ପୁନ rest ଆରମ୍ଭ ହେବା ଆବଶ୍ୟକ | ଆପଣ ବର୍ତ୍ତମାନ ପୁନ rest ଆରମ୍ଭ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="details_button">ବିବରଣୀ ଦେଖନ୍ତୁ |</string>
+    <string name="apply_update_dialog_title">ଅଦ୍ୟତନ ପ୍ରୟୋଗ କରନ୍ତୁ |</string>
+    <string name="apply_update_dialog_message">ଆପଣ ଅପଗ୍ରେଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି .. ଡିଭାଇସ୍ ଅପଡେଟ୍ ସଂସ୍ଥାପନ କରିବାକୁ ପୁନରୁଦ୍ଧାର ମୋଡରେ ପୁନ rest ଆରମ୍ଭ ହେବ | ଟିପନ୍ତୁ: ଏହି ବ feature ଶିଷ୍ଟ୍ୟ ଏକ ସୁସଙ୍ଗତ ପୁନରୁଦ୍ଧାର ଆବଶ୍ୟକ କରେ କିମ୍ବା ଅପଡେଟ୍ ମାନୁଆଲୀ ସଂସ୍ଥାପିତ ହେବା ଆବଶ୍ୟକ |</string>
+    <string name="apply_update_dialog_message_ab">ଆପଣ id = \"ଅପଡେଟ୍ ନାମ\" କୁ ଅପଗ୍ରେଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଆପଣ id = \"ok\" ଦବାନ୍ତୁ ଡିଭାଇସ୍ ପୃଷ୍ଠଭୂମିରେ ସଂସ୍ଥାପନ ଆରମ୍ଭ କରିବ | ଥରେ ସମାପ୍ତ ହୋଇଗଲେ, ଆପଣଙ୍କୁ ପୁନ bo ବୁଟ କରିବାକୁ କୁହାଯିବ |</string>
+    <string name="installing_update">ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ସଂସ୍ଥାପନ କରୁଛି |</string>
+    <string name="installing_update_error">ତ୍ରୁଟି ସଂସ୍ଥାପନ କରନ୍ତୁ |</string>
+    <string name="installing_update_finished">ଅଦ୍ୟତନ ସଂସ୍ଥାପିତ ହୋଇଛି |</string>
+    <string name="finalizing_package">ପ୍ୟାକେଜ୍ ସ୍ଥାପନକୁ ଚୂଡ଼ାନ୍ତ କରିବା |</string>
+    <string name="dialog_prepare_zip_message">ପ୍ରାଥମିକ ଅଦ୍ୟତନ ପ୍ରସ୍ତୁତି |</string>
+    <string name="dialog_battery_low_title">କମ୍ ବ୍ୟାଟେରୀ</string>
+    <string name="dialog_battery_low_message_pct">ବ୍ୟାଟେରୀ ର ମାତ୍ରା ବହୁତ କମ୍ ଅଛି, ଜାରି ରଖିବା ପାଇଁ ଆପଣଙ୍କୁ ଅତି କମରେ <xliff:g id="percent_discharging">%1$d</xliff:g>%% ବ୍ୟାଟେରୀ ଦରକାର, ଆଉ ଯଦି ଚାର୍ଜ କରୁଛନ୍ତି ତେବେ <xliff:g id="percent_charging">%2$d</xliff:g>%% ଦରକାର।</string>
+    <string name="dialog_export_title">ଆଭ୍ୟନ୍ତରୀଣ ଭଣ୍ଡାରକୁ ଅଦ୍ୟତନ ରପ୍ତାନି କରୁଛି |</string>
+    <string name="notification_export_success">ଆଭ୍ୟନ୍ତରୀଣ ସଂରକ୍ଷଣ ସ୍ଥାନକୁ ରପ୍ତାନି ହୋଇଥିବା ଅଦ୍ୟତନ |</string>
+    <string name="notification_export_fail">ଆଭ୍ୟନ୍ତରୀଣ ସଂରକ୍ଷଣ ସ୍ଥାନକୁ ଅଦ୍ୟତନ ରପ୍ତାନି କରିବାରେ ବିଫଳ |</string>
+    <string name="toast_already_exporting">ପୂର୍ବରୁ ଏକ ଅଦ୍ୟତନ ରପ୍ତାନି କରୁଛି |</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">1 ସେକେଣ୍ଡ ବାକି ଅଛି |</item>
+        <item quantity="other">&lt;xliff: g id = "count"&gt;% d &lt;/ xliff: g&gt; ସେକେଣ୍ଡ ବାକି ଅଛି |</item>
+    </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">ଗୋଟିଏ ମିନିଟ୍ ବାକି ଅଛି</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ମିନିଟ୍ ବାକି ଅଛି</item>
+        <item quantity="other">id = \"ଗଣନା\" ମିନିଟ୍ ବାକି ଅଛି |</item>
     </plurals>
     <plurals name="eta_hours">
         <item quantity="one">ଏକ ଘଣ୍ଟା ବାକି ଅଛି</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ଘଣ୍ଟା ବାକି ଅଛି</item>
+        <item quantity="other">id = \"ଗଣନା\" ଘଣ୍ଟା ବାକି ଅଛି |</item>
     </plurals>
+    <string name="update_on_mobile_data_title">ଚେତାବନୀ</string>
+    <string name="update_on_mobile_data_message">ଆପଣ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରି ଏକ ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ଡାଉନଲୋଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଯାହା ଉଚ୍ଚ ଡାଟା ବ୍ୟବହାର ହେବାର ସମ୍ଭାବନା | ଆପଣ ଆଗକୁ ବ to ିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="checkbox_mobile_data_warning">ପୁନର୍ବାର ଦେଖାନ୍ତୁ ନାହିଁ |</string>
+    <string name="maintainer_info_title">ରକ୍ଷଣାବେକ୍ଷଣକାରୀ</string>
     <string name="donate_info_title">ଦାନ କରନ୍ତୁ</string>
     <string name="donate_info_summary">ବିକାଶକୁ ସମର୍ଥନ କରନ୍ତୁ</string>
     <string name="website_info_title">ୱେବସାଇଟ୍</string>
     <string name="website_info_summary">ଆମର ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ</string>
+    <string name="news_info_title">ସମ୍ବାଦ |</string>
+    <string name="news_info_summary">ଅଦ୍ୟତନ ଏବଂ ଅନ୍ୟାନ୍ୟ ସମ୍ବାଦ ବିଷୟରେ ଅବଗତ ରୁହ |</string>
+    <string name="forum_info_title">ଫୋରମ୍ |</string>
+    <string name="forum_info_summary">ଫୋରମ୍ ପୋଷ୍ଟଗୁଡିକ ଦେଖନ୍ତୁ |</string>
+    <string name="error_open_url">ବ୍ରାଉଜରରେ URL ଖୋଲିବାରେ ବିଫଳ |</string>
 </resources>

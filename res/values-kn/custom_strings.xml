@@ -15,20 +15,66 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">ವ್ಯವಸ್ತೆಯ ನವೀಕರಣೆ</string>
-    <string name="export_channel_title">ನಿರ್ಯಾತ ಪೂರ್ಣತೆ</string>
-    <string name="new_updates_channel_title">ನವ ನವೀಕರಣೆಗಳು</string>
-    <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಕೆಳಭರಿತಗಳು</string>
-    <string name="update_failed_channel_title">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="app_name">ಸಿಸ್ಟಮ್ ಅಪ್ಡೇಟ್</string>
+    <string name="export_channel_title">ಎಕ್ಸ್ಪೋರ್ಟ್ ಕಂಪ್ಲೀಟ್ ಆಗಿದೆ</string>
+    <string name="new_updates_channel_title">ಹೊಸ ಅಪ್ಡೇಟ್ಗಳು</string>
+    <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಡೌನ್ಲೋಡ್ಗಳು</string>
+    <string name="update_failed_channel_title">ಅಪ್ಡೇಟ್ ವಿಫಲವಾಯಿತು</string>
     <string name="verification_failed_notification">ಧೃಢಿಕರಣ ವಿಫಲವಾಯಿತು</string>
-    <string name="verifying_download_notification">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
-    <string name="update_failed_notification">ನವೀಕರಣೆ ವಿಫಲವಾಯಿತು</string>
+    <string name="verifying_download_notification">ಅಪ್ಡೇಟ್ ಅನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="downloading_notification">ಡೌನ್‍ಲೋಡ್ ಚಾಲ್ತಿಯಲ್ಲಿದೆ</string>
+    <string name="download_paused_notification">ಡೌನ್‌ಲೋಡ್ ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="download_paused_error_notification">ಡೌನ್‌ಲೋಡ್ ಮಾಡುವಾಗ ದೋಷವಾಗಿದೆ</string>
+    <string name="download_completed_notification">ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
+    <string name="download_starting_notification">ಡೌನ್‌ಲೋಡ್ ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="update_failed_notification">ಅಪ್ಡೇಟ್ ವಿಫಲವಾಯಿತು</string>
+    <string name="check_for_update">ಅಪ್ಡೇಟ್ಸ್ ಗಾಗಿ ಪರಿಶೀಲಿಸಿ</string>
+    <string name="menu_delete_update">ಅಳಿಸು</string>
+    <string name="menu_export_update">ಅಪ್ಡೇಟ್ ರಫ್ತು ಮಾಡಿ</string>
+    <string name="update_found_notification">ಹೊಸ ಅಪ್ಡೇಟ್ ಲಭ್ಯವಿವೆ</string>
+    <string name="snack_no_updates_found">ಯಾವುದೇ ಹೊಸ ಅಪ್ಡೇಟ್ ಪತ್ತೆಯಾಗಲಿಲ್ಲ</string>
+    <string name="snack_updates_check_failed">ಅಪ್ಡೇಟ್ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ನಂತರ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="snack_download_failed">ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="snack_download_verification_failed">ಅಪ್ಡೇಟ್ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="snack_download_verified">ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ.</string>
+    <string name="snack_update_not_installable">ಈಗಿನ ಬಿಲ್ಡ್  ಮೇಲೆ ಈ ಅಪ್ಡೇಟ್ ಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="list_no_updates">ಯಾವುದೇ ಹೊಸ ಅಪ್ಡೇಟ್ ಪತ್ತೆಯಾಗಲಿಲ್ಲ.</string>
+    <string name="blocked_update_dialog_title">ಅಪ್ಡೇಟ್ ಬ್ಲಾಕ್ ಆಗಿದೆ</string>
+    <string name="blocked_update_dialog_summary">ಈ ಅಪ್‌ಡೇಟ್‌ಗೆ ಮೇನುಯಲ್ ಕ್ಲೀನ್ ಇನ್‌ಸ್ಟಾಲ್ ಕಾರ್ಯವಿಧಾನದ ಅಗತ್ಯವಿದೆ (ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ಸ್ಥಾಪಿಸುವ ಮೊದಲು ಡೇಟಾ ವಿಭಾಗವನ್ನು ಅಳಿಸುವುದು/ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡುವುದು). ದಯವಿಟ್ಟು ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಿಂದ ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ, ರಿಕವರಿ ಮೋಡ್‌ಗೆ ರೀಬೂಟ್ ಮಾಡಿ ಮತ್ತು ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಅನುಸರಿಸಿ.</string>
+    <string name="action_download">ಡೌನ್‍ಲೋಡ್</string>
+    <string name="action_pause">ವಿರಾಮಗೊಳಿಸಿ</string>
+    <string name="action_resume">ಮುಂದುವರಿಸಿ</string>
+    <string name="action_install">ಇನ್ಸ್ಟಾಲ್</string>
+    <string name="action_delete">ಅಳಿಸಿ</string>
     <string name="confirm_delete_dialog_title">ಫೈಲ್ ಅಳಿಸಿ</string>
     <string name="confirm_delete_dialog_message">ಆಯ್ಕೆಮಾಡಿದ ನವೀಕರಣೆ ಕಡತ ಅಳಿಸುವುದೇ?</string>
+    <string name="pause_button">ವಿರಾಮಗೊಳಿಸಿ</string>
+    <string name="resume_button">ಮುಂದುವರಿಸಿ</string>
+    <string name="reboot">ರಿಬೂಟ್</string>
+    <string name="reboot_needed_dialog_title">ರಿಸ್ಟಾರ್ಟ್ ಅಗತ್ಯವಿದೆ</string>
+    <string name="reboot_needed_dialog_summary">ಈ ಅಪ್ಡೇಟನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು, ನಿಮ್ಮ ಡಿವೈಸ್  ರೀಸ್ಟಾರ್ಟ್ ಅಗತ್ಯವಿರುತ್ತದೆ. ನಿಮ್ಮ ಡಿವೈಸ್ ಅನ್ನು ರೀಸ್ಟಾರ್ಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?</string>
+    <string name="details_button">ವಿವರಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
+    <string name="apply_update_dialog_title">ಅಪ್ಡೇಟ್ ಅನ್ವಯಿಸು</string>
+    <string name="apply_update_dialog_message">ನೀವು ಈಗ ಈ ವರ್ಷನ್ ಗೆ ಅಪ್ಗ್ರೇಡ್ ಆಗಲಿದ್ದೀರಿ<xliff:g id="update_name">%1$s</xliff:g>.\n\n ಇದನ್ನು ಒತ್ತಿದರೆ <xliff:g id="ok">%2$s</xliff:g>, ಡಿವೈಸ್ ರಿಕವರಿ ಮೊಡ್ನಲ್ಲಿ ತನ್ನಿಂದತಾನೆ ಅಪ್ಡೇಟ್ ಆಗುತ್ತದೆ \n\nNote: This feature requires a compatible Recovery or updates will need to be installed manually.</string>
+    <string name="apply_update_dialog_message_ab">ನೀವು ಈಗ <xliff:g id="update_name">%1$s</xliff:g>ಗೆ ಉನ್ನತೀಕರಿಸಲು ಹೋಗುತ್ತಿದ್ದೀರಿ.\n\nನೀವು <xliff:g id="ok">%2$s</xliff:g> ಒತ್ತಿದರೆ, ಸಾಧನವು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪನೆ ಪ್ರಾರಂಭಿಸುತ್ತದೆ.\n\nಪೂರ್ಣಗೊಂಡಾಗ ಸಾಧನವನ್ನು ಮರುಹೂಡಲು ನಿಮಗೆ ಪ್ರೇರೇಪಿಸುವುದು.</string>
+    <string name="installing_update">ಅಪ್ಡೇಟ್ ಪ್ಯಾಕೇಜ್‌ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="installing_update_error">ಸ್ಥಾಪನೆಯಲ್ಲಿ ದೋಷವಾಗಿದೆ(INSTALLATION ERROR)</string>
+    <string name="installing_update_finished">ಅಪ್ಡೇಟ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆ</string>
+    <string name="finalizing_package">ಪ್ಯಾಕೇಜ್‌ ಅಳವಡಿಕೆ ಅಂತಿಮಗೊಳ್ಳುತ್ತಿದೆ</string>
+    <string name="dialog_prepare_zip_message">ಪ್ರಾಥಮಿಕ ಅಪ್ಡೇಟ್ಗಾಗಿ ಸಿದ್ಧತೆ</string>
     <string name="dialog_battery_low_title">ಕ್ಷೀಣಿಸಿದೆ</string>
     <string name="dialog_battery_low_message_pct">ಮಿಂತಿಣಿ ಮಟ್ಟ ತೀರಾ ಕಡಿಮೆಯಿದೆ. ಮುಂದುವರಿಸಲು ನಿಮಗೆ ಕನಿಷ್ಟ <xliff:g id="percent_discharging">%1$d</xliff:g>%% ಚಾರ್ಜ್ ಅಥವಾ ಚಾರ್ಜಿಂಗ್ನಲ್ಲಿ <xliff:g id="percent_charging">%2$d</xliff:g>%% ಬೇಕು.</string>
+    <string name="dialog_export_title">ಅಪ್ಡೇಟ್ ಅನ್ನು ಇಂಟರ್ನಲ್ ಸ್ಟೋರೇಜ್ ಗೆ ಕಳಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="notification_export_success">ಅಪ್ಡೇಟ್ ಅನ್ನು ಇಂಟರ್ನಲ್ ಸ್ಟೋರೇಜ್ ಗೆ ಕಳಿಸಲಾಗಿದೆ</string>
+    <string name="notification_export_fail">ಅಪ್ಡೇಟ್ ಅನ್ನು ಇಂಟರ್ನಲ್ ಸ್ಟೋರೇಜ್ ಗೆ ಕಳುಹಿಸುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ</string>
+    <string name="toast_already_exporting">ಈಗಾಗಲೇ ಅಪ್ಡೇಟ್ ಅನ್ನು ಎಕ್ಸ್ಪೋರ್ಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
+    <plurals name="eta_seconds">
+        <item quantity="one">ಒಂದು ಸೆಕೆಂಡ್ ಬಾಕಿ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಸೆಕೆಂಡುಗಳು ಬಾಕಿ</item>
+    </plurals>
     <plurals name="eta_minutes">
         <item quantity="one">೧ ನಿಮಿಷ ಬಾಕಿ</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷಗಳು ಬಾಕಿ</item>
@@ -38,15 +84,15 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆಗಳು ಬಾಕಿ</item>
     </plurals>
     <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
-    <string name="update_on_mobile_data_message">ನೀವೀಗ ನವೀಕರಣೆಯ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
+    <string name="update_on_mobile_data_message">ನೀವೀಗ ಅಪ್ಡೇಟ್ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
     <string name="checkbox_mobile_data_warning">ಪುನಃ ತೋರಿಸಬೇಡ</string>
     <string name="maintainer_info_title">ಮೆಂಟೈನರ್</string>
-    <string name="donate_info_title">ದಾನ</string>
+    <string name="donate_info_title">ದಾನ ಪಾವತಿಗಳು</string>
     <string name="donate_info_summary">ಅಭಿವೃದ್ಧಿಯನ್ನು ಬೆಂಬಲಿಸಿ</string>
     <string name="website_info_title">ವೆಬ್‌ಸೈಟ್‌</string>
     <string name="website_info_summary">ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ ಅನ್ನು ಭೇಟಿಮಾಡಿ</string>
     <string name="news_info_title">ಸುದ್ದಿ</string>
-    <string name="news_info_summary">ನವೀಕರಣೆ ಮತ್ತು ಇತರ ಸುದ್ದಿಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ</string>
+    <string name="news_info_summary">ಅಪ್ಡೇಟ್ಗಳು ಮತ್ತು ಇತರ ಸುದ್ದಿಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ</string>
     <string name="forum_info_title">ವೇದಿಕೆಗಳು</string>
     <string name="forum_info_summary">ವೇದಿಕೆಯ ಪೋಸ್ಟ್ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
     <string name="error_open_url">ಬ್ರೌಸರ್ನಲ್ಲಿ URL ಅನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>

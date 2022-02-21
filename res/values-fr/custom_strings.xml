@@ -31,8 +31,8 @@
     <string name="check_for_update">Vérifier les mises à jour</string>
     <string name="menu_delete_update">Supprimer</string>
     <string name="menu_export_update">Exporter la mise à jour</string>
-    <string name="update_found_notification">Une mise à jour système est disponible</string>
-    <string name="snack_no_updates_found">Aucune nouvelle mise à jour disponible</string>
+    <string name="update_found_notification">Mise à jour système disponible</string>
+    <string name="snack_no_updates_found">Pas de mise à jour disponible</string>
     <string name="snack_updates_check_failed">La vérification de nouvelles mises à jour a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
     <string name="snack_download_failed">Le téléchargement a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>
     <string name="snack_download_verification_failed">La vérification de la mise à jour a échoué.</string>

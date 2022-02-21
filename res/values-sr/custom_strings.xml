@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Верификација анжурирања</string>
     <string name="list_no_updates">Нису пронађена нова ажурирања.</string>
     <string name="blocked_update_dialog_title">Ажурирање је блокирано</string>
+    <string name="blocked_update_dialog_summary">Ово ажурирање захтева ручни поступак чисте инсталације (брисање/форматирање партиције података пре инсталирања исправке). Преузмите фајл с наше веб странице, поново покрените у режим опоравка и следите процедуре да бисте то урадили.</string>
     <string name="action_download">Преузми</string>
     <string name="action_pause">Паузирај</string>
     <string name="action_resume">Настави</string>

@@ -43,6 +43,7 @@
     <string name="list_verifying_update">Tikrinamas atnaujinimas</string>
     <string name="list_no_updates">Nerasta naujų atnaujinimų.</string>
     <string name="blocked_update_dialog_title">Atnaujinimas užblokuotas</string>
+    <string name="blocked_update_dialog_summary">Šiam naujinimui reikalinga neautomatinio švaraus diegimo procedūra (duomenų skaidinio išvalymas / formatavimas prieš diegiant naujinimą). Atsisiųskite naujinimą iš mūsų svetainės, paleiskite iš naujo į atkūrimo režimą ir vykdykite procedūras.</string>
     <string name="action_download">Atsisiųsti</string>
     <string name="action_pause">Pristabdyti</string>
     <string name="action_resume">Tęsti</string>

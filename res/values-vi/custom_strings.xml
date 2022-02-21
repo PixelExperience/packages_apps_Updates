@@ -18,7 +18,7 @@
     <string name="app_name">Cập nhật hệ thống</string>
     <string name="export_channel_title">Hoàn thành xuất</string>
     <string name="new_updates_channel_title">Bản cập nhật mới</string>
-    <string name="ongoing_channel_title">Đang tải xuống</string>
+    <string name="ongoing_channel_title">Tải xuống đang diễn ra</string>
     <string name="update_failed_channel_title">Cập nhật thất bại</string>
     <string name="verification_failed_notification">Xác thực thất bại</string>
     <string name="verifying_download_notification">Đang xác thực bản cập nhật</string>
@@ -31,19 +31,19 @@
     <string name="check_for_update">Kiểm tra cập nhật</string>
     <string name="menu_delete_update">Xóa</string>
     <string name="menu_export_update">Xuất bản cập nhật</string>
-    <string name="update_found_notification">Bản cập nhật hệ thống đã có</string>
+    <string name="update_found_notification">Đã có bản cập nhật hệ thống</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
-    <string name="snack_updates_check_failed">Kiểm tra bản cập nhật không thành công. Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
-    <string name="snack_download_failed">Tải xuống không thành công. Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
+    <string name="snack_updates_check_failed">Kiểm tra bản cập nhật không thành công. Vui lòng kiểm tra kết nối mạng của bạn và thử lại sau.</string>
+    <string name="snack_download_failed">Tải xuống không thành công. Vui lòng kiểm tra kết nối mạng của bạn và thử lại sau.</string>
     <string name="snack_download_verification_failed">Xác thực bản cập nhật thất bại.</string>
     <string name="snack_download_verified">Tải xuống hoàn tất.</string>
-    <string name="snack_update_not_installable">Bản cập nhật này không thể được cài đặt lên trên bản hiện tại</string>
-    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> of <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
+    <string name="snack_update_not_installable">Không thể cài đặt bản cập nhật này trên bản dựng hiện tại.</string>
+    <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> của <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> của <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Đang xác thực bản cập nhật</string>
     <string name="list_no_updates">Không tìm thấy bản cập nhật mới.</string>
     <string name="blocked_update_dialog_title">Cập nhật bị chặn</string>
-    <string name="blocked_update_dialog_summary">Bản cập nhật này yêu cầu quy trình cài đặt sạch thủ công (Xóa / Định dạng phân vùng Dữ liệu trước khi cài đặt bản cập nhật). Vui lòng tải xuống bản cập nhật từ trang web của chúng tôi, khởi động lại ở chế độ khôi phục và làm theo các quy trình để làm như vậy.</string>
+    <string name="blocked_update_dialog_summary">Bản cập nhật này yêu cầu quy trình cài đặt sạch thủ công (Xóa/Định dạng phân vùng Dữ liệu trước khi cài đặt bản cập nhật). Vui lòng tải xuống bản cập nhật từ trang web của chúng tôi, khởi động lại ở chế độ khôi phục và làm theo các quy trình để làm như vậy.</string>
     <string name="action_download">Tải xuống</string>
     <string name="action_pause">Tạm dừng</string>
     <string name="action_resume">Tiếp tục</string>
@@ -54,8 +54,8 @@
     <string name="pause_button">Tạm dừng</string>
     <string name="resume_button">Tiếp tục</string>
     <string name="reboot">Khởi động lại</string>
-    <string name="reboot_needed_dialog_title">Cần phải khởi động lại.</string>
-    <string name="reboot_needed_dialog_summary">Để hoàn tất quá trình cài đặt bản cập nhật, thiết bị của bạn cần được khởi động lại. Bạn có muốn khởi động lại bây giờ không?</string>
+    <string name="reboot_needed_dialog_title">Cần phải khởi động lại</string>
+    <string name="reboot_needed_dialog_summary">Để hoàn tất quá trình cài đặt bản cập nhật, thiết bị của bạn cần được khởi động lại. Bạn có muốn khởi động lại ngay không?</string>
     <string name="details_button">Xem chi tiết</string>
     <string name="apply_update_dialog_title">Áp dụng cập nhật</string>
     <string name="apply_update_dialog_message">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>.\n\nNếu bạn chạm <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ tự động khởi động lại trong chế độ phục hồi để cài đặt bản cập nhật.\n\nLưu ý: Tính năng này yêu cầu một chế độ phục hồi tương thích hoặc các bản cập nhật sẽ cần phải được cài đặt thủ công.</string>
@@ -92,5 +92,5 @@
     <string name="news_info_summary">Luôn giữ thông tin về cập nhật và tin tức khác</string>
     <string name="forum_info_title">Diễn đàn</string>
     <string name="forum_info_summary">Xem các bài đăng diễn đàn</string>
-    <string name="error_open_url">Không thể mở URL trong trình duyệt</string>
+    <string name="error_open_url">Không thể mở địa chỉ trong trình duyệt</string>
 </resources>
