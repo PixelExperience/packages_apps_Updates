@@ -43,6 +43,7 @@
     <string name="list_verifying_update">S\'està verificant l\'actualització</string>
     <string name="list_no_updates">No s\'han trobat noves actualitzacions.</string>
     <string name="blocked_update_dialog_title">Actualització bloquejada</string>
+    <string name="blocked_update_dialog_summary">Aquesta actualització requereix un procediment d\'instal·lació manual net (Buidar/Formatejar la partició de dades abans d\'instal·lar l\'actualització). Baixeu l\'actualització del nostre lloc web, reinicieu al mode de recuperació i seguiu els procediments per fer-ho.</string>
     <string name="action_download">Baixa</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Reprèn</string>

@@ -32,16 +32,14 @@
     <string name="menu_delete_update">ଡିଲିଟ୍ କରନ୍ତୁ |</string>
     <string name="menu_export_update">ରପ୍ତାନି ଅଦ୍ୟତନ |</string>
     <string name="update_found_notification">ସିଷ୍ଟମ୍ ଅପଡେଟ୍ ଉପଲବ୍ଧ |</string>
-    <string name="snack_no_updates_found">କଣସି ନୂତନ ଅଦ୍ୟତନ ମିଳିଲା ନାହିଁ |</string>
+    <string name="snack_no_updates_found">କୌଣସି ନୂଆ ଅପଡେଟ୍ ମିଳିଲା ନାହିଁ</string>
     <string name="snack_updates_check_failed">ଅଦ୍ୟତନ ଯାଞ୍ଚ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |</string>
     <string name="snack_download_failed">ଡାଉନଲୋଡ୍ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |</string>
     <string name="snack_download_verification_failed">ଅଦ୍ୟତନ ଯାଞ୍ଚ ବିଫଳ ହେଲା |</string>
     <string name="snack_download_verified">ଡାଉନଲୋଡ୍ ସମାପ୍ତ ହୋଇଛି |</string>
     <string name="snack_update_not_installable">ସାମ୍ପ୍ରତିକ ବିଲ୍ଡର ଉପରେ ଏହି ଅଦ୍ୟତନ ସଂସ୍ଥାପିତ ହୋଇପାରିବ ନାହିଁ |</string>
-    <string name="list_download_progress_new">ଅଗ୍ରଗତି ନୂତନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
-    <string name="list_download_progress_eta_new">ପ୍ରଗତି ଇଟା ନୂଆ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
     <string name="list_verifying_update">ଅଦ୍ୟତନ ଯାଞ୍ଚ କରୁଛି |</string>
-    <string name="list_no_updates">କଣସି ନୂତନ ଅଦ୍ୟତନ ମିଳିଲା ନାହିଁ |</string>
+    <string name="list_no_updates">କୌଣସି ନୂଆ ଅପଡେଟ୍ ମିଳିଲା ନାହିଁ।</string>
     <string name="blocked_update_dialog_title">ଅଦ୍ୟତନ ଅବରୋଧିତ |</string>
     <string name="blocked_update_dialog_summary">ଏହି ଅପଡେଟ୍ ପାଇଁ ଏକ ମାନୁଆଲ୍ କ୍ଲିନ୍ ଇନଷ୍ଟଲ୍ ପ୍ରଣାଳୀ ଆବଶ୍ୟକ (ଅପଡେଟ୍ ଇନଷ୍ଟଲ୍ କରିବା ପୂର୍ବରୁ ଡାଟା ବିଭାଜନକୁ ୱିପିଂ / ଫର୍ମାଟିଂ) | ଦୟାକରି ଆମର ୱେବସାଇଟ୍ ରୁ ଅପଡେଟ୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ, ପୁନରୁଦ୍ଧାର ମୋଡ୍ କୁ ପୁନ bo ବୁଟ୍ କରନ୍ତୁ ଏବଂ ଏହା କରିବା ପାଇଁ ପଦ୍ଧତିଗୁଡିକ ଅନୁସରଣ କରନ୍ତୁ |</string>
     <string name="action_download">ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
@@ -58,8 +56,6 @@
     <string name="reboot_needed_dialog_summary">ଅଦ୍ୟତନର ସଂସ୍ଥାପନ ସଂପୂର୍ଣ୍ଣ କରିବାକୁ, ଆପଣଙ୍କର ଡିଭାଇସ୍ ପୁନ rest ଆରମ୍ଭ ହେବା ଆବଶ୍ୟକ | ଆପଣ ବର୍ତ୍ତମାନ ପୁନ rest ଆରମ୍ଭ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
     <string name="details_button">ବିବରଣୀ ଦେଖନ୍ତୁ |</string>
     <string name="apply_update_dialog_title">ଅଦ୍ୟତନ ପ୍ରୟୋଗ କରନ୍ତୁ |</string>
-    <string name="apply_update_dialog_message">ଆପଣ ଅପଗ୍ରେଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି .. ଡିଭାଇସ୍ ଅପଡେଟ୍ ସଂସ୍ଥାପନ କରିବାକୁ ପୁନରୁଦ୍ଧାର ମୋଡରେ ପୁନ rest ଆରମ୍ଭ ହେବ | ଟିପନ୍ତୁ: ଏହି ବ feature ଶିଷ୍ଟ୍ୟ ଏକ ସୁସଙ୍ଗତ ପୁନରୁଦ୍ଧାର ଆବଶ୍ୟକ କରେ କିମ୍ବା ଅପଡେଟ୍ ମାନୁଆଲୀ ସଂସ୍ଥାପିତ ହେବା ଆବଶ୍ୟକ |</string>
-    <string name="apply_update_dialog_message_ab">ଆପଣ id = \"ଅପଡେଟ୍ ନାମ\" କୁ ଅପଗ୍ରେଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଆପଣ id = \"ok\" ଦବାନ୍ତୁ ଡିଭାଇସ୍ ପୃଷ୍ଠଭୂମିରେ ସଂସ୍ଥାପନ ଆରମ୍ଭ କରିବ | ଥରେ ସମାପ୍ତ ହୋଇଗଲେ, ଆପଣଙ୍କୁ ପୁନ bo ବୁଟ କରିବାକୁ କୁହାଯିବ |</string>
     <string name="installing_update">ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ସଂସ୍ଥାପନ କରୁଛି |</string>
     <string name="installing_update_error">ତ୍ରୁଟି ସଂସ୍ଥାପନ କରନ୍ତୁ |</string>
     <string name="installing_update_finished">ଅଦ୍ୟତନ ସଂସ୍ଥାପିତ ହୋଇଛି |</string>
@@ -72,16 +68,16 @@
     <string name="notification_export_fail">ଆଭ୍ୟନ୍ତରୀଣ ସଂରକ୍ଷଣ ସ୍ଥାନକୁ ଅଦ୍ୟତନ ରପ୍ତାନି କରିବାରେ ବିଫଳ |</string>
     <string name="toast_already_exporting">ପୂର୍ବରୁ ଏକ ଅଦ୍ୟତନ ରପ୍ତାନି କରୁଛି |</string>
     <plurals name="eta_seconds">
-        <item quantity="one">1 ସେକେଣ୍ଡ ବାକି ଅଛି |</item>
-        <item quantity="other">&lt;xliff: g id = "count"&gt;% d &lt;/ xliff: g&gt; ସେକେଣ୍ଡ ବାକି ଅଛି |</item>
+        <item quantity="one">1 ସେକେଣ୍ଡ ବାକି</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ସେକେଣ୍ଡ ବାକି</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">ଗୋଟିଏ ମିନିଟ୍ ବାକି ଅଛି</item>
-        <item quantity="other">id = \"ଗଣନା\" ମିନିଟ୍ ବାକି ଅଛି |</item>
+        <item quantity="one">1 ମିନିଟ୍ ବାକି</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ମିନିଟ୍ ବାକି</item>
     </plurals>
     <plurals name="eta_hours">
-        <item quantity="one">ଏକ ଘଣ୍ଟା ବାକି ଅଛି</item>
-        <item quantity="other">id = \"ଗଣନା\" ଘଣ୍ଟା ବାକି ଅଛି |</item>
+        <item quantity="one">1 ଘଣ୍ଟା ବାକି</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ଘଣ୍ଟା ବାକି</item>
     </plurals>
     <string name="update_on_mobile_data_title">ଚେତାବନୀ</string>
     <string name="update_on_mobile_data_message">ଆପଣ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରି ଏକ ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ଡାଉନଲୋଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଯାହା ଉଚ୍ଚ ଡାଟା ବ୍ୟବହାର ହେବାର ସମ୍ଭାବନା | ଆପଣ ଆଗକୁ ବ to ିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
