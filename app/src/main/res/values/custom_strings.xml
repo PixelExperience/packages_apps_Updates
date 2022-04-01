@@ -114,4 +114,13 @@
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">View forum posts</string>
     <string name="error_open_url">Failed to open URL in browser</string>
+
+    <!-- Local update -->
+    <string name="local_update_title">Local update</string>
+    <string name="local_update_summary">Apply update from local storage</string>
+    <string name="local_update_import_success">You have chosen:\n%1$s\n\nDo you want to install it?</string>
+    <string name="local_update_import_disabled">Can\'t import local update when downloading or installing update</string>
+    <string name="local_update_import_failure">Failed to import local update</string>
+    <string name="local_update_import_install">Install</string>
+    <string name="local_update_import_progress">Importing local update\u2026</string>
 </resources>

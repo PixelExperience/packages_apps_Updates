@@ -47,6 +47,7 @@ import org.pixelexperience.ota.misc.StringGenerator;
 import org.pixelexperience.ota.misc.Utils;
 import org.pixelexperience.ota.model.UpdateInfo;
 import org.pixelexperience.ota.model.UpdateStatus;
+import org.pixelexperience.ota.model.Update;
 
 import java.text.DateFormat;
 import java.text.NumberFormat;
@@ -376,7 +377,8 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
 
         deleteAction.setVisible(canDelete);
         exportAction.setVisible(
-                Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.VERIFIED);
+                Utils.getPersistentStatus(mContext) == UpdateStatus.Persistent.VERIFIED &&
+                !mUpdate.getDownloadId().equals(Update.LOCAL_ID));
 
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
