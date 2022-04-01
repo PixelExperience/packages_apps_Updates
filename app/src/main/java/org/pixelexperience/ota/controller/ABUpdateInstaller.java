@@ -179,6 +179,10 @@ public class ABUpdateInstaller {
             return;
         }
 
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit()
+                .putString(Constants.PREF_INSTALLING_AB_ID, mDownloadId)
+                .apply();
+
         long offset;
         String[] headerKeyValuePairs;
         try {
@@ -198,6 +202,9 @@ public class ABUpdateInstaller {
             zipFile.close();
         } catch (IOException | IllegalArgumentException e) {
             Log.e(TAG, "Could not prepare " + file, e);
+            PreferenceManager.getDefaultSharedPreferences(mContext).edit()
+                    .remove(Constants.PREF_INSTALLING_AB_ID)
+                    .apply();
             mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
             mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
             return;
@@ -212,6 +219,9 @@ public class ABUpdateInstaller {
             }
             if (!mBound) {
                 Log.e(TAG, "Could not bind");
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit()
+                        .remove(Constants.PREF_INSTALLING_AB_ID)
+                        .apply();
                 mUpdaterController.setStatus(UpdateStatus.INSTALLATION_FAILED);
                 mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLATION_FAILED);
                 return;
@@ -220,10 +230,6 @@ public class ABUpdateInstaller {
 
         mUpdaterController.setStatus(UpdateStatus.INSTALLING);
         mUpdaterController.notifyUpdateChange(UpdateStatus.INSTALLING);
-
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit()
-                .putString(Constants.PREF_INSTALLING_AB_ID, mDownloadId)
-                .apply();
 
         String[] finalHeaderKeyValuePairs = headerKeyValuePairs;
         new Thread(() -> {

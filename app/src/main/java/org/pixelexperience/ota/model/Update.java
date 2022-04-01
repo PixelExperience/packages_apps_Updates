@@ -20,6 +20,8 @@ import java.io.File;
 
 public class Update extends UpdateBase implements UpdateInfo {
 
+    public static final String LOCAL_ID = "local";
+
     private UpdateStatus mStatus = UpdateStatus.UNKNOWN;
     private File mFile;
     private int mProgress;
