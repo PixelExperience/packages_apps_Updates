@@ -19,7 +19,7 @@
     <string name="export_channel_title">Completamento dell\'esportazione</string>
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="ongoing_channel_title">Download in corso</string>
-    <string name="update_failed_channel_title">Aggiornamenti non riusciti</string>
+    <string name="update_failed_channel_title">Aggiornamento non riuscito</string>
     <string name="verification_failed_notification">Verifica non riuscita</string>
     <string name="verifying_download_notification">Verifica dell\'aggiornamento</string>
     <string name="downloading_notification">Download in corso</string>
@@ -27,22 +27,22 @@
     <string name="download_paused_error_notification">Errore durante il download</string>
     <string name="download_completed_notification">Download completato</string>
     <string name="download_starting_notification">Avvio download</string>
-    <string name="update_failed_notification">Aggiornamenti non riusciti</string>
+    <string name="update_failed_notification">Aggiornamento non riuscito</string>
     <string name="check_for_update">Verifica la presenza di aggiornamenti</string>
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_export_update">Esporta aggiornamento</string>
     <string name="update_found_notification">Aggiornamento di sistema disponibile</string>
     <string name="snack_no_updates_found">Nessun aggiornamento disponibile</string>
-    <string name="snack_updates_check_failed">La verifica di aggiornamenti è fallita. Controlla la connessione ad internet e riprova più tardi.</string>
-    <string name="snack_download_failed">Il download non è riuscito. Controlla la connessione ad internet e riprova più tardi.</string>
+    <string name="snack_updates_check_failed">La ricerca di aggiornamenti non è andata a buon fine. Controlla la connessione internet e riprova più tardi.</string>
+    <string name="snack_download_failed">Il download non è riuscito. Controlla la connessione internet e riprova più tardi.</string>
     <string name="snack_download_verification_failed">Verifica dell\'aggiornamento fallita.</string>
     <string name="snack_download_verified">Download completato.</string>
-    <string name="snack_update_not_installable">Aggiornamento incompatibile con la versione corrente.</string>
+    <string name="snack_update_not_installable">L\'aggiornamento non è compatibile con la versione attuale.</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> di <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">Verifica dell\'aggiornamento</string>
     <string name="list_no_updates">Nessun aggiornamento disponibile.</string>
-    <string name="blocked_update_dialog_title">Aggiornamento bloccato</string>
+    <string name="blocked_update_dialog_title">Aggiornamento bloccato.</string>
     <string name="blocked_update_dialog_summary">Questo aggiornamento richiede un\'installazione pulita manuale (Pulizia/Formattazione della partizione Data prima di installare l\'aggiornamento). Si prega di scaricare l\'aggiornamento dal nostro sito web, riavviare in modalità recovery e seguire le istruzioni.</string>
     <string name="action_download">Scarica</string>
     <string name="action_pause">Pausa</string>

@@ -37,12 +37,13 @@
     <string name="snack_download_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
     <string name="snack_download_verification_failed">การตรวจสอบการยืนยันอัปเดตล้มเหลว</string>
     <string name="snack_download_verified">ดาวน์โหลดเสร็จสมบูรณ์</string>
-    <string name="snack_update_not_installable">การปรับปรุงนี้ไม่สามารถติดตั้งบนโครงสร้างปัจจุบัน</string>
+    <string name="snack_update_not_installable">การอัปเดตนี้ไม่สามารถติดตั้งบนบิลด์ปัจจุบันของคุณได้</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
     <string name="list_verifying_update">กำลังตรวจสอบการอัปเดต</string>
     <string name="list_no_updates">ไม่พบการอัพเดตใหม่.</string>
     <string name="blocked_update_dialog_title">การอัปเดตถูกปิดกั้น</string>
+    <string name="blocked_update_dialog_summary">การอัปเดตนี้ต้องใช้ขั้นตอนการติดตั้งใหม่ทั้งหมด (Wipe และ Format พาร์ทิชันข้อมูลก่อนติดตั้งการอัปเดตนี้) โปรดดาวน์โหลดการอัปเดตจากเว็บไซต์ของเรา รีบูตเข้าสู่โหมดการกู้คืน และปฏิบัติตามขั้นตอนดังกล่าว</string>
     <string name="action_download">ดาวน์โหลด</string>
     <string name="action_pause">หยุดชั่วคราว</string>
     <string name="action_resume">ดำเนินการต่อ</string>
