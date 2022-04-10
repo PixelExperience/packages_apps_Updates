@@ -40,7 +40,7 @@
     <string name="snack_update_not_installable">ಈಗಿನ ಬಿಲ್ಡ್  ಮೇಲೆ ಈ ಅಪ್ಡೇಟ್ ಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> of <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> ರಲ್ಲಿ <xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
-    <string name="list_verifying_update">ನವಿಕರಣವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="list_verifying_update">ಅಪ್ಡೇಟ್ ಅನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="list_no_updates">ಯಾವುದೇ ಹೊಸ ಅಪ್ಡೇಟ್ ಪತ್ತೆಯಾಗಲಿಲ್ಲ.</string>
     <string name="blocked_update_dialog_title">ಅಪ್ಡೇಟ್ ಬ್ಲಾಕ್ ಆಗಿದೆ</string>
     <string name="blocked_update_dialog_summary">ಈ ಅಪ್‌ಡೇಟ್‌ಗೆ ಮೇನುಯಲ್ ಕ್ಲೀನ್ ಇನ್‌ಸ್ಟಾಲ್ ಕಾರ್ಯವಿಧಾನದ ಅಗತ್ಯವಿದೆ (ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ಸ್ಥಾಪಿಸುವ ಮೊದಲು ಡೇಟಾ ವಿಭಾಗವನ್ನು ಅಳಿಸುವುದು/ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡುವುದು). ದಯವಿಟ್ಟು ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಿಂದ ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ, ರಿಕವರಿ ಮೋಡ್‌ಗೆ ರೀಬೂಟ್ ಮಾಡಿ ಮತ್ತು ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಅನುಸರಿಸಿ.</string>
