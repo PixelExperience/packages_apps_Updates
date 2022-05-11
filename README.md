@@ -11,9 +11,10 @@ it with the right key to update the one in the system partition. To do this:
 
  - Place this directory anywhere in the Android source tree
  - Generate a keystore and keystore.properties using `gen-keystore.sh`
- - Build the dependencies running `make UpdatesStudio` from the root of the
-   Android source tree. This command will add the needed libraries in
-   `system_libraries/`.
+ - Build the dependencies by running `m framework` from the root of the
+   Android source tree.
+ - Create `system_libs/` directory in Updates repo and copy `classes.jar` file
+   from `out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/` into it.
 
 You need to do the above once, unless Android Studio can't find some symbol.
-In this case, rebuild the system libraries with `make UpdatesStudio`.
+In this case, rebuild the system libraries with `m framework`.
