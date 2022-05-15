@@ -33,9 +33,9 @@
     <string name="menu_export_update">ส่งออกการอัปเดต</string>
     <string name="update_found_notification">มีการอัปเดตใหม่ในขณะนี้</string>
     <string name="snack_no_updates_found">ไม่พบการอัปเดตใหม่</string>
-    <string name="snack_updates_check_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
-    <string name="snack_download_failed">ตรวจสอบเพื่ออัปเดตไม่ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต และลองใหม่อีกครั้ง</string>
-    <string name="snack_download_verification_failed">การตรวจสอบการยืนยันอัปเดตล้มเหลว</string>
+    <string name="snack_updates_check_failed">การตรวจสอบเอัปเดตล้มเหลว โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตและลองใหม่อีกครั้ง</string>
+    <string name="snack_download_failed">การดาวน์โหลดล้มเหลว โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตและลองใหม่อีกครั้ง</string>
+    <string name="snack_download_verification_failed">การตรวจสอบการอัปเดตล้มเหลว</string>
     <string name="snack_download_verified">ดาวน์โหลดเสร็จสมบูรณ์</string>
     <string name="snack_update_not_installable">การอัปเดตนี้ไม่สามารถติดตั้งบนบิลด์ปัจจุบันของคุณได้</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> ของ <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>

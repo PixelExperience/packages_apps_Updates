@@ -50,7 +50,7 @@
     <string name="action_install">Instalar</string>
     <string name="action_delete">Borrar</string>
     <string name="confirm_delete_dialog_title">Borrar archivo</string>
-    <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
+    <string name="confirm_delete_dialog_message">¿Deseas eliminar el archivo de la actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Reanudar</string>
     <string name="reboot">Reiniciar</string>
