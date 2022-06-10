@@ -55,7 +55,7 @@
     <string name="resume_button">Fortsetzen</string>
     <string name="reboot">Neustart</string>
     <string name="reboot_needed_dialog_title">Neustart erforderlich</string>
-    <string name="reboot_needed_dialog_summary">Um die Installation des Updates abzuschließen, muss Ihr Gerät neu gestartet werden. Möchtest du es jetzt neu starten?</string>
+    <string name="reboot_needed_dialog_summary">Um die Installation des Updates abzuschließen, muss Ihr Gerät neu gestartet werden. Möchten sie es jetzt neu starten?</string>
     <string name="details_button">Details anzeigen</string>
     <string name="apply_update_dialog_title">Update installieren</string>
     <string name="apply_update_dialog_message">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s</xliff:g> drücken, wird das Gerät im Recovery-Modus gestartet, um das Update durchzuführen.\n\nHinweis: Diese Funktion erfordert ein kompatibles Recovery-System, anderenfalls muss das Update manuell installiert werden.</string>
@@ -88,7 +88,7 @@
     <string name="checkbox_mobile_data_warning">Nicht mehr anzeigen</string>
     <string name="maintainer_info_title">Betreuer</string>
     <string name="donate_info_title">Spenden</string>
-    <string name="donate_info_summary">Unterstütze die Entwicklung</string>
+    <string name="donate_info_summary">Unterstützen Sie die Entwicklung</string>
     <string name="website_info_title">Webseite</string>
     <string name="website_info_summary">Besuchen Sie unsere Webseite</string>
     <string name="news_info_title">Neuigkeiten</string>
