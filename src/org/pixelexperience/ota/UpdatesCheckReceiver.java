@@ -130,6 +130,9 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             // Set a repeating alarm on boot to check for new updates once per day
             scheduleRepeatingUpdatesCheck(context);
+
+            // Cleanup download dir
+            cleanupDownloadsDir(context);
         }
 
         if (!Utils.isNetworkAvailable(context)) {
