@@ -15,62 +15,62 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Sistem yeniləməsi</string>
-    <string name="export_channel_title">İxrac tamamlandı</string>
-    <string name="new_updates_channel_title">Ən son yeniləmələr</string>
+    <string name="app_name">Sistem güncəlləməsi</string>
+    <string name="export_channel_title">Xaricə köçürmə tamamlandı</string>
+    <string name="new_updates_channel_title">Yeni güncəlləmələr</string>
     <string name="ongoing_channel_title">Davam edən endirmələr</string>
-    <string name="update_failed_channel_title">Yeniləmə uğursuz oldu</string>
+    <string name="update_failed_channel_title">Güncəllənmədi</string>
     <string name="verification_failed_notification">Təsdiqləmə uğursuz oldu</string>
-    <string name="verifying_download_notification">Yeniləmə təsdiqlənir</string>
+    <string name="verifying_download_notification">Güncəlləmə təsdiqlənir</string>
     <string name="downloading_notification">Endirilir</string>
     <string name="download_paused_notification">Endirməyə fasilə verildi</string>
     <string name="download_paused_error_notification">Endirmə xətası</string>
     <string name="download_completed_notification">Endirmə tamamlandı</string>
     <string name="download_starting_notification">Endirmə başladılır</string>
-    <string name="update_failed_notification">Yeniləmə uğursuz oldu</string>
-    <string name="check_for_update">Yeniləmələri yoxla</string>
+    <string name="update_failed_notification">Güncəllənmədi</string>
+    <string name="check_for_update">Güncəlləmələri yoxla</string>
     <string name="menu_delete_update">Sil</string>
-    <string name="menu_export_update">Yeniləməni ixrac et</string>
-    <string name="update_found_notification">Sistem yeniləməsi mövcuddur</string>
-    <string name="snack_no_updates_found">Yeniləmə yoxdur</string>
-    <string name="snack_updates_check_failed">Yeniləmələr yoxlanıla bilmədi. Zəhmət olmasa internet bağlantınızı yoxlayıb yenidən sınayın.</string>
+    <string name="menu_export_update">Güncəlləməni xaricə köçür</string>
+    <string name="update_found_notification">Sistem güncəlləməsi mövcuddur</string>
+    <string name="snack_no_updates_found">Güncəlləmə yoxdur</string>
+    <string name="snack_updates_check_failed">Güncəlləmələr yoxlanıla bilmədi. Zəhmət olmasa internet bağlantınızı yoxlayıb yenidən sınayın.</string>
     <string name="snack_download_failed">Endirmə uğursuz oldu. Zəhmət olmasa internet bağlantısını yoxlayıb yenidən sınayın.</string>
-    <string name="snack_download_verification_failed">Yeniləmə təsdiqləməsi uğursuz oldu.</string>
+    <string name="snack_download_verification_failed">Güncəlləmə təsdiqlənmədi.</string>
     <string name="snack_download_verified">Endirmə tamamlandı.</string>
-    <string name="snack_update_not_installable">Bu yeniləmə hazırki quraşdırmanın üzərinə quraşdırıla bilməz.</string>
+    <string name="snack_update_not_installable">Bu güncəlləmə hazırki quraşdırmanın üzərinə quraşdırıla bilməz.</string>
     <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
-    <string name="list_verifying_update">Yeniləmə təsdiqlənir</string>
-    <string name="list_no_updates">Yeniləmə tapılmadı.</string>
-    <string name="blocked_update_dialog_title">Yeniləmə əngəlləndi</string>
-    <string name="blocked_update_dialog_summary">Bu yeniləmə əllə təmiz bir quraşdırma proseduru tələb edir. Yeniləməni quraşdırmazdan əvvəl Verilənlər bölməsini (Data partition) silin və formatlayın (Wipe/Format). Zəhmət olmasa yeniləməni veb saytımızdan endirin, cihazı bərpa rejimində yenidən başladın və prosedurlara əməl edin.</string>
+    <string name="list_verifying_update">Güncəlləmə təsdiqlənir</string>
+    <string name="list_no_updates">Güncəlləmə tapılmadı.</string>
+    <string name="blocked_update_dialog_title">Güncəlləmə əngəlləndi</string>
+    <string name="blocked_update_dialog_summary">Bu güncəlləmə əllə təmiz bir quraşdırma proseduru tələb edir. Güncəlləməni quraşdırmazdan əvvəl Verilənlər bölməsini (Data partition) silin və formatlayın (Wipe/Format). Zəhmət olmasa güncəlləməni veb saytımızdan endirin, cihazı bərpa rejimində yenidən başladın və prosedurlara əməl edin.</string>
     <string name="action_download">Endir</string>
     <string name="action_pause">Fasilə</string>
     <string name="action_resume">Davam etdir</string>
     <string name="action_install">Quraşdır</string>
     <string name="action_delete">Sil</string>
     <string name="confirm_delete_dialog_title">Faylı sil</string>
-    <string name="confirm_delete_dialog_message">Seçilmiş yeniləmə faylı silinsin?</string>
+    <string name="confirm_delete_dialog_message">Seçilmiş güncəlləmə faylı silinsin?</string>
     <string name="pause_button">Fasilə</string>
     <string name="resume_button">Davam etdir</string>
     <string name="reboot">Yenidən başlat</string>
     <string name="reboot_needed_dialog_title">Yenidən başlatmaq lazımdır</string>
-    <string name="reboot_needed_dialog_summary">Yeniləmənin quraşdırılmasını tamamlamaq üçün cihazınız yenidən başladılmalıdır. İndi yenidən başladılsın?</string>
+    <string name="reboot_needed_dialog_summary">Güncəlləmənin quraşdırılmasını tamamlamaq üçün cihazınız yenidən başladılmalıdır. İndi yenidən başladılsın?</string>
     <string name="details_button">Təfsilatlara bax</string>
-    <string name="apply_update_dialog_title">Yeniləməni tətbiq et</string>
-    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yüksəldirsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bassanız, cihaz yeniləməni quraşdırmaq üçün bərpa rejimində yenidən başlayacaq.\n\nQeyd: Bu özəlliyin uyğun bir Bərpa mühitinə ehtiyacı var və ya yeniləmələr əllə quraşdırılmalıdır.</string>
+    <string name="apply_update_dialog_title">Güncəlləməni tətbiq et</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yüksəldirsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bassanız, cihaz güncəlləməni quraşdırmaq üçün bərpa rejimində yenidən başlayacaq.\n\nQeyd: Bu özəlliyin uyğun bir Bərpa mühitinə ehtiyacı var və ya güncəlləmələr əllə quraşdırılmalıdır.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> yüksəldirsiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> düyməsinə bassanız, cihaz arxaplanda quraşdırılmağa başlıyacaq.\n\nƏməliyyat bitəndə, yenidən başladılmalıdır.</string>
-    <string name="installing_update">Yeniləmə paketi quraşdırılır</string>
+    <string name="installing_update">Güncəlləmə paketi quraşdırılır</string>
     <string name="installing_update_error">Quraşdırma xətası</string>
-    <string name="installing_update_finished">Yeniləmə quraşdırıldı</string>
+    <string name="installing_update_finished">Güncəlləmə quraşdırıldı</string>
     <string name="finalizing_package">Paket quraşdırılması tamamlanır</string>
-    <string name="dialog_prepare_zip_message">Yeniləmə ilkin hazırlığı</string>
+    <string name="dialog_prepare_zip_message">Güncəlləməyə ilkin hazırlıq</string>
     <string name="dialog_battery_low_title">Batereya zəifdir</string>
     <string name="dialog_battery_low_message_pct">Batereya səviyyəsi çox aşağıdır, davam etmək üçün ən az batereya səviyyəsi <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
-    <string name="dialog_export_title">Yeniləmə daxili anbara ixrac edilir</string>
-    <string name="notification_export_success">Yeniləmə daxili anbara ixrac edildi</string>
-    <string name="notification_export_fail">Yeniləməni daxili anbara ixrac etmə uğursuz oldu</string>
-    <string name="toast_already_exporting">Artıq bir yeniləmə ixrac edilir</string>
+    <string name="dialog_export_title">Güncəlləmə daxili anbara köçürülür</string>
+    <string name="notification_export_success">Güncəlləmə daxili anbara köçürüldü</string>
+    <string name="notification_export_fail">Güncəlləmə daxili anbara köçürülmədi</string>
+    <string name="toast_already_exporting">Artıq bir güncəlləmə xaricə köçürülür</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 saniyə qalıb</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saniyə qalıb</item>
@@ -84,7 +84,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saat qalıb</item>
     </plurals>
     <string name="update_on_mobile_data_title">Xəbərdarlıq</string>
-    <string name="update_on_mobile_data_message">Böyük ehtimalla mobil verilənlərdən istifadə edərək yüksək verilənlər istifadəsinə səbəb olacaq yeniləmə paketi endirirsiniz. Davam etmək istəyirsiniz?</string>
+    <string name="update_on_mobile_data_message">Böyük ehtimalla mobil verilənlərdən istifadə edərək yüksək verilənlər istifadəsinə səbəb olacaq güncəlləmə paketi endirirsiniz. Davam etmək istəyirsiniz?</string>
     <string name="checkbox_mobile_data_warning">Bir də göstərmə</string>
     <string name="maintainer_info_title">Cihaz tərtibatçısı</string>
     <string name="donate_info_title">İanə verin</string>
@@ -92,7 +92,7 @@
     <string name="website_info_title">Veb sayt</string>
     <string name="website_info_summary">Veb saytımızı ziyarət edin</string>
     <string name="news_info_title">Xəbərlər</string>
-    <string name="news_info_summary">Yeniləmələr və digər xəbərlər haqqında məlumat alın</string>
+    <string name="news_info_summary">Güncəlləmələr və digər xəbərlər haqqında məlumat alın</string>
     <string name="forum_info_title">Forum</string>
     <string name="forum_info_summary">Forum göndərişlərinə bax</string>
     <string name="error_open_url">URL veb səyyahda açılmadı</string>
