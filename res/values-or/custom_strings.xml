@@ -54,7 +54,7 @@
     <string name="reboot">ପୁନଃଆରମ୍ଭ</string>
     <string name="reboot_needed_dialog_title">ପୁନଃଆରମ୍ଭ ଆବଶ୍ୟକ</string>
     <string name="reboot_needed_dialog_summary">ଅଦ୍ୟତନର ସଂସ୍ଥାପନ ସଂପୂର୍ଣ୍ଣ କରିବାକୁ, ଆପଣଙ୍କର ଡିଭାଇସ୍ ପୁନ rest ଆରମ୍ଭ ହେବା ଆବଶ୍ୟକ | ଆପଣ ବର୍ତ୍ତମାନ ପୁନ rest ଆରମ୍ଭ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
-    <string name="details_button">ବିବରଣୀ ଦେଖନ୍ତୁ |</string>
+    <string name="details_button">ଵିଵରଣୀ ଦେଖନ୍ତୁ</string>
     <string name="apply_update_dialog_title">ଅଦ୍ୟତନ ପ୍ରୟୋଗ କରନ୍ତୁ |</string>
     <string name="installing_update">ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ସଂସ୍ଥାପନ କରୁଛି |</string>
     <string name="installing_update_error">ତ୍ରୁଟି ସଂସ୍ଥାପନ କରନ୍ତୁ |</string>
@@ -81,7 +81,7 @@
     </plurals>
     <string name="update_on_mobile_data_title">ଚେତାବନୀ</string>
     <string name="update_on_mobile_data_message">ଆପଣ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରି ଏକ ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ଡାଉନଲୋଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଯାହା ଉଚ୍ଚ ଡାଟା ବ୍ୟବହାର ହେବାର ସମ୍ଭାବନା | ଆପଣ ଆଗକୁ ବ to ିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
-    <string name="checkbox_mobile_data_warning">ପୁନର୍ବାର ଦେଖାନ୍ତୁ ନାହିଁ |</string>
+    <string name="checkbox_mobile_data_warning">ପୁଣି ଦେଖାନ୍ତୁ ନାହିଁ</string>
     <string name="maintainer_info_title">ରକ୍ଷଣାବେକ୍ଷଣକାରୀ</string>
     <string name="donate_info_title">ଦାନ କରନ୍ତୁ</string>
     <string name="donate_info_summary">ବିକାଶକୁ ସମର୍ଥନ କରନ୍ତୁ</string>
