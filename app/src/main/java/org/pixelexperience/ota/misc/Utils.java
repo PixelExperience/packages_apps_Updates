@@ -22,7 +22,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.os.Environment;
 import android.os.PowerManager;
 import android.os.SystemProperties;
@@ -185,13 +186,19 @@ public class Utils {
     }
 
     public static boolean isNetworkAvailable(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
-                Context.CONNECTIVITY_SERVICE);
-        if (cm == null) {
-            return false;
+        ConnectivityManager cm = context.getSystemService(ConnectivityManager.class);
+        Network activeNetwork = cm.getActiveNetwork();
+        NetworkCapabilities networkCapabilities = cm.getNetworkCapabilities(activeNetwork);
+        if (networkCapabilities != null &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)) {
+            return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                    || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)
+                    || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_USB)
+                    || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)
+                    || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI);
         }
-        NetworkInfo info = cm.getActiveNetworkInfo();
-        return !(info == null || !info.isConnected() || !info.isAvailable());
+        return false;
     }
 
     public static boolean isNetworkMetered(Context context) {
