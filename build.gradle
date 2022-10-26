@@ -21,11 +21,11 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 31
-        targetSdkVersion 31
+        minSdkVersion 33
+        targetSdkVersion 33
     }
 
     lintOptions {
