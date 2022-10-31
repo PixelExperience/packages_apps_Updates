@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Tizim yangilanishi</string>
+    <string name="export_channel_title">Eksport tugallanishi</string>
+    <string name="new_updates_channel_title">Yangi yangilanishlar</string>
+    <string name="ongoing_channel_title">Davom etayotgan yuklab olishlar</string>
+    <string name="update_failed_channel_title">Yangilash amalga oshmadi</string>
+    <string name="verification_failed_notification">Tekshirish amalga oshmadi</string>
+    <string name="verifying_download_notification">Yangilanish tekshirilmoqda</string>
+    <string name="downloading_notification">Yuklanmoqda</string>
+    <string name="download_paused_notification">Yuklash to‘xtatildi</string>
+    <string name="download_paused_error_notification">Yuklashda xatolik</string>
+    <string name="download_completed_notification">Yuklab olish tugallandi</string>
+    <string name="download_starting_notification">Yuklab olish boshlanmoqda</string>
+    <string name="update_failed_notification">Yangilash amalga oshmadi</string>
+    <string name="check_for_update">Yangilanish mavjudligini tekshirish</string>
+    <string name="menu_delete_update">O‘chirish</string>
+    <string name="menu_export_update">Yangilanishni eksport qilish</string>
+    <string name="update_found_notification">Tizim yangilanishi mavjud</string>
+    <string name="snack_no_updates_found">Yangi yangilanishlar topilmadi</string>
+    <string name="snack_updates_check_failed">Yangilanish tekshiruvi amalga oshmadi. Iltimos internet ulanishini tekshiring va qayta urinib koʻring. </string>
+    <string name="snack_download_failed">Yuklab olish amalga oshmadi. Iltimos internet ulanishini tekshiring va qayta urinib koʻring.</string>
+    <string name="snack_download_verification_failed">Yangilanishni tekshirish amalga oshmadi.</string>
+    <string name="snack_download_verified">Yuklab olish tugallandi.</string>
+    <string name="snack_update_not_installable">Bu yangilanishni joriy tuzilmaning ustiga oʻrnatib boʻlmaydi.</string>
+    <string name="list_download_progress_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> dan <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
+    <string name="list_download_progress_eta_new"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> dan <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="list_verifying_update">Yangilanish tekshirilmoqda</string>
+    <string name="list_no_updates">Yangi yangilanish topilmadi.</string>
+    <string name="blocked_update_dialog_title">Yangilanish bloklangan</string>
+    <string name="blocked_update_dialog_summary">Ushbu yangilanish qo\'lda toza o\'rnatish protsedurasini talab qiladi (yangilanishni o\'rnatishdan oldin ma\'lumotlar bo\'limini o\'chirish/formatlash).  Iltimos, yangilanishni veb-saytimizdan yuklab oling, recovery rejimiga qayta yoqing va buning uchun protseduralarni bajaring.</string>
+    <string name="action_download">Yuklab olish</string>
+    <string name="action_pause">Pauza</string>
+    <string name="action_resume">Davom etish</string>
+    <string name="action_install">O\'rnatish</string>
+    <string name="action_delete">O‘chirish</string>
+    <string name="confirm_delete_dialog_title">Faylni o‘chirish</string>
+    <string name="confirm_delete_dialog_message">Tanlangan yangilash fayli oʻchirilsinmi?</string>
+    <string name="pause_button">Pauza</string>
+    <string name="resume_button">Davom etish</string>
+    <string name="reboot">O‘chirib-yoqish</string>
+    <string name="reboot_needed_dialog_title">Qayta ishga tushirish kerak</string>
+    <string name="reboot_needed_dialog_summary">Yangilanishni o\'rnatishni yakunlash uchun qurilmangizni qayta ishga tushirish kerak.  Hozir qayta ishga tushirishni xohlaysizmi?</string>
+    <string name="details_button">Tafsilotlarni ko\'rish</string>
+    <string name="apply_update_dialog_title">Yangilanishni oʻrnatish </string>
+    <string name="apply_update_dialog_message">Siz <xliff:g id="update_name">%1$s</xliff:g> versiyasiga yangilanmoqchisiz.\n\nAgar <xliff:g id="ok">%2$s</xliff:g> tugmasini bossangiz, yangilanishni oʻrnatish uchun qurilma oʻzini tiklash rejimida qayta ishga tushiradi.\n\nEslatma: Bu funksiya mos keladigan Qayta tiklashni talab qiladi yoki yangilanishlarni qoʻlda oʻrnatish kerak boʻladi.</string>
+</resources>

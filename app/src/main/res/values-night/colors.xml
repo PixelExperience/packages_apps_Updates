@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="theme_primary">@*android:color/system_neutral1_900</color>
+    <color name="theme_accent">#ffffff</color>
+    <color name="theme_accent_2">@*android:color/accent_device_default_dark</color>
+    <color name="cardview_background">#ff3C4043</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="theme_accent_extra_section">#ffffff</color>
+    <color name="design_snackbar_background_color" tools:override="true">@*android:color/system_neutral1_800</color>
+</resources>

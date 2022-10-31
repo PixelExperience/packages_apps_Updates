@@ -8,3 +8,6 @@
 /gradle
 /gradlew
 /gradlew.bat
+.externalNativeBuild
+.cxx
+local.properties

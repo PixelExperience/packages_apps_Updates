@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">സിസ്റ്റം അപ്ഡേറ്റ്</string>
+    <string name="export_channel_title">കയറ്റുമതി പൂർത്തീകരണം</string>
+    <string name="new_updates_channel_title">പുതിയ അപ്ഡേറ്റുകൾ</string>
+    <string name="ongoing_channel_title">തുടർന്നുകൊണ്ടിരിക്കുന്ന ഡൗൺലോഡുകൾ</string>
+    <string name="update_failed_channel_title">അപ്ഡേറ്റ് പരാജയപ്പെട്ടു</string>
+    <string name="verification_failed_notification">പരിശോധന പരാജയപ്പെട്ടു</string>
+    <string name="verifying_download_notification">അപ്‌ഡേറ്റ് പരിശോധിച്ചുറപ്പിക്കുന്നു</string>
+    <string name="downloading_notification">ഡൗൺലോഡ് ചെയ്യുന്നു</string>
+    <string name="download_paused_notification">ഡൗൺലോഡ് നിർത്തിവച്ചു</string>
+    <string name="download_paused_error_notification">ഡൗൺലോഡ് പിശക്</string>
+    <string name="download_completed_notification">ഡൗണ്‍ലോഡ് പൂർത്തിയായി</string>
+    <string name="download_starting_notification">ഡൗൺലോഡ് ആരംഭിക്കുന്നു</string>
+    <string name="update_failed_notification">അപ്ഡേറ്റ് പരാജയപ്പെട്ടു</string>
+    <string name="check_for_update">അപ്‌ഡേറ്റുകൾ ഉണ്ടോയെന്ന് പരിശോധിക്കുക</string>
+    <string name="menu_delete_update">ഡിലീറ്റ് ചെയ്യുക</string>
+    <string name="menu_export_update">അപ്ഡേറ്റ് എക്സ്പോർട്ട് ചെയ്യുക</string>
+    <string name="update_found_notification">സിസ്റ്റം അപ്ഡേറ്റുകൾ ലഭ്യമാണ്</string>
+    <string name="snack_no_updates_found">പുതിയ അപ്ഡേറ്റുകൾ കണ്ടെത്തിയില്ല</string>
+    <string name="snack_updates_check_failed">അപ്ഡേറ്റ് പരിശോധന പരാജയപ്പെട്ടു. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="snack_download_failed">ഡൗൺലോഡ് പരാജയപ്പെട്ടു. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="snack_download_verification_failed">അപ്‌ഡേറ്റ് പരിശോധിച്ചുറപ്പിക്കൽ പരാജയപ്പെട്ടു.</string>
+    <string name="snack_download_verified">ഡൗണ്‍ലോഡ് പൂർത്തിയായി</string>
+    <string name="snack_update_not_installable">നിലവിലെ ബിൽഡിന് മുകളിൽ ഈ അപ്‌ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയില്ല.</string>
+    <string name="list_verifying_update">അപ്‌ഡേറ്റ് പരിശോധിച്ചുറപ്പിക്കുന്നു</string>
+    <string name="list_no_updates">പുതിയ അപ്ഡേറ്റ് കണ്ടെത്തിയില്ല.</string>
+    <string name="blocked_update_dialog_title">അപ്‌ഡേറ്റ് തടഞ്ഞു</string>
+    <string name="blocked_update_dialog_summary">ഈ അപ്‌ഡേറ്റിന് മാനുവൽ ക്ലീൻ ഇൻസ്റ്റാളേഷൻ നടപടിക്രമം ആവശ്യമാണ് (അപ്‌ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് മുമ്പ് ഡാറ്റ പാർട്ടീഷൻ മായ്‌ക്കുന്നു/ഫോർമാറ്റ് ചെയ്യുന്നു). ഞങ്ങളുടെ വെബ്‌സൈറ്റിൽ നിന്ന് അപ്‌ഡേറ്റ് ഡൗൺലോഡ് ചെയ്യുക, റിക്കവറി മോഡിലേക്ക് റീബൂട്ട് ചെയ്യുക, അതിനുള്ള നടപടിക്രമങ്ങൾ പാലിക്കുക.</string>
+    <string name="action_download">ഡൗൺലോഡുചെയ്യുക</string>
+    <string name="action_pause">താല്ക്കാലം നിർത്തുക</string>
+    <string name="action_resume">പുനരാരംഭിക്കുക</string>
+    <string name="action_install">ഇന്‍സ്റ്റാള്‍ ചെയ്യുക</string>
+    <string name="action_delete">ഡിലീറ്റ് ചെയ്യുക</string>
+    <string name="confirm_delete_dialog_title">ഫയൽ ഇല്ലാതാക്കുക</string>
+    <string name="confirm_delete_dialog_message">തിരഞ്ഞെടുത്ത അപ്ഡേറ്റ് ഫയൽ ഇല്ലാതാക്കണോ?</string>
+    <string name="pause_button">താല്ക്കാലം നിർത്തുക</string>
+    <string name="resume_button">പുനരാരംഭിക്കുക</string>
+    <string name="reboot">റിബൂട്ട്‌</string>
+    <string name="reboot_needed_dialog_title">റീസ്റ്റാർട്ട് ആവശ്യമാണ്</string>
+    <string name="reboot_needed_dialog_summary">അപ്‌ഡേറ്റിന്റെ ഇൻസ്റ്റാളേഷൻ പൂർത്തിയാക്കാൻ, നിങ്ങളുടെ ഉപകരണം റീസ്റ്റാർട് ചെയ്യേണ്ടതുണ്ട്. നിങ്ങൾക്ക് ഇപ്പോൾ റീസ്റ്റാർട്ട് ചെയ്യണോ?</string>
+    <string name="details_button">വിശദാംശങ്ങൾ കാണുക</string>
+    <string name="apply_update_dialog_title">അപ്ഡേറ്റ് പ്രയോഗിക്കുക</string>
+    <string name="installing_update">അപ്ഡേറ്റ് പാക്കേജ് ഇൻസ്റ്റാൾ ചെയ്യുന്നു</string>
+    <string name="installing_update_error">ഇൻസ്റ്റാൾ പിശക്</string>
+    <string name="installing_update_finished">അപ്ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്തു</string>
+    <string name="finalizing_package">പാക്കേജ് ഇൻസ്റ്റാളേഷൻ പൂർത്തിയാക്കുന്നു</string>
+    <string name="dialog_prepare_zip_message">പ്രാഥമിക അപ്ഡേറ്റിനുള്ള തയ്യാറാക്കൽ</string>
+</resources>

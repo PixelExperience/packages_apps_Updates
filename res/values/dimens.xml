@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="extra_card_corner_radius">16dp</dimen>
-    <dimen name="extra_card_elevation">2dp</dimen>
-    <dimen name="extra_card_content_padding">16dp</dimen>
-    <dimen name="extra_card_layout_margin">10dp</dimen>
-</resources>
