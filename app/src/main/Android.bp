@@ -41,14 +41,25 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
-    required: ["privapp_whitelist_org.pixelexperience.ota.xml"],
+    required: [
+        "privapp_whitelist_org.pixelexperience.ota",
+        "default-permissions_org.pixelexperience.ota"
+    ],
+}
+prebuilt_etc {
+    name: "privapp_whitelist_org.pixelexperience.ota",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp_whitelist_org.pixelexperience.ota.xml",
+    filename_from_src: true,
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_org.pixelexperience.ota.xml",
+    name: "default-permissions_org.pixelexperience.ota",
     system_ext_specific: true,
-    src: "privapp_whitelist_org.pixelexperience.ota.xml",
-    sub_dir: "permissions",
+    sub_dir: "default-permissions",
+    src: "default-permissions_org.pixelexperience.ota.xml",
+    filename_from_src: true,
 }
 
 java_import {
