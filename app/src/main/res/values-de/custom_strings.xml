@@ -67,10 +67,10 @@
     <string name="dialog_prepare_zip_message">Update wird vorbereitet</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="dialog_battery_low_message_pct">Der Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
-    <string name="dialog_export_title">Update auf den internen Speicher exportieren</string>
-
-
-
+    <string name="update_export_success">Update wurde exportiert</string>
+    <string name="update_export_failed">Fehler beim Exportieren des Updates</string>
+    <string name="update_export_in_progress">Ein Update wird bereits exportiert</string>
+    <string name="update_export_started">Das Update wird exportiert...</string>
     <plurals name="eta_seconds">
         <item quantity="one">noch 1 Sekunde verbleibend</item>
         <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Sekunden</item>

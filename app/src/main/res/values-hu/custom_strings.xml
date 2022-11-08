@@ -68,10 +68,10 @@
     <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
 illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
-    <string name="dialog_export_title">Frissítőcsomag átvitele a belső tárhelyre</string>
-
-
-
+    <string name="update_export_success">A frissítés exportálva</string>
+    <string name="update_export_failed">Nem sikerült a frissítés exportálása</string>
+    <string name="update_export_in_progress">Egy frissítés exportálása már folyamatban van</string>
+    <string name="update_export_started">A frissítés exportálása folyamatban van…</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 másodperc van hátra</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> másodperc van hátra</item>

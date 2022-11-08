@@ -67,10 +67,10 @@
     <string name="dialog_prepare_zip_message">Chuẩn bị cập nhật sơ bộ</string>
     <string name="dialog_battery_low_title">Pin yếu</string>
     <string name="dialog_battery_low_message_pct">Mức pin quá thấp, bạn cần tối thiểu <xliff:g id="percent_discharging">%1$d</xliff:g>%% pin để tiếp tục, <xliff:g id="percent_charging">%2$d</xliff:g>%% nếu đang sạc.</string>
-    <string name="dialog_export_title">Xuất bản cập nhật vào bộ nhớ trong</string>
-
-
-
+    <string name="update_export_success">Đã xuất bản cập nhật</string>
+    <string name="update_export_failed">Không xuất được bản cập nhật</string>
+    <string name="update_export_in_progress">Đã xuất một bản cập nhật</string>
+    <string name="update_export_started">Bản cập nhật đang được xuất…</string>
     <plurals name="eta_seconds">
         <item quantity="other">Còn lại <xliff:g id="count">%d</xliff:g> giây</item>
     </plurals>

@@ -67,12 +67,12 @@
     <string name="dialog_prepare_zip_message">Підготовка оновлення</string>
     <string name="dialog_battery_low_title">Низький заряд батареї</string>
     <string name="dialog_battery_low_message_pct">Рівень заряду батареї надто низький, для продовження необхідно хоча б <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряду або <xliff:g id="percent_charging">%2$d</xliff:g>%% під час зарядки.</string>
-    <string name="dialog_export_title">Експорт оновлення до внутрішнього сховища</string>
-
-
-
+    <string name="update_export_success">Оновлення експортовано</string>
+    <string name="update_export_failed">Не вдалося експортувати оновлення</string>
+    <string name="update_export_in_progress">Оновлення вже експортується</string>
+    <string name="update_export_started">Оновлення експортується…</string>
     <plurals name="eta_seconds">
-        <item quantity="one">ще 1 секунда</item>
+        <item quantity="one">Залишилася 1 секунда</item>
         <item quantity="few">ще <xliff:g id="count">%d</xliff:g> секунди</item>
         <item quantity="many">ще <xliff:g id="count">%d</xliff:g> секунд</item>
         <item quantity="other">залишилось <xliff:g id="count">%d</xliff:g> секунд</item>

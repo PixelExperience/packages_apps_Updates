@@ -67,10 +67,10 @@
     <string name="dialog_prepare_zip_message">Preliminarus atnaujinimo rengimas</string>
     <string name="dialog_battery_low_title">Žemas baterijos lygis</string>
     <string name="dialog_battery_low_message_pct">Akumuliatoriaus įkrovos lygis per mažas, jums reikia mažiausiai <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterijos, kad tęstumėte, <xliff:g id="procentu_krovimas">%2$d</xliff:g>%%, jei įkraunama.</string>
-    <string name="dialog_export_title">Eksportuojamas naujinimas į vidinę saugyklą</string>
-
-
-
+    <string name="update_export_success">Atnaujinimas eksportuotas</string>
+    <string name="update_export_failed">Nepavyko eksportuoti naujinio</string>
+    <string name="update_export_in_progress">Atnaujinimas jau eksportuojamas</string>
+    <string name="update_export_started">Atnaujinimas eksportuojamas…</string>
     <plurals name="eta_seconds">
         <item quantity="one">Liko 1sekundė</item>
         <item quantity="few">Liko <xliff:g id="count">%d</xliff:g> sekundės</item>
