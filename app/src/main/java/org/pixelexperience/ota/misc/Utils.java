@@ -194,15 +194,10 @@ public class Utils {
         return !(info == null || !info.isConnected() || !info.isAvailable());
     }
 
-    public static boolean isOnWifiOrEthernet(Context context) {
+    public static boolean isNetworkMetered(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
-        if (cm == null) {
-            return false;
-        }
-        NetworkInfo info = cm.getActiveNetworkInfo();
-        return (info != null && (info.getType() == ConnectivityManager.TYPE_ETHERNET
-                || info.getType() == ConnectivityManager.TYPE_WIFI));
+        return cm.isActiveNetworkMetered();
     }
 
     public static boolean checkForNewUpdates(File oldJson, File newJson, boolean fromBoot, Context context)
