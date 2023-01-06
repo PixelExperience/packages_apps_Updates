@@ -67,6 +67,10 @@
     <string name="dialog_prepare_zip_message">Preliminarna priprema ažuriranja</string>
     <string name="dialog_battery_low_title">Slaba baterija</string>
     <string name="dialog_battery_low_message_pct">Razina baterije je preniska, treba vam barem <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nastavak, <xliff:g id="percent_charging">%2$d</xliff:g>%% ako se puni.</string>
+    <string name="update_export_success">Ažuriranje je izvezeno</string>
+    <string name="update_export_failed">Izvoz ažuriranja nije uspio.</string>
+    <string name="update_export_in_progress">Ažuriranje se već izvozi</string>
+    <string name="update_export_started">Ažuriranje se izvozi…</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 sekunda preostala</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> sek preostalo</item>

@@ -67,6 +67,10 @@
     <string name="dialog_prepare_zip_message">Persediaan awal kemas kini</string>
     <string name="dialog_battery_low_title">Bateri lemah</string>
     <string name="dialog_battery_low_message_pct">Paras bateri terlalu lemah, anda perlu sekurang-kurangnya <xliff:g id="percent_discharging">%1$d</xliff:g>%% bateri untuk teruskan, <xliff:g id="percent_charging">%2$d</xliff:g>%% jika sedang mengecas.</string>
+    <string name="update_export_success">Kemaskini telah dieksport</string>
+    <string name="update_export_failed">Gagal mengeksport kemaskini</string>
+    <string name="update_export_in_progress">Kemaskini telah pun dieksport</string>
+    <string name="update_export_started">Kemaskini sedang dieksport...</string>
     <plurals name="eta_seconds">
         <item quantity="other">1 saat lagi</item>
     </plurals>

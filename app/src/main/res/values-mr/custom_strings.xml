@@ -15,6 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">सिस्टम अपडेट</string>
+    <string name="export_channel_title">स्रोत निर्यात पूर्ण</string>
     <string name="maintainer_info_title">सांभाळणारा</string>
     <string name="donate_info_title">दान करा</string>
     <string name="donate_info_summary">समर्थन करा</string>

@@ -29,7 +29,7 @@
     <string name="download_starting_notification">Pornire descărcare</string>
     <string name="update_failed_notification">Actualizare eșuată</string>
     <string name="check_for_update">Verificare actualizări</string>
-    <string name="menu_delete_update">Șterge</string>
+    <string name="menu_delete_update">Ștergere</string>
     <string name="menu_export_update">Exportă actualizarea</string>
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
@@ -57,7 +57,7 @@
     <string name="reboot_needed_dialog_title">Repornire necesară</string>
     <string name="reboot_needed_dialog_summary">Pentru a finaliza instalarea actualizării, dispozitivul dvs. trebuie repornit. Doriți să reporniți acum?</string>
     <string name="details_button">Vizualizare detalii</string>
-    <string name="apply_update_dialog_title">Aplicați actualizarea</string>
+    <string name="apply_update_dialog_title">Aplicare actualizare</string>
     <string name="apply_update_dialog_message">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul se va restarta în modul de recuperare pentru a instala actualizarea.\n\nNotă: Această caracteristică necesită o Recuperare compatibilă sau actualizările vor trebui să fie instalate manual.</string>
     <string name="apply_update_dialog_message_ab">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va începe instalarea în fundal.\n\nOdată finalizată, veți fi anunțat(ă) să reporniți telefonul.</string>
     <string name="installing_update">Se instalează pachetul de actualizare</string>

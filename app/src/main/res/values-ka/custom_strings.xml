@@ -67,6 +67,10 @@
     <string name="dialog_prepare_zip_message">წინასწარი მომზადება განახლებისთვის</string>
     <string name="dialog_battery_low_title">ელემენტი ჯდება</string>
     <string name="dialog_battery_low_message_pct">ელემენტის დამუხტვის დონე მეტად მცირეა, გასაგრძელებლად საჭიროა დამუხტული იყოს სულ მცირე <xliff:g id="percent_discharging">%1$d</xliff:g>%% ან <xliff:g id="percent_charging">%2$d</xliff:g>%% თუ იმუხტება.</string>
+    <string name="update_export_success">განახლება გადატანილია</string>
+    <string name="update_export_failed">ხარვეზი განახლების გადატანისას</string>
+    <string name="update_export_in_progress">განახლება უკვე გადატანის პროცესშია</string>
+    <string name="update_export_started">განახლება გადატანის პროცესშია...</string>
     <plurals name="eta_seconds">
         <item quantity="one">დარჩენილია 1 წამი</item>
         <item quantity="other">დარჩენილია <xliff:g id="count">%d</xliff:g> წამი</item>

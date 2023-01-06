@@ -68,6 +68,10 @@
     <string name="dialog_prepare_zip_message">التجهيز للتحديث الأولي</string>
     <string name="dialog_battery_low_title">مستوى البطارية منخفض</string>
     <string name="dialog_battery_low_message_pct">مستوى شحن البطارية منخفض للغاية؛ وتحتاج على الأقل <xliff:g id="percent_discharging">%1$d</xliff:g>%% من البطارية للمتابعة، <xliff:g id="percent_charging">%2$d</xliff:g>%% في حالة الشحن.</string>
+    <string name="update_export_success">تم تصدير التحديث</string>
+    <string name="update_export_failed">فشل في تصدير البيانات.   </string>
+    <string name="update_export_in_progress">جاري تصدير تحديث بالفعل</string>
+    <string name="update_export_started">يتم تصدير التحديث…</string>
     <plurals name="eta_seconds">
         <item quantity="zero"><xliff:g id="count">%d</xliff:g> ثانية متبقية</item>
         <item quantity="one"><xliff:g id="count">%d</xliff:g> ثانية متبقية</item>

@@ -65,6 +65,10 @@
     <string name="dialog_prepare_zip_message">प्रारंभिक अपडेट की तैयारी</string>
     <string name="dialog_battery_low_title">कम बैटरी</string>
     <string name="dialog_battery_low_message_pct">बैटरी कम है, आपको आगे बढ़ने के लिए कम से कम <xliff:g id="percent_discharging">%1$d</xliff:g>%% बैटरी चाहिए, <xliff:g id="percent_charging">%2$d</xliff:g>%% बैटरी अगर आप चार्ज कर रहे हैं।</string>
+    <string name="update_export_success">अपडेट भेजा गया </string>
+    <string name="update_export_failed">अपडेट भेजने में अक्षम </string>
+    <string name="update_export_in_progress">पहले से ही एक अपडेट भेजा जा रहा है</string>
+    <string name="update_export_started">अपडेट को भेजा जा रहा हैं</string>
     <string name="update_on_mobile_data_title">चेतावनी</string>
     <string name="update_on_mobile_data_message">आप मोबाइल डेटा का उपयोग कर एक अपडेट पैकेज डाउनलोड करने वाले हैं, जो संभवत: उच्च डेटा उपयोग का कारण होने जा रहा है। क्या तुम कार्यवाही को जारी रखना चाहते हैं?</string>
     <string name="checkbox_mobile_data_warning">फिर से मत दिखाना</string>

@@ -67,6 +67,10 @@
     <string name="dialog_prepare_zip_message">آماده‌سازی مقدماتی به‌روز رسانی</string>
     <string name="dialog_battery_low_title">باتری ضعیف است</string>
     <string name="dialog_battery_low_message_pct">سطح باتری بسیار کم است، برای ادامه کار شما به <xliff:g id="percent_discharging">%1$d</xliff:g>%% از ظرفیت باتری یا <xliff:g id="percent_charging">%2$d</xliff:g>%% اگر در حال شارژ هستید،‌ نیاز دارید.</string>
+    <string name="update_export_success">بروزرسانی صادر شد</string>
+    <string name="update_export_failed">صدور بروزرسانی با اشکال روبرو شد</string>
+    <string name="update_export_in_progress">نسخه به‌روز قبلاً صادر شده است</string>
+    <string name="update_export_started">بروزرسانی در حال صدور است</string>
     <plurals name="eta_seconds">
         <item quantity="one">یک ثانیه باقی مانده</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ثانیه باقی مانده</item>
