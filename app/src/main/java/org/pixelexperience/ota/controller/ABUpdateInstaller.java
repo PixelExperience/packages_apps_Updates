@@ -228,11 +228,6 @@ public class ABUpdateInstaller {
         String[] finalHeaderKeyValuePairs = headerKeyValuePairs;
         new Thread(() -> {
             try {
-                mUpdateEngine.setPerformanceMode(true);
-            } catch (NoSuchMethodError ignored) {
-
-            }
-            try {
                 String zipFileUri = "file://" + file.getAbsolutePath();
                 mUpdateEngine.applyPayload(zipFileUri, offset, 0, finalHeaderKeyValuePairs);
             } catch (Exception e) {
