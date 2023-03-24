@@ -43,7 +43,7 @@
     <string name="list_verifying_update">Проверка обновления</string>
     <string name="list_no_updates">Новых обновлений нет.</string>
     <string name="blocked_update_dialog_title">Обновление заблокировано</string>
-    <string name="blocked_update_dialog_summary">Это обновление требует ручной процедуры установки (очистка/форматирование раздела Data перед установкой обновления). Пожалуйста, скачайте прошивку с нашего сайта, перезагрузитесь в recovery и следуйте процедуре, чтобы обновить систему.</string>
+    <string name="blocked_update_dialog_summary">Это обновление требует ручной установки (очистка/форматирование раздела Data перед установкой обновления). Пожалуйста, скачайте прошивку с нашего сайта, перезагрузитесь в рекавери и следуйте процедуре, чтобы обновить систему.</string>
     <string name="action_download">Загрузить</string>
     <string name="action_pause">Приостановить</string>
     <string name="action_resume">Продолжить</string>

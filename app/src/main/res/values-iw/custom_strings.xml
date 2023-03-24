@@ -67,6 +67,10 @@
     <string name="dialog_prepare_zip_message">מתכונן להתקנת העדכון</string>
     <string name="dialog_battery_low_title">סוללה חלשה</string>
     <string name="dialog_battery_low_message_pct">הסוללה חלשה מדי, אתה צריך לפחות <xliff:g id="percent_discharging">%1$d</xliff:g>%% אחוזים בשביל להמשיך ו־<xliff:g id="percent_charging">%2$d</xliff:g>%% אחוזים אם המכשיר בטעינה.</string>
+    <string name="update_export_success">העדכון ייוצא</string>
+    <string name="update_export_failed">ייצוא העדכון נכשל</string>
+    <string name="update_export_in_progress">כבר באמצע לייצא עדכון</string>
+    <string name="update_export_started">העדכון מתבצע...</string>
     <plurals name="eta_seconds">
         <item quantity="one">שניה אחת נותרה</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> שניות נותרו</item>

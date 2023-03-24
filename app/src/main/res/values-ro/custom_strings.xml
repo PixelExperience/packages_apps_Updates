@@ -33,8 +33,8 @@
     <string name="menu_export_update">Exportă actualizarea</string>
     <string name="update_found_notification">Este disponibilă o actualizare de sistem</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
-    <string name="snack_updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
-    <string name="snack_download_failed">Descărcarea a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
+    <string name="snack_updates_check_failed">Verificarea actualizării a eșuat. Verifică conexiunea la internet și să încearcă din nou mai târziu.</string>
+    <string name="snack_download_failed">Descărcarea a eșuat. Verifică conexiunea la internet și să încearcă din nou mai târziu.</string>
     <string name="snack_download_verification_failed">Verificarea actualizării a eșuat.</string>
     <string name="snack_download_verified">Descărcare finalizată.</string>
     <string name="snack_update_not_installable">Această actualizare nu poate fi instalată pe build-ul curent.</string>
@@ -55,18 +55,18 @@
     <string name="resume_button">Reluare</string>
     <string name="reboot">Repornire</string>
     <string name="reboot_needed_dialog_title">Repornire necesară</string>
-    <string name="reboot_needed_dialog_summary">Pentru a finaliza instalarea actualizării, dispozitivul dvs. trebuie repornit. Doriți să reporniți acum?</string>
+    <string name="reboot_needed_dialog_summary">Pentru a finaliza instalarea actualizării, dispozitivul trebuie repornit. Dorești să repornești acum?</string>
     <string name="details_button">Vizualizare detalii</string>
     <string name="apply_update_dialog_title">Aplicare actualizare</string>
-    <string name="apply_update_dialog_message">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul se va restarta în modul de recuperare pentru a instala actualizarea.\n\nNotă: Această caracteristică necesită o Recuperare compatibilă sau actualizările vor trebui să fie instalate manual.</string>
-    <string name="apply_update_dialog_message_ab">Sunteți pe cale de a face upgrade la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apăsați <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va începe instalarea în fundal.\n\nOdată finalizată, veți fi anunțat(ă) să reporniți telefonul.</string>
+    <string name="apply_update_dialog_message">Ești pe cale de a face actualizare la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apeși <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va reporni în modul  recuperare pentru a instala actualizarea.\n\nNotă: Această caracteristică necesită o Recuperare compatibilă sau actualizările vor trebui să fie instalate manual.</string>
+    <string name="apply_update_dialog_message_ab">Ești pe cale să faci actualizare la <xliff:g id="update_name">%1$s</xliff:g>.\n\nDacă apeși <xliff:g id="ok">%2$s</xliff:g>, dispozitivul va începe instalarea în fundal.\n\nOdată terminată, ți se va solicita să repornești dispozitivul.</string>
     <string name="installing_update">Se instalează pachetul de actualizare</string>
     <string name="installing_update_error">Eroare la instalare</string>
     <string name="installing_update_finished">Actualizare instalată</string>
     <string name="finalizing_package">Se finalizează instalarea pachetului</string>
     <string name="dialog_prepare_zip_message">Pregătire preliminară pentru actualizare</string>
     <string name="dialog_battery_low_title">Baterie slabă</string>
-    <string name="dialog_battery_low_message_pct">Nivelul bateriei este prea scăzut. Aveți nevoie de cel puțin<xliff:g id="percent_discharging">%1$d</xliff:g>%% pentru a continua, <xliff:g id="percent_charging">%2$d</xliff:g>%% dacă telefonul este la încărcat.</string>
+    <string name="dialog_battery_low_message_pct">Nivelul bateriei este prea scăzut. Este nevoie de cel puțin <xliff:g id="percent_discharging">%1$d</xliff:g>%% pentru a continua, <xliff:g id="percent_charging">%2$d</xliff:g>%% dacă telefonul este la încărcat.</string>
     <string name="update_export_success">Actualizare exportată</string>
     <string name="update_export_failed">Exportare nereușită</string>
     <string name="update_export_in_progress">Se exportează deja o actualizare</string>
