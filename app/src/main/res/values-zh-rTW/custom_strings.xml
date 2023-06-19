@@ -43,16 +43,16 @@
     <string name="list_verifying_update">正在驗證更新</string>
     <string name="list_no_updates">沒有新更新。</string>
     <string name="blocked_update_dialog_title">更新已被封鎖</string>
-    <string name="blocked_update_dialog_summary">此更新需要手動重新安裝過程（在安裝更新之前抹除/格式化數據分區）。 請從我們的網站下載更新，重新啟動到恢復模式，然後按照以下步驟進行操作。 </string>
+    <string name="blocked_update_dialog_summary">此更新需要手動重新安裝過程（在安裝更新之前清除/格式化資料分區）。請從我們的網站下載更新檔案，將裝置重新啟動到Recovery模式，然後依照以下步驟進行操作。</string>
     <string name="action_download">下載</string>
     <string name="action_pause">暫停</string>
-    <string name="action_resume">恢復</string>
+    <string name="action_resume">繼續</string>
     <string name="action_install">安裝</string>
     <string name="action_delete">刪除</string>
     <string name="confirm_delete_dialog_title">刪除檔案</string>
     <string name="confirm_delete_dialog_message">刪除已選取的更新檔案？</string>
     <string name="pause_button">暫停</string>
-    <string name="resume_button">恢復</string>
+    <string name="resume_button">繼續</string>
     <string name="reboot">重新啟動</string>
     <string name="reboot_needed_dialog_title">需要重新啟動</string>
     <string name="reboot_needed_dialog_summary">要完成安裝更新，您的裝置必須重新啟動。您想要立刻重新啟動嗎？</string>
@@ -80,11 +80,8 @@
     <plurals name="eta_hours">
         <item quantity="other">還剩 <xliff:g id="count">%d</xliff:g> 小時</item>
     </plurals>
-    <string name="update_on_mobile_data_title">警告</string>
-    <string name="update_on_mobile_data_message">下載的更新檔案有可能會使用較高的行動數據，您要繼續嗎？</string>
-    <string name="checkbox_mobile_data_warning">不再顯示</string>
     <string name="maintainer_info_title">維護者</string>
-    <string name="donate_info_title">捐贈</string>
+    <string name="donate_info_title">贊助</string>
     <string name="donate_info_summary">支持開發作業</string>
     <string name="website_info_title">網站</string>
     <string name="website_info_summary">瀏覽我們的網站</string>

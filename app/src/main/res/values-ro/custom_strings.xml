@@ -43,14 +43,14 @@
     <string name="list_verifying_update">Verificare actualizare</string>
     <string name="list_no_updates">Nu s-au găsit actualizări noi.</string>
     <string name="blocked_update_dialog_title">Actualizare blocată</string>
-    <string name="blocked_update_dialog_summary">Această actualizare necesită o procedură manuală de instalare de la zero (Ștergerea/formatarea partiției de date înainte de a instala actualizarea). Descărcați actualizarea de pe site-ul nostru, reporniți în modul de recuperare și urmați procedurile pentru a face acest lucru.</string>
+    <string name="blocked_update_dialog_summary">Această actualizare necesită o procedură manuală de instalare de la zero (Ștergerea/formatarea partiției de date înainte de a instala actualizarea). Descarcă actualizarea de pe site-ul nostru, repornește în modul de recuperare și urmează procedurile pentru a face acest lucru.</string>
     <string name="action_download">Descărcare</string>
     <string name="action_pause">Pauză</string>
-    <string name="action_resume">Reluaţi</string>
+    <string name="action_resume">Reia</string>
     <string name="action_install">Instalare</string>
     <string name="action_delete">Ștergere</string>
     <string name="confirm_delete_dialog_title">Ștergere fișier</string>
-    <string name="confirm_delete_dialog_message">Ștergeți fișierul de actualizare selectat?</string>
+    <string name="confirm_delete_dialog_message">Ștergi fișierul de actualizare selectat?</string>
     <string name="pause_button">Pauză</string>
     <string name="resume_button">Reluare</string>
     <string name="reboot">Repornire</string>
@@ -86,17 +86,14 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Avertisment</string>
-    <string name="update_on_mobile_data_message">Sunteți pe cale de a descărca un pachet de actualizare folosind datele mobile care, probabil, vor provoca o utilizare mare de date. Doriți să continuați?</string>
-    <string name="checkbox_mobile_data_warning">Nu se mai afișează</string>
     <string name="maintainer_info_title">Dezvoltator</string>
     <string name="donate_info_title">Donează</string>
-    <string name="donate_info_summary">Susțineți dezvoltarea</string>
+    <string name="donate_info_summary">Susține dezvoltarea</string>
     <string name="website_info_title">Pagină Web</string>
-    <string name="website_info_summary">Vizitați pagina noastră web</string>
+    <string name="website_info_summary">Vizitează pagina noastră web</string>
     <string name="news_info_title">Noutăți</string>
-    <string name="news_info_summary">Rămâneți informat despre actualizări și alte noutăți</string>
+    <string name="news_info_summary">Rămâi informat despre actualizări și alte noutăți</string>
     <string name="forum_info_title">Forum</string>
-    <string name="forum_info_summary">Vizualizați postările forumului</string>
+    <string name="forum_info_summary">Vezi postările forumului</string>
     <string name="error_open_url">Nu s-a reușit deschiderea adresei URL în browser</string>
 </resources>

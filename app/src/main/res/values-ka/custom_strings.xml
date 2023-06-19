@@ -83,9 +83,6 @@
         <item quantity="one">დარჩენილია 1 საათი</item>
         <item quantity="other">დარჩენილია <xliff:g id="count">%d</xliff:g> საათი</item>
     </plurals>
-    <string name="update_on_mobile_data_title">გაფრთხილება</string>
-    <string name="update_on_mobile_data_message">თქვენ ტვირთავთ განახლებას მობილური ინტერნეტის გამოყენებიც რაც იწვევს ბევრი ინტერნეტის დახარჯვას. გსურთ გაგრძელება?</string>
-    <string name="checkbox_mobile_data_warning">აღარ მაჩვენო მეორედ</string>
     <string name="maintainer_info_title">მწარმოებელი</string>
     <string name="donate_info_title">პროექტის დახმარება</string>
     <string name="donate_info_summary">დაეხმარეთ განვითარებას</string>

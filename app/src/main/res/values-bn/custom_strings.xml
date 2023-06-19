@@ -79,9 +79,6 @@
         <item quantity="one">১ ঘণ্টা বাকি</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ঘণ্টা বাকি</item>
     </plurals>
-    <string name="update_on_mobile_data_title">সাবধানবাণী</string>
-    <string name="update_on_mobile_data_message">আপনি মোবাইল ডাটা ব্যবহার করে আধুনিকীকরণের তথ্য ডাউনলোড করতে চলেছেন, যেটি সম্ভবত অনেক ডাটা ব্যবহার করতে পারে। আপনি কি অগ্রসর হতে চান?</string>
-    <string name="checkbox_mobile_data_warning">আবার দেখাবেন না</string>
     <string name="maintainer_info_title">রক্ষণাবেক্ষণকারী</string>
     <string name="donate_info_title">দান করুন</string>
     <string name="donate_info_summary">উন্নয়ন সহায়তা করুন</string>

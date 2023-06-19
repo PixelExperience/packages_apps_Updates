@@ -83,7 +83,4 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> awr yn weddill</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> awr yn weddill</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Rhybudd</string>
-    <string name="update_on_mobile_data_message">Rwyt ar fin lawrlwytho pecyn diweddaru gyda llawer o ddata dros gysylltiad data symudol. Wyt ti am barhau?</string>
-    <string name="checkbox_mobile_data_warning">Peidio â dangos eto</string>
 </resources>

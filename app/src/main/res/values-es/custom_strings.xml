@@ -83,9 +83,6 @@
         <item quantity="one">1 hora restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Advertencia</string>
-    <string name="update_on_mobile_data_message">Se descargará un paquete de actualización usando los datos móviles lo que probablemente ocasione un alto consumo de datos. ¿Desea continuar?</string>
-    <string name="checkbox_mobile_data_warning">No mostrar de nuevo</string>
     <string name="maintainer_info_title">Desarrollador</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Apoyar el desarrollo</string>

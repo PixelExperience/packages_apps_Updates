@@ -43,7 +43,7 @@
     <string name="list_verifying_update">Проверка обновления</string>
     <string name="list_no_updates">Новых обновлений нет.</string>
     <string name="blocked_update_dialog_title">Обновление заблокировано</string>
-    <string name="blocked_update_dialog_summary">Это обновление требует ручной установки (очистка/форматирование раздела Data перед установкой обновления). Пожалуйста, скачайте прошивку с нашего сайта, перезагрузитесь в рекавери и следуйте процедуре, чтобы обновить систему.</string>
+    <string name="blocked_update_dialog_summary">Это обновление требует ручной установки (очистка/форматирование раздела Data перед установкой обновления). Пожалуйста, скачайте прошивку с нашего сайта, перезагрузитесь в recovery и следуйте процедуре, чтобы обновить систему.</string>
     <string name="action_download">Загрузить</string>
     <string name="action_pause">Приостановить</string>
     <string name="action_resume">Продолжить</string>
@@ -89,9 +89,6 @@
         <item quantity="many">осталось <xliff:g id="count">%d</xliff:g> часов</item>
         <item quantity="other">осталось <xliff:g id="count">%d</xliff:g> часов</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Предупреждение</string>
-    <string name="update_on_mobile_data_message">Скачивание обновления по мобильной сети расходует большой объём трафика и может привести к непредвиденным расходам. Продолжить?</string>
-    <string name="checkbox_mobile_data_warning">Не показывать снова</string>
     <string name="maintainer_info_title">Сопровождающий</string>
     <string name="donate_info_title">Пожертвовать</string>
     <string name="donate_info_summary">Поддержать разработку проекта</string>

@@ -80,9 +80,6 @@
     <plurals name="eta_hours">
         <item quantity="other"><xliff:g id="count">%d</xliff:g>시간 남음</item>
     </plurals>
-    <string name="update_on_mobile_data_title">경고</string>
-    <string name="update_on_mobile_data_message">모바일 데이터를 사용하여 업데이트 패키지를 다운로드하는 것은 많은 데이터 사용량을 야기할 수 있습니다. 계속하시겠습니까?</string>
-    <string name="checkbox_mobile_data_warning">다시 보지 않기</string>
     <string name="maintainer_info_title">관리자</string>
     <string name="donate_info_title">기부</string>
     <string name="donate_info_summary">개발 지원하기</string>

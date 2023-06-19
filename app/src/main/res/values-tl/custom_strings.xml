@@ -79,9 +79,6 @@
         <item quantity="one">1 oras ang natitira</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> oras ang natitira</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Babala</string>
-    <string name="update_on_mobile_data_message">Ikaw ay magda-download ng update package gamit ang mobile data na maaaring magdulot ng mataas na paggamit ng data. Gusto mo bang magpatuloy?</string>
-    <string name="checkbox_mobile_data_warning">Huwag ulit ipakita</string>
     <string name="maintainer_info_title">Taga-maintain</string>
     <string name="donate_info_title">Mag-donate</string>
     <string name="donate_info_summary">Suportahan ang pag-develop</string>

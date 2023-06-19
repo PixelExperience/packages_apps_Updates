@@ -89,9 +89,6 @@
         <item quantity="many">ще <xliff:g id="count">%d</xliff:g> годин</item>
         <item quantity="other">ще <xliff:g id="count">%d</xliff:g> годин</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Попередження</string>
-    <string name="update_on_mobile_data_message">Ви збираєтеся завантажити пакет оновлення за допомогою мобільної мережі, що може призвести до надмірної витрати тарифного пакету даних. Дійсно хочете продовжити?</string>
-    <string name="checkbox_mobile_data_warning">Більше не показувати</string>
     <string name="maintainer_info_title">Розробники</string>
     <string name="donate_info_title">Підтримати проект</string>
     <string name="donate_info_summary">Підтримати розробку</string>

@@ -82,9 +82,6 @@
         <item quantity="few">преостало <xliff:g id="count">%d</xliff:g> сата</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> сати</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Упозорење</string>
-    <string name="update_on_mobile_data_message">Преузимање надоградњи преко мобилне мреже троши доста саобраћаја и може довести до непредвиђених трошкова. Да ли желите да наставите?</string>
-    <string name="checkbox_mobile_data_warning">Не приказуј поново</string>
     <string name="maintainer_info_title">Програмер</string>
     <string name="donate_info_title">Донирај</string>
     <string name="donate_info_summary">Подржите развој</string>

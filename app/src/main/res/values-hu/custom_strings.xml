@@ -84,9 +84,6 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
         <item quantity="one">1 óra van hátra</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> óra van hátra</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Figyelmeztetés</string>
-    <string name="update_on_mobile_data_message">A frissítés mobiladat-forgalom használatával fog letöltődni, ami magas mobiladat-használatot eredményezhet. Szeretné folytatni?</string>
-    <string name="checkbox_mobile_data_warning">Ne jelenjen meg ismét</string>
     <string name="maintainer_info_title">Felelős</string>
     <string name="donate_info_title">Támogatás</string>
     <string name="donate_info_summary">A fejlesztés támogatása</string>

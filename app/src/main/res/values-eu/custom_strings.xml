@@ -72,9 +72,6 @@
         <item quantity="one">Ordu 1 geratzen da</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ordu geratzen dira</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Kontuz</string>
-    <string name="update_on_mobile_data_message">Eguneratze pakete bat deskargatuko duzu datu mugikorrak erabiliz, honek datuen erabilera handia egingo du. Ziur aurrera jarraitu nahi duzula?</string>
-    <string name="checkbox_mobile_data_warning">Ez erakutsi berriro</string>
     <string name="maintainer_info_title">Mantentzailea</string>
     <string name="donate_info_title">Diruz lagundu</string>
     <string name="donate_info_summary">Garapena lagundu</string>

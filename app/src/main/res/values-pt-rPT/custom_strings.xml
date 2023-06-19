@@ -83,9 +83,6 @@
         <item quantity="one">Falta 1 hora</item>
         <item quantity="other">Faltam <xliff:g id="count">%d</xliff:g> horas</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Aviso</string>
-    <string name="update_on_mobile_data_message">Está prestes a descarregar um pacote de atualização através de dados móveis que, provavelmente, causará alto uso de dados. Tem a certeza de que deseja continuar?</string>
-    <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
     <string name="maintainer_info_title">Mantido por</string>
     <string name="donate_info_title">Doar</string>
     <string name="donate_info_summary">Apoiar o desenvolvimento</string>

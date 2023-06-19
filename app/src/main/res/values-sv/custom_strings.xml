@@ -79,9 +79,6 @@
         <item quantity="one">1 timme kvar</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> timmar kvar</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Varning</string>
-    <string name="update_on_mobile_data_message">Du är på väg att ladda ner ett uppdateringspaket genom mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
-    <string name="checkbox_mobile_data_warning">Visa inte igen</string>
     <string name="maintainer_info_title">Underhållare</string>
     <string name="donate_info_title">Donera</string>
     <string name="donate_info_summary">Stöd utvecklingen</string>

@@ -83,9 +83,6 @@
         <item quantity="one">1 tunti jäljellä</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> tuntia jäljellä</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Varoitus</string>
-    <string name="update_on_mobile_data_message">Olet lataamassa päivityspakettia käyttämällä mobiilidataa, joka voi todennäköisesti aiheuttaa tiedonsiirtokuluja. Haluatko jatkaa?</string>
-    <string name="checkbox_mobile_data_warning">Älä näytä uudestaan</string>
     <string name="maintainer_info_title">Ylläpitäjä</string>
     <string name="donate_info_title">Lahjoita</string>
     <string name="donate_info_summary">Tue kehitystä</string>

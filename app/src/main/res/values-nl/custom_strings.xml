@@ -79,9 +79,6 @@
         <item quantity="one">1 uur resterend</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> uur resterend</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Waarschuwing</string>
-    <string name="update_on_mobile_data_message">U staat op het punt om een update-pakket te downloaden via mobiele gegevens, wat een hoog gegevensgebruik tot gevolg kan hebben. Wilt u verder gaan?</string>
-    <string name="checkbox_mobile_data_warning">Niet opnieuw tonen</string>
     <string name="maintainer_info_title">Beheerder</string>
     <string name="donate_info_title">Doneer</string>
     <string name="donate_info_summary">Steun de ontwikkeling</string>

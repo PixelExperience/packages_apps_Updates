@@ -79,9 +79,6 @@
         <item quantity="one">1 time igjen</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> timer igjen</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Advarsel</string>
-    <string name="update_on_mobile_data_message">Du er i ferd med å laste ned en oppdateringspakke ved bruk av mobildata, noe som antagelig vil forårsake høy databruk. Ønsker du å fortsette?</string>
-    <string name="checkbox_mobile_data_warning">Ikke vis igjen</string>
     <string name="maintainer_info_title">Vedlikeholder</string>
     <string name="donate_info_title">Doner</string>
     <string name="donate_info_summary">Støtt utviklingen</string>

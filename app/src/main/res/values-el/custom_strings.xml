@@ -83,9 +83,6 @@
         <item quantity="one">απομένει 1 ώρα</item>
         <item quantity="other">απομένουν <xliff:g id="count">%d</xliff:g> ώρες</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Προειδοποίηση</string>
-    <string name="update_on_mobile_data_message">Είστε έτοιμος να κατεβάσετε ένα πακέτο ενημέρωσης χρησιμοποιώντας δεδομένα κινητής τηλεφωνίας, το οποίο είναι πιθανό να προκαλέσει υψηλή χρήση δεδομένων. Θα θέλατε να συνεχίσετε;</string>
-    <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
     <string name="maintainer_info_title">Συντηρητής</string>
     <string name="donate_info_title">Δωρεές</string>
     <string name="donate_info_summary">Υποστηρίξτε την ανάπτυξη εφαρμογών</string>

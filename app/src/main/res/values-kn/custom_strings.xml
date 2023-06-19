@@ -79,9 +79,6 @@
         <item quantity="one">೧ ಗಂಟೆ ಬಾಕಿ</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆಗಳು ಬಾಕಿ</item>
     </plurals>
-    <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
-    <string name="update_on_mobile_data_message">ನೀವೀಗ ಅಪ್ಡೇಟ್ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಡೌನ್‍ಲೋಡ್ ಮಾಡಲು ಹೊರಟಿರುವುರಿ, ಇದರಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಲಿದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಬಯಸುತ್ತೀರಾ?</string>
-    <string name="checkbox_mobile_data_warning">ಪುನಃ ತೋರಿಸಬೇಡ</string>
     <string name="maintainer_info_title">ಮೆಂಟೈನರ್</string>
     <string name="donate_info_title">ದಾನ ಪಾವತಿಗಳು</string>
     <string name="donate_info_summary">ಅಭಿವೃದ್ಧಿಯನ್ನು ಬೆಂಬಲಿಸಿ</string>

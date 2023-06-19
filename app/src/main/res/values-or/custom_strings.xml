@@ -75,9 +75,6 @@
         <item quantity="one">1 ଘଣ୍ଟା ବାକି</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ଘଣ୍ଟା ବାକି</item>
     </plurals>
-    <string name="update_on_mobile_data_title">ଚେତାବନୀ</string>
-    <string name="update_on_mobile_data_message">ଆପଣ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରି ଏକ ଅପଡେଟ୍ ପ୍ୟାକେଜ୍ ଡାଉନଲୋଡ୍ କରିବାକୁ ଯାଉଛନ୍ତି ଯାହା ଉଚ୍ଚ ଡାଟା ବ୍ୟବହାର ହେବାର ସମ୍ଭାବନା | ଆପଣ ଆଗକୁ ବ to ିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
-    <string name="checkbox_mobile_data_warning">ପୁଣି ଦେଖାନ୍ତୁ ନାହିଁ</string>
     <string name="maintainer_info_title">ରକ୍ଷଣାବେକ୍ଷଣକାରୀ</string>
     <string name="donate_info_title">ଦାନ କରନ୍ତୁ</string>
     <string name="donate_info_summary">ବିକାଶକୁ ସମର୍ଥନ କରନ୍ତୁ</string>

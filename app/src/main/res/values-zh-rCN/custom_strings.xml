@@ -80,9 +80,6 @@
     <plurals name="eta_hours">
         <item quantity="other">剩余 <xliff:g id="count">%d</xliff:g> 时</item>
     </plurals>
-    <string name="update_on_mobile_data_title">移动数据使用警告</string>
-    <string name="update_on_mobile_data_message">您将通过移动数据网络下载更新包，这可能会导致较大的数据用量，是否继续？</string>
-    <string name="checkbox_mobile_data_warning">不再显示</string>
     <string name="maintainer_info_title">维护者</string>
     <string name="donate_info_title">捐赠</string>
     <string name="donate_info_summary">支持开发</string>

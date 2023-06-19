@@ -89,9 +89,6 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
     </plurals>
-    <string name="update_on_mobile_data_title">אזהרה!</string>
-    <string name="update_on_mobile_data_message">אתה עומד להוריד חבילת עדכונים באמצעות האינטרנט הסלולרי שסביר להניח יגרום לבזבוז חלק גדול מחבילת הגלישה שלך. להמשיך?</string>
-    <string name="checkbox_mobile_data_warning">אל תציג שוב</string>
     <string name="maintainer_info_title">מתחזקים</string>
     <string name="donate_info_title">תרום</string>
     <string name="donate_info_summary">תמיכה במפתחים</string>

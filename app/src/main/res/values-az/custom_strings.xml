@@ -83,9 +83,6 @@
         <item quantity="one">1 saat qalıb</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saat qalıb</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Xəbərdarlıq</string>
-    <string name="update_on_mobile_data_message">Böyük ehtimalla mobil verilənlərdən istifadə edərək yüksək verilənlər istifadəsinə səbəb olacaq güncəlləmə paketi endirirsiniz. Davam etmək istəyirsiniz?</string>
-    <string name="checkbox_mobile_data_warning">Bir də göstərmə</string>
     <string name="maintainer_info_title">Cihaz tərtibatçısı</string>
     <string name="donate_info_title">İanə verin</string>
     <string name="donate_info_summary">Tərtibatçını dəstəklə</string>

@@ -82,9 +82,6 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> ure preostale</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ur preostalo</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Opozorilo</string>
-    <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
-    <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
     <string name="maintainer_info_title">Vzdrževalec</string>
     <string name="donate_info_title">Prispevaj</string>
     <string name="donate_info_summary">Podprite razvoj</string>

@@ -74,9 +74,6 @@
         <item quantity="one">١ کاتژمێر ماوە</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> کاتژمێر ماوە</item>
     </plurals>
-    <string name="update_on_mobile_data_title">ئاگاداربە</string>
-    <string name="update_on_mobile_data_message">تۆ خەریکیت بوخچەی نوێکارییەک دادەگریت لەڕێگای داتای مۆبایلەکەتەوە کە ئەمەش دەبێتە هۆی بەکارهێنانی داتایەکی زۆر. دەتەوێ بەردەوام بیت؟</string>
-    <string name="checkbox_mobile_data_warning">پیشان نەدرێتەوە</string>
     <string name="maintainer_info_title">پەرەپێدەر</string>
     <string name="donate_info_title">کۆمەککردن</string>
     <string name="donate_info_summary">پاڵپشتیکردنی پەرەپێدەران</string>

@@ -17,9 +17,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="confirm_delete_dialog_title">Kkes afaylu</string>
     <string name="confirm_delete_dialog_message">Kkes afaylu n lqem ittwafernen?</string>
-    <string name="update_on_mobile_data_title">Alɣu</string>
-    <string name="update_on_mobile_data_message">Aql ak-id ad sidreḍ yiwen n lqem s useqdec n isefka izirazen ad waṭas n isefka ara yettwasqedcen.tebɣiḍ attkemmleḍ?</string>
-    <string name="checkbox_mobile_data_warning">Ur d-skan ara tikelt nniḍen</string>
     <string name="maintainer_info_title">Adiwinni</string>
     <string name="donate_info_title">Tikci</string>
     <string name="donate_info_summary">Fked tallalt i unegmu</string>

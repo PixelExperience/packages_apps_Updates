@@ -36,9 +36,6 @@
     <string name="action_delete">કાઢી નાખો</string>
     <string name="confirm_delete_dialog_title">ફાઇલ કાઢી નાખો</string>
     <string name="confirm_delete_dialog_message">પસંદિત અપડેટ ફાઇલ કાઢી નાખવી છે?</string>
-    <string name="update_on_mobile_data_title">ચેતવણી</string>
-    <string name="update_on_mobile_data_message">તમે મોબાઇલ ડેટાનો ઉપયોગ કરીને અપડેટ પેકેજ ડાઉનલોડ કરવા જઈ રહ્યાં છો જે સંભવિત ઉચ્ચ ડેટા વપરાશને કારણે જઈ શકે છે. શું તમે આગળ વધવા માંગો છો?</string>
-    <string name="checkbox_mobile_data_warning">ફરીથી ના બતાવશો</string>
     <string name="maintainer_info_title">જાળવનાર</string>
     <string name="donate_info_title">બક્ષિસ આપો</string>
     <string name="donate_info_summary">વિકાસને સપોર્ટ કરો</string>

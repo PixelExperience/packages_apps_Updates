@@ -37,8 +37,6 @@
     <string name="reboot">ری بوٹ کریں</string>
     <string name="details_button">تفصیلات دکھائیں</string>
     <string name="dialog_battery_low_title">کم بیٹری</string>
-    <string name="update_on_mobile_data_title">انتباہ</string>
-    <string name="checkbox_mobile_data_warning">دوبارہ مت دکھائیں</string>
     <string name="donate_info_title">عطیہ دیجئے</string>
     <string name="website_info_title">ویب سائٹ</string>
     <string name="news_info_title">خبریں</string>

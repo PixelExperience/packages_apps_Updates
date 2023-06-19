@@ -64,8 +64,6 @@
         <item quantity="other">၁ နာရီသာ ကျန်ပါသည်။
 <xliff:g id="count">%d</xliff:g> နာရီသာ ကျန်ပါသည်။</item>
     </plurals>
-    <string name="update_on_mobile_data_title">သတိပြုရန်</string>
-    <string name="checkbox_mobile_data_warning">ထပ်မပြပါနှင့်</string>
     <string name="maintainer_info_title">ပြုပြင်ပေးသူ</string>
     <string name="donate_info_title">လှူရန်</string>
     <string name="donate_info_summary">တိုးတက်တီတွင်မှုအတွက် ပံ့ပိုးပါ</string>

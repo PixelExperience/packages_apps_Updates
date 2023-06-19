@@ -79,9 +79,6 @@
         <item quantity="one">остава 1 час</item>
         <item quantity="other">остават <xliff:g id="count">%d</xliff:g> часа</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Внимание</string>
-    <string name="update_on_mobile_data_message">На път сте да изтеглите пакет за актуализиране, използвайки мобилни данни, което вероятно ще доведе до високо използване на данните. Искате ли да продължите?</string>
-    <string name="checkbox_mobile_data_warning">Не показвай отново</string>
     <string name="maintainer_info_title">Отговорник</string>
     <string name="donate_info_title">Даряване</string>
     <string name="donate_info_summary">Подкрепете разработката</string>

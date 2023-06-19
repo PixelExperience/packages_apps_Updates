@@ -83,9 +83,6 @@
         <item quantity="one">Մնաց 1 ժամ</item>
         <item quantity="other">Մնաց <xliff:g id="count">%d</xliff:g> ժամ</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Զգուշացում</string>
-    <string name="update_on_mobile_data_message">Դուք պատրաստվում եք թարմացման փաթեթ ներբեռնել բջջային տվյալների միջոցով, ինչը, հավանաբար, կբերի տվյալների մեծ օգտագործման: Կցանկանա՞ք շարունակել:</string>
-    <string name="checkbox_mobile_data_warning">Այլևս չցուցադրել</string>
     <string name="maintainer_info_title">Սպասարկում</string>
     <string name="donate_info_title">Աջակցել</string>
     <string name="donate_info_summary">Աջակցել մշակմանը</string>

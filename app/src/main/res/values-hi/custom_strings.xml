@@ -69,9 +69,6 @@
     <string name="update_export_failed">अपडेट भेजने में अक्षम </string>
     <string name="update_export_in_progress">पहले से ही एक अपडेट भेजा जा रहा है</string>
     <string name="update_export_started">अपडेट को भेजा जा रहा हैं</string>
-    <string name="update_on_mobile_data_title">चेतावनी</string>
-    <string name="update_on_mobile_data_message">आप मोबाइल डेटा का उपयोग कर एक अपडेट पैकेज डाउनलोड करने वाले हैं, जो संभवत: उच्च डेटा उपयोग का कारण होने जा रहा है। क्या तुम कार्यवाही को जारी रखना चाहते हैं?</string>
-    <string name="checkbox_mobile_data_warning">फिर से मत दिखाना</string>
     <string name="maintainer_info_title">कायम रखना</string>
     <string name="donate_info_title">दान करना</string>
     <string name="donate_info_summary">विकास का समर्थन करें</string>

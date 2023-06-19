@@ -83,9 +83,6 @@
         <item quantity="one">یک ساعت باقی مانده</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ساعت باقی مانده</item>
     </plurals>
-    <string name="update_on_mobile_data_title">هشدار</string>
-    <string name="update_on_mobile_data_message">شما در حال بارگیری بسته به‌روزرسانی با داده سیم‌کارت هستید که احتمالاً حجم داده زیادی مصرف می‌کند. آیا می‌خواهید ادامه دهید؟</string>
-    <string name="checkbox_mobile_data_warning">دوباره نمایش نده</string>
     <string name="maintainer_info_title">برقرار نگه‌دارنده</string>
     <string name="donate_info_title">کمک مالی</string>
     <string name="donate_info_summary">از توسعه رام حمایت کنید</string>

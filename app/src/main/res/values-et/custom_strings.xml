@@ -83,9 +83,6 @@
         <item quantity="one">1 tund jäänud</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> tundi jäänud</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Hoiatus</string>
-    <string name="update_on_mobile_data_message">Olete alla laadimas värskendust mobiilse andmesideühendusega, mis võib tekitada suurt andmemahu kasutust. Kas soovite jätkata?</string>
-    <string name="checkbox_mobile_data_warning">Ära enam näita</string>
     <string name="maintainer_info_title">Hooldaja</string>
     <string name="donate_info_title">Anneta</string>
     <string name="donate_info_summary">Toeta arengut</string>

@@ -80,9 +80,6 @@
     <plurals name="eta_hours">
         <item quantity="other"><xliff:g id="count">%d</xliff:g> jam tersisa</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Peringatan</string>
-    <string name="update_on_mobile_data_message">Anda akan megunduh paket pembaruan menggunakan data seluler yang mungkin akan menyebabkan penggunaan data yang tinggi. Apakah Anda ingin melanjutkan?</string>
-    <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>
     <string name="maintainer_info_title">Pengelola</string>
     <string name="donate_info_title">Donasi</string>
     <string name="donate_info_summary">Dukung pengembangan</string>

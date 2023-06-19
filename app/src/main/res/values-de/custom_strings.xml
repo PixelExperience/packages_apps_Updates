@@ -83,9 +83,6 @@
         <item quantity="one">noch 1 Stunde verbleibend</item>
         <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Stunden verbleibend</item>
     </plurals>
-    <string name="update_on_mobile_data_title">Warnung</string>
-    <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
-    <string name="checkbox_mobile_data_warning">Nicht mehr anzeigen</string>
     <string name="maintainer_info_title">Betreuer</string>
     <string name="donate_info_title">Spenden</string>
     <string name="donate_info_summary">Unterstützen Sie die Entwicklung</string>
