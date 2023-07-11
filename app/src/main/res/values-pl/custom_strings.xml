@@ -89,6 +89,9 @@
         <item quantity="many">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
         <item quantity="other">Pozostało <xliff:g id="count">%d</xliff:g> godzin</item>
     </plurals>
+    <string name="update_over_metered_network_title">Ostrzeżenie</string>
+    <string name="update_over_metered_network_message">Zamierzasz pobrać pakiet aktualizacji za pomocą sieci komórkowej, co prawdopodobnie spowoduje wysokie zużycie danych. Czy chcesz kontynuować?</string>
+    <string name="checkbox_metered_network_warning">Nie pokazuj ponownie</string>
     <string name="maintainer_info_title">Opiekun</string>
     <string name="donate_info_title">Dotacja</string>
     <string name="donate_info_summary">Wesprzyj rozwój programu</string>

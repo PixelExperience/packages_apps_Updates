@@ -89,6 +89,9 @@
         <item quantity="many">Zbývá <xliff:g id="count">%d</xliff:g> hodin</item>
         <item quantity="other">Zbývá <xliff:g id="count">%d</xliff:g> hodin</item>
     </plurals>
+    <string name="update_over_metered_network_title">Varování</string>
+    <string name="update_over_metered_network_message">Chystáte se stáhnout aktualizaci skrze měřenou síť, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
+    <string name="checkbox_metered_network_warning">Znovu nezobrazovat</string>
     <string name="maintainer_info_title">Správce</string>
     <string name="donate_info_title">Přispět</string>
     <string name="donate_info_summary">Podpořte vývoj</string>

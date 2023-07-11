@@ -31,7 +31,7 @@
     <string name="check_for_update">Comprobando actualizaciones</string>
     <string name="menu_delete_update">Borrar</string>
     <string name="menu_export_update">Exportar actualización</string>
-    <string name="update_found_notification">Actualizacion de sistema disponible</string>
+    <string name="update_found_notification">Actualización de sistema disponible</string>
     <string name="snack_no_updates_found">No hay nuevas actualizaciones</string>
     <string name="snack_updates_check_failed">Error en la comprobación de actualizaciones. Por favor, verifique la conexión a internet e intente nuevamente.</string>
     <string name="snack_download_failed">Descarga fallida. Compruebe la conexión a Internet e intente nuevamente.</string>
@@ -50,7 +50,7 @@
     <string name="action_install">Instalar</string>
     <string name="action_delete">Borrar</string>
     <string name="confirm_delete_dialog_title">Borrar archivo</string>
-    <string name="confirm_delete_dialog_message">¿Deseas eliminar el archivo de la actualización seleccionado?</string>
+    <string name="confirm_delete_dialog_message">¿Eliminar el archivo de actualización seleccionado?</string>
     <string name="pause_button">Pausar</string>
     <string name="resume_button">Reanudar</string>
     <string name="reboot">Reiniciar</string>
@@ -83,6 +83,9 @@
         <item quantity="one">1 hora restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
     </plurals>
+    <string name="update_over_metered_network_title">Advertencia</string>
+    <string name="update_over_metered_network_message">Vas a descargar un paquete de actualización a través de datos móviles, lo cual causará un alto consumo de datos móviles. ¿Quieres continuar?</string>
+    <string name="checkbox_metered_network_warning">No mostrar de nuevo</string>
     <string name="maintainer_info_title">Desarrollador</string>
     <string name="donate_info_title">Donar</string>
     <string name="donate_info_summary">Apoyar el desarrollo</string>

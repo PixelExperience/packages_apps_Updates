@@ -80,6 +80,9 @@
     <plurals name="eta_hours">
         <item quantity="other">還剩 <xliff:g id="count">%d</xliff:g> 小時</item>
     </plurals>
+    <string name="update_over_metered_network_title">警告</string>
+    <string name="update_over_metered_network_message">下載的更新檔案可能會使用較高的行動數據用量，您要繼續嗎？</string>
+    <string name="checkbox_metered_network_warning">不再顯示</string>
     <string name="maintainer_info_title">維護者</string>
     <string name="donate_info_title">贊助</string>
     <string name="donate_info_summary">支持開發作業</string>

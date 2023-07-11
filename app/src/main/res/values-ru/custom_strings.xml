@@ -89,6 +89,9 @@
         <item quantity="many">осталось <xliff:g id="count">%d</xliff:g> часов</item>
         <item quantity="other">осталось <xliff:g id="count">%d</xliff:g> часов</item>
     </plurals>
+    <string name="update_over_metered_network_title">Внимание</string>
+    <string name="update_over_metered_network_message">Вы собираетесь загрузить пакет обновления через мобильную сеть, что, вероятно, приведет к значительному расходу данных. Продолжить?</string>
+    <string name="checkbox_metered_network_warning">Больше не показывать</string>
     <string name="maintainer_info_title">Сопровождающий</string>
     <string name="donate_info_title">Пожертвовать</string>
     <string name="donate_info_summary">Поддержать разработку проекта</string>

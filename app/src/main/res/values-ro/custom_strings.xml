@@ -86,6 +86,9 @@
         <item quantity="few"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> (de) ore rămase</item>
     </plurals>
+    <string name="update_over_metered_network_title">Avertizare</string>
+    <string name="update_over_metered_network_message">Ești pe cale de a descărca un pachet de actualizare printr-o rețea contorizată, care, probabil, va provoca o utilizare ridicată a datelor. Vrei să continui?</string>
+    <string name="checkbox_metered_network_warning">Nu mai arăta din nou</string>
     <string name="maintainer_info_title">Dezvoltator</string>
     <string name="donate_info_title">Donează</string>
     <string name="donate_info_summary">Susține dezvoltarea</string>

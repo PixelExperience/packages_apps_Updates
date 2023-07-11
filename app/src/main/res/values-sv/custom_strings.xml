@@ -67,6 +67,8 @@
     <string name="dialog_prepare_zip_message">Preliminär förberedelse för uppdatering</string>
     <string name="dialog_battery_low_title">Låg batterinivå</string>
     <string name="dialog_battery_low_message_pct">Batterinivån är för låg, du beöver minst <xliff:g id="percent_discharging">%1$d</xliff:g>%% av batterikapaciteten för att fortsätta, <xliff:g id="percent_charging">%2$d</xliff:g>%% om du laddar.</string>
+    <string name="update_export_success">Uppdateringen exporterades</string>
+    <string name="update_export_in_progress">Exporterar redan en uppdatering</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund kvar</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekunder kvar</item>
@@ -79,6 +81,9 @@
         <item quantity="one">1 timme kvar</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> timmar kvar</item>
     </plurals>
+    <string name="update_over_metered_network_title">Varning</string>
+    <string name="update_over_metered_network_message">Du är på väg att ladda ner en uppdatering över mobilnätet vilket troligtvis kommer att orsaka hög dataanvändning. Vill du fortsätta?</string>
+    <string name="checkbox_metered_network_warning">Visa inte igen</string>
     <string name="maintainer_info_title">Underhållare</string>
     <string name="donate_info_title">Donera</string>
     <string name="donate_info_summary">Stöd utvecklingen</string>

@@ -83,6 +83,9 @@
         <item quantity="one">noch 1 Stunde verbleibend</item>
         <item quantity="other">noch <xliff:g id="count">%d</xliff:g> Stunden verbleibend</item>
     </plurals>
+    <string name="update_over_metered_network_title">Warnung</string>
+    <string name="update_over_metered_network_message">Du bist im Begriff, ein Update-Paket über ein gebührenpflichtiges Netz herunterzuladen, das wahrscheinlich einen hohen Datenverbrauch verursacht. Möchtest du fortfahren?</string>
+    <string name="checkbox_metered_network_warning">Nicht mehr anzeigen</string>
     <string name="maintainer_info_title">Betreuer</string>
     <string name="donate_info_title">Spenden</string>
     <string name="donate_info_summary">Unterstützen Sie die Entwicklung</string>

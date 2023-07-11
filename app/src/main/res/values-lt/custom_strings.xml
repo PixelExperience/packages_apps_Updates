@@ -89,6 +89,9 @@
         <item quantity="many">Liko <xliff:g id="count">%d</xliff:g> val</item>
         <item quantity="other">Liko <xliff:g id="count">%d</xliff:g> val</item>
     </plurals>
+    <string name="update_over_metered_network_title">Įspėjimas</string>
+    <string name="update_over_metered_network_message">Jūs ruošiatės atsisiųsti naujinimo paketą, mobiliuoju ryšiu, kuris greičiausiai išnaudos didelį kiekį duomenų. Ar norite tęsti?</string>
+    <string name="checkbox_metered_network_warning">Daugiau nerodyti</string>
     <string name="maintainer_info_title">Kūrėjas/Prižiūrėtojas</string>
     <string name="donate_info_title">Paaukoti</string>
     <string name="donate_info_summary">Paremti programos vystymą</string>

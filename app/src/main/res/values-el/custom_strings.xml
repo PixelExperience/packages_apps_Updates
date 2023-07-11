@@ -83,6 +83,9 @@
         <item quantity="one">απομένει 1 ώρα</item>
         <item quantity="other">απομένουν <xliff:g id="count">%d</xliff:g> ώρες</item>
     </plurals>
+    <string name="update_over_metered_network_title">Προσοχή</string>
+    <string name="update_over_metered_network_message">Είστε έτοιμοι να κατεβάσετε ένα πακέτο ενημέρωσης χρησιμοποιώντας ένα δίκτυο με ογκοχρέωση δεδομένων το οποίο είναι πιθανό να προκαλέσει υψηλή χρήση δεδομένων. Θα θέλατε να συνεχίσετε;</string>
+    <string name="checkbox_metered_network_warning">Να μην εμφανιστεί ξανά</string>
     <string name="maintainer_info_title">Συντηρητής</string>
     <string name="donate_info_title">Δωρεές</string>
     <string name="donate_info_summary">Υποστηρίξτε την ανάπτυξη εφαρμογών</string>

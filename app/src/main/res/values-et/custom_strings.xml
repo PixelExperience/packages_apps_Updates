@@ -83,6 +83,9 @@
         <item quantity="one">1 tund jäänud</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> tundi jäänud</item>
     </plurals>
+    <string name="update_over_metered_network_title">Hoiatus</string>
+    <string name="update_over_metered_network_message">Algab suuremahulise värskenduspaki allalaadimine mahupõhise arvestusega võrgu kaudu. Kas jätkata?</string>
+    <string name="checkbox_metered_network_warning">Ära enam kuva</string>
     <string name="maintainer_info_title">Hooldaja</string>
     <string name="donate_info_title">Anneta</string>
     <string name="donate_info_summary">Toeta arengut</string>

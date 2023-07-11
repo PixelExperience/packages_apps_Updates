@@ -83,6 +83,9 @@
         <item quantity="one">1 saat qalıb</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> saat qalıb</item>
     </plurals>
+    <string name="update_over_metered_network_title">Xəbərdarlıq</string>
+    <string name="update_over_metered_network_message">Ölçülən bir şəbəkə üzərindən böyük ehtimalla yüksək data istifadəsinə səbəb olacaq bir güncəlləmə paketi endirmək üzrəsiniz. Davam etmək istəyirsiniz?</string>
+    <string name="checkbox_metered_network_warning">Təkrar göstərmə</string>
     <string name="maintainer_info_title">Cihaz tərtibatçısı</string>
     <string name="donate_info_title">İanə verin</string>
     <string name="donate_info_summary">Tərtibatçını dəstəklə</string>

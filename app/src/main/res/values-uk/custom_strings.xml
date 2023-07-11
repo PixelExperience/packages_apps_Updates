@@ -89,6 +89,9 @@
         <item quantity="many">ще <xliff:g id="count">%d</xliff:g> годин</item>
         <item quantity="other">ще <xliff:g id="count">%d</xliff:g> годин</item>
     </plurals>
+    <string name="update_over_metered_network_title">Увага</string>
+    <string name="update_over_metered_network_message">Ви збираєтесь завантажити пакет оновлень за допомогою мобільних даних, що ймовірно призведе до високого використання мобільного трафіку. Хочете продовжити?</string>
+    <string name="checkbox_metered_network_warning">Не показувати знову</string>
     <string name="maintainer_info_title">Розробники</string>
     <string name="donate_info_title">Підтримати проект</string>
     <string name="donate_info_summary">Підтримати розробку</string>

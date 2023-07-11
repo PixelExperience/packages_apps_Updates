@@ -83,6 +83,9 @@
         <item quantity="one">temps restant : 1 heure</item>
         <item quantity="other">temps restant : <xliff:g id="count">%d</xliff:g> heures</item>
     </plurals>
+    <string name="update_over_metered_network_title">Avertissement</string>
+    <string name="update_over_metered_network_message">Vous allez télécharger une mise à jour nécessitant un important volume de données en utilisant un réseau forfaitaire. Souhaitez-vous continuer ?</string>
+    <string name="checkbox_metered_network_warning">Ne plus afficher</string>
     <string name="maintainer_info_title">Mainteneur</string>
     <string name="donate_info_title">Faire un don</string>
     <string name="donate_info_summary">Soutenez le développement</string>

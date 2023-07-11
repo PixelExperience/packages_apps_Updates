@@ -83,6 +83,9 @@
         <item quantity="one">1 hora restante</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> horas restantes</item>
     </plurals>
+    <string name="update_over_metered_network_title">Aviso</string>
+    <string name="update_over_metered_network_message">Você está prestes a baixar um pacote de atualização em uma rede limitada que provavelmente causará alto uso de dados. Deseja continuar?</string>
+    <string name="checkbox_metered_network_warning">Não mostrar novamente</string>
     <string name="maintainer_info_title">Mantenedor</string>
     <string name="donate_info_title">Doar</string>
     <string name="donate_info_summary">Apoie o desenvolvimento</string>

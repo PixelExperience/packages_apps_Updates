@@ -84,6 +84,9 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
         <item quantity="one">1 óra van hátra</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> óra van hátra</item>
     </plurals>
+    <string name="update_over_metered_network_title">Figyelmeztetés</string>
+    <string name="update_over_metered_network_message">Úgy látszik mobilneten kíván letölteni egy nagyméretű frissítési csomagot, ami nagy költséggel járhat. Biztos benne hogy engedélyezi ezt?</string>
+    <string name="checkbox_metered_network_warning">Ne jelenjen meg többé</string>
     <string name="maintainer_info_title">Felelős</string>
     <string name="donate_info_title">Támogatás</string>
     <string name="donate_info_summary">A fejlesztés támogatása</string>

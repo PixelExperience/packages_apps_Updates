@@ -96,6 +96,9 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> ساعات متبقية</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ساعات متبقية</item>
     </plurals>
+    <string name="update_over_metered_network_title">تحذير</string>
+    <string name="update_over_metered_network_message">أنت على وشك تنزيل حُزْمَة التحديث عبر شبكة مقيدة التي من المحتمل أن تسبب استخداما عاليا للبيانات. هل ترغب في المتابعة؟</string>
+    <string name="checkbox_metered_network_warning">لا تظهر مجدداً</string>
     <string name="maintainer_info_title">المطور</string>
     <string name="donate_info_title">التبرع</string>
     <string name="donate_info_summary">إدعم التطوير</string>
