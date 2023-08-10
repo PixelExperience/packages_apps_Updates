@@ -37,13 +37,13 @@
     <string name="snack_download_failed">下載失敗。請檢查您的網路連線並稍後重試。</string>
     <string name="snack_download_verification_failed">更新驗證失敗。</string>
     <string name="snack_download_verified">下載已完成。</string>
-    <string name="snack_update_not_installable">此更新無法安裝在目前版本上。</string>
+    <string name="snack_update_not_installable">此更新無法安裝在當前版本上。</string>
     <string name="list_download_progress_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> • <xliff:g id="percentage" example="56">%3$s</xliff:g></string>
     <string name="list_download_progress_eta_new"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> 的 <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>) • <xliff:g id="percentage" example="56">%4$s</xliff:g></string>
     <string name="list_verifying_update">正在驗證更新</string>
-    <string name="list_no_updates">沒有新更新。</string>
+    <string name="list_no_updates">沒有可用的更新。</string>
     <string name="blocked_update_dialog_title">更新已被封鎖</string>
-    <string name="blocked_update_dialog_summary">此更新需要手動重新安裝過程（在安裝更新之前清除/格式化資料分區）。請從我們的網站下載更新檔案，將裝置重新啟動到Recovery模式，然後依照以下步驟進行操作。</string>
+    <string name="blocked_update_dialog_summary">此更新需要手動全新安裝過程（在安裝更新之前清除/格式化資料分區）。請從我們的網站下載更新檔案，將裝置重新啟動到Recovery模式，然後依照步驟進行操作。</string>
     <string name="action_download">下載</string>
     <string name="action_pause">暫停</string>
     <string name="action_resume">繼續</string>
@@ -56,10 +56,10 @@
     <string name="reboot">重新啟動</string>
     <string name="reboot_needed_dialog_title">需要重新啟動</string>
     <string name="reboot_needed_dialog_summary">要完成安裝更新，您的裝置必須重新啟動。您想要立刻重新啟動嗎？</string>
-    <string name="details_button">檢視詳細</string>
+    <string name="details_button">查看詳細資料</string>
     <string name="apply_update_dialog_title">套用更新</string>
     <string name="apply_update_dialog_message">您將更新至 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下 「<xliff:g id="ok">%2$s</xliff:g>」，裝置將重新啟動進入 Recovery 模式並安裝更新。\n\n注意：這項功能需要相容的 Recovery，否則將需要手動安裝更新。</string>
-    <string name="apply_update_dialog_message_ab">您將要升級到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下「<xliff:g id="ok">%2$s</xliff:g>」，裝置將在背景進行安裝。\n\n如安裝完成，將會提示重新啟動</string>
+    <string name="apply_update_dialog_message_ab">您將要升級到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下「<xliff:g id="ok">%2$s</xliff:g>」，裝置將在背景進行安裝。\n\n如安裝完成，將會提示重新啟動。</string>
     <string name="installing_update">正在安裝更新套件</string>
     <string name="installing_update_error">安裝錯誤</string>
     <string name="installing_update_finished">更新已安裝</string>
@@ -81,7 +81,7 @@
         <item quantity="other">還剩 <xliff:g id="count">%d</xliff:g> 小時</item>
     </plurals>
     <string name="update_over_metered_network_title">警告</string>
-    <string name="update_over_metered_network_message">下載的更新檔案可能會使用較高的行動數據用量，您要繼續嗎？</string>
+    <string name="update_over_metered_network_message">使用行動網路下載更新檔案可能會產生較高的網路用量，您要繼續嗎？</string>
     <string name="checkbox_metered_network_warning">不再顯示</string>
     <string name="maintainer_info_title">維護者</string>
     <string name="donate_info_title">贊助</string>

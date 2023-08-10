@@ -80,6 +80,7 @@
     <plurals name="eta_hours">
         <item quantity="other">Còn lại <xliff:g id="count">%d</xliff:g> giờ</item>
     </plurals>
+    <string name="checkbox_metered_network_warning">Không hiển thị lại</string>
     <string name="maintainer_info_title">Người duy trì</string>
     <string name="donate_info_title">Ủng hộ</string>
     <string name="donate_info_summary">Hỗ trợ việc phát triển</string>

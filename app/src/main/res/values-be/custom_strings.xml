@@ -89,6 +89,9 @@
         <item quantity="many">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
         <item quantity="other">засталося <xliff:g id="count">%d</xliff:g> гадзін</item>
     </plurals>
+    <string name="update_over_metered_network_title">Папярэджанне</string>
+    <string name="update_over_metered_network_message">Вы плануеце спампаваць пакет абнаўлення праз сетку мабільных даных, што імаверна правядзе да высокага спажывання даных. Вы сапраўды хочаце працягнуць?</string>
+    <string name="checkbox_metered_network_warning">Не паказваць зноў</string>
     <string name="maintainer_info_title">Суправаджальнік</string>
     <string name="donate_info_title">Ахвяраваць</string>
     <string name="donate_info_summary">Падтрымаць распрацоўку</string>

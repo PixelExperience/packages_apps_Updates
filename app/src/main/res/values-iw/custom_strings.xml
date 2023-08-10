@@ -89,6 +89,8 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> שעות נותרו</item>
     </plurals>
+    <string name="update_over_metered_network_title">אזהרה</string>
+    <string name="checkbox_metered_network_warning">אל תציג שוב</string>
     <string name="maintainer_info_title">מתחזקים</string>
     <string name="donate_info_title">תרום</string>
     <string name="donate_info_summary">תמיכה במפתחים</string>

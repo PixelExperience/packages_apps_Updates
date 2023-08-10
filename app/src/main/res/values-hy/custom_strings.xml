@@ -83,6 +83,9 @@
         <item quantity="one">Մնաց 1 ժամ</item>
         <item quantity="other">Մնաց <xliff:g id="count">%d</xliff:g> ժամ</item>
     </plurals>
+    <string name="update_over_metered_network_title">Նախազգուշացում</string>
+    <string name="update_over_metered_network_message">Դուք պատրաստվում եք ներբեռնել թարմացման փաթեթ չափված ցանցի միջոցով, որը, ամենայն հավանականությամբ, կբերի տվյալների մեծ օգտագործման: Կցանկանա՞ք շարունակել:</string>
+    <string name="checkbox_metered_network_warning">Այլևս չցուցադրել</string>
     <string name="maintainer_info_title">Սպասարկում</string>
     <string name="donate_info_title">Աջակցել</string>
     <string name="donate_info_summary">Աջակցել մշակմանը</string>
