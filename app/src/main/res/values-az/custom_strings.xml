@@ -66,7 +66,7 @@
     <string name="finalizing_package">Paket quraşdırılması tamamlanır</string>
     <string name="dialog_prepare_zip_message">Güncəlləməyə ilkin hazırlıq</string>
     <string name="dialog_battery_low_title">Batereya zəifdir</string>
-    <string name="dialog_battery_low_message_pct">Batereya səviyyəsi çox aşağıdır, davam etmək üçün ən az batereya səviyyəsi <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
+    <string name="dialog_battery_low_message_pct">Batereya səviyyəsi çox aşağıdır, davam etmək üçün ən az batereya səviyyəsi <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% dolur.</string>
     <string name="update_export_success">Güncəlləmə xaricə köçürüldü</string>
     <string name="update_export_failed">Güncəlləmə xaricə köçürülmədi</string>
     <string name="update_export_in_progress">Artıq bir güncəlləmə xaricə köçürülür</string>
